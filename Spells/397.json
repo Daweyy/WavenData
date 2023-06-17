@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "397",
+  "m_id": 397,
+  "m_displayName": "OSAMODAS - ARME -  L ASSOMOIR CRAQUELEUR - Coeur de pierre",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -671887446,
+    "b": -1104244812,
+    "c": 972447227,
+    "d": -1979003676,
+    "e": 1249227787
+  },
+  "m_i18nDescriptionId": {
+    "a": -671887446,
+    "b": -1104244812,
+    "c": 972447227,
+    "d": -1979003676,
+    "e": 178724247
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 397,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 75,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 35
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Cœur de pierre",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDouble l'{%AR} de votre <b>BÊTE</b>.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

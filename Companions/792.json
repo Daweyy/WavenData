@@ -1,0 +1,243 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "792",
+  "m_id": 792,
+  "m_displayName": "DECK - RARE - TERRE - Héros Endurci",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -164508724,
+    "b": -1650566348,
+    "c": 1703031306,
+    "d": 1502553199,
+    "e": 1115315298
+  },
+  "m_i18nDescriptionId": {
+    "a": -164508724,
+    "b": -1650566348,
+    "c": 1703031306,
+    "d": 1502553199,
+    "e": 1527054500
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 792,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 4385,
+      "skinIds": [
+        4385
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "ar1",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 476
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "ar2",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ar2",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      9
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 86
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      732751,
+      17379,
+      740250,
+      732780,
+      733097,
+      733567
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          792
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Héros Endurci",
+    "en": "Inveterate Hero",
+    "es": "Héroe Endurecido",
+    "de": "Abgehärteter Held",
+    "pt": "Herói Veterano"
+  },
+  "description": {
+    "fr": "{%attack} Gagne {value:ar1,percent} de son {%AT} en {%AR}.",
+    "en": "{%attack} Gains {value:ar1,percent} of his {%AT} as {%AR}.",
+    "es": "{%attack} Gana un {value:ar1,percent} de su {%AT} en {%AR}.",
+    "de": "{%attack} Erhält {value:ar1,percent} seines {%AT} als {%AR}.",
+    "pt": "{%attack} Recebe {value:ar1,percent} de seu {%AT} em {%AR}."
+  }
+}

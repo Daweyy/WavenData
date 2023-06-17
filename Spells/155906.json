@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "155906",
+  "m_id": 155906,
+  "m_displayName": "MONSTRE ROUBLARD - Lancer de bombe",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 480510576,
+    "b": -1294609020,
+    "c": -1603388869,
+    "d": -1244172430,
+    "e": -706932975
+  },
+  "m_i18nDescriptionId": {
+    "a": 480510576,
+    "b": -1294609020,
+    "c": -1603388869,
+    "d": -1244172430,
+    "e": -631112775
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "61e3d38880e1aa44c9b12ab05208561f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 155906,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        13
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a7a20ca666913e447ade9091f54d7baf",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dgt",
+          "baseValue": 5,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 7,
+          "id": 349
+        },
+        {
+          "type": 7,
+          "id": 1650
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1506
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Lancer de bombe",
+    "en": "Bomb Toss",
+    "es": "Lanzamiento de Bomba",
+    "de": "Bomben werfen",
+    "pt": "Arremesso de Bomba"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dgt} à un adversaire.\n\\---\nConstruit une {ObjectMechanism:1506} sur une case adjacente\\_<sprite name=\"cell_cross\">.",
+    "en": "Does {magicalDamage:dgt} to an opponent.\n\\---\nBuilds one {ObjectMechanism:1506} on an adjacent\\_<sprite name=\"cell_cross\"> cell.",
+    "es": "Inflige {magicalDamage:dgt} a un adversario.\n\\---\nConstruye una {ObjectMechanism:1506} en una casilla adyacente\\_<sprite name=\"cell_cross\">.",
+    "de": "Verursacht bei einem Gegner {magicalDamage:dgt}.\n\\---\nErrichtet einen\\_{ObjectMechanism:1506} auf einem angrenzenden\\_<sprite name=\"cell_cross\"> Feld.",
+    "pt": "Inflige {magicalDamage:dgt} a um adversário.\n\\---\nPosiciona um {ObjectMechanism:1506} sobre uma célula adjacente\\_<sprite name=\"cell_cross\">."
+  }
+}

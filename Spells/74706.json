@@ -1,0 +1,172 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "74706",
+  "m_id": 74706,
+  "m_displayName": "_NOT USED - UNIVERSEL - SURVIVOR - Instinct de Survie",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": -1015494619,
+    "b": -407808995,
+    "c": -1810530390,
+    "d": 2131092410,
+    "e": 766815489
+  },
+  "m_i18nDescriptionId": {
+    "a": -1015494619,
+    "b": -407808995,
+    "c": -1810530390,
+    "d": 2131092410,
+    "e": -1897104401
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7806d12e92bcf954aae11f0773cd907d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "ca64ca652fa4cfa4bb515f6e769a5b3c"
+      },
+      {
+        "assetGuid": "528671e0b64964148828a9a3d36a1075"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 74706,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        80
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "dc58cdcb966a04141b6bf404cb83e515",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Instinct de Survie",
+    "en": "Blâmer",
+    "es": "Blâmer",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Soigne un allié de {PVvalue:heal}.",
+    "en": "Inflige {magicalDamage:dmg} et applique l'état {#OILED}.",
+    "es": "Inflige {magicalDamage:dmg} et applique l'état {#OILED}.",
+    "de": "",
+    "pt": ""
+  }
+}

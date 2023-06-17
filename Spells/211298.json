@@ -1,0 +1,186 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "211298",
+  "m_id": 211298,
+  "m_displayName": "XELOR - CLASSE - AIR - Detraquement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -713477347,
+    "b": -1846377628,
+    "c": 584901178,
+    "d": -1563545661,
+    "e": 1547939685
+  },
+  "m_i18nDescriptionId": {
+    "a": -713477347,
+    "b": -1846377628,
+    "c": 584901178,
+    "d": -1563545661,
+    "e": 1194081008
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ceeeee80860c1e84c86e66c495a09836"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 211298,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      814,
+      815,
+      462047
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 8
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b4ac8b468ef8abf4ea44b84a35c883cd",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 38
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 905,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Détraquement",
+    "en": "Perturbation",
+    "es": "Descompostura",
+    "de": "Störung",
+    "pt": "Deterioração"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros et les {#PUSH} de {cell:c}.",
+    "en": "Does {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to your hero and {#PUSH} them {cell:c}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a tu héroe y los {#PUSH} {cell:c}.",
+    "de": "Verursacht bei den Gegnern, die an deinen Helden angrenzen\\_<sprite name=\"cell_cross\"> {magicalDamage:dmg} und {#PUSH} sie um {cell:c} zurück.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> ao seu herói e {#PUSH} por {cell:c}."
+  }
+}

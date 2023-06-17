@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "157767",
+  "m_id": 157767,
+  "m_displayName": "BONTA - Q11 - Cote en hausse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1612376247,
+    "b": 1582477220,
+    "c": -161087959,
+    "d": -571698560,
+    "e": 2066591532
+  },
+  "m_i18nDescriptionId": {
+    "a": 1612376247,
+    "b": 1582477220,
+    "c": -161087959,
+    "d": -571698560,
+    "e": -1242904573
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f4dbbf437430e8840adb0060ba70aa57"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 157767,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FloatingCounterValueFilter",
+            "counterFilter": {
+              "type": "SpecificFloatingCounterType",
+              "counterId": 113
+            },
+            "valueFilter": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 5
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ae5e172a642133549b21314f7de9f2ad",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 113
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cote en hausse",
+    "en": "Counter Up",
+    "es": "Popularidad en Alza",
+    "de": "Steigende Quote",
+    "pt": "Alta Conta"
+  },
+  "description": {
+    "fr": "{value:v,+}\\_{aura:113,value:v} à votre héros.",
+    "en": "{value:v,+}\\_{aura:113,value:v} to your hero.",
+    "es": "{value:v,+}\\_{aura:113,value:v} a tu héroe.",
+    "de": "{value:v,+}\\_{aura:113,value:v} für deinen Helden.",
+    "pt": "{value:v,+}\\_{aura:113,value:v} ao seu herói."
+  }
+}

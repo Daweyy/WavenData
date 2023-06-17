@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "13",
+  "m_id": 13,
+  "m_displayName": "RING - RARE - Anneau Carina",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1635114566,
+    "b": -93797404,
+    "c": 1815345976,
+    "d": -361628571,
+    "e": -2142591634
+  },
+  "m_i18nDescriptionId": {
+    "a": -1635114566,
+    "b": -93797404,
+    "c": 1815345976,
+    "d": -361628571,
+    "e": 764829710
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -1635114566,
+    "b": -93797404,
+    "c": 1815345976,
+    "d": -361628571,
+    "e": 1224976020
+  },
+  "m_illustration": {
+    "assetGuid": "4c0077b35bd368d428fa84ff8c7df473"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "4e3b120c5a713354e8299693ca791f64"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 13,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      577,
+      419849,
+      710575,
+      691504,
+      691569,
+      692029
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "x",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 20
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 109
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "y",
+                "value": 10
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "y",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          24
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Carina",
+    "en": "O'Carina Ring",
+    "es": "Anillo Carina",
+    "de": "Okaring",
+    "pt": "Anel Carina"
+  },
+  "description": {
+    "fr": "Lorsque vous appliquez {%ventilated}\\_: {value:x,+,percent} de dégâts à votre prochain sort {%AIR}.",
+    "en": "When you apply {%ventilated}: {value:x,+,percent} damage to your next {%AIR} spell.",
+    "es": "Cuando aplicas {%ventilated}: {value:x,+,percent} de daño en tu próximo hechizo de {%AIR}.",
+    "de": "Wenn du {%ventilated} anwendest: {value:x,+,percent} Schaden bei deinem nächsten {%AIR}-Zauber.",
+    "pt": "Ao aplicar {%ventilated}: {value:x,+,percent} de danos ao seu próximo feitiço de {%AIR}."
+  },
+  "bgDescription": {
+    "fr": "Léger comme l'air, redoutable comme le vent, cet anneau vous donnera l'impression qu'une douce brise vous chatouille gentiment les doigts.",
+    "en": "As light as air and as fearsome as wind, this ring will give you the impression that a gentle breeze is tickling your fingers.",
+    "es": "Este anillo ligero como el aire y temible como el viento te dará la sensación de que una dulce brisa te cosquillea grácilmente los dedos.",
+    "de": "Dieser Ring ist leicht wie Luft und furchterregend wie der Wind. Er gibt dir das Gefühl, eine sanfte Brise würde deine Finger umspielen.",
+    "pt": "Leve como o ar, forte como o vento, este anel vai te dar a impressão de que uma brisa suave faz cócegas nos seus dedos."
+  }
+}

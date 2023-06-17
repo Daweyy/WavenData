@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "579",
+  "m_id": 579,
+  "m_displayName": "SRAM - ARME - ORISHI - ETHER - Poussette Orishi",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1800423627,
+    "b": -28065180,
+    "c": -1349510374,
+    "d": -242337537,
+    "e": 243342312
+  },
+  "m_i18nDescriptionId": {
+    "a": -1800423627,
+    "b": -28065180,
+    "c": -1349510374,
+    "d": -242337537,
+    "e": 1307417030
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "82a669f6f8620a044beff835edadcb41"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 579,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 620,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "abed9f92ac1360748802b2e0802ad1d0",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Poussette Orishi",
+    "en": "Orishi Nudge",
+    "es": "Empujoncito Orishi",
+    "de": "Orishi-Stoß",
+    "pt": "Empurradela Orishi"
+  },
+  "description": {
+    "fr": "{#Push} la cible jusqu’à {cell:c}.",
+    "en": "{#Push} the target up to {cell:c}.",
+    "es": "{#Push} al objetivo hasta {cell:c}.",
+    "de": "{#Push} das Ziel bis zu {cell:c} zurück.",
+    "pt": "{#Push} o alvo por até {cell:c}."
+  }
+}

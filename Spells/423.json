@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "423",
+  "m_id": 423,
+  "m_displayName": "EQUIPMENT - RING - GRIMOIRE - (4) Feu",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1649255668,
+    "b": 691482772,
+    "c": 564689544,
+    "d": -1954289674,
+    "e": -2105225507
+  },
+  "m_i18nDescriptionId": {
+    "a": 1649255668,
+    "b": 691482772,
+    "c": 564689544,
+    "d": -1954289674,
+    "e": -140847803
+  },
+  "m_elementaryStates": 3,
+  "m_illustrationReference": {
+    "assetGuid": "f5e24420a676455449c6fa2426e8c5aa"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 423,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        89
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "AllCoordsSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3a66cca3e7526ba4490cc3b7ebac89d9",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Page 4 du Grimoire des Flammes",
+    "en": "Page 4 of the Spellbook of Flames",
+    "es": "Página 4 del Grimorio de las Llamas",
+    "de": "Seite 4 des Zauberbuchs der Flammen",
+    "pt": "Página 4 do Grimório das Chamas"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} et applique <b>HUILÉ</b>\\_<sprite name=\"oiled\"> aux adversaires dans la zone <sprite name=\"cell_cross\"> ciblée.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nDoes {magicalDamage:dmg} and applies <b>OILED</b>\\_<sprite name=\"oiled\"> on opponents in the targeted <sprite name=\"cell_cross\">\\_zone.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} y aplica <b>ENGRASADO</b>\\_<sprite name=\"oiled\"> a los adversarios de la zona <sprite name=\"cell_cross\"> objetivo.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nVerursacht {magicalDamage:dmg} und wendet <b>GEÖLT</b>\\_<sprite name=\"oiled\"> bei Gegnern im Wirkungsbereich\\_<sprite name=\"cell_cross\"> an.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} e aplica <b>OLEOSO</b>\\_<sprite name=\"oiled\"> aos adversários na zona\\_<sprite name=\"cell_cross\"> visada."
+  }
+}

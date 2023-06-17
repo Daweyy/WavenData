@@ -1,0 +1,165 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "909",
+  "m_id": 909,
+  "m_displayName": "MONSTRE BOUFTOU - Hurlement du Troupeau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1811586065,
+    "b": -1328115548,
+    "c": -1407711207,
+    "d": 1138110605,
+    "e": 1267196054
+  },
+  "m_i18nDescriptionId": {
+    "a": 1811586065,
+    "b": -1328115548,
+    "c": -1407711207,
+    "d": 1138110605,
+    "e": -188475782
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b5964273151882143bb0e26eb29c405d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 909,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ffd893885baafeb42877e3a7df52d130",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "HERD"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Hurlement du Troupeau",
+    "en": "Herd's Yell",
+    "es": "Alarido del Rebaño",
+    "de": "Heulen der Herde",
+    "pt": "Berro do Rebanho"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}\\_: {ARvalue:ar,+} aux <b>Bouftous</b> alliés.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#HERD}: {ARvalue:ar,+} to allied <b>Gobballs</b>.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}: {ARvalue:ar,+} a los <b>jalatós</b> aliados.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#HERD}: {ARvalue:ar,+} für die verbündeten <b>Fresssäcke</b>.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}: {ARvalue:ar,+} aos <b>Papatudos</b> aliados."
+  }
+}

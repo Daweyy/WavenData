@@ -1,0 +1,208 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "492",
+  "m_id": 492,
+  "m_displayName": "DECK - COMMON - EARTH - Ashmal",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 228783717,
+    "b": -210776940,
+    "c": -2106875973,
+    "d": 978454990,
+    "e": -1384003049
+  },
+  "m_i18nDescriptionId": {
+    "a": 228783717,
+    "b": -210776940,
+    "c": -2106875973,
+    "d": 978454990,
+    "e": -933268163
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 492,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3197,
+      "skinIds": [
+        3197
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      3
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 63
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 12
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      721391,
+      337518,
+      260501,
+      721897,
+      721952,
+      437
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          492
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Ashmal",
+    "en": "Ashmal",
+    "es": "Ashmal",
+    "de": "Ashmal",
+    "pt": "Ashmal"
+  },
+  "description": {
+    "fr": "{%appearance} Confère l'{%AT} de ce compagnon en {%AR} à votre héros.",
+    "en": "{%appearance} Confers this companion's {%AT} as {%AR} on your hero.",
+    "es": "{%appearance} Otorga el {%AT} de este compañero en {%AR} a tu héroe.",
+    "de": "{%appearance} Gewährt deinem Helden den {%AT} dieses Begleiters als {%AR}.",
+    "pt": "{%appearance} Concede {%AT} deste companheiro em {%AR} ao seu herói."
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "361",
+  "m_id": 361,
+  "m_displayName": "ENIRIPSA - CLASSE - EAU - Mot Stimulant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -653316324,
+    "b": 1680080612,
+    "c": 592617272,
+    "d": 536593438,
+    "e": 1321777466
+  },
+  "m_i18nDescriptionId": {
+    "a": -653316324,
+    "b": 1680080612,
+    "c": 592617272,
+    "d": 536593438,
+    "e": -1533255194
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a32a40584898ad941ab6cc853562cd32"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 361,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      161,
+      157511,
+      231
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a57011b049b1fab44a4642a46dda31f1",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            50,
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 556,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "PA",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "SUPPORT"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Mot Stimulant",
+    "en": "Stimulating Word",
+    "es": "Palabra Estimulante",
+    "de": "Stimulierendes Wort",
+    "pt": "Palavra Estimulante"
+  },
+  "description": {
+    "fr": "Soigne un allié de {PVvalue:h}.\n\\---\n{#SUPPORT}\\_: {PA_RESvalue:PA,+}.",
+    "en": "Heals an ally {PVvalue:h}.\n\\---\n{#SUPPORT}: {PA_RESvalue:PA,+}.",
+    "es": "Cura a un aliado {PVvalue:h}.\n\\---\n{#SUPPORT}: {PA_RESvalue:PA,+}.",
+    "de": "Heilt einen Verbündeten um {PVvalue:h}.\n\\---\n{#SUPPORT}: {PA_RESvalue:PA,+}.",
+    "pt": "Cura um aliado em {PVvalue:h}.\n\\---\n{#SUPPORT}: {PA_RESvalue:PA,+}."
+  }
+}

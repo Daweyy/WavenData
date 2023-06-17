@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "507",
+  "m_id": 507,
+  "m_displayName": "COMPAGNON - BAKARA - Surcharge de Bakara",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1064912927,
+    "b": 1655000644,
+    "c": -513966600,
+    "d": -144036507,
+    "e": 1540866012
+  },
+  "m_i18nDescriptionId": {
+    "a": 1064912927,
+    "b": 1655000644,
+    "c": -513966600,
+    "d": -144036507,
+    "e": -1032493293
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9f8389aa07406c94eb37e20ef2564d06"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 507,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "171a9a37cec480542aa84d0c1ad1d04c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Surcharge de Bakara",
+    "en": "Bakara Overload",
+    "es": "Sobrecarga de Bakara",
+    "de": "Überladung von Bakara",
+    "pt": "Sobrecarga de Bakara"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.",
+    "en": "Does {magicalDamage:dmg}.",
+    "es": "Inflige {magicalDamage:dmg}.",
+    "de": "Verursacht {magicalDamage:dmg}.",
+    "pt": "Inflige {magicalDamage:dmg}."
+  }
+}

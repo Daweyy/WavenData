@@ -1,0 +1,220 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "701",
+  "m_id": 701,
+  "m_displayName": "MONSTRE CHAFER - Transfert Nécrotique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1538571175,
+    "b": -2082793852,
+    "c": 1163788810,
+    "d": 123134857,
+    "e": 534500960
+  },
+  "m_i18nDescriptionId": {
+    "a": -1538571175,
+    "b": -2082793852,
+    "c": 1163788810,
+    "d": 123134857,
+    "e": -1334036124
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bac6bfc686022634ca5dcc2bb2af1985"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 701,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        40
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              40
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              40
+            ]
+          },
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "750a7b8a3a9455c4083b5223f77f8830",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "perc",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Transfert Nécrotique",
+    "en": "Necrotic Transfer",
+    "es": "Transferencia Necrótica",
+    "de": "Nekrotischer Transfer",
+    "pt": "Transferência Necrótica"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un <b>Chafer</b> allié.\n\\---\n{value:min,+}\\_à\\_{ARvalue:max} et {ATvalue:perc,percent,+} pour le tour à un autre allié.",
+    "en": "Does {magicalDamage:dmg} to an allied <b>Chafer</b>.\n\\---\n{value:min,+}\\_to\\_{ARvalue:max} and {ATvalue:perc,percent,+} to another ally for the turn.",
+    "es": "Inflige {magicalDamage:dmg} a un <b>chafer</b> aliado.\n\\---\n{value:min,+}\\_a\\_{ARvalue:max} y {ATvalue:perc,percent,+} durante el turno a otro aliado.",
+    "de": "Verursacht {magicalDamage:dmg} bei einem verbündeten <b>Chafer</b>.\n\\---\n{value:min,+} bis {ARvalue:max} und {ATvalue:perc,percent,+} für die Runde für einen anderen Verbündeten.",
+    "pt": "Inflige {magicalDamage:dmg} a um <b>Chafer</b> aliado.\n\\---\n{value:min,+}\\_a\\_{ARvalue:max} e {ATvalue:perc,percent,+} durante o turno para outro aliado."
+  }
+}

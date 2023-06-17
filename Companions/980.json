@@ -1,0 +1,197 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "980",
+  "m_id": 980,
+  "m_displayName": "QUETE - TOFU - Scar",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 469126894,
+    "b": 1370900868,
+    "c": -67249014,
+    "d": -1426744305,
+    "e": 1909726022
+  },
+  "m_i18nDescriptionId": {
+    "a": 469126894,
+    "b": 1370900868,
+    "c": -67249014,
+    "d": -1426744305,
+    "e": -1031977916
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 980,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 6046,
+      "skinIds": [
+        6046
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 672
+        }
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 125
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          980
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Scar",
+    "en": "Scar",
+    "es": "Scar",
+    "de": "Scar",
+    "pt": "Scar"
+  },
+  "description": {
+    "fr": "{%Attack} Ajoute le sort {Spell:672} à votre main.",
+    "en": "{%Attack} Adds the {Spell:672} spell to your hand.",
+    "es": "{%Attack} Añade el hechizo {Spell:672} a tu mano.",
+    "de": "{%Attack} Fügt deiner Hand den Zauber {Spell:672} hinzu.",
+    "pt": "{%Attack} Adiciona o feitiço {Spell:672} à sua mão."
+  }
+}

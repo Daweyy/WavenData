@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "493",
+  "m_id": 493,
+  "m_displayName": "RING - RARE - Anneau d'Haim",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 684108101,
+    "b": 487650804,
+    "c": -982303047,
+    "d": -743275785,
+    "e": 1493574041
+  },
+  "m_i18nDescriptionId": {
+    "a": 684108101,
+    "b": 487650804,
+    "c": -982303047,
+    "d": -743275785,
+    "e": 270619296
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 684108101,
+    "b": 487650804,
+    "c": -982303047,
+    "d": -743275785,
+    "e": 91350487
+  },
+  "m_illustration": {
+    "assetGuid": "36bc609c0c2e9b941a99b8143a105f91"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "74b77d439eaf89d44baab5dcfa4109ed"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 493,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      760,
+      694325,
+      686260,
+      686426,
+      686871,
+      687419
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "buff",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 15
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 354
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "skillBuff",
+                "value": 5
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "skillBuff",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          28
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau d'Haim",
+    "en": "Tri-Fling Ring",
+    "es": "Banalianza",
+    "de": "Vollkommen Harmloser Ring",
+    "pt": "Trivianel"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {value:buff,percent,+} aux <b>DÉGÂTS</b> de vos {%SPELLCOUNT,plural:other} <b> ÉLÉMENTAIRES</b> pour le tour par adversaire {%astral}.",
+    "en": "{%FightTurnStarted} {value:buff,percent,+} to your <b>ELEMENTAL</b> {%SPELLCOUNT,plural:one} <b>DAMAGE</b> for the turn per {%astral} opponent.",
+    "es": "{%FightTurnStarted} {value:buff,percent,+} a los <b>DAÑOS</b> de tus {%SPELLCOUNT,plural:other} <b> ELEMENTALES</b> durante el turno por adversario {%astral}.",
+    "de": "{%FightTurnStarted} {value:buff,percent,+} auf den <b>SCHADEN</b> deiner <b>ELEMENTAR</b>-{%SPELLCOUNT,plural:other} für die Runde pro Gegner im Zustand {%astral}.",
+    "pt": "{%FightTurnStarted} {value:buff,percent,+} aos <b>DANOS</b> dos seus {%SPELLCOUNT,plural:other} <b>ELEMENTARES</b> durante o turno por adversário {%astral}."
+  },
+  "bgDescription": {
+    "fr": "{%empty}",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

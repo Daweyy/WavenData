@@ -1,0 +1,173 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "131031",
+  "m_id": 131031,
+  "m_displayName": "XELOR - ARME - PRAMIUM - EAU - Declic Orageux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1349871846,
+    "b": 1145628948,
+    "c": 856206986,
+    "d": -329569824,
+    "e": -1122389853
+  },
+  "m_i18nDescriptionId": {
+    "a": 1349871846,
+    "b": 1145628948,
+    "c": 856206986,
+    "d": -329569824,
+    "e": 982972380
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5bc3e26c2a201d8459209ee508cd4292"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 131031,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      109,
+      165701,
+      180477
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 614,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e8d6ce501dd7a20459e75d0471201bd1",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 755,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "mec",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Déclic Orageux",
+    "en": "Stormy Click",
+    "es": "Clic Tormentoso",
+    "de": "Stürmischer Auslöser",
+    "pt": "Estalo Tempestuoso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} si vous avez au moins {value:mec}\\_{mec,plural,one[<b>SINISTRO</b>] other[<b>SINISTROS</b>]} en jeu.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} if you have at least {value:mec}\\_{mec,plural,one[<b>SINISTRO</b>] other[<b>SINISTROS</b>]} in play.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} si tienes al menos {value:mec}\\_{mec,plural,one[<b>SINISTRO</b>] other[<b>SINISTROS</b>]} en juego.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+}, wenn du mindestens {value:mec}\\_{mec,plural,one[<b>SINISTRO</b>] other[<b>SINISTROS</b>]} im Spiel hast.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} se você tiver {value:mec}\\_{mec,plural,one[<b>SINISTRO</b>] other[<b>SINISTROS</b>]} ou mais em jogo."
+  }
+}

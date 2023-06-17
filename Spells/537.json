@@ -1,0 +1,190 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "537",
+  "m_id": 537,
+  "m_displayName": "IOP - CLASSE - FEU - Inspiration",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1061295105,
+    "b": -1070114460,
+    "c": 609519080,
+    "d": 261131913,
+    "e": -107668606
+  },
+  "m_i18nDescriptionId": {
+    "a": -1061295105,
+    "b": -1070114460,
+    "c": 609519080,
+    "d": 261131913,
+    "e": 1919658211
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "73d1b57260300234fa81135cc29bf751"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 537,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      509,
+      213446,
+      414996
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "489129a7389f0e744a19d0e404726f38",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51,
+            88
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 25
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EXPLOSION"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Inspiration",
+    "en": "Inspiration",
+    "es": "Inspiración",
+    "de": "Inspiration",
+    "pt": "Inspiração"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {explosion:ex} around\\_<sprite name=\"cell_around\"/> the target\\v if the target is <b>OILED</b><sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {explosion:ex} alrededor\\_<sprite name=\"cell_around\"/> del objetivo\\v si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {explosion:ex} ringsum\\_<sprite name=\"cell_around\"/> das Ziel aus,\\v wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {explosion:ex} em\\_volta\\_<sprite name=\"cell_around\"/> do alvo\\v se ele estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

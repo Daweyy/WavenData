@@ -1,0 +1,213 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "824",
+  "m_id": 824,
+  "m_displayName": "DECK - COMMON - WATER - Initiée Funèbre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1340306456,
+    "b": 1399176004,
+    "c": -1806498343,
+    "d": 1412666427,
+    "e": -1344977331
+  },
+  "m_i18nDescriptionId": {
+    "a": 1340306456,
+    "b": 1399176004,
+    "c": -1806498343,
+    "d": 1412666427,
+    "e": 779591588
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 824,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7828,
+      "skinIds": [
+        7828
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 19
+        }
+      ]
+    },
+    "families": [
+      6
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 70
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 12
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      405,
+      11972,
+      166,
+      123,
+      719613,
+      719990
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          824
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Initiée Funèbre",
+    "en": "Macabre Initiate",
+    "es": "Iniciada Fúnebre",
+    "de": "Düstere Eingeweihte",
+    "pt": "Iniciada Fúnebre"
+  },
+  "description": {
+    "fr": "{%APPEARANCE} Gagne {PropertyEffect:19}.",
+    "en": "{%APPEARANCE} Gains {PropertyEffect:19}.",
+    "es": "{%APPEARANCE} Gana {PropertyEffect:19}.",
+    "de": "{%APPEARANCE} Erhält {PropertyEffect:19}.",
+    "pt": "{%APPEARANCE} Recebe {PropertyEffect:19}."
+  }
+}

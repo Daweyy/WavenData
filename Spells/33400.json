@@ -1,0 +1,238 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "33400",
+  "m_id": 33400,
+  "m_displayName": "MONSTRE COCHON - Flatulence",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2120254348,
+    "b": -1104643724,
+    "c": 1216584936,
+    "d": 426823705,
+    "e": -633968971
+  },
+  "m_i18nDescriptionId": {
+    "a": 2120254348,
+    "b": -1104643724,
+    "c": 1216584936,
+    "d": 426823705,
+    "e": -1375865612
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e7215658cf6ff9b4e912727d203934a3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 33400,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "847cea5f11825cb4db5d67ac78c7c015",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "RandomRangeValue",
+          "referenceId": "dmg",
+          "max": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "max",
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 14
+            },
+            "factor": {
+              "type": "ReferenceScalingFactor",
+              "reference": 11
+            },
+            "buffs": [
+              51
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
+          },
+          "min": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "min",
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 12
+            },
+            "factor": {
+              "type": "ReferenceScalingFactor",
+              "reference": 11
+            },
+            "buffs": [
+              51
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
+          }
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Flatulence",
+    "en": "Flatulence",
+    "es": "Flatulencia",
+    "de": "Flatulenz",
+    "pt": "Flatulência"
+  },
+  "description": {
+    "fr": "Inflige {value:min} à {magicalDamage:max}.\n\\---\n{#PUSH} de {cell:c}.",
+    "en": "Does {value:min} to {magicalDamage:max}.\n\\---\n{#PUSH} {cell:c}.",
+    "es": "Inflige {value:min} a {magicalDamage:max}.\n\\---\n{#PUSH} {cell:c}.",
+    "de": "Verursacht {value:min} bis {magicalDamage:max}.\n\\---\n{#PUSH} {cell:c}.",
+    "pt": "Inflige de {value:min} a {magicalDamage:max}.\n\\---\n{#PUSH} por {cell:c}."
+  }
+}

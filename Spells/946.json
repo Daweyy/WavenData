@@ -1,0 +1,168 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "946",
+  "m_id": 946,
+  "m_displayName": "IOP - CLASSE - EAU - Nouvelle Vague",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -92713180,
+    "b": 389379556,
+    "c": -590465477,
+    "d": 2024051652,
+    "e": 1660037771
+  },
+  "m_i18nDescriptionId": {
+    "a": -92713180,
+    "b": 389379556,
+    "c": -590465477,
+    "d": 2024051652,
+    "e": 1765459756
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a7ad5da2659c0364684d587d5b3b4c81"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 946,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      209973,
+      273,
+      925
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3bb80d52a32916a4cb01178bbc1996a5",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 28
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 802,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "jd3",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Nouvelle Vague",
+    "en": "New Wave",
+    "es": "Nueva Ola",
+    "de": "Neue Welle",
+    "pt": "Nova Onda"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.",
+    "en": "Does {magicalDamage:dmg}.",
+    "es": "Inflige {magicalDamage:dmg}.",
+    "de": "Verursacht {magicalDamage:dmg}.",
+    "pt": "Inflige {magicalDamage:dmg}."
+  }
+}

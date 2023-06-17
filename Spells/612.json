@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "612",
+  "m_id": 612,
+  "m_displayName": "ENIRIPSA - ARME - AMBRE TAMASHI - EAU - Soin Nocturne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1366527105,
+    "b": -1148565164,
+    "c": 1477467833,
+    "d": -1708272528,
+    "e": 313081525
+  },
+  "m_i18nDescriptionId": {
+    "a": 1366527105,
+    "b": -1148565164,
+    "c": 1477467833,
+    "d": -1708272528,
+    "e": 809981984
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2c369359ea3563a449ae61b127eebc9a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 612,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      325,
+      508472,
+      507977
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 277,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 1,
+            "summonings": [
+              773
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b1133868ea1a5f440937369c3d19a296",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 843,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "id",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "id",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Soin Nocturne",
+    "en": "Nocturnal Heal",
+    "es": "Cura Nocturna",
+    "de": "Nächtliche Pflege",
+    "pt": "Cura Noturna"
+  },
+  "description": {
+    "fr": "Sacrifie l'un de vos {Summoning:773, plural:other!}.\n\\---\nSoigne les alliés adjacents\\_<sprite name=\"cell_cross\"> de {PVvalue:h}.",
+    "en": "Sacrifices one of your {Summoning:773, plural:other!}.\n\\---\nHeals adjacent\\_<sprite name=\"cell_cross\"> allies {PVvalue:h}.",
+    "es": "Sacrifica uno de tus {Summoning:773, plural:other!}.\n\\---\nCura a los aliados adyacentes\\_<sprite name=\"cell_cross\"> {PVvalue:h}.",
+    "de": "Opfert einen deiner {Summoning:773, plural:other!}.\n\\---\nHeilt die angrenzenden\\_<sprite name=\"cell_cross\"> Verbündeten um {PVvalue:h}.",
+    "pt": "Sacrificada um dos seus {Summoning:773, plural:other!}.\n\\---\nCura os aliados adjacentes\\_<sprite name=\"cell_cross\"> em {PVvalue:h}."
+  }
+}

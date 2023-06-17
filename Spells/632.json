@@ -1,0 +1,165 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "632",
+  "m_id": 632,
+  "m_displayName": "CRA - CLASSE - TERRE - Tir Boueux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 649119029,
+    "b": -231315692,
+    "c": -1267165430,
+    "d": 876562065,
+    "e": 1203358009
+  },
+  "m_i18nDescriptionId": {
+    "a": 649119029,
+    "b": -231315692,
+    "c": -1267165430,
+    "d": 876562065,
+    "e": -737636694
+  },
+  "m_elementaryStates": 2,
+  "m_illustrationReference": {
+    "assetGuid": "4e16d1e6aa4fa2c43bd72a0be86c2f4b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 632,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      666,
+      253,
+      448650
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "fcadff90f162b0b4b8a64548d9b65a87",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 4
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 684,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Tir Boueux",
+    "en": "Muddy Shot",
+    "es": "Tiro Fangoso",
+    "de": "Schlammiger Schuss",
+    "pt": "Tiro Enlameado"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>BOUEUX</b>\\_<sprite name=\"muddy\">.",
+    "en": "Does {magicalDamage:dmg} and applies <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "Verursacht {magicalDamage:dmg} und wendet <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> an.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+  }
+}

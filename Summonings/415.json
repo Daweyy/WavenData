@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442430
+  },
+  "m_Name": "415",
+  "m_id": 415,
+  "m_displayName": "_NOT USED - MONSTRE FLAQUEUX - BASE - Flacatamtam",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": 518791573,
+    "b": 766756612,
+    "c": -2083565766,
+    "d": -1947411604,
+    "e": 1212611321
+  },
+  "m_i18nChampionNameId": {
+    "a": 518791573,
+    "b": 766756612,
+    "c": -2083565766,
+    "d": -1947411604,
+    "e": -415691366
+  },
+  "m_i18nDescriptionId": {
+    "a": 518791573,
+    "b": 766756612,
+    "c": -2083565766,
+    "d": -1947411604,
+    "e": 253092257
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 415,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1,
+      "skinIds": [
+        1
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 47
+        }
+      ]
+    },
+    "families": [
+      42
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 80
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "TeamFilter",
+          "isIdentical": true,
+          "reference": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          }
+        },
+        {
+          "type": "WoundedFilter",
+          "isWounded": true
+        }
+      ]
+    },
+    "actionType": 2,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 4
+      }
+    },
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 0,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Flacatamtam] other[Flacatamtams]}",
+    "en": "{0, plural, one[Puddatamtam] other[Puddatamtams]}",
+    "es": "{0, plural, one[Charcotantán] other[Charcotantanes]}",
+    "de": "{0, plural, one[Pfützamtam] other[Pfützamtams]}",
+    "pt": "{0, plural, one[Charcotantam] other[Charcotantans]}"
+  },
+  "description": {
+    "fr": "<rem>{range}</rem>\n\\---\n{%FightTurnEnded} Confère {PropertyEffect:47} à {value:v} {%Family_Flaqueux_Name} alliés.",
+    "en": "{range}\n\\---\n<b>END OF TURN</b>: Confers {PropertyEffect:47} on {value:v} random allied <b>Puddlies</b>.",
+    "es": "{range}\n\\---\n<b>FIN DEL TURNO</b>: Confiere {PropertyEffect:47} a {value:v} <b>Charcosos</b> aliados aleatorios.",
+    "de": "{range}\n\\---\n<b>RUNDENENDE</b>: Verleiht {PropertyEffect:47} {value:v} <b>Pfützchen</b> an zufällige Verbündete.",
+    "pt": "{range}\n\\---\n<b>FIM DO TURNO</b>: Concede {PropertyEffect:47} a {value:v} <b>Charcosos</b> aliados aleatórios."
+  },
+  "championName": {
+    "fr": "Flati",
+    "en": "Puddi",
+    "es": "Charqui",
+    "de": "Flati",
+    "pt": "Poci"
+  }
+}

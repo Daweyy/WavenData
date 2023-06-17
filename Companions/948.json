@@ -1,0 +1,212 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "948",
+  "m_id": 948,
+  "m_displayName": "_NOT USED - DECK - COMMON - IOP - Shuther",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": -1250518983,
+    "b": -1268205980,
+    "c": -1175525285,
+    "d": -1184618810,
+    "e": 678305282
+  },
+  "m_i18nDescriptionId": {
+    "a": -1250518983,
+    "b": -1268205980,
+    "c": -1175525285,
+    "d": -1184618810,
+    "e": -763132595
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 948,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2729,
+      "skinIds": [
+        2729
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ff",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 78
+        }
+      ]
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 70
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 7
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          948
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Shuther",
+    "en": "Shuther",
+    "es": "Shuther",
+    "de": "",
+    "pt": "Shuther"
+  },
+  "description": {
+    "fr": "{%Appearance} {value:ff,+}\\_{aura:78,value:ff}.",
+    "en": "{%Appearance}\\_: Gagne {value:ff}\\_{#FLYINGFIST[POINGS VOLANTS]}.\n{#AURA[]}",
+    "es": "{%Appearance}\\_: Gagne {value:ff}\\_{#FLYINGFIST[POINGS VOLANTS]}.\n{#AURA[]}",
+    "de": "",
+    "pt": "{%Appearance}{value:ff,+}\\_{aura:78,value:ff}."
+  }
+}

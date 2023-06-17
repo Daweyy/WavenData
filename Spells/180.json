@@ -1,0 +1,139 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "180",
+  "m_id": 180,
+  "m_displayName": "MONSTRE BWORK - Cor de Vitesse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1315939843,
+    "b": 840256804,
+    "c": -354060741,
+    "d": 292902542,
+    "e": 1389653564
+  },
+  "m_i18nDescriptionId": {
+    "a": -1315939843,
+    "b": 840256804,
+    "c": -354060741,
+    "d": 292902542,
+    "e": -2135190272
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "843a224df47253147a59c04644b45ca7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 180,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        49
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "90a4d0e0b5f79bf4cae759167592fe2f",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.25
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Cor de Vitesse",
+    "en": "Speed Horn",
+    "es": "Cuerno de Velocidad",
+    "de": "Horn der Geschwindigkeit",
+    "pt": "Trompa de Velocidade"
+  },
+  "description": {
+    "fr": "{PMvalue:pm,+} aux <b>Bworks</b> alliés pour le tour.",
+    "en": "{PMvalue:pm,+} to allied <b>Bworks</b> for the turn.",
+    "es": "{PMvalue:pm,+} a los <b>bworks</b> aliados durante el turno.",
+    "de": "{PMvalue:pm,+} für die Runde für die verbündeten <b>Bworks</b>.",
+    "pt": "{PMvalue:pm,+} aos <b>Bworks</b> aliados durante o turno."
+  }
+}

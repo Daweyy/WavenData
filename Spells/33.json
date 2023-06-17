@@ -1,0 +1,192 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "33",
+  "m_id": 33,
+  "m_displayName": "CRA - CLASSE - AIR - Pointe Provocatrice",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -909960465,
+    "b": -1067815132,
+    "c": 1353114984,
+    "d": 1075264068,
+    "e": 1707587811
+  },
+  "m_i18nDescriptionId": {
+    "a": -909960465,
+    "b": -1067815132,
+    "c": 1353114984,
+    "d": 1075264068,
+    "e": -1029217744
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0b546a4e847b2d34493afbadbd6eb9cb"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 33,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      855,
+      588,
+      440402
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "733be76c43d8f6d4a95f960787a0e465",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      },
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "733be76c43d8f6d4a95f960787a0e465",
+        "originTarget": {
+          "type": "SecondCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 573,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 552
+        },
+        "ARCHER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pointe Provocatrice",
+    "en": "Provoking Point",
+    "es": "Punta Provocadora",
+    "de": "Provokative Spitze",
+    "pt": "Ponta Provocadora"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}, deux fois.\n\\---\n{#ARCHER}",
+    "en": "Does {magicalDamage:dmg} two times.\n\\---\n{#ARCHER}",
+    "es": "Inflige {magicalDamage:dmg}, dos veces.\n\\---\n{#ARCHER}",
+    "de": "Verursacht zwei Mal {magicalDamage:dmg}.\n\\---\n{#ARCHER}",
+    "pt": "Inflige {magicalDamage:dmg}, duas vezes.\n\\---\n{#ARCHER}"
+  }
+}

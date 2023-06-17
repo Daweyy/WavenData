@@ -1,0 +1,168 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "235129",
+  "m_id": 235129,
+  "m_displayName": "CRA - ARME - VOLDORAK - ETHER - Ciblage Voldorak",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1930965119,
+    "b": 354121924,
+    "c": 154889626,
+    "d": -89346188,
+    "e": 1442152421
+  },
+  "m_i18nDescriptionId": {
+    "a": -1930965119,
+    "b": 354121924,
+    "c": 154889626,
+    "d": -89346188,
+    "e": -36497429
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "13b2124cce7d0464e8f7ccc00b841e4b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 235129,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 953,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 7
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "NegativeValue",
+                  "referenceId": "pa",
+                  "valueToNeg": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 1
+                  }
+                },
+                {
+                  "type": "FloatingCounterValue",
+                  "referenceId": null,
+                  "entitySelector": {
+                    "type": "CasterHeroSelector"
+                  },
+                  "counter": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "79c38c42bab854642951541425789feb",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "NegativeValue",
+          "referenceId": "pa",
+          "valueToNeg": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ciblage Voldorak",
+    "en": "Zandiezer Targeting",
+    "es": "Objetivo Voldorak",
+    "de": "Voldorak-Zielerfassung",
+    "pt": "Alvo Voldorak"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros à la cible.\n\\---\n{PAvalue:pa} au coût de ce {%SPELLCOUNT} par {%AURA_SIGHT} que possède votre héros.",
+    "en": "Inflicts your hero's {%AT} on the target.\n\\---\n{PAvalue:pa} to the cost of this {%SPELLCOUNT} per {%AURA_SIGHT} that your hero has.",
+    "es": "Inflige el {%AT} de héroe al objetivo.\n\\---\n{PAvalue:pa} al coste de este {%SPELLCOUNT} por {%AURA_SIGHT} que tenga tu héroe.",
+    "de": "Verursacht beim Ziel den {%AT} deines Helden als Schaden.\n\\---\n{PAvalue:pa} auf die Kosten dieses {%SPELLCOUNT} pro {%AURA_SIGHT}, die dein Held besitzt.",
+    "pt": "Inflige o {%AT} do seu herói ao alvo.\n\\---\n{PAvalue:pa} ao custo do {%SPELLCOUNT} por {%AURA_SIGHT} que seu herói possuir."
+  }
+}

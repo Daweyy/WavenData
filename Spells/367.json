@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "367",
+  "m_id": 367,
+  "m_displayName": "SRAM - ARME - KARTANA - ETHER - Charge Kartana",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1113136035,
+    "b": -116945628,
+    "c": 319984265,
+    "d": 299281619,
+    "e": -1630114476
+  },
+  "m_i18nDescriptionId": {
+    "a": -1113136035,
+    "b": -116945628,
+    "c": 319984265,
+    "d": 299281619,
+    "e": -1832175736
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "64c2a22555632ae4b8e6f45d6c98848d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 367,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 182,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a999ad40f96f267488710fdd60ef1ad5",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Charge Kartana",
+    "en": "Kartana Charge",
+    "es": "Carga Kartana",
+    "de": "Kartana-Ansturm",
+    "pt": "Investida Kartana"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné\\v et lui inflige son {%AT}.",
+    "en": "Your hero <b>CHARGES</b> an in-line character\\v and inflicts their {%AT} on them.",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado\\v y le inflige su {%AT}.",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe zu\\v und verursacht bei ihm seinen {%AT} als Schaden.",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado\\v e inflige seu {%AT}."
+  }
+}

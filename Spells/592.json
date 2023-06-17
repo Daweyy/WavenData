@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "592",
+  "m_id": 592,
+  "m_displayName": "EQUIPMENT - RING - GRIMOIRE - (4) Eau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -840795967,
+    "b": -837956940,
+    "c": 789564283,
+    "d": -1237733071,
+    "e": 1399013418
+  },
+  "m_i18nDescriptionId": {
+    "a": -840795967,
+    "b": -837956940,
+    "c": 789564283,
+    "d": -1237733071,
+    "e": 282885035
+  },
+  "m_elementaryStates": 5,
+  "m_illustrationReference": {
+    "assetGuid": "99e3c8e855912df4da6aef619e123056"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 592,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        89
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "AllCoordsSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a6616e7c0d26ab74598779aed75a273e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Page 4 du Grimoire des Vagues",
+    "en": "Page 4 of the Spellbook of Waves",
+    "es": "Página 4 del Grimorio de las Olas",
+    "de": "Seite 4 des Zauberbuchs der Wellen",
+    "pt": "Página 4 do Grimório das Ondas"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} et applique <b>MOUILLÉ</b>\\_<sprite name=\"wet\"> aux adversaires dans la zone <sprite name=\"cell_cross\"> ciblée.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nDoes {magicalDamage:dmg} and applies <b>WET</b>\\_<sprite name=\"wet\"> on opponents in the targeted <sprite name=\"cell_cross\"> zone.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} y aplica <b>MOJADO</b>\\_<sprite name=\"wet\"> a los adversarios de la zona <sprite name=\"cell_cross\"> objetivo.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nVerursacht {magicalDamage:dmg} und wendet <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> bei den Gegnern im Wirkungsbereich\\_<sprite name=\"cell_cross\"> an.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} e aplica <b>MOLHADO</b>\\_<sprite name=\"wet\"> aos adversários na zona\\_<sprite name=\"cell_cross\"> visada."
+  }
+}

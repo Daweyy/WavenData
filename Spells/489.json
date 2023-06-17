@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "489",
+  "m_id": 489,
+  "m_displayName": "XELOR - ARME - TAKO - ETHER - Téléportation Tako",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 343689967,
+    "b": -103381148,
+    "c": 1389111130,
+    "d": 171243569,
+    "e": -380044114
+  },
+  "m_i18nDescriptionId": {
+    "a": 343689967,
+    "b": -103381148,
+    "c": 1389111130,
+    "d": 171243569,
+    "e": 280424093
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f8301a0b295b5eb4d90c29fc2e6d2233"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "995410cb10a92454a8968ce2ac1c50c0"
+      },
+      {
+        "assetGuid": "c822a180187e5d249981d31713600079"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 489,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 490,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "EntityCaracValue",
+                  "referenceId": "",
+                  "entitySelector": {
+                    "type": "CasterSelector"
+                  },
+                  "carac": 19
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléportation Tako",
+    "en": "Tako Teleportation",
+    "es": "Teletransportación Tako",
+    "de": "Tako-Teleportation",
+    "pt": "Teletransporte Tako"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu’à un nombre de cases égal à vos {%PA_RES,plural:other}.\n\\---\nInflige son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de sa case d’arrivée.",
+    "en": "Teleports your hero up to a number of cells equal to your {%PA_RES,plural:other}.\n\\---\nInflicts their {%AT} on opponents around<sprite name=\"cell_around\"> the destination cell.",
+    "es": "Teletransporta a tu héroe hasta un número de casillas igual a tus {%PA_RES,plural:other}.\n\\---\nInflige su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada.",
+    "de": "Teleportiert deinen Helden um so viele Felder, wie er {%PA_RES,plural:other} besitzt.\n\\---\nVerursacht bei den an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_around\"> Gegnern seinen {%AT} als Schaden.",
+    "pt": "Teletransporta seu herói a até um número de células igual à sua {%PA_RES,plural:other}.\n\\---\nInflige seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada."
+  }
+}

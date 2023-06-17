@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "224933",
+  "m_id": 224933,
+  "m_displayName": "OSAMODAS - CLASSE - TERRE - Rabrouer",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -1309434689,
+    "b": 574249828,
+    "c": 1815659370,
+    "d": 846922711,
+    "e": 1617595430
+  },
+  "m_i18nDescriptionId": {
+    "a": -1309434689,
+    "b": 574249828,
+    "c": 1815659370,
+    "d": 846922711,
+    "e": 942891126
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d4929bd9d7752ca4d995641ea88be90c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 224933,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 42
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Rabrouer",
+    "en": "Frappe du Craqueleur",
+    "es": "Frappe du Craqueleur",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:42} la cible si elle est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "en": "Inflige {magicalDamage:dmg} dans la zone <sprite name=\"cell_circle2\"> ciblée.\nConfère {#GROWING} aux bêtes alliées dans la zone ciblée.",
+    "es": "Inflige {magicalDamage:dmg} dans la zone <sprite name=\"cell_circle2\"> ciblée.\nConfère {#GROWING} aux bêtes alliées dans la zone ciblée.",
+    "de": "",
+    "pt": ""
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "29601",
+  "m_id": 29601,
+  "m_displayName": "OSAMODAS - Appel de Flaqueux",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": 1477297902,
+    "b": -431710684,
+    "c": 2104510649,
+    "d": -1924153632,
+    "e": -2100215758
+  },
+  "m_i18nDescriptionId": {
+    "a": 1477297902,
+    "b": -431710684,
+    "c": 2104510649,
+    "d": -1924153632,
+    "e": 666675586
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9475847232d049744b82d0f8b4ee3507"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 29601,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      274,
+      135742
+    ],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11,
+      12
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Appel de Flaqueux",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Invoque un {%FAMILY_FLAQUEUX_NAME} jusqu'à {cell:c} de votre héros.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

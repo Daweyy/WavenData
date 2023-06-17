@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "639",
+  "m_id": 639,
+  "m_displayName": "RING - RARE - Anneau Ratisseur",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -511867992,
+    "b": 109309492,
+    "c": 254508122,
+    "d": 1681158148,
+    "e": 232397077
+  },
+  "m_i18nDescriptionId": {
+    "a": -511867992,
+    "b": 109309492,
+    "c": 254508122,
+    "d": 1681158148,
+    "e": -1900702543
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -511867992,
+    "b": 109309492,
+    "c": 254508122,
+    "d": 1681158148,
+    "e": -209866811
+  },
+  "m_illustration": {
+    "assetGuid": "d79e4930e4ea45c489638fd83c2f7ea5"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "dff075b8488db664bb33949527cf28bd"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 639,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      688245,
+      4,
+      688271,
+      688718,
+      29,
+      689082
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "buff",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 131959
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "skillBuff",
+                "value": 5
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "skillBuff",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          23
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Ratisseur",
+    "en": "Raky Ring",
+    "es": "Anillo Rastrillero",
+    "de": "Ring des Langfingers",
+    "pt": "Anel Roçador"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {value:buff,percent,+} aux <b>DÉGÂTS</b> de vos {%SPELLCOUNT,plural:other} {%EARTH} pour le tour par adversaire {%muddy}.",
+    "en": "{%FightTurnStarted} {value:buff,percent,+} to your {%EARTH} {%SPELLCOUNT,plural:one} <b>DAMAGE</b> for the turn per {%muddy} opponent.",
+    "es": "{%FightTurnStarted} {value:buff,percent,+} a los <b>DAÑOS</b> de tus {%SPELLCOUNT,plural:other} {%EARTH} durante el turno por adversario {%muddy}.",
+    "de": "{%FightTurnStarted} {value:buff,percent,+} auf den <b>SCHADEN</b> deiner {%EARTH}-{%SPELLCOUNT,plural:other} für die Runde pro Gegner im Zustand {%muddy}.",
+    "pt": "{%FightTurnStarted} {value:buff,percent,+} aos <b>DANOS</b> dos seus {%SPELLCOUNT,plural:other} {%EARTH} durante o turno por adversário {%muddy}."
+  },
+  "bgDescription": {
+    "fr": "Vous ne ferez pas dans la dentelle avec cet anneau. Vous vous attendiez à autre chose ?",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

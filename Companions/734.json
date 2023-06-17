@@ -1,0 +1,227 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "734",
+  "m_id": 734,
+  "m_displayName": "DECK - INFINITE - MULTI - Katar",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1968707922,
+    "b": 1196258260,
+    "c": 1814292136,
+    "d": -1047438753,
+    "e": 93609118
+  },
+  "m_i18nDescriptionId": {
+    "a": -1968707922,
+    "b": 1196258260,
+    "c": 1814292136,
+    "d": -1047438753,
+    "e": -1779236345
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 734,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 8084,
+      "skinIds": [
+        8084
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      8,
+      72
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 134
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 28
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      430,
+      365,
+      408315,
+      408687,
+      848,
+      857
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          734
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Katar",
+    "en": "Katar",
+    "es": "Katar",
+    "de": "Katar",
+    "pt": "Katar"
+  },
+  "description": {
+    "fr": "{%attack} Inflige son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\">.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "en": "{%attack} Inflicts {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "es": "{%attack} Inflige su {%AT} a los adversarios alrededor\\_<sprite name=\"cell_around\">.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "de": "{%attack} Verursacht bei Gegnern ringsum\\_<sprite name=\"cell_around\"> seinen {%AT} als Schaden.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "pt": "{%attack} Inflige seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\">.\\v<family>{%Family_GreatVilain_Name}</family>"
+  }
+}

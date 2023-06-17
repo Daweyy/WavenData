@@ -1,0 +1,231 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "309",
+  "m_id": 309,
+  "m_displayName": "DECK - INFINITE - MULTI - Justice",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1069897110,
+    "b": -468680060,
+    "c": -31002967,
+    "d": -1210046297,
+    "e": -1224148968
+  },
+  "m_i18nDescriptionId": {
+    "a": 1069897110,
+    "b": -468680060,
+    "c": -31002967,
+    "d": -1210046297,
+    "e": -1641195718
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 309,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2045,
+      "skinIds": [
+        2045
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 21,
+          "id": 3
+        }
+      ]
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 158
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 28
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      108,
+      747060,
+      323,
+      407517,
+      408113,
+      87
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          309
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Justice",
+    "en": "Justice",
+    "es": "Justicia",
+    "de": "Gerechtigkeit",
+    "pt": "Justiça"
+  },
+  "description": {
+    "fr": "{%Appearance} Devient {LinkEffect:3} de l'allié ayant le moins de\\_{%PV,plural:other} pour le tour.",
+    "en": "{%Appearance} Becomes the {LinkEffect:3} of the ally with the least\\_{%PV,plural:other} for the turn.",
+    "es": "{%Appearance} Se vuelve {LinkEffect:3} del aliado que tenga menos\\_{%PV,plural:other} durante el turno.",
+    "de": "{%Appearance} Wird für die Runde zum {LinkEffect:3} des Verbündeten mit den wenigsten {%PV,plural:other}.",
+    "pt": "{%Appearance} Torna-se {LinkEffect:3} do aliado que tiver menos de\\_{%PV,plural:other} durante o turno."
+  }
+}

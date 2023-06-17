@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "500",
+  "m_id": 500,
+  "m_displayName": "ENIRIPSA - CLASSE - ETHER - Sacrifice Honteux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 85658035,
+    "b": 517899572,
+    "c": 1196738154,
+    "d": 880453006,
+    "e": -1038253165
+  },
+  "m_i18nDescriptionId": {
+    "a": 85658035,
+    "b": 517899572,
+    "c": 1196738154,
+    "d": 880453006,
+    "e": -382590206
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1f20e4eea649f2747a1f181f4991111e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 500,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "EntityTypeFilter",
+              "condition": 1,
+              "entityTypes": [
+                2,
+                3,
+                8
+              ]
+            },
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "1a1328c222b34e9499e95fade427cf95",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Sacrifice Honteux",
+    "en": "Shameful Sacrifice",
+    "es": "Sacrificio Vergonzoso",
+    "de": "Schmachvolles Opfer",
+    "pt": "Sacrifício Vergonhoso"
+  },
+  "description": {
+    "fr": "Sacrifie un personnage allié et inflige son {%at} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.",
+    "en": "Sacrifices an allied character and inflicts their {%at} on opponents around\\_<sprite name=\"cell_around\"> them.",
+    "es": "Sacrifica a un personaje aliado e inflige su {%at} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Opfert einen verbündeten Charakter und verursacht seinen {%at} bei den Gegnern ringsum\\_<sprite name=\"cell_around\">.",
+    "pt": "Sacrifica um personagem aliado e inflige seu {%at} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele."
+  }
+}

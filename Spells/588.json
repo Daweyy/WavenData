@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "588",
+  "m_id": 588,
+  "m_displayName": "MONSTRE FORESTIER - Appel de la Nature",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -973514150,
+    "b": 29962052,
+    "c": -2058612054,
+    "d": -152050972,
+    "e": 1861308034
+  },
+  "m_i18nDescriptionId": {
+    "a": -973514150,
+    "b": 29962052,
+    "c": -2058612054,
+    "d": -152050972,
+    "e": -532271972
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b6e5d09d62afdfa49a6b0e0f6a871f28"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 588,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        85
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "4c9983db8e2fdc445bd626bca7c68157",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Appel de la Nature",
+    "en": "Call of Nature",
+    "es": "Llamada de la Naturaleza",
+    "de": "Ruf der Natur",
+    "pt": "Chamado da Natureza"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} aux alliés.",
+    "en": "{ARvalue:ar,+} to allies.",
+    "es": "{ARvalue:ar,+} a los aliados.",
+    "de": "{ARvalue:ar,+} für die Verbündeten.",
+    "pt": "{ARvalue:ar,+} aos aliados."
+  }
+}

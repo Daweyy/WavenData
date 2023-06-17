@@ -1,0 +1,264 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "66",
+  "m_id": 66,
+  "m_displayName": "MONSTRE CHAFER - Charge Crâneuse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1599561818,
+    "b": -658126604,
+    "c": -1472564567,
+    "d": -248326849,
+    "e": 1577122225
+  },
+  "m_i18nDescriptionId": {
+    "a": 1599561818,
+    "b": -658126604,
+    "c": -1472564567,
+    "d": -248326849,
+    "e": -1522169137
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ee0172b2bd041184393bd0b7c5ca7f54"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 66,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        40
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              40
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "EntityValidForMagicalDamageFilter"
+                }
+              ]
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 2,
+            "summonings": [
+              556,
+              701,
+              917,
+              121
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          },
+          {
+            "type": "EntityValidForMagicalDamageFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9c2a5a6db29615e4aaf810af3837c5e3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 26
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 29
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Charge Crâneuse",
+    "en": "Skully Charge",
+    "es": "Carga Craneal",
+    "de": "Prahlerischer Ansturm",
+    "pt": "Investida Craniana"
+  },
+  "description": {
+    "fr": "Un <b>Chafer</b> allié <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {magicalPowerValue:min} à {magicalDamage:max}.\n\\---\n{#PUSH} la cible de {cell:d}.",
+    "en": "An allied <b>Chafer</b> <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalPowerValue:min} to {magicalDamage:max} to them.\n\\---\n{#PUSH} the target {cell:d}.",
+    "es": "Un <b>chafer</b> aliado <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{#PUSH} al objetivo {cell:d}.",
+    "de": "Ein verbündeter <b>Chafer</b> <b>STÜRMT</b> auf einen in Reihe befindlichen Charakter bis {cell:c} zu und verursacht {magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\n{#PUSH} das Ziel um {cell:d}.",
+    "pt": "Um <b>Chafer</b> aliado <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e inflige de {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{#PUSH} o alvo por {cell:d}."
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "62",
+  "m_id": 62,
+  "m_displayName": "XELOR - CLASSE - AIR - Alignement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 280781150,
+    "b": 1000408404,
+    "c": 1586205656,
+    "d": -1999801369,
+    "e": -1629785677
+  },
+  "m_i18nDescriptionId": {
+    "a": 280781150,
+    "b": 1000408404,
+    "c": 1586205656,
+    "d": -1999801369,
+    "e": -1084658448
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3cbeb9403f2e42046b4536b840c39275"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 62,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      538052,
+      657,
+      174134
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      1
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        "startPosition": {
+          "type": "CasterHeroSelector"
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b0751c580057a5746aba726b1d79095d",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 605,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "d1",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 605,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "CHRONO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Alignement",
+    "en": "Alignment",
+    "es": "Alineamiento",
+    "de": "Aufreihung",
+    "pt": "Alinhamento"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} sur les {cell:c} devant votre\\_héros.\n\\---\n{#CHRONO}\\_: {magicalDamage:d1,+}.",
+    "en": "Does {magicalDamage:dmg} to the {cell:c} in front of your\\_hero.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}.",
+    "es": "Inflige {magicalDamage:dmg} en las {cell:c} de delante de tu\\_héroe.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}.",
+    "de": "Verursacht {magicalDamage:dmg} auf den {cell:c} vor deinem\\_Helden.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}.",
+    "pt": "Inflige {magicalDamage:dmg} às {cell:c} na frente do seu\\_herói.\n\\---\n{#CHRONO}\\_: {magicalDamage:d1,+}."
+  }
+}

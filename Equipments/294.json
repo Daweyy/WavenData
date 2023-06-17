@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "294",
+  "m_id": 294,
+  "m_displayName": "RING - RARE - Anneau Pinel",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1125133659,
+    "b": -908330684,
+    "c": -2035048712,
+    "d": -886407065,
+    "e": -518167735
+  },
+  "m_i18nDescriptionId": {
+    "a": 1125133659,
+    "b": -908330684,
+    "c": -2035048712,
+    "d": -886407065,
+    "e": -1123595667
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 1125133659,
+    "b": -908330684,
+    "c": -2035048712,
+    "d": -886407065,
+    "e": -1276456124
+  },
+  "m_illustration": {
+    "assetGuid": "56b827a7dbc83d848aa123199a9f5714"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "344be9ae4a6abc543a1db58d409723c9"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 294,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      692708,
+      692722,
+      692930,
+      692964,
+      633,
+      693216
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "t",
+          "condition": {
+            "type": "HolderHasSkillCondition",
+            "skill": 132398
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "boost",
+            "value": 2
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "boost",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "COLLISION"
+      ]
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          22
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Pinel",
+    "en": "Pinel Ring",
+    "es": "Anillo Pinel",
+    "de": "Klingenring",
+    "pt": "Anel Pinel"
+  },
+  "description": {
+    "fr": "{#COLLISION}\\_: Soigne votre héros d'autant de {%PV} que de dégâts infligés.\n\\---\n<rem>Limité à {value:t} fois par tour.</rem>",
+    "en": "{#COLLISION}: Heals your hero as many {%PV} as damage done.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</rem>",
+    "es": "{#COLLISION}: Cura a tu héroe tanta {%PV} como daños infligidos.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "{#COLLISION}: Heilt deinen Helden um {%PV} in Höhe des zugefügten Schadens.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</rem>",
+    "pt": "{#COLLISION}: Cura seu herói com {%PV} em número equivalente aos danos infligidos.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</rem>"
+  },
+  "bgDescription": {
+    "fr": "Cet anneau a déjà coupé de nombreux doigts. Prenez garde aux vôtres.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

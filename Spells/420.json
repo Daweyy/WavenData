@@ -1,0 +1,186 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "420",
+  "m_id": 420,
+  "m_displayName": "ENIRIPSA - CLASSE - ETHER - Envol",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1599111698,
+    "b": -1516014188,
+    "c": 1324963305,
+    "d": 117333671,
+    "e": -1665435177
+  },
+  "m_i18nDescriptionId": {
+    "a": -1599111698,
+    "b": -1516014188,
+    "c": 1324963305,
+    "d": 117333671,
+    "e": -1436191674
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "65dfa9ae5fd139348b20bc48868f759c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0b2ba38e3d188094d8e7efb1204e74e5"
+      },
+      {
+        "assetGuid": "98a9be0fde6348d40b5c9518d5f6ad60"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 420,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllCharactersSelector"
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CasterHeroFilter"
+              }
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "NotEntityFilter",
+                  "filter": {
+                    "type": "CasterHeroFilter"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Envol",
+    "en": "Flight",
+    "es": "Levanta el Vuelo",
+    "de": "Abflug",
+    "pt": "Voo"
+  },
+  "description": {
+    "fr": "Téléporte votre héros sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\nSoigne votre héros de son {%AT}.",
+    "en": "Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.\n\\---\nHeals your hero with their {%AT}.",
+    "es": "Teletransporta a tu héroe a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.\n\\---\nCura a tu héroe su {%AT}.",
+    "de": "Teleportiert deinen Helden auf ein an einen Verbündeten angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\nHeilt deinen Helden um seinen {%AT}.",
+    "pt": "Teletransporta seu herói sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\nCura seu herói com seu {%AT}."
+  }
+}

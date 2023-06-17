@@ -1,0 +1,216 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "638",
+  "m_id": 638,
+  "m_displayName": "SRAM - CLASSE - FEU - Fievre Noire",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1629573713,
+    "b": 134999252,
+    "c": -17327830,
+    "d": -979186113,
+    "e": -1084053822
+  },
+  "m_i18nDescriptionId": {
+    "a": -1629573713,
+    "b": 134999252,
+    "c": -17327830,
+    "d": -979186113,
+    "e": 690882634
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3337f8e0ad5db1e4b91d222d1bf26bf8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 638,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      182,
+      359987,
+      388
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "2660521fcdb77c24eae46e046a4f69e9",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 328,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bonus",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 328,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "MaxTrap",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Fièvre Noire",
+    "en": "Black Fever",
+    "es": "Fiebre Negra",
+    "de": "Schwarzes Fieber",
+    "pt": "Febre Negra"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\n{magicalDamage:bonus,+} pour chacun de vos {%KEYWORD.TRAP.NAME,plural:other} en jeu.\n<rem>Limité à {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap}.</rem>",
+    "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero.\n\\---\n{magicalDamage:bonus,+} for each of your {%KEYWORD.TRAP.NAME,plural:other} in play.\n<rem>Limit: {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap}.</rem>",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\n{magicalDamage:bonus,+} por cada una de tus {%KEYWORD.TRAP.NAME,plural:other} en juego.\n<rem>Limitado a {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap}.</rem>",
+    "de": "Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> deines Helden {magicalDamage:dmg}.\n\\---\n{magicalDamage:bonus,+} für jede deiner {%KEYWORD.TRAP.NAME,plural:other} im Spiel.\n<rem>Auf {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap} begrenzt.</rem>",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.\n\\---\n{magicalDamage:bonus,+} por cada uma de suas {%KEYWORD.TRAP.NAME,plural:other} em jogo.\n<rem>Limite de {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap}.</rem>"
+  }
+}

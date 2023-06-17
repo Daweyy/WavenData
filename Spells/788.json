@@ -1,0 +1,189 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "788",
+  "m_id": 788,
+  "m_displayName": "SRAM - ARME - KARTANA - FEU - Frappe Frenetique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1538798581,
+    "b": 215291092,
+    "c": -125289957,
+    "d": 751658539,
+    "e": -1647762242
+  },
+  "m_i18nDescriptionId": {
+    "a": 1538798581,
+    "b": 215291092,
+    "c": -125289957,
+    "d": 751658539,
+    "e": -2076125303
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "325eca7892fbd324182569034bc0e665"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "da83ac939ee5d464d92f276f68767917"
+      },
+      {
+        "assetGuid": "bdbc7d1cacf973249a7a429036058dd5"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 788,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      495336,
+      347935,
+      636
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 182,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllFloorMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 903,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Frappe Frénétique",
+    "en": "Frenetic Strike",
+    "es": "Golpe Frenético",
+    "de": "Frenetischer Hieb",
+    "pt": "Golpe Frenético"
+  },
+  "description": {
+    "fr": "Téléporte votre héros sur un de vos {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nInflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée.",
+    "en": "Teleports your hero onto one of your {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nDoes {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> the destination cell.",
+    "es": "Teletransporta a tu héroe sobre una de tus {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nInflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada.",
+    "de": "Teleportiert deinen Helden ODER eine deiner {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nVerursacht {magicalDamage:dmg} ringsum\\_<sprite name=\"cell_around\"> seines Ankunftsfelds.",
+    "pt": "Teletransporta seu herói para uma de suas {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nInflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada."
+  }
+}

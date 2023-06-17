@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "823",
+  "m_id": 823,
+  "m_displayName": "EQUIPMENT - RING - Orbe d'Eau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -424450706,
+    "b": 1673983348,
+    "c": 277410409,
+    "d": 868579687,
+    "e": 1092857648
+  },
+  "m_i18nDescriptionId": {
+    "a": -424450706,
+    "b": 1673983348,
+    "c": 277410409,
+    "d": 868579687,
+    "e": -1506871612
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a6e44c4357f749f4bb8dc1a489f25cb4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 823,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 40
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": ""
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -5
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d93e628281d7b3442b1db3c5b4b9ff85",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -5
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": "",
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 100
+                },
+                {
+                  "type": "MultValue",
+                  "referenceId": "",
+                  "valuesToMult": [
+                    {
+                      "type": "ThisSpellEvolutionValue",
+                      "referenceId": ""
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "per",
+                      "value": 10
+                    }
+                  ]
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Orbe d'Eau",
+    "en": "Water Orb",
+    "es": "Orbe de Agua",
+    "de": "Wasserkugel",
+    "pt": "Orbe de Água"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:v}. \n\\---\nLorsque vous jouez un autre {%SPELLCOUNT} {%WATER}\\_: {value:per,percent,+} aux <b>DÉGÂTS</b> de ce {%SPELLCOUNT} et {PAvalue:pa} à son coût.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Inflicts {magicalDamage:v}. \n\\---\nWhen you play another {%WATER} {%SPELLCOUNT}: {value:per,percent,+} to this {%SPELLCOUNT}'s <b>DAMAGE</b> and {PAvalue:pa} to its cost.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Inflige {magicalDamage:v}. \n\\---\nCuando lanzas otro {%SPELLCOUNT} de {%WATER}: {value:per,percent,+} a los <b>DAÑOS</b> de este {%SPELLCOUNT} y {PAvalue:pa} a su coste.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Verursacht {magicalDamage:v}.\n\\---\nWenn du einen anderen {%WATER}-{%SPELLCOUNT} ausspielst: {value:per,percent,+} <b>SCHADEN</b> für diesen {%SPELLCOUNT} und {PAvalue:pa} auf seine Kosten.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Inflige {magicalDamage:v}.\n\\---\nQuando você lançar outro {%SPELLCOUNT} de {%WATER}: {value:per,percent,+} aos <b>DANOS</b> deste {%SPELLCOUNT} e {PAvalue:pa} ao seu custo.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "863",
+  "m_id": 863,
+  "m_displayName": "EQUIPMENT - BRACELET - Traversee rocheuse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2085458826,
+    "b": -1052522412,
+    "c": -911114616,
+    "d": -1189988139,
+    "e": -1825864708
+  },
+  "m_i18nDescriptionId": {
+    "a": 2085458826,
+    "b": -1052522412,
+    "c": -911114616,
+    "d": -1189988139,
+    "e": 1440220132
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e53679d5fea8d634bb2a35ad1a11d191"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 863,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "SumValue",
+                "referenceId": "c",
+                "valuesToSum": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 2
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "PlayerHasEquipmentSkillCondition",
+                      "player": {
+                        "type": "CasterSelector"
+                      },
+                      "skillId": 886
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c2",
+                      "value": 1
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "PlayerHasEquipmentSkillCondition",
+                      "player": {
+                        "type": "CasterSelector"
+                      },
+                      "skillId": 650287
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c3",
+                      "value": 1
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "22ed713482d6a9c4c8f16d611428d948",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "c",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 2
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "skillId": 886
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c2",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "skillId": 650287
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c3",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c3",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.275.bc"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ROCK",
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Traversée rocheuse",
+    "en": "Rocky Crossing",
+    "es": "Travesía Rocosa",
+    "de": "Felsige Überquerung",
+    "pt": "Travessia Rochosa"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nVotre héros traverse {cell:c} et déclenche {rock:ParameterizedEffectExecution.275.bc} sur les adversaires traversés.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nYour hero goes through {cell:c} and triggers {rock:ParameterizedEffectExecution.275.bc} on the opponents gone through.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTu héroe atraviesa {cell:c} y activa {rock:ParameterizedEffectExecution.275.bc} en los aliados atravesados.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nDein Held überquert {cell:c} und löst {rock:ParameterizedEffectExecution.275.bc} bei den überquerten Gegnern aus.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nSeu herói atravessa {cell:c} e aciona {rock:ParameterizedEffectExecution.275.bc} nos adversários atravessados."
+  }
+}

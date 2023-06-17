@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "252",
+  "m_id": 252,
+  "m_displayName": "MONSTRE TOFU - Vent Chaud",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 597648919,
+    "b": 634461396,
+    "c": -802462839,
+    "d": -514335004,
+    "e": -1232186549
+  },
+  "m_i18nDescriptionId": {
+    "a": 597648919,
+    "b": 634461396,
+    "c": -802462839,
+    "d": -514335004,
+    "e": -1578578750
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "37fb3e8529eb6904d979430705d873d0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 252,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        37
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f15fe5c624d602d418d248520adf7186",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "hmin",
+          "baseValue": 8,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "hmax",
+          "baseValue": 10,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 25,
+          "id": 173185
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Vent Chaud",
+    "en": "Hot Wind",
+    "es": "Viento Cálido",
+    "de": "Warmer Wind",
+    "pt": "Enrolar Quente"
+  },
+  "description": {
+    "fr": "Soigne un allié de {value:hmin} à {PVvalue:hmax}.\n\\---\nAjoute le sort {Spell:173185} à votre main.",
+    "en": "Heals an ally {value:hmin} to {PVvalue:hmax}.\n\\---\nAdds the {Spell:173185} spell to your hand.",
+    "es": "Cura a un aliado {value:hmin} a {PVvalue:hmax}.\n\\---\nAñade el hechizo {Spell:173185} a tu mano.",
+    "de": "Heilt einen Verbündeten um {value:hmin} bis {PVvalue:hmax}.\n\\---\nFügt deiner Hand den Zauber {Spell:173185} hinzu.",
+    "pt": "Cura um aliado em {value:hmin} a {PVvalue:hmax}.\n\\---\nAdiciona o feitiço {Spell:173185} à sua mão."
+  }
+}

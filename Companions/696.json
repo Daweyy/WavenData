@@ -1,0 +1,213 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "696",
+  "m_id": 696,
+  "m_displayName": "DECK - RARE - TERRE - Héros Chataigner",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -434776498,
+    "b": 89048180,
+    "c": -1800407479,
+    "d": 1845707573,
+    "e": -270849357
+  },
+  "m_i18nDescriptionId": {
+    "a": -434776498,
+    "b": 89048180,
+    "c": -1800407479,
+    "d": 1845707573,
+    "e": 1978496557
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 696,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2450,
+      "skinIds": [
+        2450
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 1
+        }
+      ]
+    },
+    "families": [
+      10
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 79
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 18
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      731285,
+      489,
+      980,
+      732357,
+      731475,
+      731529
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          696
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Héros Châtaigner",
+    "en": "Chestnutter Hero",
+    "es": "Héroe Castañeador",
+    "de": "Kastanienheld",
+    "pt": "Herói Cascudeiro"
+  },
+  "description": {
+    "fr": "{%death} {PropertyEffect:1} les adversaires autour\\_<sprite name=\"cell_around\">.",
+    "en": "{%death} {PropertyEffect:1} surrounding\\_<sprite name=\"cell_around\"> opponents.",
+    "es": "{%death} {PropertyEffect:1} a los adversarios alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "{%death} {PropertyEffect:1} die Gegner ringsum\\_<sprite name=\"cell_around\">.",
+    "pt": "{%death} {PropertyEffect:1} os adversários em\\_volta\\_<sprite name=\"cell_around\">."
+  }
+}

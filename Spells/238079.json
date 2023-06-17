@@ -1,0 +1,181 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "238079",
+  "m_id": 238079,
+  "m_displayName": "IOP - ARME - JUSTELAME - ETHER - Démonstration Brutale",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 172377830,
+    "b": 686672836,
+    "c": -917515943,
+    "d": 984560087,
+    "e": 190576864
+  },
+  "m_i18nDescriptionId": {
+    "a": 172377830,
+    "b": 686672836,
+    "c": -917515943,
+    "d": 984560087,
+    "e": 954071087
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "4f4ff9b3c5aa18e459061c292341f0f6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 238079,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      0
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 919,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 6
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -1
+                },
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": "",
+                  "from": {
+                    "type": "AllCharactersSelector"
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "AroundSquaredTargetFilter",
+                      "targetsToCompare": {
+                        "type": "CasterHeroSelector"
+                      },
+                      "distance": {
+                        "type": "EqualsTo",
+                        "dynamicValue": {
+                          "type": "ConstIntegerValue",
+                          "referenceId": "",
+                          "value": 1
+                        }
+                      }
+                    },
+                    {
+                      "type": "TeamFilter",
+                      "isIdentical": false,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d3a06aebfa442d747b2117bb496cf73c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 455
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Démonstration Brutale",
+    "en": "Brutal Demonstration",
+    "es": "Demostración Brutal",
+    "de": "Brutale Demonstration",
+    "pt": "Demonstração Brutal"
+  },
+  "description": {
+    "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{NamedEffect:455}\\_: -1 PA au coût de ce sort.",
+    "en": "Inflicts your hero's {%AT}.\n\\---\n{NamedEffect:455}: -1 AP to the cost of this spell.",
+    "es": "Inflige el {%AT} de tu héroe.\n\\---\n{NamedEffect:455}: -1 PA al coste de este hechizo.",
+    "de": "Verursacht den {%AT} deines Helden als Schaden.\n\\---\n{NamedEffect:455}: -1\\_AP auf die Kosten dieses Zaubers.",
+    "pt": "Inflige o {%AT} do seu herói.\n\\---\n{NamedEffect:455}: -1 PA ao custo deste feitiço."
+  }
+}

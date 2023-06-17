@@ -1,0 +1,238 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "744",
+  "m_id": 744,
+  "m_displayName": "SACRIEUR - CLASSE - AIR - Fulgurance",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1009684247,
+    "b": 1528486404,
+    "c": -1473961976,
+    "d": 696511037,
+    "e": -1149901309
+  },
+  "m_i18nDescriptionId": {
+    "a": 1009684247,
+    "b": 1528486404,
+    "c": -1473961976,
+    "d": 696511037,
+    "e": 1874570993
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f38c3defdbc28d04696ceaee8fd01229"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0cf550bec1deda34980803accd73d937"
+      },
+      {
+        "assetGuid": "916e46374d2bbcd44b281cf496a398e2"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 744,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      611,
+      570727,
+      570869
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "swap",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "PropertyFilter",
+                "property": {
+                  "type": "SpecificPropertyIdResolvable",
+                  "propertyId": 20
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "swap",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 89417,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Fulgurance",
+    "en": "Light Speed",
+    "es": "Fulgor",
+    "de": "Brillanz",
+    "pt": "Fulgurância"
+  },
+  "description": {
+    "fr": "Échange la position de votre héros avec celle d'un personnage jusqu'à {cell:swap} de lui.\n\\---\nInflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "en": "Switches your hero's position with that of a character up to {cell:swap} away.\n\\---\nDoes {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
+    "es": "Intercambia la posición de tu héroe con la de un personaje hasta a {cell:swap} de él.\n\\---\nInflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
+    "de": "Tauscht die Position deines Helden mit der eines Charakters bis zu {cell:swap} von ihm entfernt.\n\\---\nVerursacht bei den an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalDamage:dmg}.",
+    "pt": "Troca seu herói de posição com um personagem a até {cell:swap}.\n\\---\nInflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada."
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "216480",
+  "m_id": 216480,
+  "m_displayName": "ENIRIPSA - CLASSE - FEU - Laboratoire de Flamme",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1804037079,
+    "b": -982724444,
+    "c": 700924363,
+    "d": 751992894,
+    "e": -832611945
+  },
+  "m_i18nDescriptionId": {
+    "a": -1804037079,
+    "b": -982724444,
+    "c": 700924363,
+    "d": 751992894,
+    "e": 1844905616
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "454df0ae6027a57429dea7b0b1642ce3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 216480,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      438,
+      504057,
+      504440
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      19,
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "LIFESTEAL",
+        {
+          "type": 22,
+          "id": 116
+        },
+        {
+          "type": 25,
+          "id": 205
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1554
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Laboratoire de Flamme",
+    "en": "Flame Laboratory",
+    "es": "Laboratorio de Llamas",
+    "de": "Flammen-Laboratorium",
+    "pt": "Laboratório de Chamas"
+  },
+  "description": {
+    "fr": "Construit un {ObjectMechanism:1554} jusqu'à {cell:c} de votre héros.\n\\---\n<rem>Détruit votre précédent {ObjectMechanism:1554!}.</rem>",
+    "en": "Builds one {ObjectMechanism:1554} up to {cell:c} from your hero.\n\\---\n<rem>Destroys your previous {ObjectMechanism:1554!}.</rem>",
+    "es": "Construye un {ObjectMechanism:1554} hasta a {cell:c} de tu héroe.\n\\---\n<rem>Destruye tu {ObjectMechanism:1554!} anterior.</rem>",
+    "de": "Baut ein\\_{ObjectMechanism:1554} auf eine Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\n<rem>Zerstört dein vorheriges {ObjectMechanism:1554!}.</rem>",
+    "pt": "Posiciona um {ObjectMechanism:1554} a até {cell:c} do seu herói.\n\\---\n<rem>Destrói o {ObjectMechanism:1554!} anterior.</rem>"
+  }
+}

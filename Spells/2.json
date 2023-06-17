@@ -1,0 +1,195 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "2",
+  "m_id": 2,
+  "m_displayName": "COMPAGNON - NOX - Eliacube de Nox",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1328064682,
+    "b": 678213060,
+    "c": -603294325,
+    "d": 436906724,
+    "e": -750262036
+  },
+  "m_i18nDescriptionId": {
+    "a": 1328064682,
+    "b": 678213060,
+    "c": -603294325,
+    "d": 436906724,
+    "e": -1416288035
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "4d9122e86e5dbc74681b72dced2fe2b4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "ee9aa5962d15f314288dd8bfa1ee0300"
+      },
+      {
+        "assetGuid": "099f2c2e089cafa4596e093e4248082d"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 2,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFlagFilter",
+              "flag": 4
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "FirstCastTargetSelector"
+                },
+                "distance": {
+                  "type": "LowerEqualThan",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "c",
+                    "value": 2
+                  }
+                }
+              },
+              {
+                "type": "AroundSquaredTargetFilter",
+                "targetsToCompare": {
+                  "type": "FilteredCharacterSelector",
+                  "filters": [
+                    {
+                      "type": "SummoningDefinitionFilter",
+                      "condition": 1,
+                      "summonings": [
+                        605
+                      ]
+                    }
+                  ]
+                },
+                "distance": {
+                  "type": "EqualsTo",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0581d7bffb14b3241969181afe14c2be",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Éliacube de Nox",
+    "en": "Nox's Eliacube",
+    "es": "Selacubo de Nox",
+    "de": "Nox’ Eliakubus",
+    "pt": "Eliacubo de Nox"
+  },
+  "description": {
+    "fr": "Téléporte la cible jusqu'à {cell:c} ou autour\\_<sprite name=\"cell_around\"> d'une {Summoning:605!}.",
+    "en": "Teleports the target up to {cell:c} or around\\_<sprite name=\"cell_around\"> a {Summoning:605!}.",
+    "es": "Teletransporta al objetivo hasta a {cell:c} o alrededor\\_<sprite name=\"cell_around\"> de una {Summoning:605!}.",
+    "de": "Teleportiert das Ziel bis zu {cell:c} oder ringsum\\_<sprite name=\"cell_around\"> einer\\_{Summoning:605!}.",
+    "pt": "Teletransporta o alvo a até {cell:c} ou até em\\_volta\\_<sprite name=\"cell_around\"> de uma {Summoning:605!}."
+  }
+}

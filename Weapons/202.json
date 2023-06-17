@@ -1,0 +1,223 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "202",
+  "m_id": 202,
+  "m_displayName": "ENIRIPSA - Lame Voracius",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1467420602,
+    "b": 2040448212,
+    "c": -1599727879,
+    "d": 598292743,
+    "e": -783740347
+  },
+  "m_i18nDescriptionId": {
+    "a": 1467420602,
+    "b": 2040448212,
+    "c": -1599727879,
+    "d": 598292743,
+    "e": -872181635
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": 1467420602,
+    "b": 2040448212,
+    "c": -1599727879,
+    "d": 598292743,
+    "e": 1593967394
+  },
+  "m_i18nSimpleNameId": {
+    "a": 1467420602,
+    "b": 2040448212,
+    "c": -1599727879,
+    "d": 598292743,
+    "e": -1475751218
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": 1467420602,
+    "b": 2040448212,
+    "c": -1599727879,
+    "d": 598292743,
+    "e": 838707238
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "89494475f5d6bbb4b8c721c22d4ddb9a"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 202,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 5409,
+      "skinIds": [
+        7095,
+        5261,
+        7783,
+        7815,
+        9208,
+        5409
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "drain",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": null,
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 156007
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "s",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DRAIN"
+      ]
+    },
+    "families": [
+      3
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 380
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 22
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      764741,
+      164,
+      764742,
+      113
+    ],
+    "difficultyHint": 2,
+    "defaultSkinIdMale": 5409,
+    "defaultSkinIdFemale": 7095,
+    "god": 3,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      239043,
+      738,
+      546,
+      82
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      218404,
+      217935,
+      459,
+      609,
+      989,
+      666,
+      187,
+      152,
+      460
+    ]
+  },
+  "name": {
+    "fr": "Lame Voracius",
+    "en": "Voracius Blade",
+    "es": "Hoja Voracius",
+    "de": "Nimmersatte Klinge",
+    "pt": "Lâmina Voracius"
+  },
+  "description": {
+    "fr": "{%Appearance} {DRAINvalue:drain,percent,+} à votre héros.",
+    "en": "{%Appearance} {DRAINvalue:drain,percent,+} to your hero.",
+    "es": "{%Appearance} {DRAINvalue:drain,percent,+} a tu héroe.",
+    "de": "{%Appearance} {DRAINvalue:drain,percent,+} für deinen Helden.",
+    "pt": "{%Appearance} {DRAINvalue:drain,percent,+} ao seu herói."
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4>ÉTAT ÉLÉMENTAIRE</color>\\_: Altérez vos adversaires pour déclencher des effets supplementaires\\_!\n\\---\n{#DRAIN}\\_: Volez la vie de vos adversaires quand vous les attaquez\\_!\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",
+    "en": "<color=#7FD5E4>ELEMENTAL STATE</color>: Alter your opponents to trigger extra effects!\n\\---\n{#DRAIN}: Steal health from your opponents when you attack them!\n\\---\n<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!",
+    "es": "<color=#7FD5E4>ESTADO ELEMENTAL</color>: Altera a tus adversarios para activar efectos adicionales.\n\\---\n{#DRAIN}: ¡Róbales vida a tus adversarios al atacarlos!\n\\---\n<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!",
+    "de": "<color=#7FD5E4>ELEMENTARZUSTAND</color>: Schwäche deine Gegner, um zusätzliche Effekte auszulösen!\n\\---\n{#DRAIN}: Stiehl das Leben deiner Gegner, wenn du sie angreifst!\n\\---\n<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu!",
+    "pt": "<color=#7FD5E4>ESTADO ELEMENTAR</color>: Altere os seus adversários para provocar efeitos adicionais!\n\\---\n{#DRAIN}: Roube a vida dos seus adversários quando atacá-los!\n\\---\n<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameEniripsa}",
+    "en": "{%OnboardingSimpleNameEniripsa}",
+    "es": "{%OnboardingSimpleNameEniripsa}",
+    "de": "{%OnboardingSimpleNameEniripsa}",
+    "pt": "{%OnboardingSimpleNameEniripsa}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionEniripsa}",
+    "en": "{%OnboardingSimpleDescriptionEniripsa}",
+    "es": "{%OnboardingSimpleDescriptionEniripsa}",
+    "de": "{%OnboardingSimpleDescriptionEniripsa}",
+    "pt": "{%OnboardingSimpleDescriptionEniripsa}"
+  }
+}

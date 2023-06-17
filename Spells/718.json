@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "718",
+  "m_id": 718,
+  "m_displayName": "COMPAGNON - EVANGELYNE - Trait d'Evangelyne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1844859121,
+    "b": 1860086548,
+    "c": -1205693895,
+    "d": 996021495,
+    "e": 279018263
+  },
+  "m_i18nDescriptionId": {
+    "a": -1844859121,
+    "b": 1860086548,
+    "c": -1205693895,
+    "d": 996021495,
+    "e": -544626249
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "82bdcc816fff34b4a87995445f168b1c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 718,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3fe7fa02549f822419979ba24e1d5d47",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 28
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Trait d'Évangelyne",
+    "en": "Evangelyne's Bolt",
+    "es": "Saeta de Evangelyne",
+    "de": "Angelyas Zug",
+    "pt": "Disparo de Evangelyne"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.",
+    "en": "Does {magicalDamage:dmg}.",
+    "es": "Inflige {magicalDamage:dmg}.",
+    "de": "Verursacht {magicalDamage:dmg}.",
+    "pt": "Inflige {magicalDamage:dmg}."
+  }
+}

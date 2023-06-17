@@ -1,0 +1,217 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "443",
+  "m_id": 443,
+  "m_displayName": "QUETE - CRAQUELEUR - Chuchoteurs Militants",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -302994898,
+    "b": 863208708,
+    "c": 1156433849,
+    "d": 536814126,
+    "e": -1396862425
+  },
+  "m_i18nDescriptionId": {
+    "a": -302994898,
+    "b": 863208708,
+    "c": 1156433849,
+    "d": 536814126,
+    "e": -2542533
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 443,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7719,
+      "skinIds": [
+        7719
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgP",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 1
+        },
+        {
+          "type": 25,
+          "id": 321
+        }
+      ]
+    },
+    "families": [
+      52
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 150
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 20
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [
+      {
+        "type": "SpellOnSpawnWithDestination",
+        "spell": 321,
+        "destination": 1
+      }
+    ],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          443
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Chuchoteurs Militants",
+    "en": "Militant Whisperers",
+    "es": "Susurradores militantes",
+    "de": "Militante Flüsterer",
+    "pt": "Sussurradores Militantes"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {ATvalue:dmgP,+,percent} pour le tour s'il y a au moins {value:x}\\_{x, plural, one[allié] other[alliés]} autour\\_<sprite name=\"cell_around\">.\n\\---\nTant qu'ils sont en jeu\\_: Ajoute le sort {Spell:321} à votre main.",
+    "en": "{%FightTurnStarted} {ATvalue:dmgP,+,percent} for the turn if there {x, plural, one[is] other[are]} at least {value:x}\\_surrounding\\_<sprite name=\"cell_around\"> {x, plural, one[ally] other[allies]}.\n\\---\nWhile in play: Adds the {Spell:321} spell to your hand.",
+    "es": "{%FightTurnStarted} {ATvalue:dmgP,+,percent} durante el turno si tiene al menos {value:x}\\_{x, plural, one[aliado] other[aliados]} alrededor\\_<sprite name=\"cell_around\">.\n\\---\nMientras estén en juego: Añade el hechizo {Spell:321} a tu mano.",
+    "de": "{%FightTurnStarted} {ATvalue:dmgP,+,percent} für die Runde, wenn mindestens {value:x}\\_{x, plural, one[Verbündeter] other[Verbündete]} ringsum\\_<sprite name=\"cell_around\"> sind.\n\\---\nSolange sie im Spiel sind: Fügt deiner Hand den Zauber {Spell:321} hinzu.",
+    "pt": "{%FightTurnStarted} {ATvalue:dmgP,+,percent} durante o turno se ele tiver {value:x}\\_{x, plural, one[aliado] other[aliados]} em\\_volta\\_<sprite name=\"cell_around\">.\n\\---\nEnquanto estiver em jogo: Adiciona o feitiço {Spell:321} à sua mão."
+  }
+}

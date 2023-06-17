@@ -1,0 +1,157 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -525892856999184830
+  },
+  "m_Name": "278",
+  "m_id": 278,
+  "m_displayName": "TUTORIAL - Goultard Fight",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1597893143,
+    "b": -394873836,
+    "c": -855290726,
+    "d": -514998968,
+    "e": 1083245029
+  },
+  "values": {
+    "type": "QuestDefinition",
+    "id": 278,
+    "questType": 5,
+    "hideLevel": true,
+    "chaptersVisualId": 983,
+    "minPlayers": 1,
+    "maxPlayers": 1,
+    "accessCondition": null,
+    "npcForChapters": null,
+    "npcForFightResults": null,
+    "npcForFightResultTexts": null,
+    "ranks": [
+      {
+        "type": "QuestRank",
+        "rank": 0,
+        "firstChapterOrdinal": 1,
+        "chaptersCount": 3
+      }
+    ],
+    "chapters": [
+      {
+        "type": "ArenaChapterDefinition",
+        "chapterIndex": 0,
+        "npcForChaptersTexts": null,
+        "difficulty": 1,
+        "monsterLevel": 2,
+        "rewards": null,
+        "oneTimeRewards": null,
+        "forcedDestinationOnExit": {
+          "type": "QuestChapterForcedDestinationOnExit"
+        }
+      },
+      {
+        "type": "ArenaChapterDefinition",
+        "chapterIndex": 1,
+        "npcForChaptersTexts": null,
+        "difficulty": 2,
+        "monsterLevel": 4,
+        "rewards": null,
+        "oneTimeRewards": null,
+        "forcedDestinationOnExit": {
+          "type": "QuestChapterForcedDestinationOnExit"
+        }
+      },
+      {
+        "type": "ArenaChapterDefinition",
+        "chapterIndex": 2,
+        "npcForChaptersTexts": null,
+        "difficulty": 3,
+        "monsterLevel": 6,
+        "rewards": null,
+        "oneTimeRewards": {
+          "type": "DropTable",
+          "entries": [
+            {
+              "type": "DropTableEntry",
+              "source": {
+                "type": "TutorialRelatedSpellForWeaponSource"
+              },
+              "rollEntries": [
+                {
+                  "type": "DropTableRollEntry",
+                  "minQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 1
+                  },
+                  "maxQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "DropTableEntry",
+              "source": {
+                "type": "FixedItemDropTableEntrySource",
+                "itemId": {
+                  "typeEnum": 33,
+                  "value": 65
+                }
+              },
+              "rollEntries": [
+                {
+                  "type": "DropTableRollEntry",
+                  "minQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 50
+                  },
+                  "maxQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 50
+                  }
+                }
+              ]
+            },
+            {
+              "type": "DropTableEntry",
+              "source": {
+                "type": "FixedItemDropTableEntrySource",
+                "itemId": {
+                  "typeEnum": 33,
+                  "value": 329
+                }
+              },
+              "rollEntries": [
+                {
+                  "type": "DropTableRollEntry",
+                  "minQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 1000
+                  },
+                  "maxQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 1000
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "forcedDestinationOnExit": {
+          "type": "QuestChapterForcedDestinationOnExit"
+        }
+      }
+    ]
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

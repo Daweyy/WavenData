@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442430
+  },
+  "m_Name": "17510",
+  "m_id": 17510,
+  "m_displayName": "BRAKMAR - 18 - Garde Brakmarien",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1829356644,
+    "b": 981756852,
+    "c": 755937883,
+    "d": 1603940655,
+    "e": 316793148
+  },
+  "m_i18nChampionNameId": {
+    "a": 1829356644,
+    "b": 981756852,
+    "c": 755937883,
+    "d": 1603940655,
+    "e": 1616165440
+  },
+  "m_i18nDescriptionId": {
+    "a": 1829356644,
+    "b": 981756852,
+    "c": 755937883,
+    "d": 1603940655,
+    "e": -917323618
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 17510,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2723,
+      "skinIds": [
+        2723
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "m",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      76
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 200
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "NotEntityFilter",
+          "filter": {
+            "type": "CombinedEntityFilter",
+            "filters": [
+              {
+                "type": "CompanionDefinitionFilter",
+                "condition": 1,
+                "companions": [
+                  654
+                ]
+              },
+              {
+                "type": "PropertyFilter",
+                "property": {
+                  "type": "SpecificPropertyIdResolvable",
+                  "propertyId": 7
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 0,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Garde Brâkmarien] other[Gardes Brâkmariens]}",
+    "en": "{0, plural, one[Brakmarian Guard] other[Brakmarian Guards]}",
+    "es": "{0, plural, one[Guardia Brakmariano] other[Guardias Brakmarianos]}",
+    "de": "{0, plural, one[Brâk-Wache] other[Brâk-Wachen]}",
+    "pt": "{0, plural, one[Guarda Brakmariano] other[Guardas Brakmarianos]}"
+  },
+  "description": {
+    "fr": "{%fightTurnStarted} {PMvalue:m,+} si l'{Companion:654!} est aligné.",
+    "en": "{%fightTurnStarted} {PMvalue:m,+} if the {Companion:654!} is in line.",
+    "es": "{%fightTurnStarted} {PMvalue:m,+} si el {Companion:654!} está alineado.",
+    "de": "{%fightTurnStarted} {PMvalue:m,+}, wenn sich {Companion:654!} in derselben Reihe befindet.",
+    "pt": "{%fightTurnStarted} {PMvalue:m,+} si o {Companion:654!} estiver alinhado."
+  },
+  "championName": {
+    "fr": "{%empty}",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

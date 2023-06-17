@@ -1,0 +1,131 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "29473",
+  "m_id": 29473,
+  "m_displayName": "OSAMODAS - Appel de Prespic",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": 1221920339,
+    "b": -498230268,
+    "c": 1863048746,
+    "d": 665633491,
+    "e": 1607857578
+  },
+  "m_i18nDescriptionId": {
+    "a": 1221920339,
+    "b": -498230268,
+    "c": 1863048746,
+    "d": 665633491,
+    "e": -1981520365
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a3a9302b1e45e0348b2745156e46b81c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 29473,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      125903,
+      937
+    ],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11,
+      12
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Appel de Prespic",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Invoque un <b>PRESPIC</b> jusqu'à {cell:c} de votre héros.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

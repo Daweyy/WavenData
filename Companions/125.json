@@ -1,0 +1,214 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "125",
+  "m_id": 125,
+  "m_displayName": "DECK - COMMON - FIRE - Maitre Egreneur",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1021996860,
+    "b": 600312868,
+    "c": 673296905,
+    "d": -103406748,
+    "e": -1469534655
+  },
+  "m_i18nDescriptionId": {
+    "a": 1021996860,
+    "b": 600312868,
+    "c": 673296905,
+    "d": -103406748,
+    "e": 358243498
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 125,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9949,
+      "skinIds": [
+        9949
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      7
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 58
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 11
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      721189,
+      448,
+      720526,
+      720883,
+      260067,
+      302
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          125
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Maître Égreneur",
+    "en": "Master Teller",
+    "es": "Maestro desgranador",
+    "de": "Dreschmeister",
+    "pt": "Mestre Debulhador"
+  },
+  "description": {
+    "fr": "{%attack} {PAvalue:pa} au coût du prochain sort de {%KEYWORD.OBJECTMECHANISM.NAME} ou de {%KEYWORD.TRAP.NAME} que vous jouez.",
+    "en": "{%attack} {PAvalue:pa} to the cost of the next {%KEYWORD.OBJECTMECHANISM.NAME} or {%KEYWORD.TRAP.NAME} spell that you play.",
+    "es": "{%attack} {PAvalue:pa} al coste del próximo hechizo de {%KEYWORD.OBJECTMECHANISM.NAME} o de {%KEYWORD.TRAP.NAME} que juegues.",
+    "de": "{%attack} {PAvalue:pa} auf die Kosten des nächsten {%KEYWORD.OBJECTMECHANISM.NAME}- oder {%KEYWORD.TRAP.NAME}-Zaubers, den du ausspielst.",
+    "pt": "{%attack} {PAvalue:pa} ao custo do próximo feitiço de {%KEYWORD.OBJECTMECHANISM.NAME} ou de {%KEYWORD.TRAP.NAME} que você jogar."
+  }
+}

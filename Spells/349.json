@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "349",
+  "m_id": 349,
+  "m_displayName": "CRA - CLASSE - AIR - Pointe Venteuse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1422095235,
+    "b": -2139927196,
+    "c": 530761802,
+    "d": 660603391,
+    "e": -140291252
+  },
+  "m_i18nDescriptionId": {
+    "a": 1422095235,
+    "b": -2139927196,
+    "c": 530761802,
+    "d": 660603391,
+    "e": 74388371
+  },
+  "m_elementaryStates": 4,
+  "m_illustrationReference": {
+    "assetGuid": "03fff11b67956314ea574dd44905d410"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 349,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      111,
+      101684,
+      438352
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f46658d4e40bf5b4996a23b7a3cc1bb6",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 4
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 163,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Pointe Venteuse",
+    "en": "Windy Point",
+    "es": "Punta Ventosa",
+    "de": "Windige Spitze",
+    "pt": "Ponta Ventosa"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>ÉVENTÉ</b>\\_<sprite name=\"ventilated\"/>.",
+    "en": "Does {magicalDamage:dmg} and applies <b>VENTILATED</b>\\_<sprite name=\"ventilated\"/>.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>AIREADO</b>\\_<sprite name=\"ventilated\"/>.",
+    "de": "Verursacht {magicalDamage:dmg} und wendet <b>WINDIG</b>\\_<sprite name=\"ventilated\"/> an.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>AERADO</b>\\_<sprite name=\"ventilated\"/>."
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "445",
+  "m_id": 445,
+  "m_displayName": "DECK - RARE - TERRE - Marcus",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1623483212,
+    "b": 1066479396,
+    "c": -966925256,
+    "d": -1974185532,
+    "e": 1698666876
+  },
+  "m_i18nDescriptionId": {
+    "a": 1623483212,
+    "b": 1066479396,
+    "c": -966925256,
+    "d": -1974185532,
+    "e": 1111776269
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 445,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 4052,
+      "skinIds": [
+        4052
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": null,
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "SumValue",
+                  "referenceId": null,
+                  "valuesToSum": [
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 100
+                    },
+                    {
+                      "type": "ConditionalValue",
+                      "referenceId": "",
+                      "condition": {
+                        "type": "HolderHasSkillCondition",
+                        "skill": 141786
+                      },
+                      "ifTrue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "Pper1",
+                        "value": 100
+                      },
+                      "ifFalse": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ConditionalValue",
+                  "referenceId": "",
+                  "condition": {
+                    "type": "AndCondition",
+                    "conditions": [
+                      {
+                        "type": "ContextIsCriticalCondition"
+                      },
+                      {
+                        "type": "HolderHasSkillCondition",
+                        "skill": 877
+                      }
+                    ]
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "Pper2",
+                    "value": 300
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 6
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 22
+          },
+          "buffs": [
+            91
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Pper1",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Pper2",
+          "value": 300
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "PEAT"
+      ]
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 84
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      734271,
+      260574,
+      739714,
+      734461,
+      733585,
+      733993
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          445
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Marcus",
+    "en": "Marcus",
+    "es": "Marcus",
+    "de": "Markus",
+    "pt": "Marcus"
+  },
+  "description": {
+    "fr": "{%attack} Déclenche {peat:pt} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "en": "{%attack} Triggers {peat:pt} if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "{%attack} Activa {peat:pt} si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "{%attack} Löst {peat:pt} aus, falls das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
+    "pt": "{%attack} Aciona {peat:pt} se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+  }
+}

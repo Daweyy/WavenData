@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "803",
+  "m_id": 803,
+  "m_displayName": "BONTA - Q11 - Deplacement surprise",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 395162752,
+    "b": -1449513372,
+    "c": -421557285,
+    "d": -487298232,
+    "e": 2087892560
+  },
+  "m_i18nDescriptionId": {
+    "a": 395162752,
+    "b": -1449513372,
+    "c": -421557285,
+    "d": -487298232,
+    "e": 1138788811
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "92b1a3c4abd8d8d41bf3d75cd423f9b1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0e8af0eeda2394644a333107124a587c"
+      },
+      {
+        "assetGuid": "3bf2a9476b8edd047aa53d29f8c29f01"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 803,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Déplacement surprise",
+    "en": "Surprise Move",
+    "es": "Desplazamiento Sorpresa",
+    "de": "Überraschungsreise",
+    "pt": "Deslocamento Surpresa"
+  },
+  "description": {
+    "fr": "Téléporte un personnage jusqu'à {cell:c}.",
+    "en": "Teleports a character up to {cell:c}.",
+    "es": "Teletransporta a un personaje hasta {cell:c}.",
+    "de": "Teleportiert einen Charakter bis {cell:c}.",
+    "pt": "Teletransporta um personagem a até {cell:c}."
+  }
+}

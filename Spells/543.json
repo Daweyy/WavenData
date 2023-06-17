@@ -1,0 +1,189 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "543",
+  "m_id": 543,
+  "m_displayName": "SRAM - ARME - KARTANA - TERRE - Frappe Fracassante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 527128825,
+    "b": 868268020,
+    "c": -901708197,
+    "d": 1615602439,
+    "e": 2084298307
+  },
+  "m_i18nDescriptionId": {
+    "a": 527128825,
+    "b": 868268020,
+    "c": -901708197,
+    "d": 1615602439,
+    "e": 56275629
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d3e90e882e24c3c498c72899397637fd"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "dc9c281a52e48424b95b9e9e4cc17f63"
+      },
+      {
+        "assetGuid": "57f1575e95b2277428aa3bbfe528a1ab"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 543,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      349073,
+      362919,
+      495506
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 182,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllFloorMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "",
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 276,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Frappe Fracassante",
+    "en": "Smashing Strike",
+    "es": "Golpe Ensordecedor",
+    "de": "Donner-Hieb",
+    "pt": "Golpe Devastador"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires alignés à un de vos {%KEYWORD.TRAP.NAME,plural:other} puis téléporte votre héros dessus.",
+    "en": "Does {magicalDamage:dmg} to opponents in line with one of your {%KEYWORD.TRAP.NAME,plural:other} then teleports your hero onto it.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios alineados con una de tus {%KEYWORD.TRAP.NAME,plural:other} luego teletransporta a tu héroe hasta esta.",
+    "de": "Verursacht bei den Gegnern, die sich in derselben Reihe befinden wie eine deiner {%KEYWORD.TRAP.NAME,plural:other}, {magicalDamage:dmg} und teleportiert dann deinen Helden darauf.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários alinhados a uma de suas {%KEYWORD.TRAP.NAME,plural:other}, depois teletransporta seu herói até ela."
+  }
+}

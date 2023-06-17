@@ -1,0 +1,198 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "96",
+  "m_id": 96,
+  "m_displayName": "XELOR - CLASSE - TERRE - Sinistro Terre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1876566459,
+    "b": -1393039164,
+    "c": -1816355350,
+    "d": 864149857,
+    "e": 1916577198
+  },
+  "m_i18nDescriptionId": {
+    "a": -1876566459,
+    "b": -1393039164,
+    "c": -1816355350,
+    "d": 864149857,
+    "e": 74163826
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1d97c46596b68ca49a3ecba1b2559491"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 96,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      458462,
+      219,
+      963
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      10,
+      15
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CombinedTargetSelector",
+        "selectors": [
+          {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "c",
+                    "value": 3
+                  }
+                }
+              },
+              {
+                "type": "CellValidForMechanismFilter"
+              }
+            ]
+          },
+          {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllObjectMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "ObjectMechanismDefinitionFilter",
+                "condition": 1,
+                "objectMechanisms": [
+                  583
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pd2",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 136
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 807
+        },
+        {
+          "type": 7,
+          "id": 583
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Sinistro Terre",
+    "en": "Earth Sinistro",
+    "es": "Sinistro de Tierra",
+    "de": "Erd-Sinistro",
+    "pt": "Sinistro Terra"
+  },
+  "description": {
+    "fr": "Construit un {ObjectMechanism:583} jusqu'à {mechanismSpawnRange:c} de votre héros.\n<rem>Détruit votre précédent {ObjectMechanism:583!}.</rem>\n\\---\n<b>OU</b>\n\\---\nTransforme votre {ObjectMechanism:583!} en {ObjectMechanism:807}.",
+    "en": "Builds one {ObjectMechanism:583} up to {mechanismSpawnRange:c} from your hero.\n<rem>Destroys your previous {ObjectMechanism:583!}.</rem>\n\\---\n<b>OR</b>\n\\---\nTurns your {ObjectMechanism:583!} into a {ObjectMechanism:807}.",
+    "es": "Construye un {ObjectMechanism:583} hasta a {mechanismSpawnRange:c} de tu héroe.\n<rem>Destruye tu {ObjectMechanism:583!} anterior.</rem>\n\\---\n<b>O</b>\n\\---\nTransforma tu {ObjectMechanism:583!} en {ObjectMechanism:807}.",
+    "de": "Errichtet einen\\_{ObjectMechanism:583} bis zu {mechanismSpawnRange:c} von deinem Helden entfernt.\n<rem>Zerstört deinen vorherigen {ObjectMechanism:583!}.</rem>\n\\---\n<b>ODER</b>\n\\---\nVerwandelt deinen {ObjectMechanism:583!} in {ObjectMechanism:807}.",
+    "pt": "Posiciona um {ObjectMechanism:583} a até {mechanismSpawnRange:c} do seu herói.\n<rem>Destrói o {ObjectMechanism:583!} anterior.</rem>\n\\---\n<b>OU</b>\n\\---\nTransforma seu {ObjectMechanism:583!} em {ObjectMechanism:807}."
+  }
+}

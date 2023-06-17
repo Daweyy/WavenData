@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "584",
+  "m_id": 584,
+  "m_displayName": "SACRIEUR - CLASSE - ETHER - Transposition",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 361208478,
+    "b": 147987044,
+    "c": 581749240,
+    "d": -1588680203,
+    "e": -1935950932
+  },
+  "m_i18nDescriptionId": {
+    "a": 361208478,
+    "b": 147987044,
+    "c": 581749240,
+    "d": -1588680203,
+    "e": -59375078
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "68abd48556c27e846847b521e3c8adc7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "5a202e8c0f621dc4bad58e809a3b8972"
+      },
+      {
+        "assetGuid": "a6b2e169105fee54089328fcd85aaa07"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 584,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": 30,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 4
+              }
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 20
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Transposition",
+    "en": "Transposition",
+    "es": "Transposición",
+    "de": "Versetzung",
+    "pt": "Transposição"
+  },
+  "description": {
+    "fr": "Échange la position de votre héros avec celle d'un personnage jusqu'à {cell:c}.",
+    "en": "Switches your hero's position with that of a character up to {cell:c} away.",
+    "es": "Intercambia la posición de tu héroe con la de un personaje hasta a {cell:c}.",
+    "de": "Wechselt die Position deines Helden mit der eines Charakters bis {cell:c}.",
+    "pt": "Troca seu herói de posição com um personagem a até {cell:c}."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "154395",
+  "m_id": 154395,
+  "m_displayName": "BONTA - SOLDATS - Mouvement Defensif",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2028677721,
+    "b": 291482724,
+    "c": 113962266,
+    "d": 2126589814,
+    "e": 1435539011
+  },
+  "m_i18nDescriptionId": {
+    "a": 2028677721,
+    "b": 291482724,
+    "c": 113962266,
+    "d": 2126589814,
+    "e": 828009857
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "615f6000b3a0bb14faf3aa5916ce81d2"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 154395,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5811d5e675bdcae4cbcc2bd24a7216ad",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      },
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "78d2d16c27a6d4545b725416fbf3aa74",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ca",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Mouvement Defensif",
+    "en": "Defensive Move",
+    "es": "Movimiento Defensivo",
+    "de": "Defensive Bewegung",
+    "pt": "Movimento Defensivo"
+  },
+  "description": {
+    "fr": "{#PUSH} de {cell:ca} tous les adversaires adjacents\\_<sprite name=\"cell_cross\"> à des alliés.",
+    "en": "{#PUSH} all opponents adjacent\\_<sprite name=\"cell_cross\"> to allies {cell:ca}.",
+    "es": "{#PUSH} {cell:ca} a todos los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a aliados.",
+    "de": "{#PUSH} um {cell:ca} alle angrenzenden\\_<sprite name=\"cell_cross\"> Gegner der Verbündeten.",
+    "pt": "{#PUSH} por {cell:ca} todos os adversários adjacentes<sprite name=\"cell_cross\"> aos aliados."
+  }
+}

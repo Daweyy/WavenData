@@ -1,0 +1,131 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "19694",
+  "m_id": 19694,
+  "m_displayName": "SRAM - CLASSE - ETHER - Attaque sournoise",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 858719624,
+    "b": 698486468,
+    "c": 2071469050,
+    "d": -1457217724,
+    "e": 2030101771
+  },
+  "m_i18nDescriptionId": {
+    "a": 858719624,
+    "b": 698486468,
+    "c": 2071469050,
+    "d": -1457217724,
+    "e": -775014992
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ca52b5c63c50f59469e3542f5ce69c73"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 19694,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      22
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7f7dc509d78c5b74b8e18cb366e78c52",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow2",
+          "value": 25
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": -25
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "n",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAPPER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Attaque Sournoise",
+    "en": "Sneaky Attack",
+    "es": "Ataque Solapado",
+    "de": "Heimtückischer Angriff",
+    "pt": "Ataque Traiçoeiro"
+  },
+  "description": {
+    "fr": "{ATvalue:pow,percent,+} à la cible et {ATvalue:pow2,percent,+} à votre héros pour le tour.\n\\---\n{#TRAPPER} : Piochez {SPELLCOUNTvalue:n}.",
+    "en": "{ATvalue:pow,percent,+} to the target and {ATvalue:pow2,percent,+} to your hero for the turn.\n\\---\n{#TRAPPER}: Draw {SPELLCOUNTvalue:n}.",
+    "es": "{ATvalue:pow,percent,+} al objetivo y {ATvalue:pow2,percent,+} a tu héroe durante el turno.\n\\---\n{#TRAPPER}: Sacas {SPELLCOUNTvalue:n}.",
+    "de": "{ATvalue:pow,percent,+} für das Ziel und {ATvalue:pow2,percent,+} für deinen Helden für die Runde.\n\\---\n{#TRAPPER}: Ziehe {SPELLCOUNTvalue:n}.",
+    "pt": "{ATvalue:pow,percent,+} ao alvo e {ATvalue:pow2,percent,+} ao seu herói durante o turno.\n\\---\n{#TRAPPER}: Compre {SPELLCOUNTvalue:n}."
+  }
+}

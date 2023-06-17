@@ -1,0 +1,156 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "72615",
+  "m_id": 72615,
+  "m_displayName": "MONSTRE RAT - Ralentir",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -833109692,
+    "b": -478190572,
+    "c": 1580892745,
+    "d": 208248698,
+    "e": -1560931829
+  },
+  "m_i18nDescriptionId": {
+    "a": -833109692,
+    "b": -478190572,
+    "c": 1580892745,
+    "d": 208248698,
+    "e": 1205885618
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "cd2be0a10675f9741b0494cc303567db"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 72615,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        69
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "623f0ad2cea94b943a6f849d2bd5b455",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ralentir",
+    "en": "Slow",
+    "es": "Ralentizar",
+    "de": "Verlangsamen",
+    "pt": "Desacelerar"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} pour le tour si la cible est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} for the turn if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} durante el turno si el objetivo está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} für die Runde, wenn das Ziel <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} durante o turno se o alvo estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

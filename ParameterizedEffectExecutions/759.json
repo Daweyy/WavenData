@@ -1,0 +1,59 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -2808303246453168600
+  },
+  "m_Name": "759",
+  "m_id": 759,
+  "m_displayName": "Explosion Effect Execution - Player Summoning Explosion Power",
+  "m_availability": 3,
+  "values": {
+    "type": "ParameterizedEffectExecutionDefinition",
+    "id": 759,
+    "parameters": [
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "target"
+      },
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "source"
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 15
+          },
+          "buffs": [
+            88
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "ParameterSingleEntitySelector",
+            "name": "source"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  }
+}

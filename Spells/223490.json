@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "223490",
+  "m_id": 223490,
+  "m_displayName": "OSAMODAS - CLASSE - AIR - Cravache",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -1246728426,
+    "b": 457822084,
+    "c": 702460953,
+    "d": -1303241334,
+    "e": 1541816861
+  },
+  "m_i18nDescriptionId": {
+    "a": -1246728426,
+    "b": 457822084,
+    "c": 702460953,
+    "d": -1303241334,
+    "e": 772990414
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "fa17a411f3102464b86ae7a7cb1167ec"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 223490,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        "COMPLICITE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cravache",
+    "en": "Curée",
+    "es": "Curée",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMPLICITE}\\_: {#push} de {cell:c} les adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros ou à votre <b>BÊTE</b>.",
+    "en": "Inflige {magicalDamage:dmg}.\nConfère {#GROWING} à vos bêtes\\vsi la cible est {#VENTILATED[ÉVENTÉE]}<sprite name=\"ventilated\">.",
+    "es": "Inflige {magicalDamage:dmg}.\nConfère {#GROWING} à vos bêtes\\vsi la cible est {#VENTILATED[ÉVENTÉE]}<sprite name=\"ventilated\">.",
+    "de": "",
+    "pt": ""
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "473",
+  "m_id": 473,
+  "m_displayName": "DQ - CONTRAT - BOUFTOU - Bouftou Noir",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1193292267,
+    "b": 323288228,
+    "c": -1582430264,
+    "d": 1545669077,
+    "e": 1556730492
+  },
+  "m_i18nDescriptionId": {
+    "a": 1193292267,
+    "b": 323288228,
+    "c": -1582430264,
+    "d": 1545669077,
+    "e": -1583337644
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 473,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 998,
+      "skinIds": [
+        998
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "PUSH",
+        {
+          "type": 20,
+          "id": 88
+        }
+      ]
+    },
+    "families": [
+      36
+    ],
+    "baseProperties": [
+      88
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 120
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 12
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          473
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Bouftou Noir",
+    "en": "Black Gobball",
+    "es": "Jalató Negro",
+    "de": "Schwarzer Fresssack",
+    "pt": "Papatudo Negro"
+  },
+  "description": {
+    "fr": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} de {cell:x}.",
+    "en": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} {cell:x}.",
+    "es": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} {cell:x}.",
+    "de": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} {cell:x} weiter.",
+    "pt": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} por {cell:x}."
+  }
+}

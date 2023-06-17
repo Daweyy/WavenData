@@ -1,0 +1,209 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241945000
+  },
+  "m_Name": "561",
+  "m_id": 561,
+  "m_displayName": "DECK - INFINITE - TERRE - Tristepin",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -640163842,
+    "b": -524852218,
+    "c": 1288190168,
+    "d": -1555939486,
+    "e": 339855696
+  },
+  "m_i18nDescriptionId": {
+    "a": -640163842,
+    "b": -524852218,
+    "c": 1288190168,
+    "d": -1555939486,
+    "e": 364377141
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 561,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 258,
+      "skinIds": [
+        258
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      1,
+      81
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 148
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 42
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      342018,
+      738252,
+      342009,
+      84,
+      85731,
+      468
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          561
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Tristepin",
+    "en": "Percedal",
+    "es": "Tristepin",
+    "de": "Tristamax",
+    "pt": "Tristepan"
+  },
+  "description": {
+    "fr": "Il est costaud. C'est tout.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "en": "He's strong. That's all.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "es": "Está fuerte, eso es todo.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "de": "Er ist kräftig. Das ist aber auch schon alles.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "pt": "Ele é um bruto. Isso já diz tudo.\\v<family>{%Family_BrotherHood_Name}</family>"
+  }
+}

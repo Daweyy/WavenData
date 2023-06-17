@@ -1,0 +1,176 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -6943090813380698000
+  },
+  "m_Name": "1628",
+  "m_id": 1628,
+  "m_displayName": "QUEST - AMAKNA - 03 - Tourtiflette",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -6664711,
+    "b": -399419548,
+    "c": 1539182232,
+    "d": 2051857372,
+    "e": 1594595278
+  },
+  "m_i18nDescriptionId": {
+    "a": -6664711,
+    "b": -399419548,
+    "c": 1539182232,
+    "d": 2051857372,
+    "e": 1079359879
+  },
+  "values": {
+    "type": "ObjectMechanismDefinition",
+    "id": 1628,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1,
+      "skinIds": [
+        1
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "dmg",
+          "valuesToSum": [
+            {
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": "",
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 20
+              },
+              "factor": {
+                "type": "ReferenceScalingFactor",
+                "reference": 18
+              },
+              "buffs": [
+                52
+              ],
+              "skillBuffs": [],
+              "from": {
+                "type": "EffectHolderSelector"
+              },
+              "addInsteadOfMultiply": false
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "BuffedScalingDynamicValue",
+                  "referenceId": "v",
+                  "baseValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 20
+                  },
+                  "factor": {
+                    "type": "ReferenceScalingFactor",
+                    "reference": 18
+                  },
+                  "buffs": [
+                    52
+                  ],
+                  "skillBuffs": [],
+                  "from": {
+                    "type": "EffectHolderSelector"
+                  },
+                  "addInsteadOfMultiply": false
+                },
+                {
+                  "type": "FloatingCounterValue",
+                  "referenceId": "",
+                  "entitySelector": {
+                    "type": "EffectHolderSelector"
+                  },
+                  "counter": {
+                    "type": "SpecificFloatingCounterType",
+                    "counterId": 155
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 18
+          },
+          "buffs": [
+            52
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 155
+        }
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "spells": [],
+    "grade": 3,
+    "scale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 18
+    },
+    "baseMecaLife": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    }
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

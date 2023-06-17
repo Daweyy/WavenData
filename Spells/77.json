@@ -1,0 +1,153 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "77",
+  "m_id": 77,
+  "m_displayName": "MONSTRE CRAQUELEUR - Consolidation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2075881730,
+    "b": 1692273508,
+    "c": -65060599,
+    "d": -2124372497,
+    "e": -325299025
+  },
+  "m_i18nDescriptionId": {
+    "a": -2075881730,
+    "b": 1692273508,
+    "c": -65060599,
+    "d": -2124372497,
+    "e": 625088757
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "291a95650ef5d4b469248a06b9e3c697"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 77,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "997b2cf47c2e0814b824ac321bedef65",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "armin",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "armax",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Consolidation",
+    "en": "Consolidation",
+    "es": "Consolidación",
+    "de": "Verfestigung",
+    "pt": "Consolidação"
+  },
+  "description": {
+    "fr": "{value:armin,+} à {ARvalue:armax,+} aux {%FAMILY_CRAQUELEUR_NAME,plural:other} alliés qui n'ont aucun adversaire autour\\_<sprite name=\"cell_around\"> d’eux.",
+    "en": "{value:armin,+} to {ARvalue:armax,+} to allied {%FAMILY_CRAQUELEUR_NAME,plural:other} that don't have any opponents around\\_<sprite name=\"cell_around\"> them.",
+    "es": "{value:armin,+} a {ARvalue:armax,+} a los {%FAMILY_CRAQUELEUR_NAME,plural:other} aliados sin ningún adversario a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "{value:armin,+} bis {ARvalue:armax,+} für die verbündeten {%FAMILY_CRAQUELEUR_NAME,plural:other}, wenn sich ringsum<sprite name=\"cell_around\"> keine Gegner befinden.",
+    "pt": "De {value:armin,+} a {ARvalue:armax,+} aos {%FAMILY_CRAQUELEUR_NAME,plural:other} aliados que não possuírem nenhum adversário em\\_volta\\_<sprite name=\"cell_around\">."
+  }
+}

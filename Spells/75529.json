@@ -1,0 +1,183 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "75529",
+  "m_id": 75529,
+  "m_displayName": "MONSTRE CRABE - Course Fantômatique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -562023757,
+    "b": -878001644,
+    "c": -671632871,
+    "d": 456971765,
+    "e": -1403525972
+  },
+  "m_i18nDescriptionId": {
+    "a": -562023757,
+    "b": -878001644,
+    "c": -671632871,
+    "d": 456971765,
+    "e": 1301429316
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8d1d5f392e2e24c419a8a5df5b40b9dc"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 75529,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        70
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              70
+            ]
+          },
+          {
+            "type": "RangeFilter",
+            "minRange": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            },
+            "maxRange": null
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c69dd8f8acd996c4ab13d83fb084eb03",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Course Fantômatique",
+    "en": "Ghostly Dash",
+    "es": "Carrera Fantasmal",
+    "de": "Fantomatischer Lauf",
+    "pt": "Corrida Fantasma"
+  },
+  "description": {
+    "fr": "Un {%FAMILY_KRAB_NAME,plural:one} charge un adversaire aligné jusqu'à {cell:c} et déclenche son {%AT}.",
+    "en": "One {%FAMILY_KRAB_NAME,plural:one} charges an in-line opponent up to {cell:c} away and triggers its {%AT}.",
+    "es": "El {%FAMILY_KRAB_NAME,plural:one} carga a un adversario alineado hasta a {cell:c} y activa su {%AT}.",
+    "de": "Ein {%FAMILY_KRAB_NAME,plural:one} stürmt bis zu {cell:c} auf einen Gegner in derselben Reihe zu und löst seinen {%AT} aus.",
+    "pt": "Um {%FAMILY_KRAB_NAME,plural:one} investe contra um adversário alinhado a até {cell:c} e aciona seu {%AT}."
+  }
+}

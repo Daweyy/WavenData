@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "93816",
+  "m_id": 93816,
+  "m_displayName": "MONSTRE COCHON - BONTA - Q08 - Lancer de Makibishi",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2079896923,
+    "b": -325332220,
+    "c": -1109655910,
+    "d": -1697456760,
+    "e": -1240833304
+  },
+  "m_i18nDescriptionId": {
+    "a": -2079896923,
+    "b": -325332220,
+    "c": -1109655910,
+    "d": -1697456760,
+    "e": -2001045158
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "eae48b80f0cc8d94da4985d50e8ec5d7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 93816,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "SummoningDefinitionFilter",
+              "condition": 1,
+              "summonings": [
+                840
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "44841429f630ee6439dc4afcadd90abf",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 42
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 1500
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Lancer de Makibishi",
+    "en": "Makibishi Toss",
+    "es": "Lanzamiento de Makibishi",
+    "de": "Makibishi-Wurf",
+    "pt": "Arremesso de Makibishi"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:1500} sur {cell:c} aléatoires autour\\_<sprite name=\"cell_around\"> d'un allié.",
+    "en": "Builds a {FloorMechanism:1500} on {cell:c} at random around\\_<sprite name=\"cell_around\"> an ally.",
+    "es": "Construye un {FloorMechanism:1500} en {cell:c} aleatorias alrededor\\_<sprite name=\"cell_around\"> de un aliado.",
+    "de": "Errichtet einen {FloorMechanism:1500} auf zufälligen {cell:c} rings um\\_<sprite name=\"cell_around\"> einen Verbündeten.",
+    "pt": "Posiciona um {FloorMechanism:1500} sobre {cell:c} aleatórias em\\_volta\\_<sprite name=\"cell_around\"> de um aliado."
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "180620",
+  "m_id": 180620,
+  "m_displayName": "MONSTRE ABRAKNYDE - Tissage",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2076072614,
+    "b": -567251660,
+    "c": -1171814136,
+    "d": 436833390,
+    "e": -1130322833
+  },
+  "m_i18nDescriptionId": {
+    "a": 2076072614,
+    "b": -567251660,
+    "c": -1171814136,
+    "d": 436833390,
+    "e": -155681398
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "eb440fbd7d65b2c429390d2afdec20b8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 180620,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        48
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "FloorMechanismDefinitionFilter",
+            "condition": 1,
+            "floorMechanisms": [
+              1166
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "df4b9b8a005a912479e6052943e3d29b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 4
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 1166
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Tissage",
+    "en": "Weaving",
+    "es": "Tejeduría",
+    "de": "Weben",
+    "pt": "Tecelagem"
+  },
+  "description": {
+    "fr": "Pose {nb} {FloorMechanism:1166[TOILES D'ARAKNÉ]} adjacent\\_<sprite name=\"cell_cross\">\\nà une {FloorMechanism:1166}.",
+    "en": "Places {nb} {FloorMechanism:1166[ARACHNEE WEBS]} adjacent\\_<sprite name=\"cell_cross\">\\nto one {FloorMechanism:1166}.",
+    "es": "Pone {nb} {FloorMechanism:1166[TELAS DE ARAKNA]} adyacentes\\_<sprite name=\"cell_cross\">\\na una {FloorMechanism:1166}.",
+    "de": "Platziert {nb}\\_{FloorMechanism:1166[ARACHNEENNETZE]} angrenzend\\_<sprite name=\"cell_cross\">\\nan ein\\_{FloorMechanism:1166}.",
+    "pt": "Posiciona {nb} {FloorMechanism:1166[TEIAS DE ARAKNE]} adjacentes\\_<sprite name=\"cell_cross\">\\na uma {FloorMechanism:1166}."
+  }
+}

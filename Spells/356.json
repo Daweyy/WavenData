@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "356",
+  "m_id": 356,
+  "m_displayName": "MONSTRE CHUCHOTEUR - Pluie de Fleches",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 960064,
+    "b": 658217940,
+    "c": -2002889045,
+    "d": -1743019294,
+    "e": 1829872568
+  },
+  "m_i18nDescriptionId": {
+    "a": 960064,
+    "b": 658217940,
+    "c": -2002889045,
+    "d": -1743019294,
+    "e": 1358617301
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "920ec3e36a3ab8a498dead6127d18b1f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 356,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        52
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCoordsSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "512172169cec2e04fa8f2b758e566cc4",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundSquaredTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 1
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 19
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Pluie de Flèches",
+    "en": "Arrow Rain",
+    "es": "Lluvia de Flechas",
+    "de": "Pfeilregen",
+    "pt": "Chuva de Flechas"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires\\vdans la zone <sprite name=\"cell_around\"> ciblée.",
+    "en": "Does {magicalDamage:dmg} to opponents\\vin the targeted <sprite name=\"cell_around\">\\_zone.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios\\v en la zona <sprite name=\"cell_around\"> objetivo.",
+    "de": "Verursacht bei Gegnern\\v im Zielbereich\\_<sprite name=\"cell_around\"> {magicalDamage:dmg}.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários\\vna zona\\_<sprite name=\"cell_around\"> visada."
+  }
+}

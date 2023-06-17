@@ -1,0 +1,149 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "43877",
+  "m_id": 43877,
+  "m_displayName": "MONSTRE TOFU - Grippe Aviaire",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 448077081,
+    "b": -178811196,
+    "c": 1628475418,
+    "d": -1482144742,
+    "e": -503562809
+  },
+  "m_i18nDescriptionId": {
+    "a": 448077081,
+    "b": -178811196,
+    "c": 1628475418,
+    "d": -1482144742,
+    "e": 1430702510
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "009848b2e0e81194589777751b5f1239"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 43877,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        37
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "502614473ddad3145b5e49b0edc6e051",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 20,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "DMG",
+          "baseValue": 24,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "bnc",
+          "baseValue": 20,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "BOUNCE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Grippe Aviaire",
+    "en": "Avian Flu",
+    "es": "Gripe Aviar",
+    "de": "Vogelgrippe",
+    "pt": "Gripe Aviária"
+  },
+  "description": {
+    "fr": "Inflige {dmg} à {magicalDamage:DMG}.\n\\---\nDéclenche {bounce:bnc} si la cible est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {dmg} to {magicalDamage:DMG}.\n\\---\nTriggers {bounce:bnc} if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {dmg} a {magicalDamage:DMG}.\n\\---\nActiva {bounce:bnc} si el objetivo está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht {dmg} bis {magicalDamage:DMG}.\n\\---\nLöst {bounce:bnc} aus, wenn das Ziel <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> ist.",
+    "pt": "Inflige de {dmg} a {magicalDamage:DMG}.\n\\---\nAciona {bounce:bnc} se o alvo estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

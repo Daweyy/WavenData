@@ -1,0 +1,196 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "107352",
+  "m_id": 107352,
+  "m_displayName": "XELOR - ARME - PIKUXALA - TERRE - Teleport Furtif",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -97351592,
+    "b": -957711036,
+    "c": 30661626,
+    "d": -662250719,
+    "e": -1854906256
+  },
+  "m_i18nDescriptionId": {
+    "a": -97351592,
+    "b": -957711036,
+    "c": 30661626,
+    "d": -662250719,
+    "e": 1064985002
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "34c54fac63b893147a82f384ca2b12d1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2051,
+      2050
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d9f9e599e105bb8448f9eacc145276bd"
+      },
+      {
+        "assetGuid": "afe176ec7439e9445bec4411ab84b3ca"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 107352,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      478460,
+      163242,
+      179215
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 945,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": null,
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 659,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléport Furtif",
+    "en": "Furtive Teleportation",
+    "es": "Teletransporte Furtivo",
+    "de": "Flüchtiger Teleport",
+    "pt": "Teletransporte Furtivo"
+  },
+  "description": {
+    "fr": "Téléporte votre héros de {cell:c} et inflige {magicalDamage:dmg} aux adversaires alignés.",
+    "en": "Teleports your hero up to {cell:c} and does {magicalDamage:dmg} to in-line opponents.",
+    "es": "Teletransporta a tu héroe {cell:c} e inflige {magicalDamage:dmg} a los adversarios alineados.",
+    "de": "Teleportiert deinen Helden um {cell:c} und verursacht bei den ausgerichteten Gegnern {magicalDamage:dmg}.",
+    "pt": "Teletransporta seu herói por {cell:c} e inflige {magicalDamage:dmg} aos adversários alinhados."
+  }
+}

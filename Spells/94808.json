@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "94808",
+  "m_id": 94808,
+  "m_displayName": "CRA - ARME - PIVEN - FEU - Impact Ardent",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1446335238,
+    "b": -61950108,
+    "c": 1331552106,
+    "d": 1719790815,
+    "e": 1049777607
+  },
+  "m_i18nDescriptionId": {
+    "a": 1446335238,
+    "b": -61950108,
+    "c": 1331552106,
+    "d": 1719790815,
+    "e": 365711863
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c3db08540505b3846b12c6388427030d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 94808,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      126,
+      471,
+      455053
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 846,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "05f0c22b1cc8a8c41b9b7a9be2d5b443",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 505,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 552
+        },
+        "ARCHER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Impact Ardent",
+    "en": "Ardent Impact",
+    "es": "Impacto Ardiente",
+    "de": "Brennender Einschlag",
+    "pt": "Impacto Ardente"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\">\\_de votre héros.\n\\---\n{#archer}",
+    "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your\\_hero.\n\\---\n{#archer}",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\">\\_de tu héroe.\n\\---\n{#archer}",
+    "de": "Verursacht {magicalDamage:dmg} bei den Gegnern rings um\\_<sprite name=\"cell_around\">\\_deinen Helden.\n\\---\n{#archer}",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.\n\\---\n{#archer}"
+  }
+}

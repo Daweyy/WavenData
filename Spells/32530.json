@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "32530",
+  "m_id": 32530,
+  "m_displayName": "MONSTRE COCHON - Aura Porcine",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 966359585,
+    "b": -1841679116,
+    "c": 473783131,
+    "d": -1523625931,
+    "e": 674889197
+  },
+  "m_i18nDescriptionId": {
+    "a": 966359585,
+    "b": -1841679116,
+    "c": 473783131,
+    "d": -1523625931,
+    "e": -39816885
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "cc62ea4bc07d2af49b31ad21bc7c3899"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 32530,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a210e9936c0f1654fa6b975ed73fdb52",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 76
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Aura Porcine",
+    "en": "Porcine Aura",
+    "es": "Aura Porcina",
+    "de": "Schweineaura",
+    "pt": "Aura Porcina"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:76,value:a} à un <b>Cochon</b> allié aléatoire autour\\_<sprite name=\"cell_around\"> de la cible.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:76,value:a} to a random allied <b>Pig</b> around\\_<sprite name=\"cell_around\"> the target.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:76,value:a} a un <b>cerdo</b> aliado aleatorio de alrededor\\_<sprite name=\"cell_around\"> del objetivo.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:76,value:a} bei einem zufälligen verbündeten <b>Schweinemonster</b> rings um\\_<sprite name=\"cell_around\"> das Ziel.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:76,value:a} a um <b>Porco</b> aliado aleatório em\\_volta\\_<sprite name=\"cell_around\"> do alvo."
+  }
+}

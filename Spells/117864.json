@@ -1,0 +1,239 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "117864",
+  "m_id": 117864,
+  "m_displayName": "IOP - ARME - JUSTELAME - FEU - Touche Enflammee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -210305028,
+    "b": -938282588,
+    "c": -184954822,
+    "d": 872513150,
+    "e": 1237638855
+  },
+  "m_i18nDescriptionId": {
+    "a": -210305028,
+    "b": -938282588,
+    "c": -184954822,
+    "d": 872513150,
+    "e": -891001963
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f11bc3ba84fc03c4b9ec55fca8f05d8c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 117864,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      195438,
+      221825,
+      417354
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      0
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 919,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6e2324dd7c615994f8a1ac385c92637c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 85,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgExplosion",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgMelee",
+          "baseValue": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 2
+              },
+              {
+                "type": "ConditionalValue",
+                "referenceId": "",
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 85
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 455
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Touche Enflammée",
+    "en": "Flaming Touch",
+    "es": "Toque Flamígero",
+    "de": "Flammenberührung",
+    "pt": "Toque Flamejante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: Inflige {magicalDamage:dmgMelee} autour<sprite name=\"cell_around\"> de votre héros.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Does {magicalDamage:dmgMelee} around<sprite name=\"cell_around\"> your hero.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} alrededor<sprite name=\"cell_around\"> de tu héroe.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Verursacht {magicalDamage:dmgMelee} in der Nähe\\_<sprite name=\"cell_around\"> deines Helden.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} em\\_volta\\_<sprite name=\"cell_around\"> do seu herói."
+  }
+}

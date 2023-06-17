@@ -1,0 +1,200 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "140658",
+  "m_id": 140658,
+  "m_displayName": "CRA - ARME - VOLDORAK - AIR - Poing Turbulent",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1404292700,
+    "b": -910087180,
+    "c": 163078088,
+    "d": 1132511246,
+    "e": -170414204
+  },
+  "m_i18nDescriptionId": {
+    "a": -1404292700,
+    "b": -910087180,
+    "c": 163078088,
+    "d": 1132511246,
+    "e": -522921013
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b9b0ce7dc47e7fa40b43b46c9d663311"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 140658,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      94992,
+      724,
+      276
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 953,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "CharacterEntityFilter"
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b53ad61c9eee320479c1e9f6a8844e6a",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "CasterHeroSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 30
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 273,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Poing Turbulent",
+    "en": "Turbulent Fist",
+    "es": "Puño Turbulento",
+    "de": "Turbulente Faust",
+    "pt": "Punho Turbulento"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire aligné.\n\\---\n{#COMBO}\\_: {#PUSH} la cible de {cell:c}.",
+    "en": "Does {magicalDamage:dmg} to an in-line opponent.\n\\---\n{#COMBO}: {#PUSH} the target {cell:c}.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario alineado.\n\\---\n{#COMBO}: {#PUSH} al objetivo {cell:c}.",
+    "de": "Verursacht bei einem ausgerichteten Feind {magicalDamage:dmg}.\n\\---\n{#COMBO}: {#PUSH} das Ziel um {cell:c}.",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário alinhado.\n\\---\n{#COMBO}: {#PUSH} o alvo por {cell:c}."
+  }
+}

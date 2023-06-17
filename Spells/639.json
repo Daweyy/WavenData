@@ -1,0 +1,172 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "639",
+  "m_id": 639,
+  "m_displayName": "SRAM - CLASSE - ETHER - Ajustement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1326911694,
+    "b": 782996692,
+    "c": -778114134,
+    "d": 1349679406,
+    "e": 1569514320
+  },
+  "m_i18nDescriptionId": {
+    "a": -1326911694,
+    "b": 782996692,
+    "c": -778114134,
+    "d": 1349679406,
+    "e": 964304492
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ca57525dfecb1ec41a0abe2232195f98"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "98264b3bf285d324184af5f6c8d2cb9c"
+      },
+      {
+        "assetGuid": "549c940f388249b47a6d201bdbb26ad0"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 639,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "EntityTypeFilter",
+            "condition": 1,
+            "entityTypes": [
+              6
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ajustement",
+    "en": "Adjustment",
+    "es": "Ajuste",
+    "de": "Justierung",
+    "pt": "Ajuste"
+  },
+  "description": {
+    "fr": "Téléporte un de vos {%KEYWORD.TRAP.NAME,plural:other} jusqu'à {cell:c}.\n\\---\nPiochez {SPELLCOUNTvalue:v}.",
+    "en": "Teleports one of your {%KEYWORD.TRAP.NAME,plural:other} up to {cell:c}.\n\\---\nDraw {SPELLCOUNTvalue:v}.",
+    "es": "Teletransporta una de tus {%KEYWORD.TRAP.NAME,plural:other} hasta {cell:c}.\n\\---\nSacas {SPELLCOUNTvalue:v}.",
+    "de": "Teleportiert eine deiner {%KEYWORD.TRAP.NAME,plural:other} bis zu {cell:c}.\n\\---\nZieht {SPELLCOUNTvalue:v}.",
+    "pt": "Teletransporta uma de suas {%KEYWORD.TRAP.NAME,plural:other} a até {cell:c}.\n\\---\nCompre {SPELLCOUNTvalue:v}."
+  }
+}

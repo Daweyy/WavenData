@@ -1,0 +1,169 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "204776",
+  "m_id": 204776,
+  "m_displayName": "EQUIPMENT - RING - GRIMOIRE - (8) Eau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2089300741,
+    "b": -1429810220,
+    "c": 1707026345,
+    "d": 349554607,
+    "e": 1113324988
+  },
+  "m_i18nDescriptionId": {
+    "a": 2089300741,
+    "b": -1429810220,
+    "c": 1707026345,
+    "d": 349554607,
+    "e": -1911704848
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9e46d8d629dc0e14b84dcea6f4ccc6d1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 204776,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        89
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "UniqueForCasterTeamCondition",
+      "specificEntity": {
+        "type": "SummoningDefinitionFilter",
+        "condition": 1,
+        "summonings": [
+          757
+        ]
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "m",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a6616e7c0d26ab74598779aed75a273e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "m",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "HAIL",
+        "UNIQUE",
+        {
+          "type": 4,
+          "id": 757
+        },
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Page 8 du Grimoire des Vagues",
+    "en": "Page 8 of the Spellbook of Waves",
+    "es": "Página 8 del Grimorio de las Olas",
+    "de": "Seite 8 des Zauberbuchs der Wellen",
+    "pt": "Página 8 do Grimório das Ondas"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nInvoque un {Summoning:757} jusqu'à {cell:m} de votre héros.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nSummons one {Summoning:757} up to {cell:m} from your hero.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nInvoca un {Summoning:757} hasta a {cell:m} de tu héroe.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nBeschwört einen\\_{Summoning:757} auf eine Entfernung von bis zu {cell:m} von deinem Helden.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nInvoca um {Summoning:757} a até {cell:m} do seu herói."
+  }
+}

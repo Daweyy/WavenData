@@ -1,0 +1,195 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "3886",
+  "m_id": 3886,
+  "m_displayName": "CRA - CLASSE - TERRE - Tir Graveleux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -510838200,
+    "b": 987505764,
+    "c": -477929464,
+    "d": 213059944,
+    "e": 1174581334
+  },
+  "m_i18nDescriptionId": {
+    "a": -510838200,
+    "b": 987505764,
+    "c": -477929464,
+    "d": 213059944,
+    "e": 501605365
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "da60786074fd6bf48911f44fd4c680cd"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 3886,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      635,
+      147,
+      449253
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16,
+      20
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f402565e0672ecb44acfbaeedda40737",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 931,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "a",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": true
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 140
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Tir Graveleux",
+    "en": "Gravelly Shot",
+    "es": "Tiro Pedregoso",
+    "de": "Kiesiger Schuss",
+    "pt": "Tiro Pedregoso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:140,value:a} à\\_votre\\_héros si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:140,value:a} to your hero if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:140,value:a} a\\_tu\\_héroe si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:140,value:a} bei deinem Helden, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:140,value:a} ao\\_seu\\_herói se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+  }
+}

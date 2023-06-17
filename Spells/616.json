@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "616",
+  "m_id": 616,
+  "m_displayName": "SRAM - CLASSE - ETHER - Peau d'Ombre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -696704724,
+    "b": -1448409532,
+    "c": -1072507557,
+    "d": 124376607,
+    "e": -1752840759
+  },
+  "m_i18nDescriptionId": {
+    "a": -696704724,
+    "b": -1448409532,
+    "c": -1072507557,
+    "d": 124376607,
+    "e": 314051289
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c0fd3f0dd335c944d83064943b2d508a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 616,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e0f174ab6fc970f47b2eccb54b8b9faf",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 4,
+            "values": [
+              "531"
+            ],
+            "isNot": true
+          },
+          "type": 20,
+          "id": 19
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Peau d'Ombre",
+    "en": "Shadow Skin",
+    "es": "Piel de Sombra",
+    "de": "Schattenhaut",
+    "pt": "Pele de Sombra"
+  },
+  "description": {
+    "fr": "Piochez {value:draw} sorts.\n\\---\n<if not spellskill=531>Confère {PropertyEffect:19} à votre héros jusqu'au prochain tour.</if><if spellskill=531>Confère {PropertyEffect:19} à votre héros et aux alliés autour de lui jusqu'au prochain tour.</if>",
+    "en": "Draw {value:draw} {%SPELLCOUNT,value:draw}.\n\\---\n<if not spellskill=531>Confers {PropertyEffect:19} on your hero until the next turn.</if><if spellskill=531>Confers {PropertyEffect:19} on your hero and allies around them until the next turn.</if>",
+    "es": "Sacas {value:draw} hechizos.\n\\---\n<if not spellskill=531>Confiere {PropertyEffect:19} a tu héroe hasta el próximo turno.</if><if spellskill=531>Confiere {PropertyEffect:19} a tu héroe y a los aliados a su alrededor hasta el próximo turno.</if>",
+    "de": "Ziehe {value:draw} Zauber.\n\\---\n<if not spellskill=531>Verleiht deinem Helden bis zur nächsten Runde {PropertyEffect:19}.</if><if spellskill=531>Verleiht deinem Helden und den Verbündeten rings um ihn {PropertyEffect:19} bis zur nächsten Runde.</if>",
+    "pt": "Compre {value:draw} feitiços.\n\\---\n<if not spellskill=531>Concede {PropertyEffect:19} ao seu herói até o próximo turno.</if><if spellskill=531>Concede {PropertyEffect:19} ao seu herói e aos aliados em\\_volta dele até o próximo turno.</if>"
+  }
+}

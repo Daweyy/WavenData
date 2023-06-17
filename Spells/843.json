@@ -1,0 +1,191 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "843",
+  "m_id": 843,
+  "m_displayName": "MONSTRE CRAQUELEUR - Excavation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 594025123,
+    "b": 2104378004,
+    "c": -1307313701,
+    "d": -364314228,
+    "e": -1929637148
+  },
+  "m_i18nDescriptionId": {
+    "a": 594025123,
+    "b": 2104378004,
+    "c": -1307313701,
+    "d": -364314228,
+    "e": -577924039
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f73f0757aa68a024cbcc464351db74b9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 843,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              1607
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              41
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0dcec4b6a7184504381d0c45aef838f6",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Excavation",
+    "en": "Excavation",
+    "es": "Excavación",
+    "de": "Ausgraben",
+    "pt": "Escavação"
+  },
+  "description": {
+    "fr": "Détruit un {ObjectMechanism:1607!}.\n\\---\n{value:min,+} à {ARvalue:max,+} à un <b>Craqueleur</b> allié.",
+    "en": "Destroys one {ObjectMechanism:1607!}.\n\\---\n{value:min,+} to {ARvalue:max,+} to an allied <b>Crackler</b>.",
+    "es": "Destruye una {ObjectMechanism:1607!}.\n\\---\n{value:min,+} a {ARvalue:max,+} a un <b>crujidor</b> aliado.",
+    "de": "Zerstört einen\\_{ObjectMechanism:1607!}.\n\\---\n{value:min,+} bis {ARvalue:max,+} für einen verbündeten <b>Krachler</b>.",
+    "pt": "Destrói uma {ObjectMechanism:1607!}.\n\\---\n{value:min,+} a {ARvalue:max,+} a um <b>Smagador</b> aliado."
+  }
+}

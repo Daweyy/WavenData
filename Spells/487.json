@@ -1,0 +1,154 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "487",
+  "m_id": 487,
+  "m_displayName": "MONSTRE COCHON - BONTA - Q08 - Drague",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -756216893,
+    "b": 1081960596,
+    "c": -1968060519,
+    "d": -1166063956,
+    "e": 1848703665
+  },
+  "m_i18nDescriptionId": {
+    "a": -756216893,
+    "b": 1081960596,
+    "c": -1968060519,
+    "d": -1166063956,
+    "e": -1390221786
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "82e70f6c5f91b364cada7e9d2cc54de0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 487,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundSquaredTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "SummoningDefinitionFilter",
+                  "condition": 1,
+                  "summonings": [
+                    840
+                  ]
+                },
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5db496a7009123a4a9cfe3e8aac2ddc8",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 1
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Drague",
+    "en": "Flirt",
+    "es": "Ligoteo",
+    "de": "Verführung",
+    "pt": "Flerte"
+  },
+  "description": {
+    "fr": "{PropertyEffect:1} un adversaire autour\\_<sprite name=\"cell_around\"> de la {Summoning:840!}.",
+    "en": "{PropertyEffect:1} an opponent\\_<sprite name=\"cell_around\"> around {Summoning:840!}.",
+    "es": "{PropertyEffect:1} a un adversario alrededor\\_<sprite name=\"cell_around\"> de la {Summoning:840!}.",
+    "de": "{PropertyEffect:1} einen Gegner im Umkreis<sprite name=\"cell_around\"> von {Summoning:840!}.",
+    "pt": "{PropertyEffect:1} um adversário em\\_volta\\_<sprite name=\"cell_around\"> da {Summoning:840!}."
+  }
+}

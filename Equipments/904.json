@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "904",
+  "m_id": 904,
+  "m_displayName": "RING - RARE - Anneau Mazo",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1810700507,
+    "b": -605959980,
+    "c": 1870850603,
+    "d": 1334489632,
+    "e": 1796684231
+  },
+  "m_i18nDescriptionId": {
+    "a": 1810700507,
+    "b": -605959980,
+    "c": 1870850603,
+    "d": 1334489632,
+    "e": -1093033168
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 1810700507,
+    "b": -605959980,
+    "c": 1870850603,
+    "d": 1334489632,
+    "e": 233772583
+  },
+  "m_illustration": {
+    "assetGuid": "f085cfec69efe2b45956869db1688d19"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "5bfdd3ab48c255d41b28e9b9b04e5bdf"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 904,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      422160,
+      378,
+      690480,
+      690562,
+      691059,
+      691713
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "t",
+          "condition": {
+            "type": "HolderHasSkillCondition",
+            "skill": 209
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "boost",
+            "value": 2
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "boost",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "r",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "COLLISION"
+      ]
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          25
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Mazo",
+    "en": "Mazo Ring",
+    "es": "Anillo Maso",
+    "de": "Quälering",
+    "pt": "Anel Mazô"
+  },
+  "description": {
+    "fr": "{#COLLISION}\\_: {PA_RESvalue:r,+}.\n\\---\n<rem>Limité à {value:t} fois par tour.</rem>",
+    "en": "{#COLLISION}: {PA_RESvalue:r,+}.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</rem>",
+    "es": "{#COLLISION}: {PA_RESvalue:r,+}.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "{#COLLISION}: {PA_RESvalue:r,+}.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</rem>",
+    "pt": "{#COLLISION}: {PA_RESvalue:r,+}.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</rem>"
+  },
+  "bgDescription": {
+    "fr": "Si vous vous sentez à l'étroit, c'est normal. Tâchez de vous relaxer. Bientôt, vous vous sentirez bien mieux !",
+    "en": "If you're feeling a little tied up, it's normal. Try to relax. You'll feel a lot better soon!",
+    "es": "Es normal sentir que te aprieta. Trata de relajarte. Pronto te sentirás mucho mejor.",
+    "de": "Du fühlst dich beengt? Ist ganz normal. Versuch, dich zu entspannen. Bald schon fühlst du dich besser!",
+    "pt": "Se você estranhar um pouco, pode relaxar, é normal. Logo, logo você estará se sentindo bem melhor!"
+  }
+}

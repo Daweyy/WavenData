@@ -1,0 +1,200 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "488",
+  "m_id": 488,
+  "m_displayName": "CRA - ARME - BUNELAME - FEU - Brasero",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1339521571,
+    "b": -143246908,
+    "c": -1364547686,
+    "d": 966681625,
+    "e": 547481307
+  },
+  "m_i18nDescriptionId": {
+    "a": 1339521571,
+    "b": -143246908,
+    "c": -1364547686,
+    "d": 966681625,
+    "e": 1173583319
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "04f8e060e47783742aca5313e3130ada"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 488,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      726,
+      339,
+      452041
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 477,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e80d5cf20c887f84abc59e0f543c9857",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 59125,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgExplosion",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "LIFESTEAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Brasero",
+    "en": "Brazier",
+    "es": "Brasero",
+    "de": "Brasero",
+    "pt": "Braseiro"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL} si vous avez {SPELLCOUNTvalue:s} ou moins en main.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL} if you have {SPELLCOUNTvalue:s} or less in hand.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL} si tienes {SPELLCOUNTvalue:s} o menos en mano.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL}, wenn du höchstens {SPELLCOUNTvalue:s} Zauber auf der Hand hast.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL} se você tiver {SPELLCOUNTvalue:s} ou menos na mão."
+  }
+}

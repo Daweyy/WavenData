@@ -1,0 +1,198 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "856",
+  "m_id": 856,
+  "m_displayName": "IOP - CLASSE - TERRE - Heurt de Gloire",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1000956660,
+    "b": 667496724,
+    "c": -595310470,
+    "d": 1545264631,
+    "e": 1350944812
+  },
+  "m_i18nDescriptionId": {
+    "a": -1000956660,
+    "b": 667496724,
+    "c": -595310470,
+    "d": 1545264631,
+    "e": 152474054
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "555389b7b2a022540b216245ccc50422"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 856,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      207749,
+      541867,
+      415311
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      0
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "00736ca4744c3aa4cba0dac392687995",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "PMBuff",
+          "value": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            48
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 987,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 455
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Heurt de Gloire",
+    "en": "Glory Clash",
+    "es": "Choque de Gloria",
+    "de": "Glorreicher Zusammenprall",
+    "pt": "Conflito de Glória"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:PMBuff,+} à votre héros pour le tour.\n\\---\n{NamedEffect:455}\\_: {ARvalue:ar,+} à votre héros.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PMvalue:PMBuff,+} to your hero for the turn.\n\\---\n{NamedEffect:455}: {ARvalue:ar,+} to your hero.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:PMBuff,+} a tu héroe durante el turno.\n\\---\n{NamedEffect:455}: {ARvalue:ar,+} a tu héroe.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PMvalue:PMBuff,+} für deinen Helden für die Runde.\n\\---\n{NamedEffect:455}: {ARvalue:ar,+} für deinen Helden.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:PMBuff,+} ao seu herói durante o turno.\n\\---\n{NamedEffect:455}: {ARvalue:ar,+} ao seu herói."
+  }
+}

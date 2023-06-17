@@ -1,0 +1,149 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "303",
+  "m_id": 303,
+  "m_displayName": "DQ - CONTRAT - VAMPYRE - 1_Rubel Mont",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1191990033,
+    "b": 1111359412,
+    "c": -1617987831,
+    "d": -1313769014,
+    "e": 832206782
+  },
+  "m_i18nDescriptionId": {
+    "a": -1191990033,
+    "b": 1111359412,
+    "c": -1617987831,
+    "d": -1313769014,
+    "e": 1052367597
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 303,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1874,
+      "skinIds": [
+        1874
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloatingCounterEffect.94.pow"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DRAIN",
+        {
+          "type": 20,
+          "id": 82
+        },
+        {
+          "type": 22,
+          "id": 94
+        }
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 230
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          303
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Rubel Mont",
+    "en": "Rubel Mont",
+    "es": "Rubel Mont",
+    "de": "Rubel Berg",
+    "pt": "Rubel Monte"
+  },
+  "description": {
+    "fr": "{%appearanceAndFightTurnStarted} {value:v,+}\\_{aura:94,value:v}.\n\\---\nLorsqu'une {%KEYWORD.AURA.NAME} retire {PropertyEffect:82} à un {%Family_Vampyre_Name}\\_: {ATvalue:FloatingCounterEffect.94.pow,percent,+} jusqu'à sa prochaine <b>ATTAQUE</b>.",
+    "en": "{%appearanceAndFightTurnStarted} {value:v,+}\\_{aura:94,value:v}.\n\\---\nWhen an {%KEYWORD.AURA.NAME} removes {PropertyEffect:82} from a {%Family_Vampyre_Name}: {ATvalue:FloatingCounterEffect.94.pow,percent,+} until his next <b>ATTACK</b>.",
+    "es": "{%appearanceAndFightTurnStarted} {value:v,+}\\_{aura:94,value:v}.\n\\---\nCuando un {%KEYWORD.AURA.NAME} retira {PropertyEffect:82} a un {%Family_Vampyre_Name}: {ATvalue:FloatingCounterEffect.94.pow,percent,+} hasta su próximo <b>ATAQUE</b>.",
+    "de": "{%appearanceAndFightTurnStarted} {value:v,+}\\_{aura:94,value:v}.\n\\---\nFalls eine {%KEYWORD.AURA.NAME} einem {%Family_Vampyre_Name} {PropertyEffect:82} entzieht: {ATvalue:FloatingCounterEffect.94.pow,percent,+} bis zu seinem nächsten <b>ANGRIFF</b>.",
+    "pt": "{%appearanceAndFightTurnStarted} {value:v,+}\\_{aura:94,value:v}.\n\\---\nQuando uma {%KEYWORD.AURA.NAME} retira {PropertyEffect:82} de um {%Family_Vampyre_Name}: {ATvalue:FloatingCounterEffect.94.pow,percent,+} até o seu próximo <b>ATAQUE</b>."
+  }
+}

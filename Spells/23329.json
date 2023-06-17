@@ -1,0 +1,149 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "23329",
+  "m_id": 23329,
+  "m_displayName": "FANTOME - Ame en Peine",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 58763953,
+    "b": -295342636,
+    "c": -1977346663,
+    "d": -2053779243,
+    "e": 918579568
+  },
+  "m_i18nDescriptionId": {
+    "a": 58763953,
+    "b": -295342636,
+    "c": -1977346663,
+    "d": -2053779243,
+    "e": -1407714551
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "46354d92ca666d64bbc6de42da3b83b8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 23329,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        0
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d0c966d6cfcce854ab445868cbbf443f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 18
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Ame en Peine",
+    "en": "Soul in Pain",
+    "es": "Alma en Pena",
+    "de": "Schmerzende Seele",
+    "pt": "Alma em Pane"
+  },
+  "description": {
+    "fr": "Confère {PropertyEffect:18} et {PMvalue:pm,+} à un allié pour le tour.",
+    "en": "Confers {PropertyEffect:18} and {PMvalue:pm,+} on an ally for the turn.",
+    "es": "Confiere {PropertyEffect:18} y {PMvalue:pm,+} a un aliado durante el turno.",
+    "de": "Verleiht einem Verbündeten für die Runde {PropertyEffect:18} und {PMvalue:pm,+}.",
+    "pt": "Concede {PropertyEffect:18} e {PMvalue:pm,+} a um aliado durante o turno."
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "336",
+  "m_id": 336,
+  "m_displayName": "EQUIPMENT - BRACELET - Repositionnement adverse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1825425915,
+    "b": 1459731940,
+    "c": -990121815,
+    "d": 1901455420,
+    "e": -297357141
+  },
+  "m_i18nDescriptionId": {
+    "a": 1825425915,
+    "b": 1459731940,
+    "c": -990121815,
+    "d": 1901455420,
+    "e": 1237051494
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "835f46628567f9a41b652d3c0099c266"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 336,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "PropertyFilter",
+                  "property": {
+                    "type": "SpecificPropertyIdResolvable",
+                    "propertyId": 169
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "SumValue",
+                "referenceId": "c",
+                "valuesToSum": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "PlayerHasEquipmentSkillCondition",
+                      "player": {
+                        "type": "CasterSelector"
+                      },
+                      "skillId": 653578
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c1",
+                      "value": 1
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "PlayerHasEquipmentSkillCondition",
+                      "player": {
+                        "type": "CasterSelector"
+                      },
+                      "skillId": 653620
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c2",
+                      "value": 1
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "c",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "skillId": 653578
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c1",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "skillId": 653620
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c2",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Repositionnement adverse",
+    "en": "Opposed Repositioning",
+    "es": "Reposicionamiento Contrario",
+    "de": "Gegensätzliche Neupositionierung",
+    "pt": "Reposicionamento Inimigo"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nTéléporte la cible de votre {%AT} jusqu'à {cell:c}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeleports the target of your {%AT} up to {cell:c}.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeletransporta al objetivo {%AT} hasta {cell:c}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeleportiert das Ziel von deinem {%AT} bis zu {cell:c}.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeletransporta o alvo do seu {%AT} a até {cell:c}."
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "854",
+  "m_id": 854,
+  "m_displayName": "SRAM - ARME - LAME OURAI - TERRE - Amorce Turbulente",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1286739869,
+    "b": -132023388,
+    "c": 932080746,
+    "d": 243805534,
+    "e": 852606463
+  },
+  "m_i18nDescriptionId": {
+    "a": -1286739869,
+    "b": -132023388,
+    "c": 932080746,
+    "d": 243805534,
+    "e": -803546898
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "fd11ec3feaf3958479ab02a4b3cd477d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 854,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      353559,
+      366876,
+      497074
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      22
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 830,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "c",
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "1722734f06474a54cb617ac8bfd2b64a",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "MapSizeValue",
+          "referenceId": "c",
+          "axe": 0
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 860,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAPPER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Amorce Turbulente",
+    "en": "Turbulent Primer",
+    "es": "Cebo Turbulento",
+    "de": "Turbulenter Köder",
+    "pt": "Isca Turbulenta"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires alignés à votre héros.\n\\---\n{#TRAPPER}\\_: Attire vos premiers {%KEYWORD.TRAP.NAME,plural:other} alignés jusqu'à {cell:c} de votre héros.",
+    "en": "Does {magicalDamage:dmg} to opponents in line with your hero.\n\\---\n{#TRAPPER}: Attracts your first in-line {%KEYWORD.TRAP.NAME,plural:other} up to {cell:c} away from your hero.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios alineados con tu héroe.\n\\---\n{#TRAPPER}: Atrae tus primeras {%KEYWORD.TRAP.NAME,plural:other} alineadas hasta a {cell:c} casillas de tu héroe.",
+    "de": "Verursacht {magicalDamage:dmg} bei den Gegnern, die sich in derselben Reihe wie dein Held befinden.\n\\---\n{#TRAPPER}: Zieht deine ersten {%KEYWORD.TRAP.NAME,plural:other}, die sich in derselben Reihe befinden, bis auf {cell:c} an deinen Helden heran.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários alinhados ao seu herói.\n\\---\n{#TRAPPER}: Atrai as primeiras {%KEYWORD.TRAP.NAME,plural:other} alinhadas a até {cell:c} do seu herói."
+  }
+}

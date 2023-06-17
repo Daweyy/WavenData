@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "143",
+  "m_id": 143,
+  "m_displayName": "SRAM - CLASSE - TERRE - Marecage",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 929825296,
+    "b": 921368772,
+    "c": -1885371896,
+    "d": 1893928419,
+    "e": -453853959
+  },
+  "m_i18nDescriptionId": {
+    "a": 929825296,
+    "b": 921368772,
+    "c": -1885371896,
+    "d": 1893928419,
+    "e": 69900556
+  },
+  "m_elementaryStates": 2,
+  "m_illustrationReference": {
+    "assetGuid": "431a745a4a0d1a846bfca6ace3842bc7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 143,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      31,
+      363203,
+      488444
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "97ab97622d039dc498ee98cf5e0c20b0",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 712,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Marécage",
+    "en": "Swamp",
+    "es": "Pantanal",
+    "de": "Sumpf",
+    "pt": "Pântano"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>BOUEUX</b>\\_<sprite name=\"muddy\">.",
+    "en": "Does {magicalDamage:dmg} and applies <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "Verursacht {magicalDamage:dmg} und wirkt <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\">.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+  }
+}

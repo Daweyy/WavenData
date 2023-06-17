@@ -1,0 +1,182 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "498",
+  "m_id": 498,
+  "m_displayName": "CRA - CLASSE - EAU - Trait des Profondeurs",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1885446388,
+    "b": 1482918212,
+    "c": -1685279368,
+    "d": 1809614195,
+    "e": 1304377188
+  },
+  "m_i18nDescriptionId": {
+    "a": 1885446388,
+    "b": 1482918212,
+    "c": -1685279368,
+    "d": 1809614195,
+    "e": -858505213
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "61414f3dccb4b954888c4c74fb723b37"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 498,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      658,
+      387635,
+      92
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "96b2acd0e4930f5498cb297d4707513b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 40
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 888,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Trait des Profondeurs",
+    "en": "Bolt from the Depths",
+    "es": "Saeta de las Profundidades",
+    "de": "Zug des Abgrunds",
+    "pt": "Disparo das Profundezas"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} au coût de votre prochain {%SPELLCOUNT} si la cible est à {cell:c} ou plus.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} to the cost of your next {%SPELLCOUNT} if the target is {cell:c} or more away.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} al coste de tu próximo {%SPELLCOUNT} si el objetivo está a {cell:c} o más.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} auf die Kosten deines nächsten {%SPELLCOUNT}, wenn das Ziel mindestens {cell:c} entfernt ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} ao custo do seu próximo {%SPELLCOUNT} se o alvo estiver à {cell:c} ou mais."
+  }
+}

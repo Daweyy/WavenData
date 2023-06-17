@@ -1,0 +1,207 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "113",
+  "m_id": 113,
+  "m_displayName": "XELOR - CLASSE - TERRE - Blindage Temporel",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -977198459,
+    "b": -213223484,
+    "c": 1580187929,
+    "d": -284533602,
+    "e": 1705571485
+  },
+  "m_i18nDescriptionId": {
+    "a": -977198459,
+    "b": -213223484,
+    "c": 1580187929,
+    "d": -284533602,
+    "e": 629652791
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5eb1273585bc00e4b83625afbcc1484d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 113,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      844,
+      541709,
+      486
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c7d459f31cf3ebd49b59e5413c2bf49d",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 882,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            49,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Blindage Temporel",
+    "en": "Temporal Plating",
+    "es": "Blindaje Temporal",
+    "de": "Vorübergehende Abschirmung",
+    "pt": "Blindagem Temporal"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} à votre héros et {BLvalue:bl,+} à vos <b>SINISTROS</b> si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} to your hero and {BLvalue:bl,+} to your <b>SINISTROS</b> if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} a tu héroe y {BLvalue:bl,+} a tus <b>SINISTROS</b> si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} für deinen Helden und {BLvalue:bl,+} für deine <b>SINISTROS</b>, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} ao seu herói e {BLvalue:bl,+} aos seus <b>SINISTROS</b> se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+  }
+}

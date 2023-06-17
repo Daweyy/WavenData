@@ -1,0 +1,215 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241945000
+  },
+  "m_Name": "442",
+  "m_id": 442,
+  "m_displayName": "DECK - KROSMIQUE - FEU - Remington Smisse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1895933633,
+    "b": -1562730764,
+    "c": -371531734,
+    "d": -2048164288,
+    "e": 668319454
+  },
+  "m_i18nDescriptionId": {
+    "a": 1895933633,
+    "b": -1562730764,
+    "c": -371531734,
+    "d": -2048164288,
+    "e": 645459791
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 442,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 950,
+      "skinIds": [
+        950
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "EXPLOSION",
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1486
+        }
+      ]
+    },
+    "families": [
+      13
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 108
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 18
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 23
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 24
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      314502,
+      314122,
+      313983,
+      313762,
+      314014,
+      310
+    ],
+    "rarity": 2,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 407,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          442
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Remington Smisse",
+    "en": "Remington Smisse",
+    "es": "Remington Smis",
+    "de": "Remington Smiss",
+    "pt": "Remington Smif"
+  },
+  "description": {
+    "fr": "{%attack} Construit une {ObjectMechanism:1486} derrière la cible.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "en": "{%attack} Builds one {ObjectMechanism:1486} behind the target.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "es": "{%attack} Construye una {ObjectMechanism:1486} detrás del objetivo.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "de": "{%attack} Errichtet eine {ObjectMechanism:1486} hinter dem Ziel.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "pt": "{%attack} Posiciona uma {ObjectMechanism:1486} atrás do alvo.\\v<family>{%Family_GreatVilain_Name}</family>"
+  }
+}

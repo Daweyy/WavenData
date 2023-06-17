@@ -1,0 +1,215 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241945000
+  },
+  "m_Name": "664",
+  "m_id": 664,
+  "m_displayName": "DECK - KROSMIQUE - TERRE - Amalia",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 701279249,
+    "b": -2080328697,
+    "c": -1237985270,
+    "d": -576413209,
+    "e": 624942802
+  },
+  "m_i18nDescriptionId": {
+    "a": 701279249,
+    "b": -2080328697,
+    "c": -1237985270,
+    "d": -576413209,
+    "e": 864076484
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 664,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9723,
+      "skinIds": [
+        9723
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      10,
+      81
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 108
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 19
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 23
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 24
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      550,
+      411273,
+      608,
+      803,
+      734641,
+      735228
+    ],
+    "rarity": 2,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 407,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          664
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Amalia",
+    "en": "Amalia",
+    "es": "Amalia",
+    "de": "Amaya",
+    "pt": "Amália"
+  },
+  "description": {
+    "fr": "Tant qu'elle est en jeu\\_: {PAvalue:pa} au coût de vos sorts {%EARTH}.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "en": "While in play: {PAvalue:pa}\\_ to the cost of your {%EARTH} spells.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "es": "Mientras esté en juego: {PAvalue:pa} al coste de tus hechizos {%EARTH}.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "de": "Solange sie im Spiel ist: {PAvalue:pa} auf die Kosten deiner {%EARTH}-Zauber.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "pt": "Enquanto estiver em jogo: {PAvalue:pa} ao custo dos seus feitiços de {%EARTH}.\\v<family>{%Family_BrotherHood_Name}</family>"
+  }
+}

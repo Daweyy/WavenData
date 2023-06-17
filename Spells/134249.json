@@ -1,0 +1,230 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "134249",
+  "m_id": 134249,
+  "m_displayName": "XELOR - ARME - TAKO - TERRE - Style Feuille",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1928976191,
+    "b": -138810796,
+    "c": -1881484647,
+    "d": 2079006725,
+    "e": -422542031
+  },
+  "m_i18nDescriptionId": {
+    "a": 1928976191,
+    "b": -138810796,
+    "c": -1881484647,
+    "d": 2079006725,
+    "e": -668636501
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c9c969379d7657c49a73a879e709f785"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 134249,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      479935,
+      480056,
+      480059
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 490,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "CaracValueCondition",
+        "selector": {
+          "type": "CasterSelector"
+        },
+        "carac": 19,
+        "value": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          }
+        }
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CrossAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCharacterSelector",
+            "filters": []
+          },
+          "size": {
+            "type": "MapSizeValue",
+            "referenceId": null,
+            "axe": 0
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5059ea282749beb47a027ed7b1c2cc61",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 244,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 244,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "CHRONO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Style Feuille",
+    "en": "Leaf Style",
+    "es": "Estilo Hoja",
+    "de": "Blattstil",
+    "pt": "Estilo Folha"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}\\_: Inflige {magicalDamage:dmg2} aux adversaires alignés à la cible.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Does {magicalDamage:dmg2} to opponents in line with the target.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Inflige {magicalDamage:dmg2} a los adversarios alineados con el objetivo.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Verursacht {magicalDamage:dmg2} bei den aufs Ziel ausgerichteten Gegnern.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Inflige {magicalDamage:dmg2} aos adversários alinhados ao alvo."
+  }
+}

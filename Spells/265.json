@@ -1,0 +1,155 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "265",
+  "m_id": 265,
+  "m_displayName": "XELOR - CLASSE - FEU - Flammeche",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 296351109,
+    "b": -449219916,
+    "c": -2030740872,
+    "d": -160389287,
+    "e": 1746037920
+  },
+  "m_i18nDescriptionId": {
+    "a": 296351109,
+    "b": -449219916,
+    "c": -2030740872,
+    "d": -160389287,
+    "e": -1745472676
+  },
+  "m_elementaryStates": 3,
+  "m_illustrationReference": {
+    "assetGuid": "5f32297cef729084da6e818ed357601e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 265,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      471495,
+      472234,
+      978
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c17cd2d58a20d9348b96ef6b2f76cea2",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Flammèche",
+    "en": "Flamewick",
+    "es": "Llamita",
+    "de": "Funken",
+    "pt": "Faísca"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>HUILÉ</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg} and applies <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Verursacht {magicalDamage:dmg} und wirkt <b>GEÖLT</b>\\_<sprite name=\"oiled\">.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

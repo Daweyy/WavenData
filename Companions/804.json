@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "804",
+  "m_id": 804,
+  "m_displayName": "QUETE - COCHON - Danny Zepig",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 434377906,
+    "b": -1973978060,
+    "c": -1465032581,
+    "d": 254653016,
+    "e": -1884979756
+  },
+  "m_i18nDescriptionId": {
+    "a": 434377906,
+    "b": -1973978060,
+    "c": -1465032581,
+    "d": 254653016,
+    "e": 1300725656
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 804,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 38,
+      "skinIds": [
+        38
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 76
+        },
+        {
+          "type": 20,
+          "id": 88
+        }
+      ]
+    },
+    "families": [
+      50
+    ],
+    "baseProperties": [
+      88
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 210
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 20
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 200
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          804
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Danny Zepig",
+    "en": "Danny Zepig",
+    "es": "Danny Zepig",
+    "de": "Danny Dereber",
+    "pt": "Danny Zeporco"
+  },
+  "description": {
+    "fr": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%DeathBlow} Récupère les {aura:76,plural:other} de la cible.",
+    "en": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%DeathBlow} Recovers {aura:76,plural:other} from the target.",
+    "es": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%DeathBlow} Consigue las {aura:76,plural:other} del objetivo.",
+    "de": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%DeathBlow} Stellt die {aura:76,plural:other} des Ziels wieder her.",
+    "pt": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%DeathBlow} Recupera as {aura:76,plural:other}\\_do alvo."
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "483",
+  "m_id": 483,
+  "m_displayName": "ENIRIPSA - CLASSE - ETHER - EVOLUTION - Punition Eniripsa",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2146986522,
+    "b": 940607092,
+    "c": -682621896,
+    "d": 919976284,
+    "e": 754484346
+  },
+  "m_i18nDescriptionId": {
+    "a": 2146986522,
+    "b": 940607092,
+    "c": -682621896,
+    "d": 919976284,
+    "e": -1968436367
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "eb582f6b96cd1f048b7fbb421258c94b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 483,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 20,
+      "bannedInPvp": true
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "aa377f8b36cc7a74287cd12b656e2a7b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "f",
+          "value": 5
+        },
+        {
+          "type": "ThisSpellEvolutionValue",
+          "referenceId": "Lv"
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Punition Eniripsa",
+    "en": "Eniripsa Punishment",
+    "es": "Punición Aniripsa",
+    "de": "Eniripsa-Strafe",
+    "pt": "Punição Eniripsa"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros et soigne vos personnages d'autant\n\\---\nLorsque vous déclenchez un <b>SOIN</b> : \\v{value:p, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur <b>SOINS</b> : {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "en": "Inflicts your hero's {%AT} and heals your characters the same amount.\n\\---\nWhen you trigger a <b>HEAL</b>:\\v {value:p, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem><b>HEAL</b> Count: {value:Lv}.</rem>\n{%DestroyOnPlayed}",
+    "es": "Inflige el {%AT} de tu héroe y cura a tus personajes otro tanto\n\\---\nCuando activas una <b>CURA</b>: \\v{value:p, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador <b>CURAS</b>: {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "de": "Verursacht den {%AT} deines Helden als Schaden und heilt deine Charaktere in gleicher Höhe.\n\\---\nWenn du eine <b>HEILUNG</b> auslöst:\\v {value:p, +, percent} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem><b>HEILUNGS</b>-Zähler: {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "pt": "Inflige o {%AT} do seu herói e cura seus personagens na mesma quantidade.\n\\---\nQuando você aciona uma <b>CURA</b>: \\v{value:p, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de <b>CURAS</b>: {value:Lv}</rem>\n{%DestroyOnPlayed}"
+  }
+}

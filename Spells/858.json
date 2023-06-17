@@ -1,0 +1,226 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "858",
+  "m_id": 858,
+  "m_displayName": "XELOR - CLASSE - FEU - Chronophagie",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -990619563,
+    "b": 1609369636,
+    "c": -1951209302,
+    "d": 1320980088,
+    "e": 494703983
+  },
+  "m_i18nDescriptionId": {
+    "a": -990619563,
+    "b": 1609369636,
+    "c": -1951209302,
+    "d": 1320980088,
+    "e": 1173982249
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "312c76c0b48565f4eac5cd536b977ddc"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 858,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      473632,
+      715,
+      473807
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      1
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0c62cf9cfc31d6d4bbe77b1067140f0e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 355,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 355,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "REWIND"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Chronophagie",
+    "en": "Time Waster",
+    "es": "Cronofagia",
+    "de": "Chronophagie",
+    "pt": "Cronofagia"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'un de vos <b>SINISTROS</b>.\n\\---\n{#REWIND}",
+    "en": "Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> one of your <b>SINISTROS</b>.\n\\---\n{#REWIND}",
+    "es": "Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de uno de tus <b>SINISTROS</b>.\n\\---\n{#REWIND}",
+    "de": "Verursacht {magicalDamage:dmg} ringsum\\_<sprite name=\"cell_around\"> eines deiner <b>Sinistros</b>.\n\\---\n{#REWIND}",
+    "pt": "Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> de um dos seus <b>SINISTROS</b>.\n\\---\n{#REWIND}"
+  }
+}

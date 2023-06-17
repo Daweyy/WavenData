@@ -1,0 +1,150 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "904",
+  "m_id": 904,
+  "m_displayName": "CRA - ARME - PIVEN - ETHER - Repousse Piven",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1500334030,
+    "b": 364575380,
+    "c": -122574661,
+    "d": 909516428,
+    "e": -947088673
+  },
+  "m_i18nDescriptionId": {
+    "a": 1500334030,
+    "b": 364575380,
+    "c": -122574661,
+    "d": 909516428,
+    "e": -215531571
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1b066f2ea0019374cb6be130b7f1ecdd"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": ""
+      },
+      {
+        "assetGuid": ""
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 904,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 846,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "GreaterThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3e129efcf8fb84547b14c810cbd103b1",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COLLISION",
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Repousse Piven",
+    "en": "Piven Push",
+    "es": "Empuje Piven",
+    "de": "Tannen-Rückstoß",
+    "pt": "Empurrão Piven"
+  },
+  "description": {
+    "fr": "{#PUSH} de {cell:c1} un personnage aligné avec votre héros.\n\\---\nVotre héros recule de {cell:c2} par {#COLLISION}.",
+    "en": "{#PUSH} a character in line with your hero {cell:c1}.\n\\---\nYour hero moves back {cell:c2} per {#COLLISION}.",
+    "es": "{#PUSH} {cell:c1} a un personaje alineado con tu héroe.\n\\---\nTu héroe retrocede {cell:c2} por {#COLLISION}.",
+    "de": "{#PUSH} einen Charakter um {cell:c1}, der sich in derselben Reihe befindet wie dein Held.\n\\---\nDein Held zieht sich um {cell:c2} je {#COLLISION} zurück.",
+    "pt": "{#PUSH} por {cell:c1} um personagem alinhado com seu herói.\n\\---\nSeu herói recua por {cell:c2} por {#COLLISION}."
+  }
+}

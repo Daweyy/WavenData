@@ -1,0 +1,163 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "217201",
+  "m_id": 217201,
+  "m_displayName": "ENIRIPSA - CLASSE - TERRE - Elixir de Pierre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1657026277,
+    "b": -1467568428,
+    "c": 6551833,
+    "d": -1712113534,
+    "e": -1537148280
+  },
+  "m_i18nDescriptionId": {
+    "a": 1657026277,
+    "b": -1467568428,
+    "c": 6551833,
+    "d": -1712113534,
+    "e": -2127906873
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "27ba64805b28c004586fb079c5a57d4f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 217201,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a056859dca2938a4aa089b9a215a5904",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            48,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 117
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Élixir de Pierre",
+    "en": "Stone Elixir",
+    "es": "Elixir de Piedra",
+    "de": "Steinelixier",
+    "pt": "Elixir de Pedra"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} à un allié.\n\\---\n{value:a,+}\\_{aura:117,value:a} à votre héros.\n\\---\n<rem>Ce sort est détruit lorsqu'il est joué.</rem>",
+    "en": "{ARvalue:ar,+} to an ally.\n\\---\n{value:a,+}\\_{aura:117,value:a} to your hero.\n\\---\n<rem>This spell is destroyed when played.</rem>",
+    "es": "{ARvalue:ar,+} a un aliado.\n\\---\n{value:a,+}\\_{aura:117,value:a} a tu héroe.\n\\---\n<rem>Este hechizo se destruye cuando se usa.</rem>",
+    "de": "{ARvalue:ar,+} für einen Verbündeten.\n\\---\n{value:a,+}\\_{aura:117,value:a} für deinen Helden.\n\\---\n<rem>Dieser Zauber wird zerstört, wenn er ausgespielt wird.</rem>",
+    "pt": "{ARvalue:ar,+} a um aliado.\n\\---\n{value:a,+}\\_{aura:117,value:a} ao seu herói.\n\\---\n<rem>Este feitiço é destruído quando é lançado.</rem>"
+  }
+}

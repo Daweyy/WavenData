@@ -1,0 +1,168 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "96896",
+  "m_id": 96896,
+  "m_displayName": "CRA - ARME - PIVEN - EAU - Impact Glace",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 93743673,
+    "b": -988151820,
+    "c": -123910007,
+    "d": 1212234163,
+    "e": -1417483567
+  },
+  "m_i18nDescriptionId": {
+    "a": 93743673,
+    "b": -988151820,
+    "c": -123910007,
+    "d": 1212234163,
+    "e": -575699766
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "4d95337389785b144894b96ad7753b99"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 96896,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      14,
+      454637,
+      11
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 846,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "51dd6518d7065b04d8aea49989728fb0",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 558,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Impact Glacé",
+    "en": "Icy Impact",
+    "es": "Impacto Helado",
+    "de": "Eiseinschlag",
+    "pt": "Impacto Congelado"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} si aucun adversaire ne se trouve autour\\_<sprite name=\"cell_around\"> de votre héros.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} if there are no opponents around\\_<sprite name=\"cell_around\"> your hero.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} si no hay ningún adversario alrededor\\_<sprite name=\"cell_around\"> de tu héroe.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+}, wenn sich kein Gegner ringsum\\_<sprite name=\"cell_around\"> deines Helden befindet.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} se nenhum adversário estiver em\\_volta\\_<sprite name=\"cell_around\"> do seu herói."
+  }
+}

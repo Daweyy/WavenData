@@ -1,0 +1,195 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "402",
+  "m_id": 402,
+  "m_displayName": "ENIRIPSA - CLASSE - AIR - Fiole Toxique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1029470002,
+    "b": 211827332,
+    "c": -1590512565,
+    "d": -69802119,
+    "e": 201121673
+  },
+  "m_i18nDescriptionId": {
+    "a": 1029470002,
+    "b": 211827332,
+    "c": -1590512565,
+    "d": -69802119,
+    "e": 1583249809
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "648aa579a444ba04aa8e122b57d04ec4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 402,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      324649,
+      324724,
+      501110
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "AllCoordsSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e4565e23b9fdbe44bb3ce53021b62d61",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 498,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Fiole Toxique",
+    "en": "Toxic Vial",
+    "es": "Frasco Tóxico",
+    "de": "Giftige Phiole",
+    "pt": "Frasco Tóxico"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires et soigne les alliés de {PVvalue:heal} dans la zone\\_<sprite name=\"cell_cross2\"> ciblée.",
+    "en": "Does {magicalDamage:dmg} to opponents and heals allies {PVvalue:heal} in the targeted <sprite name=\"cell_cross2\">\\_zone.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios y cura a los aliados {PVvalue:heal} en la zona\\_<sprite name=\"cell_cross2\"> objetivo.",
+    "de": "Verursacht bei den Gegnern {magicalDamage:dmg} zu und heilt die Verbündeten im Zielbereich\\_<sprite name=\"cell_cross2\"> um {PVvalue:heal}.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários e cura os aliados em {PVvalue:heal} na zona\\_<sprite name=\"cell_cross2\"> visada."
+  }
+}

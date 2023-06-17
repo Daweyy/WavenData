@@ -1,0 +1,233 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "590",
+  "m_id": 590,
+  "m_displayName": "DECK - INFINITE - MULTI - Qilby",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 433732890,
+    "b": 863267396,
+    "c": -1803694902,
+    "d": -2140003243,
+    "e": -37658695
+  },
+  "m_i18nDescriptionId": {
+    "a": 433732890,
+    "b": 863267396,
+    "c": -1803694902,
+    "d": -2140003243,
+    "e": 359782625
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 590,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 4284,
+      "skinIds": [
+        4284
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "j",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      16,
+      72
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 172
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 36
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      410827,
+      410572,
+      427,
+      867,
+      544,
+      263
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          590
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 99
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 99
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Qilby",
+    "en": "Qilby",
+    "es": "Qilby",
+    "de": "Qilby",
+    "pt": "Qilby"
+  },
+  "description": {
+    "fr": "<rem>Peut être invoqué sur une case libre du terrain.</rem>\n\\---\n{%Appearance} {NEUTRALGAUGEvalue:j,+}.\n\\---\n{%attack} Se téléporte dans le dos de la cible.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "en": "<rem>Can be summoned on a free cell on the field.</rem>\n\\---\n{%Appearance} {NEUTRALGAUGEvalue:j,+}.\n\\---\n{%attack} Teleports behind the target.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "es": "<rem>Se puede invocar en una casilla libre del terreno.</rem>\n\\---\n{%Appearance} {NEUTRALGAUGEvalue:j,+}.\n\\---\n{%attack} Se teletransporta a la espalda del objetivo.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "de": "<rem>Kann auf einem leeren Feld auf dem Spielfeld beschworen werden.</rem>\n\\---\n{%Appearance}{NEUTRALGAUGEvalue:j,+}.\n\\---\n{%attack} Teleportiert sich hinter das Ziel.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "pt": "<rem>Pode ser invocado sobre uma célula livre.</rem>\n\\---\n{%Appearance} {NEUTRALGAUGEvalue:j,+}.\n\\---\n{%attack} Teletransporta-se para trás do alvo.\\v<family>{%Family_GreatVilain_Name}</family>"
+  }
+}

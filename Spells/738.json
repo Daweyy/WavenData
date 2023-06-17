@@ -1,0 +1,158 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "738",
+  "m_id": 738,
+  "m_displayName": "ENIRIPSA - ARME - LAME VORACIUS - ETHER - Coeur Voracius",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -536495723,
+    "b": 1664702132,
+    "c": -1735515015,
+    "d": -2055626955,
+    "e": 99040869
+  },
+  "m_i18nDescriptionId": {
+    "a": -536495723,
+    "b": 1664702132,
+    "c": -1735515015,
+    "d": -2055626955,
+    "e": 363755118
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "952d955e2c0818843adbaa6ab9e4fa22"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 738,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 202,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "FloatingCounterCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 3
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "8268cb8af2fc8a3448f91b0255edd195",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DALLE",
+        {
+          "type": 6,
+          "id": 1890
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cœur Voracius",
+    "en": "Voracius Heart",
+    "es": "Corazón Voracius",
+    "de": "Nimmersatt-Herz",
+    "pt": "Coração Voracius"
+  },
+  "description": {
+    "fr": "Libère vos {%AURA_HEART,plural:other}.\n\\---\nPose autant de {FloorMechanism:1890} jusqu’à {value:d} cases autour\\_<sprite name=\"cell_around\"> de votre héros.",
+    "en": "Releases your {%AURA_HEART,plural:other}.\n\\---\nPlaces the same amount of {FloorMechanism:1890,plural:other} up to {value:d} cells around\\_<sprite name=\"cell_around\"> your hero.",
+    "es": "Libera tus {%AURA_HEART,plural:other}.\n\\---\nPone tantos {FloorMechanism:1890} hasta a {value:d} casillas alrededor\\_<sprite name=\"cell_around\"> de tu héroe.",
+    "de": "Löst deine {%AURA_HEART,plural:other} aus.\n\\---\nPlatziert genauso viele {FloorMechanism:1890} bis auf {value:d} Felder entfernt ringsum\\_<sprite name=\"cell_around\"> deinen Helden.",
+    "pt": "Libera suas {%AURA_HEART,plural:other}.\n\\---\nPosiciona a mesma quantidade de {FloorMechanism:1890} a até {value:d} células em\\_volta\\_<sprite name=\"cell_around\"> do seu herói."
+  }
+}

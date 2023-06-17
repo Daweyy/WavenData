@@ -1,0 +1,222 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "118650",
+  "m_id": 118650,
+  "m_displayName": "IOP - CLASSE - FEU - Explosion Brutale",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1008074709,
+    "b": -707139948,
+    "c": 1948232507,
+    "d": -1144417721,
+    "e": 184933362
+  },
+  "m_i18nDescriptionId": {
+    "a": -1008074709,
+    "b": -707139948,
+    "c": 1948232507,
+    "d": -1144417721,
+    "e": -1666820347
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ad9e6a900393e954787ed863bdde2f66"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "28bf5e11d1986e941a1d1b5032f02f64"
+      },
+      {
+        "assetGuid": "e5d5abcd7bc90224ea4d0ddc5320ba66"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 118650,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      195130,
+      222224,
+      467
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "tpValue",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "tpValue",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 508,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Explosion Brutale",
+    "en": "Brutal Explosion",
+    "es": "Explosión Brutal",
+    "de": "Brutale Explosion",
+    "pt": "Explosão Brutal"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:tpValue}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires autour<sprite name=\"cell_around\"/> de lui.",
+    "en": "Teleports your hero up to {cell:tpValue}.\n\\---\nDoes {magicalDamage:dmg} to opponents around<sprite name=\"cell_around\"/> them.",
+    "es": "Teletransporta a tu héroe hasta {cell:tpValue}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios a su alrededor<sprite name=\"cell_around\"/>.",
+    "de": "Teleportiert deinen Helden bis zu {cell:tpValue}.\n\\---\nEr verursacht bei Gegnern ringsum\\_<sprite name=\"cell_around\"/> {magicalDamage:dmg}.",
+    "pt": "Teletransporta seu herói a até {cell:tpValue}.\n\\---\nInflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"/> dele."
+  }
+}

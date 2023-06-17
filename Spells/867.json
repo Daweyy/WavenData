@@ -1,0 +1,203 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "867",
+  "m_id": 867,
+  "m_displayName": "ENIRIPSA - CLASSE - FEU - Cure Purgative",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1261191571,
+    "b": -924187884,
+    "c": 1830989611,
+    "d": -188826144,
+    "e": 972405198
+  },
+  "m_i18nDescriptionId": {
+    "a": -1261191571,
+    "b": -924187884,
+    "c": 1830989611,
+    "d": -188826144,
+    "e": 1242536211
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c5b314f1ebf2a1e4a9a04b82726bb486"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 867,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      505038,
+      505043,
+      229
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "eefc98d1ea5ad51448cffe0a385858ab",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 535,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "drain",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DRAIN",
+        "SUPPORT"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cure Purgative",
+    "en": "Purgative Cure",
+    "es": "Terapia Purgante",
+    "de": "Abführende Kur",
+    "pt": "Cura Purgativa"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'un allié.\n\\---\n{#SUPPORT}\\_: {DRAINvalue:drain,percent,+} à votre héros pour le tour.",
+    "en": "Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> an ally.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} to your hero for the turn.",
+    "es": "Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de un aliado.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} a tu héroe durante el turno.",
+    "de": "Verursacht {magicalDamage:dmg} ringsum\\_<sprite name=\"cell_around\"> eines Verbündeten.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} für deinen Helden für die Runde.",
+    "pt": "Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> de um aliado.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} ao seu herói durante o turno."
+  }
+}

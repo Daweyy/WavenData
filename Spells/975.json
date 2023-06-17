@@ -1,0 +1,198 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "975",
+  "m_id": 975,
+  "m_displayName": "XELOR - CLASSE - EAU - Sinistro Eau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1533841501,
+    "b": -992384188,
+    "c": -1907840392,
+    "d": 1889974297,
+    "e": 1539263489
+  },
+  "m_i18nDescriptionId": {
+    "a": 1533841501,
+    "b": -992384188,
+    "c": -1907840392,
+    "d": 1889974297,
+    "e": -424105351
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f7e5cf39ad44ba046afa2d9df65c81a8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 975,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      458136,
+      740,
+      625
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      10,
+      15
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CombinedTargetSelector",
+        "selectors": [
+          {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "c",
+                    "value": 3
+                  }
+                }
+              },
+              {
+                "type": "CellValidForMechanismFilter"
+              }
+            ]
+          },
+          {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllObjectMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "ObjectMechanismDefinitionFilter",
+                "condition": 1,
+                "objectMechanisms": [
+                  559
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pd2",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 137
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 22
+        },
+        {
+          "type": 7,
+          "id": 559
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Sinistro Eau",
+    "en": "Water Sinistro",
+    "es": "Sinistro de Agua",
+    "de": "Wasser-Sinistro",
+    "pt": "Sinistro Água"
+  },
+  "description": {
+    "fr": "Construit un {ObjectMechanism:559} jusqu'à {cell:c} de votre héros.\n<rem>Détruit votre précédent {ObjectMechanism:559!}.</rem>\n\\---\n<b>OU</b>\n\\---\nTransforme votre {ObjectMechanism:559!} en {ObjectMechanism:22}.",
+    "en": "Builds one {ObjectMechanism:559} up to {cell:c} from your hero.\n<rem>Destroys your previous {ObjectMechanism:559!}.</rem>\n\\---\n<b>OR</b>\n\\---\nTurns your {ObjectMechanism:559!} into a {ObjectMechanism:22}.",
+    "es": "Construye un {ObjectMechanism:559} hasta a {cell:c} de tu héroe.\n<rem>Destruye tu {ObjectMechanism:559!} anterior.</rem>\n\\---\n<b>O</b>\n\\---\nTransforma tu {ObjectMechanism:559!} en {ObjectMechanism:22}.",
+    "de": "Errichtet einen\\_{ObjectMechanism:559} bis zu {cell:c} von deinem Helden entfernt.\n<rem>Zerstört deinen vorherigen {ObjectMechanism:559!}.</rem>\n\\---\n<b>ODER</b>\n\\---\nVerwandelt deinen {ObjectMechanism:559!} in {ObjectMechanism:22}.",
+    "pt": "Posiciona um {ObjectMechanism:559} a até {cell:c} do seu herói.\n<rem>Destrói o {ObjectMechanism:559!} anterior.</rem>\n\\---\n<b>OU</b>\n\\---\nTransforma seu {ObjectMechanism:559!} em {ObjectMechanism:22}."
+  }
+}

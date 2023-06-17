@@ -1,0 +1,233 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "99",
+  "m_id": 99,
+  "m_displayName": "DECK - COMMON - MULTI - Épinette",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2137552273,
+    "b": 1797473604,
+    "c": 264849208,
+    "d": -751364590,
+    "e": 844822866
+  },
+  "m_i18nDescriptionId": {
+    "a": 2137552273,
+    "b": 1797473604,
+    "c": 264849208,
+    "d": -751364590,
+    "e": -877015610
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 99,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3432,
+      "skinIds": [
+        3432
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      10
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 98
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 17
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      990,
+      416,
+      399031,
+      398767,
+      741121,
+      741185
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          99
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Épinette",
+    "en": "Lil Thorn",
+    "es": "Espinita",
+    "de": "Spinett",
+    "pt": "Pinhinha"
+  },
+  "description": {
+    "fr": "{%APPEARANCE} Défausse votre main. Vous piochez {SPELLCOUNTvalue:x}.",
+    "en": "{%APPEARANCE} Discards your hand. You draw {SPELLCOUNTvalue:x}.",
+    "es": "{%APPEARANCE} Descarta tu mano. Robas {SPELLCOUNTvalue:x}.",
+    "de": "{%APPEARANCE} Wirft deine Hand ab. Du ziehst {SPELLCOUNTvalue:x}.",
+    "pt": "{%APPEARANCE} Descarta sua mão. Você compra {SPELLCOUNTvalue:x}."
+  }
+}

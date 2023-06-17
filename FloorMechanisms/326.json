@@ -1,0 +1,123 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4871839995114387000
+  },
+  "m_Name": "326",
+  "m_id": 326,
+  "m_displayName": "BONTA - 15 - Flamme",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 420948506,
+    "b": -501571420,
+    "c": -2146592120,
+    "d": -2016081623,
+    "e": -1859018842
+  },
+  "m_i18nDescriptionId": {
+    "a": 420948506,
+    "b": -501571420,
+    "c": -2146592120,
+    "d": -2016081623,
+    "e": -999030823
+  },
+  "values": {
+    "type": "FloorMechanismDefinition",
+    "id": 326,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7061,
+      "skinIds": [
+        7061
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "perc",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 300
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": -50
+                },
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": "",
+                  "from": {
+                    "type": "AllFloorMechanismsSelector"
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "FloorMechanismDefinitionFilter",
+                      "condition": 1,
+                      "floorMechanisms": [
+                        326
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 15,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 18
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        "TRAP"
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "canAssemble": false,
+    "activationValue": null,
+    "activationTrigger": 0,
+    "removeOnActivation": false
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

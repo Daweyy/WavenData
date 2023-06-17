@@ -1,0 +1,215 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "211562",
+  "m_id": 211562,
+  "m_displayName": "DQ - MYSTERY ISLAND - CRAQUELEUR - 1_Craquebille chromatique bleue",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -990125952,
+    "b": 260485876,
+    "c": 1117028443,
+    "d": 315214348,
+    "e": -1407175659
+  },
+  "m_i18nDescriptionId": {
+    "a": -990125952,
+    "b": 260485876,
+    "c": 1117028443,
+    "d": 315214348,
+    "e": 1087786307
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d7a02bf47c48b1c44926ed2bdb62b9da"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 211562,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41,
+        25
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "AndCondition",
+        "conditions": [
+          {
+            "type": "NumberOfEntityCondition",
+            "selector": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllSummoningsSelector"
+              },
+              "filters": [
+                {
+                  "type": "SummoningDefinitionFilter",
+                  "condition": 1,
+                  "summonings": [
+                    10817
+                  ]
+                }
+              ]
+            },
+            "value": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 0
+              }
+            }
+          },
+          {
+            "type": "NumberOfEntityCondition",
+            "selector": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllSummoningsSelector"
+              },
+              "filters": [
+                {
+                  "type": "SummoningDefinitionFilter",
+                  "condition": 1,
+                  "summonings": [
+                    108
+                  ]
+                }
+              ]
+            },
+            "value": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              }
+            }
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "SummoningDefinitionFilter",
+                  "condition": 1,
+                  "summonings": [
+                    108
+                  ]
+                },
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "UNIQUE",
+        {
+          "type": 4,
+          "id": 10817
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Craquebille Chromatique Bleue",
+    "en": "Blue Chromatic Creakrock",
+    "es": "Crujinica Cromática Azul",
+    "de": "Blauer chromatischer Krachlbrock",
+    "pt": "Smagabilha Cromática Azul"
+  },
+  "description": {
+    "fr": "Invoque une {Summoning:10817} jusqu'à {cell:c} de {Summoning:108!}.",
+    "en": "Summons one {Summoning:10817} up to {cell:c} from {Summoning:108!}.",
+    "es": "Invoca una {Summoning:10817} hasta a {cell:c} de {Summoning:108!}.",
+    "de": "Beschwört einen {Summoning:10817} bis {cell:c} von {Summoning:108!}.",
+    "pt": "Invoca uma {Summoning:10817} a até {cell:c} de {Summoning:108!}."
+  }
+}

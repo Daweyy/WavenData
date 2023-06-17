@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "947",
+  "m_id": 947,
+  "m_displayName": "XELOR - CLASSE - FEU - Flammes Cendrees",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1989445464,
+    "b": -1388078940,
+    "c": -443287511,
+    "d": 1521753186,
+    "e": 1450826726
+  },
+  "m_i18nDescriptionId": {
+    "a": -1989445464,
+    "b": -1388078940,
+    "c": -443287511,
+    "d": 1521753186,
+    "e": -12219255
+  },
+  "m_elementaryStates": 3,
+  "m_illustrationReference": {
+    "assetGuid": "fc51cb1e15781d241bbfe65663cf091c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 947,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      854,
+      473976,
+      191591
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "494533b9273be6f4c887b1a62640fdd7",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 571,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Flammes Cendrées",
+    "en": "Ashy Flames",
+    "es": "Llamas Cenicientas",
+    "de": "Ascheflammen",
+    "pt": "Chamas Cinzentas"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>HUILÉ</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg} and applies <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Verursacht {magicalDamage:dmg} und wendet <b>GEÖLT</b>\\_<sprite name=\"oiled\"> an.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "105",
+  "m_id": 105,
+  "m_displayName": "ENIRIPSA - CLASSE - TERRE - Baume du Lapino",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1797935040,
+    "b": -1809082284,
+    "c": -844137750,
+    "d": -1076100901,
+    "e": -666032813
+  },
+  "m_i18nDescriptionId": {
+    "a": -1797935040,
+    "b": -1809082284,
+    "c": -844137750,
+    "d": -1076100901,
+    "e": -907555466
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9c1d27c1d4592fc4c999e9490883d49f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 105,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      507700,
+      507724,
+      364
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9b43c554bbe639645bd4c25bf99e57ca",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "arA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            48
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 629,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "arB",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "SUPPORT"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Baume du Lapino",
+    "en": "Coney Balm",
+    "es": "Bálsamo de Cunejo",
+    "de": "Häschen-Schutzbalsam",
+    "pt": "Bálsamo do Toelho"
+  },
+  "description": {
+    "fr": "{ARvalue:arA,+} à un allié.\n\\---\n{#SUPPORT}\\_: Soigne votre héros de {PVvalue:arB}.",
+    "en": "{ARvalue:arA,+} to an ally.\n\\---\n{#SUPPORT}: Heals your hero {PVvalue:arB}.",
+    "es": "{ARvalue:arA,+} a un aliado.\n\\---\n{#SUPPORT}: Cura a tu héroe {PVvalue:arB}.",
+    "de": "{ARvalue:arA,+} für einen Verbündeten.\n\\---\n{#SUPPORT}: Heilt deinen Helden um {PVvalue:arB}.",
+    "pt": "{ARvalue:arA,+} a um aliado.\n\\---\n{#SUPPORT}: Cura seu herói em {PVvalue:arB}."
+  }
+}

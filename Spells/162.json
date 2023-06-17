@@ -1,0 +1,233 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "162",
+  "m_id": 162,
+  "m_displayName": "EQUIPMENT - BRACELET - Repositionnement rapide",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -31843855,
+    "b": -1252587868,
+    "c": -526496151,
+    "d": 1773082663,
+    "e": 711809978
+  },
+  "m_i18nDescriptionId": {
+    "a": -31843855,
+    "b": -1252587868,
+    "c": -526496151,
+    "d": 1773082663,
+    "e": -1724839310
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "48468fd2a3914d64ea47836cbec1d47e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 162,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "SumValue",
+                "referenceId": "c",
+                "valuesToSum": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "PlayerHasEquipmentSkillCondition",
+                      "player": {
+                        "type": "CasterSelector"
+                      },
+                      "skillId": 654115
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c1",
+                      "value": 1
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "PlayerHasEquipmentSkillCondition",
+                      "player": {
+                        "type": "CasterSelector"
+                      },
+                      "skillId": 654427
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c2",
+                      "value": 1
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "c",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "skillId": 654115
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c1",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "skillId": 654427
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c2",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Repositionnement Rapide",
+    "en": "Rapid Repositioning",
+    "es": "Reposicionamiento Rápido",
+    "de": "Schnelle Neupositionierung",
+    "pt": "Reposicionamento Rápido"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nTéléporte votre héros jusqu'à {cell:c}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeleports your hero up to {cell:c}.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeletransporta a tu héroe hasta {cell:c}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeleportiert deinen Helden bis zu {cell:c}.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeletransporta seu herói a até {cell:c}."
+  }
+}

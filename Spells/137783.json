@@ -1,0 +1,238 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "137783",
+  "m_id": 137783,
+  "m_displayName": "CRA - ARME - SHIRU SHADEN - EAU - Shiruken Glace",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1709695898,
+    "b": -1722023852,
+    "c": 1653484840,
+    "d": 1336219903,
+    "e": -639472075
+  },
+  "m_i18nDescriptionId": {
+    "a": 1709695898,
+    "b": -1722023852,
+    "c": 1653484840,
+    "d": 1336219903,
+    "e": -1344553514
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "27b1b7496f90a034d8cb5040d21a106d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d3bc312e9cc6e5149a3043bdc7be3bff"
+      },
+      {
+        "assetGuid": "8381d7e01529dd84db001546719ff2c6"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 137783,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      676,
+      979,
+      860
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 191,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "45c5b5103cd8d584b8f6e92dbad493c0",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 740,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pv",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 740,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Shiruken Glacé",
+    "en": "Frozen Shiruken",
+    "es": "Shiruken Helado",
+    "de": "Eisiger Shiruken",
+    "pt": "Shiruken Congelado"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire et téléporte votre héros jusqu'à {cell:c}.\n\\---\n{#COMBO}\\_: Soigne votre héros de {PVvalue:pv}.",
+    "en": "Does {magicalDamage:dmg} to an opponent and teleports your hero up to {cell:c}.\n\\---\n{#COMBO}: Heals your hero {PVvalue:pv}.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario y teletransporta a tu héroe hasta a {cell:c}.\n\\---\n{#COMBO}: Cura a tu héroe {PVvalue:pv}.",
+    "de": "Verursacht bei einem Gegner {magicalDamage:dmg} und teleportiert deinen Helden bis zu {cell:c}.\n\\---\n{#COMBO}: Heilt deinen Helden um {PVvalue:pv}.",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário e teletransporta seu herói a até {cell:c}.\n\\---\n{#COMBO}: Cura seu herói em {PVvalue:pv}."
+  }
+}

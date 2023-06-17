@@ -1,0 +1,158 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "120",
+  "m_id": 120,
+  "m_displayName": "DAILY QUEST - 09 - Caporal Bleusaille (DQ09)",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1940007037,
+    "b": -506468796,
+    "c": 204625179,
+    "d": -2124914314,
+    "e": 1510692073
+  },
+  "m_i18nDescriptionId": {
+    "a": -1940007037,
+    "b": -506468796,
+    "c": 204625179,
+    "d": -2124914314,
+    "e": -1607310871
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 120,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3465,
+      "skinIds": [
+        3465
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "tr",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "push",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 349
+        },
+        {
+          "type": 7,
+          "id": 1650
+        },
+        {
+          "type": 7,
+          "id": 1506
+        },
+        "BOMB",
+        "PUSH"
+      ]
+    },
+    "families": [
+      20
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 200
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 17
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          120
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Caporal Bleusaille",
+    "en": "Corporal Rookie",
+    "es": "Cabo Bisoño",
+    "de": "Hauptgefreiter Rekrut",
+    "pt": "Cabo Calouro"
+  },
+  "description": {
+    "fr": "{%attack} {#PUSH} de {cell:push}.\n\\---\nRejoue son tour lorsque qu'il {#PUSH} une {#BOMB}.\n\\---\n<rem>Limité à {value:tr} fois par tour.</rem>",
+    "en": "{%attack} {#PUSH} {cell:push}.\n\\---\nReplays turn when he {#PUSH} a {#BOMB}.\n\\---\n<rem>Limit: {value:tr} {tr, plural, one[time] other[times]} per turn.</rem>",
+    "es": "{%attack} {#PUSH} {cell:push}.\n\\---\nVuelve a jugar su turno cuando {#PUSH} una {#BOMB}, vuelve a jugar su turno.\n\\---\n<rem>Limitado a {value:tr} {tr, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "{%attack} {#PUSH} {cell:push} zurück.\n\\---\nSpielt seine Runde erneut, wenn er eine {#BOMB} {#PUSH}.\n\\---\n<rem>Auf {value:tr}-mal pro Runde begrenzt.</rem>",
+    "pt": "{%attack} {#PUSH} por {cell:push}.\n\\---\nJoga um turno extra quando {#PUSH} uma {#BOMB[BOMBA]}.\n\\---\n<rem>Limite de {value:tr} {tr, plural, one[vez] other[vezes]} por turno.</rem>"
+  }
+}

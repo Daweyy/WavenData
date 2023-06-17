@@ -1,0 +1,160 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "263",
+  "m_id": 263,
+  "m_displayName": "CRA - ARME - SHIRU SHADEN - ETHER - Aller-Retour Shaden",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1267115491,
+    "b": 583623892,
+    "c": 245113386,
+    "d": 1684429120,
+    "e": -1400681400
+  },
+  "m_i18nDescriptionId": {
+    "a": 1267115491,
+    "b": 583623892,
+    "c": 245113386,
+    "d": 1684429120,
+    "e": -1322176398
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "019c26e4c470c3441a2e8b7ef637eb3b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d3bc312e9cc6e5149a3043bdc7be3bff"
+      },
+      {
+        "assetGuid": "8381d7e01529dd84db001546719ff2c6"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 263,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 191,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "tp",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "tp",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Aller-Retour Shaden",
+    "en": "Shaden Round Trip",
+    "es": "Ida y Vuelta Shaden",
+    "de": "Hin-und-Zurück-Schatten",
+    "pt": "Bate-Volta Shaden"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:tp}. \n\\---\nInflige {value:pc,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée, puis le téléporte à sa position initiale.",
+    "en": "Teleports your hero up to {cell:tp}. \n\\---\nInflicts {value:pc,percent} of their {%AT} on enemies around\\_<sprite name=\"cell_around\"> the destination cell then teleports them to the initial position.",
+    "es": "Teletransporta a tu héroe hasta {cell:tp}. \n\\---\nInflige un {value:pc,percent} de su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada, luego lo teletransporta a su posición inicial.",
+    "de": "Teleportiert deinen Helden bis zu {cell:tp}. \n\\---\nFügt den Gegnern in der Nähe\\_<sprite name=\"cell_around\"> seines Zielfelds {value:pc,percent} seines {%AT} als Schaden zu und teleportiert ihn anschließend auf seine Ausgangsposition.",
+    "pt": "Teletransporta seu herói a até {cell:tp}. \n\\---\nInflige {value:pc,percent} do seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada e retorna à sua posição inicial."
+  }
+}

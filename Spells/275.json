@@ -1,0 +1,162 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "275",
+  "m_id": 275,
+  "m_displayName": "XELOR - ARME - PRAMIUM - ETHER - Onde Pramium",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1468168693,
+    "b": -2010362060,
+    "c": 1530739690,
+    "d": -135962023,
+    "e": -939027630
+  },
+  "m_i18nDescriptionId": {
+    "a": 1468168693,
+    "b": -2010362060,
+    "c": 1530739690,
+    "d": -135962023,
+    "e": -1556187542
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b9ee03c607d212c4788bbcd215ee5379"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 275,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 614,
+      "families": [
+        7,
+        20
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AreaFromTargetsSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "targets": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            }
+          ]
+        },
+        "areaOfEffect": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "EngineDeterminedHolder"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9e87069a9b0e8e14b810a68b21a64622",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Onde Pramium",
+    "en": "Pramium Wave",
+    "es": "Onda Prámium",
+    "de": "Pramium-Welle",
+    "pt": "Onda Pramium"
+  },
+  "description": {
+    "fr": "Inflige l’{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> de vos <b>SINISTROS</b>.\n",
+    "en": "Inflicts your hero's {%AT} around\\_<sprite name=\"cell_around\"> your <b>SINISTROS</b>.\n",
+    "es": "Inflige el {%AT} de tu héroe alrededor\\_<sprite name=\"cell_around\"> de tus <b>SINISTROS</b>.\n",
+    "de": "Verursacht den {%AT} deines Helden in der Nähe\\_<sprite name=\"cell_around\"> deiner <b>SINISTROS</b>.\n",
+    "pt": "Inflige o {%AT} do seu herói em\\_volta\\_<sprite name=\"cell_around\"> de seus <b>SINISTROS</b>.\n"
+  }
+}

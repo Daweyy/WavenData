@@ -1,0 +1,175 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "186044",
+  "m_id": 186044,
+  "m_displayName": "ENIRIPSA - CLASSE - TERRE - Coeur Rocheux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1313937690,
+    "b": -750875164,
+    "c": -563628582,
+    "d": 1582082860,
+    "e": 177338817
+  },
+  "m_i18nDescriptionId": {
+    "a": 1313937690,
+    "b": -750875164,
+    "c": -563628582,
+    "d": 1582082860,
+    "e": -202889762
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ce2846c38ef6008409385ea4b2d6c7b6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 186044,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      271056,
+      271698,
+      507081
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "69e45440add0a104bbf349d24b430c46",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 990,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 117
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cœur Rocheux",
+    "en": "Rocky Heart",
+    "es": "Corazón Rocoso",
+    "de": "Felsiges Herz",
+    "pt": "Coração Rochoso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} à votre héros si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} to your hero if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} a tu héroe si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} für deinen Helden, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} ao seu herói se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+  }
+}

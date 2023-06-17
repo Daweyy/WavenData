@@ -1,0 +1,113 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "375",
+  "m_id": 375,
+  "m_displayName": "SRAM - CLASSE - ETHER - EVOLUTION - Déluge de lames",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 399928510,
+    "b": -1505710092,
+    "c": 1494139433,
+    "d": 1068773277,
+    "e": 1780955421
+  },
+  "m_i18nDescriptionId": {
+    "a": 399928510,
+    "b": -1505710092,
+    "c": 1494139433,
+    "d": 1068773277,
+    "e": -1413580288
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "597c46d17d3d6f54491093c7db1037db"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 375,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 20,
+      "bannedInPvp": true
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ThisSpellEvolutionValue",
+          "referenceId": "Lv"
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAPPER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Déluge de lames",
+    "en": "Torrent of Blades",
+    "es": "Diluvio de Hojas",
+    "de": "Klingenflut",
+    "pt": "Dilúvio de Lâminas"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros.\n\\---\nLorsque vous déclenchez {#Trapper}\\_:\\v {value:p, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {#Trapper}\\_ : {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "en": "Inflicts your hero's {%AT}.\n\\---\nWhen you trigger {#Trapper}:\\v {value:p, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{#Trapper} Count: {value:Lv}.</rem>\n{%DestroyOnPlayed}",
+    "es": "Inflige el {%AT} de tu héroe.\n\\---\nCuando activas {#Trapper}:\\v {value:p, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {#Trapper}: {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "de": "Verursacht den {%AT} deines Helden als Schaden.\n\\---\nWenn du {#Trapper} auslöst:\\v {value:p, +, percent} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem>{#Trapper}-Zähler: {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "pt": "Inflige o {%AT} do seu herói.\n\\---\nQuando você aciona {#Trapper}:\\v {value:p, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {#Trapper}: {value:Lv}</rem>\n{%DestroyOnPlayed}"
+  }
+}

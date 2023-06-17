@@ -1,0 +1,155 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "821",
+  "m_id": 821,
+  "m_displayName": "XELOR - CLASSE - EAU - Condensation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 319417466,
+    "b": 96052900,
+    "c": -356331942,
+    "d": -1818368614,
+    "e": -998732193
+  },
+  "m_i18nDescriptionId": {
+    "a": 319417466,
+    "b": 96052900,
+    "c": -356331942,
+    "d": -1818368614,
+    "e": -997369911
+  },
+  "m_elementaryStates": 5,
+  "m_illustrationReference": {
+    "assetGuid": "0f169aecbe58b8b4791380174b571e19"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 821,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      464690,
+      399,
+      188497
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "fdcb5497019bb174aa5542e9c3c6ab8e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Condensation",
+    "en": "Condensation",
+    "es": "Condensación",
+    "de": "Kondensation",
+    "pt": "Condensação"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>MOUILLÉ</b>\\_<sprite name=\"wet\">.",
+    "en": "Does {magicalDamage:dmg} and applies <b>WET</b>\\_<sprite name=\"wet\">.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>MOJADO</b>\\_<sprite name=\"wet\">.",
+    "de": "Verursacht {magicalDamage:dmg} und wendet <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> an.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+  }
+}

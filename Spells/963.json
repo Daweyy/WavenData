@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "963",
+  "m_id": 963,
+  "m_displayName": "MONSTRE COCHON - Voie du Porshido",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1677590592,
+    "b": -655611532,
+    "c": -2084372662,
+    "d": -1084144871,
+    "e": -529877198
+  },
+  "m_i18nDescriptionId": {
+    "a": -1677590592,
+    "b": -655611532,
+    "c": -2084372662,
+    "d": -1084144871,
+    "e": -680481587
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5fc945f8fa5fbb94fa8072d16f8f319d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 963,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 76
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Voie du Porshido",
+    "en": "Porshido Path",
+    "es": "Vía del Puershido",
+    "de": "Weg des Porshido",
+    "pt": "Caminho do Porshido"
+  },
+  "description": {
+    "fr": "{value:a,+}\\_{aura:76,value:a} à un <b>Cochon</b> allié.\n\\---\nPioche {value:draw} sort.",
+    "en": "{value:a,+}\\_{aura:76,value:a} to an allied <b>Pig</b>.\n\\---\nDraws {value:draw} {%SPELLCOUNT,value:draw}.",
+    "es": "{value:a,+}\\_{aura:76,value:a} a un <b>cerdo</b> aliado.\n\\---\nSacas {value:draw} hechizo.",
+    "de": "{value:a,+}\\_{aura:76,value:a} für ein verbündetes <b>Schweinemonster</b>.\n\\---\nZieht {value:draw} einen Zauber.",
+    "pt": "{value:a,+}\\_{aura:76,value:a} a um <b>Porco</b> aliado.\n\\---\nCompre {value:draw} feitiço."
+  }
+}

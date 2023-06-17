@@ -1,0 +1,208 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241945000
+  },
+  "m_Name": "389",
+  "m_id": 389,
+  "m_displayName": "DECK - RARE - EAU - Gardienne Inflexible",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 988395663,
+    "b": 664650660,
+    "c": 1777522760,
+    "d": -584853766,
+    "e": -1491596177
+  },
+  "m_i18nDescriptionId": {
+    "a": 988395663,
+    "b": 664650660,
+    "c": 1777522760,
+    "d": -584853766,
+    "e": 746915491
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 389,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 392,
+      "skinIds": [
+        392
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 92
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      748876,
+      901,
+      16161,
+      736091,
+      305988,
+      95
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          389
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Gardienne Inflexible",
+    "en": "Unyielding Guardian",
+    "es": "Guardiana Inflexible",
+    "de": "Unbeugsame Wächterin",
+    "pt": "Guardiã Inflexível"
+  },
+  "description": {
+    "fr": "{%attack} Applique <b>MOUILLÉ</b>\\_<sprite name=\"wet\">.",
+    "en": "{%attack} Applies <b>WET</b>\\_<sprite name=\"wet\">.",
+    "es": "{%attack} Aplica <b>MOJADO</b>\\_<sprite name=\"wet\">.",
+    "de": "{%attack} Wendet <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> an.",
+    "pt": "{%attack} Aplica <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "140",
+  "m_id": 140,
+  "m_displayName": "ENIRIPSA - CLASSE - ETHER - Anastomose",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 907404342,
+    "b": 713728532,
+    "c": 394403722,
+    "d": -807857340,
+    "e": 1543273187
+  },
+  "m_i18nDescriptionId": {
+    "a": 907404342,
+    "b": 713728532,
+    "c": 394403722,
+    "d": -807857340,
+    "e": 1129592396
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "405da747b7b2d804e9dc0d93b94a377d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 140,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5a5d994a853cd6c4a855b1c0698601f7",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Anastomose",
+    "en": "Anastomosis",
+    "es": "Anastomosis",
+    "de": "Anastomose",
+    "pt": "Anastomose"
+  },
+  "description": {
+    "fr": "{PMvalue:pm,+} à un allié pour le tour.\n\\---\nPiochez {SPELLCOUNTvalue:draw}.",
+    "en": "{PMvalue:pm,+} to an ally for the turn.\n\\---\nDraw {SPELLCOUNTvalue:draw}.",
+    "es": "{PMvalue:pm,+} a un aliado durante el turno.\n\\---\nSacas {SPELLCOUNTvalue:draw}.",
+    "de": "{PMvalue:pm,+} für einen Verbündeten für die Runde.\n\\---\nZiehe {SPELLCOUNTvalue:draw}.",
+    "pt": "{PMvalue:pm,+} a um aliado durante o turno.\n\\---\nCompre {SPELLCOUNTvalue:draw}."
+  }
+}

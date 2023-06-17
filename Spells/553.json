@@ -1,0 +1,212 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "553",
+  "m_id": 553,
+  "m_displayName": "COMPAGNON - JULITH - Cape de Julith",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1093258817,
+    "b": -644728412,
+    "c": -772137189,
+    "d": 136375025,
+    "e": -402861574
+  },
+  "m_i18nDescriptionId": {
+    "a": 1093258817,
+    "b": -644728412,
+    "c": -772137189,
+    "d": 136375025,
+    "e": -1387538666
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "dfbb5f38be880cc4f8d2fe10b855fb42"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "a81cfea6e2dfa0a4193bc8d3f51f74ec"
+      },
+      {
+        "assetGuid": "695910885058c1944bdee5057e1242bc"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 553,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NotCondition",
+        "condition": {
+          "type": "PropertyFlagsCondition",
+          "selector": {
+            "type": "CasterSpecificCompanionSelector",
+            "companion": 401
+          },
+          "flags": [
+            4
+          ]
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FilteredCharacterSelector",
+                "filters": [
+                  {
+                    "type": "CompanionDefinitionFilter",
+                    "condition": 1,
+                    "companions": [
+                      401
+                    ]
+                  },
+                  {
+                    "type": "OwnerFilter",
+                    "isIdentical": true,
+                    "reference": {
+                      "type": "CasterSelector"
+                    }
+                  }
+                ]
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Cape de Julith",
+    "en": "Julith's Cape",
+    "es": "Capa de Julith",
+    "de": "Juliths Umhang",
+    "pt": "Capa de Julith"
+  },
+  "description": {
+    "fr": "Téléporte {Companion:401!} jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée.",
+    "en": "Teleports {Companion:401!} up to {cell:c}.\n\\---\nDoes {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> the destination cell.",
+    "es": "Teletransporta a {Companion:401!} hasta a {cell:c}.\n\\---\nInflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada.",
+    "de": "Teleportiert {Companion:401!} bis zu {cell:c}.\n\\---\nVerursacht {magicalDamage:dmg} ringsum\\_<sprite name=\"cell_around\"> seines Ankunftsfelds.",
+    "pt": "Teletransporta {Companion:401!} a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada."
+  }
+}

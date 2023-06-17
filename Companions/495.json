@@ -1,0 +1,233 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "495",
+  "m_id": 495,
+  "m_displayName": "DECK - COMMON - MULTI - Recrue Indomptee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1160726643,
+    "b": 1380324212,
+    "c": 1827504809,
+    "d": -794072936,
+    "e": 1028826970
+  },
+  "m_i18nDescriptionId": {
+    "a": 1160726643,
+    "b": 1380324212,
+    "c": 1827504809,
+    "d": -794072936,
+    "e": -949313240
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 495,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9809,
+      "skinIds": [
+        9809
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cost",
+          "value": 6
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      4
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      406122,
+      406041,
+      446,
+      406080,
+      568,
+      741557
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          495
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Recrue Indomptée",
+    "en": "Untamed Recruit",
+    "es": "Recluta Indomable",
+    "de": "Unbändiger Rekrut",
+    "pt": "Recruta Indomado"
+  },
+  "description": {
+    "fr": "{%ATTACK} Piochez {nb, plural, one[votre prochain sort] other[vos {value:nb} prochains sorts]} à {PAvalue:cost} ou plus.",
+    "en": "{%ATTACK} Draw your next {nb, plural, one[spell] other[{value:nb} spells]} costing {PAvalue:cost} or more.",
+    "es": "{%ATTACK} Robas {nb, plural, one[tu próximo hechizo] other[tus {value:nb} próximos hechizos]} de {PAvalue:cost} o más.",
+    "de": "{%ATTACK} Zieht {nb, plural, one[deinen nächsten Zauber] other[deine nächsten {value:nb} Zauber]} für {PAvalue:cost} oder mehr.",
+    "pt": "{%ATTACK} Compre {nb, plural, one[seu próximo feitiço] other[seus {value:nb} próximos feitiços]} por {PAvalue:cost} ou mais."
+  }
+}

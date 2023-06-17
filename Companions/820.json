@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "820",
+  "m_id": 820,
+  "m_displayName": "QUETE - VAMPYRE - Nathan Arque",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1874803450,
+    "b": -1453017660,
+    "c": 1541775578,
+    "d": -1637172589,
+    "e": -1585627284
+  },
+  "m_i18nDescriptionId": {
+    "a": -1874803450,
+    "b": -1453017660,
+    "c": 1541775578,
+    "d": -1637172589,
+    "e": -736810918
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 820,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3690,
+      "skinIds": [
+        3690
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 101
+        },
+        {
+          "type": 25,
+          "id": 214148
+        }
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 160
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 14
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [
+      {
+        "type": "SpellOnSpawnWithDestination",
+        "spell": 214148,
+        "destination": 1
+      }
+    ],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          820
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Nathan Arqué",
+    "en": "Nathan Arker",
+    "es": "Nathan Arkeado",
+    "de": "Nathan Negob",
+    "pt": "Nathan Arqueado"
+  },
+  "description": {
+    "fr": "{%Appearance} Ajoute le sort {Spell:214148} à votre main. \n\\---\n{%ATTACK} Inflige le double de dégâts si la cible est un {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "en": "{%Appearance} Adds the {Spell:214148} spell to your hand.\n\\---\n{%ATTACK} Does double damage if the target is a {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "es": "{%Appearance} Añade el hechizo {Spell:214148} a tu mano. \n\\---\n{%ATTACK} Inflige el doble de daños si el objetivo es un {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "de": "{%Appearance} Fügt deiner Hand den Zauber {Spell:214148} hinzu.\n\\---\n{%ATTACK} Verursacht den doppelten Schaden, wenn das Ziel 1\\_{%KEYWORD.OBJECTMECHANISM.NAME} ist.",
+    "pt": "{%Appearance} Adiciona o feitiço {Spell:214148} à sua mão. \n\\---\n{%ATTACK} Inflige do dobro de danos se o alvo for um {%KEYWORD.OBJECTMECHANISM.NAME}."
+  }
+}

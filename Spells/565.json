@@ -1,0 +1,223 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "565",
+  "m_id": 565,
+  "m_displayName": "SRAM - CLASSE - EAU - Double-Piege Noyant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 64188975,
+    "b": 221997828,
+    "c": -76483110,
+    "d": 653370817,
+    "e": 142308717
+  },
+  "m_i18nDescriptionId": {
+    "a": 64188975,
+    "b": 221997828,
+    "c": -76483110,
+    "d": 653370817,
+    "e": -1782562707
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c03ff510fe03ac34fbc0c2eb8bf99e4d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 565,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      484424,
+      484912,
+      496
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "c",
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 68669
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": null,
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 68669
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "ThisSpellHasSkillCondition",
+            "skillId": 68669
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.673.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 673
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Double-Piège Noyant",
+    "en": "Drowning Double-Trap",
+    "es": "Doble Trampa Ahogadora",
+    "de": "Ertränkende Doppelgänger-Falle",
+    "pt": "Dupla-Armadilha Afogadora"
+  },
+  "description": {
+    "fr": "Construit 2 {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\n{PA_RESvalue:pa,+} par adversaire situé entre eux.",
+    "en": "Builds 2 {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) up to {cell:c} from your hero.\n\\---\n{PA_RESvalue:pa,+} per opponent located between them.",
+    "es": "Construye 2 {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) hasta a {cell:c} de tu héroe.\n\\---\n{PA_RESvalue:pa,+} por adversario situado entre ellas.",
+    "de": "Baut 2\\_{FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) bis auf {cell:c} von deinem Helden entfernt.\n\\---\n{PA_RESvalue:pa,+} je Gegner zwischen ihnen.",
+    "pt": "Posiciona 2 {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) a até {cell:c} do seu herói.\n\\---\n{PA_RESvalue:pa,+} por adversário entre elas."
+  }
+}

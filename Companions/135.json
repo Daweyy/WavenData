@@ -1,0 +1,233 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241945000
+  },
+  "m_Name": "135",
+  "m_id": 135,
+  "m_displayName": "DECK - INFINITE - MULTI - Oropo",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -843572912,
+    "b": 1530964932,
+    "c": 1198193833,
+    "d": 1678789899,
+    "e": -658416653
+  },
+  "m_i18nDescriptionId": {
+    "a": -843572912,
+    "b": 1530964932,
+    "c": 1198193833,
+    "d": 1678789899,
+    "e": 893098618
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 135,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 8534,
+      "skinIds": [
+        8534
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": -3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      16,
+      82
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 135
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 27
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      747190,
+      747195,
+      480,
+      748052,
+      748057,
+      928
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          135
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Oropo",
+    "en": "Oropo",
+    "es": "Oropo",
+    "de": "Oropo",
+    "pt": "Oropo"
+  },
+  "description": {
+    "fr": "{%APPEARANCE} Réduit de {value:x,abs}\\_{x, plural, one[jauge] other[jauges]} le coût de vos autres compagnons de la {%Family_ForgottenSiblings_Name}.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "en": "{%APPEARANCE} Reduces the cost of your other companions in the {%Family_ForgottenSiblings_Name} by {value:x,abs}\\_{x, plural, one[gauge] other[gauges]}.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "es": "{%APPEARANCE} Reduce en {value:x,abs}\\_{x, plural, one[indicador] other[indicadores]} el coste de tus demás compañeros de la {%Family_ForgottenSiblings_Name}.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "de": "{%APPEARANCE} Verringert die Kosten deiner anderen Begleiter der {%Family_ForgottenSiblings_Name} um {value:x,abs}\\_{x, plural, one[Statusanzeige] other[Statusanzeigen]}.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "pt": "{%APPEARANCE} Reduz em {value:x,abs}\\_{x, plural, one[carga] other[cargas]} o custo dos seus outros companheiros da {%Family_ForgottenSiblings_Name}.\\v<family>{%Family_ForgottenSiblings_Name}</family>"
+  }
+}

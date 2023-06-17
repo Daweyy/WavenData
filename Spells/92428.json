@@ -1,0 +1,175 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "92428",
+  "m_id": 92428,
+  "m_displayName": "MONSTRE ROUBLARD - Lancer de poids",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1055574279,
+    "b": 1604558596,
+    "c": -1238801445,
+    "d": 475181642,
+    "e": -602970890
+  },
+  "m_i18nDescriptionId": {
+    "a": -1055574279,
+    "b": 1604558596,
+    "c": -1238801445,
+    "d": 475181642,
+    "e": -1279917467
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8f348448c24f08840b1037cb4870ec1a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d141f9bee22a71f4a81567d8e5fc4e0e"
+      },
+      {
+        "assetGuid": "827cb70d519ac2e49a50777c351aaab0"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 92428,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        13
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 20
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 8,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 349
+        },
+        {
+          "type": 7,
+          "id": 1650
+        },
+        {
+          "type": 7,
+          "id": 1506
+        },
+        "BOMB"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Lancer de poids",
+    "en": "Weighty Throw",
+    "es": "Lanzamiento de Peso",
+    "de": "Kugelstoßen",
+    "pt": "Arremesso de Peso"
+  },
+  "description": {
+    "fr": "Téléporte une {#BOMB}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à elle.",
+    "en": "Teleports one {#BOMB}.\n\\---\nDoes {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to it.",
+    "es": "Teletransporta una {#BOMB}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios adyacentes a ella\\_<sprite name=\"cell_cross\">.",
+    "de": "Teleportiert eine {#BOMB}.\n\\---\nFügt den angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalDamage:dmg} zu.",
+    "pt": "Teletransporta uma {#BOMB}.\n\\---\nInflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> a ela."
+  }
+}

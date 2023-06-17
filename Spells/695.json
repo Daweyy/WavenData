@@ -1,0 +1,161 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "695",
+  "m_id": 695,
+  "m_displayName": "SRAM - ARME - KARTANA - ETHER - Jouer les Gros Bras",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1129172978,
+    "b": -981749468,
+    "c": -1893674872,
+    "d": 1032653390,
+    "e": 1181548096
+  },
+  "m_i18nDescriptionId": {
+    "a": -1129172978,
+    "b": -981749468,
+    "c": -1893674872,
+    "d": 1032653390,
+    "e": -1358206659
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "004eb09e16f50ea42aaed3af3f5be681"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "812158772bfbbe64ba8ec61b201fb1cf"
+      },
+      {
+        "assetGuid": "0a0718bcc7cbcb246a10b449bb73cdf6"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 695,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 182,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Jouer les Gros Bras",
+    "en": "Strong Arming It",
+    "es": "Hacerse el Duro",
+    "de": "Die Muskeln spielen lassen",
+    "pt": "Dar uma de fortão"
+  },
+  "description": {
+    "fr": "Téléporte votre héros sur une case adjacente<sprite name=\"cell_cross\"> à un adversaire et le {#PUSH} de {cell:c}. ",
+    "en": "Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent and {#PUSH} them {cell:c}.",
+    "es": "Teletransporta a tu héroe a una casilla adyacente<sprite name=\"cell_cross\"> a un adversario y lo {#PUSH} {cell:c}.",
+    "de": "Teleportiert deinen Helden auf ein an einen Gegner angrenzendes\\_<sprite name=\"cell_cross\"> Feld und {#PUSH} ihn um {cell:c} zurück.",
+    "pt": "Teletransporta seu herói sobre uma célula adjacente<sprite name=\"cell_cross\"> a um adversário e {#PUSH} por {cell:c}."
+  }
+}

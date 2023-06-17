@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "576",
+  "m_id": 576,
+  "m_displayName": "RING - RARE - Anneau Papyon",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2009520750,
+    "b": 803076420,
+    "c": -937414278,
+    "d": -1040791137,
+    "e": -112026717
+  },
+  "m_i18nDescriptionId": {
+    "a": -2009520750,
+    "b": 803076420,
+    "c": -937414278,
+    "d": -1040791137,
+    "e": 1882521601
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -2009520750,
+    "b": 803076420,
+    "c": -937414278,
+    "d": -1040791137,
+    "e": 341582924
+  },
+  "m_illustration": {
+    "assetGuid": "e91f0b6641cb29d4d8a3cc66a729163f"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "0cdb5198ccafaf749ac01f72a7e4980c"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 576,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      112,
+      422266,
+      691971,
+      692499,
+      692576,
+      692653
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "t",
+          "condition": {
+            "type": "HolderHasSkillCondition",
+            "skill": 603
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "boost",
+            "value": 2
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "boost",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "r",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "COLLISION"
+      ]
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          24
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Papyon",
+    "en": "Flutterfly Ring",
+    "es": "Anillo Mariposa",
+    "de": "Schmetterlingsring",
+    "pt": "Anel Borboeta"
+  },
+  "description": {
+    "fr": "{#COLLISION}\\_: Piochez {SPELLCOUNTvalue:r}.\n\\---\n<rem>Limité à {value:t} fois par tour.</rem>",
+    "en": "{#COLLISION}: Draw {SPELLCOUNTvalue:r}.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</rem>",
+    "es": "{#COLLISION}: Sacas {SPELLCOUNTvalue:r}.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "{#COLLISION}: Ziehe {SPELLCOUNTvalue:r}.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</rem>",
+    "pt": "{#COLLISION}: Compre {SPELLCOUNTvalue:r}.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</rem>"
+  },
+  "bgDescription": {
+    "fr": "Cet anneau, aussi fragile que léger, pourrait bien vous aider à déployer vos ailes. Ou au contraire, vous claquer dans les doigts.",
+    "en": "Though fragile and light, this ring might well help you spread your wings. Or break with a snap of your fingers.",
+    "es": "Este anillo, tan ligero como frágil, podría ayudarte a abrir tus alas o, por el contrario, hacerse polvo entre tus dedos.",
+    "de": "Dieser gleichermaßen fragile wie leichte Ring könnte dir zu Aufschwung verhelfen – oder deinen Absturz begünstigen.",
+    "pt": "Este anel, tão frágil quanto leve, bem que poderia te ajudar a abrir as asas. Ou então, quebrar você num estalar de dedos."
+  }
+}

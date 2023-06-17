@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "177334",
+  "m_id": 177334,
+  "m_displayName": "MONSTRE FORESTIER - Protection Animale",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1673609471,
+    "b": 566048660,
+    "c": -369123494,
+    "d": -1391279473,
+    "e": -1176172275
+  },
+  "m_i18nDescriptionId": {
+    "a": 1673609471,
+    "b": 566048660,
+    "c": -369123494,
+    "d": -1391279473,
+    "e": -731934452
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c0a8da16f51783143bcbac155b2a6b27"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 177334,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        85
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c6d4a8fdad42d804098c54268ef8c410",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Protection Animale",
+    "en": "Animal Protection",
+    "es": "Protección Animal",
+    "de": "Tierschutz",
+    "pt": "Proteção Animal"
+  },
+  "description": {
+    "fr": "{#PUSH} de {cell:c} les adversaires adjacents <sprite name=\"cell_cross\"> à un allié.",
+    "en": "{#PUSH} opponents adjacent <sprite name=\"cell_cross\"> to an ally {cell:c}.",
+    "es": "{#PUSH} {cell:c} a los adversarios adyacentes a un aliado <sprite name=\"cell_cross\">.",
+    "de": "{#PUSH} die an einen Verbündeten angrenzenden\\_<sprite name=\"cell_cross\"> Gegner um {cell:c} zurück.",
+    "pt": "{#PUSH} por {cell:c} os adversários adjacentes\\_<sprite name=\"cell_cross\"> a um aliado."
+  }
+}

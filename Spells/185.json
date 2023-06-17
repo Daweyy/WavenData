@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "185",
+  "m_id": 185,
+  "m_displayName": "MONSTRE NUISIBLE - Insecte - Desastre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1514681706,
+    "b": 1082196676,
+    "c": -1325402695,
+    "d": 1995498776,
+    "e": -791678814
+  },
+  "m_i18nDescriptionId": {
+    "a": -1514681706,
+    "b": 1082196676,
+    "c": -1325402695,
+    "d": 1995498776,
+    "e": -964289147
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f003e2cb220d1d44782c9f51f3356d5a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 185,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        62
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "42c767c3a2644004faf1c0cd000eaa67",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 19
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Désastre",
+    "en": "Disaster",
+    "es": "Desastre",
+    "de": "Desaster",
+    "pt": "Desastre"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max}.\n\\---\nVole {PA_RESvalue:pa} de la cible si elle est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max}.\n\\---\nSteals {PA_RESvalue:pa} from the target if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\nRoba {PA_RESvalue:pa} del objetivo si este está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\nEntzieht dem Ziel {PA_RESvalue:pa}, wenn es <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> ist.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\nRouba {PA_RESvalue:pa} do alvo se ele estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

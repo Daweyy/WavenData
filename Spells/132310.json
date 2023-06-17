@@ -1,0 +1,271 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "132310",
+  "m_id": 132310,
+  "m_displayName": "XELOR - ARME - PIKUXALA - EAU - Teleport Collaboratif",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -361599200,
+    "b": 1700130292,
+    "c": -488811223,
+    "d": 530816901,
+    "e": -2056067302
+  },
+  "m_i18nDescriptionId": {
+    "a": -361599200,
+    "b": 1700130292,
+    "c": -488811223,
+    "d": 530816901,
+    "e": -443243299
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5a6c63b63e69509469588d11c8f574e6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "41dbd4040fdf8d5418d005a6cdd91254"
+      },
+      {
+        "assetGuid": "17dde900d553e07439f2a8700c670317"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 132310,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      119,
+      469735,
+      595
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 945,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllCharactersSelector"
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CasterHeroFilter"
+              }
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "selectorIfTrue": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "CasterHeroSelector"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        },
+        "selector2": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllCharactersSelector"
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CasterHeroFilter"
+              }
+            },
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "PropertyFilter",
+                "property": {
+                  "type": "SpecificPropertyIdResolvable",
+                  "propertyId": 20
+                }
+              }
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "CasterHeroSelector"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "31a21f6042807f9448e52cdbe260beaa",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 585,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléport Collaboratif",
+    "en": "Collaborative Teleportation",
+    "es": "Teletransporte Colaborativo",
+    "de": "Gemeinsamer Teleport",
+    "pt": "Teletransporte Colaborativo"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\nÉchange la position de votre héros avec celle d'un allié.",
+    "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero.\n\\---\nSwitches your hero's position with that of an ally.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\nIntercambia la posición de tu héroe con la de un aliado.",
+    "de": "Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> deines Helden {magicalDamage:dmg}.\n\\---\nWechselt die Position deines Helden mit der eines Verbündeten.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.\n\\---\nTroca seu herói de posição com um aliado."
+  }
+}

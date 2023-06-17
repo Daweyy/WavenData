@@ -1,0 +1,220 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "100216",
+  "m_id": 100216,
+  "m_displayName": "CRA - ARME - EXPINGOLE - EAU - Expiation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 329957253,
+    "b": -2007602684,
+    "c": -706028824,
+    "d": 1165425149,
+    "e": 418508243
+  },
+  "m_i18nDescriptionId": {
+    "a": 329957253,
+    "b": -2007602684,
+    "c": -706028824,
+    "d": 1165425149,
+    "e": 1689861935
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1249826053946bb44affc0957ee11ce9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 100216,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      73,
+      96352,
+      452995
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 998,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b6466e96816b2ea42a3a5447f3450aaf",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 31,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 4
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 31,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "d2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": true
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Expiation",
+    "en": "Expiation",
+    "es": "Expiación",
+    "de": "Sühne",
+    "pt": "Expiação"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nSoigne votre héros de {PVvalue:h} par {%AURA_SIGHT,plural:one} qu'il possède.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nHeals your hero {PVvalue:h} for each {%AURA_SIGHT,plural:one} they have.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nCura a tu héroe {PVvalue:h} por {%AURA_SIGHT,plural:one} que tenga.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nHeilt deinen Helden um {PVvalue:h} durch {%AURA_SIGHT,plural:one}, die er besitzt.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nCura seu herói em {PVvalue:h} por {%AURA_SIGHT,plural:one} que ele possuir."
+  }
+}

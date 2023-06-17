@@ -1,0 +1,176 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "726",
+  "m_id": 726,
+  "m_displayName": "ENIRIPSA - CLASSE - FEU - Cure Corrosive",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1699072676,
+    "b": -717112044,
+    "c": -1323047704,
+    "d": 1768247606,
+    "e": -96101751
+  },
+  "m_i18nDescriptionId": {
+    "a": 1699072676,
+    "b": -717112044,
+    "c": -1323047704,
+    "d": 1768247606,
+    "e": 1288807158
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bd236a2ae3075df499e69171e8f4a324"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 726,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      369,
+      621,
+      504041
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "47ad5eb6b1c4c894c99207bd6fd99a28",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 28
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 211,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "LIFESTEAL",
+        {
+          "type": 22,
+          "id": 116
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cure Corrosive",
+    "en": "Corrosive Cure",
+    "es": "Terapia Corrosiva",
+    "de": "Korrosive Kur",
+    "pt": "Cura Corrosiva"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:116,value:a} si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:116,value:a} if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:116,value:a} si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:116,value:a}, falls das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:116,value:a} se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

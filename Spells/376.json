@@ -1,0 +1,183 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "376",
+  "m_id": 376,
+  "m_displayName": "MONSTRE NUISIBLE - Insecte - Typhus",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1371392898,
+    "b": -1542760108,
+    "c": 1542016040,
+    "d": 1049614454,
+    "e": 175690352
+  },
+  "m_i18nDescriptionId": {
+    "a": 1371392898,
+    "b": -1542760108,
+    "c": 1542016040,
+    "d": 1049614454,
+    "e": -1607887598
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3e2a497d044b30046a21ec9a561773ba"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 376,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        62
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCoordsSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b75b112c6333d564790d90699a432ec8",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundSquaredTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.5
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Typhus",
+    "en": "Typhus",
+    "es": "Tifus",
+    "de": "Typhus",
+    "pt": "Typhus"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max} aux adversaires dans la zone\\_<sprite name=\"cell_around\"> ciblée.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max} to opponents in the targeted <sprite name=\"cell_around\">\\_zone.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max} a los adversarios en la zona\\_<sprite name=\"cell_around\"> objetivo.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:max} bei den Gegnern im Zielbereich\\_<sprite name=\"cell_around\">.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max} aos adversários na\\_zona\\_<sprite name=\"cell_around\"> visada."
+  }
+}

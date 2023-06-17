@@ -1,0 +1,119 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "214511",
+  "m_id": 214511,
+  "m_displayName": "DQ - CONTRAT - CRAQUELEUR - 3_Lancer de pierres",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 885212327,
+    "b": 1151294084,
+    "c": -349027750,
+    "d": 1956631402,
+    "e": 433430302
+  },
+  "m_i18nDescriptionId": {
+    "a": 885212327,
+    "b": 1151294084,
+    "c": -349027750,
+    "d": 1956631402,
+    "e": -93829662
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "47ce9d27a34370742a9470fc2e78e644"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 214511,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "94b6e1cd65aa26d4e875f979a02c9bb8",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 15,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Lancer de pierres",
+    "en": "Stone Throw",
+    "es": "Lanzamiento de Piedras",
+    "de": "Steine werfen",
+    "pt": "Arremesso de Pedra"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

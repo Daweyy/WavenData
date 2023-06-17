@@ -1,0 +1,310 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "642",
+  "m_id": 642,
+  "m_displayName": "DECK - RARE - EAU - Remus",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2121968902,
+    "b": -1430969676,
+    "c": 1855251752,
+    "d": -1691320885,
+    "e": -275922580
+  },
+  "m_i18nDescriptionId": {
+    "a": -2121968902,
+    "b": -1430969676,
+    "c": 1855251752,
+    "d": -1691320885,
+    "e": 341314260
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 642,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3612,
+      "skinIds": [
+        3612
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": null,
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "SumValue",
+                  "referenceId": null,
+                  "valuesToSum": [
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 100
+                    },
+                    {
+                      "type": "ConditionalValue",
+                      "referenceId": "",
+                      "condition": {
+                        "type": "HolderHasSkillCondition",
+                        "skill": 348
+                      },
+                      "ifTrue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "Pper1",
+                        "value": 100
+                      },
+                      "ifFalse": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ConditionalValue",
+                  "referenceId": "",
+                  "condition": {
+                    "type": "AndCondition",
+                    "conditions": [
+                      {
+                        "type": "ContextIsCriticalCondition"
+                      },
+                      {
+                        "type": "HolderHasSkillCondition",
+                        "skill": 23
+                      }
+                    ]
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "Pper2",
+                    "value": 300
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 8
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 22
+          },
+          "buffs": [
+            90
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Pper1",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Pper2",
+          "value": 300
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "HAIL"
+      ]
+    },
+    "families": [
+      4
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 85
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      306040,
+      955,
+      737554,
+      738213,
+      547,
+      306274
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          642
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Rémus",
+    "en": "Remus",
+    "es": "Remo",
+    "de": "Remus",
+    "pt": "Remus"
+  },
+  "description": {
+    "fr": "{%attack} Déclenche {hail:hl} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "en": "{%attack} Triggers {hail:hl} if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
+    "es": "{%attack} Activa {hail:hl} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
+    "de": "{%attack} Löst {hail:hl} aus, falls das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
+    "pt": "{%attack} Aciona {hail:hl} se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "852",
+  "m_id": 852,
+  "m_displayName": "DQ - SECRET ZONE - BWORK - 1_Vorti le Rebelle",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1883236540,
+    "b": -748367644,
+    "c": 1770428250,
+    "d": 1659250747,
+    "e": 88342172
+  },
+  "m_i18nDescriptionId": {
+    "a": -1883236540,
+    "b": -748367644,
+    "c": 1770428250,
+    "d": 1659250747,
+    "e": -627367447
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 852,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2824,
+      "skinIds": [
+        2824
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 4
+        },
+        {
+          "type": 21,
+          "id": 2
+        },
+        {
+          "type": 20,
+          "id": 88
+        }
+      ]
+    },
+    "families": [
+      49
+    ],
+    "baseProperties": [
+      88
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 120
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 15
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          852
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Vorti le Rebelle",
+    "en": "Vorti the Rebel",
+    "es": "Vorti el Rebelde",
+    "de": "Vorti der Rebell",
+    "pt": "Vorti, o Rebelde"
+  },
+  "description": {
+    "fr": "<rem>{PropertyEffect:88}</rem>\n\\---\nLorsqu'il subit une <b>ATTAQUE</b> d'un {%Family_Bwork_Name} adverse\\_:\\vDevient {LinkEffect:2[ÉTREINT]}.",
+    "en": "<rem>{PropertyEffect:88}</rem>\n\\---\nOn enduring an <b>ATTACK</b> by an opposing {%Family_Bwork_Name}:\\vBecomes {LinkEffect:2[CLUTCHED]}.",
+    "es": "<rem>{PropertyEffect:88}</rem>\n\\---\nCuando sufre un <b>ATAQUE</b> de un {%Family_Bwork_Name} contrario:\\vSe vuelve {LinkEffect:2[ESTRUJADO]}.",
+    "de": "<rem>{PropertyEffect:88}</rem>\n\\---\nWenn er Ziel eines <b>ANGRIFFS</b> eines gegnerischen {%Family_Bwork_Name} wird:\\vWird {LinkEffect:2[UMKLAMMERT]}.",
+    "pt": "<rem>{PropertyEffect:88}</rem>\n\\---\nQuando sofre um <b>ATAQUE</b> de um {%Family_Bwork_Name} inimigo:\\vTorna-se {LinkEffect:2[APERTO]}."
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "208505",
+  "m_id": 208505,
+  "m_displayName": "CRA - ARME - PIVEN - ETHER - Recharge Piven",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1967927370,
+    "b": -1128539564,
+    "c": 399845272,
+    "d": -261584681,
+    "e": 571140114
+  },
+  "m_i18nDescriptionId": {
+    "a": 1967927370,
+    "b": -1128539564,
+    "c": 399845272,
+    "d": -261584681,
+    "e": 627690540
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a6b1022fba49c1749b1cf7e050e54565"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": ""
+      },
+      {
+        "assetGuid": ""
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 208505,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      20
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 846,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "CasterHeroFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "cadc566d4dcb12d4c917f96f78cc1079",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Recharge Piven",
+    "en": "Piven Recharge",
+    "es": "Recarga Piven",
+    "de": "Tannen-Ladung",
+    "pt": "Recarga Piven"
+  },
+  "description": {
+    "fr": "Piochez {value:v}\\_{%SPELLCOUNT,value:v}.\n\\---\n{value:a,+}\\_{%AURA_SIGHT,value:a} à votre héros s'il en possède déjà.",
+    "en": "Draw {value:v}\\_{%SPELLCOUNT,value:v}.\n\\---\n{value:a,+}\\_{%AURA_SIGHT,value:a} to your hero if they have any already.",
+    "es": "Sacas {value:v}\\_{%SPELLCOUNT,value:v}.\n\\---\n{value:a,+}\\_{%AURA_SIGHT,value:a} a tu héroe si ya tiene.",
+    "de": "Zieht {value:v}\\_{%SPELLCOUNT,value:v}.\n\\---\n{value:a,+}\\_{%AURA_SIGHT,value:a} für deinen Helden, falls er dies bereits besitzt.",
+    "pt": "Compre {value:v}\\_{%SPELLCOUNT,value:v}.\n\\---\n{value:a,+}\\_{%AURA_SIGHT,value:a} ao seu herói se ele já possuir."
+  }
+}

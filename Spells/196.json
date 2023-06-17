@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "196",
+  "m_id": 196,
+  "m_displayName": "MONSTRE ABRAKNYDE - Compostage",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1006221003,
+    "b": 1393632020,
+    "c": -1870423847,
+    "d": 1946963668,
+    "e": -1858639267
+  },
+  "m_i18nDescriptionId": {
+    "a": 1006221003,
+    "b": 1393632020,
+    "c": -1870423847,
+    "d": 1946963668,
+    "e": -744821719
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1c3ae16bc75d0c741886cd3ca5a43118"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 196,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        48
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 1,
+            "summonings": [
+              329
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "49ccc2e2d6c452a41be949e4637e45f7",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 174
+        },
+        {
+          "type": 4,
+          "id": 329
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Nutrition",
+    "en": "Nutrition",
+    "es": "Nutrición",
+    "de": "Ernährung",
+    "pt": "Nutrição"
+  },
+  "description": {
+    "fr": "Sacrifie une {Summoning:329}  alliée pour piocher {nb} sorts.",
+    "en": "Sacrifices one allied {Summoning:329} to draw {nb} spells.",
+    "es": "Sacrifica una {Summoning:329} aliada para sacar {nb} hechizos.",
+    "de": "Opfert eine verbündete\\_{Summoning:329}, um {nb} Zauber zu ziehen.",
+    "pt": "Sacrifica uma {Summoning:329} aliada para comprar {nb} feitiços."
+  }
+}

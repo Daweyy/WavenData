@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "134",
+  "m_id": 134,
+  "m_displayName": "MONSTRE POULPE - Constriction",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1004010410,
+    "b": 1723645924,
+    "c": -1555858935,
+    "d": 695196674,
+    "e": 843517113
+  },
+  "m_i18nDescriptionId": {
+    "a": 1004010410,
+    "b": 1723645924,
+    "c": -1555858935,
+    "d": 695196674,
+    "e": 1905172157
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a1d9b4268ff13cd489055e31ba90e869"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 134,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        71
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ea05680df74241341b2ef4a3417a7c45",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 4
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Constriction",
+    "en": "Constriction",
+    "es": "Constricción",
+    "de": "Einschnürung",
+    "pt": "Constrição"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max}\n\\---\n{PropertyEffect:4} la cible pour le tour si elle est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max}.\n\\---\n{PropertyEffect:4} to the target for the turn if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{PropertyEffect:4} al objetivo durante el turno si está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\nWirkt {PropertyEffect:4} beim Ziel, wenn es <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> ist.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{PropertyEffect:4} o alvo durante o turno se ele estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "101",
+  "m_id": 101,
+  "m_displayName": "MONSTRE CHAFER - Poing Fracassant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1928100338,
+    "b": 2020010692,
+    "c": 630636762,
+    "d": 1366057234,
+    "e": -1471458447
+  },
+  "m_i18nDescriptionId": {
+    "a": 1928100338,
+    "b": 2020010692,
+    "c": 630636762,
+    "d": 1366057234,
+    "e": -2134123702
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "efda394e3e28f4e47a7d49976b5ce82f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 101,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        40
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              40
+            ]
+          },
+          {
+            "type": "CharacterActionTypeFilter",
+            "condition": 1,
+            "actionTypes": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 2
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 4
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9fca6d19528ad68428eea97d7821d919",
+        "originTarget": {
+          "type": "SecondCastTargetSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Poing Fracassant",
+    "en": "Thunderous Fist",
+    "es": "Puño Aniquilador",
+    "de": "Zerschmetternde Faust",
+    "pt": "Punho Estrondoso"
+  },
+  "description": {
+    "fr": "Le <b>Chafer</b> ciblé attire un adversaire aligné jusqu'à {cell:c} et déclenche son <b>ATTAQUE</b>.",
+    "en": "The targeted <b>Chafer</b> attracts an in-line opponent up to {cell:c} away and triggers their own <b>ATTACK</b>.",
+    "es": "El <b>chafer</b> objetivo atrae hasta {cell:c} a un adversario alineado y activa su <b>ATAQUE</b>.",
+    "de": "Der anvisierte <b>Chafer</b> zieht einen Gegner in der Reihe bis zu {cell:c} an und löst seinen <b>ANGRIFF</b> aus.",
+    "pt": "O <b>Chafer</b> visado atrai um adversário alinhado por {cell:c} e aciona seu <b>ATAQUE</b>."
+  }
+}

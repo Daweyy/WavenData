@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "15586",
+  "m_id": 15586,
+  "m_displayName": "MONSTRE CHAFER - Armure Osseuse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -678075346,
+    "b": 201566516,
+    "c": 1431602105,
+    "d": -1088360997,
+    "e": 2052935891
+  },
+  "m_i18nDescriptionId": {
+    "a": -678075346,
+    "b": 201566516,
+    "c": 1431602105,
+    "d": -1088360997,
+    "e": 1289209107
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "866128ea161e93d4a958b6cb4cd967a9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 15586,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        40
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "083fc742657b4494f80c3d32eca0fee8",
+        "originTarget": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "FilteredCharacterSelector",
+            "filters": []
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.25
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Armure Osseuse",
+    "en": "Bony Armor",
+    "es": "Armadura Ósea",
+    "de": "Knochige Rüstung",
+    "pt": "Armadura Óssea"
+  },
+  "description": {
+    "fr": "{value:min,+} à {ARvalue:max} aux <b>Chafers</b> alliés.",
+    "en": "{value:min,+} to {ARvalue:max} to allied <b>Chafers</b>.",
+    "es": "{value:min,+} a {ARvalue:max} a los <b>chafers</b> aliados.",
+    "de": "{value:min,+} bis {ARvalue:max} für die verbündeten <b>Chafer</b>.",
+    "pt": "De {value:min,+} a {ARvalue:max} aos <b>Chaferes</b> aliados."
+  }
+}

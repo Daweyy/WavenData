@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "45",
+  "m_id": 45,
+  "m_displayName": "COMPAGNON - ATCHAM - Jalousie d'Atcham",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1272555741,
+    "b": -1746997692,
+    "c": -396808856,
+    "d": -1846100640,
+    "e": -1324593921
+  },
+  "m_i18nDescriptionId": {
+    "a": 1272555741,
+    "b": -1746997692,
+    "c": -396808856,
+    "d": -1846100640,
+    "e": 1612955878
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "fe996aa6731eb7a41ad82bfcf307a275"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "aa18fe4b82f4712449105fb5617127ff"
+      },
+      {
+        "assetGuid": "4049d1bb854eb06408d81d06da5c8366"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 45,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "FilteredCharacterSelector",
+                "filters": []
+              },
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "EntitiesWithHighestLowestCaracFilter",
+                  "superlative": 1,
+                  "carac": 1
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Jalousie d'Atcham",
+    "en": "Atcham's Jealousy",
+    "es": "Envidia de Atcham",
+    "de": "Atchams Neid",
+    "pt": "Ciúme de Atcham"
+  },
+  "description": {
+    "fr": "Téléporte {Companion:483!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à l'adversaire ayant le plus de {%PV}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de la case d'arrivée.",
+    "en": "Teleports {Companion:483!} to a cell adjacent\\_<sprite name=\"cell_cross\"> to the opponent with the most {%PV}.\n\\---\nDoes {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> the destination cell.",
+    "es": "Teletransporta a {Companion:483!} a una casilla adyacente\\_<sprite name=\"cell_cross\"> al adversario que tenga más {%PV}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios a alrededor\\_<sprite name=\"cell_around\"> de la casilla de llegada.",
+    "de": "Teleportiert {Companion:483!} auf ein auf den Gegner mit den meisten {%PV} angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\nVerursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> {magicalDamage:dmg}.",
+    "pt": "Teletransporta {Companion:483!} sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> até o adversário que tenha menos {%PV}.\n\\---\nInflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> da célula de chegada."
+  }
+}

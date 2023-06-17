@@ -1,0 +1,225 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "992",
+  "m_id": 992,
+  "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - TERRE - Coupe Rutilante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1166022585,
+    "b": 1874712836,
+    "c": 1254369162,
+    "d": 1830438525,
+    "e": -2097460449
+  },
+  "m_i18nDescriptionId": {
+    "a": 1166022585,
+    "b": 1874712836,
+    "c": 1254369162,
+    "d": 1830438525,
+    "e": 859730450
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "fecfd865195ba4e45b50eac1a7ff5c70"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 992,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      145979,
+      156532,
+      510101
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 637,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 1,
+            "carac": 1
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "87c00359eec74964c87cba203226d17d",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 322,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hs",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            50,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Coupe Rutilante",
+    "en": "Gleaming Cut",
+    "es": "Corte Rutilante",
+    "de": "Glänzender Schnitt",
+    "pt": "Corte Rutilante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à l'adversaire ayant le plus de {%PV}.\n\\---\nSoigne de {PVvalue:dmg2} les alliés alignés à lui.",
+    "en": "Does {magicalDamage:dmg} to the opponent with the most {%PV}.\n\\---\nHeals allies in line with them {PVvalue:dmg2}.",
+    "es": "Inflige {magicalDamage:dmg} al adversario que tenga más {%PV}.\n\\---\nCura {PVvalue:dmg2} a los aliados alineados con él.",
+    "de": "Verursacht beim Gegner mit den meisten {%PV} {magicalDamage:dmg}.\n\\---\nHeilt die Verbündeten in derselben Reihe wie er um {PVvalue:dmg2}.",
+    "pt": "Inflige {magicalDamage:dmg} ao adversário que tiver mais {%PV}.\n\\---\nCura em {PVvalue:dmg2} os aliados alinhados a ele."
+  }
+}

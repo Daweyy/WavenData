@@ -1,0 +1,155 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158400
+  },
+  "m_Name": "816",
+  "m_id": 816,
+  "m_displayName": "DQ - CONTRAT - VAMPYRE - 2_Forge-sang",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 250041511,
+    "b": -583651292,
+    "c": 1895713416,
+    "d": 1235645725,
+    "e": -220515531
+  },
+  "m_i18nChampionNameId": {
+    "a": 250041511,
+    "b": -583651292,
+    "c": 1895713416,
+    "d": 1235645725,
+    "e": 457940225
+  },
+  "m_i18nDescriptionId": {
+    "a": 250041511,
+    "b": -583651292,
+    "c": 1895713416,
+    "d": 1235645725,
+    "e": 2119694620
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 816,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1722,
+      "skinIds": [
+        1722
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 7
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 85
+        }
+      ]
+    },
+    "families": [
+      55
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 170
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 2
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 8
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 5,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Forge-sang] other[Forge-sangs]}",
+    "en": "{0, plural, one[Bloodforge] other[Bloodforges]}",
+    "es": "{0, plural, one[Forjasangre] other[Forjasangres]}",
+    "de": "{0, plural, one[Blutschmied] other[Blutschmiede]}",
+    "pt": "{0, plural, one[Forja-Sangue] other[Forja-Sangues]}"
+  },
+  "description": {
+    "fr": "{%attack} {ATvalue:pow,percent,+}.\n\\---\n{%FightTurnStarted} Inflige {magicalDamage:dmg} à un {%Family_Vampyre_Name} allié, puis invoque une {Summoning:85} à {cell:c}.",
+    "en": "{%attack} {ATvalue:pow,percent,+}.\n\\---\n{%FightTurnStarted} Does {magicalDamage:dmg} to an allied {%Family_Vampyre_Name} then summons one {Summoning:85} {cell:c} away.",
+    "es": "{%attack} {ATvalue:pow,percent,+}.\n\\---\n{%FightTurnStarted} Inflige {magicalDamage:dmg} a un {%Family_Vampyre_Name} aliado e invoca una {Summoning:85} a {cell:c}.",
+    "de": "{%attack} {ATvalue:pow,percent,+}.\n\\---\n{%FightTurnStarted} Fügt einem verbündeten {%Family_Vampyre_Name} {magicalDamage:dmg} zu und beschwört dann 1\\_{Summoning:85} auf {cell:c}.",
+    "pt": "{%attack} {ATvalue:pow,percent,+}.\n\\---\n {%FightTurnStarted} Inflige {magicalDamage:dmg} a um {%Family_Vampyre_Name} aliado, depois invoca uma {Summoning:85} a {cell:c}."
+  },
+  "championName": {
+    "fr": "Forge-sang",
+    "en": "Bloodforge",
+    "es": "Forjasangre",
+    "de": "Blutschmiede",
+    "pt": "Forja-Sangue"
+  }
+}

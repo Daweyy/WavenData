@@ -1,0 +1,188 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "114428",
+  "m_id": 114428,
+  "m_displayName": "IOP - ARME - GLAIVE STALAKTOSS - FEU - Brulure revigorante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1135032288,
+    "b": 882565268,
+    "c": -1547419511,
+    "d": -2091250679,
+    "e": 230449128
+  },
+  "m_i18nDescriptionId": {
+    "a": 1135032288,
+    "b": 882565268,
+    "c": -1547419511,
+    "d": -2091250679,
+    "e": -111292317
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0b56fb3ba0d2aae428958145a5859bf9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 114428,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      199867,
+      217885,
+      417867
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 911,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "686ab46d49cacdf4ebc0622855d732f5",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 19
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "drain",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 242
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 18
+        },
+        "DRAIN"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Brûlure Revigorante",
+    "en": "Reinvigorating Burn",
+    "es": "Quemadura Reconstituyente",
+    "de": "Belebende Verbrennung",
+    "pt": "Queimadura Revigorante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{DRAINvalue:drain,percent,+} à votre héros pour le tour s'il est {PropertyEffect:18[DÉPHASÉ]}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{DRAINvalue:drain,percent,+} to your hero for the turn if they are {PropertyEffect:18[DEPHASED]}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{DRAINvalue:drain,percent,+} a tu héroe durante el turno si está {PropertyEffect:18[DESFASADO]}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{DRAINvalue:drain,percent,+} für deinen Helden für die Runde, wenn er {PropertyEffect:18[PHASENVERSCHOBEN]} ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{DRAINvalue:drain,percent,+} ao seu herói durante o turno se ele estiver {PropertyEffect:18[DEFASADO]}."
+  }
+}

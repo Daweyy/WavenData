@@ -1,0 +1,230 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "183",
+  "m_id": 183,
+  "m_displayName": "XELOR - ARME - TAKO - FEU - Style Flamme",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1630475167,
+    "b": 1306002452,
+    "c": 1182822426,
+    "d": -703428552,
+    "e": -859891055
+  },
+  "m_i18nDescriptionId": {
+    "a": 1630475167,
+    "b": 1306002452,
+    "c": 1182822426,
+    "d": -703428552,
+    "e": 2043516432
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "84f8642e3814b1d4b8c23becc89a0000"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 183,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      475417,
+      475759,
+      171427
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 490,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "CaracValueCondition",
+        "selector": {
+          "type": "CasterSelector"
+        },
+        "carac": 19,
+        "value": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          }
+        }
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCharacterSelector",
+            "filters": []
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f26b96f54fabd034e98f47afc378d9a4",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 292,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "aoe",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 292,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "CHRONO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Style Flamme",
+    "en": "Flame Style",
+    "es": "Estilo Llama",
+    "de": "Flammenstil",
+    "pt": "Estilo Chama"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}\\_: Inflige {magicalDamage:aoe} autour\\_<sprite name=\"cell_around\"> de\\_la\\_cible.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Does {magicalDamage:aoe} around\\_<sprite name=\"cell_around\"> the\\_target.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Inflige {magicalDamage:aoe} alrededor\\_<sprite name=\"cell_around\"> del\\_objetivo.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Verursacht {magicalDamage:aoe} ringsum\\_<sprite name=\"cell_around\"> des Ziels.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Inflige {magicalDamage:aoe} em\\_volta\\_<sprite name=\"cell_around\"> do alvo."
+  }
+}

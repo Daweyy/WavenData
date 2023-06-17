@@ -1,0 +1,129 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "170",
+  "m_id": 170,
+  "m_displayName": "_NOT USED - MONSTRE CRAQUELEUR - Q3 - Eclatement Rocheux",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": -2122230723,
+    "b": -1857967948,
+    "c": 818011258,
+    "d": 831230749,
+    "e": -821059290
+  },
+  "m_i18nDescriptionId": {
+    "a": -2122230723,
+    "b": -1857967948,
+    "c": 818011258,
+    "d": 831230749,
+    "e": -1456293927
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3f361ef6bfbebef42bca864f1c3fa47b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 170,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              1607
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "83de7ba8d69f15d4e8c63fde10733568",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Éclatement Rocheux",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Détruit un {ObjectMechanism:1607!} allié et inflige l'équivalent de son {%BL} en <b>DÉGÂTS</b> aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

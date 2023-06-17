@@ -1,0 +1,185 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "241519",
+  "m_id": 241519,
+  "m_displayName": "SRAM - ARME - SOUROKAN - ETHER - Repousse Sourokan",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1064506601,
+    "b": -284339100,
+    "c": 1658076761,
+    "d": -1371070943,
+    "e": 2097935171
+  },
+  "m_i18nDescriptionId": {
+    "a": 1064506601,
+    "b": -284339100,
+    "c": 1658076761,
+    "d": -1371070943,
+    "e": 567805341
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c40325bcb30e7204ea30a2e41d311442"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 241519,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 937,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllFloorMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          }
+        }
+      },
+      "selectorIfTrue": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "918c73013c2cb0941b5ccee16fe05e8c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        "TRAPPER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Repousse Sourokan",
+    "en": "Surokan Push",
+    "es": "Empuje Surokán",
+    "de": "Sorokan-Rückstoß",
+    "pt": "Afastamento Surokan"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_: {#Push} de {cell:c}.",
+    "en": "Inflicts your hero's {%AT}.\n\\---\n{#TRAPPER}: {#Push} {cell:c}.",
+    "es": "Inflige el {%AT} de tu héroe.\n\\---\n{#TRAPPER}: {#Push} {cell:c}.",
+    "de": "Verursacht den {%AT} deines Helden.\n\\---\n{#TRAPPER}: {#Push} {cell:c}.",
+    "pt": "Inflige o {%AT} do seu herói.\n\\---\n{#TRAPPER}: {#Push} por {cell:c}."
+  }
+}

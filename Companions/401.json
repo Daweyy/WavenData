@@ -1,0 +1,220 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "401",
+  "m_id": 401,
+  "m_displayName": "DECK - INFINITE - FEU - Julith",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1934777259,
+    "b": -785269132,
+    "c": 1075253114,
+    "d": -1261691878,
+    "e": 276388718
+  },
+  "m_i18nDescriptionId": {
+    "a": -1934777259,
+    "b": -785269132,
+    "c": 1075253114,
+    "d": -1261691878,
+    "e": 1648455287
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 401,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 5131,
+      "skinIds": [
+        5131
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "sort",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      18,
+      74
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 140
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 27
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      312265,
+      557,
+      256025,
+      255731,
+      131,
+      747541
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          401
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Julith",
+    "en": "Julith",
+    "es": "Julith",
+    "de": "Julith",
+    "pt": "Julith"
+  },
+  "description": {
+    "fr": "Lorsqu'un adversaire meurt\\_: Piochez {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} au coût de {sort,plural,one[ce] other[ces]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "en": "When an opponent dies: Draw {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} to the cost of {sort,plural,one[this] other[these]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "es": "Cuando un adversario muere: Robas {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} al coste de {sort,plural,one[este] other[estos]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "de": "Falls ein Gegner stirbt: Zieht {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} die auf Kosten {sort,plural,one[dieses] other[dieser]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "pt": "Quando um adversário morre: Compre {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} ao custo {sort,plural,one[desse] other[desses]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "235884",
+  "m_id": 235884,
+  "m_displayName": "XELOR - ARME - GURPAPA - ETHER - Explosion Gurpapa",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1450228824,
+    "b": -121189052,
+    "c": -677354902,
+    "d": -506506455,
+    "e": 996145942
+  },
+  "m_i18nDescriptionId": {
+    "a": 1450228824,
+    "b": -121189052,
+    "c": -677354902,
+    "d": -506506455,
+    "e": 1729297216
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e25ff9775ba03ce4cbe5f9b0e1bd2cf4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 235884,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 161,
+      "families": [
+        7,
+        20
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AreaFromTargetsSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "targets": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            }
+          ]
+        },
+        "areaOfEffect": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "EngineDeterminedHolder"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a14f4d9a7df4f3942bb0288a7dfc286d",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Explosion Gurpapa",
+    "en": "Gurpapa Explosion",
+    "es": "Explosión Gurpapa",
+    "de": "Gurpapa-Explosion",
+    "pt": "Explosão Gurpapa"
+  },
+  "description": {
+    "fr": "Inflige l’{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> de vos <b>SINISTROS</b>.\n",
+    "en": "Inflicts your hero's {%AT} around\\_<sprite name=\"cell_around\"> your <b>SINISTROS</b>.\n",
+    "es": "Inflige el {%AT} de tu héroe alrededor\\_<sprite name=\"cell_around\"> de tus <b>SINISTROS</b>.\n",
+    "de": "Verursacht den {%AT} deines Helden in der Nähe\\_<sprite name=\"cell_around\"> deiner <b>SINISTROS</b>.\n",
+    "pt": "Inflige o {%AT} do seu herói em\\_volta\\_<sprite name=\"cell_around\"> de seus <b>SINISTROS</b>.\n"
+  }
+}

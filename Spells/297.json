@@ -1,0 +1,147 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "297",
+  "m_id": 297,
+  "m_displayName": "BONTA - Q11 - Respiration",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1497248376,
+    "b": -1816825500,
+    "c": -1862868613,
+    "d": -173770694,
+    "e": 1147764342
+  },
+  "m_i18nDescriptionId": {
+    "a": -1497248376,
+    "b": -1816825500,
+    "c": -1862868613,
+    "d": -173770694,
+    "e": 1143977400
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "fe5b62a2fdeb56c4b9f7d9508e582ad8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 297,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": null
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "187e3476de1983f4dbd3d46b344655ca",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 113
+        },
+        "DALLE",
+        {
+          "type": 6,
+          "id": 824
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Respiration",
+    "en": "Respiration",
+    "es": "Respiración",
+    "de": "Atmung",
+    "pt": "Respiração"
+  },
+  "description": {
+    "fr": "Piochez {SPELLCOUNTvalue:x}.\n\\---\nConstruit un {FloorMechanism:824} sur une case alignée à un adversaire.",
+    "en": "Draw {SPELLCOUNTvalue:x}.\n\\---\nBuilds one {FloorMechanism:824} on a cell in line with an opponent.",
+    "es": "Sacas {SPELLCOUNTvalue:x}.\n\\---\nConstruye un {FloorMechanism:824} en una casilla alineada con un adversario.",
+    "de": "Zieht {SPELLCOUNTvalue:x}.\n\\---\nErrichtet einen\\_{FloorMechanism:824} auf einem Feld, das sich in derselben Reihe befindet, wie ein Gegner.",
+    "pt": "Compre {SPELLCOUNTvalue:x}.\n\\---\nPosiciona um {FloorMechanism:824} sobre uma célula alinhada a um adversário."
+  }
+}

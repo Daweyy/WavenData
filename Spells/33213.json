@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "33213",
+  "m_id": 33213,
+  "m_displayName": "MONSTRE COCHON - Bond de Padma",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1046461888,
+    "b": 778650420,
+    "c": -201551621,
+    "d": 1028917346,
+    "e": -456855043
+  },
+  "m_i18nDescriptionId": {
+    "a": 1046461888,
+    "b": 778650420,
+    "c": -201551621,
+    "d": 1028917346,
+    "e": 1681605794
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "79f1484e286b7ea4f801a604527afa43"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2051,
+      2050
+    ],
+    "m_values": [
+      {
+        "assetGuid": "fc61da9ed98b70d48ad777f483d57211"
+      },
+      {
+        "assetGuid": "3629735d713f7774dac8743f41297b10"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 33213,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50,
+              64,
+              65
+            ]
+          },
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 2,
+            "summonings": [
+              907,
+              574
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bond de Padma",
+    "en": "Padma Leap",
+    "es": "Salto de Padma",
+    "de": "Padmas Sprung",
+    "pt": "Salto de Padma"
+  },
+  "description": {
+    "fr": "Téléporte un <b>Cochon</b> allié sur une case adjacente\\_<sprite name=\"cell_cross\"> à un adversaire.\n\\---\nInflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
+    "en": "Teleports an allied <b>Pig</b> to a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent.\n\\---\nDoes {magicalDamage:dmg} to adjacent\\_<sprite name=\"cell_cross\"> opponents.",
+    "es": "Teletransporta a un <b>cerdo</b> aliado a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un adversario.\n\\---\nInflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
+    "de": "Teleportiert ein verbündetes <b>Schweinemonster</b> auf ein an einen Gegner angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\nVerursacht bei den angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalDamage:dmg}.",
+    "pt": "Teletransporta um <b>Porco</b> aliado sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um adversário.\n\\---\nInflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\">."
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "831",
+  "m_id": 831,
+  "m_displayName": "XELOR - CLASSE - ETHER - Rouage",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 895500167,
+    "b": -209398028,
+    "c": -911372709,
+    "d": -1932122660,
+    "e": -566655350
+  },
+  "m_i18nDescriptionId": {
+    "a": 895500167,
+    "b": -209398028,
+    "c": -911372709,
+    "d": -1932122660,
+    "e": 1078967413
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "44d647addf03254488d13551f272a8a8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 831,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "2593a26f5b84fa147b77765c4dd21c73",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Rouage",
+    "en": "Cog",
+    "es": "Rueda Dentada",
+    "de": "Rädchen",
+    "pt": "Engrenagem"
+  },
+  "description": {
+    "fr": "Inflige le {%BL} d'un de vos <b>SINISTROS</b> aux adversaires autour<sprite name=\"cell_around\"> de lui.\n\\---\nPiochez votre prochain {%SPELLCOUNT} de <b>SINISTRO</b>.",
+    "en": "Inflicts the {%BL} of one of your <b>SINISTROS</b> on opponents around<sprite name=\"cell_around\"> it.\n\\---\nDraw your next <b>SINISTRO</b> {%SPELLCOUNT}.",
+    "es": "Inflige el {%BL} de uno de tus <b>SINISTROS</b> a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.\n\\---\nSacas tu próximo {%SPELLCOUNT} de <b>SINISTRO</b>.",
+    "de": "Verursacht bei Gegnern ringsum\\_<sprite name=\"cell_around\"> die {%BL} eines deiner <b>SINISTROS</b> als Schaden.\n\\---\nZieht den nächsten <b>SINISTRO</b>-{%SPELLCOUNT}.",
+    "pt": "Inflige o {%BL} de um dos seus <b>SINISTROS</b> aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele.\n\\---\nCompre seu próximo {%SPELLCOUNT} de <b>SINISTRO</b>."
+  }
+}

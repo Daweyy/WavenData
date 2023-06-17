@@ -1,0 +1,175 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "430",
+  "m_id": 430,
+  "m_displayName": "IOP - CLASSE - EAU - Pic Glacial",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1358851459,
+    "b": -712308732,
+    "c": -446286679,
+    "d": -1595330975,
+    "e": 1235199116
+  },
+  "m_i18nDescriptionId": {
+    "a": -1358851459,
+    "b": -712308732,
+    "c": -446286679,
+    "d": -1595330975,
+    "e": -1532724282
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "4f600f8350506c84ea6d1f0bb85df7f2"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 430,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      209976,
+      681,
+      354
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "49932a5f27ea96d40882f51fe4b28b90",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 981,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbd3",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 5
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pic Glacial",
+    "en": "Glacial Pick",
+    "es": "Pico Glacial",
+    "de": "Eisige Spitze",
+    "pt": "Pico Glacial"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} la cible si elle est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} the target if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} al objetivo si está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nWirkt {PropertyEffect:5} beim Ziel, wenn es <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} o alvo se ele estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+  }
+}

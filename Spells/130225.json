@@ -1,0 +1,295 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "130225",
+  "m_id": 130225,
+  "m_displayName": "ENIRIPSA - CLASSE - AIR - Fiole Medicinale",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1364145102,
+    "b": 18685924,
+    "c": -1329595493,
+    "d": 1632323839,
+    "e": 301675126
+  },
+  "m_i18nDescriptionId": {
+    "a": 1364145102,
+    "b": 18685924,
+    "c": -1329595493,
+    "d": 1632323839,
+    "e": 2120750142
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "52593f4b9e79f3241b8cbf0bb9b88c23"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 130225,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      150941,
+      424,
+      501286
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllBoardPresencesSelector"
+              },
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "08240f1a667927949a51f22da9405ec2",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pv",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 271,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 271,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "p",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            50,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 271,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "SUPPORT"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Fiole Médicinale",
+    "en": "Medicinal Vial",
+    "es": "Frasco Medicinal",
+    "de": "Medizinische Phiole",
+    "pt": "Frasco Medicinal"
+  },
+  "description": {
+    "fr": "Soigne un allié de {PVvalue:pv} et inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\">.\n\\---\n{#SUPPORT}\\_: {PVvalue:p,+} à l'allié.",
+    "en": "Heals an ally {PVvalue:pv} and does {magicalDamage:dmg} to an adjacent\\_<sprite name=\"cell_cross\"> opponent.\n\\---\n{#SUPPORT}: {PVvalue:p,+} to the ally.",
+    "es": "Cura a un aliado {PVvalue:pv} e inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\">.\n\\---\n{#SUPPORT}: {PVvalue:p,+} al aliado.",
+    "de": "Heilt einen Verbündeten um {PVvalue:pv} und verursacht bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner {magicalDamage:dmg}.\n\\---\n{#SUPPORT}: {PVvalue:p,+} beim Verbündeten.",
+    "pt": "Cura um aliado em {PVvalue:pv} e inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\">.\n\\---\n{#SUPPORT}: {PVvalue:p,+} ao aliado."
+  }
+}

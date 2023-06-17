@@ -1,0 +1,198 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "117660",
+  "m_id": 117660,
+  "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - FEU - Estoc Detonant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1451909795,
+    "b": 816506244,
+    "c": 1787899083,
+    "d": 1991891222,
+    "e": -26115959
+  },
+  "m_i18nDescriptionId": {
+    "a": 1451909795,
+    "b": 816506244,
+    "c": 1787899083,
+    "d": 1991891222,
+    "e": -124646783
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "46957b3218dbe6344bb9cad28c87f3a3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 117660,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      196079,
+      220933,
+      417323
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 534,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "26fa6877d1a06c640ad85f0087099834",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 26
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 212,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgExplosion",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EXPLOSION"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Estoc Détonant",
+    "en": "Explosive Thrust",
+    "es": "Estocada Detonante",
+    "de": "Detonierender Stoßdegen",
+    "pt": "Estocada Detonante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {explosion:dmgExplosion} autour<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {explosion:dmgExplosion} around\\_<sprite name=\"cell_around\"/> the target\\v if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {explosion:dmgExplosion} alrededor<sprite name=\"cell_around\"/> del objetivo\\v si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {explosion:dmgExplosion} in der Nähe\\_<sprite name=\"cell_around\"/> des Ziels aus,\\v wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {explosion:dmgExplosion} em\\_volta\\_<sprite name=\"cell_around\"/> do alvo\\v se ele estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

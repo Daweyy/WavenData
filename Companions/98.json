@@ -1,0 +1,209 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "98",
+  "m_id": 98,
+  "m_displayName": "DECK - INFINITE - TERRE - Ruel",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -336775337,
+    "b": 950080228,
+    "c": 2053226106,
+    "d": -414575150,
+    "e": -1913620816
+  },
+  "m_i18nDescriptionId": {
+    "a": -336775337,
+    "b": 950080228,
+    "c": 2053226106,
+    "d": -414575150,
+    "e": -1147678781
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 98,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7692,
+      "skinIds": [
+        7692
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      5,
+      81
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 120
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      892,
+      343993,
+      521548,
+      252799,
+      404,
+      447
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          98
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Ruel",
+    "en": "Ruel",
+    "es": "Ruel",
+    "de": "Ruel",
+    "pt": "Ruel"
+  },
+  "description": {
+    "fr": "{%attack} Inflige son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\">.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "en": "{%attack} Inflicts {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "es": "{%attack} Inflige su {%AT} a los adversarios alrededor\\_<sprite name=\"cell_around\">.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "de": "{%attack} Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> seinen {%AT} als Schaden.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "pt": "{%attack} Inflige seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\">.\\v<family>{%Family_BrotherHood_Name}</family>"
+  }
+}

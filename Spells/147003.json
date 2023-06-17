@@ -1,0 +1,204 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "147003",
+  "m_id": 147003,
+  "m_displayName": "CRA - ARME - SHIRU SHADEN - TERRE - Shiruken Graveleux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1936857680,
+    "b": -481380684,
+    "c": -250537735,
+    "d": -735083611,
+    "e": 1741136469
+  },
+  "m_i18nDescriptionId": {
+    "a": 1936857680,
+    "b": -481380684,
+    "c": -250537735,
+    "d": -735083611,
+    "e": -1571500642
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a380c88eec3dd784c93a23a65998c743"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2051,
+      2050
+    ],
+    "m_values": [
+      {
+        "assetGuid": "c55a2065b6ea2504a84dc756cc35d971"
+      },
+      {
+        "assetGuid": "94e5968beff253c45a55cbbc2d7310b9"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 147003,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      908,
+      824,
+      452
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 191,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 7
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 299,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Shiruken Graveleux",
+    "en": "Gravelux Shiruken",
+    "es": "Shiruken Pedregoso",
+    "de": "Kiesiger Shiruken",
+    "pt": "Shiruken Pedregoso"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:c} et inflige {magicalDamage:dmg} aux adversaires alignés.\n\\---\n{#COMBO}\\_: {PMvalue:pm,+} à votre héros pour le tour.",
+    "en": "Teleports your hero up to {cell:c} and does {magicalDamage:dmg} to in-line opponents.\n\\---\n{#COMBO}: {PMvalue:pm,+} to your hero for the turn.",
+    "es": "Teletransporta a tu héroe hasta a {cell:c} e inflige {magicalDamage:dmg} a los adversarios alineados.\n\\---\n{#COMBO}: {PMvalue:pm,+} a tu héroe durante el turno.",
+    "de": "Teleportiert deinen Helden bis zu {cell:c} und verursacht bei den Gegnern in derselben Reihe {magicalDamage:dmg}.\n\\---\n{#COMBO}: {PMvalue:pm,+} für deinen Helden für die Runde.",
+    "pt": "Teletransporta seu herói a até {cell:c} e inflige {magicalDamage:dmg} aos adversários alinhados.\n\\---\n{#COMBO}: {PMvalue:pm,+} ao seu herói durante o turno."
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "99094",
+  "m_id": 99094,
+  "m_displayName": "CRA - ARME - EXPINGOLE - FEU - Cremation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 814885536,
+    "b": 575201396,
+    "c": -578946886,
+    "d": 2133045835,
+    "e": -359447707
+  },
+  "m_i18nDescriptionId": {
+    "a": 814885536,
+    "b": 575201396,
+    "c": -578946886,
+    "d": 2133045835,
+    "e": 80555249
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "de40cfd7cbe9c0b4485b7a35de8b22f8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 99094,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      93651,
+      12,
+      452999
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 998,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ca10b2f92e316c041b6b9aefb49139f3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 59897,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgB",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 3
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 59897,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "d2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": true
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Crémation",
+    "en": "Cremation",
+    "es": "Cremación",
+    "de": "Einäscherung",
+    "pt": "Cremação"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmgA} à un adversaire et {magicalDamage:dmgB} autour\\_<sprite name=\"cell_around\"> de lui par {%AURA_SIGHT,plural:one} que possède votre héros.",
+    "en": "Does {magicalDamage:dmgA} to an opponent and {magicalDamage:dmgB} around\\_<sprite name=\"cell_around\"> them for each {%AURA_SIGHT,plural:one} your hero has.",
+    "es": "Inflige {magicalDamage:dmgA} a un adversario y {magicalDamage:dmgB} a su alrededor\\_<sprite name=\"cell_around\"> por {%AURA_SIGHT,plural:one} que tenga tu héroe.",
+    "de": "Verursacht {magicalDamage:dmgA} bei einem Gegner und {magicalDamage:dmgB} ringsum\\_<sprite name=\"cell_around\"> ihn pro {%AURA_SIGHT,plural:one}, die dein Held besitzt.",
+    "pt": "Inflige {magicalDamage:dmgA} a um adversário e {magicalDamage:dmgB} em\\_volta\\_<sprite name=\"cell_around\"> dele por {%AURA_SIGHT,plural:one} do seu herói."
+  }
+}

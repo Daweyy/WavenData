@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "470",
+  "m_id": 470,
+  "m_displayName": "RING - RARE - Anneau Ragan",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 595368789,
+    "b": 1674327508,
+    "c": -1500623735,
+    "d": 1298395466,
+    "e": -769824512
+  },
+  "m_i18nDescriptionId": {
+    "a": 595368789,
+    "b": 1674327508,
+    "c": -1500623735,
+    "d": 1298395466,
+    "e": 1133043739
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 595368789,
+    "b": 1674327508,
+    "c": -1500623735,
+    "d": 1298395466,
+    "e": 610063102
+  },
+  "m_illustration": {
+    "assetGuid": "5fcd1230ec1a8714eb03a81bd353b0ef"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "76f54215080f0eb4987dd607b31971b5"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 470,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      78,
+      713181,
+      331,
+      581,
+      430583,
+      685707
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "buff",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 33
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "skillBuff",
+                "value": 5
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "skillBuff",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          24
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Ragan",
+    "en": "Sighclone Ring",
+    "es": "Huracanillo",
+    "de": "Orkanring",
+    "pt": "Furacanel"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {value:buff,percent,+} aux <b>DÉGÂTS</b> de vos {%SPELLCOUNT,plural:other} {%AIR} pour le tour par adversaire {%ventilated}.",
+    "en": "{%FightTurnStarted} {value:buff,percent,+} to your {%AIR} {%SPELLCOUNT,plural:one} <b>DAMAGE</b> for the turn per {%ventilated} opponent.",
+    "es": "{%FightTurnStarted} {value:buff,percent,+} a los <b>DAÑOS</b> de tus {%SPELLCOUNT,plural:other} {%AIR} durante el turno por adversario {%ventilated}.",
+    "de": "{%FightTurnStarted} {value:buff,percent,+} auf den <b>SCHADEN</b> deiner {%AIR}-{%SPELLCOUNT,plural:other} für die Runde pro Gegner im Zustand {%ventilated}.",
+    "pt": "{%FightTurnStarted} {value:buff,percent,+} aos <b>DANOS</b> dos seus {%SPELLCOUNT,plural:other} {%AIR} durante o turno por adversário {%ventilated}."
+  },
+  "bgDescription": {
+    "fr": "Cet anneau n'est sans doute pas des plus agréables à porter, mais il est sans conteste des plus stylés ! A vous de définir vos priorités.",
+    "en": "This ring isn't all that nice to wear, but it is undoubtedly one of the most stylish out there! It just depends on what your top priority is.",
+    "es": "Puede que este anillo no sea muy cómodo precisamente, pero tiene un estilazo. Tú verás cuales son tus prioridades…",
+    "de": "Dieser Ring bietet gewiss nicht den höchsten Tragekomfort, ist dafür jedoch zweifelsohne am stilvollsten! Worauf du mehr Wert legst, musst du entscheiden.",
+    "pt": "Este anel pode não ser lá o mais agradável para usar, mas é, sem dúvida, o mais estiloso! Cabe a você definir o que é prioridade."
+  }
+}

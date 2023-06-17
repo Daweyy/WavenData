@@ -1,0 +1,184 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "677",
+  "m_id": 677,
+  "m_displayName": "SRAM - CLASSE - FEU - Midnight Meat Fist",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2039282273,
+    "b": -873446396,
+    "c": 1095201481,
+    "d": -1734542349,
+    "e": 1671625475
+  },
+  "m_i18nDescriptionId": {
+    "a": 2039282273,
+    "b": -873446396,
+    "c": 1095201481,
+    "d": -1734542349,
+    "e": -88021592
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "13b892a0b18ab8347bd443ea2a0544d7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 677,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      349858,
+      363235,
+      487006
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "eabd887dc3916074db14c300e37e69f7",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 29
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 596,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow2",
+          "value": 25
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": -25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Midnight Meat Fist",
+    "en": "Midnight Meat Fist",
+    "es": "Puño de la Muerte",
+    "de": "Midnight Meat Fist",
+    "pt": "Midnight Meat Fist"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} à votre héros et {ATvalue:pow,percent} à la cible pour le tour si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} to your hero and {ATvalue:pow,percent} to the target for the turn if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} a tu héroe y {ATvalue:pow,percent} al objetivo durante el turno si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} für deinen Helden und {ATvalue:pow,percent} für das Ziel für die Runde, wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} ao seu herói e {ATvalue:pow,percent} ao alvo durante o turno, se este estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

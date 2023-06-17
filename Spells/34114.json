@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "34114",
+  "m_id": 34114,
+  "m_displayName": "MONSTRE COCHON - Bushi Shon",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1369620598,
+    "b": -1323521660,
+    "c": -1602816440,
+    "d": 263785328,
+    "e": 1210066183
+  },
+  "m_i18nDescriptionId": {
+    "a": 1369620598,
+    "b": -1323521660,
+    "c": -1602816440,
+    "d": 263785328,
+    "e": -681730544
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b4d509efed4d79b4797829d6057b67ab"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 34114,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50
+            ]
+          },
+          {
+            "type": "EntityHasFloatingCounterFilter"
+          },
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 2,
+            "summonings": [
+              574
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e8faee2b02c70c3499237eb53ed14a64",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bushi Shon",
+    "en": "Shon Bushi",
+    "es": "Bushi Shon",
+    "de": "Bushi Shon",
+    "pt": "Bushi Shon"
+  },
+  "description": {
+    "fr": "Consomme les {%KEYWORD.AURA.NAME,plural:other} du <b>Cochon</b> allié ciblé.\n\\--- \n{PA_RESvalue:v,+} et pioche {value:v} sort par {%KEYWORD.AURA.NAME,plural:one} consommée.",
+    "en": "Consumes the targeted allied <b>Pig</b>'s {%KEYWORD.AURA.NAME,plural:other}.\n\\--- \n{PA_RESvalue:v,+} and draws {value:v} {v, plural, one[spell] other[spells]} per {%KEYWORD.AURA.NAME,plural:one} consumed.",
+    "es": "Consume las {%KEYWORD.AURA.NAME,plural:other} del <b>cerdo</b> aliado objetivo.\n\\--- \n{PA_RESvalue:v,+} y sacas {value:v} hechizo por {%KEYWORD.AURA.NAME,plural:one} consumida.",
+    "de": "Verbraucht die {%KEYWORD.AURA.NAME,plural:other} des anvisierten verbündeten <b>Schweinemonsters</b>.\n\\--- \n{PA_RESvalue:v,+} und zieht {value:v} Zauber je verbrauchter {%KEYWORD.AURA.NAME,plural:one}.",
+    "pt": "Consome as {%KEYWORD.AURA.NAME,plural:other} do <b>Porco</b> aliado visado.\n\\---\n{PA_RESvalue:v,+} e compre {value:v} feitiço por {%KEYWORD.AURA.NAME,plural:one} consumida."
+  }
+}

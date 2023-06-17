@@ -1,0 +1,267 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "980",
+  "m_id": 980,
+  "m_displayName": "XELOR - ARME - PRAMIUM - AIR - Declic Aerien",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 184033701,
+    "b": -1462609596,
+    "c": 495153401,
+    "d": 1315466897,
+    "e": -89786715
+  },
+  "m_i18nDescriptionId": {
+    "a": 184033701,
+    "b": -1462609596,
+    "c": 495153401,
+    "d": 1315466897,
+    "e": -2000343043
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b8ac226fbabdec14292b334709b618fe"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "83bf6b6e953ac7348b7614284a0528c0"
+      },
+      {
+        "assetGuid": "6ecf280f2503872489a56a88cc1db9ff"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 980,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      463528,
+      463540,
+      181583
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 614,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "MultipleAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        },
+        "areaOfEffects": [
+          {
+            "type": "SquareAreaOfEffectSelector",
+            "originSelector": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "FamilyFilter",
+                  "condition": 1,
+                  "families": [
+                    20
+                  ]
+                }
+              ]
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          },
+          {
+            "type": "AreaFromTargetsSelector",
+            "originSelector": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "FamilyFilter",
+                  "condition": 1,
+                  "families": [
+                    20
+                  ]
+                }
+              ]
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 0
+            },
+            "targets": {
+              "type": "CasterHeroSelector"
+            },
+            "areaOfEffect": {
+              "type": "SquareAreaOfEffectSelector",
+              "originSelector": {
+                "type": "EngineDeterminedHolder"
+              },
+              "size": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 94,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Déclic Aérien",
+    "en": "Aerial Click",
+    "es": "Clic Aéreo",
+    "de": "Auslöser aus der Luft",
+    "pt": "Estalo Aéreo"
+  },
+  "description": {
+    "fr": "Échange la position de votre héros avec celle d'un de vos <b>SINISTROS</b> et inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'eux.",
+    "en": "Switches your hero's position with that of one of your\\_</b>SINISTROS<b> and does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> them.",
+    "es": "Intercambia la posición de tu héroe con la de uno de tus <b>SINISTROS</b> e inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de ellos.",
+    "de": "Tauscht die Position deines Helden mit der eines deiner <b>SINISTROS</b> und verursacht {magicalDamage:dmg} ringsum\\_<sprite name=\"cell_around\">.",
+    "pt": "Troca seu herói de posição com um de seus <b>SINISTROS</b> e inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> deles."
+  }
+}

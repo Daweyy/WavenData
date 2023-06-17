@@ -1,0 +1,154 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "158158",
+  "m_id": 158158,
+  "m_displayName": "BONTA - Q11 - Glissade",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1797150995,
+    "b": -1513245884,
+    "c": -1116783589,
+    "d": -1433027635,
+    "e": -1157960189
+  },
+  "m_i18nDescriptionId": {
+    "a": 1797150995,
+    "b": -1513245884,
+    "c": -1116783589,
+    "d": -1433027635,
+    "e": -155397655
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d2de7a988c468384fa2f50f99a41f065"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 158158,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "896f7cd6ed9c7c942bfc77eb602a6fd4",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Glissade",
+    "en": "Slide",
+    "es": "Resbalón",
+    "de": "Rutschpartie",
+    "pt": "Escorregão"
+  },
+  "description": {
+    "fr": "{#PUSH} un personnage jusqu'à {cell:c}.",
+    "en": "{#PUSH} a character up to {cell:c}.",
+    "es": "{#PUSH} a un personaje hasta {cell:c}.",
+    "de": "{#PUSH} einen Charakter bis {cell:c}.",
+    "pt": "{#PUSH} um personagem por até {cell:c}."
+  }
+}

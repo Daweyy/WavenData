@@ -1,0 +1,231 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "83872",
+  "m_id": 83872,
+  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - FEU - Phase Enivrante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -35228356,
+    "b": -1478288332,
+    "c": 485083115,
+    "d": 1134797957,
+    "e": 99413960
+  },
+  "m_i18nDescriptionId": {
+    "a": -35228356,
+    "b": -1478288332,
+    "c": 485083115,
+    "d": 1134797957,
+    "e": -806587647
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3ea1de1f1ae36914a8b1a58599be01c6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 83872,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      122,
+      153936,
+      81
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 141,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 1,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 18
+          }
+        ]
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCharacterSelector",
+            "filters": []
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "fbcec7947824eac4bb72185f79717f73",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 77036,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 77036,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 18
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Phase Enivrante",
+    "en": "Heady Phase",
+    "es": "Fase Embriagadora",
+    "de": "Berauschende Phase",
+    "pt": "Fase Inebriante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nInflige {magicalDamage:dmg2} aux adversaires autour\\_<sprite name=\"cell_around\"> de la cible si votre héros est {PropertyEffect:18[DÉPHASÉ]}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nDoes {magicalDamage:dmg2} on opponents around\\_<sprite name=\"cell_around\"> the target if your hero is {PropertyEffect:18[DEPHASED]}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nInflige {magicalDamage:dmg2} a los adversarios alrededor\\_<sprite name=\"cell_around\"> del objetivo si tu héroe está {PropertyEffect:18[DESFASADO]}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nFügt Gegnern ringsum\\_<sprite name=\"cell_around\"> des Ziels {magicalDamage:dmg2} zu, wenn dein Held {PropertyEffect:18[PHASENVERSCHOBEN]} ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nInflige {magicalDamage:dmg2} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do alvo se seu herói estiver {PropertyEffect:18[DEFASADO]}."
+  }
+}

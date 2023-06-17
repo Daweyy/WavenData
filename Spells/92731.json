@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "92731",
+  "m_id": 92731,
+  "m_displayName": "MONSTRE POULPE - Toxicite",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1182894414,
+    "b": 496096548,
+    "c": -566788168,
+    "d": -1450697454,
+    "e": -1772359704
+  },
+  "m_i18nDescriptionId": {
+    "a": 1182894414,
+    "b": 496096548,
+    "c": -566788168,
+    "d": -1450697454,
+    "e": 465218524
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "71a660fcdce4ece48bc08bfbb95ff2a0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 92731,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        71
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 107
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 260
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Toxicité",
+    "en": "Toxicity",
+    "es": "Toxicidad",
+    "de": "Toxizität",
+    "pt": "Toxicidade"
+  },
+  "description": {
+    "fr": "Pose un {FloorMechanism:260} sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.",
+    "en": "Places one {FloorMechanism:260} on a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.",
+    "es": "Pone una {FloorMechanism:260} en una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.",
+    "de": "Platziert eine\\_{FloorMechanism:260} auf einem an einen Verbündeten angrenzenden\\_<sprite name=\"cell_cross\"> Feld.",
+    "pt": "Posiciona uma {FloorMechanism:260} sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado."
+  }
+}

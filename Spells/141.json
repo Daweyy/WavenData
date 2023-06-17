@@ -1,0 +1,239 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "141",
+  "m_id": 141,
+  "m_displayName": "SRAM - CLASSE - ETHER - Feinte",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -720971209,
+    "b": 225467940,
+    "c": 1385021258,
+    "d": 1501905727,
+    "e": 399238436
+  },
+  "m_i18nDescriptionId": {
+    "a": -720971209,
+    "b": 225467940,
+    "c": 1385021258,
+    "d": 1501905727,
+    "e": 1755400975
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b80dce9fb987e484bb9f97173d9f15ab"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "812158772bfbbe64ba8ec61b201fb1cf"
+      },
+      {
+        "assetGuid": "b2f315aec791b664e88a55f771af3d0f"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 141,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllBoardPresencesSelector"
+          },
+          "filters": [
+            {
+              "type": "EntityTypeFilter",
+              "condition": 2,
+              "entityTypes": [
+                7
+              ]
+            },
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CombinedEntityFilter",
+                "filters": [
+                  {
+                    "type": "OwnerFilter",
+                    "isIdentical": true,
+                    "reference": {
+                      "type": "CasterSelector"
+                    }
+                  },
+                  {
+                    "type": "EntityTypeFilter",
+                    "condition": 1,
+                    "entityTypes": [
+                      1
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllBoardPresencesSelector"
+              },
+              "filters": [
+                {
+                  "type": "EntityTypeFilter",
+                  "condition": 2,
+                  "entityTypes": [
+                    7
+                  ]
+                },
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "NotAPreviousCastTargetFilter",
+                  "castTargetIndex": 0
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Feinte",
+    "en": "Feint",
+    "es": "Finta",
+    "de": "Finte",
+    "pt": "Finta"
+  },
+  "description": {
+    "fr": "Téléporte l'un de vos personnages sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié ou {%KEYWORD.TRAP.NAME} allié.",
+    "en": "Teleports one of your characters to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally or allied {%KEYWORD.TRAP.NAME}.",
+    "es": "Teletransporta a uno de tus personajes a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado o {%KEYWORD.TRAP.NAME} aliada.",
+    "de": "Teleportiert einen deiner Charaktere auf ein an einen Verbündeten oder eine verbündete {%KEYWORD.TRAP.NAME} angrenzendes\\_<sprite name=\"cell_cross\"> Feld.",
+    "pt": "Teletransporta um de seus personagens sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> até um aliado ou {%KEYWORD.TRAP.NAME} aliada."
+  }
+}

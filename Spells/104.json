@@ -1,0 +1,200 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "104",
+  "m_id": 104,
+  "m_displayName": "MONSTRE BOUFTOU - Maladie",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -327304630,
+    "b": 1012849284,
+    "c": -1458541653,
+    "d": -1414024135,
+    "e": -1729983698
+  },
+  "m_i18nDescriptionId": {
+    "a": -327304630,
+    "b": 1012849284,
+    "c": -1458541653,
+    "d": -1414024135,
+    "e": -257461100
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a6f6ca078f30a3c4bab3e6abe4d5f72f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 104,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "MultValue",
+          "referenceId": "",
+          "valuesToMult": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "costPA",
+              "value": 1
+            },
+            {
+              "type": "SumValue",
+              "referenceId": null,
+              "valuesToSum": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": ""
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCoordsSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "449d81f425a9cfd43afc9b0fe4d1273e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "costPA",
+          "value": 1
+        },
+        {
+          "type": "MultValue",
+          "referenceId": "dmg",
+          "valuesToMult": [
+            {
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": "ScaleDmg",
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 7
+              },
+              "factor": {
+                "type": "ReferenceScalingFactor",
+                "reference": 11
+              },
+              "buffs": [
+                51
+              ],
+              "skillBuffs": [],
+              "from": {
+                "type": "EffectHolderSelector"
+              },
+              "addInsteadOfMultiply": false
+            },
+            {
+              "type": "SumValue",
+              "referenceId": null,
+              "valuesToSum": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": null
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ScaleDmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Maladie",
+    "en": "Sickness",
+    "es": "Enfermedad",
+    "de": "Krankheit",
+    "pt": "Doença"
+  },
+  "description": {
+    "fr": "Si ce sort est dans votre main à la fin du tour\\_:\nInflige {magicalDamage:dmg} à votre héros.\n\\---\n{%DestroyOnPlayed}",
+    "en": "If this spell is in your hand at the end of the turn:\nDoes {magicalDamage:dmg} to your hero.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Si este hechizo está en tu mano al final del turno:\nInflige {magicalDamage:dmg} a tu héroe.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Wenn du diesen Zauber zum Rundenende auf der Hand hast:\nVerursacht {magicalDamage:dmg} bei deinem Helden.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Se este feitiço estiver na sua mão no fim do turno:\nInflige {magicalDamage:dmg} ao seu herói.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

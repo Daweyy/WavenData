@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "463",
+  "m_id": 463,
+  "m_displayName": "SRAM - CLASSE - ETHER - Ombre Sournoise",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1323521976,
+    "b": -43581660,
+    "c": 1157072329,
+    "d": 1844655431,
+    "e": 2145888651
+  },
+  "m_i18nDescriptionId": {
+    "a": -1323521976,
+    "b": -43581660,
+    "c": 1157072329,
+    "d": 1844655431,
+    "e": 708912496
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "25ad15b53701dad49a1ee271d404e6ad"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 463,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "UniqueForCasterTeamCondition",
+      "specificEntity": {
+        "type": "SummoningDefinitionFilter",
+        "condition": 1,
+        "summonings": [
+          120
+        ]
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 120
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Ombre Sournoise",
+    "en": "Sneaky Shadow",
+    "es": "Sombra Solapada",
+    "de": "Tückischer Schatten",
+    "pt": "Sombra Traiçoeira"
+  },
+  "description": {
+    "fr": "Invoque une {Summoning:120} jusqu'à {cell:c} de votre héros.",
+    "en": "Summons one {Summoning:120} up to {cell:c} from your hero.",
+    "es": "Invoca una {Summoning:120} hasta a {cell:c} de tu héroe.",
+    "de": "Beschwört einen {Summoning:120} bis {cell:c} von deinem Helden.",
+    "pt": "Invoca uma {Summoning:120} a até {cell:c} do seu herói."
+  }
+}

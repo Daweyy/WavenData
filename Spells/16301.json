@@ -1,0 +1,194 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "16301",
+  "m_id": 16301,
+  "m_displayName": "MONSTRE CHAFER - Armée sans Fin",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2033541283,
+    "b": 1440632452,
+    "c": 1557465128,
+    "d": -373413596,
+    "e": 2105644841
+  },
+  "m_i18nDescriptionId": {
+    "a": -2033541283,
+    "b": 1440632452,
+    "c": 1557465128,
+    "d": -373413596,
+    "e": -849949745
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a0bcb72754bdf884e950a137d40776df"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 16301,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        40
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "UnionOfEntitiesSelector",
+        "first": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                40
+              ]
+            }
+          ]
+        },
+        "second": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "ObjectMechanismDefinitionFilter",
+              "condition": 1,
+              "objectMechanisms": [
+                1447
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ae11bab5d944fd0408527d5ff87c3c58",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            49
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Armée sans Fin",
+    "en": "Endless Army",
+    "es": "Ejército sin Fin",
+    "de": "Unendlich bewaffnet",
+    "pt": "Exército Sem Fim"
+  },
+  "description": {
+    "fr": "{BLvalue:v,+} à un {ObjectMechanism:1447!}.\n<b>OU</b>\n{ARvalue:ar,+} à un <b>Chafer</b> allié.",
+    "en": "{BLvalue:v,+} to one {ObjectMechanism:1447!}.\n<b>OR</b>\n{ARvalue:ar,+} to an allied <b>Chafer</b>.",
+    "es": "{BLvalue:v,+} a un {ObjectMechanism:1447!}.\n<b>O</b>\n{ARvalue:ar,+} a un <b>chafer</b> aliado.",
+    "de": "{BLvalue:v,+} für ein\\_{ObjectMechanism:1447!}.\n<b>ODER</b>\n{ARvalue:ar,+} für einen verbündeten <b>Chafer</b>.",
+    "pt": "{BLvalue:v,+} a um {ObjectMechanism:1447!}.\n<b>OU</b>\n{ARvalue:ar,+} a um <b>Chafer</b> aliado."
+  }
+}

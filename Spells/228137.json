@@ -1,0 +1,227 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "228137",
+  "m_id": 228137,
+  "m_displayName": "SACRIEUR - CLASSE - TERRE - Ravage",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -409120438,
+    "b": -1025906636,
+    "c": 751665770,
+    "d": 1469477411,
+    "e": -545323948
+  },
+  "m_i18nDescriptionId": {
+    "a": -409120438,
+    "b": -1025906636,
+    "c": 751665770,
+    "d": 1469477411,
+    "e": -1894645981
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c37efffbbd191d543919786f6e0ee230"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2051,
+      2050
+    ],
+    "m_values": [
+      {
+        "assetGuid": "4e044846c92fc4b4799d9011d7525888"
+      },
+      {
+        "assetGuid": "54fff230211c5fe4e99414bc7054e70b"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 228137,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      755,
+      585878,
+      374
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "tp",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "",
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "tp",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 95605,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "auraGain",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ravage",
+    "en": "Ravages",
+    "es": "Estragos",
+    "de": "Verwüstung",
+    "pt": "Devastação"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:tp}.\n\\---\nIl inflige {magicalDamage:dmg} aux adversaires alignés à sa case d'arrivée.",
+    "en": "Teleports your hero up to {cell:tp}.\n\\---\nThey do {magicalDamage:dmg} to opponents in line with the destination cell.",
+    "es": "Teletransporta a tu héroe hasta {cell:tp}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios alineados con su casilla de llegada.",
+    "de": "Teleportiert deinen Helden bis zu {cell:tp}.\n\\---\nVerursacht bei den Gegnern, die sich in derselben Reihe wie sein Ankunftsfeld befinden, {magicalDamage:dmg}",
+    "pt": "Teletransporta seu herói a até {cell:tp}.\n\\---\nInflige {magicalDamage:dmg} aos adversários alinhados à sua célula de chegada."
+  }
+}

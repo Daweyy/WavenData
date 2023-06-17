@@ -1,0 +1,221 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "161",
+  "m_id": 161,
+  "m_displayName": "XELOR - Régulant Gurpapa",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 72620343,
+    "b": -883696332,
+    "c": 545683017,
+    "d": 1321049750,
+    "e": -390657562
+  },
+  "m_i18nDescriptionId": {
+    "a": 72620343,
+    "b": -883696332,
+    "c": 545683017,
+    "d": 1321049750,
+    "e": -266630933
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": 72620343,
+    "b": -883696332,
+    "c": 545683017,
+    "d": 1321049750,
+    "e": 1864719573
+  },
+  "m_i18nSimpleNameId": {
+    "a": 72620343,
+    "b": -883696332,
+    "c": 545683017,
+    "d": 1321049750,
+    "e": -442175599
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": 72620343,
+    "b": -883696332,
+    "c": 545683017,
+    "d": 1321049750,
+    "e": -579655348
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "60777a7d24eec9b48b60a2cecafaf16e"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 161,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2069,
+      "skinIds": [
+        2157,
+        3013,
+        2114,
+        3224,
+        2192,
+        2069
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "p",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 214
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "s",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      7
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 389
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 26
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      739192,
+      738945,
+      739234,
+      739880
+    ],
+    "difficultyHint": 2,
+    "defaultSkinIdMale": 2157,
+    "defaultSkinIdFemale": 2069,
+    "god": 7,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      153,
+      235884,
+      608,
+      164200
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      211049,
+      776,
+      121,
+      265,
+      573,
+      79,
+      62,
+      743,
+      3
+    ]
+  },
+  "name": {
+    "fr": "Régulant Gurpapa",
+    "en": "Gurpapa Regulator",
+    "es": "Regulante Gurpapa",
+    "de": "Gurpapa-Kontrolle",
+    "pt": "Regulador Gurpapa"
+  },
+  "description": {
+    "fr": "{%FightTurnEnded} Inflige {value:p,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de chacun de vos <b>SINISTROS</b>.",
+    "en": "{%FightTurnEnded} Inflicts {value:p,percent} of {%AT} on opponents around\\_<sprite name=\"cell_around\"> each of your <b>SINISTROS</b>.",
+    "es": "{%FightTurnEnded} Inflige un {value:p,percent} de su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de cada uno de tus <b>SINISTROS</b>.",
+    "de": "{%FightTurnEnded} Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> all deiner <b>SINISTROS</b> {value:p,percent} seines {%AT} als Schaden.",
+    "pt": "{%FightTurnEnded} Inflige {value:p,percent} de seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de cada um dos seus <b>SINISTROS</b>."
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!\n\\---\n<color=#7FD5E4><b>MÉCANISMES</b></color>\\_: Ces constructions blindées vous feront gagner du terrain\\_!",
+    "en": "<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!\n\\---\n<color=#7FD5E4><b>MECHANISMS</b></color>: These armored constructions will let you gain ground!",
+    "es": "<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!\n\\---\n<color=#7FD5E4><b>MECANISMOS</b></color>: ¡Con estas construcciones blindadas podrás ganar terreno!",
+    "de": "<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu!\n\\---\n<color=#7FD5E4><b>MECHANISMEN</b></color>: Dank dieser gepanzerten Konstruktionen kannst du mehr vom Spielfeld einnehmen!",
+    "pt": "<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!\n\\---\n<color=#7FD5E4><b>MECANISMOS</b></color>: Estas construções blindadas vão fazer você ganhar terreno!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameXelor}",
+    "en": "{%OnboardingSimpleNameXelor}",
+    "es": "{%OnboardingSimpleNameXelor}",
+    "de": "{%OnboardingSimpleNameXelor}",
+    "pt": "{%OnboardingSimpleNameXelor}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionXelor}",
+    "en": "{%OnboardingSimpleDescriptionXelor}",
+    "es": "{%OnboardingSimpleDescriptionXelor}",
+    "de": "{%OnboardingSimpleDescriptionXelor}",
+    "pt": "{%OnboardingSimpleDescriptionXelor}"
+  }
+}

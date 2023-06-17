@@ -1,0 +1,133 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "30",
+  "m_id": 30,
+  "m_displayName": "ENIRIPSA - CLASSE - ETHER - Prevention",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -420011629,
+    "b": 1124115460,
+    "c": 597014905,
+    "d": -1655183035,
+    "e": -1269465080
+  },
+  "m_i18nDescriptionId": {
+    "a": -420011629,
+    "b": 1124115460,
+    "c": 597014905,
+    "d": -1655183035,
+    "e": 1864670558
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "530e3e55bea72fa4194df94b70434306"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 30,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "db9a3cd9916764f4f9b0825ef7976def",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "SUPPORT",
+        {
+          "type": 20,
+          "id": 19
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Prévention",
+    "en": "Prevention",
+    "es": "Prevención",
+    "de": "Prävention",
+    "pt": "Prevenção"
+  },
+  "description": {
+    "fr": "Confère {PropertyEffect:19} à un allié pour le tour.\n\\---\n{#support}\\_: Piochez {SPELLCOUNTvalue:v}.",
+    "en": "Confers {PropertyEffect:19} on an ally for the turn.\n\\---\n{#support}: Draw {SPELLCOUNTvalue:v}.",
+    "es": "Confiere {PropertyEffect:19} a un aliado durante el turno.\n\\---\n{#support}: Sacas {SPELLCOUNTvalue:v}.",
+    "de": "Gewährt einem Verbündeten für die Runde {PropertyEffect:19}.\n\\---\n{#support}: Ziehe {SPELLCOUNTvalue:v}.",
+    "pt": "Concede {PropertyEffect:19} a um aliado durante o turno.\n\\---\n{#support}: Compre {SPELLCOUNTvalue:v}."
+  }
+}

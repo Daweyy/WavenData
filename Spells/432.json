@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "432",
+  "m_id": 432,
+  "m_displayName": "IOP - CLASSE - FEU - Brûler",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1090141091,
+    "b": 879500180,
+    "c": 491596408,
+    "d": -1067817171,
+    "e": -1361543687
+  },
+  "m_i18nDescriptionId": {
+    "a": 1090141091,
+    "b": 879500180,
+    "c": 491596408,
+    "d": -1067817171,
+    "e": 1689031086
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "358e1c67fb747ff47b4d9eb56c099f36"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 432,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      202027,
+      41,
+      175
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "871941adae45af247b91a7c7bfcf8047",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 772,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "auraSkill",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 39
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Brûler",
+    "en": "Scorch",
+    "es": "Quemar",
+    "de": "Brennen",
+    "pt": "Queimar"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:39,value:a} à votre héros\\v si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:39,value:a} to your hero\\v if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:39,value:a} a tu héroe\\v si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:39,value:a} für deinen Helden\\v, wenn das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:39,value:a} ao seu herói\\v se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

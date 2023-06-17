@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "879",
+  "m_id": 879,
+  "m_displayName": "MONSTRE ROUBLARD - Bombes collantes",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1983138868,
+    "b": 176051716,
+    "c": 1939569803,
+    "d": -1015285575,
+    "e": 1686279998
+  },
+  "m_i18nDescriptionId": {
+    "a": -1983138868,
+    "b": 176051716,
+    "c": 1939569803,
+    "d": -1015285575,
+    "e": 2001995435
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "701cfe374d4e78c428426c18f07e36b1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 879,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        13
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ec60689d18fdf1845bcc72bfbff8294a",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dgt",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 349
+        },
+        {
+          "type": 7,
+          "id": 1650
+        },
+        {
+          "type": 7,
+          "id": 1506
+        },
+        "BOMB"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bombes collantes",
+    "en": "Sticky Bombs",
+    "es": "Bombas Pegajosas",
+    "de": "Klebrige Bomben",
+    "pt": "Bombas Pegajosas"
+  },
+  "description": {
+    "fr": "Les {#BOMB,plural:other} alignées sont attirées jusqu'à la cible.\n\\---\nInflige {magicalDamage:dgt} par {#BOMB} attirée.",
+    "en": "In-line {#BOMB,plural:other} are attracted to the target.\n\\---\nDoes {magicalDamage:dgt} per attracted {#BOMB}.",
+    "es": "Las {#BOMB,plural:other} alineadas son atraídas hasta el objetivo.\n\\---\nInflige {magicalDamage:dgt} por {#BOMB} atraída.",
+    "de": "Die {#BOMB,plural:other}, die sich in derselben Reihe befinden, werden bis zum Ziel herangezogen.\n\\---\nVerursacht {magicalDamage:dgt} pro herangezogene {#BOMB}.",
+    "pt": "As {#BOMB,plural:other} alinhadas são atraídas até o alvo.\n\\---\nInflige {magicalDamage:dgt} por {#BOMB} atraída."
+  }
+}

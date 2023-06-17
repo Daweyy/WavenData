@@ -1,0 +1,159 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "923",
+  "m_id": 923,
+  "m_displayName": "MONSTRE CRAQUELEUR - Dislocage",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2744680,
+    "b": -831328540,
+    "c": -1728603607,
+    "d": 1520925633,
+    "e": 695160416
+  },
+  "m_i18nDescriptionId": {
+    "a": 2744680,
+    "b": -831328540,
+    "c": -1728603607,
+    "d": 1520925633,
+    "e": 1012964434
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d2f6e3aca2c7cdf4c902cbd6ee7017b9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 923,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b17162d393168ac43be874ee901f0e1e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 4
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Dislocage",
+    "en": "Disjointing",
+    "es": "Desencaje",
+    "de": "Auflösung",
+    "pt": "Rompimento"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max}.\n\\---\n{PropertyEffect:4} la cible si elle est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max}.\n\\---\n{PropertyEffect:4} the target if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{PropertyEffect:4} al objetivo si está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\n{PropertyEffect:4} das Ziel, wenn es <b>MARKIERT</b> ist\\_<sprite name=\"generic_monster\">.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{PropertyEffect:4} o alvo se ele estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

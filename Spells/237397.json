@@ -1,0 +1,176 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "237397",
+  "m_id": 237397,
+  "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - ETHER - Frappe Flamboyante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1931992040,
+    "b": -1635183500,
+    "c": 372815465,
+    "d": 1932044582,
+    "e": -25195791
+  },
+  "m_i18nDescriptionId": {
+    "a": 1931992040,
+    "b": -1635183500,
+    "c": 372815465,
+    "d": 1932044582,
+    "e": -938706287
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ab8a6a27f6ff81a44a9cd430cb206109"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 237397,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 534,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 8
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -1
+                },
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": "",
+                  "from": {
+                    "type": "AllBoardPresencesSelector"
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "MultipleElementaryStatesFilter",
+                      "comparison": 1,
+                      "elementaryStates": [
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ]
+                    },
+                    {
+                      "type": "TeamFilter",
+                      "isIdentical": false,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a174439e145175143aa296312a118e5f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Frappe Flamboyante",
+    "en": "Flaming Strike",
+    "es": "Golpe Brillante",
+    "de": "Flammender Hieb",
+    "pt": "Golpe Flamejante"
+  },
+  "description": {
+    "fr": "Inflige l’{%AT} de votre héros\\v {value:dmg,+,percent} pour chaque {%AURA_SWORD} qu’il possède.\n\\---\n{PAvalue:pa} au coût de ce sort par adversaire ayant un état. \n",
+    "en": "Inflicts your hero's {%AT}.\\v {value:dmg,+,percent} for each {%AURA_SWORD} that they have.\n\\---\n{PAvalue:pa} to the cost of this spell per opponent with a state. \n",
+    "es": "Inflige el {%AT} de tu héroe\\v {value:dmg,+,percent} por cada {%AURA_SWORD} que tenga.\n\\---\n{PAvalue:pa} al coste de este hechizo por adversario con un estado. \n",
+    "de": "Verursacht den {%AT} deines Helden als Schaden.\\v {value:dmg,+,percent} für jede {%AURA_SWORD}, die er besitzt.\n\\---\n{PAvalue:pa} auf Kosten dieses Zaubers pro Gegner mit einem Zustand. \n",
+    "pt": "Inflige o {%AT} do seu herói\\v {value:dmg,+,percent} por cada {%AURA_SWORD} que ele possuir.\n\\---\n{PAvalue:pa} ao custo desse feitiço por adversário que tiver um estado.\n"
+  }
+}

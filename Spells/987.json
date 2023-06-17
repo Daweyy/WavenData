@@ -1,0 +1,189 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "987",
+  "m_id": 987,
+  "m_displayName": "SRAM - CLASSE - AIR - Piege Zoda",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 530400180,
+    "b": 1732840548,
+    "c": 1449127659,
+    "d": 1020464759,
+    "e": -1483506132
+  },
+  "m_i18nDescriptionId": {
+    "a": 530400180,
+    "b": 1732840548,
+    "c": 1449127659,
+    "d": 1020464759,
+    "e": -1787325262
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c259630b5a220354d8af5cb1ac8a7e90"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 987,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      481404,
+      481534,
+      454
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "c",
+                "condition": {
+                  "type": "AndCondition",
+                  "conditions": [
+                    {
+                      "type": "ThisSpellHasSkillCondition",
+                      "skillId": 68669
+                    }
+                  ]
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 68669
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.673.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 748
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège Zoda",
+    "en": "Zoda Trap",
+    "es": "Trampa Zoda",
+    "de": "Zoda-Falle",
+    "pt": "Armadilha Zoda"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:748} ({value:FloorMechanism.673.dmg}) jusqu'à {cell:c} de votre héros.",
+    "en": "Builds one {FloorMechanism:748} ({value:FloorMechanism.673.dmg}) up to {cell:c} from your hero.",
+    "es": "Construye una {FloorMechanism:748} ({value:FloorMechanism.673.dmg}) hasta a {cell:c} de tu héroe.",
+    "de": "Errichtet eine\\_{FloorMechanism:748} ({value:FloorMechanism.673.dmg}) in einer Entfernung von bis zu {cell:c} von deinem Helden.",
+    "pt": "Posiciona uma {FloorMechanism:748} ({value:FloorMechanism.673.dmg}) a até {cell:c} do seu herói."
+  }
+}

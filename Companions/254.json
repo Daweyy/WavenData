@@ -1,0 +1,197 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "254",
+  "m_id": 254,
+  "m_displayName": "QUETE - CHUCHOTEUR - Craqueleur dechuchote",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -826508438,
+    "b": 186817220,
+    "c": 708760762,
+    "d": -1516217930,
+    "e": 2042852111
+  },
+  "m_i18nDescriptionId": {
+    "a": -826508438,
+    "b": 186817220,
+    "c": 708760762,
+    "d": -1516217930,
+    "e": 877862392
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 254,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3178,
+      "skinIds": [
+        3178
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      41
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 207
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 22
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          254
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Craqueleur Déchuchoté",
+    "en": "Dewhispered Crackler",
+    "es": "Crujidor Desusurrado",
+    "de": "Verflüsterter Krachler",
+    "pt": "Smagador Dessussurrado"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} Devient <b>MARQUÉ</b>\\_<sprite name=\"generic_monster\"> s'il a au moins {value:nb} {nb, plural, one[adversaire] other[adversaires]} autour\\_<sprite name=\"cell_around\">.",
+    "en": "{%FightTurnStarted} Becomes <b>MARKED</b>\\_<sprite name=\"generic_monster\"> if there {nb, plural, one[is] other[are]} at least {value:nb} surrounding\\_<sprite name=\"cell_around\"> {nb, plural, one[opponent] other[opponents]}.",
+    "es": "{%FightTurnStarted} Se vuelve <b>MARCADO</b>\\_<sprite name=\"generic_monster\"> si tiene al menos {value:nb} {nb, plural, one[adversario] other[adversarios]} alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "{%FightTurnStarted} Wird <b>MARKIERT</b>\\_<sprite name=\"generic_monster\">, wenn sich mindestens {value:nb}{nb, plural, one[Gegner] other[Gegner]} ringsum\\_<sprite name=\"cell_around\"> befinden.",
+    "pt": "{%FightTurnStarted} Fica <b>MARCADO</b>\\_<sprite name=\"generic_monster\"> se ele tiver {value:nb}{nb, plural, one[adversário] other[adversários]} ou mais em\\_volta\\_,<sprite name=\"cell_around\">."
+  }
+}

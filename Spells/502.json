@@ -1,0 +1,206 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "502",
+  "m_id": 502,
+  "m_displayName": "COMPAGNON - TOXINE - Hypnose de Toxine",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1833812315,
+    "b": -699775807,
+    "c": -295288038,
+    "d": 2027121594,
+    "e": -1278039837
+  },
+  "m_i18nDescriptionId": {
+    "a": -1833812315,
+    "b": -699775807,
+    "c": -295288038,
+    "d": 2027121594,
+    "e": 1687296569
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1eb76ff6f01be0044a00a173994f6939"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      400
+    ],
+    "m_values": [
+      {
+        "assetGuid": "923d7cd789dd0af47a05398130633e79"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 502,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NotCondition",
+        "condition": {
+          "type": "PropertyFlagsCondition",
+          "selector": {
+            "type": "CasterSpecificCompanionSelector",
+            "companion": 231
+          },
+          "flags": [
+            4
+          ]
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterSpecificCompanionSelector",
+              "companion": 231
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 5
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "CasterSpecificCompanionSelector",
+              "companion": 231
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 5
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 1
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Hypnose de Toxine",
+    "en": "Toxine Hypnosis",
+    "es": "Hipnosis de Toxina",
+    "de": "Toxines Hypnose",
+    "pt": "Hipnose de Toxina"
+  },
+  "description": {
+    "fr": "{Companion:231!} <b>CHARGE</b> un adversaire aligné jusqu'à {cell:c}.\n\\---\nLui inflige {magicalDamage:dmg} et l'{PropertyEffect:1}.",
+    "en": "{Companion:231!} <b>CHARGES</b> an in-line opponent up to {cell:c} away.\n\\---\nDoes {magicalDamage:dmg} and {PropertyEffect:1} them.",
+    "es": "{Companion:231!} <b>CARGA</b> contra un adversario alineado hasta {cell:c}.\n\\---\nLe inflige {magicalDamage:dmg} y lo {PropertyEffect:1}.",
+    "de": "{Companion:231!} <b>STÜRMT</b> auf einen Gegner in derselben Reihe bis auf {cell:c} zu.\n\\---\nVerursacht {magicalDamage:dmg} und wirkt {PropertyEffect:1} bei ihm.",
+    "pt": "{Companion:231!}<b>INVESTE</b> contra um adversário alinhado a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} e {PropertyEffect:1}."
+  }
+}

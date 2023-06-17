@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "316",
+  "m_id": 316,
+  "m_displayName": "BRACELET - RARE - Brassard de Repousse Rocheuse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -357554137,
+    "b": 1431161204,
+    "c": 2143143737,
+    "d": 153115517,
+    "e": -2067042104
+  },
+  "m_i18nDescriptionId": {
+    "a": -357554137,
+    "b": 1431161204,
+    "c": 2143143737,
+    "d": 153115517,
+    "e": 341313404
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -357554137,
+    "b": 1431161204,
+    "c": 2143143737,
+    "d": 153115517,
+    "e": -17320650
+  },
+  "m_illustration": {
+    "assetGuid": "36d934afce6b25b448036935ee770156"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "36d934afce6b25b448036935ee770156"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 316,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      645345,
+      645418,
+      202,
+      645692,
+      646285,
+      646532
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "c",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 1
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 121519
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c1",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 121771
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c2",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 500
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.275.bc"
+      ],
+      "hasEffects": false,
+      "keywordReferences": [
+        "ROCK",
+        "PUSH"
+      ]
+    },
+    "family": 0,
+    "equipmentType": 2,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          58
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Brassard de Repousse Rocheuse",
+    "en": "Rocky Push Armband",
+    "es": "Brazalete de Empujón Rocoso",
+    "de": "Armschiene des felsigen Rückstoßes",
+    "pt": "Braçadeira de Empurrão Rochoso"
+  },
+  "description": {
+    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de déclencher {rock:ParameterizedEffectExecution.275.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} of triggering {rock:ParameterizedEffectExecution.275.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
+    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de activar {rock:ParameterizedEffectExecution.275.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "de": "{%Attack} {#PUSH} um {cell:c}.\n\\---\nChance von {LUCKSELFvalue:per,permil}, je <b>{%KEYWORD.COLLISION.NAME}</b>-Feld {rock:ParameterizedEffectExecution.275.bc} auszulösen.",
+    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de acionar {rock:ParameterizedEffectExecution.275.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
+  },
+  "bgDescription": {
+    "fr": "{%empty}",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

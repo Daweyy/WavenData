@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "426",
+  "m_id": 426,
+  "m_displayName": "RING - RARE - Anneau Mali",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1709510406,
+    "b": 1942304436,
+    "c": 1819547769,
+    "d": 2008396255,
+    "e": 880413373
+  },
+  "m_i18nDescriptionId": {
+    "a": -1709510406,
+    "b": 1942304436,
+    "c": 1819547769,
+    "d": 2008396255,
+    "e": 297891042
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -1709510406,
+    "b": 1942304436,
+    "c": 1819547769,
+    "d": 2008396255,
+    "e": -955623594
+  },
+  "m_illustration": {
+    "assetGuid": "3f499b1177a7ad74084e014d6af6c59d"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "02a6d69baa72eb04b94fc7761dc7ab73"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 426,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      693221,
+      693500,
+      694416,
+      693750,
+      693796,
+      693827
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "t",
+          "condition": {
+            "type": "HolderHasSkillCondition",
+            "skill": 132701
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "boost",
+            "value": 2
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "boost",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "COLLISION"
+      ]
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          23
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Mali",
+    "en": "Irregularing",
+    "es": "Anillo Malía",
+    "de": "Möbiusring",
+    "pt": "Anel Malia"
+  },
+  "description": {
+    "fr": "{#COLLISION}\\_: Confère à votre héros autant d'{%AR} que de dégâts infligés.\n\\---\n<rem>Limité à {value:t} fois par tour.</rem>",
+    "en": "{#COLLISION}: Confers as much {%AR} on your hero as damage done.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</rem>",
+    "es": "{#COLLISION}: Confiere a tu héroe tanta {%AR} como daños infligidos.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "{#COLLISION}: Verleiht deinem Helden {%AR} in Höhe des zugefügten Schadens.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</rem>",
+    "pt": "{#COLLISION}: Concede {%AR} ao seu herói em número equivalente aos danos infligidos.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</rem>"
+  },
+  "bgDescription": {
+    "fr": "Cet étrange anneau est le cauchemar de tout Iop qui se respecte. Il leur est en effet impossible de le regarder sans devenir fou. \nPour ceux qui ont un cerveau, évidemment. Et cet anneau... Bon, en fait ça ne concerne que très peu de Iops.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

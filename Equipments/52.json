@@ -1,0 +1,150 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "52",
+  "m_id": 52,
+  "m_displayName": "RING - COMMON - Anneau Fer",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1271347198,
+    "b": 215559748,
+    "c": 118623563,
+    "d": 2009052999,
+    "e": -2018597446
+  },
+  "m_i18nDescriptionId": {
+    "a": 1271347198,
+    "b": 215559748,
+    "c": 118623563,
+    "d": 2009052999,
+    "e": 1519249458
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 1271347198,
+    "b": 215559748,
+    "c": 118623563,
+    "d": 2009052999,
+    "e": -1717389715
+  },
+  "m_illustration": {
+    "assetGuid": "dceeaabf639ef1242b5baaba78782db9"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "d2fae94653915d541a3d0429c83ca00a"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 52,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      791,
+      785,
+      665287,
+      8,
+      665521,
+      420272
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 594,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "pv",
+          "baseValue": 0,
+          "factor": 1
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "x",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 5
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 859
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "y",
+                "value": 5
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "y",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "pv",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          1
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Fer",
+    "en": "Iron Ring",
+    "es": "Anillo Férreo",
+    "de": "Eisenring",
+    "pt": "Anel de Ferro"
+  },
+  "description": {
+    "fr": "{%FightStarted} Confère à votre héros {value:x,percent} de sa {%PVMAX} en {%AR}.",
+    "en": "{%FightStarted} Confers {value:x,percent} of their {%PVMAX} as {%AR} on your hero.",
+    "es": "{%FightStarted} Confiere a tu héroe un {value:x,percent} de su {%PVMAX} en {%AR}.",
+    "de": "{%FightStarted}: Verleiht deinem Helden {value:x,percent} seiner {%PVMAX} als {%AR}.",
+    "pt": "{%FightStarted} Concede ao seu herói {value:x,percent} dos seus {%PVMAX} em {%AR}."
+  },
+  "bgDescription": {
+    "fr": "Même s'il n'est qu'en fer, c'est tout de même un beau cadeau qui vous est offert.",
+    "en": "Even though it's only iron, it's still a nice gift from someone.",
+    "es": "Este anillo marcará con firmeza tu mensaje, aunque según en qué dedo lo exhibas y si tienes la mano abierta o cerrada, querrá decir una cosa u otra.",
+    "de": "Auch wenn er nur aus Eisen ist, erhältst du dennoch ein schönes Geschenk.",
+    "pt": "Ainda que seja somente ferro, é um belo presente de se ganhar."
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "756",
+  "m_id": 756,
+  "m_displayName": "MONSTRE COCHON - Kitsu d'Entraînement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1775802217,
+    "b": -682381068,
+    "c": -927302725,
+    "d": -1926230340,
+    "e": -1349026974
+  },
+  "m_i18nDescriptionId": {
+    "a": -1775802217,
+    "b": -682381068,
+    "c": -927302725,
+    "d": -1926230340,
+    "e": -743860813
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "71124493389f2a84b85580103243ebee"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 756,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 3
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 76
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 964
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Kitsu d'Entraînement",
+    "en": "Training Kitsu",
+    "es": "Kitsu de Entrenamiento",
+    "de": "Trainings-Kitsu",
+    "pt": "Kitsu de Treinamento"
+  },
+  "description": {
+    "fr": "Invoque un {ObjectMechanism:964}.",
+    "en": "Summons one {ObjectMechanism:964}.",
+    "es": "Invoca un {ObjectMechanism:964}.",
+    "de": "Beschwört einen {ObjectMechanism:964}.",
+    "pt": "Invoca um {ObjectMechanism:964}."
+  }
+}

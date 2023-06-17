@@ -1,0 +1,174 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "84",
+  "m_id": 84,
+  "m_displayName": "COMPAGNON - CLEOPHEE - Rafale de Cleophee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -77048290,
+    "b": -1966227148,
+    "c": -146812280,
+    "d": 282863278,
+    "e": 2014163879
+  },
+  "m_i18nDescriptionId": {
+    "a": -77048290,
+    "b": -1966227148,
+    "c": -146812280,
+    "d": 282863278,
+    "e": 645098953
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ead551c8ddd512246b137d5d085cceee"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "037a0c40bcf0f1a4bbd0f4687b32e139"
+      },
+      {
+        "assetGuid": "ce341b3a449d97f429a097db26892505"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 84,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FilteredCharacterSelector",
+                "filters": [
+                  {
+                    "type": "CompanionDefinitionFilter",
+                    "condition": 1,
+                    "companions": [
+                      248
+                    ]
+                  },
+                  {
+                    "type": "OwnerFilter",
+                    "isIdentical": true,
+                    "reference": {
+                      "type": "CasterSelector"
+                    }
+                  }
+                ]
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "",
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Rafale de Cléophée",
+    "en": "Cleome's Flurry",
+    "es": "Ráfaga de Cleofé",
+    "de": "Windstoß von Cleome",
+    "pt": "Rajada de Cleofé"
+  },
+  "description": {
+    "fr": "Téléporte {Companion:248!} jusqu'à {cell:c}.\n\\---\nInflige son {%AT} aux adversaires alignés.",
+    "en": "Teleports {Companion:248!} up to {cell:c}.\n\\---\nInflicts her {%AT} on in-line opponents.",
+    "es": "Teletransporta a {Companion:248!} hasta a {cell:c}.\n\\---\nInflige su {%AT} a los adversarios alineados.",
+    "de": "Teleportiert {Companion:248!} bis zu {cell:c}.\n\\---\nVerursacht bei Gegnern in derselben Reihe seinen {%AT} als Schaden.",
+    "pt": "Teletransporta {Companion:248!} a até {cell:c}.\n\\---\nInflige seu {%AT} aos adversários alinhados."
+  }
+}

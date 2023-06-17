@@ -1,0 +1,194 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "730",
+  "m_id": 730,
+  "m_displayName": "SRAM - CLASSE - TERRE - Piege Terif",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -706224218,
+    "b": -723128076,
+    "c": 335580233,
+    "d": 857283037,
+    "e": 639136393
+  },
+  "m_i18nDescriptionId": {
+    "a": -706224218,
+    "b": -723128076,
+    "c": 335580233,
+    "d": 857283037,
+    "e": 1674749516
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c6b8da2dbc2cd5545a1d8a00d4ad8142"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 730,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      487658,
+      487982,
+      488103
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "c",
+                "condition": {
+                  "type": "AndCondition",
+                  "conditions": [
+                    {
+                      "type": "ThisSpellHasSkillCondition",
+                      "skillId": 68669
+                    }
+                  ]
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 68669
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.1483.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 1483
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège Térif",
+    "en": "Terif Trap",
+    "es": "Trampa Terradora",
+    "de": "Terif-Falle",
+    "pt": "Armadilha Terrífica"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) jusqu'à {cell:c} de votre héros.",
+    "en": "Builds one {FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) up to {cell:c} from your hero.",
+    "es": "Construye una {FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) hasta a {cell:c} de tu héroe.",
+    "de": "Errichtet eine\\_{FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) bis auf eine Entfernung von {cell:c} von deinem Helden.",
+    "pt": "Posiciona uma {FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) a até {cell:c} do seu herói."
+  }
+}

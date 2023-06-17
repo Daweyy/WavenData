@@ -1,0 +1,266 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "597",
+  "m_id": 597,
+  "m_displayName": "IOP - CLASSE - FEU - Charge Detonante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1287586975,
+    "b": -1259447660,
+    "c": -354565574,
+    "d": 828300408,
+    "e": -1987038838
+  },
+  "m_i18nDescriptionId": {
+    "a": -1287586975,
+    "b": -1259447660,
+    "c": -354565574,
+    "d": 828300408,
+    "e": 1391082543
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f1886b0930de96b42a489f67703abdb9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 597,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      43,
+      325847,
+      174
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "HasEmptyPathInLineToTargetFilter",
+              "startCoords": {
+                "type": "CasterHeroSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "43d560c132edaaa4295fc09897ad58ce",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25,
+            43
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 302,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgB",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51,
+            43
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 302,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Charge Détonante",
+    "en": "Exploding Charge",
+    "es": "Carga Detonante",
+    "de": "Explosiver Ansturm",
+    "pt": "Investida Detonante"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:dmg} à la cible et {magicalDamage:dmgB} aux adversaires autour<sprite name=\"cell_around\"/> d'elle.",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away.\n\\---\nInflicts {magicalDamage:dmg} on the target and {magicalDamage:dmgB} on opponents around<sprite name=\"cell_around\"/> the target.",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c}.\n\\---\nInflige {magicalDamage:dmg} al objetivo y {magicalDamage:dmgB} a los adversarios a su alrededor\\_<sprite name=\"cell_around\"/>.",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis zu {cell:c} in derselben Reihe zu.\n\\---\nVerursacht beim Ziel {magicalDamage:dmg} und bei den Gegnern ringsum\\_<sprite name=\"cell_around\"/> {magicalDamage:dmgB}.",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} ao alvo e {magicalDamage:dmgB} aos adversários em\\_volta\\_<sprite name=\"cell_around\"/> dele."
+  }
+}

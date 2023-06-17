@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "190564",
+  "m_id": 190564,
+  "m_displayName": "MONSTRE ABRAKNYDE - Greffe",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1617971732,
+    "b": -615752172,
+    "c": 1359807402,
+    "d": 1572483080,
+    "e": 2043579217
+  },
+  "m_i18nDescriptionId": {
+    "a": 1617971732,
+    "b": -615752172,
+    "c": 1359807402,
+    "d": 1572483080,
+    "e": -2136405834
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "459f04706fa0d8e4b947605a5fb319ea"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 190564,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        48
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f88798f0c47345d449e4334464be68a3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Greffe",
+    "en": "Graft",
+    "es": "Injerto",
+    "de": "Veredelung",
+    "pt": "Enxerto"
+  },
+  "description": {
+    "fr": "Confère {ARvalue:ar} à un allié.",
+    "en": "Confers {ARvalue:ar} on an ally.",
+    "es": "Confiere {ARvalue:ar} a un aliado.",
+    "de": "Gewährt einem Verbündeten {ARvalue:ar}.",
+    "pt": "Concede {ARvalue:ar} a um aliado."
+  }
+}

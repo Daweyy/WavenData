@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "52515",
+  "m_id": 52515,
+  "m_displayName": "MONSTRE CHUCHOTEUR - Note Discordante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -698797294,
+    "b": -1731246572,
+    "c": -1515758694,
+    "d": -1468237061,
+    "e": -795663914
+  },
+  "m_i18nDescriptionId": {
+    "a": -698797294,
+    "b": -1731246572,
+    "c": -1515758694,
+    "d": -1468237061,
+    "e": -1269147746
+  },
+  "m_elementaryStates": 9876,
+  "m_illustrationReference": {
+    "assetGuid": "0406e796eb3be9745a57c1627e911415"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 52515,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        52
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a1f80d3b60a9c314388528e7bb528694",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 24
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Note Discordante",
+    "en": "Discordant Note",
+    "es": "Nota Discordante",
+    "de": "Misstönende Note",
+    "pt": "Nota Dissonante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires <b>MARQUÉS</b>\\_<sprite name=\"generic_monster\"> et applique <b>MARQUÉ</b>\\_<sprite name=\"generic_monster\"> aux adversaires.",
+    "en": "Does {magicalDamage:dmg} to <b>MARKED</b>\\_<sprite name=\"generic_monster\"> opponents and applies <b>MARKED</b>\\_<sprite name=\"generic_monster\"> on opponents.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios <b>MARCADOS</b>\\_<sprite name=\"generic_monster\"> y aplica <b>MARCADO</b>\\_<sprite name=\"generic_monster\"> a los adversarios.",
+    "de": "Verursacht bei <b>MARKIERTEN</b>\\_<sprite name=\"generic_monster\"> Gegnern {magicalDamage:dmg} und wirkt <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> bei den Gegnern.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários <b>MARCADOS</b>\\_<sprite name=\"generic_monster\"> e aplica <b>MARCADO</b>\\_<sprite name=\"generic_monster\"> aos adversários."
+  }
+}

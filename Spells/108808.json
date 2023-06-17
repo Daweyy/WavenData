@@ -1,0 +1,178 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "108808",
+  "m_id": 108808,
+  "m_displayName": "ENIRIPSA - ARME - AMBRE TAMASHI - FEU - Faveur Nocturne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 163623298,
+    "b": -604629628,
+    "c": -975174455,
+    "d": -267572330,
+    "e": 191422375
+  },
+  "m_i18nDescriptionId": {
+    "a": 163623298,
+    "b": -604629628,
+    "c": -975174455,
+    "d": -267572330,
+    "e": 1234477257
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bb149cc174f70d94a8195f4e9eac0f7f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 108808,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      813,
+      152089,
+      508622
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 277,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 1,
+            "summonings": [
+              773
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e0b771f479859654090cea0d5b8eab67",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 511,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "id",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "id",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Faveur Nocturne",
+    "en": "Nocturnal Favor",
+    "es": "Favor Nocturno",
+    "de": "Nächtliche Gunst",
+    "pt": "Favor Noturno"
+  },
+  "description": {
+    "fr": "Sacrifie l'un de vos {Summoning:773, plural:other!}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
+    "en": "Sacrifices one of your {Summoning:773, plural:other!}.\n\\---\nDoes {magicalDamage:dmg} to adjacent\\_<sprite name=\"cell_cross\"> opponents.",
+    "es": "Sacrifica a uno de tus {Summoning:773, plural:other!}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
+    "de": "Opfert einen deiner {Summoning:773, plural:other!}.\n\\---\nFügt Gegnern in der Nähe\\_<sprite name=\"cell_cross\"> {magicalDamage:dmg} zu.",
+    "pt": "Sacrifica um dos seus {Summoning:773, plural:other!}.\n\\---\nInflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\">."
+  }
+}

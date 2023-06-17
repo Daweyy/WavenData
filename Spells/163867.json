@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "163867",
+  "m_id": 163867,
+  "m_displayName": "ENIRIPSA - CLASSE - ETHER - Devouement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 449607735,
+    "b": 1532605572,
+    "c": -1162904006,
+    "d": -74500281,
+    "e": -1734762749
+  },
+  "m_i18nDescriptionId": {
+    "a": 449607735,
+    "b": 1532605572,
+    "c": -1162904006,
+    "d": -74500281,
+    "e": -1796064774
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b1284f26a0fb8e14e92cecc64cb843a2"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 163867,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "FloatingCounterCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 3
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a22ee8a971593264ca86c163917ec7b1",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Dévouement",
+    "en": "Devotion",
+    "es": "Devoción",
+    "de": "Hingabe",
+    "pt": "Devoção"
+  },
+  "description": {
+    "fr": "Consomme une {%AURA_HEART} pour infliger l'{%AT} de votre héros aux adversaires adjacents<sprite name=\"cell_cross\">.",
+    "en": "Consumes one {%AURA_HEART} to inflict your hero's {%AT} on adjacent<sprite name=\"cell_cross\"> opponents.",
+    "es": "Consume un {%AURA_HEART} e inflige el {%AT} de tu héroe a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
+    "de": "Verbraucht eine {%AURA_HEART}, um den an deinen Helden angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern den {%AT} als Schaden zuzufügen.",
+    "pt": "Consome uma {%AURA_HEART} para infligir o {%AT} do seu herói aos adversários adjacentes\\_<sprite name=\"cell_cross\">."
+  }
+}

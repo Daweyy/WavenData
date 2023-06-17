@@ -1,0 +1,136 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "10",
+  "m_id": 10,
+  "m_displayName": "MONSTRE RAT - Ramassis",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1916858323,
+    "b": 1845332420,
+    "c": 1719891913,
+    "d": -1466669547,
+    "e": -1009850389
+  },
+  "m_i18nDescriptionId": {
+    "a": -1916858323,
+    "b": 1845332420,
+    "c": 1719891913,
+    "d": -1466669547,
+    "e": -1706669126
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d4bb7a2fbe2fc23498ef8cb4aa8da95a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 10,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        69
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              69
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ac31885070f10d247aabc2761fd20886",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 43
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 1722
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Ramassis",
+    "en": "Heap",
+    "es": "Montón",
+    "de": "Sammelsurium",
+    "pt": "Amontoado"
+  },
+  "description": {
+    "fr": "Pose une {FloorMechanism:1722} sur une case adjacente <sprite name=\"cell_cross\"/> à un allié.",
+    "en": "Places one {FloorMechanism:1722} on a cell adjacent <sprite name=\"cell_cross\"/> to an ally.",
+    "es": "Pone una {FloorMechanism:1722} en una casilla adyacente <sprite name=\"cell_cross\"/> a un aliado.",
+    "de": "Platziert einen\\_{FloorMechanism:1722} auf einem an einen Verbündeten angrenzenden\\_<sprite name=\"cell_cross\"/> Feld.",
+    "pt": "Posiciona um {FloorMechanism:1722} sobre uma célula adjacente\\_<sprite name=\"cell_cross\"/> a um aliado."
+  }
+}

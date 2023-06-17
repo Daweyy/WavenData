@@ -1,0 +1,137 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "69",
+  "m_id": 69,
+  "m_displayName": "MONSTRE CRAQUELEUR - Shrapnels",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1610179290,
+    "b": 1261688052,
+    "c": 1137912761,
+    "d": 1730875213,
+    "e": 2019605113
+  },
+  "m_i18nDescriptionId": {
+    "a": -1610179290,
+    "b": 1261688052,
+    "c": 1137912761,
+    "d": 1730875213,
+    "e": -1135028753
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "82d0a3cd280941e4c818075e45eea65f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 69,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              41
+            ]
+          },
+          {
+            "type": "ArmorFilter",
+            "valueFilter": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f7d33ecc3774b2d4ca4c6ee8bf8ffcd5",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Shrapnels",
+    "en": "Shrapnel",
+    "es": "Perdigonazos",
+    "de": "Schrapnelle",
+    "pt": "Estilhaços"
+  },
+  "description": {
+    "fr": "Inflige l’{%ar} d’un <b>Craqueleur</b> allié aux adversaires autour\\_<sprite name=\"cell_around\">, puis la Consomme.",
+    "en": "Inflicts the {%ar} of an allied <b>Crackler</b> on surrounding\\_<sprite name=\"cell_around\"> opponents then consumes it.",
+    "es": "Inflige la {%ar} de un <b>crujidor</b> aliado a los adversarios alrededor\\_<sprite name=\"cell_around\">, luego la consume.",
+    "de": "Verursacht bei Gegnern in der Nähe\\_<sprite name=\"cell_around\"> den {%ar} eines verbündeten <b>Krachlers</b> als Schaden und zerstört ihn dann.",
+    "pt": "Inflige a {%ar} de um <b>Smagador</b> aliado aos adversários em\\_volta\\_<sprite name=\"cell_around\"> e a consome."
+  }
+}

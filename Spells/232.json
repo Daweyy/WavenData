@@ -1,0 +1,166 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "232",
+  "m_id": 232,
+  "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - ETHER - Scalpel Apostruker",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 770119610,
+    "b": 1029874500,
+    "c": 704039320,
+    "d": 1180541611,
+    "e": 182426495
+  },
+  "m_i18nDescriptionId": {
+    "a": 770119610,
+    "b": 1029874500,
+    "c": 704039320,
+    "d": 1180541611,
+    "e": 486905149
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b02d5654b4df5f0408dad56c471184d0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 232,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 637,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "CombinedEntityFilter",
+            "filters": [
+              {
+                "type": "EntitiesWithHighestLowestCaracFilter",
+                "superlative": 1,
+                "carac": 1
+              },
+              {
+                "type": "EntitiesWithHighestLowestCaracFilter",
+                "superlative": 0,
+                "carac": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a9a5409dc018ac64cae3b8af34a84c84",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "UnionOfEntityFilter",
+              "firstFilter": {
+                "type": "EntitiesWithHighestLowestCaracFilter",
+                "superlative": 1,
+                "carac": 1
+              },
+              "secondFilter": {
+                "type": "EntitiesWithHighestLowestCaracFilter",
+                "superlative": 0,
+                "carac": 1
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Scalpel Apostruker",
+    "en": "Apostruker Scalpel",
+    "es": "Escalpelo Aspotruker",
+    "de": "Apostruker-Skalpell",
+    "pt": "Bisturi Apostruker"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros aux adversaires ayant le plus et le moins de {%PV}.\n",
+    "en": "Inflicts your hero's {%AT} on the opponents with the most and the least {%PV}.\n",
+    "es": "Inflige el {%AT} de tu héroe a los adversarios que tengan más y menos {%PV}.\n",
+    "de": "Fügt den Gegnern mit den meisten und wenigsten {%PV} den {%AT} deines Helden als Schaden zu.\n",
+    "pt": "Inflige o {%AT} do seu herói aos adversários que tiverem mais e menos {%PV}.\n"
+  }
+}

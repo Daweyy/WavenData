@@ -1,0 +1,125 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "590",
+  "m_id": 590,
+  "m_displayName": "IOP - ARME - LAMARGUEDON SPECTRAL - ETHER - Le chant du cygne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -959071936,
+    "b": 214895972,
+    "c": 689128216,
+    "d": -1515618200,
+    "e": 1145389099
+  },
+  "m_i18nDescriptionId": {
+    "a": -959071936,
+    "b": 214895972,
+    "c": 689128216,
+    "d": -1515618200,
+    "e": 1475059027
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "adc75a4bbd87517499a9c4e43961b6da"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 590,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 143,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "44ac65a0ad2be244b93538bbcc4117ad",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Le chant du cygne",
+    "en": "Swan Song",
+    "es": "Canto del Cisne",
+    "de": "Der Gesang des Schwans",
+    "pt": "O canto do cisne"
+  },
+  "description": {
+    "fr": "{ATvalue:p, +, percent} à un allié.\n\\---\nIl meurt à la fin du tour.",
+    "en": "{ATvalue:p, +, percent} to an ally.\n\\---\nThey die at the end of the turn.",
+    "es": "{ATvalue:p, +, percent} a un aliado.\n\\---\nMuere al final del turno.",
+    "de": "{ATvalue:p, +, percent} für einen Verbündeten.\n\\---\nAm Ende der Runde stirbt er.",
+    "pt": "{ATvalue:p, +, percent} a um aliado.\n\\---\n Ele morre no fim do turno."
+  }
+}

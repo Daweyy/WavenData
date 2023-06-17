@@ -1,0 +1,79 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -6962076302617524000
+  },
+  "m_Name": "906",
+  "m_id": 906,
+  "m_displayName": "SPELL - Generic - DCC 50",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1903923802,
+    "b": 569073380,
+    "c": -187369352,
+    "d": -133523126,
+    "e": 470927298
+  },
+  "m_i18nDescriptionId": {
+    "a": -1903923802,
+    "b": 569073380,
+    "c": -187369352,
+    "d": -133523126,
+    "e": -944854559
+  },
+  "m_skillIconReference": {
+    "assetGuid": "f5ba7fdd8f3cccc4bb39cb79bc4c2a69"
+  },
+  "values": {
+    "type": "SkillDefinition",
+    "id": 906,
+    "skillUsageType": 0,
+    "hideDescriptionInTooltip": false,
+    "passiveModifiers": [
+      {
+        "type": "SpellCriticalDamageModifier",
+        "holder": 9,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "dcc",
+          "value": 50
+        }
+      }
+    ],
+    "nonFightSkillEffects": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dcc",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "CRITICAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "{%CRITICAL_SKILL}",
+    "en": "{%CRITICAL_SKILL}",
+    "es": "{%CRITICAL_SKILL}",
+    "de": "{%CRITICAL_SKILL}",
+    "pt": "{%CRITICAL_SKILL}"
+  },
+  "description": {
+    "fr": "{#CRITICAL}\\_: {value:dcc,percent,+} aux <b>DÉGÂTS CRITIQUES</b> de ce {%SPELLCOUNT,plural:one}.",
+    "en": "{#CRITICAL}: {value:dcc,percent,+} to this {%SPELLCOUNT,plural:one}'s <b>CRITICAL DAMAGE</b>.",
+    "es": "{#CRITICAL}: {value:dcc,percent,+} a los <b>DAÑOS CRÍTICOS</b> de este {%SPELLCOUNT,plural:one}.",
+    "de": "{#CRITICAL}: {value:dcc,percent,+} auf den <b>KRITISCHEN SCHADEN</b> dieses {%SPELLCOUNT,plural:one}.",
+    "pt": "{#CRITICAL}: {value:dcc,percent,+} aos <b>DANOS CRÍTICOS</b> deste {%SPELLCOUNT,plural:one}."
+  }
+}

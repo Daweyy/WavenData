@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442430
+  },
+  "m_Name": "10",
+  "m_id": 10,
+  "m_displayName": "BRAKMAR - 18 - Brakmarien",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1884471422,
+    "b": 10334644,
+    "c": 1284401752,
+    "d": 1102631655,
+    "e": 2019213384
+  },
+  "m_i18nChampionNameId": {
+    "a": 1884471422,
+    "b": 10334644,
+    "c": 1284401752,
+    "d": 1102631655,
+    "e": 1913072313
+  },
+  "m_i18nDescriptionId": {
+    "a": 1884471422,
+    "b": 10334644,
+    "c": 1284401752,
+    "d": 1102631655,
+    "e": -1398671430
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 10,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3985,
+      "skinIds": [
+        3985
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      76
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 70
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 30
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "NotEntityFilter",
+          "filter": {
+            "type": "CombinedEntityFilter",
+            "filters": [
+              {
+                "type": "CompanionDefinitionFilter",
+                "condition": 1,
+                "companions": [
+                  654
+                ]
+              },
+              {
+                "type": "PropertyFilter",
+                "property": {
+                  "type": "SpecificPropertyIdResolvable",
+                  "propertyId": 7
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 0,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Brâkmarien] other[Brâkmariens]}",
+    "en": "{0, plural, one[Brakmarian] other[Brakmarians]}",
+    "es": "{0, plural, one[Brakmariano] other[Brakmarianos]}",
+    "de": "{0, plural, one[Brâk] other[Brâks]}",
+    "pt": "{0, plural, one[Barkmariano] other[Barkmarianos]}"
+  },
+  "description": {
+    "fr": "{%fightTurnStarted} {ATvalue:p,percent,+} aux alliés si l'{Companion:654!} est autour<sprite name=\"cell_around\">.",
+    "en": "{%fightTurnStarted} {ATvalue:p,percent,+} to allies if the {Companion:654!} is around<sprite name=\"cell_around\"> them.",
+    "es": "{%fightTurnStarted} {ATvalue:p,percent,+} a los aliados si el {Companion:654!} está alrededor<sprite name=\"cell_around\">.",
+    "de": "{%fightTurnStarted} {ATvalue:p,percent,+} für die Verbündeten, wenn sich {Companion:654!} in der Nähe\\_<sprite name=\"cell_around\"> befindet.",
+    "pt": "{%fightTurnStarted} {ATvalue:p,percent,+} aos aliados se o{Companion:654!} estiver em\\_volta<sprite name=\"cell_around\">."
+  },
+  "championName": {
+    "fr": "{%empty}",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

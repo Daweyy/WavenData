@@ -1,0 +1,164 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "457",
+  "m_id": 457,
+  "m_displayName": "COMPAGNON - KATAR - Vengeance de Katar",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1945357054,
+    "b": -316834796,
+    "c": 728052810,
+    "d": 378554215,
+    "e": -1217473439
+  },
+  "m_i18nDescriptionId": {
+    "a": 1945357054,
+    "b": -316834796,
+    "c": 728052810,
+    "d": 378554215,
+    "e": -1627003247
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3c8d35e2c361bfc45b3c8eb8497cdcc3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 457,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "CompanionDefinitionFilter",
+            "condition": 1,
+            "companions": [
+              734
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c84785ac06796e74a9ad2e804c41675e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      },
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "26957db2ace3a344fa95d8ed6646c8a5",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "HasEmptyPathInLineToTargetFilter",
+              "startCoords": {
+                "type": "FirstCastTargetSelector"
+              }
+            },
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "dmg",
+          "entitySelector": {
+            "type": "FirstCastTargetSelector"
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Vengeance de Katar",
+    "en": "Katar's Revenge",
+    "es": "Venganza de Katar",
+    "de": "Katars Rache",
+    "pt": "Vingança de Katar"
+  },
+  "description": {
+    "fr": "Attire les premiers adversaires alignés à {Companion:734!} de {cell:c}.\n\\---\nInflige son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
+    "en": "Attracts the first opponents in line with {Companion:734!} {cell:c}.\n\\---\nInflicts his {%AT} on adjacent\\_<sprite name=\"cell_cross\"> opponents.",
+    "es": "Atrae a los primeros adversarios alineados con {Companion:734!} {cell:c}.\n\\---\nInflige su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
+    "de": "Zieht die ersten Gegner, die sich in derselben Reihe befinden wie {Companion:734!}, um {cell:c} heran.\n\\---\nVerursacht bei den angrenzenden \\_<sprite name=\"cell_cross\"> Gegnern seinen {%AT} als Schaden.",
+    "pt": "Atrai os primeiros adversários alinhados a {Companion:734!} por {cell:c}.\n\\---\nInflige seu {%AT} aos adversários adjacentes\\_<sprite name=\"cell_cross\">."
+  }
+}

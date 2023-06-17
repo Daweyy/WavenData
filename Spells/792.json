@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "792",
+  "m_id": 792,
+  "m_displayName": "CRA - ARME - EXPINGOLE - ETHER - Canon Expingole",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -773672073,
+    "b": -2069896444,
+    "c": 439408520,
+    "d": -1781253168,
+    "e": 275694968
+  },
+  "m_i18nDescriptionId": {
+    "a": -773672073,
+    "b": -2069896444,
+    "c": 439408520,
+    "d": -1781253168,
+    "e": -796730586
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e3846be2227f36641929ebaee87e9999"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 792,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 998,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 847
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Canon Expingole",
+    "en": "Blunderbust Cannon",
+    "es": "Cañón Arcabux",
+    "de": "Donnerbüx-Kanone",
+    "pt": "Canhão Expingarda"
+  },
+  "description": {
+    "fr": "Construit un {ObjectMechanism:847} jusqu'à {cell:c} de votre héros.",
+    "en": "Builds one {ObjectMechanism:847} up to {cell:c} from your hero.",
+    "es": "Construye una {ObjectMechanism:847} hasta a {cell:c} de tu héroe.",
+    "de": "Errichtet eine\\_{ObjectMechanism:847} auf eine Entfernung von bis zu {cell:c} von deinem Helden.",
+    "pt": "Posiciona uma {ObjectMechanism:847} a até {cell:c} do seu herói."
+  }
+}

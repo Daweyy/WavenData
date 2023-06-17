@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "363",
+  "m_id": 363,
+  "m_displayName": "MONSTRE CHUCHOTEUR - Serrer les rangs",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 909059540,
+    "b": 1624930036,
+    "c": 1748404104,
+    "d": -1096164546,
+    "e": 1200010718
+  },
+  "m_i18nDescriptionId": {
+    "a": 909059540,
+    "b": 1624930036,
+    "c": 1748404104,
+    "d": -1096164546,
+    "e": 681692741
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f6c1279313d63814986537c71bd75a00"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 363,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        52
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9de80c1e70b807541a156aed63c5f68e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "SERRER LES RANGS",
+    "en": "CLOSE RANKS",
+    "es": "CERRAR FILAS",
+    "de": "DIE REIHEN SCHLIESSEN",
+    "pt": "ESTREITAR FILEIRAS"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} aux <b>Chuchoteurs</b> ayant un allié autour\\_<sprite name=\"cell_around\">.",
+    "en": "{ARvalue:ar,+} to <b>Whisperers</b> that have an ally around\\_<sprite name=\"cell_around\"> them.",
+    "es": "{ARvalue:ar,+} a los <b>susurradores</b> que tengan un aliado alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "{ARvalue:ar,+} für die <b>Flüsterer</b> mit einem Verbündeten ringsum\\_<sprite name=\"cell_around\">.",
+    "pt": "{ARvalue:ar,+} aos <b>Sussurradores</b> que tiverem um aliado em\\_volta\\_<sprite name=\"cell_around\">."
+  }
+}

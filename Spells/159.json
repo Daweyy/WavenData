@@ -1,0 +1,191 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "159",
+  "m_id": 159,
+  "m_displayName": "COMPAGNON - TRISTEPIN - Fureur de Tristepin",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2033387502,
+    "b": 1192272308,
+    "c": 1844062138,
+    "d": -2020822708,
+    "e": 1703852746
+  },
+  "m_i18nDescriptionId": {
+    "a": 2033387502,
+    "b": 1192272308,
+    "c": 1844062138,
+    "d": -2020822708,
+    "e": -477058108
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "55cf2d2eeef326342a178fbcc45db7f4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "8f099fc72437bca439b02f4a0b222e40"
+      },
+      {
+        "assetGuid": "f4485d44a39b29748bd367adde8e2502"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 159,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFlagFilter",
+              "flag": 4
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Fureur de Tristepin",
+    "en": "Percedal's Fury",
+    "es": "Furor de Tristepin",
+    "de": "Tristamax’ Wut",
+    "pt": "Furor de Tristepan"
+  },
+  "description": {
+    "fr": "Téléporte un adversaire jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "en": "Teleports an opponent up to {cell:c}.\n\\---\nDoes {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
+    "es": "Teletransporta a un adversario hasta {cell:c}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
+    "de": "Teleportiert einen Gegner bis zu {cell:c}.\n\\---\nVerursacht bei den an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalDamage:dmg}.",
+    "pt": "Teletransporta um adversário a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada."
+  }
+}

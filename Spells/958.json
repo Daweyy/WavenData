@@ -1,0 +1,137 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "958",
+  "m_id": 958,
+  "m_displayName": "MONSTRE TAURE - NPC QUEST - Fran Kassel - Engrais de Don Santo",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1845396420,
+    "b": 239253924,
+    "c": 141511339,
+    "d": 162975884,
+    "e": 542096600
+  },
+  "m_i18nDescriptionId": {
+    "a": -1845396420,
+    "b": 239253924,
+    "c": 141511339,
+    "d": 162975884,
+    "e": -1996755987
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b4a3e504fc65d17458e2a8389e87f429"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 958,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5b760838cac26b84eb62accc569fe629",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 1
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Engrais de Don Santo",
+    "en": "Don Santo's Fertilizer",
+    "es": "Abono de Don Santo",
+    "de": "Dünger von Don Santo",
+    "pt": "Adubo de Dom Santo"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et {PropertyEffect:1} la cible pour le tour.",
+    "en": "Does {magicalDamage:dmg} and {PropertyEffect:1} the target for the turn.",
+    "es": "Inflige {magicalDamage:dmg} y {PropertyEffect:1} al objetivo durante el turno.",
+    "de": "Verursacht {magicalDamage:dmg} und wirkt für die Runde {PropertyEffect:1} beim Ziel.",
+    "pt": "Inflige {magicalDamage:dmg} e {PropertyEffect:1} o alvo durante o turno."
+  }
+}

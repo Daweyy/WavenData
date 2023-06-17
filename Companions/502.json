@@ -1,0 +1,130 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "502",
+  "m_id": 502,
+  "m_displayName": "DQ - MYSTERY ISLAND - COCHON - 3_Bontarien en sommeil 01",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1792370789,
+    "b": -1423591468,
+    "c": -1856293989,
+    "d": -779926152,
+    "e": 1738261211
+  },
+  "m_i18nDescriptionId": {
+    "a": 1792370789,
+    "b": -1423591468,
+    "c": -1856293989,
+    "d": -779926152,
+    "e": 334144376
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 502,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9122,
+      "skinIds": [
+        9122
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 88
+        }
+      ]
+    },
+    "families": [],
+    "baseProperties": [
+      14,
+      88
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 120
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionValue": null,
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": null,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": null,
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          502
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "{0,plural,one[Bontarien en sommeil] other[Bontariens en sommeil]}",
+    "en": "{0,plural,one[Sleeping Bontarian] other[Sleeping Bontarians]}",
+    "es": "{0,plural,one[Bontariano Dormido] other[Bontarianos Dormidos]}",
+    "de": "{0,plural,one[Schlafender Bonta] other[Schlafende Bontas]}",
+    "pt": "{0,plural,one[Bontariano adormecido] other[Bontarianos adormecidos]}"
+  },
+  "description": {
+    "fr": "<rem>{PropertyEffect:88[NE DOIT PAS SE FAIRE ENLEVER]}</rem>\n\\---\n{%FightTurnEnded} Se fait enlever si un adversaire est adjacent\\_<sprite name=\"cell_cross\">.",
+    "en": "<rem>{PropertyEffect:88[MUST NOT BE KIDNAPPED]}</rem>\n\\---\n{%FightTurnEnded} Is kidnapped if an opponent is adjacent\\_<sprite name=\"cell_cross\">.",
+    "es": "<rem>{PropertyEffect:88[NO DEBE DEJARSE SECUESTRAR]}</rem>\n\\---\n{%FightTurnEnded} Es secuestrado si un adversario está adyacente\\_<sprite name=\"cell_cross\">.",
+    "de": "<rem>{PropertyEffect:88[DARF NICHT ENTFERNT WERDEN]}</rem>\n\\---\n{%FightTurnEnded} Wird entfernt, wenn ein Gegner angrenzt\\_<sprite name=\"cell_cross\">.",
+    "pt": "<rem>{PropertyEffect:88[NÃO DEVE SER LEVADO]}</rem>\n\\---\n{%FightTurnEnded} É levado se um adversário estiver adjacente\\_<sprite name=\"cell_cross\">."
+  }
+}

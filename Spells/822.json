@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "822",
+  "m_id": 822,
+  "m_displayName": "MONSTRE TAURE - Coup de Sabot",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1420970164,
+    "b": 321971860,
+    "c": 1239145626,
+    "d": -1220791839,
+    "e": -1184016301
+  },
+  "m_i18nDescriptionId": {
+    "a": 1420970164,
+    "b": 321971860,
+    "c": 1239145626,
+    "d": -1220791839,
+    "e": -2093361157
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b868fffbe218e1e45be515dfba816636"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 822,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        56
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "21cd919b112998b4d82b0cd3f1428b3c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Coup de Sabot",
+    "en": "Hoof Blow",
+    "es": "Pezuñazo",
+    "de": "Huftritt",
+    "pt": "Golpe de Casco"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nPiochez un sort.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nDraw one spell.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nSacas un hechizo.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nZiehe einen Zauberspruch.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nCompre um feitiço."
+  }
+}

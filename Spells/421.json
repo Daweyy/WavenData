@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "421",
+  "m_id": 421,
+  "m_displayName": "MONSTRE BWORK - Cor Galvanisant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1222416440,
+    "b": -1776663516,
+    "c": 1528989657,
+    "d": -2027583608,
+    "e": -2112491734
+  },
+  "m_i18nDescriptionId": {
+    "a": 1222416440,
+    "b": -1776663516,
+    "c": 1528989657,
+    "d": -2027583608,
+    "e": -1209092637
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bca32f9b54a07ef40b6d512c63deae35"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 421,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        49
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "82d4a0c520085204c97a65dc078c935c",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                63
+              ]
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.25
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 45
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cor Galvanisant",
+    "en": "Galvanizing Horn",
+    "es": "Cuerno Galvanizador",
+    "de": "Elektrisierendes Horn",
+    "pt": "Trompa Galvanizadora"
+  },
+  "description": {
+    "fr": "{PropertyEffect:45[ENRAGE]} les <b>Bworks</b> alliés.",
+    "en": "{PropertyEffect:45[ENRAGES]} allied <b>Bworks</b>.",
+    "es": "{PropertyEffect:45[ENRABIA]} a los <b>bworks</b> aliados.",
+    "de": "Versetzt die verbündeten <b>Bworks</b> in {PropertyEffect:45[RAGE]}.",
+    "pt": "{PropertyEffect:45[ENRAIVECE]} os <b>Bworks</b> aliados."
+  }
+}

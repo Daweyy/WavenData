@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "70",
+  "m_id": 70,
+  "m_displayName": "MONSTRE CHUCHOTEUR - Tir de Couverture",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1416498945,
+    "b": -1401121436,
+    "c": 1158864299,
+    "d": -1441030617,
+    "e": 796336828
+  },
+  "m_i18nDescriptionId": {
+    "a": -1416498945,
+    "b": -1401121436,
+    "c": 1158864299,
+    "d": -1441030617,
+    "e": 1057562416
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "94164f3d9a2315949ac46ea1a77aea8d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 70,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        52
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f3df444d83a48bb43becb0bef61beb2c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Tir de Couverture",
+    "en": "Cover Fire",
+    "es": "Fuego de Cobertura",
+    "de": "Deckungsfeuer",
+    "pt": "Tiro de Cobertura"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_:\\_Ce sort revient dans votre main.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: This spell returns to your hand.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}:\\_Este hechizo vuelve a tu mano.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}:\\_Dieser Zauber geht zurück auf deine Hand.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}:\\_Este feitiço volta para sua mão."
+  }
+}

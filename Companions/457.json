@@ -1,0 +1,197 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "457",
+  "m_id": 457,
+  "m_displayName": "QUETE - CHAFER - Baron Roméro",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 693341361,
+    "b": 2035747060,
+    "c": 1549225642,
+    "d": 1272463792,
+    "e": -979713823
+  },
+  "m_i18nDescriptionId": {
+    "a": 693341361,
+    "b": 2035747060,
+    "c": 1549225642,
+    "d": 1272463792,
+    "e": 850294533
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 457,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 5069,
+      "skinIds": [
+        5069
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 15
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 170
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 15
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          457
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Baron Roméro",
+    "en": "Baron Romero",
+    "es": "Barón Romero",
+    "de": "Baron Romero",
+    "pt": "Barão Romero"
+  },
+  "description": {
+    "fr": "Lorsqu'un {%Family_Chafer_Name} meurt\\_: {ATvalue:at,percent,+}.\n\\---\nTant qu'il est en jeu\\_: Vous ne pouvez invoquer qu'un seul compagnon.",
+    "en": "When a {%Family_Chafer_Name} dies: {ATvalue:at,percent,+}.\n\\---\nWhile in play: You can only summon one companion.",
+    "es": "Cuando un {%Family_Chafer_Name} muere: {ATvalue:at,percent,+}.\n\\---\nMientras esté en juego: Solo puedes invocar un compañero.",
+    "de": "Wenn ein {%Family_Chafer_Name} stirbt: {ATvalue:at,percent,+}.\n\\---\nSolange er im Spiel ist: Du kannst nur einen Begleiter beschwören.",
+    "pt": "Quando um {%Family_Chafer_Name} morre: {ATvalue:at,percent,+}.\n\\---\nEnquanto estiver em jogo: Você só pode invocar um único companheiro."
+  }
+}

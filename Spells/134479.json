@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "134479",
+  "m_id": 134479,
+  "m_displayName": "ENIRIPSA - ARME - AMBRE TAMASHI - TERRE - Défense Nocturne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 260835782,
+    "b": 952151812,
+    "c": -1511361704,
+    "d": -577571630,
+    "e": 940588945
+  },
+  "m_i18nDescriptionId": {
+    "a": 260835782,
+    "b": 952151812,
+    "c": -1511361704,
+    "d": -577571630,
+    "e": 1347761432
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e4aff1f3921e624438bd1cbb23ce8339"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 134479,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      140747,
+      152690,
+      508741
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 277,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 1,
+            "summonings": [
+              773
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a7c6efbf08604b848a957608d798000e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            48
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 300,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "id",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "id",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Défense Nocturne",
+    "en": "Nocturnal Defense",
+    "es": "Defensa Nocturna",
+    "de": "Nächtliche Abwehr",
+    "pt": "Defesa Noturna"
+  },
+  "description": {
+    "fr": "Sacrifie l'un de vos {Summoning:773, plural:other!}.\n\\---\n{ARvalue:ar,+} aux alliés autour\\_<sprite name=\"cell_around\">.",
+    "en": "Sacrifices one of your {Summoning:773, plural:other!}.\n\\---\n{ARvalue:ar,+} to surrounding\\_<sprite name=\"cell_around\"> allies.",
+    "es": "Sacrifica a uno de tus {Summoning:773, plural:other!}.\n\\---\n{ARvalue:ar,+} a los aliados de alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Opfert einen deiner {Summoning:773, plural:other!}.\n\\---\n{ARvalue:ar,+} für die Verbündeten in der Nähe\\_<sprite name=\"cell_around\">.",
+    "pt": "Sacrifica um dos seus {Summoning:773, plural:other!}.\n\\---\n{ARvalue:ar,+} aos aliados em\\_volta\\_<sprite name=\"cell_around\">."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "293",
+  "m_id": 293,
+  "m_displayName": "SRAM - ARME - LAME OURAI - ETHER - Lame Ourai",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -46923020,
+    "b": 778634836,
+    "c": 1160572107,
+    "d": -1076180306,
+    "e": 920655412
+  },
+  "m_i18nDescriptionId": {
+    "a": -46923020,
+    "b": 778634836,
+    "c": 1160572107,
+    "d": -1076180306,
+    "e": -790537241
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "64fabd6f2851e4b4fbfd605314ee7e86"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 293,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 830,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 21099
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Lame Ouraï",
+    "en": "Amurai Blade",
+    "es": "Hoja Murái",
+    "de": "Lamurai",
+    "pt": "Lâmin Ourai"
+  },
+  "description": {
+    "fr": "Invoque une {Summoning:21099}\\v jusqu'à {cell:c} de votre héros.",
+    "en": "Summons one {Summoning:21099}\\v up to {cell:c} from your hero.",
+    "es": "Invoca una {Summoning:21099}\\v hasta a {cell:c} de tu héroe.",
+    "de": "Beschwört 1\\_{Summoning:21099}\\v bis auf {cell:c} von deinem Helden entfernt.",
+    "pt": "Invoca uma {Summoning:21099}\\v a até {cell:c} do seu herói."
+  }
+}

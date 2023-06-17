@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "155502",
+  "m_id": 155502,
+  "m_displayName": "MONSTRE NUISIBLE - Corbac - Rapace",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1612040878,
+    "b": -1469993628,
+    "c": 2107719928,
+    "d": -1669075990,
+    "e": 2114447106
+  },
+  "m_i18nDescriptionId": {
+    "a": 1612040878,
+    "b": -1469993628,
+    "c": 2107719928,
+    "d": -1669075990,
+    "e": -1371005043
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7bf9a70390e3fbd478e2b99493e84534"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 155502,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        62
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ce8675f07aacd3243b37c59af0105b81",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Rapace",
+    "en": "Raptor",
+    "es": "Rapaz",
+    "de": "Rattion",
+    "pt": "Raptor"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max}.\n\\---\n {ATvalue:at,percent,+} pour le tour aux {Summoning:827, plural:other!} alliés si la cible est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max}.\n\\---\n {ATvalue:at,percent,+} to allied {Summoning:827, plural:other!} for the turn if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n {ATvalue:at,percent,+} durante el turno a los {Summoning:827, plural:other!} aliados si el objetivo está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\n {ATvalue:at,percent,+} für die verbündeten {Summoning:827, plural:other!} für die Runde, wenn das Ziel <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> ist.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{ATvalue:at,percent,+} durante o turno aos {Summoning:827, plural:other!} aliados se o alvo estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "212906",
+  "m_id": 212906,
+  "m_displayName": "DQ - MODIFICATEUR - CRAQUELEUR - 1_Craquelure craqueleur",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1327344274,
+    "b": -1838874396,
+    "c": 772348842,
+    "d": 696688749,
+    "e": -543635723
+  },
+  "m_i18nDescriptionId": {
+    "a": -1327344274,
+    "b": -1838874396,
+    "c": 772348842,
+    "d": 696688749,
+    "e": 814312184
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c68fc8f14f372144e8851ed712571bf6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 212906,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        25
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              41
+            ]
+          },
+          {
+            "type": "PropertyFilter",
+            "property": {
+              "type": "SpecificPropertyIdResolvable",
+              "propertyId": 6
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 20
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 101
+        },
+        {
+          "type": 20,
+          "id": 6
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "CRAQUELURE",
+    "en": "CRACKLERING",
+    "es": "GRIETA",
+    "de": "GEKRACHEL",
+    "pt": "RACHADURA"
+  },
+  "description": {
+    "fr": "Retire la {PropertyEffect:6[PÉTRIFICATION]} d'{%FAMILY_CRAQUELEUR_NAME}, puis lui inflige {value:dmg,percent} de sa {%PVMAX}.\n\\---\nApplique {PropertyEffect:101} à tous les {%FAMILY_CRAQUELEUR_NAME} pour le tour.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Removes {PropertyEffect:6[PETRIFICATION]} from the targeted {%FAMILY_CRAQUELEUR_NAME} then inflicts {value:dmg,percent} of their {%PVMAX} on them.\n\\---\nApplies {PropertyEffect:101} on all {%FAMILY_CRAQUELEUR_NAME,plural:other} for the turn.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Retira la {PropertyEffect:6[PETRIFICACIÓN]} de {%FAMILY_CRAQUELEUR_NAME}, luego le inflige {value:dmg,percent} de su {%PVMAX}.\n\\---\nAplica {PropertyEffect:101} a todos los {%FAMILY_CRAQUELEUR_NAME} durante el turno.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Entfernt die {PropertyEffect:6[VERSTEINERUNG]} von {%FAMILY_CRAQUELEUR_NAME} und verursacht bei ihm {value:dmg,percent} seiner {%PVMAX} als Schaden.\n\\---\nWendet {PropertyEffect:101} bei allen {%FAMILY_CRAQUELEUR_NAME} für die Runde an.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Retira a {PropertyEffect:6[PETRIFICAÇÃO]} do {%FAMILY_CRAQUELEUR_NAME} e inflige {value:dmg,percent} dos seus {%PVMAX} a ele.\n\\---\nAplica {PropertyEffect:101} a todos os {%FAMILY_CRAQUELEUR_NAME} durante o turno.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

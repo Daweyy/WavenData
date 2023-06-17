@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "195118",
+  "m_id": 195118,
+  "m_displayName": "SRAM - ARME - SOUROKAN - EAU - Sourokan a des yeux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1599416460,
+    "b": 1076464132,
+    "c": -830682437,
+    "d": 107715371,
+    "e": -509892691
+  },
+  "m_i18nDescriptionId": {
+    "a": 1599416460,
+    "b": 1076464132,
+    "c": -830682437,
+    "d": 107715371,
+    "e": 1680313588
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2e63b108013d4f343bf582825ca0ee0c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 195118,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      673,
+      373493,
+      493740
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      22
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 937,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "2a344cf14e38e1d4a8b3808157136832",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 44,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "PAReduction",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAPPER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Sourokan a des yeux",
+    "en": "Surokan Has Eyes",
+    "es": "Surokán Tiene Ojos",
+    "de": "Surokan hat Augen",
+    "pt": "Surokan Tem Olhos"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#TRAPPER}\\_: {PAvalue:pa} au coût du prochain sort que vous jouez.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#TRAPPER}: {PAvalue:pa} to the cost of the next spell you play.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#TRAPPER}: {PAvalue:pa} al coste del próximo hechizo que lances.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#TRAPPER}: {PAvalue:pa} auf die Kosten des nächsten Zaubers, den du wirkst.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#TRAPPER}: {PAvalue:pa} ao custo do próximo feitiço que você lançar."
+  }
+}

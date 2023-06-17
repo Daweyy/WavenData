@@ -1,0 +1,215 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "618",
+  "m_id": 618,
+  "m_displayName": "SRAM - ARME - ORISHI - AIR - Double Cisaille Venteuse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -828415139,
+    "b": -1880263900,
+    "c": 1208935609,
+    "d": -1377551909,
+    "e": -2122524206
+  },
+  "m_i18nDescriptionId": {
+    "a": -828415139,
+    "b": -1880263900,
+    "c": 1208935609,
+    "d": -1377551909,
+    "e": 1671253194
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7de34361ee1b48a4fafe5a8534a7c37d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 618,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      351688,
+      490989,
+      365765
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 620,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "762c6cbc09bbd914ca3910769b7d75ee",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c2",
+          "condition": {
+            "type": "ThisSpellHasSkillCondition",
+            "skillId": 373
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "s",
+            "value": 1
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.748.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        "PUSH",
+        {
+          "type": 6,
+          "id": 748
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Double-Cisaille Venteuse",
+    "en": "Windy Double-Shears",
+    "es": "Doble Cizalla Ventosa",
+    "de": "Windige Doppel-Schere",
+    "pt": "Dupla-Tesoura de Vento"
+  },
+  "description": {
+    "fr": "Construit 2 {FloorMechanism:748,plural:other} ({value:FloorMechanism.748.dmg}) jusqu'à {mechanismSpawnRange:c} de votre héros.\n\\---\n{#push} de {cell:c2} les personnages adjacents\\_<sprite name=\"cell_cross\"> à ces {%KEYWORD.TRAP.NAME,plural:other}.",
+    "en": "Builds 2 {FloorMechanism:748,plural:other} ({value:FloorMechanism.748.dmg}) up to {mechanismSpawnRange:c} from your hero.\n\\---\n{#push} characters adjacent\\_<sprite name=\"cell_cross\"> to these {%KEYWORD.TRAP.NAME,plural:other} {cell:c2}.",
+    "es": "Construye 2 {FloorMechanism:748,plural:other} ({value:FloorMechanism.748.dmg}) hasta a {mechanismSpawnRange:c} de tu héroe.\n\\---\n{#push} {cell:c2} a los personajes adyacentes\\_<sprite name=\"cell_cross\"> a estas {%KEYWORD.TRAP.NAME,plural:other}.",
+    "de": "Errichtet 2\\_{FloorMechanism:748,plural:other} ({value:FloorMechanism.748.dmg}) bis zu {mechanismSpawnRange:c} von deinem Helden entfernt.\n\\---\n{#push} die an diese {%KEYWORD.TRAP.NAME,plural:other} angrenzenden\\_<sprite name=\"cell_cross\"> Charaktere um {cell:c2} zurück.",
+    "pt": "Posiciona 2 {FloorMechanism:748,plural:other} ({value:FloorMechanism.748.dmg}) a até {mechanismSpawnRange:c} do seu herói.\n\\---\n{#push} por {cell:c2} os personagens adjacentes\\_<sprite name=\"cell_cross\"> às {%KEYWORD.TRAP.NAME,plural:other}."
+  }
+}

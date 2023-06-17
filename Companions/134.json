@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "134",
+  "m_id": 134,
+  "m_displayName": "QUETE - BRAKMAR - 10 - Dr Vik Taurestein",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -231352597,
+    "b": 392335124,
+    "c": 1313046104,
+    "d": 1834005794,
+    "e": -2137013078
+  },
+  "m_i18nDescriptionId": {
+    "a": -231352597,
+    "b": 392335124,
+    "c": 1313046104,
+    "d": 1834005794,
+    "e": -560560761
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 134,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3424,
+      "skinIds": [
+        3424
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          134
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Dr Vik Taurestein",
+    "en": "Dr. Vik Taurenstein",
+    "es": "Dr. Vik Torestein",
+    "de": "Dr.\\_Vik\\_Taurestein",
+    "pt": "Dr. Vik Taurostein"
+  },
+  "description": {
+    "fr": "{%ATTACK} Recule de {cell:c}, attire la cible et la <b>fait passer dans votre équipe</b> si c'est une {%KEYWORD.POTIONTABLE.NAME,plural:one}. Rejoue son tour.\n\\---\n<rem>Limité à {value:v} fois par tour.</rem>",
+    "en": "{%ATTACK} Moves back {cell:c}, attracts the target and brings the target <b>onto your team</b> if it's a {%KEYWORD.POTIONTABLE.NAME,plural:one}. Replays turn.\n\\---\n<rem>Limit: {value:v} {v, plural, one[time] other[times]} per turn.</rem>",
+    "es": "{%ATTACK} Retrocede {cell:c}, atrae al objetivo y lo <b>pasa a tu equipo</b> si es una {%KEYWORD.POTIONTABLE.NAME,plural:one}. Vuelve a jugar su turno.\n\\---\n<rem>Limitado a {value:v} {v, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "{%ATTACK} Zieht sich {cell:c} zurück, zieht das Ziel heran und <b>nimmt es in dein Team auf</b>, falls es ein {%KEYWORD.POTIONTABLE.NAME,plural:one} ist. Spielt seine Runde erneut.\n\\---\n<rem>Begrenzt auf {value:v}-mal pro Runde.</rem>",
+    "pt": "{%ATTACK} Recua por {cell:c}, atrai o alvo e o <b>passa para sua equipe</b> se for uma {%KEYWORD.POTIONTABLE.NAME,plural:one}. Joga um turno extra.\n\\---\n<rem>Limite de {value:v} {v, plural, one[vez] other[vezes]} por turno.</rem>"
+  }
+}

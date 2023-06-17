@@ -1,0 +1,181 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "468",
+  "m_id": 468,
+  "m_displayName": "IOP - CLASSE - ETHER - Bond",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1581066537,
+    "b": 1910027348,
+    "c": 187895354,
+    "d": -1316353129,
+    "e": -1671693280
+  },
+  "m_i18nDescriptionId": {
+    "a": 1581066537,
+    "b": 1910027348,
+    "c": 187895354,
+    "d": -1316353129,
+    "e": -1366190380
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "92a5297d3c0e4a84a81f214b31bb1d44"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2051,
+      2050
+    ],
+    "m_values": [
+      {
+        "assetGuid": "f18a7e55f9ad28f438e59c7d17f03954"
+      },
+      {
+        "assetGuid": "c6cbea28ab8485e4c8b30b0dae29b6dc"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 468,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "nb",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dgtBoostSkill",
+          "value": 25
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "purcent",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bond",
+    "en": "Jump",
+    "es": "Salto",
+    "de": "Sprung",
+    "pt": "Salto"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:nb}.\n\\---\nInflige {value:purcent,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "en": "Teleports your hero up to {cell:nb}.\n\\---\nInflicts {value:purcent,percent} of their {%AT} on opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
+    "es": "Teletransporta a tu héroe hasta a {cell:nb}.\n\\---\nInflige un {value:purcent,percent} de su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
+    "de": "Teleportiert deinen Helden bis zu {cell:nb}.\n\\---\nVerursacht bei den an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {value:purcent,percent} seines {%AT} als Schaden.",
+    "pt": "Teletransporta seu herói a até {cell:nb}.\n\\---\nInflige {value:purcent,percent} de seu {%AT} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada."
+  }
+}

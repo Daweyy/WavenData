@@ -1,0 +1,175 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "26299",
+  "m_id": 26299,
+  "m_displayName": "COMPAGNON - LOU - Fouet de Lou",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 246502172,
+    "b": 1378438980,
+    "c": -1207541063,
+    "d": 199989437,
+    "e": 675683409
+  },
+  "m_i18nDescriptionId": {
+    "a": 246502172,
+    "b": 1378438980,
+    "c": -1207541063,
+    "d": 199989437,
+    "e": -1197890692
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3092aa8494d8ef84b8e1b8ae00f8df86"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 26299,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterSpecificCompanionSelector",
+                "companion": 585
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        "startPosition": {
+          "type": "CasterSpecificCompanionSelector",
+          "companion": 585
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6c89c6baab5fb2f4b921444833070264",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Fouet de Lou",
+    "en": "Lou's Whip",
+    "es": "Látigo de Lu",
+    "de": "Lous Peitsche",
+    "pt": "Chicote de Lou"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires sur les {cell:c} devant {Companion:585!}.",
+    "en": "Does {magicalDamage:dmg} to opponents on the {cell:c} in front of {Companion:585!}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios en las {cell:c} delante de {Companion:585!}.",
+    "de": "Verursacht {magicalDamage:dmg} bei den Gegnern auf den {cell:c} vor {Companion:585!}.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários sobre as {cell:c} na frente de {Companion:585!}."
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "260",
+  "m_id": 260,
+  "m_displayName": "MONSTRE BWORK - Coulée de Lave",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2039037768,
+    "b": 143161524,
+    "c": -2086738007,
+    "d": -2022123413,
+    "e": -16200007
+  },
+  "m_i18nDescriptionId": {
+    "a": -2039037768,
+    "b": 143161524,
+    "c": -2086738007,
+    "d": -2022123413,
+    "e": 1711653864
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "dbbdef4e9b022264a90707ad22b0be14"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 260,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        49
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "AllCoordsSelector"
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "75748eaa786e6f143abe7e7f86166956",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      },
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ee2cb415312114842afca2928a4662eb",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "InLineInOneDirectionTargetFilter",
+              "refDirectionTargetA": {
+                "type": "FirstCastTargetSelector"
+              },
+              "refDirectionTargetB": {
+                "type": "SecondCastTargetSelector"
+              },
+              "applyStartTargets": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": -3
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 3
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "DelayOverDistance",
+          "origin": {
+            "type": "FirstCastTargetSelector"
+          },
+          "delay": 0.05
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAP",
+        {
+          "type": 6,
+          "id": 278
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Coulée de Lave",
+    "en": "Lava Flow",
+    "es": "Río de Lava",
+    "de": "Lavastrom",
+    "pt": "Torrente de Lava"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} sur 4\\_cases en ligne.\n\\---\nPose une {FloorMechanism:278} sur les cases libres.",
+    "en": "Does {magicalDamage:dmg} on 4\\_cells in a line.\n\\---\nPlaces one {FloorMechanism:278} on the free cells.",
+    "es": "Inflige {magicalDamage:dmg} en 4\\_casillas en línea.\n\\---\nPone un {FloorMechanism:278} en las casillas libres.",
+    "de": "Verursacht {magicalDamage:dmg} auf 4\\_Feldern in der Reihe.\n\\---\nPlatziert eine\\_{FloorMechanism:278} auf den freien Feldern.",
+    "pt": "Inflige {magicalDamage:dmg} sobre 4\\_células em linha.\n\\---\nPosiciona uma {FloorMechanism:278} sobre as células livres."
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "137270",
+  "m_id": 137270,
+  "m_displayName": "XELOR - CLASSE - ETHER - Mesure du temps",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1449233558,
+    "b": -99475948,
+    "c": 151029529,
+    "d": 932719400,
+    "e": -798731419
+  },
+  "m_i18nDescriptionId": {
+    "a": -1449233558,
+    "b": -99475948,
+    "c": 151029529,
+    "d": 932719400,
+    "e": -1221404440
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "245ee6a8464241d488b1b64b64baea1e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "b494eb93a52ea2a40b9f1d228f1ca5ed"
+      },
+      {
+        "assetGuid": "6e811b7cddb337544950cb4bd31a931a"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 137270,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              20
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Mesure du temps",
+    "en": "Measure of Time",
+    "es": "Medida del Tiempo",
+    "de": "Zeitmessung",
+    "pt": "Medida do Tempo"
+  },
+  "description": {
+    "fr": "Téléporte un de vos <b>SINISTROS</b> jusqu'à {cell:c} de votre héros.\n\\---\nDéclenche son effet.",
+    "en": "Teleports one of your <b>SINISTROS</b> up to {cell:c} from your hero.\n\\---\nTriggers its effect.",
+    "es": "Teletransporta a uno de tus <b>SINISTROS</b> hasta a {cell:c} de tu héroe.\n\\---\nActiva su efecto.",
+    "de": "Teleportiert einen deiner <b>SINISTROS</b> auf eine Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\nLöst seinen Effekt aus.",
+    "pt": "Teletransporta um dos seus <b>SINISTROS</b> a até {cell:c} do seu herói.\n\\---\nAciona seu efeito."
+  }
+}

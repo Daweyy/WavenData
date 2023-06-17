@@ -1,0 +1,201 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "607",
+  "m_id": 607,
+  "m_displayName": "QUETE - CHUCHOTEUR - Fantassins Résistants",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -691869222,
+    "b": -512001708,
+    "c": -1222940709,
+    "d": 945332548,
+    "e": -1909967784
+  },
+  "m_i18nDescriptionId": {
+    "a": -691869222,
+    "b": -512001708,
+    "c": -1222940709,
+    "d": 945332548,
+    "e": -704041280
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 607,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3297,
+      "skinIds": [
+        3297
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "ar",
+          "entitySelector": {
+            "type": "EffectHolderSelector"
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TENAILLE"
+      ]
+    },
+    "families": [
+      52
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 188
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          607
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Fantassins Résistants",
+    "en": "Resistance Foot Soldiers",
+    "es": "Infantes Resistentes",
+    "de": "Widerstandsinfanteristen",
+    "pt": "Infantarias Resistentes"
+  },
+  "description": {
+    "fr": "<rem>Ne peut pas être <b>MARQUÉ</b>\\_<sprite name=\"generic_monster\">.</rem>\n\\---\n{%Attack} Gagne son {%AT} en {%AR} si la cible est en {#TENAILLE}.",
+    "en": "<rem>Cannot be <b>MARKED</b>\\_<sprite name=\"generic_monster\">.</rem>\n\\---\n{%Attack} Receives their {%AT} as {%AR} if the target is in {#TENAILLE}.",
+    "es": "<rem>No puede ser <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.</rem>\n\\---\n{%Attack} Gana su {%AT} en {%AR} si el objetivo está en {#TENAILLE}.",
+    "de": "<rem>Kann nicht <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> werden.</rem>\n\\---\n{%Attack} Erhält seinen {%AT} als {%AR}, falls sich das Ziel im Zustand {#TENAILLE} befindet.",
+    "pt": "<rem>Não pode ser <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.</rem>\n\\---\n{%Attack} Recebe {%AT} em {%AR} se o alvo estiver em {#TENAILLE}."
+  }
+}

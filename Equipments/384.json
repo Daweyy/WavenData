@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "384",
+  "m_id": 384,
+  "m_displayName": "RING - RARE - Anneau Minairal",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1556490751,
+    "b": 517239300,
+    "c": -268924024,
+    "d": -1132604856,
+    "e": 348978523
+  },
+  "m_i18nDescriptionId": {
+    "a": -1556490751,
+    "b": 517239300,
+    "c": -268924024,
+    "d": -1132604856,
+    "e": 612232406
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -1556490751,
+    "b": 517239300,
+    "c": -268924024,
+    "d": -1132604856,
+    "e": 2126538486
+  },
+  "m_illustration": {
+    "assetGuid": "e87feef2ddfbd6d4aa741160bc403b01"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "2f797711fc8c7e14d83d40d5cbd02546"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 384,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      687664,
+      713693,
+      687724,
+      688123,
+      688147,
+      842
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "buff",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 540
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "skillBuff",
+                "value": 5
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "skillBuff",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          22
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Minairal",
+    "en": "Minairal Ring",
+    "es": "Anillo Minejal",
+    "de": "Plörrring",
+    "pt": "Anel Minerial"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {value:buff,percent,+} aux <b>DÉGÂTS</b> de vos {%SPELLCOUNT,plural:other} {%WATER} pour le tour par adversaire {%WET}.",
+    "en": "{%FightTurnStarted} {value:buff,percent,+} to your {%WATER} {%SPELLCOUNT,plural:one} <b>DAMAGE</b> for the turn per {%WET} opponent.",
+    "es": "{%FightTurnStarted} {value:buff,percent,+} a los <b>DAÑOS</b> de tus {%SPELLCOUNT,plural:other} {%WATER} durante el turno por adversario {%WET}.",
+    "de": "{%FightTurnStarted} {value:buff,percent,+} auf den <b>SCHADEN</b> deiner {%WATER}-{%SPELLCOUNT,plural:other} für die Runde pro Gegner im Zustand {%WET}.",
+    "pt": "{%FightTurnStarted} {value:buff,percent,+} aos <b>DANOS</b> dos seus {%SPELLCOUNT,plural:other} {%WATER} durante o turno por adversário {%WET}."
+  },
+  "bgDescription": {
+    "fr": "{%empty}",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

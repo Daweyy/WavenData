@@ -1,0 +1,130 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "160464",
+  "m_id": 160464,
+  "m_displayName": "MONSTRE VAMPYRE - Odeur du Sang",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1293115507,
+    "b": 235341748,
+    "c": 1924787320,
+    "d": 1531444778,
+    "e": -1030351837
+  },
+  "m_i18nDescriptionId": {
+    "a": -1293115507,
+    "b": 235341748,
+    "c": 1924787320,
+    "d": 1531444778,
+    "e": 369371459
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "173d5d21e4c40ba4ea6952747fbf9641"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 160464,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        55
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b834fea2a67219f4ca9fb66a84555c9e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DRAIN",
+        {
+          "type": 20,
+          "id": 82
+        },
+        "DALLE",
+        {
+          "type": 6,
+          "id": 385
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Odeur du sang",
+    "en": "Scent of Blood",
+    "es": "Olor a Sangre",
+    "de": "Blutgeruch",
+    "pt": "Cheiro de Sangue"
+  },
+  "description": {
+    "fr": "Pose une {FloorMechanism:385} autour\\_<sprite name=\"cell_around\"> d'un allié.",
+    "en": "Places one {FloorMechanism:385} around\\_<sprite name=\"cell_around\"> an ally.",
+    "es": "Pone un {FloorMechanism:385} alrededor\\_<sprite name=\"cell_around\"> de un aliado.",
+    "de": "Platziert eine\\_{FloorMechanism:385} ringsum\\_<sprite name=\"cell_around\"> eines Verbündeten.",
+    "pt": "Posiciona uma {FloorMechanism:385} em\\_volta\\_<sprite name=\"cell_around\"> de um aliado."
+  }
+}

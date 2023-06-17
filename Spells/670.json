@@ -1,0 +1,159 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "670",
+  "m_id": 670,
+  "m_displayName": "BRAKMAR - 14 - Tunnel d'un Autre Monde",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -945594785,
+    "b": 1989099588,
+    "c": -2063953077,
+    "d": 1821668646,
+    "e": -1481606525
+  },
+  "m_i18nDescriptionId": {
+    "a": -945594785,
+    "b": 1989099588,
+    "c": -2063953077,
+    "d": 1821668646,
+    "e": -2014173715
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ba4a6f87dbdae5349a0f098d7f13d8c6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "5e2df17d7030eb04288363bb7304dd54"
+      },
+      {
+        "assetGuid": "37b8bb22adf11294096fa0421434fc7d"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 670,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        0
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 4
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Tunnel d'un Autre Monde",
+    "en": "Otherworldly Tunnel",
+    "es": "Túnel de Otro Mundo",
+    "de": "Tunnel aus einer anderen Welt",
+    "pt": "Túnel de Outro Mundo"
+  },
+  "description": {
+    "fr": "Téléporte un personnage allié jusqu'à {cell:c}.",
+    "en": "Teleports an allied character up to {cell:c}.",
+    "es": "Teletransporta a un personaje aliado hasta {cell:c}.",
+    "de": "Teleportiert einen verbündeten Charakter bis zu {cell:c}.",
+    "pt": "Teletransporta um personagem aliado a até {cell:c}."
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "156835",
+  "m_id": 156835,
+  "m_displayName": "MONSTRE NUISIBLE - Arakne - Crocharge",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1444125848,
+    "b": -1160731372,
+    "c": 871939672,
+    "d": 2015753532,
+    "e": 132467518
+  },
+  "m_i18nDescriptionId": {
+    "a": 1444125848,
+    "b": -1160731372,
+    "c": 871939672,
+    "d": 2015753532,
+    "e": -690733371
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "add124b2ed5714142bec5841d7279f9a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 156835,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        62
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              62
+            ]
+          },
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 1,
+            "summonings": [
+              366
+            ]
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "EntityValidForMagicalDamageFilter"
+                }
+              ]
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 20
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          },
+          {
+            "type": "EntityValidForMagicalDamageFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f0997dc1f4a9d7f4cb12ea75748b28ba",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51,
+            43
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 111
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Crocharge",
+    "en": "Crocharge",
+    "es": "Crochembestida",
+    "de": "Crosturm",
+    "pt": "Investeia"
+  },
+  "description": {
+    "fr": "Une {Summoning:366!} charge un adversaire aligné et lui inflige {magicalDamage:dmg}.\n\\---\nApplique {PropertyEffect:111} à la cible.",
+    "en": "One {Summoning:366!} charges an in-line opponent and does {magicalDamage:dmg} to them.\n\\---\nApplies {PropertyEffect:111} on the target.",
+    "es": "Una {Summoning:366!} carga contra un adversario alineado y le inflige {magicalDamage:dmg}.\n\\---\nAplica {PropertyEffect:111} al objetivo.",
+    "de": "Eine\\_{Summoning:366!} stürmt auf einen Gegner in derselben Reihe zu und verursacht {magicalDamage:dmg}.\n\\---\nWendet beim Ziel {PropertyEffect:111} an.",
+    "pt": "Uma {Summoning:366!} investe contra um adversário alinhado e inflige {magicalDamage:dmg}.\n\\---\nAplica {PropertyEffect:111} ao alvo."
+  }
+}

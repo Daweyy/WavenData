@@ -1,0 +1,157 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "149",
+  "m_id": 149,
+  "m_displayName": "MONSTRE CHUCHOTEUR - Renforcement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1362703289,
+    "b": -2110878812,
+    "c": -1163758999,
+    "d": 1176472225,
+    "e": -261336110
+  },
+  "m_i18nDescriptionId": {
+    "a": 1362703289,
+    "b": -2110878812,
+    "c": -1163758999,
+    "d": 1176472225,
+    "e": 79949026
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a55cb24ffda7d0a46b6e80cdc30ec94f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 149,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        52
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        },
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              21
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6826c4cf0dd173c40a654e590e7761d3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 50
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Renforcement",
+    "en": "Reinforcement",
+    "es": "Fortalecimiento",
+    "de": "Verstärkung",
+    "pt": "Reforços"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} à un <b>Chuchoteur</b> allié.\n\\---\nPasse en\\_{PropertyEffect:50}.",
+    "en": "{ARvalue:ar,+} to an allied <b>Whisperer</b>.\n\\---\nAdopts\\_{PropertyEffect:50}.",
+    "es": "{ARvalue:ar,+} a un <b>susurrador</b> aliado.\n\\---\nSe pone en\\_{PropertyEffect:50}.",
+    "de": "{ARvalue:ar,+} für einen verbündeten <b>Flüsterer</b>.\n\\---\nNimmt {PropertyEffect:50} ein.",
+    "pt": "{ARvalue:ar,+} a um <b>Sussurrador</b> aliado.\n\\---\nPassa para\\_{PropertyEffect:50}."
+  }
+}

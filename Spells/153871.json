@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "153871",
+  "m_id": 153871,
+  "m_displayName": "BONTA - SOLDATS - Superpuissance de Bonta",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1487757282,
+    "b": 1222608052,
+    "c": -549428007,
+    "d": -542351457,
+    "e": -357109356
+  },
+  "m_i18nDescriptionId": {
+    "a": -1487757282,
+    "b": 1222608052,
+    "c": -549428007,
+    "d": -542351457,
+    "e": 1679849079
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "24a486b482e29e54d80271571d88e713"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 153871,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3827f49a69e1242459ec5862e4cded92",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      },
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9e53ec280e704ef408920dd695fa2ce6",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.5
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 20,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Superpuissance de Bonta",
+    "en": "Bonta Superpower",
+    "es": "Superpotencia de Bonta",
+    "de": "Supamacht von Bonta",
+    "pt": "Superpotência de Bonta"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à tous les adversaires et autour <sprite name=\"cell_around\"> d'eux.",
+    "en": "Does {magicalDamage:dmg} to all opponents and around <sprite name=\"cell_around\"> them.",
+    "es": "Inflige {magicalDamage:dmg} a todos los adversarios y alrededor\\_<sprite name=\"cell_around\"> de estos.",
+    "de": "Verursacht {magicalDamage:dmg} bei allen Gegnern und rings um <sprite name=\"cell_around\"> sie.",
+    "pt": "Inflige {magicalDamage:dmg} a todos os adversários e em\\_volta <sprite name=\"cell_around\"> deles."
+  }
+}

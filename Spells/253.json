@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "253",
+  "m_id": 253,
+  "m_displayName": "SACRIEUR - CLASSE - EAU - Affliction",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 954337773,
+    "b": 1253459748,
+    "c": -932207543,
+    "d": -1394849804,
+    "e": 250060114
+  },
+  "m_i18nDescriptionId": {
+    "a": 954337773,
+    "b": 1253459748,
+    "c": -932207543,
+    "d": -1394849804,
+    "e": 166715615
+  },
+  "m_elementaryStates": 5,
+  "m_illustrationReference": {
+    "assetGuid": "d855969a7291b4942b3a95368134cbfb"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 253,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      574335,
+      574381,
+      622
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "98283c519a7791c4daecb63113bbda30",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 885,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Affliction",
+    "en": "Affliction",
+    "es": "Aflicción",
+    "de": "Herzeleid",
+    "pt": "Aflição"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>MOUILLÉ</b>\\_<sprite name=\"wet\">.",
+    "en": "Does {magicalDamage:dmg} and applies <b>WET</b>\\_<sprite name=\"wet\">.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>MOJADO</b>\\_<sprite name=\"wet\">.",
+    "de": "Verursacht {magicalDamage:dmg} und wendet <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> an.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "107295",
+  "m_id": 107295,
+  "m_displayName": "XELOR - ARME - GURPAPA - FEU - Protocole explosion",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1632963279,
+    "b": 241401972,
+    "c": -1135434310,
+    "d": 1574546107,
+    "e": 470165435
+  },
+  "m_i18nDescriptionId": {
+    "a": -1632963279,
+    "b": 241401972,
+    "c": -1135434310,
+    "d": 1574546107,
+    "e": 1103457641
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3f5be7d9cd6b46240b16d10170abd564"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 107295,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      475333,
+      475389,
+      181058
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 161,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "UnionOfEntitiesSelector",
+          "first": {
+            "type": "CasterHeroSelector"
+          },
+          "second": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllObjectMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "FamilyFilter",
+                "condition": 1,
+                "families": [
+                  20
+                ]
+              }
+            ]
+          }
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e1872c3218646bb46855463b89134de4",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 767,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgB",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 767,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Protocole : Explosion",
+    "en": "Explosion Protocol",
+    "es": "Protocolo: Explosión",
+    "de": "Protokoll: Explosion",
+    "pt": "Protocolo: Explosão"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmgA} autour\\_<sprite name=\"cell_around\"> de votre héros ou d'un de vos <b>SINISTROS</b>.\n\\---\n{magicalDamage:dmgB,+} si vous avez au moins {value:nb}\\_<b>SINISTROS</b> en jeu.",
+    "en": "Does {magicalDamage:dmgA} around\\_<sprite name=\"cell_around\"> your hero or one of your <b>SINISTROS</b>.\n\\---\n{magicalDamage:dmgB,+} if you have at least {value:nb}\\_<b>SINISTROS</b> in play.",
+    "es": "Inflige {magicalDamage:dmgA} alrededor\\_<sprite name=\"cell_around\"> de tu héroe o de uno de tus <b>SINISTROS</b>.\n\\---\n{magicalDamage:dmgB,+} si tienes al menos {value:nb}\\_<b>SINISTROS</b> en juego.",
+    "de": "Verursacht {magicalDamage:dmgA} in der Nähe\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner <b>SINISTROS</b>.\n\\---\n{magicalDamage:dmgB,+}, wenn du mindestens {value:nb}\\_<b>SINISTROS</b> im Spiel hast.",
+    "pt": "Inflige {magicalDamage:dmgA} em\\_volta\\_<sprite name=\"cell_around\"> do seu herói ou de um dos seus <b>SINISTROS<b>.\n\\---\n{magicalDamage:dmgB,+} se você tiver {value:nb}\\_</b>SINISTROS</b> ou mais em jogo."
+  }
+}

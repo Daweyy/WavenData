@@ -1,0 +1,182 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "140470",
+  "m_id": 140470,
+  "m_displayName": "CRA - ARME - PIVEN - AIR - Impact Nebuleux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1136422426,
+    "b": -351787516,
+    "c": -542396967,
+    "d": 974643339,
+    "e": -1869597144
+  },
+  "m_i18nDescriptionId": {
+    "a": -1136422426,
+    "b": -351787516,
+    "c": -542396967,
+    "d": 974643339,
+    "e": 417086158
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "09876fe9f38ac9f4cbee57b5a703aabb"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 140470,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      94656,
+      523,
+      455559
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 846,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c45ce729edf8f9443a0e340b10f4a2af",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 32
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 62310,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Impact Nébuleux",
+    "en": "Nebulous Impact",
+    "es": "Impacto Nebuloso",
+    "de": "Nebulöser Einschlag",
+    "pt": "Impacto Nebuloso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros et les {#push} de {cell:c}.",
+    "en": "Does {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to your hero and {#push} them {cell:c}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a tu héroe y los {#push} {cell:c}.",
+    "de": "Verursacht {magicalDamage:dmg} bei den angrenzenden Gegnern\\_<sprite name=\"cell_cross\"> deines Helden und {#push} sie um {cell:c}.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> ao seu herói e {#push} por {cell:c}."
+  }
+}

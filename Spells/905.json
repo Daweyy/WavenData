@@ -1,0 +1,199 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "905",
+  "m_id": 905,
+  "m_displayName": "ENIRIPSA - CLASSE - TERRE - Baume Petrificateur",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1772117207,
+    "b": -1563854092,
+    "c": -911870520,
+    "d": 1990381363,
+    "e": 811584155
+  },
+  "m_i18nDescriptionId": {
+    "a": 1772117207,
+    "b": -1563854092,
+    "c": -911870520,
+    "d": 1990381363,
+    "e": 828063674
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c33b082b1c46c1e4abf88fc239098e4d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 905,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      151142,
+      701,
+      507860
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CasterHeroFilter"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "",
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "215f43ed22f4caf4a935606ddae1ecec",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 78,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 6
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Baume Pétrificateur",
+    "en": "Petrifying Balm",
+    "es": "Bálsamo Petrificador",
+    "de": "Versteinernder Balsam",
+    "pt": "Bálsamo Petrificador"
+  },
+  "description": {
+    "fr": "{PropertyEffect:6} un allié autre que votre héros et inflige {magicalDamage:dmg} aux adversaires alignés à lui.",
+    "en": "{PropertyEffect:6} an ally other than your hero and does {magicalDamage:dmg} to opponents in line with them.",
+    "es": "{PropertyEffect:6} a un aliado que no sea tu héroe e inflige {magicalDamage:dmg} a los adversarios alineados con él.",
+    "de": "{PropertyEffect:6} einen anderen Verbündeten als deinen Helden und verursacht{magicalDamage:dmg} bei den auf ihn ausgerichteten Gegnern.",
+    "pt": "{PropertyEffect:6} um aliado que não seja seu herói e inflige {magicalDamage:dmg} aos adversários alinhados a ele."
+  }
+}

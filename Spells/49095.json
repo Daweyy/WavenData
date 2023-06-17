@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "49095",
+  "m_id": 49095,
+  "m_displayName": "MONSTRE CRAQUELEUR - Stalactite",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -248362510,
+    "b": 139447316,
+    "c": 690005290,
+    "d": -1813219519,
+    "e": -1675488689
+  },
+  "m_i18nDescriptionId": {
+    "a": -248362510,
+    "b": 139447316,
+    "c": 690005290,
+    "d": -1813219519,
+    "e": -67286880
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "dd3f32f2c538fad4a9193716921d2c42"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 49095,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              41
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "ArmorFilter",
+            "valueFilter": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "2b0e6bf6e9a3cdb4f8cb415a4e459be2",
+        "originTarget": {
+          "type": "SecondCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Stalactite",
+    "en": "Stalactite",
+    "es": "Estalactita",
+    "de": "Stalaktit",
+    "pt": "Estalactite"
+  },
+  "description": {
+    "fr": "Inflige l’{%ar} d’un {%FAMILY_CRAQUELEUR_NAME} allié à un adversaire, puis la consomme.",
+    "en": "Inflicts an allied {%FAMILY_CRAQUELEUR_NAME}'s {%ar} on an opponent then consumes it.",
+    "es": "Inflige la {%ar} de un {%FAMILY_CRAQUELEUR_NAME} aliado a un adversario, luego la consume.",
+    "de": "Verursacht bei einem Gegner die {%ar} eines verbündeten {%FAMILY_CRAQUELEUR_NAME} als Schaden und verbraucht diese dann.",
+    "pt": "Inflige a {%ar} de um {%FAMILY_CRAQUELEUR_NAME} aliado a um adversário e a consome."
+  }
+}

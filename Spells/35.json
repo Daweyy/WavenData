@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "35",
+  "m_id": 35,
+  "m_displayName": "ENIRIPSA - CLASSE - ETHER - Lien d'amitié",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -358153805,
+    "b": -1199184620,
+    "c": 362296776,
+    "d": 1626579955,
+    "e": 1046641430
+  },
+  "m_i18nDescriptionId": {
+    "a": -358153805,
+    "b": -1199184620,
+    "c": 362296776,
+    "d": 1626579955,
+    "e": -1266666974
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3c80779505f13e242a7e2330fd6c25f5"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 35,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "475129c73680fc54aa201d5f606072cc",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "SUPPORT",
+        {
+          "type": 20,
+          "id": 8
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Lien d'amitié",
+    "en": "Friendship Bond",
+    "es": "Vínculo de Amistad",
+    "de": "Freundschaftsbande",
+    "pt": "Vínculo de Amizade"
+  },
+  "description": {
+    "fr": "Confère {PropertyEffect:8} à un allié.\n\\---\n{#support}\\_: {value:a,+}\\_{%AURA_HEART,value:a} à votre héros s'il en possède déjà.",
+    "en": "Confers {PropertyEffect:8} on an ally.\n\\---\n{#support}: {value:a,+}\\_{%AURA_HEART,value:a} to your hero if they have any already.",
+    "es": "Confiere {PropertyEffect:8} a un aliado.\n\\---\n{#support}: {value:a,+}\\_{%AURA_HEART,value:a} a tu héroe si ya tiene.",
+    "de": "Verleiht einem Verbündeten {PropertyEffect:8}.\n\\---\n{#support}: {value:a,+}\\_{%AURA_HEART,value:a} für deinen Helden, falls er bereits eine besitzt.",
+    "pt": "Concede {PropertyEffect:8} a um aliado.\n\\---\n{#support}: {value:a,+}\\_{%AURA_HEART,value:a} ao seu herói se ele já possuir."
+  }
+}

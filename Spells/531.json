@@ -1,0 +1,147 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "531",
+  "m_id": 531,
+  "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - ETHER - Repousse Kasaï",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 554504616,
+    "b": -1798416684,
+    "c": 1519923514,
+    "d": 101823759,
+    "e": -1251312320
+  },
+  "m_i18nDescriptionId": {
+    "a": 554504616,
+    "b": -1798416684,
+    "c": 1519923514,
+    "d": 101823759,
+    "e": 1973143435
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b3ca39bc98b8e7e428e839d3b76218e4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 531,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 534,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "AllBoardPresencesSelector"
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6f1a71363e1fd464d9b19ca7f8022478",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Repousse Kasaï",
+    "en": "Kasai Push",
+    "es": "Empuje Kasai",
+    "de": "Kasai-Rückstoß",
+    "pt": "Empurrão Kasai"
+  },
+  "description": {
+    "fr": "Inflige l’{%AT} de votre héros et repousse de {cell:c} pour chaque {%AURA_SWORD} qu’il possède.",
+    "en": "Inflicts your hero's {%AT} and pushes {cell:c} for each {%AURA_SWORD} that they have.",
+    "es": "Inflige el {%AT} de tu héroe y empuja {cell:c} por cada {%AURA_SWORD} que tenga.",
+    "de": "Verursacht den {%AT} deines Helden als Schaden. Rückstoß um {cell:c} je {%AURA_SWORD}, die er besitzt.",
+    "pt": "Inflige o {%AT} do seu herói e afasta por {cell:c} para cada {%AURA_SWORD} que ele possuir."
+  }
+}

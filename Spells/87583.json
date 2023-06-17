@@ -1,0 +1,265 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "87583",
+  "m_id": 87583,
+  "m_displayName": "XELOR - ARME - PRAMIUM - FEU - Declic Enflamme",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2129142222,
+    "b": 1111208964,
+    "c": 60870664,
+    "d": 1258367682,
+    "e": -112742965
+  },
+  "m_i18nDescriptionId": {
+    "a": 2129142222,
+    "b": 1111208964,
+    "c": 60870664,
+    "d": 1258367682,
+    "e": 1993987249
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c052e765dd7bb9f46b977e1dda7c1037"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 87583,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      476313,
+      722,
+      180531
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 614,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "MultipleAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        },
+        "areaOfEffects": [
+          {
+            "type": "SquareAreaOfEffectSelector",
+            "originSelector": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "FamilyFilter",
+                  "condition": 1,
+                  "families": [
+                    20
+                  ]
+                }
+              ]
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          },
+          {
+            "type": "AreaFromTargetsSelector",
+            "originSelector": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "FamilyFilter",
+                  "condition": 1,
+                  "families": [
+                    20
+                  ]
+                }
+              ]
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 0
+            },
+            "targets": {
+              "type": "CasterHeroSelector"
+            },
+            "areaOfEffect": {
+              "type": "SquareAreaOfEffectSelector",
+              "originSelector": {
+                "type": "EngineDeterminedHolder"
+              },
+              "size": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "05b5418a50a7ac04fb54f089053afbdb",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 632,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Déclic Enflammé",
+    "en": "Flaming Click",
+    "es": "Clic Ardiente",
+    "de": "Entbrannter Auslöser",
+    "pt": "Estalo Flamejante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros et d'un de vos <b>SINISTROS</b>.",
+    "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero and one of your <b>SINISTROS</b>.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe y de uno de tus <b>SINISTROS</b>.",
+    "de": "Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> deines Helden und eines deiner <b>SINISTROS</b> {magicalDamage:dmg}.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói e de um de seus <b>SINISTROS</b>."
+  }
+}

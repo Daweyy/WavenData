@@ -1,0 +1,221 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "846",
+  "m_id": 846,
+  "m_displayName": "CRA - Arc Piven",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1924960356,
+    "b": 1137737924,
+    "c": 1811363803,
+    "d": -255350778,
+    "e": -1618944931
+  },
+  "m_i18nDescriptionId": {
+    "a": 1924960356,
+    "b": 1137737924,
+    "c": 1811363803,
+    "d": -255350778,
+    "e": -522429987
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": 1924960356,
+    "b": 1137737924,
+    "c": 1811363803,
+    "d": -255350778,
+    "e": 1508286057
+  },
+  "m_i18nSimpleNameId": {
+    "a": 1924960356,
+    "b": 1137737924,
+    "c": 1811363803,
+    "d": -255350778,
+    "e": -2079218268
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": 1924960356,
+    "b": 1137737924,
+    "c": 1811363803,
+    "d": -255350778,
+    "e": 357296973
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "71609f5e33cceb44e9146b57e8d80d68"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 846,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2854,
+      "skinIds": [
+        1778,
+        1222,
+        1841,
+        1755,
+        4992,
+        2854
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "v",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 136796
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      2
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 385
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 20
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      725444,
+      725672,
+      735311,
+      735398
+    ],
+    "difficultyHint": 1,
+    "defaultSkinIdMale": 1778,
+    "defaultSkinIdFemale": 2854,
+    "god": 2,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      125,
+      208505,
+      904,
+      746
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      207193,
+      207969,
+      621,
+      866,
+      617,
+      99,
+      137708,
+      208183,
+      335
+    ]
+  },
+  "name": {
+    "fr": "Arc Piven",
+    "en": "Piven Bow",
+    "es": "Arco Piven",
+    "de": "Tannenbogen",
+    "pt": "Arco Piven"
+  },
+  "description": {
+    "fr": "Lorsque votre héros libère une {%AURA_SIGHT,plural:one}\\_: Inflige {value:v,percent} de son {%AT} à la cible.",
+    "en": "When your hero releases a {%AURA_SIGHT,plural:one}: Inflicts {value:v,percent} of their {%AT} on the target.",
+    "es": "Cuando tu héroe libera un {%AURA_SIGHT,plural:one}: Inflige un {value:v,percent} de su {%AT} al objetivo.",
+    "de": "Wenn dein Held eine {%AURA_SIGHT,plural:one} auslöst: Verursacht beim Ziel {value:v,percent} seines {%AT} als Schaden.",
+    "pt": "Quando seu herói libera uma {%AURA_SIGHT,plural:one}: Inflige {value:v,percent} de seu {%AT} ao alvo."
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4>AURA MIRE</color>\\_: Cette flèche magique gravite autour de vous pour infliger des dégâts en plus quand vous jouez un sort.\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",
+    "en": "<color=#7FD5E4>DART AURA</color>: This magical dart gravitates around you to do extra damage when you play a spell.\n\\---\n<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!",
+    "es": "<color=#7FD5E4>AURA MIRA</color>: Esta flecha mágica gravita a tu alrededor e inflige daños adicionales cuando lanzas un hechizo.\n\\---\n<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!",
+    "de": "<color=#7FD5E4>PHANTOMAURA</color>: Dieser magische Pfeil umkreist dich, damit du mehr Schaden verursachen kannst, wenn du einen Zauber ausspielst.\n\\---\n<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu!",
+    "pt": "<color=#7FD5E4>AURA MIRA</color>: Esta flecha mágica gravita ao seu redor para causar dano adicional quando você lançar um feitiço.\n\\---\n<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameCra}",
+    "en": "{%OnboardingSimpleNameCra}",
+    "es": "{%OnboardingSimpleNameCra}",
+    "de": "{%OnboardingSimpleNameCra}",
+    "pt": "{%OnboardingSimpleNameCra}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionCra}",
+    "en": "{%OnboardingSimpleDescriptionCra}",
+    "es": "{%OnboardingSimpleDescriptionCra}",
+    "de": "{%OnboardingSimpleDescriptionCra}",
+    "pt": "{%OnboardingSimpleDescriptionCra}"
+  }
+}

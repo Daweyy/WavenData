@@ -1,0 +1,190 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "161076",
+  "m_id": 161076,
+  "m_displayName": "MONSTRE VAMPYRE - Sang Riche",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 521874774,
+    "b": 228507492,
+    "c": 892294520,
+    "d": -444876710,
+    "e": -531346957
+  },
+  "m_i18nDescriptionId": {
+    "a": 521874774,
+    "b": 228507492,
+    "c": 892294520,
+    "d": -444876710,
+    "e": 1759389380
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c5f2fd7ce220f9e42912d1073d7de565"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 161076,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        55
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 0,
+            "carac": 1
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "42edc0f73a5122f4aa7ed06b9b09133c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Sang Riche",
+    "en": "Rich Blood",
+    "es": "Sangre Rica",
+    "de": "Reiches Blut",
+    "pt": "Sangue Rico"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nSoigne de {PVvalue:h} le <b>Vampyre</b> allié ayant le moins de {%PV}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nHeals the allied <b>Vampyre</b> with the least {%PV} {PVvalue:h}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nCura {PVvalue:h} al <b>vampyro</b> aliado que menos {%PV} tenga.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nHeilt den verbündeten <b>Vampyr</b> mit den wenigstens {%PV} um {PVvalue:h}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nCura em {PVvalue:h} o <b>Vampyro</b> aliado que tenha menos {%PV}."
+  }
+}

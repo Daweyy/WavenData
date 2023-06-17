@@ -1,0 +1,159 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "155503",
+  "m_id": 155503,
+  "m_displayName": "MONSTRE ROUBLARD - Bombardement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1833919801,
+    "b": 249304644,
+    "c": 1305110264,
+    "d": 959157354,
+    "e": -468660262
+  },
+  "m_i18nDescriptionId": {
+    "a": 1833919801,
+    "b": 249304644,
+    "c": 1305110264,
+    "d": 959157354,
+    "e": -626537211
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "fbe79aed29dbd0944923da7f0d82ea88"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 155503,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        13
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCoordsSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "88dd67ed8bfb88041b0167c3cefdc83d",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 1
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dgt",
+          "baseValue": 5,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbr",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 7,
+          "id": 349
+        },
+        {
+          "type": 7,
+          "id": 1650
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1506
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bombardement",
+    "en": "Bombardment",
+    "es": "Bombardeo",
+    "de": "Bombardement",
+    "pt": "Bombardeio"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dgt} dans la zone\\_<sprite name=\"cell_circle2> ciblée.\n\\---\nConstruit jusqu'à {value:nbr} {ObjectMechanism:1506[BOMBINOS]} sur des cases libres.",
+    "en": "Does {magicalDamage:dgt} in the targeted <sprite name=\"cell_circle2>\\_zone.\n\\---\nBuilds up to {value:nbr} {ObjectMechanism:1506[BOMBINOS]} on the free cells.",
+    "es": "Inflige {magicalDamage:dgt} en la zona\\_<sprite name=\"cell_circle2> objetivo.\n\\---\nConstruye hasta {value:nbr} {ObjectMechanism:1506[BOMBINOS]} en casillas libres.",
+    "de": "Verursacht {magicalDamage:dgt} im Wirkungsbereich\\_<sprite name=\"cell_circle2>.\n\\---\nErrichtet bis zu {value:nbr}\\_{ObjectMechanism:1506[BOMBINOS]} auf freien Feldern.",
+    "pt": "Inflige {magicalDamage:dgt} na zona\\_<sprite name=\"cell_circle2> visada.\n\\---\nPosiciona até {value:nbr}\\_{ObjectMechanism:1506[BOMBINOS]} sobre células livres."
+  }
+}

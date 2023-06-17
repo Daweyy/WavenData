@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "157343",
+  "m_id": 157343,
+  "m_displayName": "BONTA - Q11 - Au centre du ring",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1358054790,
+    "b": 55747540,
+    "c": -1704735351,
+    "d": 223713645,
+    "e": 493823087
+  },
+  "m_i18nDescriptionId": {
+    "a": 1358054790,
+    "b": 55747540,
+    "c": -1704735351,
+    "d": 223713645,
+    "e": 737225568
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a546b016d6b430a478dba362d98d003f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2051,
+      2050
+    ],
+    "m_values": [
+      {
+        "assetGuid": "3bf2a9476b8edd047aa53d29f8c29f01"
+      },
+      {
+        "assetGuid": "0e8af0eeda2394644a333107124a587c"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 157343,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "CoordValidCondition",
+        "selector": {
+          "type": "CenterMapCoordSelector"
+        },
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 113
+        },
+        "DALLE",
+        {
+          "type": 6,
+          "id": 824
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Au centre du ring\\_!",
+    "en": "Dead Center!",
+    "es": "Al Centro del Ring",
+    "de": "In der Mitte des Rings!",
+    "pt": "No Centro do Ringue!"
+  },
+  "description": {
+    "fr": "Téléporte un personnage au centre du terrain.\n\\---\nConstruit un {FloorMechanism:824} sur les cases adjacentes\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "en": "Teleports a character to the center of the field.\n\\---\nBuilds one {FloorMechanism:824} on the cells adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
+    "es": "Teletransporta a un personaje al centro del terreno.\n\\---\nConstruye un {FloorMechanism:824} en las casillas adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
+    "de": "Teleportiert einen Charakter in die Mitte des Spielfelds.\n\\---\nErrichtet einen\\_{FloorMechanism:824} auf einem an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_cross\"> Feld.",
+    "pt": "Teletransporta um personagem ao centro do campo de batalha.\n\\---\nPosiciona um {FloorMechanism:824} sobre as células adjacentes\\_<sprite name=\"cell_cross\"> à sua posição final."
+  }
+}

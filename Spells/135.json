@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "135",
+  "m_id": 135,
+  "m_displayName": "SACRIEUR - CLASSE - ETHER - Vierge de Fer",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1380784976,
+    "b": -1832969756,
+    "c": -1673858838,
+    "d": -18865347,
+    "e": -1695742452
+  },
+  "m_i18nDescriptionId": {
+    "a": 1380784976,
+    "b": -1832969756,
+    "c": -1673858838,
+    "d": -18865347,
+    "e": 1271080130
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bb1a505cfee7bed4b98d7c55218c2a6e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 135,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": 30,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 104
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 429
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Vierge de Fer",
+    "en": "Iron Maiden",
+    "es": "Virgen de Hierro",
+    "de": "Eiserne Jungfrau",
+    "pt": "Dama de Ferro"
+  },
+  "description": {
+    "fr": "Construit une {ObjectMechanism:429} jusqu'à {cell:c} de votre héros.\n\\---\n<rem>Détruit votre précédent {ObjectMechanism:429!}.</rem>",
+    "en": "Builds one {ObjectMechanism:429} up to {cell:c} from your hero.\n<rem>Destroys your previous <b>IRON MAIDEN</b>.</rem>",
+    "es": "Construye une {ObjectMechanism:429} hasta a {cell:c} de tu héroe.\n<rem>Destruye tu anterior <b>VIRGEN DE HIERRO</b>.</rem>",
+    "de": "Errichtet eine {ObjectMechanism:429} bis {cell:c} von deinem Helden entfernt.\n<rem>Zerstört deine vorherige <b>EISERNE JUNGFRAU</b>.</rem>",
+    "pt": "Posiciona uma {ObjectMechanism:429} a até {cell:c} do seu herói.\n<rem>Destrói a sua <b>DAMA DE FERRO</b> anterior.</rem>"
+  }
+}

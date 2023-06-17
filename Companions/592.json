@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "592",
+  "m_id": 592,
+  "m_displayName": "QUETE - CHUCHOTEUR - Sir Hector V2",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1290890512,
+    "b": -363674188,
+    "c": 239764219,
+    "d": -1655338125,
+    "e": 1541051498
+  },
+  "m_i18nDescriptionId": {
+    "a": 1290890512,
+    "b": -363674188,
+    "c": 239764219,
+    "d": -1655338125,
+    "e": 1865605398
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 592,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 6921,
+      "skinIds": [
+        6921
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ppow",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbEntity",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      75
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 215
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 12
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          592
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Sir Hector",
+    "en": "Sir Hector",
+    "es": "Sir Héctor",
+    "de": "Sir Hektor",
+    "pt": "Sir Hector"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {ATvalue:ppow,percent,+} à lui et aux alliés autour\\_<sprite name=\"cell_around\"> pour le tour s'il y a au moins {value:nbEntity} {nbEntity, plural, one[allié] other[alliés]} autour\\_<sprite name=\"cell_around\">.\n",
+    "en": "{%FightTurnStarted} {ATvalue:ppow,percent,+} to him and surrounding\\_<sprite name=\"cell_around\"> allies for the turn if there {nbEntity, plural, one[is] other[are]} at least {value:nbEntity} surrounding\\_<sprite name=\"cell_around\"> {nbEntity, plural, one[ally] other[allies]}.",
+    "es": "{%FightTurnStarted} {ATvalue:ppow,percent,+} a él y a los aliados alrededor\\_<sprite name=\"cell_around\"> durante el turno si hay al menos {value:nbEntity} {nbEntity, plural, one[aliado] other[aliados]} alrededor\\_<sprite name=\"cell_around\">.\n",
+    "de": "{%FightTurnStarted}{ATvalue:ppow,percent,+} für die Runde für sich und die Verbündeten ringsum\\_<sprite name=\"cell_around\">, wenn sich mindestens {value:nbEntity} {nbEntity, plural, one[Verbündeter] other[Verbündete]} ringsum\\_<sprite name=\"cell_around\"> befinden.\n",
+    "pt": "{%FightTurnStarted}{ATvalue:ppow,percent,+} a ele e aos aliados em\\_volta\\_<sprite name=\"cell_around\"> durante o turno se houver {value:nbEntity}{nbEntity, plural, one[aliado] other[aliados]} em\\_volta\\_<sprite name=\"cell_around\">.\n"
+  }
+}

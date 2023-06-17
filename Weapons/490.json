@@ -1,0 +1,210 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "490",
+  "m_id": 490,
+  "m_displayName": "XELOR - Synchronisateur Tako",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1144043206,
+    "b": -1730218984,
+    "c": -444187991,
+    "d": -1156058891,
+    "e": -1638721296
+  },
+  "m_i18nDescriptionId": {
+    "a": 1144043206,
+    "b": -1730218984,
+    "c": -444187991,
+    "d": -1156058891,
+    "e": 173739584
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": 1144043206,
+    "b": -1730218984,
+    "c": -444187991,
+    "d": -1156058891,
+    "e": 655725363
+  },
+  "m_i18nSimpleNameId": {
+    "a": 1144043206,
+    "b": -1730218984,
+    "c": -444187991,
+    "d": -1156058891,
+    "e": -1721102517
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": 1144043206,
+    "b": -1730218984,
+    "c": -444187991,
+    "d": -1156058891,
+    "e": -47527027
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "35592d411554fe740ab97e07df346d21"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 490,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 5057,
+      "skinIds": [
+        5446,
+        4068,
+        1365,
+        6824,
+        6580,
+        5057
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "x",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "HolderHasSkillCondition",
+                "skill": 143390
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 3
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      7
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 391
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      415,
+      740547,
+      740589,
+      743610
+    ],
+    "difficultyHint": 2,
+    "defaultSkinIdMale": 5446,
+    "defaultSkinIdFemale": 5057,
+    "god": 7,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      566,
+      235941,
+      683,
+      489
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      211049,
+      776,
+      121,
+      265,
+      573,
+      79,
+      62,
+      743,
+      3
+    ]
+  },
+  "name": {
+    "fr": "Synchronisateur Tako",
+    "en": "Tako Synchronizater",
+    "es": "Sincronizador Tako",
+    "de": "Tako-Synchronisator",
+    "pt": "Sincronizador Tako"
+  },
+  "description": {
+    "fr": "{%FightTurnEnded} Ajoute vos {%PA,plural:other} non consommés en {%reserve}.\n\\---\n<rem>Limité à {PAvalue:x}.</rem>",
+    "en": "{%FightTurnEnded} Adds your unused {%PA,plural:other} to the {%reserve}.\n\\---\n<rem>Limit: {PAvalue:x}.</rem>",
+    "es": "{%FightTurnEnded} Añade tus {%PA,plural:other} no consumidos a la {%reserve}.\n\\---\n<rem>Limitado a {PAvalue:x}.</rem>",
+    "de": "{%FightTurnEnded} Fügt deine nicht verbrauchten {%PA,plural:other} der {%reserve} hinzu.\n\\---\n<rem>Auf {PAvalue:x} begrenzt.</rem>",
+    "pt": "{%FightTurnEnded} Adiciona seus {%PA,plural:other} não utilizados à {%reserve}.\n\\---\n<rem>Limite de {PAvalue:x}.</rem>"
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4>{%PA}</color>\\_: Les Points d'Action sont les ressources nécessaires pour jouer vos sorts.\n\\---\n<color=#7FD5E4>{%reserve}</color>\\_: Accélérez votre jeu en jouant plus de sorts, voire des plus dévastateurs\\_!",
+    "en": "<color=#7FD5E4>{%PA}</color>: Action Points are the resources you need to play your spells.\n\\---\n<color=#7FD5E4>{%reserve}</color>: Speed up your game by playing more spells or more devastating spells!",
+    "es": "<color=#7FD5E4>{%PA}</color>: Los puntos de acción son los recursos que necesitas para lanzar hechizos.\n\\---\n<color=#7FD5E4>{%reserve}</color>: Acelera tu juego utilizando más hechizos o hechizos más devastadores.",
+    "de": "<color=#7FD5E4>{%PA}</color>: Aktionspunkte werden benötigt, um deine Zauber zu wirken.\n\\---\n<color=#7FD5E4>{%reserve}</color>: Beschleunige dein Spiel, indem du viele Zauber wirkst, sogar die mächtigsten!",
+    "pt": "<color=#7FD5E4>{%PA}</color>: Os Pontos de Ação são os recursos necessários para lançar os seus feitiços.\n\\---\n<color=#7FD5E4>{%reserve}</color>: Acelere o seu jogo lançando mais feitiços ou feitiços mais devastadores!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameXelor}",
+    "en": "{%OnboardingSimpleNameXelor}",
+    "es": "{%OnboardingSimpleNameXelor}",
+    "de": "{%OnboardingSimpleNameXelor}",
+    "pt": "{%OnboardingSimpleNameXelor}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionXelor}",
+    "en": "{%OnboardingSimpleDescriptionXelor}",
+    "es": "{%OnboardingSimpleDescriptionXelor}",
+    "de": "{%OnboardingSimpleDescriptionXelor}",
+    "pt": "{%OnboardingSimpleDescriptionXelor}"
+  }
+}

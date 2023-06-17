@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "30604",
+  "m_id": 30604,
+  "m_displayName": "MONSTRE CHAFER - Nécrolère",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1928453363,
+    "b": -445392396,
+    "c": -996687189,
+    "d": 381132141,
+    "e": 1672059516
+  },
+  "m_i18nDescriptionId": {
+    "a": -1928453363,
+    "b": -445392396,
+    "c": -996687189,
+    "d": 381132141,
+    "e": -59383773
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e150d71fc5d54374e981a5637e5bdfaf"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 30604,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        40
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 8
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllSummoningsSelector"
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "SummoningDefinitionFilter",
+              "condition": 1,
+              "summonings": [
+                238
+              ]
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7d2b0e18f2ebdc646bda93a3d822d7f9",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "SummoningDefinitionFilter",
+              "condition": 1,
+              "summonings": [
+                238
+              ]
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.25
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Nécrolère",
+    "en": "Necrage",
+    "es": "Necrólera",
+    "de": "Necrowut",
+    "pt": "Necrólera"
+  },
+  "description": {
+    "fr": "Téléporte les {Summoning:238,plural:other!} sur les cases adjacentes\\_<sprite name=\"cell_cross\"> à l'adversaire ciblé et déclenche leur <b>ATTAQUE</b>.",
+    "en": "Teleports the {Summoning:238,plural:other!} to cells adjacent\\_<sprite name=\"cell_cross\"> to the targeted opponent and triggers their <b>ATTACK</b>.",
+    "es": "Teletransporta a los {Summoning:238,plural:other!} a las casillas adyacentes\\_<sprite name=\"cell_cross\"> al adversario objetivo y activa su <b>ATAQUE</b>.",
+    "de": "Teleportiert die {Summoning:238,plural:other!} auf die angrenzenden Felder\\_<sprite name=\"cell_cross\"> eines anvisierten Gegners und löst ihren <b>ANGRIFF</b> aus.",
+    "pt": "Teletransporta os {Summoning:238,plural:other!} sobre as células adjacentes\\_<sprite name=\"cell_cross\"> ao adversário visado e aciona os <b>ATAQUES</b> deles."
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "577",
+  "m_id": 577,
+  "m_displayName": "MONSTRE COCHON - BONTA - Q08 - Pet de Princesse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2122932231,
+    "b": -1610180988,
+    "c": -1546211253,
+    "d": -754706028,
+    "e": -2072966190
+  },
+  "m_i18nDescriptionId": {
+    "a": 2122932231,
+    "b": -1610180988,
+    "c": -1546211253,
+    "d": -754706028,
+    "e": 554138465
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "294d93fe9500aeb4b819e06f49fbd9e8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 577,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "SummoningDefinitionFilter",
+                  "condition": 1,
+                  "summonings": [
+                    840
+                  ]
+                },
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "899a2fc10b0d2ce4eb372d04f6c297e5",
+        "originTarget": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllSummoningsSelector"
+          },
+          "filters": [
+            {
+              "type": "SummoningDefinitionFilter",
+              "condition": 1,
+              "summonings": [
+                840
+              ]
+            }
+          ]
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pet de Princesse",
+    "en": "Princess Toot",
+    "es": "Pedo de Princesa",
+    "de": "Prinzessinnen-Furz",
+    "pt": "Peido de Princesa"
+  },
+  "description": {
+    "fr": "{#PUSH} un adversaire adjacent\\_<sprite name=\"cell_cross\"> à la {Summoning:840!} de {cell:c}.",
+    "en": "{#PUSH} an opponent adjacent\\_<sprite name=\"cell_cross\"> to {Summoning:840!} {cell:c}.",
+    "es": "{#PUSH} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a la {Summoning:840!} {cell:c}.",
+    "de": "{#PUSH} einen angrenzenden\\_<sprite name=\"cell_cross\"> Gegner der {Summoning:840!} auf {cell:c}.",
+    "pt": "{#PUSH} um adversário adjacente\\_<sprite name=\"cell_cross\"> à {Summoning:840!} por {cell:c}."
+  }
+}

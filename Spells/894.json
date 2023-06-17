@@ -1,0 +1,204 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "894",
+  "m_id": 894,
+  "m_displayName": "SRAM - ARME - SHUGEN - AIR - Traque Sournoise",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 821468627,
+    "b": 537216068,
+    "c": -2140627608,
+    "d": -65724082,
+    "e": 35936665
+  },
+  "m_i18nDescriptionId": {
+    "a": 821468627,
+    "b": 537216068,
+    "c": -2140627608,
+    "d": -65724082,
+    "e": 2013138143
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "288578df7e599d047a7d595feba862ca"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "5b78ae19a6ad1944bb72ae2f43af31b2"
+      },
+      {
+        "assetGuid": "151cb39f681a6e941b7ea506aff6dc81"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 894,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      355066,
+      491317,
+      369923
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16,
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 36,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "EntityPositionSelector",
+              "entity": {
+                "type": "FirstCastTargetSelector"
+              }
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 374,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Traque Sournoise",
+    "en": "Sneaky Tracking",
+    "es": "Rastreo Solapado",
+    "de": "Heimtückische Verfolgungsjagd",
+    "pt": "Caçada Traiçoeira"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et {#Push} de {cell:c}.\n\\---\nÉchange la position de votre héros avec la cible si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
+    "en": "Does {magicalDamage:dmg} and {#Push} {cell:c}. \n\\---\nSwitches your hero's position with the target if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
+    "es": "Inflige {magicalDamage:dmg} y {#Push} {cell:c}.\n\\---\nIntercambia la posición de tu héroe con la del objetivo si está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
+    "de": "Verursacht {magicalDamage:dmg} und {#Push} um {cell:c}.\n\\---\nTauscht die Position deines Helden mit der des Ziels, falls es <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg} e {#Push} por {cell:c}.\n\\---\nTroca a posição do seu herói com o alvo, se este estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "234717",
+  "m_id": 234717,
+  "m_displayName": "EQUIPMENT - RING - Orbe de Mort",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1145848199,
+    "b": -2115215452,
+    "c": 1912349400,
+    "d": -317962372,
+    "e": 432921227
+  },
+  "m_i18nDescriptionId": {
+    "a": 1145848199,
+    "b": -2115215452,
+    "c": 1912349400,
+    "d": -317962372,
+    "e": 560857211
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7d29bbd91188d064fadf4408216827d3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 234717,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": ""
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -10
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "51066058f8b9c434883b60617e557096",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -10
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 200
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Orbe de Mort",
+    "en": "Death Orb",
+    "es": "Orbe de Muerte",
+    "de": "Todeskugel",
+    "pt": "Orbe da Morte"
+  },
+  "description": {
+    "fr": "Invoque une {Summoning:200} jusqu'à {cell:c} de votre héros.\n\\---\nLorsqu'un de vos compagnons ou un monstre meurt\\_:  {PAvalue:pa} au coût de ce {%SPELLCOUNT}.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Summons one {Summoning:200} up to {cell:c} from your hero.\n\\---\nWhen one of your companions or a monster dies: {PAvalue:pa} to the cost of this {%SPELLCOUNT}.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Invoca una {Summoning:200} hasta a {cell:c} de tu héroe.\n\\---\nCuando uno de tus compañeros o un monstruo muere: {PAvalue:pa} al coste de este {%SPELLCOUNT}.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Beschwört eine\\_{Summoning:200} auf eine Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\nWenn einer deiner Begleiter oder ein Monster stirbt: {PAvalue:pa} auf die Kosten dieses {%SPELLCOUNT}.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Invoca uma {Summoning:200} a até {cell:c} do seu herói.\n\\---\nQuando um dos seus companheiros ou monstro morre: {PAvalue:pa} ao custo do {%SPELLCOUNT}.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

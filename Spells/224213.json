@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "224213",
+  "m_id": 224213,
+  "m_displayName": "OSAMODAS - CLASSE - EAU - Nasarde",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": 1235782972,
+    "b": -1608876620,
+    "c": -1439191048,
+    "d": 454803457,
+    "e": -943953027
+  },
+  "m_i18nDescriptionId": {
+    "a": 1235782972,
+    "b": -1608876620,
+    "c": -1439191048,
+    "d": 454803457,
+    "e": 191617680
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7f78e32a5a7a90342a275687be3f9d18"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 224213,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 70
+        },
+        "HAIL",
+        "BEAST",
+        {
+          "type": 22,
+          "id": 146
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Nasarde",
+    "en": "Brosser",
+    "es": "Brosser",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:146,value:a} à\\_votre\\_héros si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "en": "Inflige {magicalDamage:dmg}.\nConfère {#GROWING} à vos bêtes\\vsi la cible est {#WET[MOUILLÉE]}<sprite name=\"wet\">.",
+    "es": "Inflige {magicalDamage:dmg}.\nConfère {#GROWING} à vos bêtes\\vsi la cible est {#WET[MOUILLÉE]}<sprite name=\"wet\">.",
+    "de": "",
+    "pt": ""
+  }
+}

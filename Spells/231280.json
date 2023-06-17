@@ -1,0 +1,173 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "231280",
+  "m_id": 231280,
+  "m_displayName": "SACRIEUR - ARME - DARDE KAN - EAU - Troisieme Oeil",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1155448883,
+    "b": 1107147540,
+    "c": 1650713449,
+    "d": 1156207465,
+    "e": 1597329489
+  },
+  "m_i18nDescriptionId": {
+    "a": 1155448883,
+    "b": 1107147540,
+    "c": 1650713449,
+    "d": 1156207465,
+    "e": -1606000457
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7a69125758d76b94da1a2a104cb8d7d3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 231280,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      591249,
+      403,
+      591324
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 381,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f222473085921c74c9f8ddeba24a50d4",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 98930,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "jaugeGain",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 5
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Troisième Œil",
+    "en": "Third Eye",
+    "es": "Tercer Ojo",
+    "de": "Drittes Auge",
+    "pt": "Terceiro Olho"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} la cible si vous avez au moins un compagnon en jeu.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} the target if you have at least one companion in play.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} al objetivo si tienes al menos un compañero en juego.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nWirkt {PropertyEffect:5} beim Ziel, wenn du mindestens einen Begleiter im Spiel hast.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} o alvo se você tiver um companheiro ou mais em jogo."
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "509",
+  "m_id": 509,
+  "m_displayName": "SRAM - CLASSE - EAU - Doigts de grele",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 141444298,
+    "b": -976180284,
+    "c": 663683032,
+    "d": 2135713086,
+    "e": -742374063
+  },
+  "m_i18nDescriptionId": {
+    "a": 141444298,
+    "b": -976180284,
+    "c": 663683032,
+    "d": 2135713086,
+    "e": -733652876
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e2350eb3ff498694fa71b223a5bd9a09"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 509,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      347204,
+      359613,
+      485419
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "84fb6acb0ee0234459aca831a69cdb2c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 30
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 857,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 5
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Doigts de Grêle",
+    "en": "Hail Fingers",
+    "es": "Dedos de Granizo",
+    "de": "Hagelfinger",
+    "pt": "Dedos de Granizo"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} la cible si elle est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} the target if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} al objetivo si está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nWirkt {PropertyEffect:5} beim Ziel, wenn es <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} o alvo se ele estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+  }
+}

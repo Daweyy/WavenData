@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "749",
+  "m_id": 749,
+  "m_displayName": "EQUIPMENT - RING - GRIMOIRE - (4) Terre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1470941679,
+    "b": -2018368540,
+    "c": 1169760441,
+    "d": -16807370,
+    "e": -798627429
+  },
+  "m_i18nDescriptionId": {
+    "a": -1470941679,
+    "b": -2018368540,
+    "c": 1169760441,
+    "d": -16807370,
+    "e": -1596025547
+  },
+  "m_elementaryStates": 2,
+  "m_illustrationReference": {
+    "assetGuid": "f69c6610fdcd74d4aa324880b19645e4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 749,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        89
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "AllCoordsSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3c30620e19a02a64686fab84a4e07223",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Page 4 du Grimoire des Roches",
+    "en": "Page 4 of the Spellbook of Rocks",
+    "es": "Página 4 del Grimorio de las Rocas",
+    "de": "Seite 4 des Zauberbuchs der Felsen",
+    "pt": "Página 4 do Grimório das Rochas"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} et applique <b>BOUEUX</b>\\_<sprite name=\"muddy\"> aux adversaires dans la zone <sprite name=\"cell_cross\"> ciblée.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nDoes {magicalDamage:dmg} and applies <b>MUDDY</b>\\_<sprite name=\"muddy\"> on opponents in the targeted <sprite name=\"cell_cross\"> zone.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} y aplica <b>FANGOSO</b>\\_<sprite name=\"muddy\"> a los adversarios de la zona <sprite name=\"cell_cross\"> objetivo.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nVerursacht {magicalDamage:dmg} und wirkt <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> bei den Gegnern im Wirkungsbereich\\_<sprite name=\"cell_cross\">.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg} e aplica <b>ENLAMEADO</b>\\_<sprite name=\"muddy\"> aos adversários na zona\\_<sprite name=\"cell_cross\"> visada."
+  }
+}

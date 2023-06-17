@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "132",
+  "m_id": 132,
+  "m_displayName": "RING - COMMON - Anneau Devy",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1014046995,
+    "b": -416394956,
+    "c": -976625704,
+    "d": 741254794,
+    "e": 1387494499
+  },
+  "m_i18nDescriptionId": {
+    "a": -1014046995,
+    "b": -416394956,
+    "c": -976625704,
+    "d": 741254794,
+    "e": 2004752940
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -1014046995,
+    "b": -416394956,
+    "c": -976625704,
+    "d": 741254794,
+    "e": -1543446430
+  },
+  "m_illustration": {
+    "assetGuid": "bca22566b5cdf754ca11a67d9a0d760c"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "5fd82fa3c9c9e0448a6ae7c1706cd8dc"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 132,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      923,
+      353,
+      664891,
+      665001,
+      665250,
+      520
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 594,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "v",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 86
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "bonus",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "bonus",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          1
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Devy",
+    "en": "Sloe Ring",
+    "es": "Aroardiente",
+    "de": "Excalebur",
+    "pt": "Anel Devyda"
+  },
+  "description": {
+    "fr": "{%FightStarted} {PA_RESvalue:v,+}.",
+    "en": "{%FightStarted} {PA_RESvalue:v,+}.",
+    "es": "{%FightStarted} {PA_RESvalue:v,+}.",
+    "de": "{%FightStarted} {PA_RESvalue:v,+}.",
+    "pt": "{%FightStarted} {PA_RESvalue:v,+}."
+  },
+  "bgDescription": {
+    "fr": "On dit qu'une seule petite goutte de cet anneau suffit à augmenter la longévité du guerrier qui la boit. Le problème, c'est que personne n'a jamais réussi à le débouchonner.",
+    "en": "They say that a little drop from this ring is enough to improve the life expectancy of any warrior that drinks it. There's just one problem\\_– no one has ever managed to uncork it.",
+    "es": "Dicen que una sola gota de este anillo puede aumentar la longevidad del guerrero que se la beba. El problema es que nadie ha logrado descorcharlo.",
+    "de": "Es heißt, ein einziger kleiner Tropfen dieses Rings genüge, um die Lebensdauer jenes Kriegers zu erhöhen, der ihn trinkt. Das Problem ist nur, dass es bisher niemandem gelungen ist, ihn zu entkorken.",
+    "pt": "Dizem que uma só gota do conteúdo deste anel é suficiente para aumentar a longevidade do guerreiro que a beber. O problema é que ninguém nunca conseguiu abri-lo."
+  }
+}

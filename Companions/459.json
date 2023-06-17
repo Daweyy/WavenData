@@ -1,0 +1,207 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "459",
+  "m_id": 459,
+  "m_displayName": "QUETE - TOFU - Anja Bogdabof",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1701290812,
+    "b": -1563240556,
+    "c": -261381016,
+    "d": -1352822478,
+    "e": 1016326185
+  },
+  "m_i18nDescriptionId": {
+    "a": 1701290812,
+    "b": -1563240556,
+    "c": -261381016,
+    "d": -1352822478,
+    "e": 1475934668
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 459,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3753,
+      "skinIds": [
+        3753
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "r",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 8
+        },
+        "RESPONSE"
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 90
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 8
+    },
+    "riposte": {
+      "type": "ConstIntegerValue",
+      "referenceId": "r",
+      "value": 100
+    },
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          459
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Anja",
+    "en": "Anja",
+    "es": "Anja",
+    "de": "Anja",
+    "pt": "Anja"
+  },
+  "description": {
+    "fr": "{%APPEARANCE} {value:r,percent,+} de {#response}.\n\\---\n{%Attack} Gagne {PropertyEffect:8}.",
+    "en": "{%APPEARANCE} {value:r,percent,+} {#response}.\n\\---\n{%Attack} Gains {PropertyEffect:8}.",
+    "es": "{%APPEARANCE} {value:r,percent,+} de {#response}.\n\\---\n{%Attack} Gana {PropertyEffect:8}.",
+    "de": "{%APPEARANCE} {value:r,percent,+} von {#response}.\n\\---\n{%Attack} Erhält {PropertyEffect:8}.",
+    "pt": "{%APPEARANCE} {value:r,percent,+} de {#response}.\n\\---\n{%Attack} Recebe {PropertyEffect:8}."
+  }
+}

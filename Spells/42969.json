@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "42969",
+  "m_id": 42969,
+  "m_displayName": "MONSTRE TOFU - Explosion Guanomique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1262586577,
+    "b": 1763351540,
+    "c": 360192456,
+    "d": -1274275827,
+    "e": 925090416
+  },
+  "m_i18nDescriptionId": {
+    "a": -1262586577,
+    "b": 1763351540,
+    "c": 360192456,
+    "d": -1274275827,
+    "e": -1429744866
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "77a87017af0cf8d4e8a4afe2c44ed4da"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 42969,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        37
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "276dde1f410daee4b8c0b1c9aa8b823f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 17,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "DMG",
+          "baseValue": 19,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Explosion Guanomique",
+    "en": "Guanomic Explosion",
+    "es": "Explosión Guanómica",
+    "de": "Guanamische Explosion",
+    "pt": "Explosão Guanômica"
+  },
+  "description": {
+    "fr": "Inflige {value:dmg} à {magicalDamage:DMG} aux adversaires autour\\_<sprite name=\"cell_around\"> d'un <b>Tofu</b> allié.",
+    "en": "Does {value:dmg} to {magicalDamage:DMG} to opponents around\\_<sprite name=\"cell_around\"> an allied <b>Tofu</b>.",
+    "es": "Inflige {value:dmg} a {magicalDamage:DMG} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de un <b>tofu</b> aliado.",
+    "de": "Verursacht {value:dmg} bis {magicalDamage:DMG} bei den Gegnern rings um\\_<sprite name=\"cell_around\"> einen verbündeten <b>Tofu</b>.",
+    "pt": "Inflige de {value:dmg} a {magicalDamage:DMG} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de um <b>Tofu</b> aliado."
+  }
+}

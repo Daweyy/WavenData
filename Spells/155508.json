@@ -1,0 +1,162 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "155508",
+  "m_id": 155508,
+  "m_displayName": "MONSTRE NUISIBLE - Insecte - Essaim",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 172088250,
+    "b": -1148971836,
+    "c": 1647890203,
+    "d": 1853284872,
+    "e": 682712841
+  },
+  "m_i18nDescriptionId": {
+    "a": 172088250,
+    "b": -1148971836,
+    "c": 1647890203,
+    "d": 1853284872,
+    "e": 331471559
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c6c109ee8d63d8f458ee2a1dcfea7751"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 155508,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        62
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5d9174b56583ea94880fb353d848b41e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Essaim",
+    "en": "Swarm",
+    "es": "Enjambre",
+    "de": "Schwarm",
+    "pt": "Enxame"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max}.\n\\---\nUn allié adjacent\\_<sprite name=\"cell_cross\"> aléatoire à la cible déclenche son attaque.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max}.\n\\---\nAn ally adjacent\\_<sprite name=\"cell_cross\"> to the target triggers their attack.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\nUn aliado aleatorio adyacente\\_<sprite name=\"cell_cross\"> al objetivo activa su ataque.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\nEin zufälliger Verbündeter, der am Ziel angrenzt\\_<sprite name=\"cell_cross\">, löst seinen Angriff aus.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\nUm aliado adjacente\\_<sprite name=\"cell_cross\"> aleatório ao alvo aciona seu ataque."
+  }
+}

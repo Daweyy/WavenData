@@ -1,0 +1,151 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "40574",
+  "m_id": 40574,
+  "m_displayName": "MONSTRE BOUFTOU - Frappe Malade",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -807944067,
+    "b": 425397748,
+    "c": -1207319349,
+    "d": 824483755,
+    "e": -1469258425
+  },
+  "m_i18nDescriptionId": {
+    "a": -807944067,
+    "b": 425397748,
+    "c": -1207319349,
+    "d": 824483755,
+    "e": -82266
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "82d648fca7fffe54c88fba7d45781d15"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 40574,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c4082a03a81b9fc40b39ee7ee38d1324",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "PA",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 25,
+          "id": 104
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Frappe Malade",
+    "en": "Sick Strike",
+    "es": "Golpe Enfermo",
+    "de": "Kranker Schlag",
+    "pt": "Golpe Doente"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:PA,+} au coût du sort {Spell:104}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:PA,+} to the cost of the {Spell:104} spell.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:PA,+} al coste del hechizo {Spell:104}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:PA,+} auf die Kosten des Zaubers {Spell:104}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:PA,+} ao custo do feitiço {Spell:104}."
+  }
+}

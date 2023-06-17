@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "635",
+  "m_id": 635,
+  "m_displayName": "QUETE - CHUCHOTEUR - Sir Hector V1",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 472972497,
+    "b": 664052356,
+    "c": 2051016313,
+    "d": -1368118859,
+    "e": 113516431
+  },
+  "m_i18nDescriptionId": {
+    "a": 472972497,
+    "b": 664052356,
+    "c": 2051016313,
+    "d": -1368118859,
+    "e": -532653820
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 635,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 383,
+      "skinIds": [
+        383
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ppow",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 5
+        }
+      ]
+    },
+    "families": [
+      75
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 118
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          635
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Sir Hector",
+    "en": "Sir Hector",
+    "es": "Sir Héctor",
+    "de": "Sir Hektor",
+    "pt": "Sir Hector"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {ATvalue:ppow,percent,+} aux alliés autour\\_<sprite name=\"cell_around\"> pour le tour.\n\\---\n{%Attack} Retire {PropertyEffect:5[DÉSARMÉ]} et <b>MARQUÉ</b>\\_<sprite name=\"generic_monster\"> à la cible.",
+    "en": "{%FightTurnStarted} {ATvalue:ppow,percent,+} to surrounding\\_<sprite name=\"cell_around\"> allies for the turn.\n\\---\n{%Attack} Removes {PropertyEffect:5[DISARMED]} and <b>MARKED</b>\\_<sprite name=\"generic_monster\"> from the target.",
+    "es": "{%FightTurnStarted} {ATvalue:ppow,percent,+} a los aliados alrededor\\_<sprite name=\"cell_around\"> durante el turno.\n\\---\n{%Attack} Retira {PropertyEffect:5[DESARMADO]} y <b>MARCADO</b>\\_<sprite name=\"generic_monster\"> del objetivo.",
+    "de": "{%FightTurnStarted} {ATvalue:ppow,percent,+} für die Runde für Verbündete ringsum\\_<sprite name=\"cell_around\">.\n\\---\n{%Attack} Entfernt {PropertyEffect:5[ENTWAFFNET]} und <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> beim Ziel.",
+    "pt": "{%FightTurnStarted} {ATvalue:ppow,percent,+} aos aliados em\\_volta\\_<sprite name=\"cell_around\"> durante o turno.\n\\---\n{%Attack} Retira {PropertyEffect:5[DESARMADO]} e <b>MARCADO</b>\\_<sprite name=\"generic_monster\"> do alvo."
+  }
+}

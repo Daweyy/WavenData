@@ -1,0 +1,137 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "828",
+  "m_id": 828,
+  "m_displayName": "CRA - CLASSE - ETHER - Derobade",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1243343734,
+    "b": -523915900,
+    "c": -1214506311,
+    "d": -385475385,
+    "e": -1868188646
+  },
+  "m_i18nDescriptionId": {
+    "a": -1243343734,
+    "b": -523915900,
+    "c": -1214506311,
+    "d": -385475385,
+    "e": -1201771948
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "79e4a1fabf24b85438495fff78b0c236"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "bcb30d63f47fc714f923e374b8ee1582"
+      },
+      {
+        "assetGuid": "46e4d6a44c5d9ce4bab9d461a46abf08"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 828,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Dérobade",
+    "en": "Escape",
+    "es": "Escapatoria",
+    "de": "Entrinnen",
+    "pt": "Escapatória"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:c}.",
+    "en": "Teleports your hero up to {cell:c}.",
+    "es": "Teletransporta a tu héroe hasta {cell:c}.",
+    "de": "Teleportiert deinen Helden bis {cell:c}.",
+    "pt": "Teletransporta seu herói a até {cell:c}."
+  }
+}

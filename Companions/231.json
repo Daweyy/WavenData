@@ -1,0 +1,238 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241945000
+  },
+  "m_Name": "231",
+  "m_id": 231,
+  "m_displayName": "DECK - KROSMIQUE - TERRE - Toxine",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1135160810,
+    "b": -1779751813,
+    "c": -657560951,
+    "d": -1322223877,
+    "e": -1196069051
+  },
+  "m_i18nDescriptionId": {
+    "a": 1135160810,
+    "b": -1779751813,
+    "c": -657560951,
+    "d": -1322223877,
+    "e": -1117704180
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 231,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 6461,
+      "skinIds": [
+        6461
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 100
+        },
+        {
+          "type": "ConditionalValue",
+          "referenceId": "pm",
+          "condition": {
+            "type": "HolderHasSkillCondition",
+            "skill": 95
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": -2
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "BPM",
+            "value": -1
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "BPM",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      6,
+      82
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 86
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 22
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 23
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 24
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      341491,
+      411989,
+      257189,
+      737629,
+      253870,
+      85758
+    ],
+    "rarity": 2,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 407,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          231
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Toxine",
+    "en": "Toxine",
+    "es": "Toxina",
+    "de": "Toxine",
+    "pt": "Toxina"
+  },
+  "description": {
+    "fr": "{%attack} {PMvalue:pm} à la cible pour le tour.\n\\---\n{value:v,percent,+} de <b>DÉGÂTS</b> si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "en": "{%attack} {PMvalue:pm} to the target for the turn.\n\\---\n{value:v,percent,+} <b>DAMAGE</b> if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "es": "{%attack} {PMvalue:pm} al objetivo durante el turno.\n\\---\n{value:v,percent,+} de <b>DAÑOS</b> si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "de": "{%attack} {PMvalue:pm} für das Ziel für die Runde.\n\\---\n{value:v,percent,+} <b>SCHADEN</b>, falls das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\">.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "pt": "{%attack} {PMvalue:pm} ao alvo durante o turno.\n\\---\n{value:v,percent,+} de <b>DANOS</b> se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">.\\v<family>{%Family_ForgottenSiblings_Name}</family>"
+  }
+}

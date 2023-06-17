@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "789",
+  "m_id": 789,
+  "m_displayName": "BONTA - SOLDATS - Entrainement Defensif",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1200488751,
+    "b": 530282084,
+    "c": 1029543176,
+    "d": 290806655,
+    "e": -33031527
+  },
+  "m_i18nDescriptionId": {
+    "a": 1200488751,
+    "b": 530282084,
+    "c": 1029543176,
+    "d": 290806655,
+    "e": 987663225
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0853f0e51596bd54d8aa3c47d119dae3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 789,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "fd1ac6d361d818743aa688d4dd252f57",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51,
+            48,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Entrainement Defensif",
+    "en": "Defensive Training",
+    "es": "Entrenamiento Defensivo",
+    "de": "Defensivtraining",
+    "pt": "Treinamento Defensivo"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} à tous les alliés qui n'ont pas leur {%pvmax}.",
+    "en": "{ARvalue:ar,+} to all allies that do not have their {%pvmax}.",
+    "es": "{ARvalue:ar,+} a todos los aliados que no tengan su {%pvmax}.",
+    "de": "{ARvalue:ar,+} für alle Verbündeten, die keine {%pvmax} haben.",
+    "pt": "{ARvalue:ar,+} a todos os aliados que não estiverem com os {%pvmax}."
+  }
+}

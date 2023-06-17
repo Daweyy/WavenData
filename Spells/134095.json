@@ -1,0 +1,186 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "134095",
+  "m_id": 134095,
+  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - TERRE - Phase Armuree",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -939239244,
+    "b": 1110437284,
+    "c": -2036278389,
+    "d": 142244204,
+    "e": -2121056620
+  },
+  "m_i18nDescriptionId": {
+    "a": -939239244,
+    "b": 1110437284,
+    "c": -2036278389,
+    "d": 142244204,
+    "e": -158931452
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b0c382a5bc22e654f99249e7a3fc64cf"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 134095,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      261,
+      153947,
+      510420
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 141,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c4cce11f3e28f454295829d747ae1dc6",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 77557,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "id",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "id",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            48,
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Phase Armurée",
+    "en": "Armored Phase",
+    "es": "Fase Acorazada",
+    "de": "Gepanzerte Phase",
+    "pt": "Fase Blindada"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nJusqu'à la fin du tour, {ARvalue:ar,+} à votre héros par adversaire traversé.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} to your hero for each opponent gone through until the end of the turn.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nHasta el final del turno, {ARvalue:ar,+} a tu héroe por adversario atravesado.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} bis zum Rundenende für deinen Helden pro überquertem Gegner.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAté o fim do turno, {ARvalue:ar,+} ao seu herói por adversário atravessado."
+  }
+}

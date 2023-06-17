@@ -1,0 +1,310 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "427",
+  "m_id": 427,
+  "m_displayName": "DECK - RARE - FEU - Shushette",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2110154939,
+    "b": 290309284,
+    "c": 607107499,
+    "d": 697863115,
+    "e": 1385435665
+  },
+  "m_i18nDescriptionId": {
+    "a": -2110154939,
+    "b": 290309284,
+    "c": 607107499,
+    "d": 697863115,
+    "e": 1249978493
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 427,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 5333,
+      "skinIds": [
+        5333
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": null,
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "SumValue",
+                  "referenceId": null,
+                  "valuesToSum": [
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 100
+                    },
+                    {
+                      "type": "ConditionalValue",
+                      "referenceId": "",
+                      "condition": {
+                        "type": "HolderHasSkillCondition",
+                        "skill": 151147
+                      },
+                      "ifTrue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "Pper1",
+                        "value": 100
+                      },
+                      "ifFalse": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ConditionalValue",
+                  "referenceId": "",
+                  "condition": {
+                    "type": "AndCondition",
+                    "conditions": [
+                      {
+                        "type": "ContextIsCriticalCondition"
+                      },
+                      {
+                        "type": "HolderHasSkillCondition",
+                        "skill": 176
+                      }
+                    ]
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "Pper2",
+                    "value": 300
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 6
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 22
+          },
+          "buffs": [
+            88
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Pper1",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Pper2",
+          "value": 300
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "EXPLOSION"
+      ]
+    },
+    "families": [
+      8
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 84
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      743675,
+      261484,
+      10,
+      744113,
+      311711,
+      582
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          427
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Shushette",
+    "en": "Shushette",
+    "es": "Fab'hurista",
+    "de": "Shushette",
+    "pt": "Shushette"
+  },
+  "description": {
+    "fr": "{%attack} Déclenche {explosion:ex} si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "{%attack} Triggers {explosion:ex} if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "{%attack} Activa {explosion:ex} si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "{%attack} Löst {explosion:ex} aus, falls das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "{%attack} Aciona {explosion:ex} se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

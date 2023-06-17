@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "56692",
+  "m_id": 56692,
+  "m_displayName": "MONSTRE TAURE - Protégé",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 335655655,
+    "b": -1799937580,
+    "c": -1597675624,
+    "d": -1664143113,
+    "e": 1961849604
+  },
+  "m_i18nDescriptionId": {
+    "a": 335655655,
+    "b": -1799937580,
+    "c": -1597675624,
+    "d": -1664143113,
+    "e": 1845192342
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d4adb16db0dd3c74bbc9232f96d4a085"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "2f755f16bb6c5b64eb5a8c29266600fd"
+      },
+      {
+        "assetGuid": "23b7e4d49a2edfb468fc17a0ca79b6d3"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 56692,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        56
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 0,
+            "carac": 1
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 21,
+          "id": 3
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Protégé",
+    "en": "Protected",
+    "es": "Protegido",
+    "de": "Beschützt",
+    "pt": "Protegido"
+  },
+  "description": {
+    "fr": "Téléporte le <b>Taure</b> allié ayant le moins de {%PV} sur une case adjacente\\_<sprite name=\"cell_cross\"> à un autre <b>Taure</b> allié.\n\\---\nIl devient son {LinkEffect:3} pour le tour.",
+    "en": "Teleports the allied <b>Taur</b> with the least {%PV} to a cell adjacent\\_<sprite name=\"cell_cross\"> to another allied <b>Taur</b>.\n\\---\nHe becomes his {LinkEffect:3} for the turn.",
+    "es": "Teletransporta al <b>toro</b> aliado que tenga menos {%PV} a una casilla adyacente\\_<sprite name=\"cell_cross\"> a otro <b>toro</b> aliado.\n\\---\nSe convierte en su {LinkEffect:3} durante el turno.",
+    "de": "Teleportiert den verbündeten <b>Taurus</b> mit den wenigsten {%PV} auf ein an einen anderen verbündeten <b>Taurus</b> angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\nWird für die Runde zu seinem {LinkEffect:3}.",
+    "pt": "Teletransporta o <b>Tauro</b> aliado que tiver menos {%PV} para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um outro <b>Tauro</b> aliado.\n\\---\nEle se torna {LinkEffect:3} do outro durante o turno."
+  }
+}

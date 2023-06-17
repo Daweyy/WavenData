@@ -1,0 +1,204 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "3271",
+  "m_id": 3271,
+  "m_displayName": "COMPAGNON - GROUGALORAGRAN - Souffle de Grougaloragran",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1285811822,
+    "b": 187667716,
+    "c": 1486633720,
+    "d": 1402836749,
+    "e": -1921513020
+  },
+  "m_i18nDescriptionId": {
+    "a": 1285811822,
+    "b": 187667716,
+    "c": 1486633720,
+    "d": 1402836749,
+    "e": 450989540
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9ed64d8eb3958aa41ac7eae0218e21cd"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 3271,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        67
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FilteredCharacterSelector",
+                "filters": [
+                  {
+                    "type": "CompanionDefinitionFilter",
+                    "condition": 1,
+                    "companions": [
+                      661
+                    ]
+                  },
+                  {
+                    "type": "OwnerFilter",
+                    "isIdentical": true,
+                    "reference": {
+                      "type": "CasterSelector"
+                    }
+                  }
+                ]
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        "startPosition": {
+          "type": "EntityPositionSelector",
+          "entity": {
+            "type": "CasterSpecificCompanionSelector",
+            "companion": 661
+          }
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "abb115bdfbc4ac04593e0d8374f6c767",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "CompanionDefinitionFilter",
+              "condition": 1,
+              "companions": [
+                661
+              ]
+            }
+          ]
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 1
+        },
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "dmg",
+          "entitySelector": {
+            "type": "CasterSpecificCompanionSelector",
+            "companion": 661
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Souffle de Grougaloragran",
+    "en": "Grougaloragran's Breath",
+    "es": "Soplido de Grugaloragrán",
+    "de": "Grugaloragrans Atem",
+    "pt": "Sopro de Grugaloragran"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de {Companion:661!} sur les {cell:c} devant lui.\n\\---\nPiochez {SPELLCOUNTvalue:draw} par cible touchée.",
+    "en": "Inflicts {Companion:661!}'s {%AT} on the {cell:c} in front of him.\n\\---\nDraw {SPELLCOUNTvalue:draw} per target hit.",
+    "es": "Inflige el {%AT} de {Companion:661!} en {cell:c} delante de él.\n\\---\nSacas {SPELLCOUNTvalue:draw} por objetivo alcanzado.",
+    "de": "Verursacht den {%AT} von {Companion:661!} auf den {cell:c} vor sich als Schaden.\n\\---\nZieht {SPELLCOUNTvalue:draw} pro getroffenes Ziel.",
+    "pt": "Inflige o {%AT} de {Companion:661!} às {cell:c} na sua frente.\n\\---\nCompre {SPELLCOUNTvalue:draw} por alvo atingido."
+  }
+}

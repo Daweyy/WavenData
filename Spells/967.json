@@ -1,0 +1,236 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "967",
+  "m_id": 967,
+  "m_displayName": "CRA - ARME - BUNELAME - AIR - Bumbon",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1534152642,
+    "b": -1381672748,
+    "c": 74409242,
+    "d": -227239642,
+    "e": -1132174166
+  },
+  "m_i18nDescriptionId": {
+    "a": 1534152642,
+    "b": -1381672748,
+    "c": 74409242,
+    "d": -227239642,
+    "e": 1326673627
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9459c85a4e49f7b4a947b65961497194"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 967,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      391,
+      95808,
+      340
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 477,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "cdd60767c7d243f4c858a17b7030b52b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 527,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 527,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 527,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "BOUNCE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bumbon",
+    "en": "Bumbon",
+    "es": "Bumbón",
+    "de": "Bumbon",
+    "pt": "Bumbon"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {bounce:bc} si vous avez {SPELLCOUNTvalue:s} ou moins en main.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {bounce:bc} if you have {SPELLCOUNTvalue:s} or less in hand.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {bounce:bc} si tienes {SPELLCOUNTvalue:s} o menos en mano.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {bounce:bc} aus, wenn du höchstens {SPELLCOUNTvalue:s} auf der Hand hast.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {bounce:bc} se você tiver {SPELLCOUNTvalue:s} ou menos na mão."
+  }
+}

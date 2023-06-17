@@ -1,0 +1,172 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "750",
+  "m_id": 750,
+  "m_displayName": "IOP - ARME - BOUVALOIR OROK - ETHER - Repositionnement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1427385068,
+    "b": 84310804,
+    "c": -54136214,
+    "d": -52428597,
+    "e": 650719399
+  },
+  "m_i18nDescriptionId": {
+    "a": -1427385068,
+    "b": 84310804,
+    "c": -54136214,
+    "d": -52428597,
+    "e": -381073754
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f498fcde2215309448f5e36501253584"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 750,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 497,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9e87069a9b0e8e14b810a68b21a64622",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Repositionnement",
+    "en": "Repositioning",
+    "es": "Reposicionamiento",
+    "de": "Neupositionierung",
+    "pt": "Reposicionamento"
+  },
+  "description": {
+    "fr": "Déplace votre héros jusqu'à {cell:c} en ligne.\n\\---\nPiochez votre prochain sort de <b>CHARGE</b>.",
+    "en": "Moves your hero up to {cell:c} in a line.\n\\---\nDraw your next <b>CHARGE</b> spell.",
+    "es": "Desplaza a tu héroe hasta {cell:c} en línea.\n\\---\nSacas tu próximo hechizo de <b>CARGA</b>.",
+    "de": "Bewegt deinen Helden bis {cell:c} auf einer Linie.\n\\---\nZiehe deinen nächsten <b>ANSTURM</b>-Zauber.",
+    "pt": "Move seu herói a até {cell:c} em linha.\n\\---\nCompre seu próximo feitiço de <b>INVESTIDA</b>."
+  }
+}

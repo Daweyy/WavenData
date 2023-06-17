@@ -1,0 +1,192 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "103749",
+  "m_id": 103749,
+  "m_displayName": "ENIRIPSA - ARME - LAME VORACIUS - TERRE - Aiguillon Lancinant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 384949947,
+    "b": 266421700,
+    "c": -425514342,
+    "d": -222886217,
+    "e": 1556317675
+  },
+  "m_i18nDescriptionId": {
+    "a": 384949947,
+    "b": 266421700,
+    "c": -425514342,
+    "d": -222886217,
+    "e": 2036252107
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3e0a7ebe5273b8749988fe6928b3325f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 103749,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      141578,
+      154573,
+      394
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 202,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "46ca54d344a7ae54a86260a0070a284c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 29
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 75146,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 4
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Aiguillon Lancinant",
+    "en": "Stabbing Point",
+    "es": "Aguijón Lancinante",
+    "de": "Stechender Stachel",
+    "pt": "Aguilhão Lancinante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire aligné.\n\\---\n{PropertyEffect:4} la cible si elle est <b>BOUEUSE<b>\\_<sprite name=\"muddy\">.",
+    "en": "Does {magicalDamage:dmg} to an in-line opponent.\n\\---\n{PropertyEffect:4} the target if the target is <b>MUDDY<b>\\_<sprite name=\"muddy\">.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario alineado.\n\\---\n{PropertyEffect:4} al objetivo si está <b>FANGOSO<b>\\_<sprite name=\"muddy\">.",
+    "de": "Verursacht bei einem Gegner in derselben Reihe {magicalDamage:dmg}.\n\\---\n{PropertyEffect:4}, wenn das Ziel <b>SCHLAMMIG<b>\\_<sprite name=\"muddy\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário alinhado.\n\\---\n{PropertyEffect:4} o alvo se ele estiver <b>ENLAMEADO<b>\\_<sprite name=\"muddy\">."
+  }
+}

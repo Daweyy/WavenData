@@ -1,0 +1,235 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "315",
+  "m_id": 315,
+  "m_displayName": "SACRIEUR - CLASSE - TERRE - Assaut Déchirant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -650209586,
+    "b": 1152273380,
+    "c": 1267394248,
+    "d": 500295173,
+    "e": -1293356047
+  },
+  "m_i18nDescriptionId": {
+    "a": -650209586,
+    "b": 1152273380,
+    "c": 1267394248,
+    "d": 500295173,
+    "e": 7905241
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "af6c38e2e0f4b8c44be132a459695c90"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 315,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      950,
+      586916,
+      586978
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      6
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "dash",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "28f0734e631f21748b591979c26953cb",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dash",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 96009,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pmLoss",
+          "value": -2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "jaugeGain",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Assaut Déchirant",
+    "en": "Rending Assault",
+    "es": "Asalto Desgarrador",
+    "de": "Reißender Sturmangriff",
+    "pt": "Assalto Penetrante"
+  },
+  "description": {
+    "fr": "Votre héros traverse jusqu'à {cell:dash} en ligne.\n\\---\n{PMvalue:pmLoss} aux adversaires traversés et leur inflige {magicalDamage:dmg}.",
+    "en": "Your hero goes through up to {cell:dash} in a line.\n\\---\n{PMvalue:pmLoss} to the opponents gone through and inflicts {magicalDamage:dmg} on them.",
+    "es": "Tu héroe atraviesa hasta {cell:dash} en línea.\n\\---\n{PMvalue:pmLoss} a los adversarios atravesados y les inflige {magicalDamage:dmg}.",
+    "de": "Dein Held überquert bis zu {cell:dash} hintereinander.\n\\---\n{PMvalue:pmLoss} bei den überquerten Gegnern und verursacht bei ihnen {magicalDamage:dmg}.",
+    "pt": "Seu herói atravessa até {cell:dash} em linha.\n\\---\n{PMvalue:pmLoss} aos adversários atravessados e inflige {magicalDamage:dmg}."
+  }
+}

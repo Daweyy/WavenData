@@ -1,0 +1,136 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "704",
+  "m_id": 704,
+  "m_displayName": "EQUIPMENT - RING - GRIMOIRE - (1) Air",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 113397969,
+    "b": 2071266372,
+    "c": 2137290186,
+    "d": -2134766468,
+    "e": -1328415954
+  },
+  "m_i18nDescriptionId": {
+    "a": 113397969,
+    "b": 2071266372,
+    "c": 2137290186,
+    "d": -2134766468,
+    "e": 125471497
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "83d8b1904ba01064fb2ffa941f4d205c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 704,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        89
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "fbb707d11402ee1449d7e6398fcfc0db",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Page 1 du Grimoire des Vents",
+    "en": "Page 1 of the Spellbook of Wind",
+    "es": "Página 1 del Grimorio de los Vientos",
+    "de": "Seite 1 des Zauberbuchs der Winde",
+    "pt": "Página 1 do Grimório dos Ventos"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nDoes {magicalDamage:dmg}.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nVerursacht {magicalDamage:dmg}.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nInflige {magicalDamage:dmg}."
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "347",
+  "m_id": 347,
+  "m_displayName": "MONSTRE CHUCHOTEUR - Chuchotement Strident",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 777340132,
+    "b": -1289012988,
+    "c": -338984599,
+    "d": 538388129,
+    "e": -114972834
+  },
+  "m_i18nDescriptionId": {
+    "a": 777340132,
+    "b": -1289012988,
+    "c": -338984599,
+    "d": 538388129,
+    "e": -1242078790
+  },
+  "m_elementaryStates": 9876,
+  "m_illustrationReference": {
+    "assetGuid": "da9ccea0a3794e94190da8f2963e6223"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 347,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        52
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "129efc64ad8e49e40bd2f951c5cfeaba",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Chuchotement Strident",
+    "en": "Strident Whispering",
+    "es": "Susurro Estridente",
+    "de": "Schrilles Flüstern",
+    "pt": "Sussurro Estridente"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>MARQUÉ</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalDamage:dmg} and applies <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht {magicalDamage:dmg} und wendet <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> an.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

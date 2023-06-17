@@ -1,0 +1,93 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 641088705933543200
+  },
+  "m_Name": "592",
+  "m_id": 592,
+  "m_displayName": "DQ - MODIFICATEUR - BOUFTOU - 3",
+  "m_availability": 3,
+  "m_illustration": {
+    "assetGuid": "c8700bc4d309f8c4eb9db0dc3dd8f076"
+  },
+  "m_i18nNameId": {
+    "a": -2079305159,
+    "b": -1015948508,
+    "c": 754697033,
+    "d": 2082992326,
+    "e": 1397040073
+  },
+  "m_i18nDescriptionId": {
+    "a": -2079305159,
+    "b": -1015948508,
+    "c": 754697033,
+    "d": 2082992326,
+    "e": 500659071
+  },
+  "m_i18nSummaryId": {
+    "a": 0,
+    "b": 0,
+    "c": 0,
+    "d": 0,
+    "e": 0
+  },
+  "values": {
+    "type": "CustomRuleDefinition",
+    "id": 592,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "po",
+          "value": 20
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bs",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            89
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "TriggeringEventTargetSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "BOUNCE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bouftous statiques",
+    "en": "Static Gobballs",
+    "es": "Jalatós estáticos",
+    "de": "Statische Fresssäcke",
+    "pt": "Papatudos Estáticos"
+  },
+  "description": {
+    "fr": "<rem><color=#EEBB44>Vaincre tous les <b>Bouftous</b>.</color></rem>\n\\---\n{%FightTurnStarted} {ATvalue:po,percent,+} aux <b>Bouftous</b>.\n\\---\nLorsqu'un <b>Bouftou</b> subit une {%Attack}\nIl déclenche {bounce:bs} qui touche tous les personnages.",
+    "en": "<rem><color=#EEBB44>Defeat all the <b>Gobballs</b>.</color></rem>\n\\---\n{%FightTurnStarted} {ATvalue:po,percent,+} to <b>Gobballs</b>.\n\\---\nWhen a <b>Gobball</b> endures an {%Attack}\nIt triggers a {bounce:bs} that hits all characters.",
+    "es": "<rem><color=#EEBB44>Vencer a todos los <b>jalatós</b>.</color></rem>\n\\---\n{%FightTurnStarted} {ATvalue:po,percent,+} a los <b>jalatós</b>.\n\\---\nCuando un <b>jalató</b> sufre un {%Attack}\nActiva {bounce:bs} que alcanzan a todos los personajes.",
+    "de": "<rem><color=#EEBB44>Alle <b>Fresssäcke</b> besiegen.</color></rem>\n\\---\n{%FightTurnStarted} {ATvalue:po,percent,+} für die <b>Fresssäcke</b>.\n\\---\nWenn ein <b>Fresssack</b> Ziel von einem {%Attack} wird:\nLöst {bounce:bs} aus, das alle Charaktere trifft.",
+    "pt": "<rem><color=#EEBB44>Derrotar todos os <b>Papatudos</b>.</color></rem>\n\\---\n{%FightTurnStarted} {ATvalue:po,percent,+} aos <b>Papatudos</b>.\n\\---\nQuando <b>Papatudo</b> sofre um {%Attack}\nEle aciona um {bounce:bs} que atinge todos os personagens."
+  }
+}

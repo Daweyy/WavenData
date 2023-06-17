@@ -1,0 +1,175 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "540",
+  "m_id": 540,
+  "m_displayName": "MONSTRE CRAQUELEUR - Recomposition",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2095458553,
+    "b": 1098605668,
+    "c": -380620853,
+    "d": -1927235216,
+    "e": -621412080
+  },
+  "m_i18nDescriptionId": {
+    "a": -2095458553,
+    "b": 1098605668,
+    "c": -380620853,
+    "d": -1927235216,
+    "e": 1382339816
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f058101f21cd2624b88c2fb06a5cab4c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "efcb01be3c60c914282f29e8c0970393"
+      },
+      {
+        "assetGuid": "c2a187f0d9464164dbd2cfe5fad69b1f"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 540,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              1607
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              41
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "AT",
+          "value": 10
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "AR",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Recomposition",
+    "en": "Reshaping",
+    "es": "Recomposición",
+    "de": "Wiederzusammensetzung",
+    "pt": "Recomposição"
+  },
+  "description": {
+    "fr": "Échange la position d'un {%FAMILY_CRAQUELEUR_NAME,plural:one} allié avec celle d'un {ObjectMechanism:1607!} allié.\n\\---\n{ATvalue:AT,percent,+} pour le tour et {ARvalue:AR,+} au {%FAMILY_CRAQUELEUR_NAME,plural:one}.",
+    "en": "Switches an allied {%FAMILY_CRAQUELEUR_NAME,plural:one}'s position with that of an allied {ObjectMechanism:1607!}.\n\\---\n{ATvalue:AT,percent,+} for the turn and {ARvalue:AR,+} to the {%FAMILY_CRAQUELEUR_NAME,plural:one}.",
+    "es": "Intercambia la posición de un {%FAMILY_CRAQUELEUR_NAME,plural:one} aliado con la de una {ObjectMechanism:1607!} aliada.\n\\---\n{ATvalue:AT,percent,+} durante el turno y {ARvalue:AR,+} al {%FAMILY_CRAQUELEUR_NAME,plural:one}.",
+    "de": "Tauscht die Position eines verbündeten {%FAMILY_CRAQUELEUR_NAME,plural:one} mit der eines verbündeten {ObjectMechanism:1607!}.\n\\---\n{ATvalue:AT,percent,+} für die Runde und {ARvalue:AR,+} für {%FAMILY_CRAQUELEUR_NAME,plural:one}.",
+    "pt": "Troca a posição de um {%FAMILY_CRAQUELEUR_NAME,plural:one} aliado com uma {ObjectMechanism:1607!} aliada.\n\\---\n{ATvalue:AT,percent,+} durante o turno e {ARvalue:AR,+} ao {%FAMILY_CRAQUELEUR_NAME,plural:one}."
+  }
+}

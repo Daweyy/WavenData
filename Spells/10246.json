@@ -1,0 +1,175 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "10246",
+  "m_id": 10246,
+  "m_displayName": "MONSTRE BWORK - Exécution",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2053372473,
+    "b": -1318997148,
+    "c": -1371482120,
+    "d": -806364514,
+    "e": -369408257
+  },
+  "m_i18nDescriptionId": {
+    "a": -2053372473,
+    "b": -1318997148,
+    "c": -1371482120,
+    "d": -806364514,
+    "e": -1421581118
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "07bbe89ff6693a34fb9815ddf82a2482"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 10246,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        49
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7c0c729c32861c1468f96a1d2e033f09",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 4
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Exécution",
+    "en": "Execution",
+    "es": "Ejecución",
+    "de": "Hinrichtung",
+    "pt": "Execução"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmg2,+} par <b>Bwork</b> allié adjacent\\_<sprite name=\"cell_cross\">.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmg2,+} per adjacent\\_<sprite name=\"cell_cross\"> allied <b>Bwork</b>.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmg2,+} por <b>bwork</b> aliado adyacente\\_<sprite name=\"cell_cross\">.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmg2,+} pro verbündeten angrenzenden\\_<sprite name=\"cell_cross\"> <b>Bwork</b>.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmg2,+} por <b>Bwork</b> aliado adjacente\\_<sprite name=\"cell_cross\">."
+  }
+}

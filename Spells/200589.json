@@ -1,0 +1,162 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "200589",
+  "m_id": 200589,
+  "m_displayName": "SRAM - CLASSE - EPHEMERE - Trappe des Pierres",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 7194772,
+    "b": 1785785956,
+    "c": 2071832984,
+    "d": 1180128814,
+    "e": -433259527
+  },
+  "m_i18nDescriptionId": {
+    "a": 7194772,
+    "b": 1785785956,
+    "c": 2071832984,
+    "d": 1180128814,
+    "e": -164152123
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "55cbc9cc6c1e3904d8012a40d9f3dad6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 200589,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "SumValue",
+                  "referenceId": null,
+                  "valuesToSum": [
+                    {
+                      "type": "EntityCaracValue",
+                      "referenceId": null,
+                      "entitySelector": {
+                        "type": "CasterHeroSelector"
+                      },
+                      "carac": 65
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c",
+                      "value": 2
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.104.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 104
+        },
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Trappe des Pierres",
+    "en": "Stone Sliptrap",
+    "es": "Trampilla de Piedras",
+    "de": "Steinfalle",
+    "pt": "Alçapão de Pedras"
+  },
+  "description": {
+    "fr": "{#EPHEMERAL}\n\\---\nConstruit une {FloorMechanism:104} ({value:FloorMechanism.104.dmg}) jusqu'à {cell:c} de votre héros.",
+    "en": "{#EPHEMERAL}\n\\---\nBuilds one {FloorMechanism:104} ({value:FloorMechanism.104.dmg}) up to {cell:c} from your hero.",
+    "es": "{#EPHEMERAL}\n\\---\nConstruye una {FloorMechanism:104} ({value:FloorMechanism.104.dmg}) hasta a {cell:c} de tu héroe.",
+    "de": "{#EPHEMERAL}\n\\---\nErrichtet eine {FloorMechanism:104} ({value:FloorMechanism.104.dmg}) bis auf {cell:c} von deinem Helden entfernt.",
+    "pt": "{#EPHEMERAL}\n\\---\nPosiciona um {FloorMechanism:104} ({value:FloorMechanism.104.dmg}) a até {cell:c} do seu herói."
+  }
+}

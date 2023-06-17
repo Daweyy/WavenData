@@ -1,0 +1,176 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "198128",
+  "m_id": 198128,
+  "m_displayName": "SRAM - ARME - SHUGEN - FEU - Traque Devorante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1674106958,
+    "b": 747245892,
+    "c": 1338431512,
+    "d": -11254840,
+    "e": -1040268587
+  },
+  "m_i18nDescriptionId": {
+    "a": -1674106958,
+    "b": 747245892,
+    "c": 1338431512,
+    "d": -11254840,
+    "e": 2021395412
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "fd40d568bdfbbc641a0ef4722139f720"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 198128,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      355244,
+      370107,
+      492409
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      6,
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 36,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": null
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f92b27994524af24c942a67cde13cb54",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 754,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Traque Dévorante",
+    "en": "Devouring Tracking",
+    "es": "Rastreo Voraz",
+    "de": "Verzehrende Jagd",
+    "pt": "Caçada Devoradora"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un personnage aligné avec votre héros.\n\\---\nVotre héros traverse la ligne si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg} to opponents in line with your hero.\n\\---\nYour hero goes through the line if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg} a un personaje alineado con tu héroe.\n\\---\nTu héroe atraviesa la línea si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Fügt einem Charakter, der sich in derselben Reihe wie dein Held befindet, {magicalDamage:dmg} zu.\n\\---\nDein Held überquert die Reihe, wenn das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg} a um personagem alinhado com seu herói.\n\\---\nSeu herói atravessa a linha se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+  }
+}

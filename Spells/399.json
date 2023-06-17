@@ -1,0 +1,126 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "399",
+  "m_id": 399,
+  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - ETHER - Puissance Déphasée",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 818121042,
+    "b": -725512604,
+    "c": 1267401754,
+    "d": -1766419237,
+    "e": 675702569
+  },
+  "m_i18nDescriptionId": {
+    "a": 818121042,
+    "b": -725512604,
+    "c": 1267401754,
+    "d": -1766419237,
+    "e": -349541318
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8cafac8844c34ad4cba887f13df25461"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 399,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 141,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "8b3cb11df9356c54ea7b0413d0b2a2b1",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Puissance Déphasée",
+    "en": "Dephased Power",
+    "es": "Potencia Desfasada",
+    "de": "Phasenverschobene Macht",
+    "pt": "Potência Defasada"
+  },
+  "description": {
+    "fr": "{value:p,+,percent} à l’{%AT} de votre héros pour le tour.",
+    "en": "{value:p,+,percent} to your hero's {%AT} for the turn.",
+    "es": "{value:p,+,percent} al {%AT} de tu héroe durante el turno.",
+    "de": "{value:p,+,percent} {%AT} für deinen Helden für die Runde.",
+    "pt": "{value:p,+,percent} ao {%AT} do seu herói durante o turno."
+  }
+}

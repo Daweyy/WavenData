@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "470",
+  "m_id": 470,
+  "m_displayName": "DQ - MYSTERY ISLAND - TOFU - 3_Coup de Marteau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1586148242,
+    "b": -806231980,
+    "c": 879713739,
+    "d": -598525780,
+    "e": -871341487
+  },
+  "m_i18nDescriptionId": {
+    "a": 1586148242,
+    "b": -806231980,
+    "c": 879713739,
+    "d": -598525780,
+    "e": 55512169
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "64ad9d2346845d94caddbb9435c46bd1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 470,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 1,
+            "summonings": [
+              714
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0058c7f0cf38f2144882d03a8f81e747",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Coup de marteau",
+    "en": "Hammer Blow",
+    "es": "Martillazo",
+    "de": "Hammerschlag",
+    "pt": "Golpe de Martelo"
+  },
+  "description": {
+    "fr": "Détruit un {Summoning:714!} au sol et adjacent\\_<sprite name=\"cell_cross\"> à votre héros.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Destroys one {Summoning:714!} on the ground and adjacent\\_<sprite name=\"cell_cross\"> to your hero.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Destruye un {Summoning:714!} en el suelo y adyacente\\_<sprite name=\"cell_cross\"> a tu héroe.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Zerstört einen\\_{Summoning:714!}, der sich am Boden befindet und an deinen Helden angrenzt\\_<sprite name=\"cell_cross\">.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Destrói um {Summoning:714!} no chão e adjacente\\_<sprite name=\"cell_cross\"> ao seu herói.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

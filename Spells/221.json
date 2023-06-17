@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "221",
+  "m_id": 221,
+  "m_displayName": "SACRIEUR - CLASSE - ETHER - Demence",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 47751547,
+    "b": -676879276,
+    "c": 73468089,
+    "d": 1195736720,
+    "e": -453990990
+  },
+  "m_i18nDescriptionId": {
+    "a": 47751547,
+    "b": -676879276,
+    "c": 73468089,
+    "d": 1195736720,
+    "e": -413427232
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2d14f814d34f6384f867630038541f14"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 221,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      5
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": 30,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5550708aaa30b5d4b8d087f039591267",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentAdd",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 99
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Démence",
+    "en": "Insanity",
+    "es": "Demencia",
+    "de": "Irrsinn",
+    "pt": "Demência"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> de lui.\n\\---\n{PropertyEffect:99}\\_: {value:percentAdd,percent,+} aux <b>DÉGÂTS</b> de ce sort.",
+    "en": "Inflicts your hero's {%power} around\\_<sprite name=\"cell_around\"> them.\n\\---\n{PropertyEffect:99}: {value:percentAdd,percent,+} to this spell's <b>DAMAGE</b>.",
+    "es": "Inflige el {%power} de tu héroe a su alrededor.\n\\---\n{PropertyEffect:99}: {value:percentAdd,percent,+} a los <b>DAÑOS</b> de este hechizo.",
+    "de": "Verursacht die {%power} deines Helden im Umkreis<sprite name=\"cell_around\">.\n\\---\n{PropertyEffect:99}: {value:percentAdd,percent,+} auf den <b>SCHADEN</b> dieses Zaubers.",
+    "pt": "Inflige o {%power} do seu herói em\\_volta dele.\n\\---\n{PropertyEffect:99}: {value:percentAdd,percent,+} aos <b>DANOS</b> deste feitiço."
+  }
+}

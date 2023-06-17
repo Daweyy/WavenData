@@ -1,0 +1,168 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "474",
+  "m_id": 474,
+  "m_displayName": "COMPAGNON - DARK VLAD - Folie du Dark Vlad",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2120550540,
+    "b": 912494932,
+    "c": 514367819,
+    "d": 37112113,
+    "e": 2055687907
+  },
+  "m_i18nDescriptionId": {
+    "a": -2120550540,
+    "b": 912494932,
+    "c": 514367819,
+    "d": 37112113,
+    "e": -1584985061
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "618db25232c368643b96009a2ad1f95c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 474,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllCompanionsSelector"
+          },
+          "filters": [
+            {
+              "type": "CompanionDefinitionFilter",
+              "condition": 1,
+              "companions": [
+                601
+              ]
+            },
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a3a5d04ec316ebb419ee2b0cfb8081ff",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Folie du Dark Vlad",
+    "en": "Dark Vlad's Folly",
+    "es": "Locura de Dark Vlad",
+    "de": "Dark Vlads Verrücktheit",
+    "pt": "Loucura do Dark Vlad"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> du {Companion:601!}.",
+    "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> {Companion:601!}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios alrededor\\_<sprite name=\"cell_around\"> de {Companion:601!}.",
+    "de": "Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> von {Companion:601!} {magicalDamage:dmg}.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de {Companion:601!}."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "32",
+  "m_id": 32,
+  "m_displayName": "RING - COMMON - Anneau Gnon",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -916514483,
+    "b": 428312612,
+    "c": -652618296,
+    "d": -388983630,
+    "e": 263370885
+  },
+  "m_i18nDescriptionId": {
+    "a": -916514483,
+    "b": 428312612,
+    "c": -652618296,
+    "d": -388983630,
+    "e": 1231026234
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -916514483,
+    "b": 428312612,
+    "c": -652618296,
+    "d": -388983630,
+    "e": -1813314549
+  },
+  "m_illustration": {
+    "assetGuid": "fd3a72c98877ab549a807766dbd578b4"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "ca94a64e3ec6c36479ccb1ad5f958a74"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 32,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      419,
+      410,
+      667360,
+      667507,
+      668286,
+      668659
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 594,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "x",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 663
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "y",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "y",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          1
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Gnon",
+    "en": "Bash Ring",
+    "es": "Anillo Cebolludo",
+    "de": "Zwiebelring",
+    "pt": "Anel Cebolada"
+  },
+  "description": {
+    "fr": "{%FightStarted} Confère à votre héros {value:x,percent} de son {%AT} en {%AR}.",
+    "en": "{%FightStarted} Confers {value:x,percent} of their {%AT} as {%AR} on your hero.",
+    "es": "{%FightStarted} Confiere a tu héroe un {value:x,percent} de su {%AT} en {%AR}.",
+    "de": "{%FightStarted} Verleiht deinem Helden {value:x,percent} seines {%AT} als {%AR}.",
+    "pt": "{%FightStarted} Concede ao seu herói {value:x,percent} de seu {%AT} em {%AR}."
+  },
+  "bgDescription": {
+    "fr": "Promis, vous en ferez pleurer plus d'un avec cet anneau. À cause des coups ou de l'odeur, ça en revanche, ça ne dépendra que de vous.",
+    "en": "Guaranteed. You'll make more than one cry with this ring. Now, whether it's because of how hard it hits or how bad it smells\\_– well, that's up to you.",
+    "es": "Con este anillo harás llorar a más de uno. Que sea por los golpes o por el olor ya dependerá de ti.",
+    "de": "Mit diesem Ring wirst du mehr als einen zum Weinen bringen, versprochen. Ob die Tränen wegen möglicher Schläge oder ob des Geruchs kullern, sei allein dir überlassen.",
+    "pt": "Pode acreditar, você vai fazer muita gente chorar com este anel. Se é com socos ou com o cheiro, não depende somente de você."
+  }
+}

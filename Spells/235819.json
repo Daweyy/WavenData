@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "235819",
+  "m_id": 235819,
+  "m_displayName": "XELOR - ARME - JIKAN - ETHER - Ciblage Jikan",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1552760277,
+    "b": -1006917276,
+    "c": 192538266,
+    "d": 467503805,
+    "e": -2043952168
+  },
+  "m_i18nDescriptionId": {
+    "a": -1552760277,
+    "b": -1006917276,
+    "c": 192538266,
+    "d": 467503805,
+    "e": 227110402
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ca5c13da10e11e34f8b2df7547f14a98"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 235819,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 366,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f233ada6ec4a5f04cb9cc528be15d92e",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "MultipleElementaryStatesFilter",
+              "comparison": 2,
+              "elementaryStates": [
+                1
+              ]
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.3
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ciblage JIkan",
+    "en": "Jikan Targeting",
+    "es": "Objetivo Klepsi Darena",
+    "de": "Jikan-Zielerfassung",
+    "pt": "Alvo Jikan"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros aux adversaires ayant un état.\n\\---\n{PA_RESvalue:pa,+} par état retiré.",
+    "en": "Inflicts your hero's {%AT} on opponents that have a state.\n\\---\n{PA_RESvalue:pa,+} per state removed.",
+    "es": "Inflige el {%AT} de tu héroe a los adversarios que tengan un estado.\n\\---\n{PA_RESvalue:pa,+} por estado retirado.",
+    "de": "Verursacht bei den Gegnern in einem Zustand den {%AT} deines Helden als Schaden.\n\\---\n{PA_RESvalue:pa,+} pro entferntem Zustand.",
+    "pt": "Inflige o {%AT} do seu herói aos adversários que tenham um estado.\n\\---\n{PA_RESvalue:pa,+} por estado retirado."
+  }
+}

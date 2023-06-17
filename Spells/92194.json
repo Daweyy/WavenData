@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "92194",
+  "m_id": 92194,
+  "m_displayName": "MONSTRE ROUBLARD - Truanderie",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -745888164,
+    "b": 1764549588,
+    "c": 1777193752,
+    "d": -9314869,
+    "e": 1822900440
+  },
+  "m_i18nDescriptionId": {
+    "a": -745888164,
+    "b": 1764549588,
+    "c": 1777193752,
+    "d": -9314869,
+    "e": 622590954
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c7909826e3df9f349b9dc810a73a0945"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 92194,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        13
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ba9f9210cc2ca27469aaf12af43dc85b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "deg",
+          "baseValue": 10,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Truanderie",
+    "en": "Gangsterdom",
+    "es": "Truhanería",
+    "de": "Gaunerei",
+    "pt": "Bandidagem"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:deg} à un adversaire.\n\\---\nVole 1 {%PA_RES} par allié adjacent\\_<sprite name=\"cell_cross\">.",
+    "en": "Does {magicalDamage:deg} to an opponent.\n\\---\nSteals 1 {%PA_RES} per adjacent\\_<sprite name=\"cell_cross\"> ally.",
+    "es": "Inflige {magicalDamage:deg} a un adversario.\n\\---\nRoba 1 {%PA_RES} por aliado adyacente\\_<sprite name=\"cell_cross\">.",
+    "de": "Verursacht bei einem Gegner {magicalDamage:deg}.\n\\---\nEntzieht 1\\_{%PA_RES} pro angrenzenden\\_<sprite name=\"cell_cross\"> Verbündeten.",
+    "pt": "Inflige {magicalDamage:deg} a um adversário.\n\\---\nRouba 1 {%PA_RES} por aliado adjacente\\_<sprite name=\"cell_cross\">."
+  }
+}

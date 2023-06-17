@@ -1,0 +1,204 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "171684",
+  "m_id": 171684,
+  "m_displayName": "MONSTRE VAMPYRE - Ponction",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -4615873,
+    "b": 1854094036,
+    "c": 927044379,
+    "d": 1671363915,
+    "e": 1259537305
+  },
+  "m_i18nDescriptionId": {
+    "a": -4615873,
+    "b": 1854094036,
+    "c": 927044379,
+    "d": 1671363915,
+    "e": -1381338206
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "dd10f6edacee20a44af86e6e7b99bad8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 171684,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        55
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              55
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              55
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "dd36d4e804585114fb14d5e38fe37f0d",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51,
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ponction",
+    "en": "Puncture",
+    "es": "Punción",
+    "de": "Punktion",
+    "pt": "Punção"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un <b>Vampyre</b> allié.\n\\---\nSoigne un autre <b>Vampyre</b> allié de {PVvalue:heal}.",
+    "en": "Does {magicalDamage:dmg} to an allied <b>Vampyre</b>.\n\\---\nHeals another allied <b>Vampyre</b> {PVvalue:heal}.",
+    "es": "Inflige {magicalDamage:dmg} a un <b>vampyro</b> aliado.\n\\---\nCura {PVvalue:heal} a otro <b>vampyro</b> aliado.",
+    "de": "Verursacht {magicalDamage:dmg} bei einem verbündeten <b>Vampyr</b>.\n\\---\nHeilt einen anderen verbündeten <b>Vampyr</b> um {PVvalue:heal}.",
+    "pt": "Inflige {magicalDamage:dmg} a um <b>Vampyro</b> aliado.\n\\---\nCura outro <b>Vampyro</b> aliado em {PVvalue:heal}."
+  }
+}

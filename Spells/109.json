@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "109",
+  "m_id": 109,
+  "m_displayName": "XELOR - ARME - PIKUXALA - ETHER - Saut Pikuxala",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1346310394,
+    "b": 950269268,
+    "c": -1663833335,
+    "d": -540661956,
+    "e": -1467067572
+  },
+  "m_i18nDescriptionId": {
+    "a": 1346310394,
+    "b": 950269268,
+    "c": -1663833335,
+    "d": -540661956,
+    "e": 84706497
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "762fc3bf90d39f948947bf3ba18fc578"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "995410cb10a92454a8968ce2ac1c50c0"
+      },
+      {
+        "assetGuid": "ac75e8b2c1a486445877e68a9c831a2b"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 109,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 945,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "tp",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "tp",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Saut Pikuxala",
+    "en": "Pikuxala Leap",
+    "es": "Salto Pikuxala",
+    "de": "Pikuxala-Sprung",
+    "pt": "Salto Pikuxala"
+  },
+  "description": {
+    "fr": "Téléporte un de vos personnages de {cell:tp} puis le téléporte sur sa case de début de tour.",
+    "en": "Teleports one of your characters {cell:tp} then teleports them to the cell they started the turn on.",
+    "es": "Teletransporta a uno de tus personajes {cell:tp} luego lo teletransporta a la casilla de inicio del turno.",
+    "de": "Teleportiert einen deiner Charaktere um {cell:tp}. Teleportiert ihn dann auf sein Feld zu Beginn der Runde.",
+    "pt": "Teletransporta um dos seus personagens por {cell:tp} depois o teletransporta para sua célula de início do turno."
+  }
+}

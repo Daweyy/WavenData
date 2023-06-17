@@ -1,0 +1,246 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "234523",
+  "m_id": 234523,
+  "m_displayName": "EQUIPMENT - BRACELET - Traversee enflammee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1372605212,
+    "b": 728860948,
+    "c": 1582013896,
+    "d": 774122848,
+    "e": -1435515413
+  },
+  "m_i18nDescriptionId": {
+    "a": 1372605212,
+    "b": 728860948,
+    "c": 1582013896,
+    "d": 774122848,
+    "e": -665526049
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "de262c70c2eb8c643ba0b799a462584b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 234523,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "SumValue",
+                "referenceId": "c",
+                "valuesToSum": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 2
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "PlayerHasEquipmentSkillCondition",
+                      "player": {
+                        "type": "CasterSelector"
+                      },
+                      "skillId": 648439
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c2",
+                      "value": 1
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "PlayerHasEquipmentSkillCondition",
+                      "player": {
+                        "type": "CasterSelector"
+                      },
+                      "skillId": 647920
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c3",
+                      "value": 1
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d92318da4c80c0c44a2428cac4e4724a",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "c",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 2
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "skillId": 648439
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c2",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "skillId": 647920
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c3",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c3",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.983.bc"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "FLAME",
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Traversée enflammée",
+    "en": "Flaming Crossing",
+    "es": "Travesía Ardiente",
+    "de": "Flammende Überquerung",
+    "pt": "Travessia Flamejante"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nVotre héros traverse {cell:c} et déclenche {flame:ParameterizedEffectExecution.983.bc} sur les adversaires traversés.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nYour hero goes through {cell:c} and triggers {flame:ParameterizedEffectExecution.983.bc} on the opponents gone through.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTu héroe atraviesa {cell:c} y activa {flame:ParameterizedEffectExecution.983.bc} en los aliados atravesados.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nDein Held überquert {cell:c} und löst {flame:ParameterizedEffectExecution.983.bc} bei den überquerten Gegnern aus.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nSeu herói atravessa {cell:c} e aciona {flame:ParameterizedEffectExecution.983.bc} nos adversários atravessados."
+  }
+}

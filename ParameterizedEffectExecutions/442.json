@@ -1,0 +1,64 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 3841871838608002000
+  },
+  "m_Name": "442",
+  "m_id": 442,
+  "m_displayName": "Peat Effect Execution - Player Summoning Peat Power",
+  "m_availability": 3,
+  "values": {
+    "type": "ParameterizedEffectExecutionDefinition",
+    "id": 442,
+    "parameters": [
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "target"
+      },
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "source"
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            91,
+            48,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "ParameterSingleEntitySelector",
+              "name": "source"
+            }
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  }
+}

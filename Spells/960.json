@@ -1,0 +1,137 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "960",
+  "m_id": 960,
+  "m_displayName": "IOP - ARME - LAMARGUEDON SPECTRAL - ETHER - Ame Spectrale",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -585207115,
+    "b": 1260679252,
+    "c": -789115270,
+    "d": 1684262771,
+    "e": -698235994
+  },
+  "m_i18nDescriptionId": {
+    "a": -585207115,
+    "b": 1260679252,
+    "c": -789115270,
+    "d": 1684262771,
+    "e": 782506894
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "13c476baa76f91241bade507a53b07a6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 960,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": 143,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 898
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Âme Spectrale",
+    "en": "Spectral Soul",
+    "es": "Alma Espectral",
+    "de": "Geisterseele",
+    "pt": "Alma Espectral"
+  },
+  "description": {
+    "fr": "Invoque une {Summoning:898} jusqu'à {cell:c} de votre héros.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Summons one {Summoning:898} up to {cell:c} from your hero.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Invoca un {Summoning:898} hasta a {cell:c} de tu héroe.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Beschwört eine {Summoning:898} bis {cell:c} von deinem Helden.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Invoca uma {Summoning:898} a até {cell:c} do seu herói.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

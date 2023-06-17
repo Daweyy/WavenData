@@ -1,0 +1,232 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "417",
+  "m_id": 417,
+  "m_displayName": "DECK - INFINITE - MULTI - Khan Karkass",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1129782410,
+    "b": -798869884,
+    "c": -76838310,
+    "d": 759854799,
+    "e": 448695074
+  },
+  "m_i18nDescriptionId": {
+    "a": -1129782410,
+    "b": -798869884,
+    "c": -76838310,
+    "d": 759854799,
+    "e": 355848171
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 417,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 5948,
+      "skinIds": [
+        5948
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 140
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 32
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      409883,
+      408789,
+      409368,
+      197,
+      409975,
+      410026
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          417
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 99
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 99
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Khan Karkass",
+    "en": "Khan Karkass",
+    "es": "Khan Karkasa",
+    "de": "Khan Karkass",
+    "pt": "Khan Karkass"
+  },
+  "description": {
+    "fr": "<rem>Peut être invoqué sur une case libre du terrain.</rem>\n\\---\nTant qu'il est en jeu\\_: {PMvalue:pm,+} à vos personnages.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "en": "<rem>Can be summoned on a free cell on the field.</rem>\n\\---\nWhile in play: {PMvalue:pm,+}\\_ to your characters.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "es": "<rem>Puede invocarse en una casilla libre del terreno.</rem>\n\\---\nMientras esté en juego: {PMvalue:pm,+} a tus personajes.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "de": "<rem>Kann auf einem freien Feld des Spielfelds beschworen werden.</rem>\n\\---\nSolange er im Spiel ist: {PMvalue:pm,+} für deine Charaktere.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "pt": "<rem>Pode ser invocado sobre sua célula livre.</rem>\n\\---\nEnquanto estiver em jogo: {PMvalue:pm,+} aos seus personagens.\\v<family>{%Family_JorisComrades_Name}</family>"
+  }
+}

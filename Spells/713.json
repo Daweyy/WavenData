@@ -1,0 +1,227 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "713",
+  "m_id": 713,
+  "m_displayName": "IOP - ARME - BOUVALOIR OROK - AIR - Accalmie",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1527816868,
+    "b": -776901772,
+    "c": 1060587994,
+    "d": -2120940155,
+    "e": 668176967
+  },
+  "m_i18nDescriptionId": {
+    "a": 1527816868,
+    "b": -776901772,
+    "c": 1060587994,
+    "d": -2120940155,
+    "e": -1221683645
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d67b44bec60c63e45abd3a364bb3edef"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 713,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      191624,
+      417356,
+      224842
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 497,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c1",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6991f450f7ab1f0428d764f81376256b",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "d",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51,
+            43
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 56859,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Accalmie",
+    "en": "Lull",
+    "es": "Sosiego",
+    "de": "Flaute",
+    "pt": "Acalmia"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné avec lui jusqu’à {cell:c1}.\n\\---\nInflige {value:d} dégâts à la cible et la {#PUSH} de {cell:c2}.",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c1} away.\n\\---\nDoes {value:d} damage to the target and {#PUSH} the target {cell:c2}.",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado con él hasta {cell:c1}.\n\\---\nInflige {value:d} de daño al objetivo y lo {#PUSH} {cell:c2}.",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis auf {cell:c1} in derselben Reihe zu.\n\\---\nVerursacht beim Ziel {value:d} Schaden und {#PUSH} um {cell:c2} zurück.",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado com ele a até {cell:c1}.\n\\---\nInflige {value:d} danos ao alvo e empurra {#PUSH} por {cell:c2}."
+  }
+}

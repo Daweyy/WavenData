@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "90",
+  "m_id": 90,
+  "m_displayName": "SRAM - CLASSE - AIR - Piege Attirant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1718020093,
+    "b": 1698581876,
+    "c": -299246024,
+    "d": 908827745,
+    "e": -943336527
+  },
+  "m_i18nDescriptionId": {
+    "a": 1718020093,
+    "b": 1698581876,
+    "c": -299246024,
+    "d": 908827745,
+    "e": -1310839036
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "099ba3f75d8362742a395666a0ee26b0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 90,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      481607,
+      481610,
+      481749
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConditionalValue",
+                  "referenceId": "c",
+                  "condition": {
+                    "type": "AndCondition",
+                    "conditions": [
+                      {
+                        "type": "ThisSpellHasSkillCondition",
+                        "skillId": 68669
+                      }
+                    ]
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 5
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 3
+                  }
+                }
+              }
+            },
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "pull",
+          "value": 3
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 68669
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pull",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.748.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 748
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège Attirant",
+    "en": "Attracting Trap",
+    "es": "Trampa Atrayente",
+    "de": "Anziehende Falle",
+    "pt": "Armadilha Atraente"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:748} ({value:FloorMechanism.748.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\nAttire vers lui les premiers adversaires alignés jusqu'à {cell:pull}.",
+    "en": "Builds one {FloorMechanism:748} ({value:FloorMechanism.748.dmg}) up to {cell:c} from your hero.\n\\---\nAttracts the first in-line opponents up to {cell:pull}.",
+    "es": "Construye un {FloorMechanism:748} ({value:FloorMechanism.748.dmg}) hasta a {cell:c} de tu héroe.\n\\---\nAtrae hacia él a los primeros adversarios alineados hasta {cell:pull}.",
+    "de": "Errichtet eine\\_{FloorMechanism:748} ({value:FloorMechanism.748.dmg}) in einer Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\nZieht die ersten Gegner in derselben Reihe bis auf {cell:pull} an ihn heran.",
+    "pt": "Posiciona uma {FloorMechanism:748} ({value:FloorMechanism.748.dmg}) a até {cell:c} do seu herói.\n\\---\nAtrai até ele os primeiros adversários alinhados a até {cell:pull}."
+  }
+}

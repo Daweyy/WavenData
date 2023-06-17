@@ -1,0 +1,209 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "795",
+  "m_id": 795,
+  "m_displayName": "QUETE - CRAQUELEUR - Gilles Lacarte",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1254462170,
+    "b": -607931228,
+    "c": -1308128725,
+    "d": -1624840835,
+    "e": 680034167
+  },
+  "m_i18nDescriptionId": {
+    "a": -1254462170,
+    "b": -607931228,
+    "c": -1308128725,
+    "d": -1624840835,
+    "e": -1696127416
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 795,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9172,
+      "skinIds": [
+        9172
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 855
+        },
+        {
+          "type": 20,
+          "id": 88
+        }
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [
+      88
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 230
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 5
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [
+      {
+        "type": "SpellOnSpawnWithDestination",
+        "spell": 855,
+        "destination": 1
+      }
+    ],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          795
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Gilles Lacarte",
+    "en": "Giles Mapit",
+    "es": "Gilles Lacarta",
+    "de": "Gilles Merkator",
+    "pt": "Gilles Mascate"
+  },
+  "description": {
+    "fr": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%FightTurnStarted} Ajoute le sort {Spell:855} à votre main.\n\\---\nLorsqu'il subit une {%attack} Se téléporte sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.",
+    "en": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%FightTurnStarted} Adds the {Spell:855} spell to your hand.\n\\---\nWhen he endures an {%attack} Teleports to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.",
+    "es": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%FightTurnStarted} Añade el hechizo {Spell:855} a tu mano.\n\\---\nCuando sufre un {%attack}: Se teletransporta a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.",
+    "de": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%FightTurnStarted} Fügt deiner Hand den Zauber {Spell:855} hinzu.\n\\---\nWenn er Ziel von einem {%attack} wird, teleportiert sich auf ein an einen Verbündeten angrenzendes\\_<sprite name=\"cell_cross\"> Feld.",
+    "pt": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%FightTurnStarted} Adiciona o feitiço {Spell:855} à sua mão.\n\\---\nQuando sofre um {%attack} Teletransporta-se sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado."
+  }
+}

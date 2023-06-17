@@ -1,0 +1,229 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "548",
+  "m_id": 548,
+  "m_displayName": "ENIRIPSA - CLASSE - TERRE - Baume Tourbe",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1381429585,
+    "b": -645455916,
+    "c": -2046379960,
+    "d": 916886350,
+    "e": -1509591481
+  },
+  "m_i18nDescriptionId": {
+    "a": -1381429585,
+    "b": -645455916,
+    "c": -2046379960,
+    "d": 916886350,
+    "e": 1150802503
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c0972ba054d5b6849a474d155af6c74d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 548,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      147029,
+      156793,
+      515
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": null
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7c1f20e8ea0fa3c4eb5869879afb91bd",
+        "originTarget": {
+          "type": "SecondCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 911,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.640.pt"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PEAT",
+        "SUPPORT"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Baume Tourbé",
+    "en": "Peaty Balm",
+    "es": "Bálsamo Turbado",
+    "de": "Torfiger Schutzbalsam",
+    "pt": "Bálsamo Turfoso"
+  },
+  "description": {
+    "fr": "Soigne un allié de {PVvalue:ar} et Inflige {magicalDamage:dmg} à un adversaire aligné à lui.\n\\---\n{#SUPPORT}\\_: Déclenche {peat:ParameterizedEffectExecution.640.pt}.",
+    "en": "Heals an ally {PVvalue:ar} and does {magicalDamage:dmg} to an opponent in line with the them.\n\\---\n{#SUPPORT}: Triggers {peat:ParameterizedEffectExecution.640.pt}.",
+    "es": "Cura a un aliado {PVvalue:ar} e inflige {magicalDamage:dmg} a un adversario alineado con él.\n\\---\n{#SUPPORT}: Activa {peat:ParameterizedEffectExecution.640.pt}.",
+    "de": "Heilt einen Verbündeten um {PVvalue:ar} und verursacht bei einem Gegner in derselben Reihe {magicalDamage:dmg}.\n\\---\n{#SUPPORT}: Löst {peat:ParameterizedEffectExecution.640.pt} aus.",
+    "pt": "Cura um aliado em {PVvalue:ar} e inflige {magicalDamage:dmg} a um adversário alinhado a ele.\n\\---\n{#SUPPORT}: Aciona {peat:ParameterizedEffectExecution.640.pt}."
+  }
+}

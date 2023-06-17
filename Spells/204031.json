@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "204031",
+  "m_id": 204031,
+  "m_displayName": "EQUIPMENT - RING - GRIMOIRE - (6) Eau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2026077963,
+    "b": 2139164420,
+    "c": 1735185304,
+    "d": -499958736,
+    "e": 365541565
+  },
+  "m_i18nDescriptionId": {
+    "a": 2026077963,
+    "b": 2139164420,
+    "c": 1735185304,
+    "d": -499958736,
+    "e": -81265321
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "6a0aa9c20f2c6784983e2b9c9ea6ce62"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 204031,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        89
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a6616e7c0d26ab74598779aed75a273e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Page 6 du Grimoire des Vagues",
+    "en": "Page 6 of the Spellbook of Waves",
+    "es": "Página 6 del Grimorio de las Olas",
+    "de": "Seite 6 des Zauberbuchs der Wellen",
+    "pt": "Página 6 do Grimório das Ondas"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nSoigne un allié de {PVvalue:v}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nHeals an ally {PVvalue:v}.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nCura a un aliado {PVvalue:v}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nHeilt einen Verbündeten um {PVvalue:v}.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nCura um aliado em {PVvalue:v}."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 5531694572057177000
+  },
+  "m_Name": "49",
+  "m_id": 49,
+  "m_displayName": "Affinity - Lightning",
+  "m_availability": 3,
+  "values": {
+    "type": "FxDefinition",
+    "id": 49,
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f0f5cfd8236cb1f4ea35ead89144dcc1",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundSquaredTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "DelayOverDistance",
+          "origin": {
+            "type": "FirstCastTargetSelector"
+          },
+          "delay": 0.25
+        }
+      }
+    ]
+  }
+}

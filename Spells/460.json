@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "460",
+  "m_id": 460,
+  "m_displayName": "ENIRIPSA - CLASSE - AIR - Laboratoire de Vent",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 231618124,
+    "b": -1942727420,
+    "c": -228260840,
+    "d": -2029469111,
+    "e": -1756491552
+  },
+  "m_i18nDescriptionId": {
+    "a": 231618124,
+    "b": -1942727420,
+    "c": -228260840,
+    "d": -2029469111,
+    "e": -1298453503
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2e8261e9661eb2b4984db03769fbfeef"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 460,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      498400,
+      498010,
+      462
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      19,
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        {
+          "type": 22,
+          "id": 119
+        },
+        {
+          "type": 25,
+          "id": 945
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1809
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Laboratoire de Vent",
+    "en": "Wind Laboratory",
+    "es": "Laboratorio de Viento",
+    "de": "Wind-Laboratorium",
+    "pt": "Laboratório de Vento"
+  },
+  "description": {
+    "fr": "Construit un {ObjectMechanism:1809} jusqu'à {cell:c} de votre héros.\n\\---\n<rem>Détruit votre précédent {ObjectMechanism:1809!}.</rem>",
+    "en": "Builds one {ObjectMechanism:1809} up to {cell:c} from your hero.\n\\---\n<rem>Destroys your previous {ObjectMechanism:1809!}.</rem>",
+    "es": "Construye un {ObjectMechanism:1809} hasta a {cell:c} de tu héroe.\n\\---\n<rem>Destruye tu {ObjectMechanism:1809!} anterior.</rem>",
+    "de": "Errichtet ein\\_{ObjectMechanism:1809} auf eine Entfernung von bis zu {cell:c} von eurem Helden.\n\\---\n<rem>Zerstört dein vorheriges {ObjectMechanism:1809!}.</rem>",
+    "pt": "Posiciona um {ObjectMechanism:1809} a até {cell:c} do seu herói.\n\\---\n<rem>Destrói o {ObjectMechanism:1809!} anterior.</rem>"
+  }
+}

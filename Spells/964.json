@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "964",
+  "m_id": 964,
+  "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - ETHER - Mouvement Flamboyant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 330196404,
+    "b": -1476134252,
+    "c": -52655751,
+    "d": -639968182,
+    "e": 1364722027
+  },
+  "m_i18nDescriptionId": {
+    "a": 330196404,
+    "b": -1476134252,
+    "c": -52655751,
+    "d": -639968182,
+    "e": -1652430116
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8226794d91bb40346bcad33034e54997"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "ca64ca652fa4cfa4bb515f6e769a5b3c"
+      },
+      {
+        "assetGuid": "1cc34d3c6aed6ee42a6a8859d4e8e192"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 964,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 534,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "SumValue",
+                "referenceId": "",
+                "valuesToSum": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "c1",
+                    "value": 1
+                  },
+                  {
+                    "type": "MultValue",
+                    "referenceId": "",
+                    "valuesToMult": [
+                      {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "c2",
+                        "value": 1
+                      },
+                      {
+                        "type": "FloatingCounterValue",
+                        "referenceId": "",
+                        "entitySelector": {
+                          "type": "CasterHeroSelector"
+                        },
+                        "counter": {
+                          "type": "CategoryFloatingCounterType",
+                          "category": 2
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Mouvement Flamboyant",
+    "en": "Flaming Move",
+    "es": "Movimiento Flamígero",
+    "de": "Flammende Bewegung",
+    "pt": "Movimento Flamejante"
+  },
+  "description": {
+    "fr": "Téléporte votre héros de {cell:c1}.\n\\---\n{cell:c2, +} par {%AURA_SWORD} qu’il possède.",
+    "en": "Teleports your hero {cell:c1}.\n\\---\n{cell:c2, +} per {%AURA_SWORD} that they have.",
+    "es": "Teletransporta a tu héroe {cell:c1}.\n\\---\n{cell:c2, +} por {%AURA_SWORD} que tenga.",
+    "de": "Teleportiert deinen Helden um {cell:c1}.\n\\---\n{cell:c2, +} je {%AURA_SWORD}, die er besitzt.",
+    "pt": "Teletransporta seu herói por {cell:c1}.\n\\---\n{cell:c2, +} por {%AURA_SWORD} que ele."
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "136704",
+  "m_id": 136704,
+  "m_displayName": "XELOR - CLASSE - ETHER - Equinoxe",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1748083662,
+    "b": 1055371588,
+    "c": -1748332199,
+    "d": -2109376885,
+    "e": 1517962392
+  },
+  "m_i18nDescriptionId": {
+    "a": -1748083662,
+    "b": 1055371588,
+    "c": -1748332199,
+    "d": -2109376885,
+    "e": 1376882275
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e4c9200f029732141885d97a67271616"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 136704,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 5
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": null,
+              "condition": {
+                "type": "CaracValueCondition",
+                "selector": {
+                  "type": "CasterSelector"
+                },
+                "carac": 19,
+                "value": {
+                  "type": "GreaterEqualThan",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 2
+                  }
+                }
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "r",
+                "value": -1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "UnionOfEntitiesSelector",
+          "first": {
+            "type": "CasterHeroSelector"
+          },
+          "second": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "FamilyFilter",
+                "condition": 1,
+                "families": [
+                  20
+                ]
+              }
+            ]
+          }
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d0e57743d3f97cd458390b0c9358b0f1",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.1
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "r",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "CHRONO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Équinoxe",
+    "en": "Equinox",
+    "es": "Equinoccio",
+    "de": "Equinox",
+    "pt": "Equinócio"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros aux adversaires autour\\_<sprite name=\"cell_around\"> de lui ou d'un vos <b>SINISTROS</b>.\n\\---\n{#CHRONO}\\_: {PAvalue:r} au coût de ce {%SPELLCOUNT}.",
+    "en": "Inflicts your hero's {%AT} on opponents around\\_<sprite name=\"cell_around\"> them or one of your <b>SINISTROS</b>.\n\\---\n{#CHRONO}: {PAvalue:r} to the cost of this {%SPELLCOUNT}.",
+    "es": "Inflige el {%AT} de tu héroe a los adversarios alrededor\\_<sprite name=\"cell_around\"> de este o de uno de tus <b>SINISTROS</b>.\n\\---\n{#CHRONO}: {PAvalue:r} al coste de este {%SPELLCOUNT}.",
+    "de": "Fügt Gegnern in der Nähe\\_<sprite name=\"cell_around\"> des Helden oder eines deiner <b>SINISTROS</b> den {%AT} deines Helden als Schaden zu.\n\\---\n{#CHRONO}: {PAvalue:r} auf Kosten dieses {%SPELLCOUNT}.",
+    "pt": "Inflige {%AT} do seu herói aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele ou de um dos seus <b>SINISTROS</b>.\n\\---\n{#CHRONO}: {PAvalue:r} ao custo deste {%SPELLCOUNT}."
+  }
+}

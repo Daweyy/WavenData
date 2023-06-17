@@ -1,0 +1,236 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "48111",
+  "m_id": 48111,
+  "m_displayName": "MONSTRE CHUCHOTEUR - Repli Tactique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -222728324,
+    "b": 455567252,
+    "c": -38853559,
+    "d": 1524928573,
+    "e": 442629483
+  },
+  "m_i18nDescriptionId": {
+    "a": -222728324,
+    "b": 455567252,
+    "c": -38853559,
+    "d": 1524928573,
+    "e": 1066303270
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7f3c724693c5bc540bf3e0b7da101110"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 48111,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        52
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 20
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "AroundTargetFilter",
+                  "targetsToCompare": {
+                    "type": "FirstCastTargetSelector"
+                  },
+                  "distance": {
+                    "type": "EqualsTo",
+                    "dynamicValue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 1
+                    }
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7382f066bd7def44b954b977594d246f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Repli Tactique",
+    "en": "Tactical Retreat",
+    "es": "Repliegue Táctico",
+    "de": "Taktischer Rückzug",
+    "pt": "Retirada Tática"
+  },
+  "description": {
+    "fr": "Fait reculer un allié adjacent\\_<sprite name=\"cell_cross\"> à un adversaire de\\_{cell:c}.\n\\---\n{#COMBO} : Pioche {value:v} sort.",
+    "en": "Makes an ally adjacent\\_<sprite name=\"cell_cross\"> to an opponent move back\\_{cell:c}.\n\\---\n{#COMBO}: Draws {value:v} spell.",
+    "es": "Hace retroceder a un aliado adyacente\\_<sprite name=\"cell_cross\"> a un adversario {cell:c}.\n\\---\n{#COMBO}: Sacas {value:v} hechizo.",
+    "de": "Lässt einen an einen Gegner angrenzenden Verbündeten\\_<sprite name=\"cell_cross\"> um\\_{cell:c} zurückweichen.\n\\---\n{#COMBO}: Zieht {value:v} Zauber.",
+    "pt": "Afasta um aliado adjacente\\_<sprite name=\"cell_cross\"> a um adversário por\\_{cell:c}.\n\\---\n{#COMBO}: Compre {value:v} feitiço."
+  }
+}

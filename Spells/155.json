@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "155",
+  "m_id": 155,
+  "m_displayName": "_NOT USED - PIN - XELOR - Sarcophagus",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": 1794692158,
+    "b": -107351148,
+    "c": -480135463,
+    "d": 564982698,
+    "e": 1347633472
+  },
+  "m_i18nDescriptionId": {
+    "a": 1794692158,
+    "b": -107351148,
+    "c": -480135463,
+    "d": 564982698,
+    "e": -1687426012
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 155,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 4,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        0
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 13
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "UniqueForCasterTeamCondition",
+      "specificEntity": {
+        "type": "SummoningDefinitionFilter",
+        "condition": 1,
+        "summonings": [
+          825
+        ]
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 825
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Sarcophagus",
+    "en": "Sarcophagus",
+    "es": "Sarcophagus",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Invoque {Summoning:825} sur une case adjacente\\_<sprite name=\"cell_cross\"> à votre héros.\n\\---\nQuand vous gagnez 1\\_{%pa} en réserve, {PAvalue:pa} au coût de ce sort.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Invoque {Summoning:825} sur une case {#ADJACENT[ADJACENTE]} à votre héros.\nCe personnage est {#UNIQUE}.",
+    "es": "Invoque {Summoning:825} sur une case {#ADJACENT[ADJACENTE]} à votre héros.\nCe personnage est {#UNIQUE}.",
+    "de": "",
+    "pt": ""
+  }
+}

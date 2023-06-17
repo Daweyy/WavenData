@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "482",
+  "m_id": 482,
+  "m_displayName": "CRA - CLASSE - AIR - Pointe Aceree",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1534979586,
+    "b": -1638262972,
+    "c": 235882088,
+    "d": 489343367,
+    "e": 1292388528
+  },
+  "m_i18nDescriptionId": {
+    "a": -1534979586,
+    "b": -1638262972,
+    "c": 235882088,
+    "d": 489343367,
+    "e": 358957281
+  },
+  "m_elementaryStates": 4,
+  "m_illustrationReference": {
+    "assetGuid": "ff9591bf6c85ec54eb954634f5e2834e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 482,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      783,
+      440321,
+      718
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ffa7179994bb5074b9c77d4aea4e8695",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 28
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 57951,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Pointe Acérée",
+    "en": "Sharp Point",
+    "es": "Punta Aguzada",
+    "de": "Scharfe Spitze",
+    "pt": "Ponta Afiada"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et applique <b>ÉVENTÉ</b>\\_<sprite name=\"ventilated\"/>.",
+    "en": "Does {magicalDamage:dmg} and applies <b>VENTILATED</b>\\_<sprite name=\"ventilated\"/>.",
+    "es": "Inflige {magicalDamage:dmg} y aplica <b>AIREADO</b>\\_<sprite name=\"ventilated\"/>.",
+    "de": "Verursacht {magicalDamage:dmg} und wendet <b>WINDIG</b>\\_<sprite name=\"ventilated\"/> an.",
+    "pt": "Inflige {magicalDamage:dmg} e aplica <b>AERADO</b>\\_<sprite name=\"ventilated\"/>."
+  }
+}

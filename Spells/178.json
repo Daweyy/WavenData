@@ -1,0 +1,163 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "178",
+  "m_id": 178,
+  "m_displayName": "ENIRIPSA - CLASSE - EAU - Elixir de Glace",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 309166395,
+    "b": -1188039372,
+    "c": 296617930,
+    "d": 602137992,
+    "e": -1164789067
+  },
+  "m_i18nDescriptionId": {
+    "a": 309166395,
+    "b": -1188039372,
+    "c": 296617930,
+    "d": 602137992,
+    "e": -1245650433
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "44e9142d9dd0ded449cb997baee30958"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 178,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "222166f509b9fad48bc16314bf5b4c75",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 118
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Élixir de Glace",
+    "en": "Ice Elixir",
+    "es": "Elixir de Hielo",
+    "de": "Eis-Elixir",
+    "pt": "Elixir de Gelo"
+  },
+  "description": {
+    "fr": "Soigne un allié de {PVvalue:heal}.\n\\---\n{value:a,+}\\_{aura:118,value:a} à votre héros.\n\\---\n<rem>Ce sort est détruit lorsqu'il est joué.</rem>",
+    "en": "Heals an ally {PVvalue:heal}.\n\\---\n{value:a,+}\\_{aura:118,value:a} to your hero.\n\\---\n<rem>This spell is destroyed when played.</rem>",
+    "es": "Cura a un aliado {PVvalue:heal}.\n\\---\n{value:a,+}\\_{aura:118,value:a} a tu héroe.\n\\---\n<rem>Este hechizo se destruye cuando se usa.</rem>",
+    "de": "Heilt einen Verbündeten um {PVvalue:heal}\\_.\n\\---\n{value:a,+}\\_{aura:118,value:a} für deinen Helden.\n\\---\n<rem>Dieser Zauber wird zerstört, wenn er ausgespielt wird.</rem>",
+    "pt": "Cura um aliado em {PVvalue:heal}.\n\\---\n{value:a,+}\\_{aura:118,value:a} ao seu herói.\n\\---\n<rem>Este feitiço é destruído quando é lançado.</rem>"
+  }
+}

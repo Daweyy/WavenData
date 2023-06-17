@@ -1,0 +1,130 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "169",
+  "m_id": 169,
+  "m_displayName": "SACRIEUR - CLASSE - ETHER - Sacrifice",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 460121640,
+    "b": 1592822180,
+    "c": -336061286,
+    "d": -302668386,
+    "e": 733569105
+  },
+  "m_i18nDescriptionId": {
+    "a": 460121640,
+    "b": 1592822180,
+    "c": -336061286,
+    "d": -302668386,
+    "e": -840058610
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3d4bc75d32eeedb49a9e2f02007e3e3e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 169,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": 30,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "CasterHeroFilter"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "dc77a04fff682b44fac58ca03da9e013",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 21,
+          "id": 3
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Sacrifice",
+    "en": "Sacrifice",
+    "es": "Sacrificio",
+    "de": "Opfer",
+    "pt": "Sacrifício"
+  },
+  "description": {
+    "fr": "Votre héros devient {LinkEffect:3} d'un allié jusqu'à votre prochain tour.",
+    "en": "Your hero becomes the target's {LinkEffect:3} until your next turn.",
+    "es": "Tu héroe pasa a ser {LinkEffect:3} del objetivo hasta tu próximo turno.",
+    "de": "Dein Held wird {LinkEffect:3} des Ziels bis zu deiner nächsten Runde.",
+    "pt": "Seu herói se torna o {LinkEffect:3} do alvo até o seu próximo turno."
+  }
+}

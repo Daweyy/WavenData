@@ -1,0 +1,217 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "334",
+  "m_id": 334,
+  "m_displayName": "DECK - KROSMIQUE - TERRE - Lilotte",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -377234302,
+    "b": -2096243932,
+    "c": 1274387960,
+    "d": 474126644,
+    "e": -734037375
+  },
+  "m_i18nDescriptionId": {
+    "a": -377234302,
+    "b": -2096243932,
+    "c": 1274387960,
+    "d": 474126644,
+    "e": -1531090972
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 334,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9925,
+      "skinIds": [
+        9925
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    },
+    "families": [
+      19,
+      74
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 95
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 23
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 24
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      341988,
+      737221,
+      208,
+      737087,
+      736209,
+      736699
+    ],
+    "rarity": 2,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 407,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          334
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Lilotte",
+    "en": "Lilotte",
+    "es": "Lilota",
+    "de": "Lilotte",
+    "pt": "Lilota"
+  },
+  "description": {
+    "fr": "{%attack} {#push} de {cell:c}, puis avance d'autant.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "en": "{%attack} {#push} {cell:c}, then moves forward the same amount.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "es": "{%attack} {#push} {cell:c}, luego, avanza lo mismo.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "de": "{%attack}{#push} um {cell:c}, bewegt sich entsprechend nach vorne.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "pt": "{%attack} {#push} por {cell:c}, depois avança o mesmo tanto.\\v<family>{%Family_JorisComrades_Name}</family>"
+  }
+}

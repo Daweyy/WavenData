@@ -1,0 +1,181 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "15892",
+  "m_id": 15892,
+  "m_displayName": "_NOT USED - COMPAGNON - DATHURA - Poupée de Dathura",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": -2041090042,
+    "b": -814738172,
+    "c": 474933514,
+    "d": 171104378,
+    "e": 1592514788
+  },
+  "m_i18nDescriptionId": {
+    "a": -2041090042,
+    "b": -814738172,
+    "c": 474933514,
+    "d": 171104378,
+    "e": -1851434188
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 15892,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "UniqueForCasterTeamCondition",
+      "specificEntity": {
+        "type": "SummoningDefinitionFilter",
+        "condition": 1,
+        "summonings": [
+          251
+        ]
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllCompanionsSelector"
+              },
+              "filters": [
+                {
+                  "type": "CompanionDefinitionFilter",
+                  "condition": 1,
+                  "companions": [
+                    350
+                  ]
+                },
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ac941c57a04033445aebf81f9b2645dd",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 8
+        },
+        "UNIQUE",
+        {
+          "type": 5,
+          "id": 350
+        },
+        {
+          "type": 4,
+          "id": 251
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Poupée de Dathura",
+    "en": "Bombe",
+    "es": "Bombe",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Invoque une {Summoning:251} sur une case adjacente\\_<sprite name=\"cell_cross\"> à {Companion:350}.",
+    "en": "Construisez une {ObjectMechanism:1486}\\vsur une case {#ADJACENT[ADJACENTE]} à un allié.\n{#OBJECTMECHANISM[]}",
+    "es": "Construisez une {ObjectMechanism:1486}\\vsur une case {#ADJACENT[ADJACENTE]} à un allié.\n{#OBJECTMECHANISM[]}",
+    "de": "",
+    "pt": ""
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "4",
+  "m_id": 4,
+  "m_displayName": "MONSTRE TAURE - Épaissir le Cuir",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -314723816,
+    "b": -979177740,
+    "c": 213289594,
+    "d": 2077267807,
+    "e": -1692544716
+  },
+  "m_i18nDescriptionId": {
+    "a": -314723816,
+    "b": -979177740,
+    "c": 213289594,
+    "d": 2077267807,
+    "e": -1208669611
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5dc65d501f52f1940906e112071896a1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 4,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        56
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 0,
+            "carac": 1
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "164de16ff9cb67146aaade8be8f1f888",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "ar",
+          "baseValue": 13,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Épaissir le Cuir",
+    "en": "Thicken Their Hide",
+    "es": "Curtirse",
+    "de": "Das Leder verdicken",
+    "pt": "Espessamento de Couro"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} au <b>Taure</b> allié ayant le moins de {%PV}.",
+    "en": "{ARvalue:ar,+} to the allied <b>Taur</b> with the least {%PV}.",
+    "es": "{ARvalue:ar,+} al <b>toro</b> aliado que tenga menos {%PV}.",
+    "de": "{ARvalue:ar,+} für den verbündeten <b>Taurus</b> mit den wenigsten {%PV}.",
+    "pt": "{ARvalue:ar,+} ao <b>Tauro</b> aliado com menos {%PV}."
+  }
+}

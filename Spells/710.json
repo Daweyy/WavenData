@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "710",
+  "m_id": 710,
+  "m_displayName": "FANTOME - Dans de Sales Draps",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1504950397,
+    "b": -1487872556,
+    "c": 324620106,
+    "d": -1519962027,
+    "e": 490052796
+  },
+  "m_i18nDescriptionId": {
+    "a": 1504950397,
+    "b": -1487872556,
+    "c": 324620106,
+    "d": -1519962027,
+    "e": 10083559
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "238d23aaaa233d74cb8c549868a5b6aa"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "f249d3ce6e54e2444a6a4f27e7a59df6"
+      },
+      {
+        "assetGuid": "92f3e621f095bf94d88864c41350d6c4"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 710,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        0
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 20
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 20
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Dans de Sales Draps",
+    "en": "In a Bad Way",
+    "es": "En Líos",
+    "de": "In der Klemme",
+    "pt": "Maus Lençóis"
+  },
+  "description": {
+    "fr": "Échange la position de deux personnages allié.",
+    "en": "Switches two allied characters' positions.",
+    "es": "Intercambia la posición de dos personajes aliados.",
+    "de": "Tauscht die Position von zwei verbündeten Charakteren.",
+    "pt": "Troca a posição de 2 personagens aliados."
+  }
+}

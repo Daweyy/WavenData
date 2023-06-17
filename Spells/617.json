@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "617",
+  "m_id": 617,
+  "m_displayName": "CRA - CLASSE - AIR - Pointe Aerienne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -521495715,
+    "b": 1785198340,
+    "c": -635007272,
+    "d": 2127973267,
+    "e": -1674424670
+  },
+  "m_i18nDescriptionId": {
+    "a": -521495715,
+    "b": 1785198340,
+    "c": -635007272,
+    "d": 2127973267,
+    "e": -1751403329
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3c80ecb4cdf710746a46ec6842320187"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 617,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      799,
+      169,
+      56
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      20,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f92a6216d0d569a4ba61b9b0b1c35c19",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 26,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "a",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": true
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        {
+          "type": 22,
+          "id": 139
+        },
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pointe Aérienne",
+    "en": "Aerial Point",
+    "es": "Punta Aérea",
+    "de": "Luftige Spitze",
+    "pt": "Ponta Aérea"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_: {value:a,+}\\_{aura:139,value:a} à votre héros.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:139,value:a} to your hero.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:139,value:a} a tu héroe.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:139,value:a} für deinen Helden.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:139,value:a} ao\\_herói."
+  }
+}

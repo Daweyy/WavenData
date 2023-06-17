@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "186",
+  "m_id": 186,
+  "m_displayName": "MONSTRE CRAQUELEUR - La Meilleure Défense",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2031211953,
+    "b": -1276363612,
+    "c": 1781480345,
+    "d": -1386992893,
+    "e": 1477876573
+  },
+  "m_i18nDescriptionId": {
+    "a": -2031211953,
+    "b": -1276363612,
+    "c": 1781480345,
+    "d": -1386992893,
+    "e": -654421143
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a428ddcca4a110f4f8c338f9ed9e6e9e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 186,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              41
+            ]
+          },
+          {
+            "type": "ArmorFilter",
+            "valueFilter": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "BuffedScalingDynamicValue",
+                "referenceId": null,
+                "baseValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 20
+                },
+                "factor": {
+                  "type": "ReferenceScalingFactor",
+                  "reference": 11
+                },
+                "buffs": [
+                  48
+                ],
+                "skillBuffs": [],
+                "from": {
+                  "type": "CasterSelector"
+                },
+                "addInsteadOfMultiply": false
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "EntityIsMarkedAsPlayedFilter"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f2353e39f037f924f98f933bc27195b0",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": -20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "La Meilleure Défense",
+    "en": "The Best Defense",
+    "es": "Mejor Defensa",
+    "de": "Die beste Verteidigung",
+    "pt": "Melhor Defesa"
+  },
+  "description": {
+    "fr": "{ARvalue:v} et {ATvalue:pow,percent,+} pour le tour à un {%FAMILY_CRAQUELEUR_NAME} allié.",
+    "en": "{ARvalue:v} and {ATvalue:pow,percent,+} to an allied {%FAMILY_CRAQUELEUR_NAME} for the turn.",
+    "es": "{ARvalue:v} y {ATvalue:pow,percent,+} durante el turno a un {%FAMILY_CRAQUELEUR_NAME} aliado.",
+    "de": "{ARvalue:v} und {ATvalue:pow,percent,+} für einen verbündeten {%FAMILY_CRAQUELEUR_NAME} für die Runde.",
+    "pt": "{ARvalue:v} e {ATvalue:pow,percent,+} durante o turno a um {%FAMILY_CRAQUELEUR_NAME} aliado."
+  }
+}

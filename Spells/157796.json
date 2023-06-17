@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "157796",
+  "m_id": 157796,
+  "m_displayName": "BONTA - Q11 - Telepowation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1653207780,
+    "b": -329672044,
+    "c": -1316790422,
+    "d": 444898039,
+    "e": 2100569449
+  },
+  "m_i18nDescriptionId": {
+    "a": 1653207780,
+    "b": -329672044,
+    "c": -1316790422,
+    "d": 444898039,
+    "e": 655399650
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "704c5ca3e2c6256478f61254be91f404"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0e8af0eeda2394644a333107124a587c"
+      },
+      {
+        "assetGuid": "3bf2a9476b8edd047aa53d29f8c29f01"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 157796,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "FloorMechanismDefinitionFilter",
+            "condition": 1,
+            "floorMechanisms": [
+              824
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 113
+        },
+        "DALLE",
+        {
+          "type": 6,
+          "id": 824
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Télépowation",
+    "en": "Telepowatation",
+    "es": "Teletwanspowtación",
+    "de": "Telepowation",
+    "pt": "Teletwanspowte"
+  },
+  "description": {
+    "fr": "Téléporte un {FloorMechanism:824} sur une autre case du terrain.",
+    "en": "Teleports one {FloorMechanism:824} to another cell on the field.",
+    "es": "Teletransporta a un {FloorMechanism:824} a otra casilla del terreno.",
+    "de": "Teleportiert eine {FloorMechanism:824} auf ein anderes Feld des Spielfelds.",
+    "pt": "Teletransporta um {FloorMechanism:824} sobre outra célula do campo de batalha."
+  }
+}

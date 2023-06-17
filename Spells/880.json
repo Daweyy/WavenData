@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "880",
+  "m_id": 880,
+  "m_displayName": "EQUIPMENT - RING - Orbe de Feu",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -588054058,
+    "b": 1967083236,
+    "c": -300774616,
+    "d": -1796117179,
+    "e": 859455234
+  },
+  "m_i18nDescriptionId": {
+    "a": -588054058,
+    "b": 1967083236,
+    "c": -300774616,
+    "d": -1796117179,
+    "e": -1475202271
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8de565cbca4bb8843aadbb6f26cd06e8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 880,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 40
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": ""
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -5
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0f8a6063525530e4187cd232e6745148",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -5
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": "",
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 100
+                },
+                {
+                  "type": "MultValue",
+                  "referenceId": "",
+                  "valuesToMult": [
+                    {
+                      "type": "ThisSpellEvolutionValue",
+                      "referenceId": ""
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "per",
+                      "value": 10
+                    }
+                  ]
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Orbe de Feu",
+    "en": "Fire Orb",
+    "es": "Orbe de Fuego",
+    "de": "Feuerkugel",
+    "pt": "Orbe de Fogo"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:v}. \n\\---\nLorsque vous jouez un autre {%SPELLCOUNT} {%FIRE}\\_: {value:per,percent,+} aux <b>DÉGÂTS</b> de ce {%SPELLCOUNT} et {PAvalue:pa} à son coût.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Inflicts {magicalDamage:v}. \n\\---\nWhen you play another {%FIRE} {%SPELLCOUNT}: {value:per,percent,+} to this {%SPELLCOUNT}'s <b>DAMAGE</b> and {PAvalue:pa} to its cost.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Inflige {magicalDamage:v}. \n\\---\nCuando lanzas otro {%SPELLCOUNT} de {%FIRE}: {value:per,percent,+} a los <b>DAÑOS</b> de este {%SPELLCOUNT} y {PAvalue:pa} a su coste.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Verursacht {magicalDamage:v}.\n\\---\nWenn du einen anderen {%FIRE}-{%SPELLCOUNT} ausspielst: {value:per,percent,+} <b>SCHADEN</b> für diesen {%SPELLCOUNT} und {PAvalue:pa} auf seine Kosten.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Inflige {magicalDamage:v}. \n\\---\nQuando você lançar outro {%SPELLCOUNT} de {%FIRE}: {value:per,percent,+} aos <b>DANOS</b> deste {%SPELLCOUNT} e {PAvalue:pa} ao seu custo.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

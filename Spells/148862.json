@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "148862",
+  "m_id": 148862,
+  "m_displayName": "CRA - ARME - SHIRU SHADEN - AIR - Shiruken Nebuleux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -768961186,
+    "b": -321411596,
+    "c": 1572817498,
+    "d": -1784725933,
+    "e": 250619341
+  },
+  "m_i18nDescriptionId": {
+    "a": -768961186,
+    "b": -321411596,
+    "c": 1572817498,
+    "d": -1784725933,
+    "e": -101962033
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3f4fd77bb2f9fab448942eb25abf4dec"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d3bc312e9cc6e5149a3043bdc7be3bff"
+      },
+      {
+        "assetGuid": "8381d7e01529dd84db001546719ff2c6"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 148862,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      343,
+      914,
+      453837
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 191,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "332b429c2cbf81a47ad522df4e29e344",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "CasterHeroSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 30
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 928,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Shiruken Nébuleux",
+    "en": "Nebulous Shiruken",
+    "es": "Shiruken Nebuloso",
+    "de": "Nebulöser Shiruken",
+    "pt": "Shiruken Nebuloso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à votre héros.\n\\---\n{#COMBO}\\_: Téléporte votre héros derrière la cible.",
+    "en": "Does {magicalDamage:dmg} to an opponent adjacent\\_<sprite name=\"cell_cross\"> to your hero.\n\\---\n{#COMBO}: Teleports your hero behind the target.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a tu héroe.\n\\---\n{#COMBO}: Teletransporta a tu héroe detrás del objetivo.",
+    "de": "Verursacht {magicalDamage:dmg} bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner deinem Helden.\n\\---\n{#COMBO}: Teleportiert deinen Helden hinter das Ziel.",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> ao seu herói.\n\\---\n{#COMBO}: Teletransporta seu herói para trás do alvo."
+  }
+}

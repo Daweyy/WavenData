@@ -1,0 +1,168 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158400
+  },
+  "m_Name": "897",
+  "m_id": 897,
+  "m_displayName": "MONSTRE TOFU - CLAN MACCHIOTA - Moyenne Horde Macchiota",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1987586662,
+    "b": 1035327604,
+    "c": -788557397,
+    "d": 2045585331,
+    "e": 1186043616
+  },
+  "m_i18nChampionNameId": {
+    "a": -1987586662,
+    "b": 1035327604,
+    "c": -788557397,
+    "d": 2045585331,
+    "e": -1294117671
+  },
+  "m_i18nDescriptionId": {
+    "a": -1987586662,
+    "b": 1035327604,
+    "c": -788557397,
+    "d": 2045585331,
+    "e": 230485887
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 897,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1512,
+      "skinIds": [
+        1512
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "pv1",
+          "percentage": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 75
+          },
+          "from": {
+            "type": "EntityCaracValue",
+            "referenceId": "",
+            "entitySelector": {
+              "type": "EffectHolderSelector"
+            },
+            "carac": 32
+          }
+        },
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "pv2",
+          "percentage": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 50
+          },
+          "from": {
+            "type": "EntityCaracValue",
+            "referenceId": "",
+            "entitySelector": {
+              "type": "EffectHolderSelector"
+            },
+            "carac": 32
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "FALL",
+        "LANDING",
+        {
+          "type": 20,
+          "id": 15
+        },
+        {
+          "type": 19,
+          "id": 72
+        }
+      ]
+    },
+    "families": [
+      37
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 75
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 0,
+    "growInto": {
+      "type": "SummonSelection",
+      "referenceId": "",
+      "summonId": 336
+    }
+  },
+  "name": {
+    "fr": "{0,plural,one[Horde Macchiota] other[Hordes Macchiotas]}",
+    "en": "{0,plural,one[Macchiota Horde] other[Macchiota Hordes]}",
+    "es": "{0,plural,one[Horda Macchiota] other[Hordas Macchiota]}",
+    "de": "{0,plural,one[Macchiota-Horde] other[Macchiota-Horden]}",
+    "pt": "{0,plural,one[Horda Macchiota] other[Hordas Macchiotas]}"
+  },
+  "description": {
+    "fr": "<rem>{NamedEffect:72}</rem>\n\\---\n<b>ATTAQUE</b> autant de fois qu'il y a de {%Family_Tofu_Name,plural:other} dans la <b>Horde</b>.\n\\---\nLorsqu'elle arrive à {PVvalue:pv2}\\_: Perd un Tofu.",
+    "en": "<rem>{NamedEffect:72}</rem>\n\\---\nPerforms an <b>ATTACK</b> as many times as there are {%Family_Tofu_Name,plural:other} in the <b>Horde</b>.\n\\---\nWhen it reaches {PVvalue:pv2}: Loses a Tofu.",
+    "es": "Inflige un <rem>{NamedEffect:72}</rem>\n\\---\n<b>ATAQUE</b> tantas veces como {%Family_Tofu_Name,plural:other} haya en la <b>horda</b>.\n\\---\nCuando llega a {PVvalue:pv2}: Pierde un tofu.",
+    "de": "<rem>{NamedEffect:72}</rem>\n\\---\n<b>GREIFT SO OFT AN</b>, wie es {%Family_Tofu_Name,plural:other} in der <b>Horde</b> gibt.\n\\---\nWenn sie {PVvalue:pv2} erreicht: Verliert einen Tofu.",
+    "pt": "<rem>{NamedEffect:72}</rem>\n\\---\n<b>ATACA</b> pela mesma quantidade de vezes que o número de {%Family_Tofu_Name,plural:other} na <b>Horda</b>.\n\\---\nQuando ela chega a {PVvalue:pv2}: Perde um Tofu."
+  },
+  "championName": {
+    "fr": "Horde Macchiota",
+    "en": "Macchiota Horde",
+    "es": "Horda Macchiota",
+    "de": "Macchiota-Horde",
+    "pt": "Horda Macchiota"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "419",
+  "m_id": 419,
+  "m_displayName": "COMPAGNON - GROUGALORAGRAN - Ecaille de Grougaloragran (isEphemeral)",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1077362719,
+    "b": -1545265340,
+    "c": -2106421175,
+    "d": 1802560527,
+    "e": 822425265
+  },
+  "m_i18nDescriptionId": {
+    "a": 1077362719,
+    "b": -1545265340,
+    "c": -2106421175,
+    "d": 1802560527,
+    "e": -2126158996
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ea9084868bcb7ce44844d20bfd14063d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 419,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1815
+        },
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Écaille de Grougaloragran",
+    "en": "Grougaloragran Scale",
+    "es": "Escama de Grugaloragrán",
+    "de": "Grugaloragrans Schuppe",
+    "pt": "Escama de Grugaloragran"
+  },
+  "description": {
+    "fr": "{#EPHEMERAL}\n\\---\nPose une {ObjectMechanism:1815} jusqu'à {cell:c} de votre héros.",
+    "en": "{#EPHEMERAL}\n\\---\nPlaces one {ObjectMechanism:1815} up to {cell:c} from your hero.",
+    "es": "{#EPHEMERAL}\n\\---\nPone una {ObjectMechanism:1815} hasta a {cell:c} de tu héroe.",
+    "de": "{#EPHEMERAL}\n\\---\nPlatziert eine\\_{ObjectMechanism:1815} in einer Entfernung von bis zu {cell:c} von deinem Helden.",
+    "pt": "{#EPHEMERAL}\n\\---\nPosiciona uma {ObjectMechanism:1815} a até {cell:c} do seu herói."
+  }
+}

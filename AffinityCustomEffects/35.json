@@ -1,0 +1,112 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -4014597234671528400
+  },
+  "m_Name": "35",
+  "m_id": 35,
+  "m_displayName": "AffinityLightningFactor",
+  "m_availability": 3,
+  "m_iconReference": {
+    "assetGuid": "23d00534cc51c234f8a6343c36b0cea3"
+  },
+  "m_iconAnimationSettings": {
+    "assetGuid": "306bb07af5b762946ae204329308d530"
+  },
+  "m_i18nNameId": {
+    "a": 1773162894,
+    "b": 1042768052,
+    "c": 681906121,
+    "d": -629773082,
+    "e": 1141266924
+  },
+  "m_i18nDescriptionId": {
+    "a": 1773162894,
+    "b": 1042768052,
+    "c": 681906121,
+    "d": -629773082,
+    "e": -2101626527
+  },
+  "values": {
+    "type": "AffinityCustomEffectDefinition",
+    "id": 35,
+    "iconColor": {
+      "r": 0.996078432,
+      "g": 0.6431373,
+      "b": 0.9664379,
+      "a": 1
+    },
+    "areaOfEffect": {
+      "type": "SquareAreaOfEffectSelector",
+      "originSelector": {
+        "type": "CasterHeroSelector"
+      },
+      "size": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      }
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ligA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            82
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "target",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ligDmg",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

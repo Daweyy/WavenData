@@ -1,0 +1,231 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "186916",
+  "m_id": 186916,
+  "m_displayName": "IOP - CLASSE - TERRE - Charge Tellurique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1081497791,
+    "b": -1631980908,
+    "c": 628711674,
+    "d": -1132837351,
+    "e": 1197735961
+  },
+  "m_i18nDescriptionId": {
+    "a": 1081497791,
+    "b": -1631980908,
+    "c": 628711674,
+    "d": -1132837351,
+    "e": 885507708
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "12bdcaa174039bf4ca6a0c4005a49c12"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      400
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d0a127a95a557254188df0eba4f876dc"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 186916,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      326837,
+      415927,
+      811
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3ad96f6b81602894390cd76392e45a74",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51,
+            43
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 478,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "PMStolen",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Charge Tellurique",
+    "en": "Telluric Charge",
+    "es": "Carga Telúrica",
+    "de": "Tellurischer Ansturm",
+    "pt": "Investida Telúrica"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} \n\\---\nInflige {magicalDamage:dmg} et vole {PMvalue:PMStolen} pour le tour.",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away. \n\\---\nDoes {magicalDamage:dmg} and steals {PMvalue:PMStolen} for the turn.",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta {cell:c} \n\\---\nInflige {magicalDamage:dmg} y roba {PMvalue:PMStolen} durante el turno.",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe bis zu {cell:c} zu \n\\---\nVerursacht {magicalDamage:dmg} und entzieht ihm {PMvalue:PMStolen} für die Runde.",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} e rouba {PMvalue:PMStolen} durante o turno."
+  }
+}

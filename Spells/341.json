@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "341",
+  "m_id": 341,
+  "m_displayName": "SRAM - CLASSE - ETHER - Chausse-Trappe",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1878432810,
+    "b": -630887836,
+    "c": -340798311,
+    "d": 1847331486,
+    "e": -529782655
+  },
+  "m_i18nDescriptionId": {
+    "a": 1878432810,
+    "b": -630887836,
+    "c": -340798311,
+    "d": 1847331486,
+    "e": 2067922609
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "028239ee3eb7ad34aac4933c04734cfe"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 341,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "FloorMechanismDefinitionFilter",
+            "condition": 1,
+            "floorMechanisms": [
+              104,
+              806,
+              1197,
+              1589,
+              748,
+              673,
+              1483,
+              495
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3bb6424279119f943aae51cbc05c8a52",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Chausse-Trappe",
+    "en": "Pitfall",
+    "es": "Abrojo",
+    "de": "Fußangeln",
+    "pt": "Estrepe"
+  },
+  "description": {
+    "fr": "Détruit un de vos {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\n{value:nb,+}\\_{%AURA_TRAP,value:nb} du même élément à votre héros.",
+    "en": "Destroys one of you {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\n{value:nb,+}\\_{%AURA_TRAP,value:nb} in the same element to your hero.",
+    "es": "Destruye una de tus {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\n{value:nb,+}\\_{%AURA_TRAP,value:nb} del mismo elemento que tu héroe.",
+    "de": "Zerstört eine deiner {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\n{value:nb,+}\\_{%AURA_TRAP,value:nb} desselben Elements für deinen Helden.",
+    "pt": "Lance sobre uma de suas {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\n{value:nb,+}\\_{%AURA_TRAP,value:nb} do mesmo elemento ao seu herói."
+  }
+}

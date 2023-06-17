@@ -1,0 +1,206 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "821",
+  "m_id": 821,
+  "m_displayName": "QUETE - BWORK - Craqueleur Magmatique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1281991015,
+    "b": 230336020,
+    "c": 1165650587,
+    "d": 1861258518,
+    "e": -2079961544
+  },
+  "m_i18nDescriptionId": {
+    "a": -1281991015,
+    "b": 230336020,
+    "c": 1165650587,
+    "d": 1861258518,
+    "e": -88753029
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 821,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2912,
+      "skinIds": [
+        2912
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ppow",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAP",
+        {
+          "type": 6,
+          "id": 278
+        },
+        "SCORIE"
+      ]
+    },
+    "families": [
+      41
+    ],
+    "baseProperties": [
+      90
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 1
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 2
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          821
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Craqueleur Magmatique",
+    "en": "Magmatic Crackler",
+    "es": "Crujidor Magmático",
+    "de": "Magma-Krachler",
+    "pt": "Smagador Magmático"
+  },
+  "description": {
+    "fr": "<rem>{PropertyEffect:90!}</rem>\n\\---\nLorsqu'une {#SCORIE} ou une {FloorMechanism:278!} le touche\\_:\\v{ATvalue:ppow,percent,+} jusqu'à sa prochaine <b>ATTAQUE</b>.",
+    "en": "<rem>{PropertyEffect:90!}</rem>\n\\---\nWhen a {#SCORIE} or a {FloorMechanism:278!} touches him:\\v{ATvalue:ppow,percent,+} until his next <b>ATTACK</b>.",
+    "es": "<rem>{PropertyEffect:90!}</rem>\n\\---\nCuando una {#SCORIE} o un {FloorMechanism:278!} lo alcanza:\\v{ATvalue:ppow,percent,+} hasta su próximo <b>ATAQUE</b>.",
+    "de": "<rem>{PropertyEffect:90!}</rem>\n\\---\nWenn ihn eine\\_{#SCORIE} oder eine\\_{FloorMechanism:278!} trifft:\\v{ATvalue:ppow,percent,+} bis zu seinem nächsten <b>ANGRIFF</b>.",
+    "pt": "<rem>{PropertyEffect:90!}</rem>\n\\---\nQuando uma\\_{#SCORIE} ou uma\\_{FloorMechanism:278!} toca nele:\\v{ATvalue:ppow,percent,+} até o próximo <b>ATAQUE</b> dele."
+  }
+}

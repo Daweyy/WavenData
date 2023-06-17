@@ -1,0 +1,256 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "117615",
+  "m_id": 117615,
+  "m_displayName": "IOP - ARME - LAMARGUEDON SPECTRAL - FEU - Brulure Spectrale",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -351612938,
+    "b": -1613138972,
+    "c": -214795959,
+    "d": 1068904179,
+    "e": -7241159
+  },
+  "m_i18nDescriptionId": {
+    "a": -351612938,
+    "b": -1613138972,
+    "c": -214795959,
+    "d": 1068904179,
+    "e": -1127058588
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e3123f5a6d40b0546b5e75a886c81ebb"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "8047175490066df4eac816c0291e4d99"
+      },
+      {
+        "assetGuid": "1c9e18643f46a9544bbea1bfb3275389"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 117615,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      197956,
+      218699,
+      194
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 143,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllSummoningsSelector"
+          },
+          "filters": [
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                35
+              ]
+            },
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              35
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundSquaredTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 53,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "powerSkill",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Brûlure Spectrale",
+    "en": "Spectral Burn",
+    "es": "Quemadura Espectral",
+    "de": "Spektral-Verbrennung",
+    "pt": "Queimadura Espectral"
+  },
+  "description": {
+    "fr": "Téléporte votre {Summoning:898!} sur une case autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\nInflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> d'elle.",
+    "en": "Teleports your {Summoning:898!} to a cell around\\_<sprite name=\"cell_around\"> your hero.\n\\---\nDoes {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> it.",
+    "es": "Teletransporta a tu {Summoning:898!} a una casilla alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\nInflige {magicalDamage:dmg} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Teleportiert deine {Summoning:898!} auf ein Feld in der Nähe\\_<sprite name=\"cell_around\"> deines Helden.\n\\---\nFügt Gegnern in der Nähe\\_<sprite name=\"cell_around\"> anschließend {magicalDamage:dmg} zu.",
+    "pt": "Teletransporta sua {Summoning:898!} para uma célula em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.\n\\---\nInflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dela."
+  }
+}

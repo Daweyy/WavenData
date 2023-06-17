@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "133",
+  "m_id": 133,
+  "m_displayName": "MONSTRE BOUFTOU - Bêle et Rebêle",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1074374294,
+    "b": 742988660,
+    "c": -1146082005,
+    "d": -131433988,
+    "e": -2049136336
+  },
+  "m_i18nDescriptionId": {
+    "a": -1074374294,
+    "b": 742988660,
+    "c": -1146082005,
+    "d": -131433988,
+    "e": 1882469883
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "96001e841d27b4349961d057b38b84d8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 133,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9d1dfad450bc69f4b80cb7a13a34d9d3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "HERD"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bêle et Rebêle",
+    "en": "Rebel Bleat",
+    "es": "Bala que te Bala",
+    "de": "Meckern, meckern, immer meckern",
+    "pt": "Bale e Rebale"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}\\_: Ce sort revient dans votre main.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#HERD}: This spell returns to your hand.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}: Este hechizo vuelve a tu mano.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#HERD}: Dieser Zauber geht zurück auf deine Hand.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}: Este feitiço volta para sua mão."
+  }
+}

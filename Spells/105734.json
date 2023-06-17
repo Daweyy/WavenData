@@ -1,0 +1,225 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "105734",
+  "m_id": 105734,
+  "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - EAU - Coupe Cinglante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1002445960,
+    "b": 709507460,
+    "c": 621339050,
+    "d": 615713262,
+    "e": 1685332770
+  },
+  "m_i18nDescriptionId": {
+    "a": 1002445960,
+    "b": 709507460,
+    "c": 621339050,
+    "d": 615713262,
+    "e": 1554249251
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f9391747f3b4fad43ab53c215f7c6a2a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 105734,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      146358,
+      156740,
+      509734
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 637,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "8ddc1ba4e3591e046ad1f02aaf5f38c2",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 180,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hs",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Coupe Cinglante",
+    "en": "Scathing Cut",
+    "es": "Corte Azotador",
+    "de": "Peitschender Schlag",
+    "pt": "Talha Incisiva"
+  },
+  "description": {
+    "fr": "Soigne un allié de {PVvalue:h}.\n\\---\nInflige {magicalDamage:dmg2} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.",
+    "en": "Heals an ally {PVvalue:h}.\n\\---\nDoes {magicalDamage:dmg2} to opponents around\\_<sprite name=\"cell_around\"> the\\_ally.",
+    "es": "Cura a un aliado {PVvalue:h}.\n\\---\nInflige {magicalDamage:dmg2} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Heilt einen Verbündeten um {PVvalue:h}.\n\\---\nVerursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> {magicalDamage:dmg2}.",
+    "pt": "Cura um aliado em {PVvalue:h}.\n\\---\nInflige {magicalDamage:dmg2} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele."
+  }
+}

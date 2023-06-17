@@ -1,0 +1,204 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "599",
+  "m_id": 599,
+  "m_displayName": "QUETE - BOUFTOU - Raphl Lalen",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 454566194,
+    "b": -1915920940,
+    "c": 758564747,
+    "d": 883107889,
+    "e": 1773565063
+  },
+  "m_i18nDescriptionId": {
+    "a": 454566194,
+    "b": -1915920940,
+    "c": 758564747,
+    "d": 883107889,
+    "e": -165198573
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 599,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 5525,
+      "skinIds": [
+        5525
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "drain",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DRAIN"
+      ]
+    },
+    "families": [
+      13
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 118
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 13
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          599
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Raphl Lalen",
+    "en": "Raphl Lalen",
+    "es": "Raphl Lanen",
+    "de": "Ralph Wollen",
+    "pt": "Raphl Lalen"
+  },
+  "description": {
+    "fr": "Possède {DRAINvalue:drain,percent}.\n\\---\n{%DeathBlow} {ATvalue:at,+,percent,abs}.",
+    "en": "Has {DRAINvalue:drain,percent}.\n\\---\n{%DeathBlow} {ATvalue:at,+,percent,abs}.",
+    "es": "Tiene un {DRAINvalue:drain,percent}.\n\\---\n{%DeathBlow} {ATvalue:at,+,percent,abs}.",
+    "de": "Besitzt {DRAINvalue:drain,percent}.\n\\---\n{%DeathBlow} {ATvalue:at,+,percent,abs}.",
+    "pt": "Possui {DRAINvalue:drain,percent}.\n\\---\n{%DeathBlow} {ATvalue:at,+,percent,abs}."
+  }
+}

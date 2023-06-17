@@ -1,0 +1,153 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "202411",
+  "m_id": 202411,
+  "m_displayName": "DQ - MODIFICATEUR - COCHON - 1_Cage aux cochons",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -630709303,
+    "b": -1135597468,
+    "c": -77751174,
+    "d": 1859459122,
+    "e": -1751499372
+  },
+  "m_i18nDescriptionId": {
+    "a": -630709303,
+    "b": -1135597468,
+    "c": -77751174,
+    "d": 1859459122,
+    "e": -465637614
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7945777a5ddc17a48acb501955f79a1c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 202411,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "SumValue",
+                "referenceId": null,
+                "valuesToSum": [
+                  {
+                    "type": "EntityCaracValue",
+                    "referenceId": null,
+                    "entitySelector": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "carac": 65
+                  },
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "c",
+                    "value": 3
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        "EPHEMERAL",
+        "TRAP",
+        {
+          "type": 25,
+          "id": 203181
+        },
+        {
+          "type": 6,
+          "id": 1003
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cage aux Cochons",
+    "en": "Pig Cage",
+    "es": "Jaula Para Cerdos",
+    "de": "Schweinemonsterkäfig",
+    "pt": "Arapuca para Porcos"
+  },
+  "description": {
+    "fr": "Construit une {FloorMechanism:1003} jusqu'à {cell:c} de votre héros.\n\\---\nAjoute le sort {Spell:203181} à votre main.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Builds one {FloorMechanism:1003} up to {cell:c} from your hero.\n\\---\nAdds the {Spell:203181} spell to your hand.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Construye una {FloorMechanism:1003} hasta a {cell:c} de tu héroe.\n\\---\nAñade el hechizo {Spell:203181} a tu mano.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Baut einen\\_{FloorMechanism:1003} auf einer Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\nFügt deiner Hand den Zauber {Spell:203181} hinzu.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Posiciona uma {FloorMechanism:1003} a até {cell:c} do seu herói.\n\\---\nAdiciona um {Spell:203181} à sua mão.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

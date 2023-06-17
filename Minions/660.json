@@ -1,0 +1,150 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 5150484323839907000
+  },
+  "m_Name": "660",
+  "m_id": 660,
+  "m_displayName": "MINION - Crotalus",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -157365094,
+    "b": -1021078620,
+    "c": 266231752,
+    "d": 22389334,
+    "e": 16749878
+  },
+  "m_i18nDescriptionId": {
+    "a": -157365094,
+    "b": -1021078620,
+    "c": 266231752,
+    "d": 22389334,
+    "e": -1073786016
+  },
+  "values": {
+    "type": "MinionDefinition",
+    "id": 660,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3812,
+      "skinIds": [
+        3812
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "po",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "CC",
+          "value": 220
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "CRITICAL"
+      ]
+    },
+    "families": [],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 222
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 2
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 22
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 220
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 2
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "po",
+        "value": 2
+      }
+    },
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      120,
+      17,
+      628986,
+      546735
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 370,
+    "gatheringIntervalInSecs": 14400,
+    "gatheringAbilities": [
+      {
+        "type": "GatheringAbility",
+        "incrementByInterval": {
+          "type": "ConstIntProvider",
+          "value": 1
+        },
+        "maxCapacity": {
+          "type": "ConstIntProvider",
+          "value": 10
+        }
+      }
+    ]
+  },
+  "name": {
+    "fr": "Crotalus",
+    "en": "Crotalus",
+    "es": "Cocotalus",
+    "de": "Crotalus",
+    "pt": "Crotalus"
+  },
+  "description": {
+    "fr": "<rem>{range}</rem>\n\\---\n{%Appearance}\n{value:CC,permil,+}\\_de\\_{#CRITICAL} aux alliés.",
+    "en": "<rem>{range}</rem>\n\\---\n{%Appearance}\n{value:CC,permil,+} {#CRITICAL} to allies.",
+    "es": "<rem>{range}</rem>\n\\---\n{%Appearance}\n{value:CC,permil,+}\\_de\\_{#CRITICAL} a los aliados.",
+    "de": "<rem>{range}</rem>\n\\---\n{%Appearance}\nChance von {value:CC,permil,+} auf {#CRITICAL} bei Verbündeten.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%Appearance}\n{value:CC,permil,+}\\_de\\_{#CRITICAL} aos aliados."
+  }
+}

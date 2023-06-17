@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "310",
+  "m_id": 310,
+  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - AIR - Phase Petulante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2051800059,
+    "b": 2007539140,
+    "c": 1685200811,
+    "d": -840966750,
+    "e": 922585558
+  },
+  "m_i18nDescriptionId": {
+    "a": -2051800059,
+    "b": 2007539140,
+    "c": 1685200811,
+    "d": -840966750,
+    "e": -1696066192
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "37b413fb642ff4c4aaf9a50d98d3a872"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 310,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      141556,
+      153953,
+      510184
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 141,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "367426e48c9b4b645ba89c49b738df02",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 525,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 18
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Phase Pétulante",
+    "en": "Petulant Phase",
+    "es": "Fase Impetuosa",
+    "de": "Ungestüme Phase",
+    "pt": "Fase Petulante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nÉchange la position de votre héros avec celle de la cible s'il est {PropertyEffect:18[DÉPHASÉ]}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nSwitches your hero's position with that of the target if your hero is {PropertyEffect:18[DEPHASED]}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nIntercambia la posición de tu héroe con la del objetivo si está {PropertyEffect:18[DESFASADO]}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nTauscht die Position deines Helden mit der des Ziels, wenn es {PropertyEffect:18[PHASENVERSCHOBEN]} ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nSe seu herói estiver {PropertyEffect:18[DEFASADO]}, troca de posição com o alvo."
+  }
+}

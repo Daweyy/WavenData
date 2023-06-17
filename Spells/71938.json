@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "71938",
+  "m_id": 71938,
+  "m_displayName": "MONSTRE RAT - Rackett",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1415804246,
+    "b": -1039871772,
+    "c": 1911241482,
+    "d": 2123023590,
+    "e": -1667036143
+  },
+  "m_i18nDescriptionId": {
+    "a": 1415804246,
+    "b": -1039871772,
+    "c": 1911241482,
+    "d": 2123023590,
+    "e": 468134603
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "696dd8a2f43f43a48b31551161364f06"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 71938,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        69
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6e590604323978441823e7ef7c728211",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 60
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Rackett",
+    "en": "Rackett",
+    "es": "Chantaje",
+    "de": "Rerpressung",
+    "pt": "Ratificação"
+  },
+  "description": {
+    "fr": "Inflige {value:dmg} à {magicalDamage:dmg2}.\n\\---\n{ATvalue:at,percent,+} pour le tour à un allié adjacent <sprite name=\"cell_cross\">.",
+    "en": "Does {value:dmg} to {magicalDamage:dmg2}.\n\\---\nConfers {ATvalue:at,percent,+} on an adjacent <sprite name=\"cell_cross\"> ally for the turn.",
+    "es": "Inflige {value:dmg} a {magicalDamage:dmg2}.\n\\---\n{ATvalue:at,percent,+} durante el turno a un aliado adyacente <sprite name=\"cell_cross\">.",
+    "de": "Verursacht {value:dmg} bis {magicalDamage:dmg2}.\n\\---\n{ATvalue:at,percent,+} für die Runde für einen angrenzenden\\_<sprite name=\"cell_cross\"> Verbündeten.",
+    "pt": "Inflige de {value:dmg} a {magicalDamage:dmg2}.\n\\---\n{ATvalue:at,percent,+} durante o turno a um aliado adjacente\\_<sprite name=\"cell_cross\">."
+  }
+}

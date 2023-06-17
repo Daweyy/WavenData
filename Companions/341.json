@@ -1,0 +1,158 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "341",
+  "m_id": 341,
+  "m_displayName": "QUETE - BONTA - 16 - Gaspard Paing",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 286716231,
+    "b": 701103140,
+    "c": -1927600376,
+    "d": 1812335064,
+    "e": 917634260
+  },
+  "m_i18nDescriptionId": {
+    "a": 286716231,
+    "b": 701103140,
+    "c": -1927600376,
+    "d": 1812335064,
+    "e": 76857169
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 341,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 6220,
+      "skinIds": [
+        6220
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 20,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        {
+          "type": 20,
+          "id": 88
+        }
+      ]
+    },
+    "families": [
+      75
+    ],
+    "baseProperties": [
+      88
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 600
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 5
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 20
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          341
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Gaspard Paing",
+    "en": "Bill Durr",
+    "es": "Gaspard Paing",
+    "de": "Steinhardt Klotz",
+    "pt": "Gaspard Paing"
+  },
+  "description": {
+    "fr": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} un {ObjectMechanism:385!} de {cell:c}.\n\\---\n{%FightTurnEnded} Inflige {magicalDamage:dmg} aux\\_adversaires avec de l'{%ar} autour\\_<sprite name=\"cell_around\"> de lui.",
+    "en": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} one {ObjectMechanism:385!} {cell:c}.\n\\---\n{%FightTurnEnded} Does {magicalDamage:dmg} to\\_opponents with {%ar} around\\_<sprite name=\"cell_around\"> him.",
+    "es": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} un {ObjectMechanism:385!} de {cell:c}.\n\\---\n{%FightTurnEnded} Inflige {magicalDamage:dmg} a los\\_adversarios con {%ar} a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} ein {ObjectMechanism:385!} von {cell:c}.\n\\---\n{%FightTurnEnded} Verursacht {magicalDamage:dmg} bei Gegnern mit {%ar} um sich herum\\_<sprite name=\"cell_around\">.",
+    "pt": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%Attack} {#PUSH} um {ObjectMechanism:385!} por {cell:c}.\n\\---\n{%FightTurnEnded} Inflige {magicalDamage:dmg} aos\\_adversários com {%ar} em\\_volta\\_<sprite name=\"cell_around\"> dela."
+  }
+}

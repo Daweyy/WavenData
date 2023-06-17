@@ -1,0 +1,155 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "158448",
+  "m_id": 158448,
+  "m_displayName": "MONSTRE VAMPYRE - Sang Vicie",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -140676943,
+    "b": -1428564108,
+    "c": -321164054,
+    "d": -1930139132,
+    "e": 223888821
+  },
+  "m_i18nDescriptionId": {
+    "a": -140676943,
+    "b": -1428564108,
+    "c": -321164054,
+    "d": -1930139132,
+    "e": 478727128
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0bce8b74d03e78640b3c32dc4a1af34c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 158448,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        55
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "FloorMechanismDefinitionFilter",
+            "condition": 1,
+            "floorMechanisms": [
+              385
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "df4dac8a0b3aa524fa2f3d0a3c099d1f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DRAIN",
+        {
+          "type": 20,
+          "id": 82
+        },
+        "DALLE",
+        {
+          "type": 6,
+          "id": 385
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Sang Vicié",
+    "en": "Tainted Blood",
+    "es": "Sangre Viciada",
+    "de": "Fehlerhaftes Blut",
+    "pt": "Sangue Vicioso"
+  },
+  "description": {
+    "fr": "Détruit une {FloorMechanism:385} et inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\">.",
+    "en": "Destroys one {FloorMechanism:385} and does {magicalDamage:dmg} to surrounding\\_<sprite name=\"cell_around\"> opponents.",
+    "es": "Destruye un {FloorMechanism:385} e inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Zerstört eine\\_{FloorMechanism:385} und verursacht bei Gegnern in der Nähe\\_<sprite name=\"cell_around\"> {magicalDamage:dmg}.",
+    "pt": "Destrói uma {FloorMechanism:385} e inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\">."
+  }
+}

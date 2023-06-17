@@ -1,0 +1,126 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "236868",
+  "m_id": 236868,
+  "m_displayName": "IOP - CLASSE - ETHER - EVOLUTION - Accumulation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1400416118,
+    "b": -1670738060,
+    "c": -1925773879,
+    "d": -868547969,
+    "e": 1197672767
+  },
+  "m_i18nDescriptionId": {
+    "a": 1400416118,
+    "b": -1670738060,
+    "c": -1925773879,
+    "d": -868547969,
+    "e": 1776110236
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c0479aa7e1cf495439f9908bb0f0943d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 236868,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 20,
+      "bannedInPvp": true
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "15c7cedcff17de6478fb194970630d3f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 25
+        },
+        {
+          "type": "ThisSpellEvolutionValue",
+          "referenceId": "Lv"
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 455
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Accumulation",
+    "en": "Accumulation",
+    "es": "Acumulación",
+    "de": "Ansammlung",
+    "pt": "Acumulação"
+  },
+  "description": {
+    "fr": "Inflige l’{%AT} de votre héros.\n\\---\nLorsque vous déclenchez {NamedEffect:455}\\_:\\v {value:p, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {NamedEffect:455} : {value:Lv}</rem>\n\\---\n{%DestroyOnPlayed}",
+    "en": "Inflicts your hero's {%AT}.\n\\---\nWhen you trigger {NamedEffect:455}:\\v {value:p, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{NamedEffect:455} Count: {value:Lv}.</rem>\n\\---\n{%DestroyOnPlayed}",
+    "es": "Inflige el {%AT} de tu héroe.\n\\---\nCuando activas {NamedEffect:455}:\\v {value:p, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {NamedEffect:455}: {value:Lv}</rem>\n\\---\n{%DestroyOnPlayed}",
+    "de": "Verursacht den {%AT} deines Helden als Schaden.\n\\---\nWenn du {NamedEffect:455} auslöst:\\v {value:p, +, percent} auf den <b>SCHADEN</b> dieses Zaubers.\n\\---\n<rem>{NamedEffect:455}-Zähler: {value:Lv}</rem>\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Inflige o {%AT} do seu herói.\n\\---\nQuando você aciona {NamedEffect:455}:\\v {value:p, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {NamedEffect:455}: {value:Lv}</rem>\n\\---\n{%DestroyOnPlayed}"
+  }
+}

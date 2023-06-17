@@ -1,0 +1,242 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "32",
+  "m_id": 32,
+  "m_displayName": "DECK - KROSMIQUE - ETHER - Jahash",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1681615463,
+    "b": 356410900,
+    "c": -1979769431,
+    "d": 245532047,
+    "e": -2004972547
+  },
+  "m_i18nDescriptionId": {
+    "a": -1681615463,
+    "b": 356410900,
+    "c": -1979769431,
+    "d": 245532047,
+    "e": 1113807981
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 32,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9818,
+      "skinIds": [
+        9818
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      18
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 22
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 23
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 24
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      744858,
+      745356,
+      746062,
+      746717,
+      746727,
+      746809
+    ],
+    "rarity": 2,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 407,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          32
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 57,
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 5
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "x",
+                  "value": -1
+                },
+                {
+                  "type": "CompanionsInReserveValue",
+                  "referenceId": "",
+                  "playerSelector": {
+                    "type": "OwnerOfSelector",
+                    "selector": {
+                      "type": "EffectHolderSelector"
+                    }
+                  },
+                  "companionState": 2
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Jahash",
+    "en": "Jahash",
+    "es": "Jahash",
+    "de": "Jahash",
+    "pt": "Jahash"
+  },
+  "description": {
+    "fr": "Réduit le coût de ce compagnon de {NEUTRALGAUGEvalue:x,abs} pour chacun de vos compagnons morts.",
+    "en": "Reduces the cost of this companion by {NEUTRALGAUGEvalue:x,abs} for each of your dead companions.",
+    "es": "Reduce el coste de ese compañero en {NEUTRALGAUGEvalue:x,abs} por cada uno de tus compañeros muertos.",
+    "de": "Verringert die Kosten für diesen Begleiter für jeden deiner toten Begleiter um {NEUTRALGAUGEvalue:x,abs}.",
+    "pt": "Reduz o custo deste companheiro em {NEUTRALGAUGEvalue:x,abs} para cada um dos seus companheiros mortos."
+  }
+}

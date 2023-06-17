@@ -1,0 +1,245 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "564",
+  "m_id": 564,
+  "m_displayName": "SRAM - CLASSE - FEU - Double-Piege Infernal",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -209366961,
+    "b": -1601541916,
+    "c": 710277659,
+    "d": 1752211716,
+    "e": -1615266931
+  },
+  "m_i18nDescriptionId": {
+    "a": -209366961,
+    "b": -1601541916,
+    "c": 710277659,
+    "d": 1752211716,
+    "e": -413999725
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2b9df1f31b120ec40a3dd586adaa589d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 564,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      486605,
+      655,
+      329
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "c",
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 68669
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "",
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 68669
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "ThisSpellHasSkillCondition",
+            "skillId": 68669
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 3
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ppow",
+          "value": -25
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.495.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 495
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Double-Piège Infernal",
+    "en": "Infernal Double-Trap",
+    "es": "Doble Trampa Infernal",
+    "de": "Höllische Doppelgänger-Falle",
+    "pt": "Dupla-Armadilha Infernal"
+  },
+  "description": {
+    "fr": "Construit 2 {FloorMechanism:495,plural:other} ({value:FloorMechanism.495.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\n{ATvalue:ppow,+,percent} pour le tour aux adversaires situés ces {%KEYWORD.TRAP.NAME,plural:other}.",
+    "en": "Builds 2 {FloorMechanism:495,plural:other} ({value:FloorMechanism.495.dmg}) up to {cell:c} from your hero.\n\\---\n{ATvalue:ppow,+,percent} to opponents between these {%KEYWORD.TRAP.NAME,plural:other} for the turn.",
+    "es": "Construye 2 {FloorMechanism:495,plural:other} ({value:FloorMechanism.495.dmg}) hasta a {cell:c} de tu héroe.\n\\---\n{ATvalue:ppow,+,percent} durante el turno a los adversarios entre estas {%KEYWORD.TRAP.NAME,plural:other}.",
+    "de": "Errichtet 2\\_{FloorMechanism:495,plural:other} ({value:FloorMechanism.495.dmg}) bis auf {cell:c} von deinem Helden entfernt.\n\\---\n{ATvalue:ppow,+,percent} für die Runde für die Gegner zwischen diesen {%KEYWORD.TRAP.NAME,plural:other}.",
+    "pt": "Posiciona 2 {FloorMechanism:495,plural:other} ({value:FloorMechanism.495.dmg}) a até {cell:c} do seu herói.\n\\---\n{ATvalue:ppow,+,percent} durante o turno aos adversários entre as {%KEYWORD.TRAP.NAME,plural:other}."
+  }
+}

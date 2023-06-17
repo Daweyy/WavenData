@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "455",
+  "m_id": 455,
+  "m_displayName": "RING - RARE - Anneau Peration",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -351939599,
+    "b": 876402932,
+    "c": 1988621819,
+    "d": -1785256431,
+    "e": 92533664
+  },
+  "m_i18nDescriptionId": {
+    "a": -351939599,
+    "b": 876402932,
+    "c": 1988621819,
+    "d": -1785256431,
+    "e": 349421502
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -351939599,
+    "b": 876402932,
+    "c": 1988621819,
+    "d": -1785256431,
+    "e": -1925778938
+  },
+  "m_illustration": {
+    "assetGuid": "679883abe37dc4447bb10eb37f636758"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "53babd7a277702548ac53ba14855fd08"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 455,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      689453,
+      713262,
+      689519,
+      689816,
+      690426,
+      752
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "buff",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 695
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "skillBuff",
+                "value": 5
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "skillBuff",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          25
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Pération",
+    "en": "Peration Ring",
+    "es": "Anillo Peración",
+    "de": "Bombardiering",
+    "pt": "Operanel"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {value:buff,percent,+} aux <b>DÉGÂTS</b> de vos {%SPELLCOUNT,plural:other} {%FIRE} pour le tour par adversaire {%OILED}.",
+    "en": "{%FightTurnStarted} {value:buff,percent,+} to your {%FIRE} {%SPELLCOUNT,plural:one} <b>DAMAGE</b> for the turn per {%OILED} opponent.",
+    "es": "{%FightTurnStarted} {value:buff,percent,+} a los <b>DAÑOS</b> de tus {%SPELLCOUNT,plural:other} {%FIRE} durante el turno por adversario {%OILED}.",
+    "de": "{%FightTurnStarted} {value:buff,percent,+} auf den <b>SCHADEN</b> deiner {%FIRE}-{%SPELLCOUNT,plural:other} für die Runde pro Gegner im Zustand {%OILED}.",
+    "pt": "{%FightTurnStarted} {value:buff,percent,+} aos <b>DANOS</b> dos seus {%SPELLCOUNT,plural:other} {%FIRE} durante o turno por adversário {%OILED}."
+  },
+  "bgDescription": {
+    "fr": "Un anneau taillé pour les opérations de grande envergure, quelle que soit votre dextérité.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

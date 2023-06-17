@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "920",
+  "m_id": 920,
+  "m_displayName": "MONSTRE BWORK - Dernier Effort",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 468493699,
+    "b": 1769821492,
+    "c": -1106269479,
+    "d": -354306611,
+    "e": -1213388664
+  },
+  "m_i18nDescriptionId": {
+    "a": 468493699,
+    "b": 1769821492,
+    "c": -1106269479,
+    "d": -354306611,
+    "e": 593080693
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "388f1234934453a4ca1cb13e0e00d963"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 920,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        49
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              49
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5b094b610c56e3e419e81694552510a3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Dernier Effort",
+    "en": "Last Effort",
+    "es": "Último Esfuerzo",
+    "de": "Letzte Anstrengung",
+    "pt": "Último Recurso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un <b>Bwork</b> allié.\n\\---\nIl rejoue son tour.",
+    "en": "Does {magicalDamage:dmg} to an allied <b>Bwork</b>.\n\\---\nThey replay their turn.",
+    "es": "Inflige {magicalDamage:dmg} a un <b>bwork</b> aliado.\n\\---\nEste vuelve a jugar su turno.",
+    "de": "Verursacht {magicalDamage:dmg} bei einem verbündeten <b>Bwork</b>.\n\\---\nEr spielt seine Runde erneut.",
+    "pt": "Inflige {magicalDamage:dmg} a um <b>Bwork</b> aliado.\n\\---\nEle joga um turno extra."
+  }
+}

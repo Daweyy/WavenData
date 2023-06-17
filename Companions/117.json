@@ -1,0 +1,217 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "117",
+  "m_id": 117,
+  "m_displayName": "QUETE - COCHON - Niels Laren",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1078518064,
+    "b": -1149458524,
+    "c": 558853882,
+    "d": 1073308240,
+    "e": -1889741927
+  },
+  "m_i18nDescriptionId": {
+    "a": 1078518064,
+    "b": -1149458524,
+    "c": 558853882,
+    "d": 1073308240,
+    "e": 138588426
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 117,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 786,
+      "skinIds": [
+        786
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "auras",
+          "value": -2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pv",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 14
+          },
+          "buffs": [
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 157
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 15
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 150
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          117
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Niels Laren",
+    "en": "Niels Laren",
+    "es": "Niels Laren",
+    "de": "Niels Laren",
+    "pt": "Niels Laren"
+  },
+  "description": {
+    "fr": "{%Attack} {value:auras}\\_{%KEYWORD.AURA.NAME,value:auras} à la cible si c'est un adversaire\n<b>OU</b>\nSoigne\\_de\\_{PVvalue:pv} si c'est un allié.",
+    "en": "{%Attack} {value:auras}\\_{%KEYWORD.AURA.NAME,value:auras} to the target if the target is an opponent.\n<b>OR</b>\nHeals\\_{PVvalue:pv}\\_if the target is an ally.",
+    "es": "{%Attack} {value:auras}\\_{%KEYWORD.AURA.NAME,value:auras} al objetivo si es un adversario.\n<b>O</b>\nCura\\_{PVvalue:pv} si es un aliado.",
+    "de": "{%Attack} {value:auras}\\_{%KEYWORD.AURA.NAME,value:auras} für das Ziel, wenn es ein Gegner ist.\n<b>ODER</b>\nHeilt es um {PVvalue:pv}, wenn es ein Verbündeter ist.",
+    "pt": "{%Attack} {value:auras}\\_{%KEYWORD.AURA.NAME,value:auras} ao alvo se for um adversário\n<b>OU</b>\nCura\\_em\\_{PVvalue:pv} se for um aliado."
+  }
+}

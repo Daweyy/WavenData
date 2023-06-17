@@ -1,0 +1,221 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241945000
+  },
+  "m_Name": "350",
+  "m_id": 350,
+  "m_displayName": "_NOT USED - DECK - COMMON - SADIDA - Dathura",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": 1673705539,
+    "b": -1355795612,
+    "c": 1977247209,
+    "d": 1200473303,
+    "e": -2088000967
+  },
+  "m_i18nDescriptionId": {
+    "a": 1673705539,
+    "b": -1355795612,
+    "c": 1977247209,
+    "d": 1200473303,
+    "e": -757658293
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 350,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 4397,
+      "skinIds": [
+        4397
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "UNIQUE",
+        {
+          "type": 4,
+          "id": 251
+        },
+        {
+          "type": 20,
+          "id": 8
+        },
+        {
+          "type": 25,
+          "id": 15892
+        }
+      ]
+    },
+    "families": [
+      10
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 96
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 22
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [
+      {
+        "type": "SpellOnSpawnWithDestination",
+        "spell": 15892,
+        "destination": 1
+      }
+    ],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          350
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Dathura",
+    "en": "Amalia",
+    "es": "Amalia",
+    "de": "",
+    "pt": "Dathura"
+  },
+  "description": {
+    "fr": "Tant qu'elle est en jeu\\_: Ajoute le sort {Spell:15892} à votre main.\n\\---\n{%Death} Confère {PropertyEffect:8} aux alliés.",
+    "en": "<b>SORT</b>\\_: {Spell:558}.\nRéduit de 1\\_{%pa} le coût de vos sorts <b>Terre</b><sprite name=\"earth\">.",
+    "es": "<b>SORT</b>\\_: {Spell:558}.\nRéduit de 1\\_{%pa} le coût de vos sorts <b>Terre</b><sprite name=\"earth\">.",
+    "de": "",
+    "pt": "Enquanto estiver em jogo: Adiciona o feitiço {Spell:15892} à sua mão.\n\\---\n{%Death} Concede {PropertyEffect:8} aos aliados."
+  }
+}

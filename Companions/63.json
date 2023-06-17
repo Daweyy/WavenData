@@ -1,0 +1,213 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "63",
+  "m_id": 63,
+  "m_displayName": "QUETE - TAURE - Tonton Serge",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -245587251,
+    "b": -1478417676,
+    "c": -2140541590,
+    "d": -1331237477,
+    "e": 97139174
+  },
+  "m_i18nDescriptionId": {
+    "a": -245587251,
+    "b": -1478417676,
+    "c": -2140541590,
+    "d": -1331237477,
+    "e": 1227750308
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 63,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 759,
+      "skinIds": [
+        759
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 15
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          63
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Tonton Serge",
+    "en": "Uncle Serge",
+    "es": "Tito Serg",
+    "de": "Onkelchen Serge",
+    "pt": "Tio Sérgio"
+  },
+  "description": {
+    "fr": "{%Attack} Inflige son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} si la cible est un {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "en": "{%Attack} Inflicts {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} if the target is a {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "es": "{%Attack} Inflige su {%AT} a los adversarios alrededor\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} si el objetivo es un {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "de": "{%Attack} Verursacht bei Gegnern ringsum\\_<sprite name=\"cell_around\"> seinen {%AT} als Schaden.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+}, falls das Ziel ein {%KEYWORD.OBJECTMECHANISM.NAME} ist.",
+    "pt": "{%Attack} Inflige seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} se o alvo for um {%KEYWORD.OBJECTMECHANISM.NAME}."
+  }
+}

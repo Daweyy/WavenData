@@ -1,0 +1,153 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "197392",
+  "m_id": 197392,
+  "m_displayName": "SRAM - ARME - SHUGEN - ETHER - Attaque Shugen",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1202129135,
+    "b": -1001571260,
+    "c": -888363781,
+    "d": -1577490872,
+    "e": -1737955476
+  },
+  "m_i18nDescriptionId": {
+    "a": -1202129135,
+    "b": -1001571260,
+    "c": -888363781,
+    "d": -1577490872,
+    "e": -1232644461
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3be07c4963f189d47a5f09715a928b6f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 197392,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 36,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f576f2c8e5f40ae40b3d9d023af42554",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Attaque Shugen",
+    "en": "Shugen Attack",
+    "es": "Ataque Fab'hugen",
+    "de": "Shugen-Angriff",
+    "pt": "Ataque Shugen"
+  },
+  "description": {
+    "fr": "Votre héros déclenche son {%AT} sur un adversaire adjacent\\_<sprite name=\"cell_cross\">.\n\\---\n{value:at,percent,+} de <b>DÉGÂTS</b> si la cible a un {%ELEMENTARY_STATE}.",
+    "en": "Your hero triggers their {%AT} on an adjacent\\_<sprite name=\"cell_cross\"> opponent.\n\\---\n{value:at,percent,+} <b>DAMAGE</b> if the target has an {%ELEMENTARY_STATE}.",
+    "es": "Tu héroe activa su {%AT} en un adversario adyacente\\_<sprite name=\"cell_cross\">.\n\\---\n{value:at,percent,+} de <b>DAÑOS</b> si el objetivo tiene un {%ELEMENTARY_STATE}.",
+    "de": "Dein Held löst seinen {%AT} gegen einen angrenzenden\\_<sprite name=\"cell_cross\"> Gegner aus.\n\\---\n{value:at,percent,+} <b>SCHADEN</b>, wenn das Ziel einen {%ELEMENTARY_STATE} hat.",
+    "pt": "Seu herói aciona seu {%AT} em um adversário adjacente\\_<sprite name=\"cell_cross\">.\n\\---\n{value:at,percent,+} de <b>DANOS</b> se o alvo tiver um {%ELEMENTARY_STATE}."
+  }
+}

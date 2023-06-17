@@ -1,0 +1,221 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "497",
+  "m_id": 497,
+  "m_displayName": "IOP - Bouvaloir Orok",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1387392475,
+    "b": 111833140,
+    "c": -1712364327,
+    "d": 29268254,
+    "e": -8802196
+  },
+  "m_i18nDescriptionId": {
+    "a": -1387392475,
+    "b": 111833140,
+    "c": -1712364327,
+    "d": 29268254,
+    "e": -25426715
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": -1387392475,
+    "b": 111833140,
+    "c": -1712364327,
+    "d": 29268254,
+    "e": 650418043
+  },
+  "m_i18nSimpleNameId": {
+    "a": -1387392475,
+    "b": 111833140,
+    "c": -1712364327,
+    "d": 29268254,
+    "e": -529691965
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": -1387392475,
+    "b": 111833140,
+    "c": -1712364327,
+    "d": 29268254,
+    "e": -1265035850
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "4d890c1d0099aef459abe274051b016e"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 497,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 6598,
+      "skinIds": [
+        1020,
+        4033,
+        1831,
+        4809,
+        8041,
+        6598
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "p",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 654
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "s",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 401
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 30
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      757618,
+      757945,
+      757980,
+      818
+    ],
+    "difficultyHint": 1,
+    "defaultSkinIdMale": 1020,
+    "defaultSkinIdFemale": 6598,
+    "god": 1,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      237297,
+      629,
+      838,
+      750
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      234,
+      319,
+      946,
+      202995,
+      856,
+      202467,
+      344,
+      142,
+      239
+    ]
+  },
+  "name": {
+    "fr": "Bouvaloir Orok",
+    "en": "Bovalor Orok",
+    "es": "Buvalor Orok",
+    "de": "Bösa Klib",
+    "pt": "Bonescudo Orok"
+  },
+  "description": {
+    "fr": "Lorsque votre héros <b>CHARGE</b>\\_:\\v Inflige {value:p, percent} de son {%at} à la cible.",
+    "en": "When your hero <b>CHARGES</b>:\\v Inflicts {value:p, percent} of their {%at} on the target.",
+    "es": "Cuando tu héroe <b>CARGA</b>:\\v Inflige un {value:p, percent} de su {%at} al objetivo.",
+    "de": "Wenn dein Held <b>ANSTÜRMT</b>:\\v Verusacht beim Ziel {value:p, percent} seines {%at} als Schaden.",
+    "pt": "Quando seu herói usa <b>INVESTIDA</b>:\\vInflige {value:p, percent} de seu {%at} ao alvo."
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4>CHARGE</color>\\_: Ces sorts permettent de foncer tête baissée dans la bataille pour attaquer le premier\\_!\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!\n\\---\n<color=#7FD5E4>SORTS</color>\\_: Savoir bien se positionner est essentiel pour casser des nez\\_!",
+    "en": "<color=#7FD5E4>CHARGE</color>: These spells let you rush head first into the fray to attack first!\n\\---\n<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!\n\\---\n<color=#7FD5E4>SPELLS</color>: Knowing where best to position yourself is crucial for breaking bones!",
+    "es": "<color=#7FD5E4>CARGA</color>: Estos hechizos permiten abalanzarse de cabeza en la batalla para atacar primero.\n\\---\n<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!\n\\---\n<color=#7FD5E4>HECHIZOS</color>: Saber posicionarse bien es fundamental para partir unas cuantas caras.",
+    "de": "<color=#7FD5E4>ANSTURM</color>: Mit diesen Zaubern kannst du dich kopfüber in den Kampf stürzen, um den Erstbesten anzugreifen!\n\\---\n<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu!\n\\---\n<color=#7FD5E4>ZAUBER</color>: Sich gut zu positionieren ist wichtig, um Nasen einzuschlagen!",
+    "pt": "<color=#7FD5E4>CARGA</color>: Estes feitiços permitem entrar com tudo na batalha para atacar primeiro!\n\\---\n<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!\n\\---\n<color=#7FD5E4>FEITIÇOS</color>: Posicionar-se bem é fundamental para quebrar os ossos dos adversários!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameIop}",
+    "en": "{%OnboardingSimpleNameIop}",
+    "es": "{%OnboardingSimpleNameIop}",
+    "de": "{%OnboardingSimpleNameIop}",
+    "pt": "{%OnboardingSimpleNameIop}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionIop}",
+    "en": "{%OnboardingSimpleDescriptionIop}",
+    "es": "{%OnboardingSimpleDescriptionIop}",
+    "de": "{%OnboardingSimpleDescriptionIop}",
+    "pt": "{%OnboardingSimpleDescriptionIop}"
+  }
+}

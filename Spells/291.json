@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "291",
+  "m_id": 291,
+  "m_displayName": "EQUIPMENT - RING - Orbe d'Air",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 757138836,
+    "b": 966134132,
+    "c": 511047547,
+    "d": 1451652624,
+    "e": 512545412
+  },
+  "m_i18nDescriptionId": {
+    "a": 757138836,
+    "b": 966134132,
+    "c": 511047547,
+    "d": 1451652624,
+    "e": -1537265000
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8cce2d564643ae0418cb51a7ec232182"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 291,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 40
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": ""
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -5
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a8c9bda9760d1a048b14f3c696ca699e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -5
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": "",
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 100
+                },
+                {
+                  "type": "MultValue",
+                  "referenceId": "",
+                  "valuesToMult": [
+                    {
+                      "type": "ThisSpellEvolutionValue",
+                      "referenceId": ""
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "per",
+                      "value": 10
+                    }
+                  ]
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Orbe d'Air",
+    "en": "Air Orb",
+    "es": "Orbe de Aire",
+    "de": "Luftkugel",
+    "pt": "Orbe de Ar"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:v}. \n\\---\nLorsque vous jouez un autre {%SPELLCOUNT} {%AIR}\\_: {value:per,percent,+} aux <b>DÉGÂTS</b> de ce {%SPELLCOUNT} et {PAvalue:pa} à son coût.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Inflicts {magicalDamage:v}. \n\\---\nWhen you play another {%AIR} {%SPELLCOUNT}: {value:per,percent,+} to this {%SPELLCOUNT}'s <b>DAMAGE</b> and {PAvalue:pa} to its cost.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Inflige {magicalDamage:v}. \n\\---\nCuando lanzas otro {%SPELLCOUNT} de {%AIR}: {value:per,percent,+} a los <b>DAÑOS</b> de este {%SPELLCOUNT} y {PAvalue:pa} a su coste.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Verursacht {magicalDamage:v}.\n\\---\nWenn du einen anderen {%AIR}-{%SPELLCOUNT} ausspielst: {value:per,percent,+} auf den <b>SCHADEN</b> dieses {%SPELLCOUNT}s und {PAvalue:pa} auf seine Kosten.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Inflige {magicalDamage:v}.\n\\---\nQuando você lançar outro {%SPELLCOUNT} de {%AIR}: {value:per,percent,+} aos <b>DANOS</b> deste {%SPELLCOUNT} e {PAvalue:pa} ao seu custo.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

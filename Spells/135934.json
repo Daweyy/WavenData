@@ -1,0 +1,257 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "135934",
+  "m_id": 135934,
+  "m_displayName": "ENIRIPSA - ARME - PINCEAU KOKORO - AIR - Kokoro Vaporeux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1865142436,
+    "b": -909891036,
+    "c": 1969557819,
+    "d": 454573849,
+    "e": 438194067
+  },
+  "m_i18nDescriptionId": {
+    "a": -1865142436,
+    "b": -909891036,
+    "c": 1969557819,
+    "d": 454573849,
+    "e": -716183096
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "cb1731d303e6c1c43bb6c13c3421432b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 135934,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      143590,
+      534,
+      509374
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 967,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "98347ea21992cf74db6baefa46990c63",
+        "originTarget": {
+          "type": "SecondCastTargetSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 28
+              },
+              {
+                "type": "ConditionalValue",
+                "referenceId": "",
+                "condition": {
+                  "type": "SupportCondition"
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "Supp",
+                  "value": 14
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 577,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Supp",
+          "value": 14
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "SUPPORT"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Kokoro Vaporeux",
+    "en": "Steamy Kokoro",
+    "es": "Kokoro Vaporoso",
+    "de": "Dampfendes Kokoro",
+    "pt": "Kokoro Vaporoso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à un allié. \n\\---\n{#SUPPORT}\\_:\\_{magicalDamage:Supp,+}",
+    "en": "Does {magicalDamage:dmg} to an opponent adjacent\\_<sprite name=\"cell_cross\"> to an ally. \n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a un aliado. \n\\---\n{#SUPPORT}:\\_{magicalDamage:Supp,+}.",
+    "de": "Fügt einem an einen Verbündeten angrenzenden\\_<sprite name=\"cell_cross\">Gegner {magicalDamage:dmg} zu.\n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\n{#SUPPORT}: Aciona {magicalDamage:Supp,+}."
+  }
+}

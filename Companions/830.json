@@ -1,0 +1,233 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "830",
+  "m_id": 830,
+  "m_displayName": "_NOT USED - DECK - COMMON - FECA - Bourreau Anonyme",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": 1342339082,
+    "b": 1394669172,
+    "c": -1033959944,
+    "d": -1745165778,
+    "e": -144574112
+  },
+  "m_i18nDescriptionId": {
+    "a": 1342339082,
+    "b": 1394669172,
+    "c": -1033959944,
+    "d": -1745165778,
+    "e": -1453332191
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 830,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1405,
+      "skinIds": [
+        1405
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      9
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 71
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 18
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          830
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "FilteredCharacterSelector",
+                  "filters": [
+                    {
+                      "type": "TeamFilter",
+                      "isIdentical": false,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    }
+                  ]
+                },
+                "distance": {
+                  "type": "EqualsTo",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": true
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Bourreau Anonyme",
+    "en": "Bourreau Anonyme",
+    "es": "Bourreau Anonyme",
+    "de": "",
+    "pt": "Carrasco Anônimo"
+  },
+  "description": {
+    "fr": "<rem>Peut être invoqué sur une case adjacente\\_<sprite name=\"cell_cross\"> à un héros.</rem>\n\\---\n{%DEATH} Inflige son {%at} à l'adversaire ayant le moins de {%pv}.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": "<rem>Pode ser invocado sobre uma célula adjacente<sprite name=\"cell_cross\"> a um herói.</rem>\n\\---\n<b>MORTE</b>: Inflige seu {%at} ao ‘adversário que tiver menos {%pv}."
+  }
+}

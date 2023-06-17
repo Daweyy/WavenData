@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "712",
+  "m_id": 712,
+  "m_displayName": "XELOR - CLASSE - AIR - Synchronisation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1392774392,
+    "b": 130094740,
+    "c": -341025992,
+    "d": 219889083,
+    "e": 1554310748
+  },
+  "m_i18nDescriptionId": {
+    "a": -1392774392,
+    "b": 130094740,
+    "c": -341025992,
+    "d": 219889083,
+    "e": 452197700
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "aa5235c1b90b7824fa9e3cf2eae8e904"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 712,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      460828,
+      665,
+      460984
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7ecb4aa5182ad8044a7bfafe5b81b18d",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 367,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        {
+          "type": 22,
+          "id": 138
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Synchronisation",
+    "en": "Synchronization",
+    "es": "Sincronización",
+    "de": "Synchronisation",
+    "pt": "Sincronização"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} à votre héros si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} to your hero if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} a tu héroe si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} für deinen Helden, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} ao seu herói se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "236",
+  "m_id": 236,
+  "m_displayName": "IOP - CLASSE - AIR - Intimidation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -235170667,
+    "b": -1435655820,
+    "c": -1127721576,
+    "d": -785302565,
+    "e": -581489647
+  },
+  "m_i18nDescriptionId": {
+    "a": -235170667,
+    "b": -1435655820,
+    "c": -1127721576,
+    "d": -785302565,
+    "e": 1691436630
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0c67e701ec7d57443ba1aa26c8a0be41"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 236,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      208576,
+      435974,
+      944
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      0
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "25bab4ecf19271a4e85d24d402de27aa",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 744,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgMelee",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 744,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pushPower",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 455
+        },
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Intimidation",
+    "en": "Intimidation",
+    "es": "Intimidación",
+    "de": "Einschüchterung",
+    "pt": "Intimidação"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et {#push} la cible de {cell:pushPower}.\n\\---\n{NamedEffect:455}\\_: {magicalDamage:dmgMelee,+}.",
+    "en": "Does {magicalDamage:dmg} and {#push} the target {cell:pushPower}.\n\\---\n{NamedEffect:455}: {magicalDamage:dmgMelee,+}.",
+    "es": "Inflige {magicalDamage:dmg} y {#push} al objetivo {cell:pushPower}.\n\\---\n{NamedEffect:455}: {magicalDamage:dmgMelee,+}.",
+    "de": "Verursacht {magicalDamage:dmg} und {#push} das Ziel um {cell:pushPower}.\n\\---\n{NamedEffect:455}: {magicalDamage:dmgMelee,+}.",
+    "pt": "Inflige {magicalDamage:dmg} e {#push} o alvo por {cell:pushPower}.\n\\---\n{NamedEffect:455}: {magicalDamage:dmgMelee,+}."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -4014597234671528400
+  },
+  "m_Name": "34",
+  "m_id": 34,
+  "m_displayName": "AffinityGeyserFactor",
+  "m_availability": 3,
+  "m_iconReference": {
+    "assetGuid": "4c39768c6b7a6aa44a0d23d1a293f7e5"
+  },
+  "m_iconAnimationSettings": {
+    "assetGuid": "d921251e7693b9e439afb58fe5ff3862"
+  },
+  "m_i18nNameId": {
+    "a": -570921933,
+    "b": 382828580,
+    "c": 1832529739,
+    "d": -1449786941,
+    "e": 534402425
+  },
+  "m_i18nDescriptionId": {
+    "a": -570921933,
+    "b": 382828580,
+    "c": 1832529739,
+    "d": -1449786941,
+    "e": -312628982
+  },
+  "values": {
+    "type": "AffinityCustomEffectDefinition",
+    "id": 34,
+    "iconColor": {
+      "r": 0.7743345,
+      "g": 0.689569235,
+      "b": 0.9811321,
+      "a": 1
+    },
+    "areaOfEffect": {
+      "type": "SquareAreaOfEffectSelector",
+      "originSelector": {
+        "type": "CasterHeroSelector"
+      },
+      "size": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      }
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "target",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "geyA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            81
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "136273",
+  "m_id": 136273,
+  "m_displayName": "XELOR - ARME - TAKO - AIR - Style Vent",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 669701730,
+    "b": 1851162532,
+    "c": 7381562,
+    "d": -1248711498,
+    "e": -178728806
+  },
+  "m_i18nDescriptionId": {
+    "a": 669701730,
+    "b": 1851162532,
+    "c": 7381562,
+    "d": -1248711498,
+    "e": -288383585
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1149b775b2b3a62478fb80b9eb8cc694"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 136273,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      464114,
+      193,
+      171682
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 490,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "CaracValueCondition",
+        "selector": {
+          "type": "CasterSelector"
+        },
+        "carac": 19,
+        "value": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          }
+        }
+      },
+      "selectorIfTrue": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 1
+                }
+              }
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3cb3ea3a38bbf494fa3380623826ce63",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 579,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        "CHRONO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Style Vent",
+    "en": "Wind Style",
+    "es": "Estilo Viento",
+    "de": "Windstil",
+    "pt": "Estilo Vento"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}\\_: {#PUSH} la cible de {cell:c}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#CHRONO}: {#PUSH} the target {cell:c}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: {#PUSH} al objetivo {cell:c}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#CHRONO}: {#PUSH} das Ziel um{cell:c}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: {#PUSH} o alvo por {cell:c}."
+  }
+}

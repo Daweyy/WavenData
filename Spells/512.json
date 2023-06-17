@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "512",
+  "m_id": 512,
+  "m_displayName": "SRAM - ARME - SOUROKAN - EPHEMERE - Trappe Sourokan",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1991244351,
+    "b": -412003884,
+    "c": -963958357,
+    "d": 210594948,
+    "e": 458500848
+  },
+  "m_i18nDescriptionId": {
+    "a": 1991244351,
+    "b": -412003884,
+    "c": -963958357,
+    "d": 210594948,
+    "e": -1801362703
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "65bcde90aa64fe8428d2a58aae523512"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 512,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": 36,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.191.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 191
+        },
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "{0, plural, one[Trappe Sourokan] other[Trappes Sourokan]}",
+    "en": "{0, plural, one[Surokan Sliptrap] other[Surokan Sliptraps]}",
+    "es": "{0, plural, one[Trampilla Surokán] other[Trampillas Surokán]}",
+    "de": "{0, plural, one[Sorokan-Fallgrube] other[Sorokan-Fallgruben]}",
+    "pt": "{0, plural, one[Alçapão Surokan] other[Alçapões Surokan]}"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nConstruit une {FloorMechanism:191} ({value:FloorMechanism.191.dmg}) jusqu'à {cell:c} de votre héros.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nBuilds one {FloorMechanism:191} ({value:FloorMechanism.191.dmg}) up to {cell:c} from your hero.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nConstruye una {FloorMechanism:191} ({value:FloorMechanism.191.dmg}) hasta a {cell:c} de tu héroe.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nErrichtet eine\\_{FloorMechanism:191} ({value:FloorMechanism.191.dmg}) bis auf {cell:c} von deinem Helden entfernt.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nPosiciona um {FloorMechanism:191} ({value:FloorMechanism.191.dmg}) a até {cell:c} do seu herói."
+  }
+}

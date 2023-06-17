@@ -1,0 +1,147 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "48531",
+  "m_id": 48531,
+  "m_displayName": "MONSTRE BOUFTOU - Contamination",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1411557012,
+    "b": 1081923476,
+    "c": 1995107915,
+    "d": -985835244,
+    "e": 1263464452
+  },
+  "m_i18nDescriptionId": {
+    "a": -1411557012,
+    "b": 1081923476,
+    "c": 1995107915,
+    "d": -985835244,
+    "e": -1568975201
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5cdca0461abd5cd49a4b5dd7a6f45080"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 48531,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ef6fcde3b5f3a8b479d8f0710f437b28",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 25,
+          "id": 104
+        },
+        "SICK"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Contamination",
+    "en": "Contamination",
+    "es": "Contaminación",
+    "de": "Verseuchung",
+    "pt": "Contaminação"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nApplique {#SICK} si la cible est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nApplies {#SICK} if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nAplica {#SICK} si el objetivo está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nWendet {#SICK} an, wenn das Ziel <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAplica {#SICK} se o alvo estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

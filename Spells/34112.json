@@ -1,0 +1,219 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "34112",
+  "m_id": 34112,
+  "m_displayName": "MONSTRE COCHON - Pied de Porc",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2478053,
+    "b": -154479484,
+    "c": 1557008536,
+    "d": -701914847,
+    "e": 534617758
+  },
+  "m_i18nDescriptionId": {
+    "a": -2478053,
+    "b": -154479484,
+    "c": 1557008536,
+    "d": -701914847,
+    "e": -1088266381
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5999ba70ed31ddb498739972201be4b4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 34112,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "EntityValidForMagicalDamageFilter"
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6dd2d5332d8b0674b9c48cad72002563",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pied de Porc",
+    "en": "Trotter",
+    "es": "Pie Porcino",
+    "de": "Schweinsfüße",
+    "pt": "Pé de Porco"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à un <b>Cochon</b> allié.\n\\---\n{#PUSH} de {cell:c} la cible si elle est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalDamage:dmg} to an opponent adjacent\\_<sprite name=\"cell_cross\"> to an allied <b>Pig</b>.\n\\---\n{#PUSH} the target {cell:c} if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a un <b>cerdo</b> aliado.\n\\---\n{#PUSH} {cell:c} al objetivo si está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht bei einem an ein verbündetes <b>Schweinemonster</b> angrenzenden_<sprite name=\"cell_cross\"> Gegner {magicalDamage:dmg}.\n\\---\n{#PUSH} das Ziel um {cell:c} zurück, wenn es <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> a um <b>Porco</b> aliado.\n\\---\n{#PUSH} o alvo por {cell:c} se ele estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

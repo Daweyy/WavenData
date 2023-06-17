@@ -1,0 +1,233 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "378",
+  "m_id": 378,
+  "m_displayName": "SRAM - ARME - ORISHI - EAU - Cisaille Mouillee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1205899657,
+    "b": -182093196,
+    "c": 1909619371,
+    "d": -495689678,
+    "e": -1034150829
+  },
+  "m_i18nDescriptionId": {
+    "a": -1205899657,
+    "b": -182093196,
+    "c": 1909619371,
+    "d": -495689678,
+    "e": 519875939
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bceee048839fbb448a9548967540e0f9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 378,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      350460,
+      466,
+      364832
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 620,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "c",
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 68669
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": null,
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 68669
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d2df45843bd023c4393480c936534b41",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "ThisSpellHasSkillCondition",
+            "skillId": 68669
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.673.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 673
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cisaille Mouillée",
+    "en": "Wet Shears",
+    "es": "Cizalla Mojada",
+    "de": "Nasse Schere",
+    "pt": "Tesoura Molhada"
+  },
+  "description": {
+    "fr": "Construit 2 {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\n{PAvalue:pa} au coût de votre prochain {%SPELLCOUNT} par adversaire situé entre eux.",
+    "en": "Builds 2 {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) up to {cell:c} from your hero.\n\\---\n{PAvalue:pa} to the cost of your next {%SPELLCOUNT} per opponent located between them.",
+    "es": "Construye 2 {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) hasta a {cell:c} de tu héroe.\n\\---\n{PAvalue:pa} al coste de tu próximo {%SPELLCOUNT} por adversario situado entre ellas.",
+    "de": "Errichtet 2\\_{FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) bis zu {cell:c} von deinem Helden entfernt.\n\\---\n{PAvalue:pa} auf die Kosten deines nächsten {%SPELLCOUNT} pro Gegner zwischen ihnen.",
+    "pt": "Posiciona 2 {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) a até {cell:c} do seu herói.\n\\---\n{PAvalue:pa} ao custo do seu próximo {%SPELLCOUNT} por adversário entre elas."
+  }
+}

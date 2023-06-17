@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "514",
+  "m_id": 514,
+  "m_displayName": "RING - COMMON - Anneau Rageux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 848491712,
+    "b": 1661103844,
+    "c": 748949338,
+    "d": 1642490353,
+    "e": 227566395
+  },
+  "m_i18nDescriptionId": {
+    "a": 848491712,
+    "b": 1661103844,
+    "c": 748949338,
+    "d": 1642490353,
+    "e": 355314971
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 848491712,
+    "b": 1661103844,
+    "c": 748949338,
+    "d": 1642490353,
+    "e": -1109033114
+  },
+  "m_illustration": {
+    "assetGuid": "83b1c522ec068dd42a058a0a18e8a497"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "2ea5f756109c5c049928203f785e797f"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 514,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      665597,
+      708847,
+      666212,
+      666665,
+      666835,
+      666846
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 594,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "blA",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 30
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 135
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "blB",
+                "value": 20
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "blB",
+          "value": 20
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          1
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Anneau Rageux",
+    "en": "Stormy Ring",
+    "es": "Tormentanillo",
+    "de": "Cholering",
+    "pt": "Tempestanel"
+  },
+  "description": {
+    "fr": "Lorsque vous invoquez un {%KEYWORD.OBJECTMECHANISM.NAME}\\_:\\v {value:blA,percent,+} de {%BL}.",
+    "en": "When you summon a {%KEYWORD.OBJECTMECHANISM.NAME}:\\v {value:blA,percent,+} {%BL}.",
+    "es": "Cuando invocas a un {%KEYWORD.OBJECTMECHANISM.NAME}: \\v{value:blA,percent,+} de {%BL}.",
+    "de": "Wenn du einen {%KEYWORD.OBJECTMECHANISM.NAME} beschwörst:\\v{value:blA,percent,+} {%BL}.",
+    "pt": "Quando você invoca um {%KEYWORD.OBJECTMECHANISM.NAME}:\\v {value:blA,percent,+} de {%BL}."
+  },
+  "bgDescription": {
+    "fr": "Si à chaque fois que vous perdez un combat ce n'est pas votre faute mais celle de vos alliés, de votre arme ou de la météo, alors cet anneau est fait pour vous !",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

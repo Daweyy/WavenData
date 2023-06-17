@@ -1,0 +1,149 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "484",
+  "m_id": 484,
+  "m_displayName": "MONSTRE BOUFTOU - Pupulence",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -890071809,
+    "b": -1786134364,
+    "c": 26772314,
+    "d": -1862871944,
+    "e": 1311326574
+  },
+  "m_i18nDescriptionId": {
+    "a": -890071809,
+    "b": -1786134364,
+    "c": 26772314,
+    "d": -1862871944,
+    "e": -288895032
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "04e5d5d8fb7bc7c4e952d2a677d5fa47"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 484,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              36
+            ]
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 2,
+            "families": [
+              45
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f7b959dd8d9f0d7449da38267cee5cd0",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 25,
+          "id": 104
+        },
+        "SICK",
+        {
+          "type": 4,
+          "id": 979
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pupulence",
+    "en": "Prolifleeflate",
+    "es": "Pulgatorio",
+    "de": "Pupsulenz",
+    "pt": "Pupulência"
+  },
+  "description": {
+    "fr": "Invoque {value:v}\\_{Summoning:979,value:v} autour\\_<sprite name=\"cell_around\"/> d'un\\_<b>Bouftou</b> allié.",
+    "en": "Summons {value:v}\\_{Summoning:979,value:v} around\\_<sprite name=\"cell_around\"/> an allied <b>Gobball</b>.",
+    "es": "Invoca {value:v}\\_{Summoning:979,value:v} alrededor\\_<sprite name=\"cell_around\"/> de un\\_<b>jalató</b> aliado.",
+    "de": "Beschwört {value:v}\\_{Summoning:979,value:v} rings um\\_<sprite name=\"cell_around\"/> einen verbündeten\\_<b>Fresssack</b>.",
+    "pt": "Invoca {value:v}\\_{Summoning:979,value:v} em\\_volta\\_<sprite name=\"cell_around\"/> de um\\_<b>Papatudo</b> aliado."
+  }
+}

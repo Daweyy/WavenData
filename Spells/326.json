@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "326",
+  "m_id": 326,
+  "m_displayName": "MONSTRE TOFU - Fuite",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 653674300,
+    "b": 438791156,
+    "c": 381769048,
+    "d": 1966811741,
+    "e": -1504158870
+  },
+  "m_i18nDescriptionId": {
+    "a": 653674300,
+    "b": 438791156,
+    "c": 381769048,
+    "d": 1966811741,
+    "e": 2116624942
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "464a4778ed4ca8243a7a2ecb04b3d6c3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "2bc3e2eb37ddcc54c9700dfb407341ec"
+      },
+      {
+        "assetGuid": "f16579d93e8280041a92cea85accea14"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 326,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        37
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "heal",
+          "baseValue": 16,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "HEAL",
+          "baseValue": 18,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Fuite",
+    "en": "Evasion",
+    "es": "Huida",
+    "de": "Flucht",
+    "pt": "Fuga"
+  },
+  "description": {
+    "fr": "Téléporte un <b>Tofu</b> allié jusqu'à {cell:c}\net le soigne de {value:heal} à {PVvalue:HEAL}.",
+    "en": "Teleports an allied <b>Tofu</b> up to {cell:c}\nand heals it {value:heal} to {PVvalue:HEAL}.",
+    "es": "Teletransporta a un <b>tofu</b> aliado hasta {cell:c}\ny le cura {value:heal} a {PVvalue:HEAL}.",
+    "de": "Teleportiert einen verbündeten <b>Tofu</b> bis zu {cell:c}\nund heilt ihn um {value:heal} bis {PVvalue:HEAL}.",
+    "pt": "Teletransporta um <b>Tofu</b> aliado a até {cell:c}\ne o cura em {value:heal} a {PVvalue:HEAL}."
+  }
+}

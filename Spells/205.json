@@ -1,0 +1,171 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "205",
+  "m_id": 205,
+  "m_displayName": "ENIRIPSA - CLASSE - FEU - Elixir de Flamme",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1585902385,
+    "b": 1825797508,
+    "c": -651519957,
+    "d": 24403863,
+    "e": 2081492267
+  },
+  "m_i18nDescriptionId": {
+    "a": -1585902385,
+    "b": 1825797508,
+    "c": -651519957,
+    "d": 24403863,
+    "e": 1101941921
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7b01600255883d644b6bb780beb65be4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 205,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a3e5706d4c8fd754f9ec1f5170976301",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "LIFESTEAL",
+        {
+          "type": 22,
+          "id": 116
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Élixir de Flamme",
+    "en": "Flame Elixir",
+    "es": "Elixir de Llama",
+    "de": "Flammenelixier",
+    "pt": "Elixir de Chama"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\">\\_d'un allié.\n\\---\n{value:a,+}\\_{aura:116,value:a} à votre héros.\n\\---\n<rem>Ce sort est détruit lorsqu'il est joué.</rem>",
+    "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> an\\_ally.\n\\---\n{value:a,+}\\_{aura:116,value:a} to your hero.\n\\---\n<rem>This spell is destroyed when played.</rem>",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\">\\_de un aliado.\n\\---\n{value:a,+}\\_{aura:116,value:a} a tu héroe.\n\\---\n<rem>Este hechizo se destruye cuando se usa.</rem>",
+    "de": "Fügt Gegnern in der Nähe\\_<sprite name=\"cell_around\"> eines Verbündeten {magicalDamage:dmg} zu.\n\\---\n{value:a,+}\\_{aura:116,value:a} für deinen Helden.\n\\---\n<rem>Dieser Zauber wird zerstört, wenn er ausgespielt wird.</rem>",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de um aliado.\n\\---\n{value:a,+}\\_{aura:116,value:a} ao seu herói.\n\\---\n<rem>Este feitiço é destruído quando é lançado.</rem>"
+  }
+}

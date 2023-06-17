@@ -1,0 +1,181 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158400
+  },
+  "m_Name": "50",
+  "m_id": 50,
+  "m_displayName": "MONSTRE CHAFER - CLAN PIKAROSS - Blockmort Pikaross",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -638434349,
+    "b": 576045572,
+    "c": 1736090696,
+    "d": 1589819744,
+    "e": 556686796
+  },
+  "m_i18nChampionNameId": {
+    "a": -638434349,
+    "b": 576045572,
+    "c": 1736090696,
+    "d": 1589819744,
+    "e": -1501112679
+  },
+  "m_i18nDescriptionId": {
+    "a": -638434349,
+    "b": 576045572,
+    "c": 1736090696,
+    "d": 1589819744,
+    "e": -168889529
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 50,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 237,
+      "skinIds": [
+        237
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 16
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 17
+          },
+          "buffs": [
+            49
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cmin",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cmax",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1942
+        },
+        {
+          "type": 19,
+          "id": 311
+        }
+      ]
+    },
+    "families": [
+      40
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 86
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 12
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 1,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Blockmort Pikaross] other[Blockmorts Pikaross]}",
+    "en": "{0, plural, one[Pikaross Blockmort] other[Pikaross Blockmorts]}",
+    "es": "{0, plural, one[Blockmorto Pikaross] other[Blockmortos Pikaross]}",
+    "de": "{0, plural, one[Pikaross-Blockmortus] other[Pikaross-Blockmorten]}",
+    "pt": "{0, plural, one[Blockmort Pikaross] other[Blockmorts Pikaross]}"
+  },
+  "description": {
+    "fr": "<rem>{NamedEffect:311}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} ou {BLvalue:bl,+} aux alliés autour <sprite name=\"cell_around\">, puis <b>CHARGE</b> un adversaire aligné de {value:cmin} à {cell:cmax} et lui inflige son {%at}.",
+    "en": "<rem>{NamedEffect:311}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} or {BLvalue:bl,+} to surrounding <sprite name=\"cell_around\"> allies then <b>CHARGES</b> an in-line opponent {value:cmin} to {cell:cmax} away and inflicts {%at} on the opponent.",
+    "es": "<rem>{NamedEffect:311}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} o {BLvalue:bl,+} a los aliados de alrededor <sprite name=\"cell_around\"> y <b>CARGA</b> contra un adversario alineado de {value:cmin} a {cell:cmax} y le inflige su {%at}.",
+    "de": "<rem>{NamedEffect:311}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} oder {BLvalue:bl,+} für die Verbündeten in der Nähe\\_<sprite name=\"cell_around\">. <b>STÜRMT</b> dann auf einen Gegner in derselben Reihe in einer Entfernung von {value:cmin} bis {cell:cmax} zu und fügt ihm seinen {%at} als Schaden zu.",
+    "pt": "<rem>{NamedEffect:311}</rem>\n\\---\n{%FightTurnStarted}{ARvalue:ar,+} ou {BLvalue:bl,+} aos aliados em\\_volta\\_<sprite name=\"cell_around\">, depois <b>INVESTE</b> contra um adversário alinhado de {value:cmin} a {cell:cmax} e inflige seu {%at}."
+  },
+  "championName": {
+    "fr": "Krouktos",
+    "en": "Scabbone",
+    "es": "Kostrueso",
+    "de": "Kruktos",
+    "pt": "Kostrosso"
+  }
+}

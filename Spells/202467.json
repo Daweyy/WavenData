@@ -1,0 +1,222 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "202467",
+  "m_id": 202467,
+  "m_displayName": "IOP - CLASSE - EAU - Onde de Choc",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1508548321,
+    "b": -1322752524,
+    "c": 251768552,
+    "d": -1989042048,
+    "e": 1018557152
+  },
+  "m_i18nDescriptionId": {
+    "a": 1508548321,
+    "b": -1322752524,
+    "c": 251768552,
+    "d": -1989042048,
+    "e": 1062291594
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d69519e7a166c26468fd2ffdc6eedbe4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 202467,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      414369,
+      902,
+      137
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      0
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 8
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -1
+                },
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": "",
+                  "from": {
+                    "type": "AllCharactersSelector"
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "AroundSquaredTargetFilter",
+                      "targetsToCompare": {
+                        "type": "CasterHeroSelector"
+                      },
+                      "distance": {
+                        "type": "EqualsTo",
+                        "dynamicValue": {
+                          "type": "ConstIntegerValue",
+                          "referenceId": "",
+                          "value": 1
+                        }
+                      }
+                    },
+                    {
+                      "type": "TeamFilter",
+                      "isIdentical": false,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0451fd15904914b49946b5e3d6c2b697",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 37
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 723,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 455
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Onde de Choc",
+    "en": "Shockwave",
+    "es": "Onda de Choque",
+    "de": "Schockwelle",
+    "pt": "Onda de Choque"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: {PAvalue:pa} au coût de ce sort.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {PAvalue:pa} to the cost of this spell.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {PAvalue:pa} al coste de este hechizo.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {PAvalue:pa} auf die Kosten dieses Zaubers.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {PAvalue:pa} ao custo deste feitiço."
+  }
+}

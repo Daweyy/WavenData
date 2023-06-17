@@ -1,0 +1,219 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "815",
+  "m_id": 815,
+  "m_displayName": "DECK - COMMON - EARTH - Zorine",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -479808668,
+    "b": -446010556,
+    "c": -1243521973,
+    "d": 2054851433,
+    "e": 460644383
+  },
+  "m_i18nDescriptionId": {
+    "a": -479808668,
+    "b": -446010556,
+    "c": -1243521973,
+    "d": 2054851433,
+    "e": 226731186
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 815,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 172,
+      "skinIds": [
+        172
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 66
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      725494,
+      726096,
+      726184,
+      726232,
+      726256,
+      726630
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          815
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Zorine",
+    "en": "Zorine",
+    "es": "Zorina",
+    "de": "Zorine",
+    "pt": "Zorine"
+  },
+  "description": {
+    "fr": "{%Attack} {value:p,percent,+} de <b>DÉGÂTS</b> si la cible possède au moins {value:a}\\_{%KEYWORD.AURA.NAME,value:a}.",
+    "en": "{%Attack} {value:p,percent,+} <b>DAMAGE</b> if the target has at least {value:a}\\_{%KEYWORD.AURA.NAME,value:a}.",
+    "es": "{%Attack} {value:p,percent,+} de <b>DAÑOS</b> si el objetivo tiene al menos un {value:a}\\_{%KEYWORD.AURA.NAME,value:a}.",
+    "de": "{%Attack}{value:p,percent,+} <b>SCHADEN</b>, falls das Ziel mindestens {value:a}\\_{%KEYWORD.AURA.NAME,value:a} besitzt.",
+    "pt": "{%Attack} {value:p,percent,+} de <b>DANOS</b> se o alvo possuir {value:a}\\_{%KEYWORD.AURA.NAME,value:a} ou mais."
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "851",
+  "m_id": 851,
+  "m_displayName": "OSAMODAS - CLASSE - ETHER - Fouet",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -362781461,
+    "b": -2128169964,
+    "c": 996205146,
+    "d": 1017565982,
+    "e": 1133657500
+  },
+  "m_i18nDescriptionId": {
+    "a": -362781461,
+    "b": -2128169964,
+    "c": 996205146,
+    "d": 1017565982,
+    "e": 1148351209
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 851,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "FloatingCounterCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 6
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 20
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Fouet",
+    "en": "Âmes de Corbacs",
+    "es": "Âmes de Corbacs",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Votre héros et votre <b>BÊTE</b> infligent {value:per,percent} de leur {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> d'eux par {%KEYWORD.AURA.NAME} que possède votre héros.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "102483",
+  "m_id": 102483,
+  "m_displayName": "CRA - ARME - BUNELAME - EAU - Ondulation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2061653535,
+    "b": -1727692716,
+    "c": -1092148165,
+    "d": 1890032022,
+    "e": -723727151
+  },
+  "m_i18nDescriptionId": {
+    "a": 2061653535,
+    "b": -1727692716,
+    "c": -1092148165,
+    "d": 1890032022,
+    "e": 558302186
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b4f25c34225beb44d9ede503c8134e4e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 102483,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      93636,
+      451437,
+      327
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 477,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5a3a69b18448e7b4e9180054eafcfb34",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 257,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ondulation",
+    "en": "Undulation",
+    "es": "Ondulación",
+    "de": "Wellenlinie",
+    "pt": "Ondulação"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} si vous avez {SPELLCOUNTvalue:s} ou moins en main.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} if you have {SPELLCOUNTvalue:s} or less in hand.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} si tienes {SPELLCOUNTvalue:s} o menos en mano.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+}, wenn du höchstens {SPELLCOUNTvalue:s} Zauber auf der Hand hast.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:pa,+} se você tiver {SPELLCOUNTvalue:s} ou menos na mão."
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "620",
+  "m_id": 620,
+  "m_displayName": "SRAM - Cisaille Orishi",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -583977120,
+    "b": -1289252076,
+    "c": 1170335064,
+    "d": -1622389493,
+    "e": 599563074
+  },
+  "m_i18nDescriptionId": {
+    "a": -583977120,
+    "b": -1289252076,
+    "c": 1170335064,
+    "d": -1622389493,
+    "e": 161073185
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": -583977120,
+    "b": -1289252076,
+    "c": 1170335064,
+    "d": -1622389493,
+    "e": 2099405331
+  },
+  "m_i18nSimpleNameId": {
+    "a": -583977120,
+    "b": -1289252076,
+    "c": 1170335064,
+    "d": -1622389493,
+    "e": -564701491
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": -583977120,
+    "b": -1289252076,
+    "c": 1170335064,
+    "d": -1622389493,
+    "e": -1238623460
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "cd1d951f59c175043b41f0b6ed017ab6"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 620,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 4860,
+      "skinIds": [
+        4899,
+        3566,
+        9448,
+        2656,
+        9593,
+        4860
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "s",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 100
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 327
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAP",
+        {
+          "type": 19,
+          "id": 2
+        }
+      ]
+    },
+    "families": [
+      6
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 398
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      767217,
+      767582,
+      767685,
+      260
+    ],
+    "difficultyHint": 3,
+    "defaultSkinIdMale": 4860,
+    "defaultSkinIdFemale": 4899,
+    "god": 6,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      579,
+      237,
+      19485,
+      240506
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      371,
+      678,
+      172,
+      469,
+      820,
+      730,
+      194944,
+      644,
+      190689
+    ]
+  },
+  "name": {
+    "fr": "Cisaille Orishi",
+    "en": "Orishi Shears",
+    "es": "Cizalla Orishi",
+    "de": "Scheren-Schleifa",
+    "pt": "Tesoura Orishi"
+  },
+  "description": {
+    "fr": "Lorsqu'un adversaire déclenche un de vos {NamedEffect:2,plural:other}\\_: Lui inflige {value:s, percent} de l'{%AT} de votre héros.",
+    "en": "When an opponent triggers one of your {NamedEffect:2,plural:other}: Inflicts {value:s, percent} of your hero's {%AT} on them.",
+    "es": "Cuando un adversario activa una de tus {NamedEffect:2,plural:other}: Le inflige un {value:s, percent} del {%AT} de tu héroe.",
+    "de": "Wenn ein Gegner eine deiner {NamedEffect:2,plural:other} auslöst: Verursacht bei ihm {value:s, percent} des {%AT} deines Helden als Schaden.",
+    "pt": "Quando um adversário aciona um de seus {NamedEffect:2,plural:other}: Inflige {value:s, percent} do {%AT} do herói ao adversário."
+  },
+  "gameplayDescription": {
+    "fr": "{NamedEffect:2}\\_: Posez vos pièges côte à côte puis poussez votre adversaire vers son trépas\\_!\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",
+    "en": "{NamedEffect:2,plural:other}: Place traps side by side and then push your opponent to their death!\n\\---\n<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!",
+    "es": "{NamedEffect:2}: Coloca tus trampas de forma contigua y empuja a tu adversario a su fin.\n\\---\n<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!",
+    "de": "{NamedEffect:2}: Platziere deine Fallen Seite an Seite und schiebe deinen Gegner dann in seinen Tod!\n\\---\n<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu!",
+    "pt": "{NamedEffect:2}: Coloque as suas armadilhas lado a lado e empurre o adversário para a morte!\n\\---\n<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameSram}",
+    "en": "{%OnboardingSimpleNameSram}",
+    "es": "{%OnboardingSimpleNameSram}",
+    "de": "{%OnboardingSimpleNameSram}",
+    "pt": "{%OnboardingSimpleNameSram}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionSram}",
+    "en": "{%OnboardingSimpleDescriptionSram}",
+    "es": "{%OnboardingSimpleDescriptionSram}",
+    "de": "{%OnboardingSimpleDescriptionSram}",
+    "pt": "{%OnboardingSimpleDescriptionSram}"
+  }
+}

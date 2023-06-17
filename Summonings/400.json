@@ -1,0 +1,164 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158400
+  },
+  "m_Name": "400",
+  "m_id": 400,
+  "m_displayName": "MONSTRE RAT - Rarpie",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -457461324,
+    "b": 1066558964,
+    "c": 1542552824,
+    "d": 1491532653,
+    "e": 1374083092
+  },
+  "m_i18nChampionNameId": {
+    "a": -457461324,
+    "b": 1066558964,
+    "c": 1542552824,
+    "d": 1491532653,
+    "e": -1654709417
+  },
+  "m_i18nDescriptionId": {
+    "a": -457461324,
+    "b": 1066558964,
+    "c": 1542552824,
+    "d": 1491532653,
+    "e": 1880263368
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 400,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 8398,
+      "skinIds": [
+        8398
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "MultValue",
+          "referenceId": "at",
+          "valuesToMult": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "d",
+              "value": 25
+            },
+            {
+              "type": "EntityCountValue",
+              "referenceId": "",
+              "from": {
+                "type": "AllCharactersSelector"
+              },
+              "entityFilters": [
+                {
+                  "type": "FamilyFilter",
+                  "condition": 1,
+                  "families": [
+                    69
+                  ]
+                },
+                {
+                  "type": "NotEntityFilter",
+                  "filter": {
+                    "type": "EffectHolderFilter"
+                  }
+                },
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "EffectHolderSelector"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      69
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 155
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 5,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Rarpie] other[Rarpies]}",
+    "en": "{0, plural, one[Rarpy] other[Rarpies]}",
+    "es": "{0, plural, one[Rarpía] other[Rarpías]}",
+    "de": "{0, plural, one[Rarpie] other[Rarpien]}",
+    "pt": "{0, plural, one[Rarpia] other[Rarpias]}"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {ATvalue:d,percent,+} pour le tour pour chaque autre {%Family_Rat_Name} en jeu.\n\\---\nLorsqu'elle subit une {%AT} : Un autre {%Family_Rat_Name} <b>CHARGE</b> l'attaquant.",
+    "en": "{%FightTurnStarted} {ATvalue:d,percent,+} for the turn for each other {%Family_Rat_Name} in play.\n\\---\nOn enduring an {%AT}: Another {%Family_Rat_Name} <b>CHARGES</b> the attacker.",
+    "es": "{%FightTurnStarted} {ATvalue:d,percent,+} durante el turno por cada otra {%Family_Rat_Name} en juego.\n\\---\nCuando recibe un {%AT}: Otra {%Family_Rat_Name} <b>CARGA</b> contra el atacante.",
+    "de": "{%FightTurnStarted} {ATvalue:d,percent,+} für die Runde für jede weitere {%Family_Rat_Name} im Spiel.\n\\---\nWenn sie Ziel von einem {%AT} wird: Eine andere {%Family_Rat_Name}<b>GREIFT</b> den Angreifer an.",
+    "pt": "{%FightTurnStarted} {ATvalue:d,percent,+} durante o turno para cada outro {%Family_Rat_Name} no jogo.\n\\---\nQuando ela sofre um {%AT}: Outro {%Family_Rat_Name} <b>INVESTE</b> contra o atacante."
+  },
+  "championName": {
+    "fr": "Rarpie",
+    "en": "Rarpy",
+    "es": "Rarpía",
+    "de": "Rarpie",
+    "pt": "Rarpia"
+  }
+}

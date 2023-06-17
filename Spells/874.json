@@ -1,0 +1,176 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "874",
+  "m_id": 874,
+  "m_displayName": "COMPAGNON - PERCIMOL - Frappe de Percimol",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -481596354,
+    "b": -643929372,
+    "c": 1046322025,
+    "d": -1483809820,
+    "e": 1475577593
+  },
+  "m_i18nDescriptionId": {
+    "a": -481596354,
+    "b": -643929372,
+    "c": 1046322025,
+    "d": -1483809820,
+    "e": 1401834250
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "27c81f63adefbb44b926da3bd3f449de"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "227cc8ba6dc27d64697276347b56835f"
+      },
+      {
+        "assetGuid": "3e1fa368cf7973d469fb74ddda6ed119"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 874,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterSpecificCompanionSelector",
+                "companion": 34
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Frappe de Percimol",
+    "en": "Percimol's Strike",
+    "es": "Golpe de Perceblando",
+    "de": "Persimols Hieb",
+    "pt": "Golpe de Percimol"
+  },
+  "description": {
+    "fr": "Téléporte {Companion:34!} jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "en": "Teleports {Companion:34!} up to {cell:c}.\n\\---\nDoes {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
+    "es": "Teletransporta a {Companion:34!} hasta a {cell:c}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
+    "de": "Teleportiert {Companion:34!} bis zu {cell:c}.\n\\---\nFügt den an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalDamage:dmg} zu.",
+    "pt": "Teletransporta {Companion:34!} a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "113433",
+  "m_id": 113433,
+  "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - EAU - Estoc Givre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1295064472,
+    "b": -2013640172,
+    "c": 1009316874,
+    "d": 896508372,
+    "e": -355013606
+  },
+  "m_i18nDescriptionId": {
+    "a": 1295064472,
+    "b": -2013640172,
+    "c": 1009316874,
+    "d": 896508372,
+    "e": -131314098
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "58a9c771c0e592d4ab43d2120726683d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 113433,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      196003,
+      221548,
+      416848
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 534,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 8
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e647b7bac5ad08148ae9295df08274bb",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 50
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 426,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "PAReserve",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Estoc Givré",
+    "en": "Frozen Thrust",
+    "es": "Estoque Helado",
+    "de": "Vereister Stoßdegen",
+    "pt": "Estocada Congelada"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v si la cible est <b>MOUILLÉE<b>\\_<sprite name=\"wet\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v if the target is <b>WET<b>\\_<sprite name=\"wet\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v si el objetivo está <b>MOJADO<b>\\_<sprite name=\"wet\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v, wenn das Ziel <b>DURCHNÄSST<b>\\_<sprite name=\"wet\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v se o alvo estiver <b>MOLHADO<b>\\_<sprite name=\"wet\">."
+  }
+}

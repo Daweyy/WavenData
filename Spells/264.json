@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "264",
+  "m_id": 264,
+  "m_displayName": "MONSTRE COCHON - Petit Pet",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -114054045,
+    "b": 2120144084,
+    "c": -1074777976,
+    "d": 587741925,
+    "e": -1124440891
+  },
+  "m_i18nDescriptionId": {
+    "a": -114054045,
+    "b": 2120144084,
+    "c": -1074777976,
+    "d": 587741925,
+    "e": 378932531
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9aee4e59a82951d40b4dfbf5143d7338"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 264,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "61ef39d362450d847843c0baf22c0931",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Petit Pet",
+    "en": "Little Toot",
+    "es": "Pedete",
+    "de": "Kleiner Furz",
+    "pt": "Pequeno Pet"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> d'un <b>Cochon</b> allié.\n\\---\n{#PUSH} les adversaires adjacents\\_<sprite name=\"cell_cross\"> de {cell:c}.",
+    "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> an allied <b>Pig</b>.\n\\---\n{#PUSH} adjacent\\_<sprite name=\"cell_cross\"> opponents {cell:c}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de un <b>cerdo</b> aliado.\n\\---\n{#PUSH} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> {cell:c}.",
+    "de": "Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> eines verbündeten <b>Schweinemonsters</b> {magicalDamage:dmg}.\n\\---\n{#PUSH} die angrenzenden\\_<sprite name=\"cell_cross\"> Gegner um {cell:c} zurück.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de um <b>Porco</b> aliado.\n\\---\n{#PUSH} os adversários adjacentes\\_<sprite name=\"cell_cross\"> por {cell:c}."
+  }
+}

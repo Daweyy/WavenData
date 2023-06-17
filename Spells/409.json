@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "409",
+  "m_id": 409,
+  "m_displayName": "COMPAGNON - REMINGTON - Bombe Smisse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -170577700,
+    "b": -1762611388,
+    "c": -926346406,
+    "d": 2045574635,
+    "e": 1938819698
+  },
+  "m_i18nDescriptionId": {
+    "a": -170577700,
+    "b": -1762611388,
+    "c": -926346406,
+    "d": 2045574635,
+    "e": -1154968870
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "61586ece2c0d14f4499b279bbeed5c05"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 409,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EXPLOSION",
+        {
+          "type": 7,
+          "id": 1486
+        },
+        "OBJECTMECHANISM"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bombe Smisse",
+    "en": "Smisse Bomb",
+    "es": "Bomba Smis",
+    "de": "Smisse-Bombe",
+    "pt": "Bomba Smif"
+  },
+  "description": {
+    "fr": "<rem>{#OBJECTMECHANISM}</rem>\n\\---\nConstruit une {ObjectMechanism:1486} sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.",
+    "en": "<rem>{#OBJECTMECHANISM}</rem>\n\\---\nBuild one {ObjectMechanism:1486} on a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.",
+    "es": "<rem>{#OBJECTMECHANISM}</rem>\n\\---\nConstruye una {ObjectMechanism:1486} en una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.",
+    "de": "<rem>{#OBJECTMECHANISM}</rem>\n\\---\nErrichtet eine\\_{ObjectMechanism:1486} auf einem an einem Verbündeten angrenzenden\\_<sprite name=\"cell_cross\"> Feld.",
+    "pt": "<rem>{#OBJECTMECHANISM}</rem>\n\\---\nPosiciona uma {ObjectMechanism:1486} sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado."
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "813",
+  "m_id": 813,
+  "m_displayName": "MONSTRE BWORK - Explosion de Magma",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1461939973,
+    "b": -290969836,
+    "c": -1163543397,
+    "d": -1177476640,
+    "e": 1754761533
+  },
+  "m_i18nDescriptionId": {
+    "a": -1461939973,
+    "b": -290969836,
+    "c": -1163543397,
+    "d": -1177476640,
+    "e": -1301929439
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "33bf371673b45344fac284a2d672c6c1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 813,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        49
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCoordsSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "003650caebdbc654aa04b4416ce2a80e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAP",
+        {
+          "type": 6,
+          "id": 278
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Explosion de Magma",
+    "en": "Magma Explosion",
+    "es": "Explosión de Magma",
+    "de": "Magma-Explosion",
+    "pt": "Explosão de Magma"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} dans la zone <sprite name=\"cell_cross\"> ciblée.\n\\---\nPose une {FloorMechanism:278} sur les cases libres.",
+    "en": "Does {magicalDamage:dmg} in the targeted <sprite name=\"cell_cross\"> zone.\n\\---\nPlaces one {FloorMechanism:278} on the free cells.",
+    "es": "Inflige {magicalDamage:dmg} en la zona <sprite name=\"cell_cross\"> objetivo.\n\\---\nConstruye un {FloorMechanism:278} en las casillas libres.",
+    "de": "Verursacht {magicalDamage:dmg} im Wirkungsbereich\\_<sprite name=\"cell_cross\">.\n\\---\nPlatziert eine\\_{FloorMechanism:278} auf den freien Feldern.",
+    "pt": "Inflige {magicalDamage:dmg} na zona\\_<sprite name=\"cell_cross\"> visada.\n\\---\nPosiciona uma {FloorMechanism:278} sobre as células livres."
+  }
+}

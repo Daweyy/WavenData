@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "55",
+  "m_id": 55,
+  "m_displayName": "MONSTRE TAURE - Cocon Familial",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1177417748,
+    "b": -1803886540,
+    "c": 575422184,
+    "d": 142953989,
+    "e": 998389031
+  },
+  "m_i18nDescriptionId": {
+    "a": 1177417748,
+    "b": -1803886540,
+    "c": 575422184,
+    "d": 142953989,
+    "e": -1168427884
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0cd49a3ec18dd044d80110b1996ac81f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 55,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        56
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c376c9b6af101be499c9128549475527",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            48,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Cocon Familial",
+    "en": "Family Cocoon",
+    "es": "Nido Familiar",
+    "de": "Familienbande",
+    "pt": "Casulo Familiar"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} aux <b>Taures</b> alliés.",
+    "en": "{ARvalue:ar,+} to allied <b>Taurs</b>.",
+    "es": "{ARvalue:ar,+} a los <b>toros</b> aliados.",
+    "de": "{ARvalue:ar,+} für die verbündeten <b>Tauren</b>.",
+    "pt": "{ARvalue:ar,+} aos <b>Tauros</b> aliados."
+  }
+}

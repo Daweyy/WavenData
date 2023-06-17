@@ -1,0 +1,206 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "516",
+  "m_id": 516,
+  "m_displayName": "QUETE - TAURE - Fran Kassel",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1480754558,
+    "b": -1963976636,
+    "c": -231559318,
+    "d": -283414421,
+    "e": 736042364
+  },
+  "m_i18nDescriptionId": {
+    "a": -1480754558,
+    "b": -1963976636,
+    "c": -231559318,
+    "d": -283414421,
+    "e": 1541129260
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 516,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3258,
+      "skinIds": [
+        3258
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 1
+        },
+        {
+          "type": 25,
+          "id": 958
+        }
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 120
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 15
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          516
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Fran Kassel",
+    "en": "Fran Kassel",
+    "es": "Fran Kassel",
+    "de": "Fran Kassel",
+    "pt": "Fran Kassel"
+  },
+  "description": {
+    "fr": "{%Appearance} Ajoute le sort {Spell:958} à votre main.\n\\---\nLorsqu'un adversaire meurt\\_: {ATvalue:pow,percent,+} jusqu'à sa prochaine attaque.",
+    "en": "{%Appearance} Adds the {Spell:958} spell to your hand.\n\\---\nWhen an opponent dies: {ATvalue:pow,percent,+} until his next attack.",
+    "es": "{%Appearance} Añade el hechizo {Spell:958} a tu mano.\n\\---\nCuando un adversario muere: {ATvalue:pow,percent,+} hasta su próximo ataque.",
+    "de": "{%Appearance} Fügt deiner Hand den Zauber {Spell:958} hinzu.\n\\---\nWenn ein Gegner stirbt: {ATvalue:pow,percent,+} bis zu seinem nächsten Angriff.",
+    "pt": "{%Appearance} Adiciona o feitiço {Spell:958} à sua mão.\n\\---\nQuando um adversário morre: {ATvalue:pow,percent,+} até seu próximo ataque."
+  }
+}

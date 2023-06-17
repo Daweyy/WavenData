@@ -1,0 +1,189 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "145",
+  "m_id": 145,
+  "m_displayName": "COMPAGNON - GOULTARD - Saut de Goultard",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -301901505,
+    "b": -1901244476,
+    "c": 20214666,
+    "d": -1956911724,
+    "e": 424490281
+  },
+  "m_i18nDescriptionId": {
+    "a": -301901505,
+    "b": -1901244476,
+    "c": 20214666,
+    "d": -1956911724,
+    "e": 740434235
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "6a3ba1ca8f5efec44b23d13c0d31cec6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "f2dcb68b6130011419ba521ce5b889dd"
+      },
+      {
+        "assetGuid": "0aef4c3860d6c72459bcd52f3414aab8"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 145,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NotCondition",
+        "condition": {
+          "type": "PropertyFlagsCondition",
+          "selector": {
+            "type": "CasterSpecificCompanionSelector",
+            "companion": 144
+          },
+          "flags": [
+            4
+          ]
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllCompanionsSelector"
+              },
+              "filters": [
+                {
+                  "type": "CompanionDefinitionFilter",
+                  "condition": 1,
+                  "companions": [
+                    144
+                  ]
+                },
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.504.ex"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EXPLOSION"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Saut de Goultard",
+    "en": "Goultard's Leap",
+    "es": "Salto de Gúltar",
+    "de": "Goultards Sprung",
+    "pt": "Salto de Gultar"
+  },
+  "description": {
+    "fr": "Téléporte {Companion:144!} jusqu'à {cell:c}.\n\\---\nDéclenche {explosion:ParameterizedEffectExecution.504.ex} autour de lui.",
+    "en": "Teleports {Companion:144!} up to {cell:c}.\n\\---\nTriggers {explosion:ParameterizedEffectExecution.504.ex} around him.",
+    "es": "Teletransporta a {Companion:144!} hasta {cell:c}.\n\\---\nActiva {explosion:ParameterizedEffectExecution.504.ex} a su alrededor.",
+    "de": "Teleportiert {Companion:144!} bis zu {cell:c}.\n\\---\nLöst {explosion:ParameterizedEffectExecution.504.ex} in der Nähe aus.",
+    "pt": "Teletransporta {Companion:144!} a até {cell:c}.\n\\---\nAciona {explosion:ParameterizedEffectExecution.504.ex} em\\_volta dele."
+  }
+}

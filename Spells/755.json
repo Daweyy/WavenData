@@ -1,0 +1,217 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "755",
+  "m_id": 755,
+  "m_displayName": "IOP - CLASSE - FEU - Fulgur",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2058610851,
+    "b": -1922802700,
+    "c": 1686589675,
+    "d": -985511383,
+    "e": 1883306379
+  },
+  "m_i18nDescriptionId": {
+    "a": 2058610851,
+    "b": -1922802700,
+    "c": 1686589675,
+    "d": -985511383,
+    "e": 773518848
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "814972c082af43f4d901591f287c258d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 755,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      207260,
+      213576,
+      414569
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      0
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6c691a4ce9a90554f9342a82be0938e5",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 855,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentRipost",
+          "value": 5
+        },
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "dmgd2",
+          "percentage": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 30
+          },
+          "from": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "",
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 14
+            },
+            "factor": {
+              "type": "ReferenceScalingFactor",
+              "reference": 12
+            },
+            "buffs": [
+              25,
+              51
+            ],
+            "skillBuffs": [
+              {
+                "type": "SkillBuff",
+                "skillId": 855,
+                "percentBuff": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 30
+                }
+              }
+            ],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "RESPONSE",
+        {
+          "type": 19,
+          "id": 455
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Fulgur",
+    "en": "Thunderbolt",
+    "es": "Fulgur",
+    "de": "Fulgur",
+    "pt": "Fulgor"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: {value:percentRipost,percent,+} de {#response} à votre héros jusqu'à son prochain tour.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {value:percentRipost,percent,+} {#response} to your hero until their next turn.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {value:percentRipost,percent,+} de {#response} a tu héroe hasta su próximo turno.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {value:percentRipost,percent,+} {#response} für deinen Helden bis zu seiner nächsten Runde.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {value:percentRipost,percent,+} de {#response} ao seu herói até seu próximo turno."
+  }
+}

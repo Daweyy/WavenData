@@ -1,0 +1,220 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "72",
+  "m_id": 72,
+  "m_displayName": "DECK - KROSMIQUE - EAU - Alibert",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 447095582,
+    "b": 952846324,
+    "c": 1354066282,
+    "d": 1457394479,
+    "e": 1251528335
+  },
+  "m_i18nDescriptionId": {
+    "a": 447095582,
+    "b": 952846324,
+    "c": 1354066282,
+    "d": 1457394479,
+    "e": -1130870227
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 72,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 566,
+      "skinIds": [
+        566
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        {
+          "type": 25,
+          "id": 209
+        }
+      ]
+    },
+    "families": [
+      5,
+      81
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 104
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 23
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 24
+    },
+    "spells": [
+      {
+        "type": "SpellOnSpawnWithDestination",
+        "spell": 209,
+        "destination": 1
+      }
+    ],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      310017,
+      743433,
+      445,
+      255370,
+      891,
+      187
+    ],
+    "rarity": 2,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 407,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          72
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Alibert",
+    "en": "Alibert",
+    "es": "Álibert",
+    "de": "Alibert",
+    "pt": "Aliberto"
+  },
+  "description": {
+    "fr": "{%appearance} Ajoute le sort {Spell:209} à votre main.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "en": "{%appearance} Adds the {Spell:209} spell to your hand.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "es": "{%appearance} Añade el hechizo {Spell:209} a tu mano.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "de": "{%appearance} Fügt deiner Hand den Zauber {Spell:209} hinzu.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "pt": "{%appearance} Adiciona o feitiço {Spell:209} à sua mão.\\v<family>{%Family_BrotherHood_Name}</family>"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "238213",
+  "m_id": 238213,
+  "m_displayName": "IOP - ARME - BOUVALOIR OROK - ETHER - EPHEMERE - Charge Fantome",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2138301994,
+    "b": -1540056172,
+    "c": 1014348409,
+    "d": -405709693,
+    "e": -368276962
+  },
+  "m_i18nDescriptionId": {
+    "a": -2138301994,
+    "b": -1540056172,
+    "c": 1014348409,
+    "d": -405709693,
+    "e": -847107624
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5489d2cd06224f5448ee8a53d9a71445"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 238213,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": true,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": 497,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 5
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6c227bb47bd70ab41a6f9440dce85b6d",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Charge Fantome",
+    "en": "Ghostly Charge",
+    "es": "Carga Fantasma",
+    "de": "Phantom-Ansturm",
+    "pt": "Investida Fantasma"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige son {%AT}.\n\\---\n{#Ephemeral}",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%AT} on them.\n\\---\n{#Ephemeral}",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige su {%AT}.\n\\---\n{#Ephemeral}",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis zu {cell:c} in derselben Reihe und fügt ihm seinen {%AT} als Schaden zu.\n\\---\n{#Ephemeral}",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e inflige seu {%AT}.\n\\---\n{#Ephemeral}"
+  }
+}

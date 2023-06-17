@@ -1,0 +1,164 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "39161",
+  "m_id": 39161,
+  "m_displayName": "MONSTRE BOUFTOU - Piétinement",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -446730048,
+    "b": 410350580,
+    "c": -1929165240,
+    "d": 1149526847,
+    "e": 605832659
+  },
+  "m_i18nDescriptionId": {
+    "a": -446730048,
+    "b": 410350580,
+    "c": -1929165240,
+    "d": 1149526847,
+    "e": -1489808013
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2823c696d80f6e348b97b330493da864"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 39161,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e777ccec86b1b5040ac28f8f7708c50f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "HERD"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piétinement",
+    "en": "Trampling",
+    "es": "Pisoteo",
+    "de": "Niedertrampeln",
+    "pt": "Espezinhamento"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}\\_: {magicalDamage:dmg2,+}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#HERD}: {magicalDamage:dmg2,+}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}: {magicalDamage:dmg2,+}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#HERD}: {magicalDamage:dmg2,+}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#HERD}: {magicalDamage:dmg2,+}."
+  }
+}

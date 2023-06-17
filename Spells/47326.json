@@ -1,0 +1,131 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "47326",
+  "m_id": 47326,
+  "m_displayName": "MONSTRE CHUCHOTEUR - Posture Offensive",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 60902819,
+    "b": -340189164,
+    "c": 544288697,
+    "d": -779126118,
+    "e": -589570536
+  },
+  "m_i18nDescriptionId": {
+    "a": 60902819,
+    "b": -340189164,
+    "c": 544288697,
+    "d": -779126118,
+    "e": 764443383
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0fa817f7a4d0e68419cfa8ea50cc7c0a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 47326,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        52
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              21
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "1a082852785fcfc408e2a2f10c517f32",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 51
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Posture Offensive",
+    "en": "Offensive Stance",
+    "es": "Postura Ofensiva",
+    "de": "Verteidigungshaltung",
+    "pt": "Formação Ofensiva"
+  },
+  "description": {
+    "fr": "Un <b>Chuchoteur</b> allié passe en\\_{PropertyEffect:51}.",
+    "en": "An allied <b>Whisperer</b> adopts\\_{PropertyEffect:51}.",
+    "es": "Un <b>susurrador</b> aliado se pone en\\_{PropertyEffect:51}.",
+    "de": "Ein verbündeter <b>Flüsterer</b> nimmt {PropertyEffect:51} ein.",
+    "pt": "Um <b>Sussurrador</b> aliado passa para\\_{PropertyEffect:51}."
+  }
+}

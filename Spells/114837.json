@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "114837",
+  "m_id": 114837,
+  "m_displayName": "IOP - ARME - BOUVALOIR OROK - EAU - Remous Favorable",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1638013854,
+    "b": -1288643596,
+    "c": -1738801269,
+    "d": 1479602110,
+    "e": 1513624237
+  },
+  "m_i18nDescriptionId": {
+    "a": 1638013854,
+    "b": -1288643596,
+    "c": -1738801269,
+    "d": 1479602110,
+    "e": 999430924
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "330347e466d0736418418c730c8f7606"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 114837,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      194243,
+      233,
+      223012
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 497,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ef4335b7d175a6b44a702933a78388ed",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 19
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "reduc",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": -1
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 56983
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": -1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Remous Favorable",
+    "en": "Favorable Eddy",
+    "es": "Remolino Favorable",
+    "de": "Günstiger Wirbel",
+    "pt": "Maré Favorável"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:reduc} au coût de votre prochain sort de <b>CHARGE</b>.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:reduc} to the cost of your next <b>CHARGE</b> spell.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:reduc} al coste de tu próximo hechizo de <b>CARGA</b>.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:reduc} auf Kosten deines nächsten <b>ANSTURMZAUBERS</b>.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:reduc} ao custo do seu próximo feitiço de <b>INVESTIDA</b>."
+  }
+}

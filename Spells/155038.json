@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "155038",
+  "m_id": 155038,
+  "m_displayName": "BONTA - SOLDATS - Deplacement Strategique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2135149241,
+    "b": 1251289652,
+    "c": -1306810136,
+    "d": 948617181,
+    "e": -1478117133
+  },
+  "m_i18nDescriptionId": {
+    "a": -2135149241,
+    "b": 1251289652,
+    "c": -1306810136,
+    "d": 948617181,
+    "e": 390516286
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e0192679f5ea58b47a25cda8edda2f8f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "946c8c052ba975145afdb538d8f3e1d4"
+      },
+      {
+        "assetGuid": "f834c6a134f788b4cac69b64251d392a"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 155038,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 1,
+            "carac": 1
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "EntitiesWithHighestLowestCaracFilter",
+                  "superlative": 0,
+                  "carac": 1
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "",
+        "originTarget": {
+          "type": "CenterMapCoordSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Déplacement Stratégique",
+    "en": "Strategic Move",
+    "es": "Desplazamiento Estratégico",
+    "de": "Strategische Bewegung",
+    "pt": "Deslocamento Estratégico"
+  },
+  "description": {
+    "fr": "Téléporte l'allié ayant le plus de {%PV} sur une case adjacente\\_<sprite name=\"cell_cross\"> à l'adversaire ayant le moins de {%PV}.",
+    "en": "Teleports the ally with the most {%PV} to a cell adjacent\\_<sprite name=\"cell_cross\"> to the opponent with the least {%PV}.",
+    "es": "Teletransporta al aliado que tenga más {%PV} a una casilla adyacente\\_<sprite name=\"cell_cross\"> al adversario que tenga menos {%PV}.",
+    "de": "Teleportiert den Verbündeten mit den meisten {%PV} auf ein angrenzendes\\_<sprite name=\"cell_cross\"> Feld des Gegners mit den wenigsten {%PV}.",
+    "pt": "Teletransporta o aliando que tiver mais {%PV} sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> ao adversário que tiver menos {%PV}."
+  }
+}

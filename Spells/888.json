@@ -1,0 +1,231 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "888",
+  "m_id": 888,
+  "m_displayName": "IOP - CLASSE - AIR - Rebond Brutal",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -916409454,
+    "b": -1608657100,
+    "c": -1956317398,
+    "d": -1428326458,
+    "e": 458469554
+  },
+  "m_i18nDescriptionId": {
+    "a": -916409454,
+    "b": -1608657100,
+    "c": -1956317398,
+    "d": -1428326458,
+    "e": -1341367635
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ce2c40f7c709dd24fa62c30fcf6cbadc"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d42b292023e8dde4dae20628ae57c434"
+      },
+      {
+        "assetGuid": "67d45d2c87d7e9f4cb8792fff408f517"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 888,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      743,
+      222663,
+      195
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "tpDistance",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "tpDistance",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 33
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 274,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Rebond Brutal",
+    "en": "Brutal Rebound",
+    "es": "Rebote Brutal",
+    "de": "Starkes Abprallen",
+    "pt": "Ricochete Brutal"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:tpDistance}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires adjacents<sprite name=\"cell_cross\"/> à sa case d'arrivée.",
+    "en": "Teleports your hero up to {cell:tpDistance}.\n\\---\nInflicts {magicalDamage:dmg} on opponents adjacent\\_<sprite name=\"cell_cross\"/> to the destination cell.",
+    "es": "Teletransporta a tu héroe hasta a {cell:tpDistance}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios adyacentes<sprite name=\"cell_cross\"/> a su casilla de llegada.",
+    "de": "Teleportiert deinen Helden bis zu {cell:tpDistance}.\n\\---\nVerursacht bei den an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_cross\"/> Gegnern {magicalDamage:dmg}.",
+    "pt": "Teletransporta seu herói a até {cell:tpDistance}.\n\\---\nInflige {magicalDamage:dmg} aos adversários adjacentes<sprite name=\"cell_cross\"/> à sua célula de chegada."
+  }
+}

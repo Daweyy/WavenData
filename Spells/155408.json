@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "155408",
+  "m_id": 155408,
+  "m_displayName": "MONSTRE NUISIBLE - Corbac - Envolee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1358933310,
+    "b": 1932630708,
+    "c": 115626731,
+    "d": -61341692,
+    "e": -590895500
+  },
+  "m_i18nDescriptionId": {
+    "a": -1358933310,
+    "b": 1932630708,
+    "c": 115626731,
+    "d": -61341692,
+    "e": 885276204
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "418d4e605a3de4f47ac63dd2840caf0a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "b2dc7d4a1987adc409639672ef015715"
+      },
+      {
+        "assetGuid": "f65f2d7e18be33b45a13d73d4521cec4"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 155408,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        62
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "SummoningDefinitionFilter",
+                  "condition": 1,
+                  "summonings": [
+                    827
+                  ]
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "AllCoordsSelector"
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Envolée",
+    "en": "Flying",
+    "es": "Vuelo",
+    "de": "Höhenflug",
+    "pt": "Lançamento"
+  },
+  "description": {
+    "fr": "Téléporte un adversaire adjacent\\_<sprite name=\"cell_cross\"> à un {Summoning:827!} sur une autre case.",
+    "en": "Teleports an opponent adjacent\\_<sprite name=\"cell_cross\"> to a {Summoning:827!} to another cell.",
+    "es": "Teletransporta a un adversario adyacente\\_<sprite name=\"cell_cross\"> a un {Summoning:827!} en otra casilla.",
+    "de": "Teleportiert einen an einen\\_{Summoning:827!} angrenzenden\\_<sprite name=\"cell_cross\"> Gegner auf ein anderes Feld.",
+    "pt": "Teletransporta um adversário adjacente\\_<sprite name=\"cell_cross\"> a um {Summoning:827!} sobre uma outra célula."
+  }
+}

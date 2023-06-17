@@ -1,0 +1,194 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "820",
+  "m_id": 820,
+  "m_displayName": "SRAM - CLASSE - EAU - Piege Lebin",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -593973393,
+    "b": -1071609484,
+    "c": -878616295,
+    "d": -1409151997,
+    "e": 440413245
+  },
+  "m_i18nDescriptionId": {
+    "a": -593973393,
+    "b": -1071609484,
+    "c": -878616295,
+    "d": -1409151997,
+    "e": 1567792056
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "85689b6d39d8b2d49940e351d951cf32"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 820,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      483679,
+      610,
+      483725
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "c",
+                "condition": {
+                  "type": "AndCondition",
+                  "conditions": [
+                    {
+                      "type": "ThisSpellHasSkillCondition",
+                      "skillId": 68669
+                    }
+                  ]
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 68669
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.673.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 673
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège Lébin",
+    "en": "Bath Trap",
+    "es": "Trampa Lynn",
+    "de": "Lebin-Falle",
+    "pt": "Armadilha Banhosa"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:673} ({value:FloorMechanism.673.dmg}) jusqu'à {cell:c} de votre héros.",
+    "en": "Builds one {FloorMechanism:673} ({value:FloorMechanism.673.dmg}) up to {cell:c} from your hero.",
+    "es": "Construye una {FloorMechanism:673} ({value:FloorMechanism.673.dmg}) hasta a {cell:c} de tu héroe.",
+    "de": "Errichtet eine\\_{FloorMechanism:673} ({value:FloorMechanism.673.dmg}) in einer Entfernung von bis zu {cell:c} von deinem Helden.",
+    "pt": "Posiciona uma {FloorMechanism:673} ({value:FloorMechanism.673.dmg}) a até {cell:c} do seu herói."
+  }
+}

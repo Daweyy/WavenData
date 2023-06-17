@@ -1,0 +1,239 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "118",
+  "m_id": 118,
+  "m_displayName": "MONSTRE TAURE - La Famille d'Abord",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1276027776,
+    "b": -1877030140,
+    "c": 1578839835,
+    "d": 1717514873,
+    "e": 1697261310
+  },
+  "m_i18nDescriptionId": {
+    "a": 1276027776,
+    "b": -1877030140,
+    "c": 1578839835,
+    "d": 1717514873,
+    "e": -978025559
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "81d938fd907a07c428b3bfc9cdfc8cba"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 118,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        56
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "DynamicValueEvaluatorCondition",
+        "value": {
+          "type": "EntityCountValue",
+          "referenceId": null,
+          "from": {
+            "type": "AllCharactersSelector"
+          },
+          "entityFilters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "evaluator": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 1,
+            "carac": 1
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 0,
+            "carac": 1
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "99547cc72bc93514e860ea20c0d31e95",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      },
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "1d2623aaeb9713547b71b06624b24273",
+        "originTarget": {
+          "type": "SecondCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 32
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "La Famille d'Abord",
+    "en": "Family First",
+    "es": "La Familia Primero",
+    "de": "Die Familie Zuerst",
+    "pt": "Família Primeiro"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} au <b>Taure</b> allié ayant le plus de {%PV} et soigne de {PVvalue:heal} le <b>Taure</b> allié ayant le moins de {%PV}.",
+    "en": "Does {magicalDamage:dmg} to the allied <b>Taur</b> with the most {%PV} and heals the allied <b>Taur</b> with the least {%PV} {PVvalue:heal}.",
+    "es": "Inflige {magicalDamage:dmg} al <b>toro</b> aliado que tenga más {%PV} y cura {PVvalue:heal} al <b>toro</b> aliado que tenga menos {%PV}.",
+    "de": "Verursacht bei dem verbündeten <b>Taurus</b> mit den meisten {%PV} {magicalDamage:dmg} und heilt den verbündeten <b>Taurus</b> mit den wenigsten {%PV} um {PVvalue:heal}.",
+    "pt": "Inflige {magicalDamage:dmg} ao <b>Tauro</b> aliado que tiver mais {%PV} e cura em {PVvalue:heal} o <b>Tauro</b> aliado que tiver menos {%PV}."
+  }
+}

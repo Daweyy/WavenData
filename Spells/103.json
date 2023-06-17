@@ -1,0 +1,186 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "103",
+  "m_id": 103,
+  "m_displayName": "MONSTRE BOUFTOU - Choc Fiévreux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1921485489,
+    "b": -1779762364,
+    "c": 573222553,
+    "d": 1191714152,
+    "e": 210166926
+  },
+  "m_i18nDescriptionId": {
+    "a": 1921485489,
+    "b": -1779762364,
+    "c": 573222553,
+    "d": 1191714152,
+    "e": 1879379965
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "681893e7673e284438b8028f6480ab33"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 103,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": null,
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 9
+            },
+            {
+              "type": "MultValue",
+              "referenceId": null,
+              "valuesToMult": [
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": "",
+                  "from": {
+                    "type": "AllSummoningsSelector"
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "SummoningDefinitionFilter",
+                      "condition": 1,
+                      "summonings": [
+                        979
+                      ]
+                    },
+                    {
+                      "type": "TeamFilter",
+                      "isIdentical": true,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -1
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b5e553c7980e5e5438de4267dc7587a9",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 35
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Choc Fiévreux",
+    "en": "Feverish Shock",
+    "es": "Choque Febril",
+    "de": "Fieberschock",
+    "pt": "Choque Febril"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} au coût de ce sort par {Summoning:979!} alliée en jeu.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} to the cost of this spell per allied {Summoning:979!} in play.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} al coste de este hechizo por {Summoning:979!} aliado en juego.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} zu den Kosten dieses Zaubers je verbündetem {Summoning:979!} im Spiel.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} ao custo deste feitiço por {Summoning:979!} aliada em jogo."
+  }
+}

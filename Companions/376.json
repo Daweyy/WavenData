@@ -1,0 +1,215 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "376",
+  "m_id": 376,
+  "m_displayName": "DECK - KROSMIQUE - EAU - Comte Harebourg",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 37986692,
+    "b": -1696684460,
+    "c": -1587116952,
+    "d": 1788769695,
+    "e": 1349651830
+  },
+  "m_i18nDescriptionId": {
+    "a": 37986692,
+    "b": -1696684460,
+    "c": -1587116952,
+    "d": 1788769695,
+    "e": -1557107416
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 376,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9112,
+      "skinIds": [
+        9112
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      7,
+      82
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 109
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 19
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 23
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 24
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      308665,
+      689,
+      918,
+      740739,
+      83894,
+      567
+    ],
+    "rarity": 2,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 407,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          376
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Comte Harebourg",
+    "en": "Count Harebourg",
+    "es": "Conde Kontatrás",
+    "de": "Graf Primzahl",
+    "pt": "Conde Traspafrent"
+  },
+  "description": {
+    "fr": "Tant qu'il est en jeu\\_: {PAvalue:pa} au coût de vos sorts {%WATER}.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "en": "While in play: {PAvalue:pa} to the cost of your {%WATER} spells.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "es": "Mientras esté en juego: {PAvalue:pa} al coste de tus hechizos {%WATER}.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "de": "Solange er im Spiel ist: {PAvalue:pa} auf die Kosten deiner {%WATER}-Zauber.\\v<family>{%Family_ForgottenSiblings_Name}</family>",
+    "pt": "Enquanto estiver em jogo: {PAvalue:pa} ao custo dos seus feitiços de {%WATER}.\\v<family>{%Family_ForgottenSiblings_Name}</family>"
+  }
+}

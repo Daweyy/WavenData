@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "166608",
+  "m_id": 166608,
+  "m_displayName": "EQUIPMENT - RING - Le Kamard",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -631642721,
+    "b": -1150139964,
+    "c": -1286595334,
+    "d": 916040646,
+    "e": -1813188662
+  },
+  "m_i18nDescriptionId": {
+    "a": -631642721,
+    "b": -1150139964,
+    "c": -1286595334,
+    "d": 916040646,
+    "e": 513068924
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9b8020ece55a4d34fbbad99021194296"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 166608,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 4,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "UniqueForCasterTeamCondition",
+      "specificEntity": {
+        "type": "SummoningDefinitionFilter",
+        "condition": 1,
+        "summonings": [
+          196
+        ]
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "EntityTypeFilter",
+            "condition": 1,
+            "entityTypes": [
+              2
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "fdc6df828bb3a4c4cacd596fa8bcc1dd",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 196
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Invocation du Kamard",
+    "en": "Call the Kwaker",
+    "es": "Invocación del Kamard",
+    "de": "Kamente-Beschwörung",
+    "pt": "Invocação do Kamard"
+  },
+  "description": {
+    "fr": "Sacrifie un de vos compagnons pour invoquer {Summoning:196}.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Sacrifices one of your companions to summon {Summoning:196}.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Sacrifica a uno de tus compañeros para invocar {Summoning:196}.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Opfert einen deiner Begleiter, um {Summoning:196} zu beschwören.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Sacrifica um dos seus companheiros para invocar {Summoning:196}.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

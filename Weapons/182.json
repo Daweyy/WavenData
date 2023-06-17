@@ -1,0 +1,221 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "182",
+  "m_id": 182,
+  "m_displayName": "SRAM - Ken Kartana",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1504240924,
+    "b": 1134620820,
+    "c": 1763919130,
+    "d": 1488761231,
+    "e": 2038730311
+  },
+  "m_i18nDescriptionId": {
+    "a": -1504240924,
+    "b": 1134620820,
+    "c": 1763919130,
+    "d": 1488761231,
+    "e": -1827755495
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": -1504240924,
+    "b": 1134620820,
+    "c": 1763919130,
+    "d": 1488761231,
+    "e": -1324905240
+  },
+  "m_i18nSimpleNameId": {
+    "a": -1504240924,
+    "b": 1134620820,
+    "c": 1763919130,
+    "d": 1488761231,
+    "e": 736733051
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": -1504240924,
+    "b": 1134620820,
+    "c": 1763919130,
+    "d": 1488761231,
+    "e": 148694919
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "deda5e03ab598aa44aa47e70444fb442"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 182,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7797,
+      "skinIds": [
+        9948,
+        7797,
+        1597,
+        516,
+        9049,
+        9268
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "s",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 902
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      6
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 392
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 22
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      766771,
+      766779,
+      766792,
+      895
+    ],
+    "difficultyHint": 2,
+    "defaultSkinIdMale": 7797,
+    "defaultSkinIdFemale": 9948,
+    "god": 6,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      367,
+      15,
+      239738,
+      695
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      371,
+      678,
+      172,
+      469,
+      820,
+      730,
+      194944,
+      644,
+      190689
+    ]
+  },
+  "name": {
+    "fr": "Ken Kartana",
+    "en": "Ken Kartana",
+    "es": "Ken Kartana",
+    "de": "Ken-Kartana",
+    "pt": "Ken Kartana"
+  },
+  "description": {
+    "fr": "Lorsque votre héros déclenche un {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié\\_: Inflige {value:s,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\">.",
+    "en": "When your hero triggers an allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}: Inflicts {value:s,percent} of {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.",
+    "es": "Cuando tu héroe activa una {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada: Inflige un {value:s,percent} de su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME} auslöst: Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> {value:s,percent} seines {%AT} als Schaden.",
+    "pt": "Quando seu herói aciona um {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliado: Inflige {value:s,percent} de seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\">."
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4><b>PIÈGE</b></color>\\_: Restreignez les déplacements de vos adversaires en piégeant les cases du terrain.\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",
+    "en": "<color=#7FD5E4><b>TRAPS</b></color>: Limit your opponents' movements by placing traps on cells on the field.\n\\---\n<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!",
+    "es": "<color=#7FD5E4><b>TRAMPA</b></color>: Restringe el movimiento de tus adversarios poniendo trampas en las casillas del terreno.\n\\---\n<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!",
+    "de": "<color=#7FD5E4><b>FALLE</b></color>: Schränke die Bewegungsfreiheit deiner Gegner ein, indem du die Felder des Spielfelds mit Fallen versiehst.\n\\---\n<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu!",
+    "pt": "<color=#7FD5E4><b>ARMADILHA</b></color>: Restrinja a movimentação dos seus adversários colocando armadilhas nas células do campo de batalha.\n\\---\n<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameSram}",
+    "en": "{%OnboardingSimpleNameSram}",
+    "es": "{%OnboardingSimpleNameSram}",
+    "de": "{%OnboardingSimpleNameSram}",
+    "pt": "{%OnboardingSimpleNameSram}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionSram}",
+    "en": "{%OnboardingSimpleDescriptionSram}",
+    "es": "{%OnboardingSimpleDescriptionSram}",
+    "de": "{%OnboardingSimpleDescriptionSram}",
+    "pt": "{%OnboardingSimpleDescriptionSram}"
+  }
+}

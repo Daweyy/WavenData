@@ -1,0 +1,112 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -4014597234671528400
+  },
+  "m_Name": "33",
+  "m_id": 33,
+  "m_displayName": "AffinityMeteorFactor",
+  "m_availability": 3,
+  "m_iconReference": {
+    "assetGuid": "e8d6065564fecb0478652bbbec10efee"
+  },
+  "m_iconAnimationSettings": {
+    "assetGuid": "9fe8443ddb3234e42959a55579b8d005"
+  },
+  "m_i18nNameId": {
+    "a": -187247277,
+    "b": -1375238092,
+    "c": 1558575146,
+    "d": 1796356581,
+    "e": 474615347
+  },
+  "m_i18nDescriptionId": {
+    "a": -187247277,
+    "b": -1375238092,
+    "c": 1558575146,
+    "d": 1796356581,
+    "e": -9795152
+  },
+  "values": {
+    "type": "AffinityCustomEffectDefinition",
+    "id": 33,
+    "iconColor": {
+      "r": 0.996078432,
+      "g": 0.9882353,
+      "b": 0.6431373,
+      "a": 1
+    },
+    "areaOfEffect": {
+      "type": "SquareAreaOfEffectSelector",
+      "originSelector": {
+        "type": "CasterHeroSelector"
+      },
+      "size": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      }
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "metA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            80
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "target",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

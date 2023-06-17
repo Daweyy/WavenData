@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "7410",
+  "m_id": 7410,
+  "m_displayName": "SACRIEUR - CLASSE - ETHER - Entrave",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 738531234,
+    "b": -1593800428,
+    "c": 1822237432,
+    "d": 1933109803,
+    "e": 250774514
+  },
+  "m_i18nDescriptionId": {
+    "a": 738531234,
+    "b": -1593800428,
+    "c": 1822237432,
+    "d": 1933109803,
+    "e": -1032697224
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a6168454b2d1a0c48b1ff3618aa16ecd"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 7410,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": 30,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3aec8fd3c90c0db4781b68dbfde30926",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "CasterHeroSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 4
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Entrave",
+    "en": "Fetter",
+    "es": "Traba",
+    "de": "Fessel",
+    "pt": "Entrave"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de votre héros à un adversaire adjacent<sprite name=\"cell_cross\"> à lui et l'{PropertyEffect:4}.",
+    "en": "Inflicts your hero's {%power} on an adjacent<sprite name=\"cell_cross\"> opponent and {PropertyEffect:4} them.",
+    "es": "Inflige el {%power} de tu héroe a un adversario adyacente<sprite name=\"cell_cross\"> y lo {PropertyEffect:4}.",
+    "de": "Verursacht {%power} deines Helden bei einem angrenzenden <sprite name=\"cell_cross\"> Gegner und {PropertyEffect:4}.",
+    "pt": "Inflige o {%power} do seu herói a um adversário adjacente\\_<sprite name=\"cell_cross\"> e o {PropertyEffect:4}."
+  }
+}

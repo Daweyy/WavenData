@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "157717",
+  "m_id": 157717,
+  "m_displayName": "BONTA - Q11 - Canalisation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1124832818,
+    "b": -1706603228,
+    "c": 655724009,
+    "d": -6784271,
+    "e": 359858054
+  },
+  "m_i18nDescriptionId": {
+    "a": 1124832818,
+    "b": -1706603228,
+    "c": 655724009,
+    "d": -6784271,
+    "e": 1756405202
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c07bbc8bb5077bf48a41b4514f40715f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 157717,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "FloorMechanismDefinitionFilter",
+            "condition": 1,
+            "floorMechanisms": [
+              824
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c8203a9b7575adc4dbf810e2c891e506",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DALLE",
+        {
+          "type": 22,
+          "id": 113
+        },
+        {
+          "type": 6,
+          "id": 824
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Canalisation",
+    "en": "Channeling",
+    "es": "Canalización",
+    "de": "Kanalisierung",
+    "pt": "Canalização"
+  },
+  "description": {
+    "fr": "Détruit un {FloorMechanism:824}.\n\\---\n{value:v,+}\\_{aura:113,value:v} à votre héros.",
+    "en": "Destroys one {FloorMechanism:824}.\n\\---\n{value:v,+}\\_{aura:113,value:v} to your hero.",
+    "es": "Destruye un {FloorMechanism:824}.\n\\---\n{value:v,+}\\_{aura:113,value:v} a tu héroe.",
+    "de": "Zerstört einen {FloorMechanism:824}.\n\\---\n{value:v,+}\\_{aura:113,value:v} für deinen Helden.",
+    "pt": "Destrói um {FloorMechanism:824}.\n\\---\n{value:v,+}\\_{aura:113,value:v} ao seu herói."
+  }
+}

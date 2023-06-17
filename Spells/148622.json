@@ -1,0 +1,200 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "148622",
+  "m_id": 148622,
+  "m_displayName": "CRA - ARME - PIVEN - TERRE - Impact Graveleux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -598087643,
+    "b": 1400958420,
+    "c": -1409717702,
+    "d": -1219248943,
+    "e": -214097688
+  },
+  "m_i18nDescriptionId": {
+    "a": -598087643,
+    "b": 1400958420,
+    "c": -1409717702,
+    "d": -1219248943,
+    "e": 1975072026
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e916d2baf5539c94480fb1b599118940"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 148622,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      697,
+      71,
+      455409
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 846,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9397cd591328e774b8e391781c33cea5",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 62902,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": -1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgB",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 62902,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Impact Graveleux",
+    "en": "Gravelly Impact",
+    "es": "Impacto Pedregoso",
+    "de": "Kiesiger Einschlag",
+    "pt": "Impacto Pedregoso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmgA} à la cible et {magicalDamage:dmgB} aux adversaires alignés à elle.\n\\---\n{PMvalue:pm} à la cible pour le tour.",
+    "en": "Does {magicalDamage:dmgA} to the target and {magicalDamage:dmgB} to opponents in-line with the target.\n\\---\n{PMvalue:pm} to the target for the turn.",
+    "es": "Inflige {magicalDamage:dmgA} al objetivo y {magicalDamage:dmgB} a los adversarios alineados con ella.\n\\---\n{PMvalue:pm} al objetivo durante el turno.",
+    "de": "Verursacht beim Ziel {magicalDamage:dmgA} und bei den Gegnern in derselben Reihe {magicalDamage:dmgB}.\n\\---\n{PMvalue:pm} für das Ziel für die Runde.",
+    "pt": "Inflige {magicalDamage:dmgA} ao alvo e {magicalDamage:dmgB} aos adversários alinhados a ele.\n\\---\n{PMvalue:pm} ao alvo durante o turno."
+  }
+}

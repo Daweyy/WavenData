@@ -1,0 +1,166 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "736",
+  "m_id": 736,
+  "m_displayName": "ENIRIPSA - CLASSE - TERRE - Laboratoire de Pierre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1150638277,
+    "b": 1076447860,
+    "c": -2094685621,
+    "d": 735822578,
+    "e": -1996614871
+  },
+  "m_i18nDescriptionId": {
+    "a": 1150638277,
+    "b": 1076447860,
+    "c": -2094685621,
+    "d": 735822578,
+    "e": -1167205485
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "fa1bd09338556834091ae56f5e9ee0b8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 736,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      560,
+      316,
+      882
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      19,
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 117
+        },
+        {
+          "type": 25,
+          "id": 217201
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1522
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Laboratoire de Pierre",
+    "en": "Stone Laboratory",
+    "es": "Laboratorio de Piedra",
+    "de": "Stein-Laboratorium",
+    "pt": "Laboratório de Pedra"
+  },
+  "description": {
+    "fr": "Construit un {ObjectMechanism:1522} jusqu'à {cell:c} de votre héros.\n\\---\n<rem>Détruit votre précédent {ObjectMechanism:1522!}.</rem>",
+    "en": "Builds one {ObjectMechanism:1522} up to {cell:c} from your hero.\n\\---\n<rem>Destroys your previous {ObjectMechanism:1522!}.</rem>",
+    "es": "Construye un {ObjectMechanism:1522} hasta a {cell:c} de tu héroe.\n\\---\n<rem>Destruye tu {ObjectMechanism:1522!} anterior.</rem>",
+    "de": "Errichtet ein\\_{ObjectMechanism:1522} auf eine Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\n<rem>Zerstört deinen vorherigen {ObjectMechanism:1522!}.</rem>",
+    "pt": "Posiciona um {ObjectMechanism:1522} a até {cell:c} do seu herói.\n\\---\n<rem>Destrói o {ObjectMechanism:1522!} anterior.</rem>"
+  }
+}

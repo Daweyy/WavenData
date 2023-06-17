@@ -1,0 +1,164 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "571",
+  "m_id": 571,
+  "m_displayName": "MONSTRE CHAFER - Q3 - Vengeance Monte-Cristique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1339485420,
+    "b": -128118156,
+    "c": -698835175,
+    "d": -788087212,
+    "e": -641483117
+  },
+  "m_i18nDescriptionId": {
+    "a": -1339485420,
+    "b": -128118156,
+    "c": -698835175,
+    "d": -788087212,
+    "e": 1586822546
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a46748eb57f3d8246aabe63671cfa1c3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 571,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        40
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "FilteredCharacterSelector",
+            "filters": []
+          },
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "SummoningDefinitionFilter",
+              "condition": 1,
+              "summonings": [
+                556,
+                701
+              ]
+            }
+          ]
+        },
+        "value": {
+          "type": "LowerEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "min",
+            "value": 1
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "239ecd7e7b4b3584e9d8ec74cf557388",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "min",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 556
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Vengeance Monte-Cristique",
+    "en": "Monte-Cristocritcal Vengeance",
+    "es": "Venganza Montecrística",
+    "de": "Montecristo-Rache",
+    "pt": "Vingança Monte-Crística"
+  },
+  "description": {
+    "fr": "Invoque un\\_{Summoning:556} sur chaque coin du terrain s'il n'y en a pas plus de 1 en jeu.",
+    "en": "Summons one\\_{Summoning:556} on each corner of the field if there isn't more than 1 in play.",
+    "es": "Invoca un\\_{Summoning:556} en cada rincón del terreno si no hay más de 1 en juego.",
+    "de": "Beschwört einen\\_{Summoning:556} in jedem Winkel des Spielfelds, wenn es nicht mehr als 1 davon im Spiel gibt.",
+    "pt": "Invoca um\\_{Summoning:556} em cada canto do campo de batalha se não tiver mais do que um em jogo."
+  }
+}

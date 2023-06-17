@@ -1,0 +1,310 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "42",
+  "m_id": 42,
+  "m_displayName": "DECK - RARE - AIR - Duelliste Spectral",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1492253164,
+    "b": 627581364,
+    "c": 1718801705,
+    "d": -490328214,
+    "e": -1287693170
+  },
+  "m_i18nDescriptionId": {
+    "a": 1492253164,
+    "b": 627581364,
+    "c": 1718801705,
+    "d": -490328214,
+    "e": -2069236643
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 42,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 6027,
+      "skinIds": [
+        6027
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": null,
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "SumValue",
+                  "referenceId": null,
+                  "valuesToSum": [
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 100
+                    },
+                    {
+                      "type": "ConditionalValue",
+                      "referenceId": "",
+                      "condition": {
+                        "type": "HolderHasSkillCondition",
+                        "skill": 137241
+                      },
+                      "ifTrue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "Bper",
+                        "value": 100
+                      },
+                      "ifFalse": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ConditionalValue",
+                  "referenceId": "",
+                  "condition": {
+                    "type": "AndCondition",
+                    "conditions": [
+                      {
+                        "type": "ContextIsCriticalCondition"
+                      },
+                      {
+                        "type": "HolderHasSkillCondition",
+                        "skill": 876
+                      }
+                    ]
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "Bper2",
+                    "value": 300
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 8
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 22
+          },
+          "buffs": [
+            89
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper2",
+          "value": 300
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "BOUNCE"
+      ]
+    },
+    "families": [
+      6
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 85
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 17
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      706588,
+      889,
+      741203,
+      11049,
+      779,
+      292120
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          42
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Duelliste Spectral",
+    "en": "Spectral Duelist",
+    "es": "Duelista Espectral",
+    "de": "Spektralduellant",
+    "pt": "Duelista Espectral"
+  },
+  "description": {
+    "fr": "{%attack} Déclenche {bounce:bc} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
+    "en": "{%attack} Triggers {bounce:bc} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
+    "es": "{%attack} Activa {bounce:bc} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
+    "de": "{%attack} Löst {bounce:bc} aus, falls das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
+    "pt": "{%attack} Aciona {bounce:bc} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "440",
+  "m_id": 440,
+  "m_displayName": "OSAMODAS - ARME -  L ASSOMOIR CRAQUELEUR - Oeuf de Craqueleur",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": 319136304,
+    "b": -1944025020,
+    "c": -264726360,
+    "d": -1471672269,
+    "e": -892188886
+  },
+  "m_i18nDescriptionId": {
+    "a": 319136304,
+    "b": -1944025020,
+    "c": -264726360,
+    "d": -1471672269,
+    "e": -47719730
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 440,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      12,
+      11
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": 75,
+      "families": [
+        45,
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConditionalValue",
+          "referenceId": "",
+          "condition": {
+            "type": "FloatingCounterCondition",
+            "selector": {
+              "type": "CasterHeroSelector"
+            },
+            "counterFilter": {
+              "type": "CategoryFloatingCounterType",
+              "category": 6
+            },
+            "value": {
+              "type": "GreaterThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          },
+          "ifTrue": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  {
+                    "type": "FloatingCounterValue",
+                    "referenceId": "",
+                    "entitySelector": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "counter": {
+                      "type": "CategoryFloatingCounterType",
+                      "category": 6
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "FloatingCounterCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 6
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundSquaredTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Œuf de Craqueleur",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "<rem>Évolue selon le nombre d'<b>AURAS</b> que possède votre héros.</rem>\n\\---\nLibère les {%KEYWORD.AURA.NAME,plural:other} de votre héros et invoque un <b>Craqueleur</b> autour\\_<sprite name=\"cell_around\"> de lui.\n\\---\n<rem>Tue votre <b>BÉTE</b> en jeu.</rem>",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

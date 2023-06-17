@@ -1,0 +1,191 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "877",
+  "m_id": 877,
+  "m_displayName": "SRAM - CLASSE - TERRE - Griffes de la Nuit",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1122964657,
+    "b": 1049750148,
+    "c": 419250569,
+    "d": -723476894,
+    "e": 618938880
+  },
+  "m_i18nDescriptionId": {
+    "a": -1122964657,
+    "b": 1049750148,
+    "c": 419250569,
+    "d": -723476894,
+    "e": 148533303
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "92eba0ffac25122459187caa94238459"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 877,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      347752,
+      360334,
+      488759
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllFloorMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": null,
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "56f3b287a98c7824387948aa6d4ba4df",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 87,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Griffes de la Nuit",
+    "en": "Night Claws",
+    "es": "Garras de la Noche",
+    "de": "Krallen der Nacht",
+    "pt": "Garras da Noite"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires alignés à un de vos {%KEYWORD.TRAP.NAME,plural:other}.",
+    "en": "Does {magicalDamage:dmg} to opponents in line with one of your {%KEYWORD.TRAP.NAME,plural:other}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios alineados con una de tus {%KEYWORD.TRAP.NAME,plural:other}.",
+    "de": "Verursacht {magicalDamage:dmg} bei den Gegnern, die sich in derselben Reihe befinden wie eine deiner {%KEYWORD.TRAP.NAME,plural:other}.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários alinhados a uma de suas {%KEYWORD.TRAP.NAME,plural:other}."
+  }
+}

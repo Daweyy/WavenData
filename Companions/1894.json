@@ -1,0 +1,134 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "1894",
+  "m_id": 1894,
+  "m_displayName": "DQ - CONTRAT - TAURE - 3_Taure Du",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 294953916,
+    "b": 781925028,
+    "c": -677583653,
+    "d": -1910410375,
+    "e": -1411034670
+  },
+  "m_i18nDescriptionId": {
+    "a": 294953916,
+    "b": 781925028,
+    "c": -677583653,
+    "d": -1910410375,
+    "e": -1866334745
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 1894,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 4625,
+      "skinIds": [
+        4625
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      56
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": null,
+      "value": 1
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": null,
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": null,
+      "value": 15
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          1894
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Taure Du",
+    "en": "Taur Tuous",
+    "es": "Toro Horcido",
+    "de": "Taurus",
+    "pt": "Tau Urado"
+  },
+  "description": {
+    "fr": "{%Attack} {ATvalue:pow,percent,+} si la cible est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.\n\\---\n{%DeathBlow} Rejoue son tour.",
+    "en": "{%Attack} {ATvalue:pow,percent,+} if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.\n\\---\n{%DeathBlow} Replays turn.",
+    "es": "{%Attack} {ATvalue:pow,percent,+} si el objetivo está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.\n\\---\n{%DeathBlow} Vuelve a jugar su turno.",
+    "de": "{%Attack} {ATvalue:pow,percent,+}, falls das Ziel <b>MARKIERT</b>ist\\_<sprite name=\"generic_monster\">.\n\\---\n{%DeathBlow} Spielt die Runde erneut.",
+    "pt": "{%Attack} {ATvalue:pow,percent,+} se o alvo estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.\n\\---\n{%DeathBlow} Joga um turno extra."
+  }
+}

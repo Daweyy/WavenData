@@ -1,0 +1,221 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "637",
+  "m_id": 637,
+  "m_displayName": "ENIRIPSA - Scalpel de l'Apostruker",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1749936890,
+    "b": 116925332,
+    "c": -737690679,
+    "d": -2121828778,
+    "e": -1441315526
+  },
+  "m_i18nDescriptionId": {
+    "a": -1749936890,
+    "b": 116925332,
+    "c": -737690679,
+    "d": -2121828778,
+    "e": 1599185586
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": -1749936890,
+    "b": 116925332,
+    "c": -737690679,
+    "d": -2121828778,
+    "e": -539454178
+  },
+  "m_i18nSimpleNameId": {
+    "a": -1749936890,
+    "b": 116925332,
+    "c": -737690679,
+    "d": -2121828778,
+    "e": 1036002091
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": -1749936890,
+    "b": 116925332,
+    "c": -737690679,
+    "d": -2121828778,
+    "e": 851541207
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "bc3eee47cf1bb2f49a57990eb0ccdc19"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 637,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 956,
+      "skinIds": [
+        4630,
+        956,
+        8810,
+        8725,
+        5657,
+        2201
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "perc",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": null,
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 764
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      3
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 396
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 22
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      765465,
+      765506,
+      765880,
+      765950
+    ],
+    "difficultyHint": 1,
+    "defaultSkinIdMale": 956,
+    "defaultSkinIdFemale": 4630,
+    "god": 3,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      239142,
+      232,
+      299,
+      239230
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      218404,
+      217935,
+      459,
+      609,
+      989,
+      666,
+      187,
+      152,
+      460
+    ]
+  },
+  "name": {
+    "fr": "Scalpel de l'Apostruker",
+    "en": "Apostruker Scalpel",
+    "es": "Escalpelo del Aspotruker",
+    "de": "Skalpell des Apostrukers",
+    "pt": "Bisturi Apostruker"
+  },
+  "description": {
+    "fr": "Lorsque votre héros est soigné\\_: Inflige {value:perc,percent} de son {%AT} à l'adversaire ayant le plus de {%PV,plural:other}.",
+    "en": "When your hero is healed: Inflicts {value:perc,percent} of their {%AT} on the opponent with the most {%PV,plural:other}.",
+    "es": "Cuando tu héroe es curado: Inflige un {value:perc,percent} de su {%AT} al adversario que tenga más {%PV,plural:other}.",
+    "de": "Wenn dein Held geheilt wird: Verursacht beim Gegner mit den meisten {%PV,plural:other} {value:perc,percent} seines {%AT} als Schaden.",
+    "pt": "Quando seu herói é curado: Inflige {value:perc,percent} de seu {%AT} ao adversário que tiver mais {%PV,plural:other}."
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!\n\\---\n<color=#7FD5E4>SOINS</color>\\_: L'art de la guérison n'a aucun secret pour vous. Il y a toujours un moyen de soigner vos blessures\\_!",
+    "en": "<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!\n\\---\n<color=#7FD5E4>HEALS</color>: The art of healing has no secrets for you. There's always a way to heal your injuries!",
+    "es": "<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!\n\\---\n<color=#7FD5E4>CURAS</color>: El arte de curar no tiene secretos para ti. ¡Siempre hay un modo de sanar tus heridas!",
+    "de": "<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto härter schlägst du zu!\n\\---\n<color=#7FD5E4>HEILUNG</color>: Die Heilkunst birgt für dich keine Geheimnisse. Es gibt immer ein Mittel, deine Verletzungen zu heilen!",
+    "pt": "<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!\n\\---\n<color=#7FD5E4>CURAS</color>: Você é especialista na arte da cura. Sempre tem como tratar dos seus ferimentos!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameEniripsa}",
+    "en": "{%OnboardingSimpleNameEniripsa}",
+    "es": "{%OnboardingSimpleNameEniripsa}",
+    "de": "{%OnboardingSimpleNameEniripsa}",
+    "pt": "{%OnboardingSimpleNameEniripsa}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionEniripsa}",
+    "en": "{%OnboardingSimpleDescriptionEniripsa}",
+    "es": "{%OnboardingSimpleDescriptionEniripsa}",
+    "de": "{%OnboardingSimpleDescriptionEniripsa}",
+    "pt": "{%OnboardingSimpleDescriptionEniripsa}"
+  }
+}

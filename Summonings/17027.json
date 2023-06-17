@@ -1,0 +1,212 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442430
+  },
+  "m_Name": "17027",
+  "m_id": 17027,
+  "m_displayName": "TUTORIEL - Combat 03 - Parashu",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -344539174,
+    "b": -1723317468,
+    "c": -1914527639,
+    "d": 430132014,
+    "e": -1139355142
+  },
+  "m_i18nChampionNameId": {
+    "a": -344539174,
+    "b": -1723317468,
+    "c": -1914527639,
+    "d": 430132014,
+    "e": 1298311872
+  },
+  "m_i18nDescriptionId": {
+    "a": -344539174,
+    "b": -1723317468,
+    "c": -1914527639,
+    "d": 430132014,
+    "e": 849823490
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 17027,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1732,
+      "skinIds": [
+        1732
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      73
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 5
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 2
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 5
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "UnionOfEntitiesSelector",
+      "first": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "EntityTypeFilter",
+            "condition": 1,
+            "entityTypes": [
+              1
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          {
+            "type": "LifeFilter",
+            "valueFilter": {
+              "type": "GreaterThan",
+              "dynamicValue": {
+                "type": "CharacterActionValue",
+                "referenceId": "",
+                "entitySelector": {
+                  "type": "EffectHolderSelector"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "second": {
+        "type": "UnionOfEntitiesSelector",
+        "first": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "CompanionDefinitionFilter",
+              "condition": 1,
+              "companions": [
+                735
+              ]
+            },
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "EffectHolderSelector"
+              }
+            },
+            {
+              "type": "LifeFilter",
+              "valueFilter": {
+                "type": "GreaterThan",
+                "dynamicValue": {
+                  "type": "CharacterActionValue",
+                  "referenceId": "",
+                  "entitySelector": {
+                    "type": "EffectHolderSelector"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "second": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "CompanionDefinitionFilter",
+              "condition": 1,
+              "companions": [
+                575,
+                225,
+                945,
+                435
+              ]
+            },
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "EffectHolderSelector"
+              }
+            },
+            {
+              "type": "LifeFilter",
+              "valueFilter": {
+                "type": "GreaterThan",
+                "dynamicValue": {
+                  "type": "CharacterActionValue",
+                  "referenceId": "",
+                  "entitySelector": {
+                    "type": "EffectHolderSelector"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "grade": 0,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Parashu] other[Parashus]}",
+    "en": "{0, plural, one[Parashu] other[Parashus]}",
+    "es": "{0, plural, one[Fab'hubicho] other[Fab'hubichos]}",
+    "de": "{0, plural, one[Parashu] other[Parashus]}",
+    "pt": "{0, plural, one[Parashu] other[Parashus]}"
+  },
+  "description": {
+    "fr": "<i>Aucun effet.</i>",
+    "en": "<i>No effect.</i>",
+    "es": "<i>Ningún efecto.</i>",
+    "de": "<i>Keine Wirkung.</i>",
+    "pt": "<i>Sem efeito.</i>"
+  },
+  "championName": {
+    "fr": "{%empty}",
+    "en": "{%empty}",
+    "es": "{%empty}",
+    "de": "{%empty}",
+    "pt": "{%empty}"
+  }
+}

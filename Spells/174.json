@@ -1,0 +1,184 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "174",
+  "m_id": 174,
+  "m_displayName": "SACRIEUR - CLASSE - EAU - Represailles",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 370524831,
+    "b": -1917357804,
+    "c": -1882278408,
+    "d": 951622173,
+    "e": -342474557
+  },
+  "m_i18nDescriptionId": {
+    "a": 370524831,
+    "b": -1917357804,
+    "c": -1882278408,
+    "d": 951622173,
+    "e": -288796787
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c7ce1b5ffca2ac247906489865bdfe0a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 174,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      330,
+      578029,
+      578145
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7962a49a1175d5b43a1501481facf381",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 41,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "auraGain",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 102
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Représailles",
+    "en": "Reprisal",
+    "es": "Represalias",
+    "de": "Vergeltungsmaßnahmen",
+    "pt": "Represália"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:auraGain,+}\\_{aura:102,value:auraGain} à votre héros si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{value:auraGain,+}\\_{aura:102,value:auraGain} to your hero if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:auraGain,+}\\_{aura:102,value:auraGain} a tu héroe si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:auraGain,+}\\_{aura:102,value:auraGain} für deinen Helden, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{value:auraGain,+}\\_{aura:102,value:auraGain} ao seu herói se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+  }
+}

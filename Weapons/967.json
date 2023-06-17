@@ -1,0 +1,223 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "967",
+  "m_id": 967,
+  "m_displayName": "ENIRIPSA - Pinceau Kokoro",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1182316633,
+    "b": 47237620,
+    "c": 1337509273,
+    "d": 287760935,
+    "e": 300465970
+  },
+  "m_i18nDescriptionId": {
+    "a": 1182316633,
+    "b": 47237620,
+    "c": 1337509273,
+    "d": 287760935,
+    "e": -1639464288
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": 1182316633,
+    "b": 47237620,
+    "c": 1337509273,
+    "d": 287760935,
+    "e": 69462822
+  },
+  "m_i18nSimpleNameId": {
+    "a": 1182316633,
+    "b": 47237620,
+    "c": 1337509273,
+    "d": 287760935,
+    "e": -1196966635
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": 1182316633,
+    "b": 47237620,
+    "c": 1337509273,
+    "d": 287760935,
+    "e": 748643368
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "7408b1ac7071da54e9bb03f1dcd10df5"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 967,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 8153,
+      "skinIds": [
+        2223,
+        8153,
+        3078,
+        6859,
+        2347,
+        4901
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "s",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 154608
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "SUPPORT"
+      ]
+    },
+    "families": [
+      3
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 398
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      82,
+      761547,
+      761566,
+      761724
+    ],
+    "difficultyHint": 1,
+    "defaultSkinIdMale": 2223,
+    "defaultSkinIdFemale": 8153,
+    "god": 3,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      200,
+      44,
+      634,
+      721
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      218404,
+      217935,
+      459,
+      609,
+      989,
+      666,
+      187,
+      152,
+      460
+    ]
+  },
+  "name": {
+    "fr": "Pinceau Kokoro",
+    "en": "Kokoro Brush",
+    "es": "Pincel Kokoro",
+    "de": "Kokoro-Pinsel",
+    "pt": "Pincel Kokoro"
+  },
+  "description": {
+    "fr": "Lorsque vous déclenchez {#SUPPORT}\\_: \nVotre héros gagne {value:s,percent} de son {%AT} en {%AR}.",
+    "en": "When you trigger {#SUPPORT}: \nYour hero gains {value:s,percent} of their {%AT} as {%AR}.",
+    "es": "Cuando activas {#SUPPORT}: \nTu héroe gana un {value:s,percent} de su {%AT} en {%AR}.",
+    "de": "Wenn du {#SUPPORT} auslöst:\nDein Held erhält {value:s,percent} seines {%AT} als {%AR}.",
+    "pt": "Ao acionar {#SUPPORT}: \nSeu herói ganha {value:s,percent} de seu {%AT} em {%AR}."
+  },
+  "gameplayDescription": {
+    "fr": "{#SUPPORT}\\_: Prenez soin de vos alliés, ils vous le revaudront bien\\_!\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",
+    "en": "{#SUPPORT}: Take care of your allies and they'll take care of you!\n\\---\n<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!",
+    "es": "{#SUPPORT}: Cuida de tus aliados, ¡sabrán recompensarte!\n\\---\n<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!",
+    "de": "{#SUPPORT}: Achte auf deine Verbündeten, sie werden es dir zu danken wissen!\n\\---\n<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu!",
+    "pt": "{#SUPPORT}: Cuide dos seus aliados para que eles cuidem de você!\n\\---\n<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameEniripsa}",
+    "en": "{%OnboardingSimpleNameEniripsa}",
+    "es": "{%OnboardingSimpleNameEniripsa}",
+    "de": "{%OnboardingSimpleNameEniripsa}",
+    "pt": "{%OnboardingSimpleNameEniripsa}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionEniripsa}",
+    "en": "{%OnboardingSimpleDescriptionEniripsa}",
+    "es": "{%OnboardingSimpleDescriptionEniripsa}",
+    "de": "{%OnboardingSimpleDescriptionEniripsa}",
+    "pt": "{%OnboardingSimpleDescriptionEniripsa}"
+  }
+}

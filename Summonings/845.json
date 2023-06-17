@@ -1,0 +1,171 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158400
+  },
+  "m_Name": "845",
+  "m_id": 845,
+  "m_displayName": "MONSTRE CHAFER - BASE - Blockmort",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -622295949,
+    "b": 382156132,
+    "c": -799444376,
+    "d": -79593089,
+    "e": 1592626914
+  },
+  "m_i18nChampionNameId": {
+    "a": -622295949,
+    "b": 382156132,
+    "c": -799444376,
+    "d": -79593089,
+    "e": 1841941619
+  },
+  "m_i18nDescriptionId": {
+    "a": -622295949,
+    "b": 382156132,
+    "c": -799444376,
+    "d": -79593089,
+    "e": -1532598144
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 845,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3340,
+      "skinIds": [
+        3340
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 16
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 17
+          },
+          "buffs": [
+            49
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cmin",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cmax",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      40
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 86
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 12
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 1,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Blockmort] other[Blockmorts]}",
+    "en": "{0, plural, one[Blockmort] other[Blockmorts]}",
+    "es": "{0, plural, one[Blockmorto] other[Blockmortos]}",
+    "de": "{0, plural, one[Blockmortus] other[Blockmorten]}",
+    "pt": "{0, plural, one[Blockmort] other[Blockmorts]}"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} {ARvalue:ar,+} ou {BLvalue:bl,+} aux alliés autour <sprite name=\"cell_around\">, puis <b>CHARGE</b> un adversaire aligné de {value:cmin} à {cell:cmax} et lui inflige son {%at}.",
+    "en": "{%FightTurnStarted} {ARvalue:ar,+} or {BLvalue:bl,+} to surrounding <sprite name=\"cell_around\"> allies then <b>CHARGES</b> an in-line opponent {value:cmin} to {cell:cmax} away and inflicts {%at} on the opponent.",
+    "es": "{%FightTurnStarted} {ARvalue:ar,+} o {BLvalue:bl,+} a los aliados de alrededor <sprite name=\"cell_around\"> y <b>CARGA</b> contra un adversario alineado de {value:cmin} a {cell:cmax} y le inflige su {%at}.",
+    "de": "{%FightTurnStarted} {ARvalue:ar,+} oder {BLvalue:bl,+} für die Verbündeten in der Nähe\\_<sprite name=\"cell_around\">. <b>STÜRMT</b> dann auf einen Gegner in derselben Reihe in einer Entfernung von {value:cmin} bis {cell:cmax} zu und fügt ihm seinen {%at} als Schaden zu.",
+    "pt": "{%FightTurnStarted}{ARvalue:ar,+} ou {BLvalue:bl,+} aos aliados em\\_volta\\_<sprite name=\"cell_around\">, depois <b>INVESTE</b> contra um adversário alinhado de {value:cmin} a {cell:cmax} e inflige seu {%at}."
+  },
+  "championName": {
+    "fr": "Carloss",
+    "en": "Carloss",
+    "es": "Carloss",
+    "de": "Carloss",
+    "pt": "Carlóss"
+  }
+}

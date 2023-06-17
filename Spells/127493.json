@@ -1,0 +1,182 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "127493",
+  "m_id": 127493,
+  "m_displayName": "OSAMODAS - ARME - ELEVEUR FROUSSARD - Nuee",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": -617081177,
+    "b": 858791380,
+    "c": -1902732311,
+    "d": 906882214,
+    "e": -307935183
+  },
+  "m_i18nDescriptionId": {
+    "a": -617081177,
+    "b": 858791380,
+    "c": -1902732311,
+    "d": 906882214,
+    "e": -944995013
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 127493,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      124870,
+      134763
+    ],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 1,
+      "specificToWeapon": 625,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": null,
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 5
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": null,
+                  "from": {
+                    "type": "FilteredCharacterSelector",
+                    "filters": []
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "TeamFilter",
+                      "isIdentical": true,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    },
+                    {
+                      "type": "FamilyFilter",
+                      "condition": 1,
+                      "families": [
+                        45
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "red",
+                  "value": -1
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "red",
+          "value": -1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Nuée",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}. \n\\---\n{PAvalue:red} au coût de ce {%SPELLCOUNT,plural:one} par invocation en jeu.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

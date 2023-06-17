@@ -1,0 +1,59 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -2808303246453168600
+  },
+  "m_Name": "18",
+  "m_id": 18,
+  "m_displayName": "Hail Effect Execution - Player Companion Hail Power",
+  "m_availability": 3,
+  "values": {
+    "type": "ParameterizedEffectExecutionDefinition",
+    "id": 18,
+    "parameters": [
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "source"
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 14
+          },
+          "buffs": [
+            90,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "ParameterSingleEntitySelector",
+              "name": "source"
+            }
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  }
+}

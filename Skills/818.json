@@ -1,0 +1,96 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -6962076302617524000
+  },
+  "m_Name": "818",
+  "m_id": 818,
+  "m_displayName": "WEAPON - ENIRIPSA - SCALPEL DE L APOSTRUKER - Puissance Apostruker",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 72488833,
+    "b": -1435208652,
+    "c": 53188810,
+    "d": -735325630,
+    "e": -1634267131
+  },
+  "m_i18nDescriptionId": {
+    "a": 72488833,
+    "b": -1435208652,
+    "c": 53188810,
+    "d": -735325630,
+    "e": 1088533621
+  },
+  "m_skillIconReference": {
+    "assetGuid": "56e24c41145c5ad4c8019b39171a0a6c"
+  },
+  "values": {
+    "type": "SkillDefinition",
+    "id": 818,
+    "skillUsageType": 5,
+    "hideDescriptionInTooltip": false,
+    "passiveModifiers": [],
+    "nonFightSkillEffects": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "perc",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": null,
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 764
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 30
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Puissance Apostruker",
+    "en": "Apostruker Power",
+    "es": "Potencia Aspotruker",
+    "de": "Apostruker-Schlagkraft",
+    "pt": "Potência Apostruker"
+  },
+  "description": {
+    "fr": "Lorsque votre héros est soigné\\_: Inflige aussi les dégâts à l’adversaire ayant le moins de {%PV}. ",
+    "en": "When your hero is healed: Also does damage on the opponent with the least {%PV}.",
+    "es": "Cuando tu héroe es curado: Inflige también los daños al adversario que tenga menos {%PV}.",
+    "de": "Wenn dein Held geheilt wird: Verursacht auch bei den Gegnern mit den wenigsten {%PV} Schaden.",
+    "pt": "Quando seu herói é curado: Também inflige danos ao adversário que tiver menos {%PV}."
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "209893",
+  "m_id": 209893,
+  "m_displayName": "XELOR - CLASSE - EAU - Harmonie Temporelle",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -20473509,
+    "b": -1300853308,
+    "c": 919345115,
+    "d": -1150320849,
+    "e": -588729154
+  },
+  "m_i18nDescriptionId": {
+    "a": -20473509,
+    "b": -1300853308,
+    "c": 919345115,
+    "d": -1150320849,
+    "e": 1689289972
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e691fa1b9cac69a4b88b95eb37f35182"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "41dbd4040fdf8d5418d005a6cdd91254"
+      },
+      {
+        "assetGuid": "17dde900d553e07439f2a8700c670317"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 209893,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      465769,
+      465786,
+      466024
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CombinedTargetSelector",
+        "selectors": [
+          {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllObjectMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "FamilyFilter",
+                "condition": 1,
+                "families": [
+                  20
+                ]
+              }
+            ]
+          },
+          {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "EqualsTo",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "c",
+                    "value": 1
+                  }
+                }
+              },
+              {
+                "type": "CellValidForCharacterFilter"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            50,
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 423,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Harmonie Temporelle",
+    "en": "Temporal Harmony",
+    "es": "Armonía Temporal",
+    "de": "Zeitliche Harmonie",
+    "pt": "Harmonia Temporal"
+  },
+  "description": {
+    "fr": "Téléporte votre héros de {cell:c} <b>OU</b> échange sa position avec celle d'un <b>SINISTRO</b> allié.\n\\---\nSoigne votre héros de {PVvalue:dmg}.",
+    "en": "Teleports your hero {cell:c} <b>OR</b> switches their position with that of an allied <b>SINISTRO</b>.\n\\---\nHeals your hero {PVvalue:dmg}.",
+    "es": "Teletransporta a tu héroe {cell:c} <b>O</b> intercambia su posición con la de un <b>SINISTRO</b> aliado.\n\\---\nCura a tu héroe {PVvalue:dmg}.",
+    "de": "Teleportiert deinen Helden {cell:c} <b>ODER</b> tauscht die Position deines Helden mit der eines verbündeten <b>SINISTROS</b>.\n\\---\nHeilt deinen Helden um {PVvalue:dmg}.",
+    "pt": "Teletransporta seu herói por {cell:c} <b>OU</b> troca sua posição com um <b>SINISTRO</b> aliado.\n\\---\nCura seu herói em {PVvalue:dmg}."
+  }
+}

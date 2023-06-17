@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "605",
+  "m_id": 605,
+  "m_displayName": "BRACELET - RARE - Brassard de Repousse Foudroyante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 78212551,
+    "b": -1944673900,
+    "c": 1119741672,
+    "d": -1511901770,
+    "e": 1651827284
+  },
+  "m_i18nDescriptionId": {
+    "a": 78212551,
+    "b": -1944673900,
+    "c": 1119741672,
+    "d": -1511901770,
+    "e": -2017782837
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 78212551,
+    "b": -1944673900,
+    "c": 1119741672,
+    "d": -1511901770,
+    "e": -1374547374
+  },
+  "m_illustration": {
+    "assetGuid": "5e61b16578694ed49be21b2ec07aa531"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "5e61b16578694ed49be21b2ec07aa531"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 605,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      646608,
+      258,
+      646691,
+      646693,
+      646711,
+      647352
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "c",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 1
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 121519
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c1",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 121771
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c2",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 500
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.801.bc"
+      ],
+      "hasEffects": false,
+      "keywordReferences": [
+        "LIGHTNING",
+        "PUSH"
+      ]
+    },
+    "family": 0,
+    "equipmentType": 2,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          58
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Brassard de Repousse Foudroyante",
+    "en": "Lightning Push Armband",
+    "es": "Brazalete de Empujón Fulminante",
+    "de": "Armschiene des überwältigenden Rückstoßes",
+    "pt": "Braçadeira de Empurrão Fulminante"
+  },
+  "description": {
+    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de déclencher {lightning:ParameterizedEffectExecution.801.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} of triggering {lightning:ParameterizedEffectExecution.801.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
+    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de activar {lightning:ParameterizedEffectExecution.801.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "de": "{%Attack} {#PUSH} {cell:c}.\n\\---\nChance von {LUCKSELFvalue:per,permil}, je <b>{%KEYWORD.COLLISION.NAME}</b>-Feld {lightning:ParameterizedEffectExecution.801.bc} auszulösen.",
+    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de acionar {lightning:ParameterizedEffectExecution.801.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
+  },
+  "bgDescription": {
+    "fr": "{%empty}",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1355",
+  "m_id": 1355,
+  "m_displayName": "IOP - CLASSE - ETHER - Charge et recharge",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 990150482,
+    "b": -2003730108,
+    "c": -1612283302,
+    "d": -473331826,
+    "e": -2104757753
+  },
+  "m_i18nDescriptionId": {
+    "a": 990150482,
+    "b": -2003730108,
+    "c": -1612283302,
+    "d": -473331826,
+    "e": 1997709888
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0b991fc99b701d14ba5ac3a6e909521b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1355,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "23319486d12db8543ae8c0c7d43139ea",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Charge et Recharge",
+    "en": "Charge and Recharge",
+    "es": "Carga y Recarga",
+    "de": "Erneuter Ansturm",
+    "pt": "Investe e Reinveste"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné avec lui jusqu'à {cell:c} et lui inflige son {%at}.\n\\---\nPiochez {value:v} sort.",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%at} on them.\n\\---\nDraw {value:v} {%SPELLCOUNT,value:v}.",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado con él hasta a {cell:c} y le inflige su {%at}.\n\\---\nSacas {value:v} hechizo.",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe auf eine Entfernung bis {cell:c} zu und fügt ihm seinen {%at} als Schaden zu.\n\\---\nZiehe {value:v} Zauber.",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado com ele a até {cell:c} e inflige seu {%at}.\n\\---\nCompre {value:v} feitiço."
+  }
+}

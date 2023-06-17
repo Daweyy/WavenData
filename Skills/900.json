@@ -1,0 +1,79 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -6962076302617524000
+  },
+  "m_Name": "900",
+  "m_id": 900,
+  "m_displayName": "SPELL - Generic - SOINS ET DÉGÂTS CC",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1784200772,
+    "b": 2069260196,
+    "c": -1729182869,
+    "d": 34090583,
+    "e": -304296916
+  },
+  "m_i18nDescriptionId": {
+    "a": 1784200772,
+    "b": 2069260196,
+    "c": -1729182869,
+    "d": 34090583,
+    "e": 864356064
+  },
+  "m_skillIconReference": {
+    "assetGuid": "fe45c81961c704649a88750793911969"
+  },
+  "values": {
+    "type": "SkillDefinition",
+    "id": 900,
+    "skillUsageType": 0,
+    "hideDescriptionInTooltip": false,
+    "passiveModifiers": [
+      {
+        "type": "SpellCriticalDamageModifier",
+        "holder": 9,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "dcc",
+          "value": 50
+        }
+      }
+    ],
+    "nonFightSkillEffects": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dcc",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "CRITICAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "{%CRITICAL_SKILL}",
+    "en": "{%CRITICAL_SKILL}",
+    "es": "{%CRITICAL_SKILL}",
+    "de": "{%CRITICAL_SKILL}",
+    "pt": "{%CRITICAL_SKILL}"
+  },
+  "description": {
+    "fr": "{#CRITICAL}\\_: {value:dcc,percent,+} aux <b>SOINS CRITIQUES</b> et aux <b>DÉGÂTS CRITIQUES</b> de ce {%SPELLCOUNT,plural:one}.",
+    "en": "{#CRITICAL}: {value:dcc,percent,+} to this {%SPELLCOUNT,plural:one}'s <b>CRITICAL HEALS</b> and <b>CRITICAL DAMAGE</b>.",
+    "es": "{#CRITICAL}: {value:dcc,percent,+} a las <b>CURAS CRÍTICAS</b> y a los <b>DAÑOS CRÍTICOS</b> de este {%SPELLCOUNT,plural:one}.",
+    "de": "{#CRITICAL}: {value:dcc,percent,+} auf <b>KRITISCHE HEILUNG</b> und <b>KRITISCHEN SCHADEN</b> durch diesen {%SPELLCOUNT,plural:one}.",
+    "pt": "{#CRITICAL}: {value:dcc,percent,+} às <b>CURAS CRÍTICAS</b> e aos <b>DANOS CRÍTICOS</b> deste {%SPELLCOUNT,plural:one}."
+  }
+}

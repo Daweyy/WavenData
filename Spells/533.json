@@ -1,0 +1,204 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "533",
+  "m_id": 533,
+  "m_displayName": "CRA - CLASSE - TERRE - Tir Reveche",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -948973241,
+    "b": -2122866428,
+    "c": 223346570,
+    "d": -1193556408,
+    "e": 18406702
+  },
+  "m_i18nDescriptionId": {
+    "a": -948973241,
+    "b": -2122866428,
+    "c": 223346570,
+    "d": -1193556408,
+    "e": 308928835
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "88f74196c3e64ea47848f56d2c0f0b56"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 533,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      94805,
+      102260,
+      614
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7e26703c9d872d14caa8e934c3682d96",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 602,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgB",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 602,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Tir Revêche",
+    "en": "Surly Shot",
+    "es": "Tiro Hosco",
+    "de": "Mürrischer Schuß",
+    "pt": "Tiro Rudimentar"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmgA}.\n\\---\n{#COMBO}\\_: Inflige {magicalDamage:dmgB} aux adversaires alignés à votre héros.",
+    "en": "Does {magicalDamage:dmgA}.\n\\---\n{#COMBO}: Does {magicalDamage:dmgB} to opponents in line with your hero.",
+    "es": "Inflige {magicalDamage:dmgA}.\n\\---\n{#COMBO}: Inflige {magicalDamage:dmgB} a los adversarios alineados a tu héroe.",
+    "de": "Verursacht {magicalDamage:dmgA}.\n\\---\n{#COMBO}: Verursacht {magicalDamage:dmgB} bei den auf deinen Helden ausgerichteten Gegnern.",
+    "pt": "Inflige {magicalDamage:dmgA}.\n\\---\n{#COMBO}: Inflige {magicalDamage:dmgB} aos adversários alinhados ao seu herói."
+  }
+}

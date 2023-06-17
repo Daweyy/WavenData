@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158400
+  },
+  "m_Name": "333",
+  "m_id": 333,
+  "m_displayName": "MONSTRE CHAFER - CLAN SURIN - Blockmort Surin",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 644323870,
+    "b": -50115532,
+    "c": 1804427945,
+    "d": -1429890703,
+    "e": 443707655
+  },
+  "m_i18nChampionNameId": {
+    "a": 644323870,
+    "b": -50115532,
+    "c": 1804427945,
+    "d": -1429890703,
+    "e": 1044612013
+  },
+  "m_i18nDescriptionId": {
+    "a": 644323870,
+    "b": -50115532,
+    "c": 1804427945,
+    "d": -1429890703,
+    "e": -1307855010
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 333,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2938,
+      "skinIds": [
+        2938
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 16
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 17
+          },
+          "buffs": [
+            49
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cmin",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cmax",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 556
+        },
+        {
+          "type": 19,
+          "id": 158
+        }
+      ]
+    },
+    "families": [
+      40
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 86
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 12
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 1,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Blockmort Surin] other[Blockmorts Surins]}",
+    "en": "{0, plural, one[Shiv Blockmort] other[Shiv Blockmorts]}",
+    "es": "{0, plural, one[Blockmorto Surín] other[Blockmortos Surín]}",
+    "de": "{0, plural, one[Dolch-Blockmortus] other[Dolch-Blockmorten]}",
+    "pt": "{0, plural, one[Blockmort Navalha] other[Blockmorts Navalhas]}"
+  },
+  "description": {
+    "fr": "<rem>{NamedEffect:158}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} ou {BLvalue:bl,+} aux alliés autour <sprite name=\"cell_around\">, puis <b>CHARGE</b> un adversaire aligné de {value:cmin} à {cell:cmax} et lui inflige son {%at}.",
+    "en": "<rem>{NamedEffect:158}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} or {BLvalue:bl,+} to surrounding <sprite name=\"cell_around\"> allies, then <b>CHARGES</b> an in-line opponent {value:cmin} to {cell:cmax} away and inflicts {%at} on that opponent.",
+    "es": "<rem>{NamedEffect:158}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} o {BLvalue:bl,+} a los aliados de alrededor <sprite name=\"cell_around\"> y <b>CARGA</b> contra un adversario alineado de {value:cmin} a {cell:cmax} y le inflige su {%at}.",
+    "de": "<rem>{NamedEffect:158}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} oder {BLvalue:bl,+} für die Verbündeten in der Nähe\\_<sprite name=\"cell_around\">. <b>STÜRMT</b> dann auf einen Gegner in derselben Reihe in einer Entfernung von {value:cmin} bis {cell:cmax} zu und fügt ihm seinen {%at} zu.",
+    "pt": "<rem>{NamedEffect:158}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} ou {BLvalue:bl,+} aos aliados em\\_volta\\_<sprite name=\"cell_around\">, depois <b>INVESTE</b> contra um adversário alinhado de {value:cmin} a {cell:cmax} e inflige seu {%at}."
+  },
+  "championName": {
+    "fr": "Barbos Le Désosseur",
+    "en": "Barbos the Deboner",
+    "es": "Barbos el Deshuesador",
+    "de": "Barbos, der Entbeiner",
+    "pt": "Barbos, o Desossador"
+  }
+}

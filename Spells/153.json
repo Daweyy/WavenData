@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "153",
+  "m_id": 153,
+  "m_displayName": "XELOR - ARME - GURPAPA - ETHER - Evolution Gurpapa",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1890281379,
+    "b": -342826684,
+    "c": -1424294150,
+    "d": -703228411,
+    "e": 655504584
+  },
+  "m_i18nDescriptionId": {
+    "a": 1890281379,
+    "b": -342826684,
+    "c": -1424294150,
+    "d": -703228411,
+    "e": -2067409981
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "faae0d80116672d4bbebb9ac77e7863e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 153,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      14
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 161,
+      "families": [
+        7,
+        20
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "ObjectMechanismDefinitionFilter",
+              "condition": 1,
+              "objectMechanisms": [
+                398,
+                559,
+                955,
+                583
+              ]
+            },
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "43497dfc18fd8bb478bfe36631aaf941",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Evolution Gurpapa",
+    "en": "Gurpapa Evolution",
+    "es": "Evolución Gurpapa",
+    "de": "Gurpapa-Evolution",
+    "pt": "Evolução Gurpapa"
+  },
+  "description": {
+    "fr": "Transforme vos <b>SINISTROS</b> en jeu. \n",
+    "en": "Transforms your <b>SINISTROS</b> in play. \n",
+    "es": "Transforma a tus <b>SINISTROS</b> en juego. \n",
+    "de": "Verwandelt deine <b>SINISTROS</b> im Spiel.\n",
+    "pt": "Transforma seus <b>SINISTROS</b> em jogo.\n"
+  }
+}

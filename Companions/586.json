@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "586",
+  "m_id": 586,
+  "m_displayName": "QUETE - BOUFTOU - Dr. Francès Teigne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1076967039,
+    "b": 1027574148,
+    "c": 1880666699,
+    "d": 1850237818,
+    "e": -2144150868
+  },
+  "m_i18nDescriptionId": {
+    "a": -1076967039,
+    "b": 1027574148,
+    "c": 1880666699,
+    "d": 1850237818,
+    "e": -1651651712
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 586,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2251,
+      "skinIds": [
+        2251
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "atmin",
+          "value": -25
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "atmax",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      3
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 120
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          586
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Dr. Francès Teigne",
+    "en": "Dr. Frances Tinea",
+    "es": "Dra. Francis Tiña",
+    "de": "Dr. Klaas Motte",
+    "pt": "Dr. Frances Taine"
+  },
+  "description": {
+    "fr": "{%Attack} {ATvalue:atmin,percent} à la cible pour le tour si c'est un adversaire.\n<b>OU</b>\n{ATvalue:atmax,percent,+} pour le tour si la cible est un allié.\n\\---\n{%DeathBlow} Détruit les sorts de <b>MALADIE</b> de votre main.",
+    "en": "{%Attack} {ATvalue:atmin,percent} to the target for the turn if the target is an opponent.\n<b>OR</b>\n{ATvalue:atmax,percent,+} for the turn if the target is an ally.\n\\---\n{%DeathBlow} Destroys the <b>SICKNESS</b> spells in your hand.",
+    "es": "{%Attack} {ATvalue:atmin,percent} al objetivo durante el turno si es un adversario.\n<b>O</b>\n{ATvalue:atmax,percent,+} durante el turno si el objetivo es un aliado.\n\\---\n{%DeathBlow} Destruye los hechizos de <b>ENFERMEDAD</b> de tu mano.",
+    "de": "{%Attack} {ATvalue:atmin,percent} für das Ziel für die Runde, wenn es ein Gegner ist.\n<b>ODER</b>\n{ATvalue:atmax,percent,+} für die Runde, falls das Ziel ein Verbündeter ist.\n\\---\n{%DeathBlow} Zerstört die <b>KRANKHEITSZAUBER</b> auf deiner Hand.",
+    "pt": "{%Attack} {ATvalue:atmin,percent} ao alvo durante o turno se ele for um adversário.\n<b>OU</b>\n{ATvalue:atmax,percent,+} durante o turno se o alvo for um aliado.\n\\---\n{%DeathBlow} Destrói os feitiços de <b>DOENÇA</b> da sua mão."
+  }
+}

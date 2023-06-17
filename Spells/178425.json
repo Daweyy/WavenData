@@ -1,0 +1,125 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "178425",
+  "m_id": 178425,
+  "m_displayName": "MONSTRE TAURE - Taurage",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1443906212,
+    "b": -1781176108,
+    "c": -1096178005,
+    "d": 769672565,
+    "e": -1895901895
+  },
+  "m_i18nDescriptionId": {
+    "a": -1443906212,
+    "b": -1781176108,
+    "c": -1096178005,
+    "d": 769672565,
+    "e": -2038480501
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7228524dcca863f439a7bd85edbb7c0f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 178425,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        56
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a18e4503c014a7b4da8e0800c2ff7f32",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Taurage",
+    "en": "Tauring",
+    "es": "Toreo",
+    "de": "Taurentum",
+    "pt": "Tauragem"
+  },
+  "description": {
+    "fr": "{ATvalue:at,percent,+} à un <b>Taure</b> allié pour le tour.",
+    "en": "{ATvalue:at,percent,+} to an allied <b>Taur</b> for the turn.",
+    "es": "{ATvalue:at,percent,+} a un <b>toro</b> aliado durante el turno.",
+    "de": "{ATvalue:at,percent,+} für einen verbündeten <b>Taurus</b> für die Runde.",
+    "pt": "{ATvalue:at,percent,+} a um <b>Tauro</b> aliado durante o turno."
+  }
+}

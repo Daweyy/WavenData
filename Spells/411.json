@@ -1,0 +1,194 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "411",
+  "m_id": 411,
+  "m_displayName": "MONSTRE CRAQUELEUR - Rocanon",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1546126926,
+    "b": -1973783068,
+    "c": -623148422,
+    "d": -1186264036,
+    "e": -477642004
+  },
+  "m_i18nDescriptionId": {
+    "a": -1546126926,
+    "b": -1973783068,
+    "c": -623148422,
+    "d": -1186264036,
+    "e": 1945407121
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c2df94d30e1756d49819eed85ba7abb5"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "efcb01be3c60c914282f29e8c0970393"
+      },
+      {
+        "assetGuid": "334155b1f7d090248a656efba10810c9"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 411,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        41
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              1607
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Rocanon",
+    "en": "Rocannon",
+    "es": "Rocañón",
+    "de": "Felsenkanone",
+    "pt": "Rocanhão"
+  },
+  "description": {
+    "fr": "Téléporte un {ObjectMechanism:1607!} allié sur une case adjacente\\_<sprite name=\"cell_cross\"> à un adversaire.\n\\---\nInflige {magicalPowerValue:min} à {magicalDamage:max} aux adversaires autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée, puis le détruit.",
+    "en": "Teleports an allied {ObjectMechanism:1607!} to a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent.\n\\---\nDoes {magicalPowerValue:min} to {magicalDamage:max} to opponents around\\_<sprite name=\"cell_around\"> the destination cell then destroys it.",
+    "es": "Teletransporta a una {ObjectMechanism:1607!} aliada a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un adversario.\n\\---\nInflige {magicalPowerValue:min} a {magicalDamage:max} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> y la destruye.",
+    "de": "Teleportiert einen verbündeten {ObjectMechanism:1607!} auf ein an einen Gegner angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\nVerursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> seines Ankunftsfelds {magicalPowerValue:min} bis {magicalDamage:max} und zerstört ihn dann.",
+    "pt": "Teletransporta uma {ObjectMechanism:1607!} aliada sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um adversário.\n\\---\nInflige de {magicalPowerValue:min} a {magicalDamage:max} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de sua célula de chegada, depois causa sua destruição."
+  }
+}

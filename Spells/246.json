@@ -1,0 +1,191 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "246",
+  "m_id": 246,
+  "m_displayName": "SRAM - CLASSE - EAU - Descent",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1239441269,
+    "b": 172081172,
+    "c": 886330907,
+    "d": -1804408693,
+    "e": 1609637755
+  },
+  "m_i18nDescriptionId": {
+    "a": 1239441269,
+    "b": 172081172,
+    "c": 886330907,
+    "d": -1804408693,
+    "e": 1739439308
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c88e78330e5687d4c97dd41b928c739d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 246,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      347176,
+      602,
+      393
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllFloorMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5deb9893dc571a24baa23567569218ea",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 69479,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Descent",
+    "en": "Descent",
+    "es": "Descenso",
+    "de": "Abwind",
+    "pt": "Descida"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> de votre héros et d'un de vos {%KEYWORD.TRAP.NAME,plural:other}.",
+    "en": "Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> your hero and one of your {%KEYWORD.TRAP.NAME,plural:other}.",
+    "es": "Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de tu héroe y de una de tus {%KEYWORD.TRAP.NAME,plural:other}.",
+    "de": "Verursacht {magicalDamage:dmg} ringsum\\_<sprite name=\"cell_around\"> deines Helden und einer deiner {%KEYWORD.TRAP.NAME,plural:other}.",
+    "pt": "Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> do seu herói e de uma das suas {%KEYWORD.TRAP.NAME,plural:other}."
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "215915",
+  "m_id": 215915,
+  "m_displayName": "ENIRIPSA - CLASSE - EAU - Mot Vivifiant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1064354804,
+    "b": 359472788,
+    "c": -1849716759,
+    "d": -2011960349,
+    "e": 771442215
+  },
+  "m_i18nDescriptionId": {
+    "a": -1064354804,
+    "b": 359472788,
+    "c": -1849716759,
+    "d": -2011960349,
+    "e": -2125950682
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "170a85848a659f24e819f223df9e0bca"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "34e26a01b6e7e264ca8edfa06ba8952e"
+      },
+      {
+        "assetGuid": "5f06c904c88a7b74c970fcdc72484150"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 215915,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      579,
+      930,
+      596
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "p",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 33
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 967,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Mot Vivifiant",
+    "en": "Invigorating Word",
+    "es": "Palabra Revitalizante",
+    "de": "Belebendes Wort",
+    "pt": "Palavra Vivificante"
+  },
+  "description": {
+    "fr": "Téléporte un allié jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:p} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "en": "Teleports an ally up to {cell:c}.\n\\---\nDoes {magicalDamage:p} to opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
+    "es": "Teletransporta a un aliado hasta {cell:c}.\n\\---\nInflige {magicalDamage:p} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
+    "de": "Teleportiert einen Verbündeten bis zu {cell:c}.\n\\---\nVerursacht bei Gegnern, die an sein Ankunftsfeld angrenzen\\_<sprite name=\"cell_cross\">, {magicalDamage:p} zu.",
+    "pt": "Teletransporta um aliado a até {cell:c}.\n\\---\nInflige {magicalDamage:p} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada."
+  }
+}

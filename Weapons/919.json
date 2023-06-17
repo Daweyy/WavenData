@@ -1,0 +1,231 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "919",
+  "m_id": 919,
+  "m_displayName": "IOP - Justelame Brutale",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 471954167,
+    "b": 731936052,
+    "c": 1697668187,
+    "d": 337255526,
+    "e": 1824119189
+  },
+  "m_i18nDescriptionId": {
+    "a": 471954167,
+    "b": 731936052,
+    "c": 1697668187,
+    "d": 337255526,
+    "e": 266343014
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": 471954167,
+    "b": 731936052,
+    "c": 1697668187,
+    "d": 337255526,
+    "e": 1900889873
+  },
+  "m_i18nSimpleNameId": {
+    "a": 471954167,
+    "b": 731936052,
+    "c": 1697668187,
+    "d": 337255526,
+    "e": -1943981758
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": 471954167,
+    "b": 731936052,
+    "c": 1697668187,
+    "d": 337255526,
+    "e": -1957812910
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "202308b3184cfd14db0b57ec7b8e8330"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 919,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7765,
+      "skinIds": [
+        8082,
+        8576,
+        9395,
+        5526,
+        9900,
+        7765
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "t",
+          "value": 1
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "p",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 544
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "s",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 455
+        }
+      ]
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 387
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 32
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      760018,
+      760421,
+      760510,
+      760591
+    ],
+    "difficultyHint": 1,
+    "defaultSkinIdMale": 7765,
+    "defaultSkinIdFemale": 8082,
+    "god": 1,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      926,
+      237757,
+      238079,
+      238199
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      234,
+      319,
+      946,
+      202995,
+      856,
+      202467,
+      344,
+      142,
+      239
+    ]
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Lorsque vous déclenchez {NamedEffect:455}\\_:\\v Votre héros gagne {value:p,percent} de son {%AT} en {%AR,plural:other}.\n\\---\n<rem>Limité à {value:t} fois par tour.</i></rem>",
+    "en": "When you trigger {NamedEffect:455}:\\v Your hero gains {value:p,percent} of their {%AT} as {%AR}.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</i></rem>",
+    "es": "Cuando activas {NamedEffect:455}:\\v Tu héroe gana un {value:p,percent} de su {%AT} en {%AR,plural:other}.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</i></rem>",
+    "de": "Wenn du {NamedEffect:455} auslöst:\\v Dein Held erhält {value:p,percent} seines {%AT} als {%AR,plural:other}.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</i></rem>",
+    "pt": "Ao ativar {NamedEffect:455}:\\v O herói ganha {value:p,percent} de seu {%AT} em {%AR,plural:other}.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</i></rem>"
+  },
+  "gameplayDescription": {
+    "fr": "{NamedEffect:455}\\_: Allez au coeur de la bataille\\_! Plus il y a d'aversaires autour de vous, plus vous pourrez cogner\\_!\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort...\n\\---\n<color=#7FD5E4>{%AR}</color>\\_: ... et plus vous aurez d'Armure\\_! L'Armure permet d'encaisser les dégâts reçus\\_!",
+    "en": "{NamedEffect:455}: Jump into the fray! The more opponents there are around you, the more you can hit!\n\\---\n<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit…\n\\---\n<color=#7FD5E4>{%AR}</color>: … and the more Armor you'll have! Armor lets you withstand damage taken!",
+    "es": "{NamedEffect:455}: ¡Adéntrate en el corazón de la batalla! Cuantos más adversarios tengas alrededor, ¡más podrás pegar!\n\\---\n<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, más fuerte golpearás…\n\\---\n<color=#7FD5E4>{%AR}</color>: … y más armadura tendrás. La armadura permite soportar mejor los daños recibidos.",
+    "de": "{NamedEffect:455}: Geh mitten in den Kampf! Je mehr Gegner du um dich herum hast, desto stärker kannst du zuschlagen!\n\\---\n<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu\\_…\n\\---\n<color=#7FD5E4>{%AR}</color>: … und umso mehr Rüstung erhältst du! Dank der Rüstung kannst du erlittenen Schaden wegstecken!",
+    "pt": "{NamedEffect:455}: Vá para o centro da batalha! Quanto mais adversários ao seu redor, mais você poderá bater!\n\\---\n<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes...\n\\---\n<color=#7FD5E4>{%AR}</color>: ... e mais Armadura você terá! A Armadura permite resistir mais aos danos sofridos!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameIop}",
+    "en": "{%OnboardingSimpleNameIop}",
+    "es": "{%OnboardingSimpleNameIop}",
+    "de": "{%OnboardingSimpleNameIop}",
+    "pt": "{%OnboardingSimpleNameIop}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionIop}",
+    "en": "{%OnboardingSimpleDescriptionIop}",
+    "es": "{%OnboardingSimpleDescriptionIop}",
+    "de": "{%OnboardingSimpleDescriptionIop}",
+    "pt": "{%OnboardingSimpleDescriptionIop}"
+  }
+}

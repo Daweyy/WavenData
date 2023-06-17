@@ -1,0 +1,207 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "130509",
+  "m_id": 130509,
+  "m_displayName": "XELOR - ARME - PIKUXALA - FEU - Teleport Compulsif",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1604451555,
+    "b": -1062297884,
+    "c": 777091433,
+    "d": 35149490,
+    "e": -1786459511
+  },
+  "m_i18nDescriptionId": {
+    "a": 1604451555,
+    "b": -1062297884,
+    "c": 777091433,
+    "d": 35149490,
+    "e": -1287260141
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b78068117b0cb8d49a1c8d4bfad9d355"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "f60072562be556c48a9f5babbffdc17e"
+      },
+      {
+        "assetGuid": "079187ebafc9f304db8cfda4a06dd558"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 130509,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      163129,
+      475105,
+      179147
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": 945,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0187a36cdc3675e44afb13d74e3895b2",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 156,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléport Compulsif",
+    "en": "Compulsive Teleportation",
+    "es": "Teletransporte Compulsivo",
+    "de": "Zwanghafter Teleport",
+    "pt": "Teletransporte Compulsivo"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et téléporte votre héros jusqu'à {cell:c}.",
+    "en": "Does {magicalDamage:dmg} and teleports your hero up to {cell:c}.",
+    "es": "Inflige {magicalDamage:dmg} y teletransporta a tu héroe hasta {cell:c}.",
+    "de": "Verursacht {magicalDamage:dmg} und teleportiert deinen Helden bis auf {cell:c}.",
+    "pt": "Inflige {magicalDamage:dmg} e teletransporta o seu herói a até {cell:c}."
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "135557",
+  "m_id": 135557,
+  "m_displayName": "XELOR - ARME - GURPAPA - EAU - Protocole annihilation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1042721857,
+    "b": 1808814164,
+    "c": 1349747464,
+    "d": 517712237,
+    "e": 1939838287
+  },
+  "m_i18nDescriptionId": {
+    "a": 1042721857,
+    "b": 1808814164,
+    "c": 1349747464,
+    "d": 517712237,
+    "e": -316224419
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f00f0d92860683c449a2475208698344"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 135557,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      841,
+      470645,
+      589
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 161,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 8
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -1
+                },
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": "",
+                  "from": {
+                    "type": "AllObjectMechanismsSelector"
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "OwnerFilter",
+                      "isIdentical": true,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    },
+                    {
+                      "type": "FamilyFilter",
+                      "condition": 1,
+                      "families": [
+                        20
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "599985f62f89dac4b9f540716dabac4c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 32
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 470,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Protocole : Annihilation",
+    "en": "Annihilation Protocol",
+    "es": "Protocolo: Aniquilación",
+    "de": "Protokoll: Vernichtung",
+    "pt": "Protocolo: Aniquilação"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} au coût de ce {%SPELLCOUNT} pour chacun de vos <b>SINISTROS</b> en jeu.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} to the cost of this {%SPELLCOUNT} for each of your <b>SINISTROS</b> in play.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} al coste de este {%SPELLCOUNT} por cada uno de tus <b>SINISTROS</b> en juego.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} auf Kosten dieses {%SPELLCOUNT}s für jeden deiner <b>SINISTROS</b> im Spiel.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} ao custo deste {%SPELLCOUNT} para cada um dos seus <b>SINISTROS</b> em jogo."
+  }
+}

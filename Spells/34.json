@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "34",
+  "m_id": 34,
+  "m_displayName": "MONSTRE COCHON - Bayonnade",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1838982146,
+    "b": -494344012,
+    "c": -853015718,
+    "d": -1205807161,
+    "e": -1120004736
+  },
+  "m_i18nDescriptionId": {
+    "a": -1838982146,
+    "b": -494344012,
+    "c": -853015718,
+    "d": -1205807161,
+    "e": 904135475
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9f7c77b323454574bbedb77715bc5c41"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 34,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7b774d1ad968516438869b826f5c5cac",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bayonnade",
+    "en": "Batterayonet",
+    "es": "Bayonada",
+    "de": "Bajonade",
+    "pt": "Baionada"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nPioche {value:nb} sort.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nDraws {value:nb} {%SPELLCOUNT,value:nb}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nSacas {value:nb} hechizo.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nZiehe {value:nb} Zauber.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nCompre {value:nb} feitiço."
+  }
+}

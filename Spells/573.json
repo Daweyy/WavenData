@@ -1,0 +1,237 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "573",
+  "m_id": 573,
+  "m_displayName": "XELOR - CLASSE - FEU - Teleportation Longue",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2096364355,
+    "b": 219309844,
+    "c": -198533096,
+    "d": 1448374422,
+    "e": 251474409
+  },
+  "m_i18nDescriptionId": {
+    "a": -2096364355,
+    "b": 219309844,
+    "c": -198533096,
+    "d": 1448374422,
+    "e": -713452503
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5dce676c54c8d21429a00ced279c29b9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2051,
+      2050
+    ],
+    "m_values": [
+      {
+        "assetGuid": "92d0a9986e6ad4b489fb93e0ba38ac6e"
+      },
+      {
+        "assetGuid": "f60072562be556c48a9f5babbffdc17e"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 573,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      540825,
+      464,
+      473070
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "UnionOfCoordFilter",
+              "firstFilter": {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "c",
+                    "value": 3
+                  }
+                }
+              },
+              "secondFilter": {
+                "type": "AroundSquaredTargetFilter",
+                "targetsToCompare": {
+                  "type": "FilteredEntitySelector",
+                  "from": {
+                    "type": "AllObjectMechanismsSelector"
+                  },
+                  "filters": [
+                    {
+                      "type": "OwnerFilter",
+                      "isIdentical": true,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    },
+                    {
+                      "type": "FamilyFilter",
+                      "condition": 1,
+                      "families": [
+                        20
+                      ]
+                    }
+                  ]
+                },
+                "distance": {
+                  "type": "EqualsTo",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  }
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 784,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléportation Longue",
+    "en": "Long Teleportation",
+    "es": "Teletransportación Larga",
+    "de": "Lange Teleportation",
+    "pt": "Teletransporte Longo"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:c} <b>OU</b> autour\\_<sprite name=\"cell_around\"> d'un de vos <b>SINISTROS</b>.\n\\---\nInflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée.",
+    "en": "Teleports your hero up to {cell:c} <b>OR</b> around\\_<sprite name=\"cell_around\"> one of your <b>SINISTROS</b>.\n\\---\nDoes {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> the destination cell.",
+    "es": "Teletransporta a tu héroe hasta a {cell:c} <b>O</b> alrededor\\_<sprite name=\"cell_around\"> de uno de tus <b>SINISTROS</b>.\n\\---\nInflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada.",
+    "de": "Teleportiert deinen Helden bis zu {cell:c} <b>ODER</b> ringsum\\_<sprite name=\"cell_around\"> eines deiner <b>SINISTROS</b>.\n\\---\nVerursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> seines Ankunftsfelds {magicalDamage:dmg}.",
+    "pt": "Teletransporta seu herói a até {cell:c} <b>OU</b> em\\_volta\\_<sprite name=\"cell_around\"> de um dos seus <b>SINISTROS</b>.\n\\---\nInflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada."
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "137",
+  "m_id": 137,
+  "m_displayName": "ENIRIPSA - ARME - PINCEAU KOKORO - TERRE - Kokoro Renforce",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1306340610,
+    "b": -158823612,
+    "c": -653027639,
+    "d": -1590946921,
+    "e": -1764264912
+  },
+  "m_i18nDescriptionId": {
+    "a": -1306340610,
+    "b": -158823612,
+    "c": -653027639,
+    "d": -1590946921,
+    "e": 2103205240
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a5e715ae147ce9242921a09a87d65051"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 137,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      646,
+      418,
+      509659
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      13
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 967,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "",
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5c831e1a72da216438d836e1d72713b2",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 8
+              },
+              {
+                "type": "ConditionalValue",
+                "referenceId": "",
+                "condition": {
+                  "type": "SupportCondition"
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "Supp",
+                  "value": 4
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 75548,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Supp",
+          "value": 4
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "SUPPORT"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Kokoro Renforcé",
+    "en": "Reinforced Kokoro",
+    "es": "Kokoro Reforzado",
+    "de": "Verstärkter Kokoro",
+    "pt": "Kokoro Reforçado"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires alignés à un allié.\n\\---\n{#SUPPORT}\\_: {magicalDamage:Supp,+}",
+    "en": "Does {magicalDamage:dmg} to opponents in line with an ally.\n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios alineados con un aliado.\n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}.",
+    "de": "Fügt Gegnern, die sich in derselben Reihe wie ein Verbündeter befinden, {magicalDamage:dmg} zu.\n\\---\n{#SUPPORT}:{magicalDamage:Supp,+}",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários alinhados a um aliado.\n\\---\n{#SUPPORT}: Aciona {magicalDamage:Supp,+}"
+  }
+}

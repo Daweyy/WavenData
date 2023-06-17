@@ -1,0 +1,199 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "140298",
+  "m_id": 140298,
+  "m_displayName": "CRA - ARME - VOLDORAK - TERRE - Poing Jugulant",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -648980330,
+    "b": 207544676,
+    "c": 2141593289,
+    "d": -392364168,
+    "e": 1697996907
+  },
+  "m_i18nDescriptionId": {
+    "a": -648980330,
+    "b": 207544676,
+    "c": 2141593289,
+    "d": -392364168,
+    "e": 400051523
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "33003aee79a88ad418c6bbc745e845c5"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 140298,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      341,
+      98646,
+      652
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": 953,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "CharacterEntityFilter"
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0cab9cabfd0d35b49957573768e565eb",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "CasterHeroSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 19
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 402,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Poing Jugulant",
+    "en": "Halting Fist",
+    "es": "Puño Atajante",
+    "de": "Zügelnde Faust",
+    "pt": "Punho Fulminante"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire aligné.\n\\---\n{#COMBO}\\_: {PMvalue:pm,+} à votre héros pour le tour.",
+    "en": "Does {magicalDamage:dmg} to an in-line opponent.\n\\---\n{#COMBO}: {PMvalue:pm,+} to your hero for the turn.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario alineado.\n\\---\n{#COMBO}: {PMvalue:pm,+} a tu héroe durante el turno.",
+    "de": "Verursacht bei einem Gegner in derselben Reihe {magicalDamage:dmg}.\n\\---\n{#COMBO}: {PMvalue:pm,+} für deinen Helden für die Runde.",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário alinhado.\n\\---\n{#COMBO}: {PMvalue:pm,+} ao seu herói durante o turno."
+  }
+}

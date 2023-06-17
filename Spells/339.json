@@ -1,0 +1,147 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "339",
+  "m_id": 339,
+  "m_displayName": "COMPAGNON - FLOPIN - Ingéniosité de Flopin",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 372201215,
+    "b": -1723205612,
+    "c": -516602391,
+    "d": -1139456141,
+    "e": -1768411273
+  },
+  "m_i18nDescriptionId": {
+    "a": 372201215,
+    "b": -1723205612,
+    "c": -516602391,
+    "d": -1139456141,
+    "e": -1439844689
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2e87a531695023d4887fc8bb0e9e748d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 339,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5a56ec9e8d0082340a237024927cfc8f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ingéniosité de Flopin",
+    "en": "Flopin's Cleverness",
+    "es": "Ingenio de Flopin",
+    "de": "Flopins Einfallsreichtum",
+    "pt": "Engenhosidade de Flopan"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nPiochez votre prochain {%SPELLCOUNT} de {%KEYWORD.OBJECTMECHANISM.NAME} ou de {%KEYWORD.TRAP.NAME}. {PAvalue:pa} au coût du {%SPELLCOUNT} pioché.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nDraw your next {%KEYWORD.OBJECTMECHANISM.NAME} or {%KEYWORD.TRAP.NAME} {%SPELLCOUNT}. {PAvalue:pa} to the cost of the drawn {%SPELLCOUNT}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nSacas tu próximo {%SPELLCOUNT} de {%KEYWORD.OBJECTMECHANISM.NAME} o de {%KEYWORD.TRAP.NAME}. {PAvalue:pa} al coste del {%SPELLCOUNT} sacado.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nZieht deinen nächsten {%KEYWORD.OBJECTMECHANISM.NAME}- oder {%KEYWORD.TRAP.NAME}-{%SPELLCOUNT}. {PAvalue:pa} auf die Kosten des gezogenen {%SPELLCOUNT}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nCompre seu próximo {%SPELLCOUNT} de {%KEYWORD.OBJECTMECHANISM.NAME} ou de {%KEYWORD.TRAP.NAME}. {PAvalue:pa} ao custo do {%SPELLCOUNT} comprado."
+  }
+}

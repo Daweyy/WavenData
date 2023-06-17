@@ -1,0 +1,166 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "485",
+  "m_id": 485,
+  "m_displayName": "ENIRIPSA - CLASSE - EAU - Laboratoire de Glace",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1809131656,
+    "b": -275167420,
+    "c": 160686810,
+    "d": 1211723106,
+    "e": 962181747
+  },
+  "m_i18nDescriptionId": {
+    "a": 1809131656,
+    "b": -275167420,
+    "c": 160686810,
+    "d": 1211723106,
+    "e": -347379920
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ce308337dcaf5a5448320fcc976c27ab"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 485,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      436,
+      546,
+      502295
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      19,
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 118
+        },
+        {
+          "type": 25,
+          "id": 178
+        },
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 914
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Laboratoire de Glace",
+    "en": "Ice Laboratory",
+    "es": "Laboratorio de Hielo",
+    "de": "Eis-Laboratorium",
+    "pt": "Laboratório de Gelo"
+  },
+  "description": {
+    "fr": "Construit un {ObjectMechanism:914} jusqu'à {cell:c} de votre héros.\n\\---\n<rem>Détruit votre précédent {ObjectMechanism:914!}.</rem>",
+    "en": "Builds one {ObjectMechanism:914} up to {cell:c} from your hero.\n\\---\n<rem>Destroys your previous {ObjectMechanism:914!}.</rem>",
+    "es": "Construye un {ObjectMechanism:914} hasta a {cell:c} de tu héroe.\n\\---\n<rem>Destruye tu {ObjectMechanism:914!} anterior.</rem>",
+    "de": "Errichtet ein\\_{ObjectMechanism:914} auf eine Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\n<rem>Zerstört dein vorheriges {ObjectMechanism:914!}.</rem>",
+    "pt": "Posiciona um {ObjectMechanism:914} a até {cell:c} do seu herói.\n\\---\n<rem>Destrói o {ObjectMechanism:914!} anterior.</rem>"
+  }
+}

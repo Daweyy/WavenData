@@ -1,0 +1,119 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "338",
+  "m_id": 338,
+  "m_displayName": "DQ - CONTRAT - BOUFTOU - 3_Piqure douteuse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1013800760,
+    "b": -1114172316,
+    "c": 1027320586,
+    "d": 1321868343,
+    "e": 557485075
+  },
+  "m_i18nDescriptionId": {
+    "a": -1013800760,
+    "b": -1114172316,
+    "c": 1027320586,
+    "d": 1321868343,
+    "e": -685061015
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "dcbbece260c978b46940566d5c07bfe9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 338,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "249ab968cdcee134c9b33237d45431ee",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 15,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Piqûre douteuse",
+    "en": "Dubious Shot",
+    "es": "Picadura Dudosa",
+    "de": "Fragwürdiger Stich",
+    "pt": "Picada Duvidosa"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Does {magicalDamage:dmg} to an opponent.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Inflige {magicalDamage:dmg} a un adversario.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Verursacht {magicalDamage:dmg} bei einem Gegner.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

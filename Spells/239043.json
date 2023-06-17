@@ -1,0 +1,137 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "239043",
+  "m_id": 239043,
+  "m_displayName": "ENIRIPSA - ARME - LAME VORACIUS - ETHER - Bond Vorace",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 961454674,
+    "b": -854927980,
+    "c": 1456022168,
+    "d": -2001592150,
+    "e": 523984066
+  },
+  "m_i18nDescriptionId": {
+    "a": 961454674,
+    "b": -854927980,
+    "c": 1456022168,
+    "d": -2001592150,
+    "e": 1713314562
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1f4d9a7849d58c74990e7a27f9cb4756"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "c0b606c0f3ae6ce4f900d65b070d70cf"
+      },
+      {
+        "assetGuid": "98a9be0fde6348d40b5c9518d5f6ad60"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 239043,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 202,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bond Vorace",
+    "en": "Voracious Leap",
+    "es": "Salto Voraz",
+    "de": "Gefräßiger Sprung",
+    "pt": "Salto Voraz"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu’à {cell:d}.\n\\---\nCe sort revient dans votre main s'il possède au moins une {%AURA_HEART}.",
+    "en": "Teleports your hero up to {cell:d}.\n\\---\nThis spell returns to your hand if they have at least one {%AURA_HEART}.",
+    "es": "Teletransporta a tu héroe hasta {cell:d}.\n\\---\nEste hechizo vuelve a tu mano si este tiene al menos un {%AURA_HEART}.",
+    "de": "Teleportiert deinen Helden bis zu {cell:d}.\n\\---\nDieser Zauber geht zurück auf deine Hand, wenn er mindestens 1\\_{%AURA_HEART} besitzt.",
+    "pt": "Teletransporta seu herói a até {cell:d}.\n\\---\nEste feitiço volta para sua mão se o seu herói possuir uma {%AURA_HEART} ou mais."
+  }
+}

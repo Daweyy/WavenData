@@ -1,0 +1,198 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "726",
+  "m_id": 726,
+  "m_displayName": "QUETE - BOUFTOU - Boufquette",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2117479507,
+    "b": 995240052,
+    "c": -2000934327,
+    "d": -205159521,
+    "e": -784869011
+  },
+  "m_i18nDescriptionId": {
+    "a": 2117479507,
+    "b": 995240052,
+    "c": -2000934327,
+    "d": -205159521,
+    "e": -1611848156
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 726,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 4003,
+      "skinIds": [
+        4003
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 21,
+          "id": 3
+        }
+      ]
+    },
+    "families": [
+      36
+    ],
+    "baseProperties": [
+      41
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 1
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          726
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Boufquette",
+    "en": "Gobtail",
+    "es": "Jalanquita",
+    "de": "Fresslieschen",
+    "pt": "Papatrança"
+  },
+  "description": {
+    "fr": "<rem>{Companion:698!} est son {LinkEffect:3}.</rem>\n\\---\nLorsque {Companion:698!} meurt\\_: Change d'équipe et invoque un {Summoning:484!} autour <sprite name=\"cell_around\"> d'elle .",
+    "en": "<rem>{Companion:698!} is its {LinkEffect:3}.</rem>\n\\---\nWhen {Companion:698!} dies: Changes teams and summons one surrounding <sprite name=\"cell_around\"> {Summoning:484!}.",
+    "es": "<rem>{Companion:698!} es su {LinkEffect:3}.</rem>\n\\---\nCuando {Companion:698!} muere: Cambia de equipo e invoca un {Summoning:484!} alrededor <sprite name=\"cell_around\"> de ella.",
+    "de": "<rem>{Companion:698!} ist sein {LinkEffect:3}.</rem>\n\\---\nWenn {Companion:698!} stirbt: Wechselt das Team und beschwört einen\\_{Summoning:484!} ringsum\\_<sprite name=\"cell_around\">.",
+    "pt": "<rem>{Companion:698!} é seu {LinkEffect:3}.</rem>\n\\---\nQuando {Companion:698!} morre: Muda de equipe e invoca um {Summoning:484!} em\\_volta\\_<sprite name=\"cell_around\"> dela."
+  }
+}

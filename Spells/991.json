@@ -1,0 +1,181 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "991",
+  "m_id": 991,
+  "m_displayName": "MONSTRE COCHON - Charge Cochonne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1917925219,
+    "b": -1594503436,
+    "c": -937332727,
+    "d": 1106089041,
+    "e": 1929602428
+  },
+  "m_i18nDescriptionId": {
+    "a": -1917925219,
+    "b": -1594503436,
+    "c": -937332727,
+    "d": 1106089041,
+    "e": -1123537656
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0f30bcd4afcc45947b40233462ced3ad"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 991,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50
+            ]
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 20
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "04abf26e1f66ea1408b1ae4df0a63255",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Charge Cochonne",
+    "en": "Piggy Charge",
+    "es": "Carga Cerda",
+    "de": "Schweinesturm",
+    "pt": "Investida Porca"
+  },
+  "description": {
+    "fr": "Un <b>Cochon</b> allié <b>CHARGE</b> un adversaire aligné jusqu'à {cell:c} et lui inflige son {%at}.",
+    "en": "An allied <b>Pig</b> <b>CHARGES</b> an in-line opponent up to {cell:c} away and inflicts their {%at} on them.",
+    "es": "Un <b>cerdo</b> aliado <b>CARGA</b> contra un adversario alineado hasta {cell:c} y le inflige su {%at}.",
+    "de": "Ein verbündetes <b>Schweinemonster</b> <b>STÜRMT</b> auf einen ausgerichteten Gegnern bis {cell:c} zu und verursacht seinen {%at}.",
+    "pt": "Um <b>Porco</b> aliado <b>INVESTE</b> contra um adversário alinhado a até {cell:c} e inflige seu {%at}."
+  }
+}

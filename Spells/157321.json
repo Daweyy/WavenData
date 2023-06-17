@@ -1,0 +1,127 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "157321",
+  "m_id": 157321,
+  "m_displayName": "BONTA - Q11 - Exhortation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1559216381,
+    "b": -1768162044,
+    "c": -860939464,
+    "d": -1861016734,
+    "e": -425632048
+  },
+  "m_i18nDescriptionId": {
+    "a": -1559216381,
+    "b": -1768162044,
+    "c": -860939464,
+    "d": -1861016734,
+    "e": -2049543411
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3007c15e16fe67b4c9fc14fd572e1646"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 157321,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        75
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "SuccessCastCondition"
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "1afae0ffe97195c43a09190f19a94c2b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Exhortation",
+    "en": "Exhortation",
+    "es": "Exhortación",
+    "de": "Ermahnung",
+    "pt": "Exortação"
+  },
+  "description": {
+    "fr": "{PMvalue:pm,+} à votre héros pour le tour.\n\\---\nIl rejoue son tour.",
+    "en": "{PMvalue:pm,+} to your hero for the turn.\n\\---\nThey replay their turn.",
+    "es": "{PMvalue:pm,+} a tu héroe durante el turno.\n\\---\nVuelve a jugar su turno.",
+    "de": "{PMvalue:pm,+} für deinen Helden für die Runde.\n\\---\nEr spielt seine Runde erneut.",
+    "pt": "{PMvalue:pm,+} ao seu herói durante o turno.\n\\---\nEle joga um turno extra."
+  }
+}

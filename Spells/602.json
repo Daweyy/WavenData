@@ -1,0 +1,164 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "602",
+  "m_id": 602,
+  "m_displayName": "MONSTRE COCHON - Aura Cochonne",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 245728377,
+    "b": -775644716,
+    "c": -234538197,
+    "d": -2137139480,
+    "e": -1950481909
+  },
+  "m_i18nDescriptionId": {
+    "a": 245728377,
+    "b": -775644716,
+    "c": -234538197,
+    "d": -2137139480,
+    "e": -1019454438
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7b99ea6e3bb5b7148ae5bb8608557cc3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 602,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "37fbd42ca3761d44dafd0dcc96bd8055",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 76
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Aura Cochonne",
+    "en": "Piggy Aura",
+    "es": "Aura Marrana",
+    "de": "Schweine-Aura",
+    "pt": "Aura Porca"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max}.\n\\---\n{value:a,+}\\_{aura:76,value:a} à un <b>Cochon</b> allié aléatoire autour\\_<sprite name=\"cell_around\"> de la cible.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max}.\n\\---\n{value:a,+}\\_{aura:76,value:a} to a random allied <b>Pig</b> around\\_<sprite name=\"cell_around\"> the target.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{value:a,+}\\_{aura:76,value:a} a un <b>cerdo</b> aliado aleatorio alrededor\\_<sprite name=\"cell_around\"> del objetivo.",
+    "de": "Verursacht{magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\n{value:a,+}\\_{aura:76,value:a} für ein zufälliges verbündetes <b>Schweinemonster</b> ringsum\\_<sprite name=\"cell_around\"> das Ziel.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max}.\n\\---\n{value:a,+}\\_{aura:76,value:a} a um <b>Porco</b> aliado aleatório em\\_volta\\_<sprite name=\"cell_around\"> do alvo."
+  }
+}

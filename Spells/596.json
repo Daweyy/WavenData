@@ -1,0 +1,208 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "596",
+  "m_id": 596,
+  "m_displayName": "MONSTRE BWORK - Souplesse Bwork",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1970355782,
+    "b": 850164804,
+    "c": -1360340037,
+    "d": -2054266468,
+    "e": -498529497
+  },
+  "m_i18nDescriptionId": {
+    "a": 1970355782,
+    "b": 850164804,
+    "c": -1360340037,
+    "d": -2054266468,
+    "e": -1349083734
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2686d14c0bab58240a008f8228ebd608"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0fe38e0554d65624fa98b5e6690ef356"
+      },
+      {
+        "assetGuid": "460bc427383fe9f40862ce832ed1e828"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 596,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        49
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              49
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "CharacterEntityFilter"
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0bfdcecd2e1a6af45b7ee3d9757e8938",
+        "originTarget": {
+          "type": "SecondCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Souplesse Bwork",
+    "en": "Bwork Suppleness",
+    "es": "Flexibilidad Bwork",
+    "de": "Bwork-Gelenkigkeit",
+    "pt": "Flexibilidade Bwork"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à un <b>Bwork</b> allié et le téléporte dans son dos.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:dmg} to an opponent adjacent\\_<sprite name=\"cell_cross\"> to an allied <b>Bwork</b> and teleports them behind the Bwork.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a un <b>bwork</b> aliado y lo teletransporta a su espalda.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:dmg} bei einem Gegner, der an einen verbündeten <b>Bwork</b> angrenzt\\_<sprite name=\"cell_cross\">, und teleportiert ihn hinter sich.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> a um <b>Bwork</b> aliado e o teletransporta para suas costas."
+  }
+}

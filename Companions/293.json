@@ -1,0 +1,247 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "293",
+  "m_id": 293,
+  "m_displayName": "DECK - COMMON - MULTI - Shani",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 474768598,
+    "b": 1006736756,
+    "c": -1492912341,
+    "d": 1931149077,
+    "e": 1257291498
+  },
+  "m_i18nDescriptionId": {
+    "a": 474768598,
+    "b": 1006736756,
+    "c": -1492912341,
+    "d": 1931149077,
+    "e": 2115595264
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 293,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 946,
+      "skinIds": [
+        946
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "PUSH",
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 203181
+        }
+      ]
+    },
+    "families": [
+      4
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 82
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      400773,
+      401028,
+      401174,
+      309,
+      741367,
+      741372
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          293
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "FilteredCharacterSelector",
+                  "filters": [
+                    {
+                      "type": "TeamFilter",
+                      "isIdentical": false,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    }
+                  ]
+                },
+                "distance": {
+                  "type": "EqualsTo",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": true
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Shani",
+    "en": "Shani",
+    "es": "Shani",
+    "de": "Shani",
+    "pt": "Shayni"
+  },
+  "description": {
+    "fr": "<rem>Peut être invoquée sur une case adjacente\\_<sprite name=\"cell_cross\"> à un adversaire.</rem>\n\\---\n{%ATTACK} Ajoute le sort {Spell:203181} à votre main.",
+    "en": "<rem>May be summoned on a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent.</rem>\n\\---\n{%ATTACK} Adds the {Spell:203181} spell to your hand.",
+    "es": "<rem>Se puede invocar en una casilla adyacente\\_<sprite name=\"cell_cross\"> a un adversario.</rem>\n\\---\n{%ATTACK} Añade el hechizo {Spell:203181} a tu mano.",
+    "de": "<rem>Kann auf einem an einen Gegner angrenzenden Feld\\_<sprite name=\"cell_cross\"> beschworen werden.</rem>\n\\---\n{%ATTACK} Fügt deiner Hand den Zauber {Spell:203181} hinzu.",
+    "pt": "<rem>Pode ser invocada sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um adversário.</rem>\n\\---\n{%ATTACK} Adiciona o feitiço {Spell:203181} à sua mão."
+  }
+}

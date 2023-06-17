@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "55383",
+  "m_id": 55383,
+  "m_displayName": "MONSTRE TAURE - Voir Rouge",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -470389290,
+    "b": -1084256940,
+    "c": 1535703178,
+    "d": -1164030548,
+    "e": 1984905195
+  },
+  "m_i18nDescriptionId": {
+    "a": -470389290,
+    "b": -1084256940,
+    "c": 1535703178,
+    "d": -1164030548,
+    "e": 1163393322
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "28e6f9e3ce499364e8f8c294bb9df389"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 55383,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        56
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "CharacterActionTypeFilter",
+            "condition": 1,
+            "actionTypes": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5237f17706f51cd45b22eadc695e1fcd",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pw",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Voir Rouge",
+    "en": "Seeing Red",
+    "es": "Rojo de Ira",
+    "de": "Rot sehen",
+    "pt": "Sangue nos Olhos"
+  },
+  "description": {
+    "fr": "{ATvalue:pw,percent,+} à un <b>Taure</b> allié pour le tour.",
+    "en": "{ATvalue:pw,percent,+} to an allied <b>Taur</b> for the turn.",
+    "es": "{ATvalue:pw,percent,+} a un <b>toro</b> aliado durante el turno.",
+    "de": "{ATvalue:pw,percent,+} für einen verbündeten <b>Taurus</b> für die Runde.",
+    "pt": "{ATvalue:pw,percent,+} a um <b>Tauro</b> aliado durante o turno."
+  }
+}

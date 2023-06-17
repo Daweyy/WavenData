@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "156202",
+  "m_id": 156202,
+  "m_displayName": "MONSTRE ROUBLARD - Bouquet Final",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1185504232,
+    "b": -723077132,
+    "c": -1632951078,
+    "d": 1502900375,
+    "e": 1070652679
+  },
+  "m_i18nDescriptionId": {
+    "a": 1185504232,
+    "b": -723077132,
+    "c": -1632951078,
+    "d": 1502900375,
+    "e": 949854214
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "be38847ff7d79664cbd23a491527a366"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 156202,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        13
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCoordsSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f0bb47dc5cd159149960767ca060f848",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            88
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 349
+        },
+        {
+          "type": 7,
+          "id": 1650
+        },
+        {
+          "type": 7,
+          "id": 1506
+        },
+        "EXPLOSION",
+        "BOMB"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bouquet Final",
+    "en": "Grande Finale",
+    "es": "Floritura Final",
+    "de": "Letzter Blumenstrauß",
+    "pt": "Buquê Final"
+  },
+  "description": {
+    "fr": "Les {#BOMB, plural:other} dans la zone\\_<sprite name=\"cell_circle2\"> ciblée déclenchent {explosion:ex}.",
+    "en": "The {#BOMB, plural:other} in the targeted <sprite name=\"cell_circle2\">\\_zone trigger {explosion:ex}.",
+    "es": "Las {#BOMB, plural:other} de la zona\\_<sprite name=\"cell_circle2\"> objetivo activan {explosion:ex}.",
+    "de": "Die {#BOMB, plural:other} im Wirkungsbereich\\_<sprite name=\"cell_circle2\"> lösen {explosion:ex} aus.",
+    "pt": "As {#BOMB, plural:other} contidas na zona\\_<sprite name=\"cell_circle2\"> visada acionam {explosion:ex}."
+  }
+}

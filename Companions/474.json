@@ -1,0 +1,225 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "474",
+  "m_id": 474,
+  "m_displayName": "DECK - COMMON - MULTI - Disciple de l'Agonie",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -901482375,
+    "b": 1014556148,
+    "c": 1946495208,
+    "d": 453525052,
+    "e": -2059656009
+  },
+  "m_i18nDescriptionId": {
+    "a": -901482375,
+    "b": 1014556148,
+    "c": 1946495208,
+    "d": 453525052,
+    "e": -2046462733
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 474,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 6238,
+      "skinIds": [
+        6238
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "RESURRECTABLE"
+      ]
+    },
+    "families": [
+      8
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 68
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 13
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      398019,
+      398062,
+      199,
+      482,
+      741097,
+      770
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          474
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Disciple de l'Agonie",
+    "en": "Disciple of Agony",
+    "es": "Discípulo de la Agonía",
+    "de": "Anhänger der Agonie",
+    "pt": "Discípulo da Agonia"
+  },
+  "description": {
+    "fr": "{#RESURRECTABLE}\\_: Le coût de ce compagnon est réduit de {WATERGAUGEvalue:x,abs}.\n\\---\n<rem>Limité à une fois par combat.</rem>",
+    "en": "{#RESURRECTABLE}: This companion's cost is reduced by {WATERGAUGEvalue:x,abs}.\n\\---\n<rem>Limit: 1 time per fight.</rem>",
+    "es": "{#RESURRECTABLE}: El coste de este compañero se reduce en {WATERGAUGEvalue:x,abs}.\n\\---\n<rem>Limitado a una vez por combate.</rem>",
+    "de": "{#RESURRECTABLE}: Die Kosten für diesen Begleiter werden um {WATERGAUGEvalue:x,abs} verringert.\n\\---\n<rem>Ist auf einmal pro Kampf begrenzt.</rem>",
+    "pt": "{#RESURRECTABLE}: Reduz o custo deste companheiro em {WATERGAUGEvalue:x,abs}.\n\\---\n<rem>Limite de uma vez por combate.</rem>"
+  }
+}

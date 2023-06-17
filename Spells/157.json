@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "157",
+  "m_id": 157,
+  "m_displayName": "MONSTRE ROUBLARD - Depouillage",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1293334688,
+    "b": 1722835828,
+    "c": -1220396743,
+    "d": 949228684,
+    "e": 1177388069
+  },
+  "m_i18nDescriptionId": {
+    "a": -1293334688,
+    "b": 1722835828,
+    "c": -1220396743,
+    "d": 949228684,
+    "e": -166957232
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1de94195986f3d845bebf0eb504fca16"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 157,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        13
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "AllCharactersSelector"
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "dde45239a557fc148a2097da1bd6479c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 10,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "life",
+          "baseValue": 10,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Dépouillage",
+    "en": "Stripping",
+    "es": "Despelleje",
+    "de": "Ausrauben",
+    "pt": "Desnudamento"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nSoigne un allié de {PVvalue:life}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nHeals an ally {PVvalue:life}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nCura a un aliado {PVvalue:life}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nHeilt einen Verbündeten um {PVvalue:life}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nCura um aliado em {PVvalue:life}."
+  }
+}

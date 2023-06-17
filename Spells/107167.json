@@ -1,0 +1,231 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "107167",
+  "m_id": 107167,
+  "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - AIR - Coupe Mordante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -338383154,
+    "b": 1151727764,
+    "c": -1066480662,
+    "d": -410738982,
+    "e": -368624238
+  },
+  "m_i18nDescriptionId": {
+    "a": -338383154,
+    "b": 1151727764,
+    "c": -1066480662,
+    "d": -410738982,
+    "e": -1329634141
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9f7b14a09c703ea48b7fc19cc62960c2"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 107167,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      731,
+      453,
+      617
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 637,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 1,
+            "carac": 1
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b224304e8dd31344f9bf0b52dc6aaf85",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 27
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 995,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hs",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Coupe Mordante",
+    "en": "Biting Cut",
+    "es": "Corte Mordaz",
+    "de": "Bissiger Schlag",
+    "pt": "Talha Mordaz"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à l'adversaire ayant le plus de {%PV}.\n\\---\nSoigne de {PVvalue:dmg2} les alliés adjacents\\_<sprite name=\"cell_cross\"> à lui.",
+    "en": "Does {magicalDamage:dmg} to the opponent with the most {%PV}.\n\\---\nHeals allies adjacent\\_<sprite name=\"cell_cross\"> to the opponent {PVvalue:dmg2}.",
+    "es": "Inflige {magicalDamage:dmg} al adversario que tenga más {%PV}.\n\\---\nCura {PVvalue:dmg2} a los aliados adyacentes a él\\_<sprite name=\"cell_cross\">.",
+    "de": "Fügt dem Gegner mit den meisten {%PV} {magicalDamage:dmg} zu.\n\\---\nHeilt Verbündete in der Nähe\\_<sprite name=\"cell_cross\"> um {PVvalue:dmg2}.",
+    "pt": "Inflige {magicalDamage:dmg} ao adversário que tiver mais {%PV}.\n\\---\nCura em {PVvalue:dmg2} os aliados adjacentes\\_<sprite name=\"cell_cross\"> a ele."
+  }
+}

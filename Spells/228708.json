@@ -1,0 +1,155 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "228708",
+  "m_id": 228708,
+  "m_displayName": "SACRIEUR - ARME - GANTARES - ETHER - Convergence",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -13555160,
+    "b": -660588828,
+    "c": 1093582649,
+    "d": 841129927,
+    "e": 594149467
+  },
+  "m_i18nDescriptionId": {
+    "a": -13555160,
+    "b": -660588828,
+    "c": 1093582649,
+    "d": 841129927,
+    "e": 1100886753
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b1e2888033b468843bb7f2a1c57d36bf"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0bdedfb965010e641bca38175cef81a5"
+      },
+      {
+        "assetGuid": "be938b2db09f81f42967eefcb22a8a63"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 228708,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 660,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": 50,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "tp",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "",
+          "axe": 0
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "tp",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pull",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Convergence",
+    "en": "Convergence",
+    "es": "Convergencia",
+    "de": "Konvergenz",
+    "pt": "Convergência"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:tp}.\n\\---\nAttire les personnages alignés à lui de {cell:pull}.",
+    "en": "Teleports your hero up to {cell:tp}.\n\\---\nThey attract all in-line characters {cell:pull}.",
+    "es": "Teletransporta a tu héroe hasta {cell:tp}.\n\\---\nEste atrae a los personajes alineados {cell:pull}.",
+    "de": "Teleportiert deinen Helden bis {cell:tp}.\n\\---\nEr zieht alle ausgerichteten Charaktere um {cell:pull} an.",
+    "pt": "Teletransporta seu herói a até {cell:tp}.\n\\---\nAtrai todos os personagens alinhados por {cell:pull}."
+  }
+}

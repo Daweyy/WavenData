@@ -1,0 +1,133 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "39594",
+  "m_id": 39594,
+  "m_displayName": "MONSTRE BOUFTOU - Démonstration de Force",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 207672377,
+    "b": 1595693828,
+    "c": -2055621814,
+    "d": 2107221424,
+    "e": -721369633
+  },
+  "m_i18nDescriptionId": {
+    "a": 207672377,
+    "b": 1595693828,
+    "c": -2055621814,
+    "d": 2107221424,
+    "e": 350396001
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "20366f4e39d9c124391ee6fe2dbf747f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 39594,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              36
+            ]
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 2,
+            "families": [
+              45
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a1a2decf5e0671f44a849a51e6585e41",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Démonstration de Force",
+    "en": "Show of Force",
+    "es": "Demostración de Fuerza",
+    "de": "Machtprobe",
+    "pt": "Demonstração de Força"
+  },
+  "description": {
+    "fr": "Un <b>Bouftou</b> allié rejoue son tour.",
+    "en": "An allied <b>Gobball</b> replays its turn.",
+    "es": "Un <b>jalató</b> aliado vuelve a jugar su turno.",
+    "de": "Ein verbündeter <b>Fresssack</b> spielt seine Runde erneut.",
+    "pt": "Um <b>Papatudo</b> aliado joga um turno extra."
+  }
+}

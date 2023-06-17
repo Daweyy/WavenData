@@ -1,0 +1,182 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "656",
+  "m_id": 656,
+  "m_displayName": "MONSTRE COCHON - Transfert de Ki",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -632730966,
+    "b": 298598596,
+    "c": -559764087,
+    "d": -1033812133,
+    "e": -858802548
+  },
+  "m_i18nDescriptionId": {
+    "a": -632730966,
+    "b": 298598596,
+    "c": -559764087,
+    "d": -1033812133,
+    "e": -1904141814
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "6b5f18fe57fa50a41a92cc87e6ffa700"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 656,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "ElementaryStateFilter",
+            "elementaryState": 9876
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50
+            ]
+          },
+          {
+            "type": "WoundedFilter",
+            "isWounded": true
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9ab4e2487d0f296468a783a5ed242203",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 19
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Transfert de Ki",
+    "en": "Ki Transfer",
+    "es": "Transferencia de Ki",
+    "de": "KI-Transfer",
+    "pt": "Transferência de Ki"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max} à un adversaire <b>MARQUÉ</b>\\_<sprite name=\"generic_monster\"> et soigne un <b>Cochon</b> allié d'autant.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max} to a <b>MARKED</b>\\_<sprite name=\"generic_monster\"> opponent and heals an allied <b>Pig</b> the same amount.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max} a un adversario <b>MARCADO</b>\\_<sprite name=\"generic_monster\"> y cura a un <b>cerdo</b> aliado lo mismo.",
+    "de": "Verursacht {magicalPowerValue:min} bis {magicalDamage:max} bei einem <b>MARKIERTEN</b> Gegner\\_<sprite name=\"generic_monster\"> und heilt ein verbündetes <b>Schweinemonster</b> gleichermaßen.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max} a um adversário <b>MARCADO</b>\\_<sprite name=\"generic_monster\"> e cura um <b>Porco</b> aliado com o mesmo valor."
+  }
+}

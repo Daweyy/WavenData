@@ -1,0 +1,52 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 5531694572057177000
+  },
+  "m_Name": "112",
+  "m_id": 112,
+  "m_displayName": "Affinity - Avalanche",
+  "m_availability": 3,
+  "values": {
+    "type": "FxDefinition",
+    "id": 112,
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6420383db407edd40992af5d2f958b14",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundSquaredTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "DelayOverDistance",
+          "origin": {
+            "type": "FirstCastTargetSelector"
+          },
+          "delay": 0.25
+        }
+      }
+    ]
+  }
+}

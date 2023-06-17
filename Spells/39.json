@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "39",
+  "m_id": 39,
+  "m_displayName": "MONSTRE BOUFTOU - Bélier",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -395143770,
+    "b": -740807932,
+    "c": 1795642171,
+    "d": -1084858352,
+    "e": -1230527519
+  },
+  "m_i18nDescriptionId": {
+    "a": -395143770,
+    "b": -740807932,
+    "c": 1795642171,
+    "d": -1084858352,
+    "e": -1431618815
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f16d1e350f95134409977d3997a54e91"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 39,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        36
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              36
+            ]
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 2,
+            "families": [
+              45
+            ]
+          },
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 2,
+            "summonings": [
+              42
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "1c2d8661e4209484eaeb24d9c9b266fa",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bélier",
+    "en": "Ram",
+    "es": "Carnero",
+    "de": "Rammbock",
+    "pt": "Carneiro"
+  },
+  "description": {
+    "fr": "Un <b>Bouftou</b> allié <b>CHARGE</b> un adversaire aligné et déclenche son {%AT}.",
+    "en": "An allied <b>Gobball</b> <b>CHARGES</b> an in-line opponent and triggers its {%AT}.",
+    "es": "Un <b>jalató</b> aliado <b>CARGA</b> contra un adversario alineado y activa su {%AT}.",
+    "de": "Ein verbündeter <b>Fresssack</b> <b>STÜRMT</b> auf einen Gegner in derselben Reihe zu und löst seinen {%AT} aus.",
+    "pt": "Um <b>Papatudo</b> aliado <b>INVESTE</b> contra um adversário alinhado e aciona seu {%AT}."
+  }
+}

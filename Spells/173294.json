@@ -1,0 +1,134 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "173294",
+  "m_id": 173294,
+  "m_displayName": "MONSTRE TAURE - Peau de Vache",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 544206619,
+    "b": 190817892,
+    "c": -1943713590,
+    "d": 1827892457,
+    "e": -1515448563
+  },
+  "m_i18nDescriptionId": {
+    "a": 544206619,
+    "b": 190817892,
+    "c": -1943713590,
+    "d": 1827892457,
+    "e": -1981414216
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f0bf0be8be2475b4382529b0f8eae03a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 173294,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        56
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 0,
+            "carac": 1
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "99d2ede3ae6589d4b9f096204fdc1927",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "ar",
+          "baseValue": 33,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Peau de Vache",
+    "en": "Cowhide",
+    "es": "Mala Leche",
+    "de": "Miststück",
+    "pt": "Pele de Vaca"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} au <b>Taure</b> allié ayant le moins de {%PV}.",
+    "en": "{ARvalue:ar,+} to the allied <b>Taur</b> with the least {%PV}.",
+    "es": "{ARvalue:ar,+} al <b>toro</b> aliado que tenga menos {%PV}.",
+    "de": "{ARvalue:ar,+} für den verbündeten <b>Taurus</b> mit den wenigsten {%PV}.",
+    "pt": "{ARvalue:ar,+} ao <b>Tauro</b> aliado com menos {%PV}."
+  }
+}

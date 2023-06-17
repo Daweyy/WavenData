@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "961",
+  "m_id": 961,
+  "m_displayName": "XELOR - CLASSE - ETHER - EVOLUTION - Retour De Flamme",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1555110033,
+    "b": -1224597276,
+    "c": -1935091095,
+    "d": -315651026,
+    "e": -70786817
+  },
+  "m_i18nDescriptionId": {
+    "a": 1555110033,
+    "b": -1224597276,
+    "c": -1935091095,
+    "d": -315651026,
+    "e": -1660494341
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "afa8b596ad553dc498a6c66f36e9ec27"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 961,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 20,
+      "bannedInPvp": true
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9b96ea1ff18659a4bbb4ec84b9816d87",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "RandomDelay",
+          "min": 0,
+          "max": 0.5
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 20
+        },
+        {
+          "type": "ThisSpellEvolutionValue",
+          "referenceId": "Lv"
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "CHRONO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Retour De Flamme",
+    "en": "Flame Return",
+    "es": "Reavivar la Llama",
+    "de": "Rückkehr der Flamme",
+    "pt": "Retorno das Chamas"
+  },
+  "description": {
+    "fr": "Inflige l’{%AT} de votre héros à tous les adversaires.\n\\---\nLorsque vous déclenchez {#CHRONO}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {#CHRONO} : {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "en": "Inflicts your hero's {%AT} on all opponents.\n\\---\nWhen you trigger {#CHRONO}:\\v {value:pc,percent,+} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{#CHRONO} Count: {value:Lv}.</rem>\n{%DestroyOnPlayed}",
+    "es": "Inflige el {%AT} de tu héroe a todos los adversarios.\n\\---\nCuando activas {#CHRONO}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {#CHRONO}: {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "de": "Verursacht bei allen Gegnern den {%AT} deines Helden als Schaden.\n\\---\nWenn du {#CHRONO} auslöst:\\v {value:pc,percent,+} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem>{#CHRONO}-Zähler: {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "pt": "Inflige o {%AT} do seu herói a todos os adversários.\n\\---\nQuando você acionar {#CHRONO}:\\v {value:pc,percent,+} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {#CHRONO}: {value:Lv}</rem>\n{%DestroyOnPlayed}"
+  }
+}

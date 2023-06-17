@@ -1,0 +1,178 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "219",
+  "m_id": 219,
+  "m_displayName": "EQUIPMENT - RING - Orbe de Sang",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1350149749,
+    "b": -855298924,
+    "c": -1318100422,
+    "d": 1344073711,
+    "e": -815596674
+  },
+  "m_i18nDescriptionId": {
+    "a": -1350149749,
+    "b": -855298924,
+    "c": -1318100422,
+    "d": 1344073711,
+    "e": 407096130
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1c88b79ffe44451428278bf8be907f02"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 219,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": ""
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "pa",
+                  "value": -5
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d9403f5cf7d90dc44b859c12adf01db6",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -5
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 100
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DRAIN"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Orbe de Sang",
+    "en": "Blood Orb",
+    "es": "Orbe de Sangre",
+    "de": "Blutkugel",
+    "pt": "Orbe de Sangue"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:v}.\n\\---\nLorsqu'un de vos personnages utilise {#DRAIN}\\_: {PAvalue:pa} au coût de ce {%SPELLCOUNT}.\n\\---\nTant que ce {%SPELLCOUNT} est dans votre main\\_: Votre héros a {DRAINvalue:d1,percent,+}. Il gagne {DRAINvalue:d2,percent,+} lorsqu’un de vos compagnons meurt.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Does {magicalDamage:v}.\n\\---\nWhen one of your characters uses {#DRAIN}: {PAvalue:pa} to the cost of this {%SPELLCOUNT}.\n\\---\nWhile this {%SPELLCOUNT} is in your hand: Your hero has {DRAINvalue:d1,percent,+}. They gain {DRAINvalue:d2,percent,+} when one of your companions dies.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Inflige {magicalDamage:v}.\n\\---\nCuando uno de tus personajes utiliza {#DRAIN}: {PAvalue:pa} al coste de este {%SPELLCOUNT}.\n\\---\nMientras que este {%SPELLCOUNT} esté en tu mano: Tu héroe tiene {DRAINvalue:d1,percent,+}. Gana {DRAINvalue:d2,percent,+} cuando uno de tus compañeros muere.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Verursacht {magicalDamage:v}.\n\\---\nWenn einer deiner Charaktere {#DRAIN} einsetzt: {PAvalue:pa} auf die Kosten dieses {%SPELLCOUNT}.\n\\---\nSolange sich dieser {%SPELLCOUNT} auf deiner Hand befindet: Dein Held hat {DRAINvalue:d1,percent,+}. Er erhält {DRAINvalue:d2,percent,+}, wenn einer deiner Begleiter stirbt.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Inflige {magicalDamage:v}.\n\\---\nQuando um dos seus personagens utiliza {#DRAIN}: {PAvalue:pa} ao custo do {%SPELLCOUNT}.\n\\---\nQuando o {%SPELLCOUNT} está na sua mão: Seu herói possui {DRAINvalue:d1,percent,+}. Ele ganha {DRAINvalue:d2,percent,+} quando um dos seus companheiros morre.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

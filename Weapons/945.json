@@ -1,0 +1,221 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 7339724952593504000
+  },
+  "m_Name": "945",
+  "m_id": 945,
+  "m_displayName": "XELOR - Aiguille Pikuxala",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1712271071,
+    "b": 541716756,
+    "c": 433152329,
+    "d": -2077145524,
+    "e": 62604573
+  },
+  "m_i18nDescriptionId": {
+    "a": 1712271071,
+    "b": 541716756,
+    "c": 433152329,
+    "d": -2077145524,
+    "e": 437206903
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": 1712271071,
+    "b": 541716756,
+    "c": 433152329,
+    "d": -2077145524,
+    "e": -1621709771
+  },
+  "m_i18nSimpleNameId": {
+    "a": 1712271071,
+    "b": 541716756,
+    "c": 433152329,
+    "d": -2077145524,
+    "e": 1761432352
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": 1712271071,
+    "b": 541716756,
+    "c": 433152329,
+    "d": -2077145524,
+    "e": 2050270302
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "74931c063a6f47c4cbadcbaa0afe8c57"
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 945,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1048,
+      "skinIds": [
+        3568,
+        678,
+        958,
+        687,
+        1255,
+        1048
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "s",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 50
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 143401
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 50
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      7
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 394
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 28
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 13
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 10
+    },
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      738684,
+      738701,
+      738750,
+      971
+    ],
+    "difficultyHint": 2,
+    "defaultSkinIdMale": 3568,
+    "defaultSkinIdFemale": 1048,
+    "god": 7,
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "unlockableSpells": [
+      220101,
+      357,
+      719,
+      109
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      211049,
+      776,
+      121,
+      265,
+      573,
+      79,
+      62,
+      743,
+      3
+    ]
+  },
+  "name": {
+    "fr": "Aiguille Pikuxala",
+    "en": "Pikuxala Hand",
+    "es": "Aguja Pikuxala",
+    "de": "Pikuxala-Nadel",
+    "pt": "Ponteiro Pikuxala"
+  },
+  "description": {
+    "fr": "Lorsque votre héros se téléporte\\_: Inflige {value:s,percent} de son {%AT} à l'adversaire ayant le plus de {%PV}.",
+    "en": "When your hero teleports: Inflicts {value:s,percent} of their {%AT} on the opponent with the most {%PV}.",
+    "es": "Cuando tu héroe se teletransporta: Inflige un {value:s,percent} de su {%AT} al adversario que tenga más {%PV}.",
+    "de": "Wenn dein Held sich teleportiert: Verursacht beim Gegner mit den meisten {%PV} {value:s,percent} seines {%AT} als Schaden.",
+    "pt": "Quando seu herói se teletransporta: Inflige {value:s,percent} de seu {%AT} ao\\_adversário que tiver mais {%PV}."
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4>TÉLÉPORTATION</color>\\_: Vos acrobaties vous sortiront de situations dangereuses ou vous feront gagner du terrain.\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",
+    "en": "<color=#7FD5E4>TELEPORTATION</color>: Your acrobatics will get you out of dangerous situations and let you gain ground.\n\\---\n<color=#7FD5E4>{%AT}</color>: Your raw strength! The more you improve it, the harder you'll hit!",
+    "es": "<color=#7FD5E4>TELETRANSPORTACIÓN</color>: Mediante acrobacias podrás salir de situaciones peligrosas o ganar terreno.\n\\---\n<color=#7FD5E4>{%AT}</color>: ¡Tu fuerza bruta! Cuanto más lo mejores, ¡más fuerte golpearás!",
+    "de": "<color=#7FD5E4>TELEPORTATION</color>: Deine Akrobatik rettet dich aus gefährlichen Situationen oder ermöglicht es dir, mehr vom Spielfeld einzunehmen.\n\\---\n<color=#7FD5E4>{%AT}</color>: Deine rohe Kraft! Je mehr du sie verbesserst, desto stärker schlägst du zu!",
+    "pt": "<color=#7FD5E4>TELETRANSPORTE</color>: Suas acrobacias podem fazer você ganhar terreno ou sair de situações perigosas.\n\\---\n<color=#7FD5E4>{%AT}</color>: Sua força bruta! Quanto mais você aprimorar, mais fortes serão os seus golpes!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameXelor}",
+    "en": "{%OnboardingSimpleNameXelor}",
+    "es": "{%OnboardingSimpleNameXelor}",
+    "de": "{%OnboardingSimpleNameXelor}",
+    "pt": "{%OnboardingSimpleNameXelor}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionXelor}",
+    "en": "{%OnboardingSimpleDescriptionXelor}",
+    "es": "{%OnboardingSimpleDescriptionXelor}",
+    "de": "{%OnboardingSimpleDescriptionXelor}",
+    "pt": "{%OnboardingSimpleDescriptionXelor}"
+  }
+}

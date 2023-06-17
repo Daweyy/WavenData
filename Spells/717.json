@@ -1,0 +1,229 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "717",
+  "m_id": 717,
+  "m_displayName": "XELOR - CLASSE - AIR - Teleportation Flexible",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -227527752,
+    "b": -1021162364,
+    "c": 1402536329,
+    "d": 1285241306,
+    "e": 1370717849
+  },
+  "m_i18nDescriptionId": {
+    "a": -227527752,
+    "b": -1021162364,
+    "c": 1402536329,
+    "d": 1285241306,
+    "e": 1978368798
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1253d804fe9320d44b71bea5379cffd9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "047f6763a5d6607419a3c4f30100a0cc"
+      },
+      {
+        "assetGuid": "9a33e80aa278e504d9b6d617c645b0c3"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 717,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      176,
+      204,
+      178995
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "UnionOfEntitiesSelector",
+        "first": {
+          "type": "CasterHeroSelector"
+        },
+        "second": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            }
+          ]
+        }
+      },
+      "selector2": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 357,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléportation Flexible",
+    "en": "Flexible Teleportation",
+    "es": "Teletransportación Flexible",
+    "de": "Flexible Teleportation",
+    "pt": "Teletransporte Flexível"
+  },
+  "description": {
+    "fr": "Téléporte votre héros <b>OU</b> un de vos <b>SINISTROS</b> jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée.",
+    "en": "Teleports your hero <b>OR</b> one of your <b>SINISTROS</b> up to {cell:c}.\n\\---\nDoes {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> the destination cell.",
+    "es": "Teletransporta a tu héroe <b>O</b> a uno de tus <b>SINISTROS</b> hasta a {cell:c}.\n\\---\nInflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada.",
+    "de": "Teleportiert deinen Helden <b>ODER</b> einen deiner <b>SINISTROS</b> bis zu {cell:c}.\n\\---\nVerursacht {magicalDamage:dmg} ringsum\\_<sprite name=\"cell_around\"> seines Ankunftsfeldes.",
+    "pt": "Teletransporta seu herói <b>OU</b> um dos seus <b>SINISTROS</b> a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada."
+  }
+}

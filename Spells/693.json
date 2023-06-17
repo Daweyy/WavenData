@@ -1,0 +1,159 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "693",
+  "m_id": 693,
+  "m_displayName": "MONSTRE CHAFER - Effroyable Sacrifice",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 372980471,
+    "b": -1864752044,
+    "c": 763648313,
+    "d": 1216125514,
+    "e": -608572409
+  },
+  "m_i18nDescriptionId": {
+    "a": 372980471,
+    "b": -1864752044,
+    "c": 763648313,
+    "d": 1216125514,
+    "e": 1082227611
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bd4c7d52ae64bef4aac88af5c73ac575"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 693,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        40
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b2cbc14e0f950fb4ba0537cb9677d1af",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgAdd",
+          "value": 6
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Effroyable Sacrifice",
+    "en": "Frightful Sacrifice",
+    "es": "Sacrificio Espeluznante",
+    "de": "Entsetzliches Opfer",
+    "pt": "Sacrifício Apavorante"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max} à la cible et aux\\_adversaires adjacents\\_<sprite name=\"cell_cross\">.\n\\---\n{magicalDamage:dmgAdd,+} si la cible est <b>MARQUÉE</b>\\_<sprite name=\"generic_monster\">.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max} to the target and adjacent\\_<sprite name=\"cell_cross\"> opponents.\n\\---\n{magicalDamage:dmgAdd,+} if the target is <b>MARKED</b>\\_<sprite name=\"generic_monster\">.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max} al objetivo y a los\\_adversarios adyacentes\\_<sprite name=\"cell_cross\">.\n\\---\n{magicalDamage:dmgAdd,+} si el objetivo está <b>MARCADO</b>\\_<sprite name=\"generic_monster\">.",
+    "de": "Verursacht beim Ziel und den angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\n{magicalDamage:dmgAdd,+}, wenn das Ziel <b>MARKIERT</b>\\_<sprite name=\"generic_monster\"> ist.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max} ao alvo e aos\\_adversários adjacentes\\_<sprite name=\"cell_cross\">.\n\\---\n{magicalDamage:dmgAdd,+} se o alvo estiver <b>MARCADO</b>\\_<sprite name=\"generic_monster\">."
+  }
+}

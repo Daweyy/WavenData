@@ -1,0 +1,184 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "838",
+  "m_id": 838,
+  "m_displayName": "IOP - ARME - BOUVALOIR OROK - ETHER - Double Charge Orok",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1737160348,
+    "b": -1678950636,
+    "c": -1437911222,
+    "d": -1835449642,
+    "e": -1415709259
+  },
+  "m_i18nDescriptionId": {
+    "a": -1737160348,
+    "b": -1678950636,
+    "c": -1437911222,
+    "d": -1835449642,
+    "e": -982110963
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a634a7dee864a364b95b3fa64c29c3bf"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 838,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": 497,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 8
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 5
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "81120b30617f52e4ab5491115afb30d9",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 238213
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Double Charge Orok",
+    "en": "Orok Double Charge",
+    "es": "Doble Carga Orok",
+    "de": "Doppelter Orok-Ansturm",
+    "pt": "Dupla Investida Orok"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige son {%AT}.\n\\---\nAjoute le sort {Spell:238213} à votre main.\n",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%AT} on them.\n\\---\nAdds the {Spell:238213} spell to your hand.\n",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige su {%AT}.\n\\---\nAñade el hechizo {Spell:238213} a tu mano.\n",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis zu {cell:c} in derselben Reihe zu und verursacht bei ihm seinen {%AT} als Schaden.\n\\---\nFügt deiner Hand den Zauber {Spell:238213} hinzu.\n",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e inflige seu {%AT}.\n\\---\nAdiciona o feitiço {Spell:238213} à sua mão.\n"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "42",
+  "m_id": 42,
+  "m_displayName": "_NOT USED - UNIVERSEL - SURVIVOR - Demi Foulee",
+  "m_availability": 0,
+  "m_i18nNameId": {
+    "a": -783371231,
+    "b": 301315323,
+    "c": 421600536,
+    "d": -1508412802,
+    "e": 390524516
+  },
+  "m_i18nDescriptionId": {
+    "a": -783371231,
+    "b": 301315323,
+    "c": 421600536,
+    "d": -1508412802,
+    "e": 1278588955
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8ad2ee7fc1b664a45ad226201323f7e2"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 42,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        80
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "nb",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Demi Foulée",
+    "en": "Blâmer",
+    "es": "Blâmer",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:nb}.",
+    "en": "Inflige {magicalDamage:dmg} et applique l'état {#OILED}.",
+    "es": "Inflige {magicalDamage:dmg} et applique l'état {#OILED}.",
+    "de": "",
+    "pt": ""
+  }
+}

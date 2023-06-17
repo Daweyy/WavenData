@@ -1,0 +1,272 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "544",
+  "m_id": 544,
+  "m_displayName": "SRAM - ARME - KARTANA - EAU - Frappe Therapeutique",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 245937287,
+    "b": 1648410452,
+    "c": 154936969,
+    "d": -1225208782,
+    "e": 289068049
+  },
+  "m_i18nDescriptionId": {
+    "a": 245937287,
+    "b": 1648410452,
+    "c": 154936969,
+    "d": -1225208782,
+    "e": 1756864439
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "867513c39ca1ad14a9a0087c8d63c78c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "a94c621acac7d484788f49f23ac15554"
+      },
+      {
+        "assetGuid": "cc7016cb811a2074f92abf56cf5a8928"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 544,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      494937,
+      495241,
+      347969
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 182,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 26
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 964,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 964,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Frappe Thérapeutique",
+    "en": "Therapeutic Strike",
+    "es": "Golpe Terapéutico",
+    "de": "Therapeutischer Hieb",
+    "pt": "Golpe Terapêutico"
+  },
+  "description": {
+    "fr": "Téléporte votre héros sur un de vos {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nInflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> et soigne votre héros de {PVvalue:heal}.",
+    "en": "Teleports your hero onto one of your {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nDoes {magicalDamage:dmg} to an adjacent\\_<sprite name=\"cell_cross\"> opponent and heals your hero {PVvalue:heal}.",
+    "es": "Teletransporta a tu héroe a una de tus {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nInflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\"> y cura a tu héroe {PVvalue:heal}.",
+    "de": "Teleportiert deinen Helden auf eine deiner {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nVerursacht bei einem angrenzenden Gegner\\_<sprite name=\"cell_cross\"> {magicalDamage:dmg} und heilt deinen Helden um {PVvalue:heal}.",
+    "pt": "Teletransporta seu herói para uma de suas {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nInflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> e cura seu herói em {PVvalue:heal}."
+  }
+}

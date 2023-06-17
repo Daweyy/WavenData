@@ -1,0 +1,67 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 3841871838608002000
+  },
+  "m_Name": "983",
+  "m_id": 983,
+  "m_displayName": "Flame",
+  "m_availability": 3,
+  "values": {
+    "type": "ParameterizedEffectExecutionDefinition",
+    "id": 983,
+    "parameters": [
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "target"
+      },
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "source"
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "ParameterSingleEntitySelector",
+              "name": "source"
+            }
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "buff",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  }
+}

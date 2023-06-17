@@ -1,0 +1,196 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "136295",
+  "m_id": 136295,
+  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - EAU - Phase Regenerante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1314542941,
+    "b": -1488462460,
+    "c": -443649688,
+    "d": 1061473704,
+    "e": 1079311530
+  },
+  "m_i18nDescriptionId": {
+    "a": -1314542941,
+    "b": -1488462460,
+    "c": -443649688,
+    "d": 1061473704,
+    "e": 168689740
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9d7522a41ae974543bbf78385c818c4d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 136295,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      412,
+      386505,
+      318
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": 141,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f9ff006b417eccd4dbff1730d24e5d01",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 76705,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d1",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d1",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 76705,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterHeroSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Phase Régénérante",
+    "en": "Regenerating Phase",
+    "es": "Fase Regenerante",
+    "de": "Regenerierende Phase",
+    "pt": "Fase Regenerativa"
+  },
+  "description": {
+    "fr": "Soigne votre héros de {PVvalue:h}.\n\\---\nJusqu'à la fin du tour, soigne les alliés traversés de {PVvalue:h2}.",
+    "en": "Heals your hero {PVvalue:h}.\n\\---\nUntil the end of the turn, heals allies gone through {PVvalue:h2}.",
+    "es": "Cura a tu héroe {PVvalue:h}.\n\\---\nHasta el final del turno, cura {PVvalue:h2} a los aliados atravesados.",
+    "de": "Heilt deinen Helden um {PVvalue:h}.\n\\---\nHeilt die überquerten Verbündeten bis zum Rundenende um {PVvalue:h2}.",
+    "pt": "Cura seu herói em {PVvalue:h}.\n\\---\nAté o fim do turno, cura os aliados atravessados em {PVvalue:h2}."
+  }
+}

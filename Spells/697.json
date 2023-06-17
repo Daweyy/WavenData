@@ -1,0 +1,136 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "697",
+  "m_id": 697,
+  "m_displayName": "DQ - MODIFICATEUR - VAMPYRE - Pas de danse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 122296110,
+    "b": -1909305772,
+    "c": 1488924696,
+    "d": -109294559,
+    "e": -1828363452
+  },
+  "m_i18nDescriptionId": {
+    "a": 122296110,
+    "b": -1909305772,
+    "c": 1488924696,
+    "d": -109294559,
+    "e": -1238618709
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "399fea5c5f4d91b448b7540df8bd0cf9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "1e46538df0748af4f962e92f1fe7e115"
+      },
+      {
+        "assetGuid": "55d27a7970681e243a842ff315bcffd9"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 697,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Pas de danse",
+    "en": "Dance Step",
+    "es": "Paso de Baile",
+    "de": "Tanzschritt",
+    "pt": "Passo de dança"
+  },
+  "description": {
+    "fr": "Téléporte la cible de {cell:c}.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Teleports the target {cell:c}.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Teletransporta al objetivo {cell:c}.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Teleportiert das Ziel um {cell:c}.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Teletransporta o alvo a até {cell:c}.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

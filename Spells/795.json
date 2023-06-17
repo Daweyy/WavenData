@@ -1,0 +1,154 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "795",
+  "m_id": 795,
+  "m_displayName": "COMPAGNON - JUSTICE - Orbe de Justice",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1102845592,
+    "b": 1615595188,
+    "c": -1696171142,
+    "d": 686286144,
+    "e": -1585317851
+  },
+  "m_i18nDescriptionId": {
+    "a": -1102845592,
+    "b": 1615595188,
+    "c": -1696171142,
+    "d": 686286144,
+    "e": -806364621
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8aa7b43df023d8d4d8eb58d31d62af71"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 795,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "67f2618934561e144a8dd03cc181c0a3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 39
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Orbe de Justice",
+    "en": "Orb of Justice",
+    "es": "Orbe de Justicia",
+    "de": "Gerechtigkeitskugel",
+    "pt": "Orbe de Justiça"
+  },
+  "description": {
+    "fr": "Construit un {ObjectMechanism:39} sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\n<rem>Détruit votre précédent {ObjectMechanism:39!}.</rem>",
+    "en": "Builds one {ObjectMechanism:39} on a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.\n\\---\n<rem>Destroys your previous {ObjectMechanism:39!}.</rem>",
+    "es": "Construye un {ObjectMechanism:39} en una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.\n\\---\n<rem>Destruye tu anterior {ObjectMechanism:39!}.</rem>",
+    "de": "Errichtet eine\\_{ObjectMechanism:39} auf einem an einen Verbündeten angrenzenden\\_<sprite name=\"cell_cross\"> Feld.\n\\---\n<rem>Zerstört deine vorherige {ObjectMechanism:39!}.</rem>",
+    "pt": "Posiciona um {ObjectMechanism:39} sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\n<rem>Destrói o {ObjectMechanism:39!} anterior.</rem>"
+  }
+}

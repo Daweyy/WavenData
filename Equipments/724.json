@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "724",
+  "m_id": 724,
+  "m_displayName": "BRACELET - RARE - Brassard de Repousse Enflammee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 25636337,
+    "b": 1542211188,
+    "c": 1415233866,
+    "d": -654022296,
+    "e": 1881783749
+  },
+  "m_i18nDescriptionId": {
+    "a": 25636337,
+    "b": 1542211188,
+    "c": 1415233866,
+    "d": -654022296,
+    "e": 810563894
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 25636337,
+    "b": 1542211188,
+    "c": 1415233866,
+    "d": -654022296,
+    "e": -1327500449
+  },
+  "m_illustration": {
+    "assetGuid": "3550d6dc3bddd57478b7fcf629d3b70f"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "3550d6dc3bddd57478b7fcf629d3b70f"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 724,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      643570,
+      719,
+      470,
+      643986,
+      644069,
+      759
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "c",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 1
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 121519
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c1",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 121771
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c2",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 500
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.983.bc"
+      ],
+      "hasEffects": false,
+      "keywordReferences": [
+        "FLAME",
+        "PUSH"
+      ]
+    },
+    "family": 0,
+    "equipmentType": 2,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          58
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Brassard de Repousse Enflammée",
+    "en": "Flaming Push Armband",
+    "es": "Brazalete de Empujón Ardiente",
+    "de": "Armschiene des entbrannten Rückstoßes",
+    "pt": "Braçadeira de Empurrão Flamejante"
+  },
+  "description": {
+    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de déclencher {flame:ParameterizedEffectExecution.983.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} of triggering {flame:ParameterizedEffectExecution.983.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
+    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de activar {flame:ParameterizedEffectExecution.983.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "de": "{%Attack} {#PUSH} {cell:c}.\n\\---\nChance von {LUCKSELFvalue:per,permil}, je <b>{%KEYWORD.COLLISION.NAME}</b>-Feld {flame:ParameterizedEffectExecution.983.bc} auszulösen.",
+    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de acionar {flame:ParameterizedEffectExecution.983.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
+  },
+  "bgDescription": {
+    "fr": "{%empty}",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

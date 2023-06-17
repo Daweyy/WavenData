@@ -1,0 +1,98 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 641088705933543200
+  },
+  "m_Name": "727",
+  "m_id": 727,
+  "m_displayName": "CRAQUELEUR - Rancoeur Rocheuse",
+  "m_availability": 3,
+  "m_illustration": {
+    "assetGuid": "2d0a90c38642a5d4d8fbc7800b6a1321"
+  },
+  "m_i18nNameId": {
+    "a": -394992121,
+    "b": 1065264868,
+    "c": -1766595493,
+    "d": 1595105662,
+    "e": 1715100199
+  },
+  "m_i18nDescriptionId": {
+    "a": -394992121,
+    "b": 1065264868,
+    "c": -1766595493,
+    "d": 1595105662,
+    "e": -1729928999
+  },
+  "m_i18nSummaryId": {
+    "a": 0,
+    "b": 0,
+    "c": 0,
+    "d": 0,
+    "e": 0
+  },
+  "values": {
+    "type": "CustomRuleDefinition",
+    "id": 727,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 18
+          },
+          "buffs": [
+            52
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "RandomFilteredEntitySelector",
+            "from": {
+              "type": "AllPlayersSelector"
+            },
+            "filters": [
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "EffectHolderSelector"
+                }
+              }
+            ]
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Rancœur Rocheuse",
+    "en": "Rocky Rancor",
+    "es": "Rencor rocoso",
+    "de": "Felsiger Groll",
+    "pt": "Rancor Rochoso"
+  },
+  "description": {
+    "fr": "Lorsqu'un {ObjectMechanism:1641!} est détruit\\_:\nLes autres <b>ROCHERS</b> infligent {magicalDamage:dmg} aux adversaires autour<sprite name=\"cell_around\"> d'eux.",
+    "en": "When a {ObjectMechanism:1641!} is destroyed:\nThe other <b>ROCKS</b> do {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> them.",
+    "es": "Cuando una {ObjectMechanism:1641!} es destruida:\nLas demás <b>ROCAS</b> infligen {magicalDamage:dmg} a los adversarios alrededor<sprite name=\"cell_around\"> de ellas.",
+    "de": "Wenn ein\\_{ObjectMechanism:1641!} zerstört wird:\nDie anderen <b>FELSEN</b> verursachen bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> {magicalDamage:dmg}.",
+    "pt": "Quando um {ObjectMechanism:1641!} é destruído:\nAs outras <b>ROCHAS</b> infligem {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> delas."
+  }
+}

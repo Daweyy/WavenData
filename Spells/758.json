@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "758",
+  "m_id": 758,
+  "m_displayName": "IOP - CLASSE - AIR - Brise",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1538241434,
+    "b": -915521260,
+    "c": -1162345112,
+    "d": 1718325654,
+    "e": -1321594994
+  },
+  "m_i18nDescriptionId": {
+    "a": -1538241434,
+    "b": -915521260,
+    "c": -1162345112,
+    "d": 1718325654,
+    "e": -203843962
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1ba4506b3002ad34394bdc336970925a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 758,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      201918,
+      216576,
+      270
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b3aa285705d4a8b44bf6d38b09fe0101",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 878,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "auraSkill",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        {
+          "type": 22,
+          "id": 38
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Brise",
+    "en": "Breeze",
+    "es": "Brisa",
+    "de": "Brise",
+    "pt": "Brisa"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\--- \n{value:a,+}\\_{aura:38,value:a} à votre héros\\v s'il a au moins 1\\_adversaire autour<sprite name=\"cell_around\"> de lui.",
+    "en": "Does {magicalDamage:dmg}.\n\\--- \n{value:a,+}\\_{aura:38,value:a} to your hero\\v if there is at least 1\\_opponent around<sprite name=\"cell_around\"> them.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\--- \n{value:a,+}\\_{aura:38,value:a} a tu héroe\\v si tiene al menos 1\\_adversario a su alrededor <sprite name=\"cell_around\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\--- \n{value:a,+}\\_{aura:38,value:a} für deinen Helden\\v, wenn sich mindestens 1\\_Gegner ringsum\\_<sprite name=\"cell_around\"> befindet.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\--- \n{value:a,+}\\_{aura:38,value:a} ao seu herói\\v se tiver 1\\_adversário em\\_volta\\_<sprite name=\"cell_around\"> dele."
+  }
+}

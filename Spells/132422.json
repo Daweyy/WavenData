@@ -1,0 +1,201 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "132422",
+  "m_id": 132422,
+  "m_displayName": "XELOR - ARME - PIKUXALA - AIR - Teleport Offensif",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1474626897,
+    "b": -553688524,
+    "c": -275629157,
+    "d": -1663316115,
+    "e": 1931545187
+  },
+  "m_i18nDescriptionId": {
+    "a": 1474626897,
+    "b": -553688524,
+    "c": -275629157,
+    "d": -1663316115,
+    "e": 1733286500
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5b439578cd9744445ae9ffdb79df24b3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "047f6763a5d6607419a3c4f30100a0cc"
+      },
+      {
+        "assetGuid": "deec658153f41364db01b75e81dc4018"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 132422,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      55,
+      462493,
+      462164
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 945,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 524,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléport Offensif",
+    "en": "Offensive Teleportation",
+    "es": "Teletransporte Ofensivo",
+    "de": "Offensiver Teleport",
+    "pt": "Teletransporte Ofensivo"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:c} et inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
+    "en": "Teleports your hero up to {cell:c} and does {magicalDamage:dmg} to adjacent\\_<sprite name=\"cell_cross\"> opponents.",
+    "es": "Teletransporta a tu héroe hasta {cell:c} e inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
+    "de": "Teleportiert deinen Helden bis zu {cell:c} und verursacht bei angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalDamage:dmg}.",
+    "pt": "Teletransporta seu herói a até {cell:c} e inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\">."
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "277",
+  "m_id": 277,
+  "m_displayName": "QUETE - CHAFER - Creuzard le Creuvar (ZS)",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1062741244,
+    "b": -1540553276,
+    "c": -1028119400,
+    "d": -1996425255,
+    "e": 1352153763
+  },
+  "m_i18nDescriptionId": {
+    "a": -1062741244,
+    "b": -1540553276,
+    "c": -1028119400,
+    "d": -1996425255,
+    "e": 785523675
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 277,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 97,
+      "skinIds": [
+        97
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        },
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "heal",
+          "percentage": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "from": {
+            "type": "EntityBaseCaracValue",
+            "referenceId": null,
+            "entitySelector": {
+              "type": "EffectHolderSelector"
+            },
+            "carac": 32
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 81
+        },
+        {
+          "type": 20,
+          "id": 19
+        }
+      ]
+    },
+    "families": [
+      40,
+      5
+    ],
+    "baseProperties": [
+      19
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 80
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          277
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Creuzard le Creuvar",
+    "en": "Creuzard the Crevar",
+    "es": "Creuzard el Kanijo",
+    "de": "Höhlenbuddler",
+    "pt": "Caveiro Cavarento"
+  },
+  "description": {
+    "fr": "{%APPEARANCE} Gagne {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} et se soigne de {PVvalue:heal} si la cible est un {%Family_Chafer_Name} <B>doré</B>.",
+    "en": "{%APPEARANCE} Gains {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} and heals self {PVvalue:heal} if the target is a <B>Golden</B> {%Family_Chafer_Name}.",
+    "es": "{%APPEARANCE} Gana {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} y se cura {PVvalue:heal} si el objetivo es un {%Family_Chafer_Name} <B>dorado</B>.",
+    "de": "{%APPEARANCE} Erhält {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} und heilt sich um {PVvalue:heal}, wenn das Ziel ein <B>goldener</B> {%Family_Chafer_Name} ist.",
+    "pt": "{%APPEARANCE} Ganha {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} e se cura em {PVvalue:heal} se o alvo for um {%Family_Chafer_Name} <B>dourado</B>."
+  }
+}

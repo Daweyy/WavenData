@@ -1,0 +1,236 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "881",
+  "m_id": 881,
+  "m_displayName": "CRA - CLASSE - AIR - Pointe Irisee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1350578566,
+    "b": 830449524,
+    "c": -1543204837,
+    "d": -1670605521,
+    "e": -1184724327
+  },
+  "m_i18nDescriptionId": {
+    "a": 1350578566,
+    "b": 830449524,
+    "c": -1543204837,
+    "d": -1670605521,
+    "e": 271495673
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "95efc8a18fee0d74fa8b811fa678721a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 881,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      439228,
+      438385,
+      439968
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "ConditionalSelector",
+        "condition": {
+          "type": "NumberOfEntityCondition",
+          "selector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "CasterHeroSelector"
+            },
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "FirstCastTargetSelector"
+                },
+                "distance": {
+                  "type": "LowerEqualThan",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 2
+                  }
+                }
+              }
+            ]
+          },
+          "value": {
+            "type": "GreaterThan",
+            "dynamicValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 0
+            }
+          }
+        },
+        "selectorIfTrue": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "selectorIfFalse": null
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "076f4bc22ff4e0e46b4708aac3d5bf21",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 971,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "jd3",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pointe Irisée",
+    "en": "Iridescent Point",
+    "es": "Punta Irisada",
+    "de": "Irisierende Spitze",
+    "pt": "Ponta Irisada"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#PUSH} la cible de {cell:c2} si elle est à {cell:c1} ou moins.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#PUSH} the target {cell:c2} if the target is {cell:c1} or less away.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#PUSH} al objetivo {cell:c2} si está a {cell:c1} o menos.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#PUSH} das Ziel um {cell:c2} zurück, wenn es höchstens {cell:c1} entfernt ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#PUSH} o alvo por {cell:c2} se ele estiver à {cell:c1} ou menos."
+  }
+}

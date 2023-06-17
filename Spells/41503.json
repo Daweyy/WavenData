@@ -1,0 +1,186 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "41503",
+  "m_id": 41503,
+  "m_displayName": "MONSTRE TOFU - Tapis de bombes",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 39638731,
+    "b": -1679725980,
+    "c": 2056314457,
+    "d": -1914967816,
+    "e": 650854955
+  },
+  "m_i18nDescriptionId": {
+    "a": 39638731,
+    "b": -1679725980,
+    "c": 2056314457,
+    "d": -1914967816,
+    "e": 323232532
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "50c73b3143ae42146a94103feaf99088"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 41503,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        37
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "60c47714b5236044c927903e122f4c43",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "InLineInOneDirectionTargetFilter",
+              "refDirectionTargetA": {
+                "type": "FirstCastTargetSelector"
+              },
+              "refDirectionTargetB": {
+                "type": "SecondCastTargetSelector"
+              },
+              "applyStartTargets": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "LowerThan",
+                "dynamicValue": {
+                  "type": "DistanceToLastUnoccupiedCellInTargetDirection",
+                  "referenceId": null,
+                  "directionStart": {
+                    "type": "FirstCastTargetSelector"
+                  },
+                  "directionEnd": {
+                    "type": "SecondCastTargetSelector"
+                  },
+                  "maxDistance": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 999
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "DelayOverDistance",
+          "origin": {
+            "type": "FirstCastTargetSelector"
+          },
+          "delay": 0.1
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 14,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Tapis de bombes",
+    "en": "Bomb Rug",
+    "es": "Alfombra de Bombas",
+    "de": "Bombenteppich",
+    "pt": "Tapete de Bombas"
+  },
+  "description": {
+    "fr": "Un <b>Tofu</b> allié traverse une ligne.\nInflige {magicalDamage:dmg} aux adversaires traversés.",
+    "en": "An allied <b>Tofu</b> goes down a line.\nDoes {magicalDamage:dmg} to the opponents gone through.",
+    "es": "Un <b>tofu</b> aliado atraviesa una línea.\nInflige {magicalDamage:dmg} a los adversarios atravesados.",
+    "de": "Ein verbündeter <b>Tofu</b> überquert eine Linie.\nVerursacht bei den überquerten Gegnern {magicalDamage:dmg}.",
+    "pt": "Um <b>Tofu</b> aliado atravessa uma linha.\nInflige {magicalDamage:dmg} aos adversários atravessados."
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "648",
+  "m_id": 648,
+  "m_displayName": "DQ - SECRET ZONE - CHUCHOTEUR - 2_Don Quichuchotte",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1937695012,
+    "b": -1415733964,
+    "c": 1426274539,
+    "d": -823799158,
+    "e": -443393086
+  },
+  "m_i18nDescriptionId": {
+    "a": -1937695012,
+    "b": -1415733964,
+    "c": 1426274539,
+    "d": -823799158,
+    "e": -103356581
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 648,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 297,
+      "skinIds": [
+        297
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": 100
+        },
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "y",
+          "baseValue": 20,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 5
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      52
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": null,
+      "value": 1
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": null,
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": null,
+      "value": 14
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": null,
+      "value": 50
+    },
+    "actionCriticalBonus": {
+      "type": "ConstIntegerValue",
+      "referenceId": null,
+      "value": 500
+    },
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          648
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Don Quichuchotte",
+    "en": "Don Quishhhote",
+    "es": "Don Susurrijote",
+    "de": "Don Flüstote",
+    "pt": "Dom Sussurrote"
+  },
+  "description": {
+    "fr": "{%DeathBlow} {ARvalue:y,+} et {ATvalue:x,percent,+} aux alliés jusqu'à leur prochaine attaque.",
+    "en": "{%DeathBlow} {ARvalue:y,+} and {ATvalue:x,percent,+} to allies until their next attack.",
+    "es": "{%DeathBlow} {ARvalue:y,+} y {ATvalue:x,percent,+} a los aliados hasta su próximo ataque.",
+    "de": "{%DeathBlow} {ARvalue:y,+} und {ATvalue:x,percent,+} für die Verbündeten bis zu ihrem nächsten Angriff.",
+    "pt": "{%DeathBlow} {ARvalue:y,+} e {ATvalue:x,percent,+} aos aliados até o próximo ataque deles."
+  }
+}

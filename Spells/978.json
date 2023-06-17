@@ -1,0 +1,211 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "978",
+  "m_id": 978,
+  "m_displayName": "SRAM - CLASSE - FEU - Piege Ploz",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -458002774,
+    "b": -838448684,
+    "c": 1076949209,
+    "d": -2030311649,
+    "e": 928309158
+  },
+  "m_i18nDescriptionId": {
+    "a": -458002774,
+    "b": -838448684,
+    "c": 1076949209,
+    "d": -2030311649,
+    "e": 880439088
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "599314bd7af62534d95ec87b5e3a3df8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 978,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      30,
+      485849,
+      485868
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "c",
+                "condition": {
+                  "type": "AndCondition",
+                  "conditions": [
+                    {
+                      "type": "ThisSpellHasSkillCondition",
+                      "skillId": 68669
+                    }
+                  ]
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 68669
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.495.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 495
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège Ploz",
+    "en": "Ploz Trap",
+    "es": "Trampa Plota",
+    "de": "Plotz-Falle",
+    "pt": "Armadilha Plosiva"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:495} ({value:FloorMechanism.495.dmg}) jusqu'à {cell:c} de votre héros.",
+    "en": "Builds one {FloorMechanism:495} ({value:FloorMechanism.495.dmg}) up to {cell:c} from your hero.",
+    "es": "Construye una {FloorMechanism:495} ({value:FloorMechanism.495.dmg}) hasta a {cell:c} de tu héroe.",
+    "de": "Errichtet eine\\_{FloorMechanism:495} ({value:FloorMechanism.495.dmg}) in einer Entfernung von bis zu {cell:c} von deinem Helden.",
+    "pt": "Posiciona uma {FloorMechanism:495} ({value:FloorMechanism.495.dmg}) a até {cell:c} do seu herói."
+  }
+}

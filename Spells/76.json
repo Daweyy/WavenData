@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "76",
+  "m_id": 76,
+  "m_displayName": "CRA - CLASSE - ETHER - Meurtriere",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1555017198,
+    "b": 64451620,
+    "c": -226691926,
+    "d": 1042877174,
+    "e": 1530079917
+  },
+  "m_i18nDescriptionId": {
+    "a": -1555017198,
+    "b": 64451620,
+    "c": -226691926,
+    "d": 1042877174,
+    "e": -787563364
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1bffed1753a30b74e98c015ae26495fa"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 76,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      10
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "nb",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1309
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Meurtrière",
+    "en": "Arrow Slit",
+    "es": "Mortífera",
+    "de": "Mörderin",
+    "pt": "Seteira"
+  },
+  "description": {
+    "fr": "Construit une {ObjectMechanism:1309} jusqu'à {value:nb} cases de\\_votre\\_héros.\n\\---\n<rem>Détruit votre {ObjectMechanism:1309!} déjà en jeu.</rem>",
+    "en": "Builds one {ObjectMechanism:1309} up to {value:nb} cells from\\_your\\_hero.\n\\---\n<rem>Destroys your {ObjectMechanism:1309!} already in play.</rem>",
+    "es": "Construye una {ObjectMechanism:1309} hasta a {value:nb} casillas de\\_tu\\_héroe.\n\\---\n<rem>Destruye tu {ObjectMechanism:1309!} ya en juego.</rem>",
+    "de": "Errichtet eine\\_{ObjectMechanism:1309} bis zu {value:nb} Felder von deinem Helden entfernt.\n\\---\n<rem>Zerstört deine {ObjectMechanism:1309!}, die bereits im Spiel ist.</rem>",
+    "pt": "Posiciona uma {ObjectMechanism:1309} a até {value:nb} células do\\_seu\\_herói.\n\\---\n<rem>Destrói a {ObjectMechanism:1309!} já em jogo.</rem>"
+  }
+}

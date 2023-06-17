@@ -1,0 +1,144 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "881",
+  "m_id": 881,
+  "m_displayName": "RING - RARE - Ann Eau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1724224606,
+    "b": 1917641940,
+    "c": 283020488,
+    "d": -1044221792,
+    "e": -1860944193
+  },
+  "m_i18nDescriptionId": {
+    "a": -1724224606,
+    "b": 1917641940,
+    "c": 283020488,
+    "d": -1044221792,
+    "e": -1918681991
+  },
+  "m_i18nBgDescriptionId": {
+    "a": -1724224606,
+    "b": 1917641940,
+    "c": 283020488,
+    "d": -1044221792,
+    "e": 1170487796
+  },
+  "m_illustration": {
+    "assetGuid": "918d5801ce4f3924198982c3f3f2167b"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "5a965685927fae84bafc848b1d807e18"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 881,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 1,
+    "unlockableSkillIds": [
+      917,
+      91493,
+      711882,
+      690736,
+      690755,
+      690799
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 274,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "x",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 20
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 611
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "y",
+                "value": 10
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "y",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 1,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 9,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          22
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Ann'eau",
+    "en": "Watering",
+    "es": "Aguanillo",
+    "de": "Wasserring",
+    "pt": "Aguanel"
+  },
+  "description": {
+    "fr": "Lorsque vous appliquez {%WET}\\_: {value:x,+,percent} de dégâts à votre prochain sort {%WATER}.",
+    "en": "When you apply {%WET}: {value:x,+,percent} damage to your next {%WATER} spell.",
+    "es": "Cuando aplicas {%WET}: {value:x,+,percent} de daño en tu próximo hechizo de {%WATER}.",
+    "de": "Wenn du {%WET} anwendest: {value:x,+,percent} Schaden bei deinem nächsten {%WATER}zauber.",
+    "pt": "Ao aplicar {%WET}: {value:x,+,percent} de danos ao seu próximo feitiço de {%WATER}."
+  },
+  "bgDescription": {
+    "fr": "Avez-vous déjà vu : une bague faite entièrement d'eau ? Maintenant, oui.",
+    "en": "Have you ever seen a ring made entirely of water? Well, now you have.",
+    "es": "¿Habías visto alguna vez un anillo todo hecho de agua? Pues ahí lo tienes.",
+    "de": "Hast du das schon mal gesehen? Einen Ring, der vollständig aus Wasser besteht? Jetzt schon.",
+    "pt": "Você já viu um anel feito totalmente de água? Agora sim!"
+  }
+}

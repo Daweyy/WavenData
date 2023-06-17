@@ -1,0 +1,149 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "603",
+  "m_id": 603,
+  "m_displayName": "OSAMODAS - CLASSE - TERRE - Carapace",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": 853941340,
+    "b": 1119432372,
+    "c": -1127884038,
+    "d": 1119476692,
+    "e": -341096718
+  },
+  "m_i18nDescriptionId": {
+    "a": 853941340,
+    "b": 1119432372,
+    "c": -1127884038,
+    "d": 1119476692,
+    "e": 340360653
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9948bb65c8595404695d5b7ff4432425"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 603,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        11
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 30
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 8
+        },
+        "COMPLICITE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Carapace",
+    "en": "Frappe du Craqueleur",
+    "es": "Frappe du Craqueleur",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMPLICITE}\\_: Confère {PropertyEffect:8} à votre héros et à votre <b>BÊTE</b>.",
+    "en": "Inflige {magicalDamage:dmg} dans la zone <sprite name=\"cell_circle2\"> ciblée.\nConfère {#GROWING} aux bêtes alliées dans la zone ciblée.",
+    "es": "Inflige {magicalDamage:dmg} dans la zone <sprite name=\"cell_circle2\"> ciblée.\nConfère {#GROWING} aux bêtes alliées dans la zone ciblée.",
+    "de": "",
+    "pt": ""
+  }
+}

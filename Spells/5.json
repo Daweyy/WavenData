@@ -1,0 +1,196 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "5",
+  "m_id": 5,
+  "m_displayName": "CRA - CLASSE - TERRE - Tir Terrestre",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 649238254,
+    "b": 1507830916,
+    "c": -1054401271,
+    "d": 1329332591,
+    "e": 814646819
+  },
+  "m_i18nDescriptionId": {
+    "a": 649238254,
+    "b": 1507830916,
+    "c": -1054401271,
+    "d": 1329332591,
+    "e": -1365875885
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "91337832836d31e45b95a6e8047ded67"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 5,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      94991,
+      168,
+      954
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      20,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c05ab56874a524743a082944810e8ee6",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 21,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "a",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": true
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 140
+        },
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Tir Terrestre",
+    "en": "Earthy Shot",
+    "es": "Tiro Terrestre",
+    "de": "Erdgeschoss",
+    "pt": "Tiro Terrestre"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_: {value:a,+}\\_{aura:140,value:a} à\\_votre\\_héros.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:140,value:a} to\\_your\\_hero.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:140,value:a} a\\_tu\\_héroe.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}:{value:a,+}\\_{aura:140,value:a} für\\_deinen\\_Helden.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:140,value:a} ao\\_herói."
+  }
+}

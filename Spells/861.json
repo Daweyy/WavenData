@@ -1,0 +1,161 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "861",
+  "m_id": 861,
+  "m_displayName": "COMPAGNON - KHAN KARKASS - Essai de Khan Karkass",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 443428926,
+    "b": 1457187748,
+    "c": 1355698121,
+    "d": -428215247,
+    "e": -606060965
+  },
+  "m_i18nDescriptionId": {
+    "a": 443428926,
+    "b": 1457187748,
+    "c": 1355698121,
+    "d": -428215247,
+    "e": 1185625529
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f485896dab177b04ca3725febf574a51"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "bcf9efb296185d64da0fcc5c92a3c815"
+      },
+      {
+        "assetGuid": "547ad92d04bb6534fb37a23efee633e0"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 861,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterSpecificCompanionSelector",
+                "companion": 417
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "dmg",
+          "entitySelector": {
+            "type": "EffectHolderSelector"
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Essai de Khan Karkass",
+    "en": "Khan Karkass's Trial",
+    "es": "Ensayo de Khan Karkasa",
+    "de": "Versuch von Khan Karkass",
+    "pt": "Ensaio de Khan Karkass"
+  },
+  "description": {
+    "fr": "Téléporte {Companion:417!} jusqu'à {cell:c}.\n\\---\nInflige son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "en": "Teleports {Companion:417!} up to {cell:c}.\n\\---\nInflicts his {%AT} on opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
+    "es": "Teletransporta a {Companion:417!} hasta a {cell:c}.\n\\---\nInflige su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
+    "de": "Teleportiert {Companion:417!} bis zu {cell:c}.\n\\---\nFügt den an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern seinen {%AT} als Schaden zu.",
+    "pt": "Teletransporta {Companion:417!} a até {cell:c}.\n\\---\nInflige seu {%AT} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada."
+  }
+}

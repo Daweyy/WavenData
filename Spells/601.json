@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "601",
+  "m_id": 601,
+  "m_displayName": "COMPAGNON - KERUBIM - Armure de Kerubim",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1730533831,
+    "b": -514389372,
+    "c": 767739466,
+    "d": -832189361,
+    "e": 1578073365
+  },
+  "m_i18nDescriptionId": {
+    "a": 1730533831,
+    "b": -514389372,
+    "c": 767739466,
+    "d": -832189361,
+    "e": 1838256378
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "42ba3ff1a659e684cbf10e6846ed3078"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 601,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCompanionsSelector"
+        },
+        "filters": [
+          {
+            "type": "CompanionDefinitionFilter",
+            "condition": 1,
+            "companions": [
+              261
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "36af9e63bcd61514ea1a855326511d8a",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            6,
+            23,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 1,
+          "id": 3484
+        },
+        "TRANSFORMATION"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Armure de Kérubim",
+    "en": "Kerub's Armor",
+    "es": "Armadura de Kerubim",
+    "de": "Kerubims Rüstung",
+    "pt": "Armadura de Kerubim"
+  },
+  "description": {
+    "fr": "{ARvalue:ar,+} à {Companion:261!}.\n\\---\n{#TRANSFORMATION}\\_: {Skin:3484}.",
+    "en": "{ARvalue:ar,+} to {Companion:261!}.\n\\---\n{#TRANSFORMATION}: {Skin:3484}.",
+    "es": "{ARvalue:ar,+} a {Companion:261!}.\n\\---\n{#TRANSFORMATION}: {Skin:3484}.",
+    "de": "{ARvalue:ar,+} für {Companion:261!}.\n\\---\n{#TRANSFORMATION}: {Skin:3484}.",
+    "pt": "{ARvalue:ar,+} a {Companion:261!}.\n\\---\n{#TRANSFORMATION}: {Skin:3484}."
+  }
+}

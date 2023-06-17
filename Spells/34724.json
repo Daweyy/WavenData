@@ -1,0 +1,147 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "34724",
+  "m_id": 34724,
+  "m_displayName": "MONSTRE COCHON - Ninportsu",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1230125148,
+    "b": -756316828,
+    "c": -51676438,
+    "d": 114285683,
+    "e": -1648374328
+  },
+  "m_i18nDescriptionId": {
+    "a": -1230125148,
+    "b": -756316828,
+    "c": -51676438,
+    "d": 114285683,
+    "e": -1356687681
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b6a0e4dfd7e5bf447a7f5985bc08da28"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "3629735d713f7774dac8743f41297b10"
+      },
+      {
+        "assetGuid": "f2eeabb0897765f48bed487276ec2198"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 34724,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50,
+              64,
+              65
+            ]
+          },
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 2,
+            "summonings": [
+              574
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ninportsu",
+    "en": "Ninportsu",
+    "es": "Cochininjutsu",
+    "de": "Ninportsu",
+    "pt": "Ninportsu"
+  },
+  "description": {
+    "fr": "Téléporte un <b>Cochon</b> allié sur une case adjacente\\_<sprite name=\"cell_cross\"> à un adversaire.",
+    "en": "Teleports an allied <b>Pig</b> to a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent.",
+    "es": "Teletransporta a un <b>cerdo</b> aliado a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un adversario.",
+    "de": "Teleportiert ein verbündetes <b>Schweinemonster</b> auf ein angrenzendes\\_<sprite name=\"cell_cross\"> Feld eines Gegners.",
+    "pt": "Teletransporta um <b>Porco</b> aliado sobre uma célula adjacente\\_<sprite name=\"cell_cross\"> a um adversário."
+  }
+}

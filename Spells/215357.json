@@ -1,0 +1,160 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "215357",
+  "m_id": 215357,
+  "m_displayName": "COMPAGNON - GRUFON - Soin des démons",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 181100851,
+    "b": -1184551036,
+    "c": 31132410,
+    "d": 924933781,
+    "e": -1370526350
+  },
+  "m_i18nDescriptionId": {
+    "a": 181100851,
+    "b": -1184551036,
+    "c": 31132410,
+    "d": 924933781,
+    "e": 529139090
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "41c670f0c7ea73f4f820146569468bb1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 215357,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "71ba68fa4cdcbbe4ba91fc1d06acc60a",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 30
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "i",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Soin des démons",
+    "en": "Demon Healing",
+    "es": "Cura Demoníaca",
+    "de": "Heilung von Dämonen",
+    "pt": "Cura dos Demônios"
+  },
+  "description": {
+    "fr": "Soigne un allié de {PVvalue:h} + {PVvalue:i} pour chacun de vos personnages en jeu.",
+    "en": "Heals an ally {PVvalue:h} + {PVvalue:i} for each of your characters in play.",
+    "es": "Cura a un aliado {PVvalue:h} + {PVvalue:i} por cada uno de tus personajes en juego.",
+    "de": "Heilt einen Verbündeten um {PVvalue:h} + {PVvalue:i} für jeden deiner Charaktere im Spiel.",
+    "pt": "Cura um aliado em {PVvalue:h} + {PVvalue:i} para cada um de seus personagens em jogo."
+  }
+}

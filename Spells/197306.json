@@ -1,0 +1,206 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "197306",
+  "m_id": 197306,
+  "m_displayName": "SRAM - ARME - SOUROKAN - AIR - Huitieme Sourokan",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1909897399,
+    "b": -1421850972,
+    "c": 1345494506,
+    "d": 828195197,
+    "e": -1781011184
+  },
+  "m_i18nDescriptionId": {
+    "a": -1909897399,
+    "b": -1421850972,
+    "c": 1345494506,
+    "d": 828195197,
+    "e": -819535445
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "eb037c7c8a4ffcd42b22c00c0766bd25"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 197306,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      357074,
+      371171,
+      493522
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      22
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 937,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e4c9139cb3946ff449c4bc02d053be09",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgA",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 268,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgB",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 268,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAPPER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Huitième Sourokan",
+    "en": "Eighth Surokan",
+    "es": "Séptimo Surokán",
+    "de": "Achter Surokan",
+    "pt": "Oitavo Surokan"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmgA} aux adversaires autour\\_<sprite name=\"cell_around\">\\_de votre héros.\n\\---\n{#TRAPPER}\\_: {magicalDamage:dmgB,+}.",
+    "en": "Does {magicalDamage:dmgA} to opponents around\\_<sprite name=\"cell_around\"> your hero.\n\\---\n{#TRAPPER}: {magicalDamage:dmgB,+}.",
+    "es": "Inflige {magicalDamage:dmgA} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\n{#TRAPPER}: {magicalDamage:dmgB,+}.",
+    "de": "Verursacht {magicalDamage:dmgA} bei den Gegnern rings um\\_<sprite name=\"cell_around\">\\_deinen Helden.\n\\---\n{#TRAPPER}: {magicalDamage:dmgB,+}.",
+    "pt": "Inflige {magicalDamage:dmgA} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.\n\\---\n{#TRAPPER}: {magicalDamage:dmgB,+}."
+  }
+}

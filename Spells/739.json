@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "739",
+  "m_id": 739,
+  "m_displayName": "COMPAGNON - YUGO - Portail de Yugo",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 856143440,
+    "b": -901192796,
+    "c": 1625675912,
+    "d": -295072064,
+    "e": 770795094
+  },
+  "m_i18nDescriptionId": {
+    "a": 856143440,
+    "b": -901192796,
+    "c": 1625675912,
+    "d": -295072064,
+    "e": 697649440
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1caf4d5e2de13bf4e94d494bdc1d0424"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "ee3e7095759138c4089105fc754b53d7"
+      },
+      {
+        "assetGuid": "e30f8732ca0c4a9469fb3d5ab08c9ae7"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 739,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NotCondition",
+        "condition": {
+          "type": "PropertyFlagsCondition",
+          "selector": {
+            "type": "CasterSpecificCompanionSelector",
+            "companion": 221
+          },
+          "flags": [
+            4
+          ]
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 20
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntityTypeFilter",
+            "condition": 1,
+            "entityTypes": [
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "CompanionDefinitionFilter",
+              "condition": 1,
+              "companions": [
+                221
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Portail de Yugo",
+    "en": "Yugo's Portal",
+    "es": "Portal de Yugo",
+    "de": "Yagos Portal",
+    "pt": "Portal de Yugo"
+  },
+  "description": {
+    "fr": "Échange la position de {Companion:221!} avec un allié.",
+    "en": "Switches {Companion:221!}'s position with that of an ally.",
+    "es": "Intercambia la posición de {Companion:221!} con la de un aliado.",
+    "de": "Tauscht die Position von {Companion:221!} mit einem Verbündeten.",
+    "pt": "Troca a posição de {Companion:221!} com um aliado."
+  }
+}

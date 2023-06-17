@@ -1,0 +1,131 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "136082",
+  "m_id": 136082,
+  "m_displayName": "XELOR - CLASSE - ETHER - Temporisation",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -740657959,
+    "b": 1407839188,
+    "c": 1547518633,
+    "d": -1167800289,
+    "e": 1474515498
+  },
+  "m_i18nDescriptionId": {
+    "a": -740657959,
+    "b": 1407839188,
+    "c": 1547518633,
+    "d": -1167800289,
+    "e": -258022848
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2187ecab4b22ff248b87f06c0c0979c1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 136082,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 5,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "447883d691f056a479b456a43eee1180",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Temporisation",
+    "en": "Delay",
+    "es": "Temporización",
+    "de": "Verzögerung",
+    "pt": "Temporização"
+  },
+  "description": {
+    "fr": "Piochez {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} à votre héros s'il en possède déjà.",
+    "en": "Draw {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} to your hero if they have any already.",
+    "es": "Sacas {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} a tu héroe si ya tiene.",
+    "de": "Zieht {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} für deinen Helden, falls er dies bereits besitzt.",
+    "pt": "Compre {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} ao seu herói se ele já possuir."
+  }
+}

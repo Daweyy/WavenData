@@ -1,0 +1,187 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "103104",
+  "m_id": 103104,
+  "m_displayName": "ENIRIPSA - CLASSE - AIR - Fiole de Rebond",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 581264238,
+    "b": -391968796,
+    "c": 1684769802,
+    "d": 1581127431,
+    "e": 1717046427
+  },
+  "m_i18nDescriptionId": {
+    "a": 581264238,
+    "b": -391968796,
+    "c": 1684769802,
+    "d": 1581127431,
+    "e": -1116390593
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "aa056627b904df54e90813739edc0b85"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 103104,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      149019,
+      158768,
+      500302
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      13,
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d091490abd31b7941970cb30451bb280",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 718,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.782.bc"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "BOUNCE",
+        "SUPPORT"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Fiole de Rebond",
+    "en": "Rebound Vial",
+    "es": "Frasco de rebote",
+    "de": "Abprall-Phiole",
+    "pt": "Frasco de Ricochete"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\n{#SUPPORT}\\_: L'allié déclenche {bounce:ParameterizedEffectExecution.782.bc}.",
+    "en": "Does {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to an ally.\n\\---\n{#SUPPORT}: The ally triggers {bounce:ParameterizedEffectExecution.782.bc}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a un aliado.\n\\---\n{#SUPPORT}: El aliado activa {bounce:ParameterizedEffectExecution.782.bc}.",
+    "de": "Verursacht {magicalDamage:dmg} bei den angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern eines Verbündeten.\n\\---\n{#SUPPORT}: Der Verbündete löst {bounce:ParameterizedEffectExecution.782.bc} aus.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\n{#SUPPORT}: O aliado aciona {bounce:ParameterizedEffectExecution.782.bc}."
+  }
+}

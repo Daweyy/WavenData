@@ -1,0 +1,207 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "238",
+  "m_id": 238,
+  "m_displayName": "XELOR - CLASSE - TERRE - Teleportation Controlee",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -702650223,
+    "b": 789139876,
+    "c": 512037289,
+    "d": 377683023,
+    "e": 144866313
+  },
+  "m_i18nDescriptionId": {
+    "a": -702650223,
+    "b": 789139876,
+    "c": 512037289,
+    "d": 377683023,
+    "e": -233104292
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f74cb4b83e3eb9b4382f6e6fa398d3b1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "afe176ec7439e9445bec4411ab84b3ca"
+      },
+      {
+        "assetGuid": "477669a1eafed634aad39fba287f269a"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 238,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      477595,
+      477645,
+      456463
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 4
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6d983e2194170dc4a84e020617d39d88",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 66748,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléportation Contrôlée",
+    "en": "Controlled Teleportation",
+    "es": "Teletransportación Controlada",
+    "de": "Kontrollierte Teleportation",
+    "pt": "Teletransporte Controlado"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} et téléporte votre héros jusqu'à {cell:c} en ligne.",
+    "en": "Does {magicalDamage:dmg} and teleports your hero up to {cell:c} in a line.",
+    "es": "Inflige {magicalDamage:dmg} y teletransporta a tu héroe hasta {cell:c} en línea.",
+    "de": "Verursacht {magicalDamage:dmg} und teleportiert deinen Helden bis {cell:c} in der Reihe.",
+    "pt": "Inflige {magicalDamage:dmg} e teletransporta o seu herói a até {cell:c}."
+  }
+}

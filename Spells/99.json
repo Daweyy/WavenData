@@ -1,0 +1,201 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "99",
+  "m_id": 99,
+  "m_displayName": "CRA - CLASSE - EAU - Trait Aqueux",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -76897473,
+    "b": 2117342196,
+    "c": 133032089,
+    "d": 454484854,
+    "e": 477618425
+  },
+  "m_i18nDescriptionId": {
+    "a": -76897473,
+    "b": 2117342196,
+    "c": 133032089,
+    "d": 454484854,
+    "e": 118681055
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e8798e7d5b0d27d48a9b5a649c6bfca1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 99,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      977,
+      102528,
+      667
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      20,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "00ef5618f453cc04bad166b3afdeaa8a",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 238,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "a",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": true
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 141
+        },
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Trait Aqueux",
+    "en": "Watery Bolt",
+    "es": "Saeta Acuosa",
+    "de": "Wässriger Zug",
+    "pt": "Disparo Aquoso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_: {value:a,+}\\_{aura:141,value:a} à\\_votre\\_héros.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:141,value:a} to\\_your\\_hero.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:141,value:a} a\\_tu\\_héroe.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:141,value:a} für\\_deinen\\_Helden.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: {value:a,+}\\_{aura:141,value:a} ao\\_herói."
+  }
+}

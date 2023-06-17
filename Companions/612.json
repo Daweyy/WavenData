@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "612",
+  "m_id": 612,
+  "m_displayName": "DQ - SECRET ZONE - COCHON - 1_Niels Laren (ZS 2)",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2039077205,
+    "b": 1241552340,
+    "c": -1656531704,
+    "d": -610977782,
+    "e": 2136414041
+  },
+  "m_i18nDescriptionId": {
+    "a": -2039077205,
+    "b": 1241552340,
+    "c": -1656531704,
+    "d": -610977782,
+    "e": -1074587970
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 612,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 3227,
+      "skinIds": [
+        3227
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      75,
+      25
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 120
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          612
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Niels Laren",
+    "en": "Niels Laren",
+    "es": "Niels Laren",
+    "de": "Niels Laren",
+    "pt": "Niels Laren"
+  },
+  "description": {
+    "fr": "Lorsqu'un <b>soldat de</b> {%Family_Bonta_Name} est invoqué\\_: {ATvalue:pow,+,percent}.",
+    "en": "When a {%Family_Bonta_Name}<b>rian soldier</b> is summoned: {ATvalue:pow,+,percent}.",
+    "es": "Cuando un <b>soldado de</b> {%Family_Bonta_Name} es invocado: {ATvalue:pow,+,percent}.",
+    "de": "Falls ein {%Family_Bonta_Name}-<b>Soldat</b> beschworen wird {ATvalue:pow,+,percent}.",
+    "pt": "Quando um <b>soldado de</b> {%Family_Bonta_Name} é invocado: {ATvalue:pow,+,percent}."
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "524",
+  "m_id": 524,
+  "m_displayName": "SRAM - ARME - KARTANA - AIR - Frappe Balayante",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2074144211,
+    "b": 195727732,
+    "c": 1112917594,
+    "d": 759804465,
+    "e": 238912600
+  },
+  "m_i18nDescriptionId": {
+    "a": -2074144211,
+    "b": 195727732,
+    "c": 1112917594,
+    "d": 759804465,
+    "e": -358117654
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "998af7654149aca4caa4db1a2c0b9673"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "1fe646168554a7f4aae84698bc40e982"
+      },
+      {
+        "assetGuid": "68fc8865ab0d67f4ca0bc733d8ccf2fe"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 524,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      493553,
+      493554,
+      493618
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      9
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": 182,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllFloorMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 738,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Frappe Balayante",
+    "en": "Sweeping Strike",
+    "es": "Golpe Barredor",
+    "de": "Schwunghafter Schlag",
+    "pt": "Golpe Varredor"
+  },
+  "description": {
+    "fr": "Téléporte votre héros sur un de vos {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nAttire les adversaires alignés jusqu'à {cell:c} et leur inflige {magicalDamage:dmg}.",
+    "en": "Teleports your hero onto one of your {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nAttracts in-line opponents up to {cell:c} and does {magicalDamage:dmg} to them.",
+    "es": "Teletransporta a tu héroe hasta una de tus {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nAtrae a los adversarios alineados hasta {cell:c} y les inflige {magicalDamage:dmg}.",
+    "de": "Teleportiert deinen Helden auf eine deiner {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nZieht die Gegner in derselben Reihe bis zu {cell:c} heran und verursacht bei ihnen {magicalDamage:dmg}.",
+    "pt": "Teletransporta seu herói para uma de suas {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nAtrai os adversários alinhados a até {cell:c} e inflige {magicalDamage:dmg}."
+  }
+}

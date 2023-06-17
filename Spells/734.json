@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "734",
+  "m_id": 734,
+  "m_displayName": "SACRIEUR - CLASSE - ETHER - Assaut",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 371431076,
+    "b": -2105026204,
+    "c": -554089045,
+    "d": -1278704628,
+    "e": -1677423855
+  },
+  "m_i18nDescriptionId": {
+    "a": 371431076,
+    "b": -2105026204,
+    "c": -554089045,
+    "d": -1278704628,
+    "e": -337982422
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d20d033b08a572d47a6d5bed0f7503af"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 734,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      6
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        8
+      ],
+      "heroSkillPointsCost": 30,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "dash",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "934eba08b73aa6f438830e68720c9da2",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dash",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Assaut",
+    "en": "Assault",
+    "es": "Asalto",
+    "de": "Sturmangriff",
+    "pt": "Assalto"
+  },
+  "description": {
+    "fr": "Votre héros traverse jusqu'à {cell:dash} devant lui.\n\\---\nPiochez {SPELLCOUNTvalue:draw}.",
+    "en": "Your hero goes through up to {cell:dash} in a line.\n\\---\nDraw {value:draw}\\_{draw,plural, one[spell] other[spells]}.",
+    "es": "Tu héroe atraviesa hasta {cell:dash} en línea.\n\\---\nSacas {value:draw}\\_{draw,plural, one[hechizo] other[hechizos]}.",
+    "de": "Dein Held überquert bis {cell:dash} in einer Reihe.\n\\---\nZieht {value:draw}\\_{draw,plural, one[Zauber] other[Zauber]}.",
+    "pt": "Seu herói atravessa até {cell:dash} em linha.\n\\---\nCompre {value:draw}\\_{draw,plural, one[feitiço] other[feitiços]}."
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "447",
+  "m_id": 447,
+  "m_displayName": "MONSTRE COCHON - Flatulence de Masse",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -865416497,
+    "b": 1995315604,
+    "c": -394768423,
+    "d": -791757225,
+    "e": -111659066
+  },
+  "m_i18nDescriptionId": {
+    "a": -865416497,
+    "b": 1995315604,
+    "c": -394768423,
+    "d": -791757225,
+    "e": 1640947656
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1f7a651dcfa3f1349b78c00bd80d104d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 447,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        50
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a5a31fad2165b494db2e34870b8d3b51",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "max",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Flatulence de Masse",
+    "en": "Mass Flatulence",
+    "es": "Flatulencia Masiva",
+    "de": "Massenflatulenz",
+    "pt": "Flatulência de Massa"
+  },
+  "description": {
+    "fr": "Inflige {magicalPowerValue:min} à {magicalDamage:max} aux adversaires autour\\_<sprite name=\"cell_around\"> de chaque <b>Cochon</b> allié.\n\\---\n{#PUSH} leurs\\_adversaires adjacents\\_<sprite name=\"cell_cross\"> de {cell:c}.",
+    "en": "Does {magicalPowerValue:min} to {magicalDamage:max} to opponents around\\_<sprite name=\"cell_around\"> each allied <b>Pig</b>.\n\\---\n{#PUSH} their adjacent\\_<sprite name=\"cell_cross\"> opponents {cell:c}.",
+    "es": "Inflige {magicalPowerValue:min} a {magicalDamage:max} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de cada <b>cerdo</b> aliado.\n\\---\n{#PUSH} a sus\\_adversarios adyacentes\\_<sprite name=\"cell_cross\"> {cell:c}.",
+    "de": "Verursacht bei Gegnern ringsum\\_<sprite name=\"cell_around\"> von jedem verbündeten <b>Schweinemonster</b> {magicalPowerValue:min} bis {magicalDamage:max}.\n\\---\n{#PUSH} ihre angrenzenden\\_<sprite name=\"cell_cross\"> Gegner um {cell:c} zurück.",
+    "pt": "Inflige de {magicalPowerValue:min} a {magicalDamage:max} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de cada <b>Porco</b> aliado.\n\\---\n{#PUSH} os\\_adversários adjacentes\\_<sprite name=\"cell_cross\"> a eles por {cell:c}."
+  }
+}

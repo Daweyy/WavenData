@@ -1,0 +1,220 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "687",
+  "m_id": 687,
+  "m_displayName": "MONSTRE BWORK - Compression",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1325086309,
+    "b": -843599036,
+    "c": -1704707240,
+    "d": -816738019,
+    "e": -813011635
+  },
+  "m_i18nDescriptionId": {
+    "a": -1325086309,
+    "b": -843599036,
+    "c": -1704707240,
+    "d": -816738019,
+    "e": -1103945670
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e7974c21f68695f48948d1a9faba9d7d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0bb687c034aee8d4588163093655a16b"
+      },
+      {
+        "assetGuid": "839220e8dce1b324b9f342538a8f9a1f"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 687,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "element": null,
+      "specificToWeapon": null,
+      "families": [
+        49
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundSquaredTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "FamilyFilter",
+                  "condition": 1,
+                  "families": [
+                    49
+                  ]
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 4
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "853e1243bb3ee1f47a08c9d24c6de054",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 4
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Compression",
+    "en": "Compression",
+    "es": "Compresión",
+    "de": "Kompression",
+    "pt": "Compressão"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} à un personnage autour\\_<sprite name=\"cell_around\"> d'un <b>Bwork</b> et le téléporte jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:dmg2} aux personnages adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "en": "Does {magicalDamage:dmg} to a character around\\_<sprite name=\"cell_around\"> a <b>Bwork</b> and teleports them up to {cell:c}.\n\\---\nDoes {magicalDamage:dmg2} to characters adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
+    "es": "Inflige {magicalDamage:dmg} a un personaje de alrededor\\_<sprite name=\"cell_around\"> de un <b>bwork</b> y lo teletransporta hasta {cell:c}.\n\\---\nInflige {magicalDamage:dmg2} a los personajes adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
+    "de": "Verursacht {magicalDamage:dmg} bei einem Charakter im Umkreis<sprite name=\"cell_around\"> eines <b>Bwork</b> und teleportiert ihn bis zu {cell:c}.\n\\---\nVerursacht {magicalDamage:dmg2} bei Charakteren, die an dieses Zielfeld angrenzen\\_<sprite name=\"cell_cross\">.",
+    "pt": "Inflige {magicalDamage:dmg} a um personagem em\\_volta\\_<sprite name=\"cell_around\"> de um <b>Bwork</b> e o teletransporta a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg2} aos personagens adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada."
+  }
+}

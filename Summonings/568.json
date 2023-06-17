@@ -1,0 +1,161 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158400
+  },
+  "m_Name": "568",
+  "m_id": 568,
+  "m_displayName": "MONSTRE BWORK - CLAN VOLCANO'CULTE - Bworkakorn Volcano'culte",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 205127167,
+    "b": -1284344380,
+    "c": 1667538056,
+    "d": 2000357328,
+    "e": 303322199
+  },
+  "m_i18nChampionNameId": {
+    "a": 205127167,
+    "b": -1284344380,
+    "c": 1667538056,
+    "d": 2000357328,
+    "e": 2126657087
+  },
+  "m_i18nDescriptionId": {
+    "a": 205127167,
+    "b": -1284344380,
+    "c": 1667538056,
+    "d": 2000357328,
+    "e": 1657995032
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 568,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1243,
+      "skinIds": [
+        1243
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 16
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 20
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAP",
+        {
+          "type": 6,
+          "id": 278
+        },
+        "SCORIE",
+        {
+          "type": 20,
+          "id": 45
+        },
+        {
+          "type": 19,
+          "id": 798
+        }
+      ]
+    },
+    "families": [
+      49,
+      63
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 79
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 11
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 1,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Bworkakorn Volcano] other[Bworkakorns Volcano]}",
+    "en": "{0, plural, one[Volcano Bworkahorn] other[Volcano Bworkahorn]}",
+    "es": "{0, plural, one[Bworkornado Volcano] other[Bworkornados Volcano]}",
+    "de": "{0, plural, one[Gehörnter Vulkan-Bwork] other[Gehörnte Vulkan-Bworks]}",
+    "pt": "{0, plural, one[Bworkakorn Volcano] other[Bworkakorns Volcano]}"
+  },
+  "description": {
+    "fr": "<rem>{NamedEffect:798}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} aux {%Family_Bwork_Name,plural:other} alliés autour\\_<sprite name=\"cell_around\">.\n\\---\n{PropertyEffect:45}\\_: {ATvalue:at,percent,+} aux {%Family_Bwork_Name,plural:other} alliés autour\\_<sprite name=\"cell_around\">.",
+    "en": "<rem>{NamedEffect:798}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} to surrounding\\_<sprite name=\"cell_around\"> allied {%Family_Bwork_Name,plural:other}.\n\\---\n{PropertyEffect:45}: {ATvalue:at,percent,+} to surrounding\\_<sprite name=\"cell_around\"> allied {%Family_Bwork_Name,plural:other}.",
+    "es": "<rem>{NamedEffect:798}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} a los {%Family_Bwork_Name,plural:other} aliados de alrededor\\_<sprite name=\"cell_around\">.\n\\---\n{PropertyEffect:45}: {ATvalue:at,percent,+} a los {%Family_Bwork_Name,plural:other} aliados de alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "<rem>{NamedEffect:798}</rem>\n\\---\n{%FightTurnStarted} {ARvalue:ar,+} für die verbündeten {%Family_Bwork_Name,plural:other} in der Nähe\\_<sprite name=\"cell_around\">.\n\\---\n{PropertyEffect:45}: {ATvalue:at,percent,+} für die verbündeten {%Family_Bwork_Name,plural:other} in der Nähe\\_<sprite name=\"cell_around\">.",
+    "pt": "<rem>{NamedEffect:798}</rem>\n\\---\n{%FightTurnStarted}{ARvalue:ar,+} aos {%Family_Bwork_Name,plural:other} aliados em\\_volta\\_<sprite name=\"cell_around\">.\n\\---\n{PropertyEffect:45}: {ATvalue:at,percent,+} aos {%Family_Bwork_Name,plural:other} aliados em\\_volta\\_<sprite name=\"cell_around\">."
+  },
+  "championName": {
+    "fr": "Hérault Volkamax",
+    "en": "Herault Volkamax",
+    "es": "Heraldo Volkamax",
+    "de": "Herold Volkamax",
+    "pt": "Heraldo Volkamax"
+  }
+}

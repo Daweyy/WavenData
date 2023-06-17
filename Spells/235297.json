@@ -1,0 +1,137 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "235297",
+  "m_id": 235297,
+  "m_displayName": "XELOR - CLASSE - ETHER - EVOLUTION - Clameur",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1535724262,
+    "b": -2090286428,
+    "c": 448842201,
+    "d": -699999169,
+    "e": -755448129
+  },
+  "m_i18nDescriptionId": {
+    "a": 1535724262,
+    "b": -2090286428,
+    "c": 448842201,
+    "d": -699999169,
+    "e": 505370406
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7275cbac8c0e256468d3c0855d3538c4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 235297,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 20,
+      "bannedInPvp": true
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "49b23fc85102c14429bf067dd6e04e80",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "pa",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "x",
+              "value": 1
+            },
+            {
+              "type": "ThisSpellEvolutionValue",
+              "referenceId": "Lv"
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": 1
+        },
+        {
+          "type": "ThisSpellEvolutionValue",
+          "referenceId": "Lv"
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "REWIND"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Clameur",
+    "en": "Clamor",
+    "es": "Clamor",
+    "de": "Geschrei",
+    "pt": "Clamor"
+  },
+  "description": {
+    "fr": "{PA_RESvalue:pa,+}.\n\\---\nLorsque vous déclenchez {#REWIND}\\_:\\v {PA_RESvalue:x,+} à l'effet de ce sort.\n\\---\n<rem>Compteur {#REWIND} : {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "en": "{PA_RESvalue:pa,+}.\n\\---\nWhen you trigger {#REWIND}:\\v {PA_RESvalue:x,+} to this spell's effect.\n\\---\n<rem>{#REWIND} Count: {value:Lv}.</rem>\n{%DestroyOnPlayed}",
+    "es": "{PA_RESvalue:pa,+}.\n\\---\nCuando activas {#REWIND}:\\v {PA_RESvalue:x,+} al efecto de este hechizo.\n\\---\n<rem>Contador {#REWIND}: {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "de": "{PA_RESvalue:pa,+}.\n\\---\nWenn du {#REWIND} auslöst:\\v {PA_RESvalue:x,+} auf den Effekt dieses Zaubers.\n\\---\n<rem>{#REWIND}-Zähler: {value:Lv}</rem>\n{%DestroyOnPlayed}",
+    "pt": "{PA_RESvalue:pa,+}.\n\\---\nAo acionar {#REWIND}: \\v{PA_RESvalue:x,+} ao efeito do feitiço.\n\\---\n<rem>Contador de {#REWIND}: {value:Lv}</rem>\n{%DestroyOnPlayed}"
+  }
+}

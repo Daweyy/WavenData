@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "308",
+  "m_id": 308,
+  "m_displayName": "SRAM - CLASSE - TERRE - Sanction",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1549627193,
+    "b": -351758844,
+    "c": -820688344,
+    "d": -988582750,
+    "e": -513985222
+  },
+  "m_i18nDescriptionId": {
+    "a": -1549627193,
+    "b": -351758844,
+    "c": -820688344,
+    "d": -988582750,
+    "e": -1545522543
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b61e20473aca4254e80714d741497958"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 308,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      285,
+      256,
+      368171
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      22
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": false
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "46b4ff635724d9d469c0252914f7fbbc",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 594,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Bper",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Bper",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "jd3",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "TRAPPER"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Sanction",
+    "en": "Sanction",
+    "es": "Sanción",
+    "de": "Strafe",
+    "pt": "Sanção"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#TRAPPER}\\_: Vole {PMvalue:pm} à la cible pour le tour.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#TRAPPER}: Steals {PMvalue:pm} from the target for the turn.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#TRAPPER}: Roba {PMvalue:pm} al objetivo durante el turno.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#TRAPPER}: Entzieht dem Ziel für die Runde {PMvalue:pm}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#TRAPPER}: Rouba {PMvalue:pm} do alvo durante o turno."
+  }
+}
