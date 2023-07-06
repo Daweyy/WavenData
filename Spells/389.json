@@ -1,0 +1,151 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "389",
+  "m_id": 389,
+  "m_displayName": "NECROME - WATER - Tempête Nécromique",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -1464938168,
+    "b": 111500820,
+    "c": -1764109320,
+    "d": 633678776,
+    "e": -2128801325
+  },
+  "m_i18nDescriptionId": {
+    "a": -1464938168,
+    "b": 111500820,
+    "c": -1764109320,
+    "d": 633678776,
+    "e": -1278889593
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 389,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      173,
+      795731,
+      796077
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [
+        68
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": true
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 9
+            },
+            {
+              "type": "NegativeValue",
+              "referenceId": "",
+              "valueToNeg": {
+                "type": "CompanionsInReserveValue",
+                "referenceId": "",
+                "playerSelector": {
+                  "type": "CasterSelector"
+                },
+                "companionState": 2
+              }
+            },
+            {
+              "type": "NegativeValue",
+              "referenceId": "",
+              "valueToNeg": {
+                "type": "NumberOfEquippedCompanionsWithFamilyValue",
+                "referenceId": "",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "family": 68
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d",
+          "value": 16
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Tempête Nécromique",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {value:d} dégâts. Déclenche FLUX DES ÂMES par aura que possède votre héros.\nNÉCROMAGE\n",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

@@ -48,15 +48,16 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 20,
-          "id": 8
-        }
-      ]
+      "keywordReferences": []
     },
     "families": [
       73
@@ -65,7 +66,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 1100
+      "value": 1099
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -80,7 +81,31 @@
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
-    "customActionTarget": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "EntityTypeFilter",
+          "condition": 1,
+          "entityTypes": [
+            1
+          ]
+        },
+        {
+          "type": "LifeFilter",
+          "valueFilter": {
+            "type": "GreaterEqualThan",
+            "dynamicValue": {
+              "type": "CharacterActionValue",
+              "referenceId": "",
+              "entitySelector": {
+                "type": "EffectHolderSelector"
+              }
+            }
+          }
+        }
+      ]
+    },
     "actionType": 1,
     "actionRange": null,
     "lifeScale": null,
@@ -97,7 +122,7 @@
     "pt": "Diobla"
   },
   "description": {
-    "fr": "{%FightTurnStarted} Gagne {PropertyEffect:8}.",
+    "fr": "Recule de {cell:c} quand il subit une {%AT}.",
     "en": "{%FightTurnStarted} Gains {PropertyEffect:8}.",
     "es": "{%FightTurnStarted} Gana {PropertyEffect:8}.",
     "de": "{%FightTurnStarted} Gewinnt {PropertyEffect:8}.",

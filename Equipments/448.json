@@ -10,7 +10,7 @@
   },
   "m_Name": "448",
   "m_id": 448,
-  "m_displayName": "PIN - Monarque Bwork",
+  "m_displayName": "PIN - BWORK - Monarque Bwork",
   "m_availability": 2,
   "m_i18nNameId": {
     "a": 83322101,
@@ -53,10 +53,31 @@
     "useCharges": true,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 30
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "TRAP",
+        {
+          "type": 6,
+          "id": 278
+        },
+        {
+          "type": 20,
+          "id": 45
+        },
+        "SCORIE",
+        {
+          "type": 4,
+          "id": 439
+        }
+      ]
     },
     "family": 0,
     "equipmentType": 4,
@@ -72,7 +93,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%FightStarted}\nInvoque le {Summoning:439}\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Bwork\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
     "en": "",
     "es": "",
     "de": "",

@@ -121,7 +121,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 25
+            "value": 21
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -151,6 +151,39 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 32
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 70748,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -166,7 +199,7 @@
     "pt": "Caçada Fanática"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nSoigne votre héros d'autant si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nSoigne votre héros de {PVvalue:heal} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
     "en": "Does {magicalDamage:dmg}.\n\\---\nHeals your hero the same amount if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\nCura a tu héroe otro tanto si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\nHeilt deinen Helden in gleicher Höhe, falls das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",

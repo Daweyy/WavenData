@@ -10,7 +10,7 @@
   },
   "m_Name": "210",
   "m_id": 210,
-  "m_displayName": "DAILY QUEST - 02 - Bolbi",
+  "m_displayName": "GOLD QUEST - COCHON - Bolbi",
   "m_availability": 2,
   "m_i18nNameId": {
     "a": 123226084,
@@ -41,30 +41,25 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [],
-      "hasEffects": true,
-      "keywordReferences": [
+      "dynamicValueReferences": [
         {
-          "type": 20,
-          "id": 19
-        },
-        {
-          "type": 20,
-          "id": 88
+          "type": "ConstIntegerValue",
+          "referenceId": "auras",
+          "value": -1
         }
-      ]
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
     },
     "families": [
       0
     ],
-    "baseProperties": [
-      88
-    ],
+    "baseProperties": [],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 110
+      "value": 100
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -133,7 +128,7 @@
     "pt": "Bolbi"
   },
   "description": {
-    "fr": "<rem>{PropertyEffect:88}</rem>\n\\---\n{%APPEARANCE} Gagne {PropertyEffect:19}.",
+    "fr": "{%Attack} {value:auras}\\_{%KEYWORD.AURA.NAME,value:auras} à la cible",
     "en": "<rem>{PropertyEffect:19}, {PropertyEffect:88}</rem>",
     "es": "<rem>{PropertyEffect:19}, {PropertyEffect:88}</rem>",
     "de": "<rem>{PropertyEffect:19}, {PropertyEffect:88}</rem>",

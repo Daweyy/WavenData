@@ -41,7 +41,13 @@
     "id": 573,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -55,7 +61,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightTurnEndedPlayers} \nDétruit {ObjectMechanism:1628!} si un allié est autour <sprite name=\"cell_around\"> d'elle.",
+    "fr": "{%FightTurnStartedPlayers} \nConstruit {value:p} {ObjectMechanism:1628, plural:other!} sur une case aléatoire.\n\\---\n{%FightTurnEndedPlayers} \nDétruit la {ObjectMechanism:1628!} si un allié est autour <sprite name=\"cell_around\"> d'elle.",
     "en": "",
     "es": "",
     "de": "",

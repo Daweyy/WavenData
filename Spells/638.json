@@ -125,7 +125,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 25
+            "value": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -162,7 +162,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 5
+            "value": 13
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -187,16 +187,14 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "MaxTrap",
-          "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "TRAP",
+        "TRAPPER"
+      ]
     }
   },
   "name": {
@@ -207,7 +205,7 @@
     "pt": "Febre Negra"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\n{magicalDamage:bonus,+} pour chacun de vos {%KEYWORD.TRAP.NAME,plural:other} en jeu.\n<rem>Limité à {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap}.</rem>",
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\n{#TRAPPER}\\_: {magicalDamage:bonus,+}.",
     "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero.\n\\---\n{magicalDamage:bonus,+} for each of your {%KEYWORD.TRAP.NAME,plural:other} in play.\n<rem>Limit: {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap}.</rem>",
     "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\n{magicalDamage:bonus,+} por cada una de tus {%KEYWORD.TRAP.NAME,plural:other} en juego.\n<rem>Limitado a {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap}.</rem>",
     "de": "Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> deines Helden {magicalDamage:dmg}.\n\\---\n{magicalDamage:bonus,+} für jede deiner {%KEYWORD.TRAP.NAME,plural:other} im Spiel.\n<rem>Auf {value:MaxTrap}\\_{%KEYWORD.TRAP.NAME,MaxTrap} begrenzt.</rem>",

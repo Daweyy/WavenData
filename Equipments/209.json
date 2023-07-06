@@ -53,7 +53,13 @@
     "useCharges": true,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 30
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
@@ -83,7 +89,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightStarted}\nInvoque le {Summoning:534}.",
+    "fr": "{%FightStarted}\nInvoque le {Summoning:534}.\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Tofus\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
     "en": "",
     "es": "",
     "de": "",

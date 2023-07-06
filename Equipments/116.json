@@ -60,7 +60,13 @@
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "A",
+          "value": 10
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -69,18 +75,6 @@
     "equipmentType": 1,
     "petSkins": null,
     "passiveModifiers": [
-      {
-        "type": "CaracBuffModifier",
-        "holder": 8,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 10
-        },
-        "caracIds": [
-          58
-        ]
-      },
       {
         "type": "CaracBuffModifier",
         "holder": 8,
@@ -105,7 +99,7 @@
     "pt": "Anel de Ano Rak"
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%FightStarted} {value:A,percent,+} d'{%AT} à votre héros.",
     "en": "{%empty}",
     "es": "{%empty}",
     "de": "{%empty}",

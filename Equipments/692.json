@@ -10,7 +10,7 @@
   },
   "m_Name": "692",
   "m_id": 692,
-  "m_displayName": "PIN - Monarque Vampyre",
+  "m_displayName": "PIN - Vampyre - Monarque Vampyre",
   "m_availability": 2,
   "m_i18nNameId": {
     "a": -1030838261,
@@ -53,10 +53,21 @@
     "useCharges": true,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 30
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 20598
+        }
+      ]
     },
     "family": 0,
     "equipmentType": 4,
@@ -72,7 +83,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%FightStarted}\nInvoque la {Summoning:20598}\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Vampyres\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
     "en": "",
     "es": "",
     "de": "",

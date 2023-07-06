@@ -10,7 +10,7 @@
   },
   "m_Name": "449",
   "m_id": 449,
-  "m_displayName": "PIN - Monarque Chuchoteur",
+  "m_displayName": "PIN - CHUCHOTEUR - Monarque Chuchoteur",
   "m_availability": 2,
   "m_i18nNameId": {
     "a": 701898599,
@@ -53,10 +53,26 @@
     "useCharges": true,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 30
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "TENAILLE",
+        {
+          "type": 4,
+          "id": 4
+        },
+        {
+          "type": 4,
+          "id": 23387
+        }
+      ]
     },
     "family": 0,
     "equipmentType": 4,
@@ -65,14 +81,14 @@
     "spellEffectData": []
   },
   "name": {
-    "fr": "Monarque Chuchoteur",
+    "fr": "Monarque Chuchoteur Mage",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%FightStarted}\nInvoque la {Summoning:23387}\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Chuchoteurs\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
     "en": "",
     "es": "",
     "de": "",

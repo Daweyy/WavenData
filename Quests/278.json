@@ -47,52 +47,9 @@
         "difficulty": 1,
         "monsterLevel": 2,
         "rewards": null,
-        "oneTimeRewards": null,
-        "forcedDestinationOnExit": {
-          "type": "QuestChapterForcedDestinationOnExit"
-        }
-      },
-      {
-        "type": "ArenaChapterDefinition",
-        "chapterIndex": 1,
-        "npcForChaptersTexts": null,
-        "difficulty": 2,
-        "monsterLevel": 4,
-        "rewards": null,
-        "oneTimeRewards": null,
-        "forcedDestinationOnExit": {
-          "type": "QuestChapterForcedDestinationOnExit"
-        }
-      },
-      {
-        "type": "ArenaChapterDefinition",
-        "chapterIndex": 2,
-        "npcForChaptersTexts": null,
-        "difficulty": 3,
-        "monsterLevel": 6,
-        "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
           "entries": [
-            {
-              "type": "DropTableEntry",
-              "source": {
-                "type": "TutorialRelatedSpellForWeaponSource"
-              },
-              "rollEntries": [
-                {
-                  "type": "DropTableRollEntry",
-                  "minQuantity": {
-                    "type": "ConstDoubleProvider",
-                    "value": 1
-                  },
-                  "maxQuantity": {
-                    "type": "ConstDoubleProvider",
-                    "value": 1
-                  }
-                }
-              ]
-            },
             {
               "type": "DropTableEntry",
               "source": {
@@ -130,11 +87,135 @@
                   "type": "DropTableRollEntry",
                   "minQuantity": {
                     "type": "ConstDoubleProvider",
-                    "value": 1000
+                    "value": 100
                   },
                   "maxQuantity": {
                     "type": "ConstDoubleProvider",
-                    "value": 1000
+                    "value": 100
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "forcedDestinationOnExit": {
+          "type": "QuestChapterForcedDestinationOnExit"
+        }
+      },
+      {
+        "type": "ArenaChapterDefinition",
+        "chapterIndex": 1,
+        "npcForChaptersTexts": null,
+        "difficulty": 2,
+        "monsterLevel": 4,
+        "rewards": null,
+        "oneTimeRewards": {
+          "type": "DropTable",
+          "entries": [
+            {
+              "type": "DropTableEntry",
+              "source": {
+                "type": "FixedItemDropTableEntrySource",
+                "itemId": {
+                  "typeEnum": 33,
+                  "value": 65
+                }
+              },
+              "rollEntries": [
+                {
+                  "type": "DropTableRollEntry",
+                  "minQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 50
+                  },
+                  "maxQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 50
+                  }
+                }
+              ]
+            },
+            {
+              "type": "DropTableEntry",
+              "source": {
+                "type": "FixedItemDropTableEntrySource",
+                "itemId": {
+                  "typeEnum": 33,
+                  "value": 329
+                }
+              },
+              "rollEntries": [
+                {
+                  "type": "DropTableRollEntry",
+                  "minQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 100
+                  },
+                  "maxQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 100
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "forcedDestinationOnExit": {
+          "type": "QuestChapterForcedDestinationOnExit"
+        }
+      },
+      {
+        "type": "ArenaChapterDefinition",
+        "chapterIndex": 2,
+        "npcForChaptersTexts": null,
+        "difficulty": 3,
+        "monsterLevel": 6,
+        "rewards": null,
+        "oneTimeRewards": {
+          "type": "DropTable",
+          "entries": [
+            {
+              "type": "DropTableEntry",
+              "source": {
+                "type": "FixedItemDropTableEntrySource",
+                "itemId": {
+                  "typeEnum": 33,
+                  "value": 65
+                }
+              },
+              "rollEntries": [
+                {
+                  "type": "DropTableRollEntry",
+                  "minQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 100
+                  },
+                  "maxQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 100
+                  }
+                }
+              ]
+            },
+            {
+              "type": "DropTableEntry",
+              "source": {
+                "type": "FixedItemDropTableEntrySource",
+                "itemId": {
+                  "typeEnum": 33,
+                  "value": 329
+                }
+              },
+              "rollEntries": [
+                {
+                  "type": "DropTableRollEntry",
+                  "minQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 300
+                  },
+                  "maxQuantity": {
+                    "type": "ConstDoubleProvider",
+                    "value": 300
                   }
                 }
               ]

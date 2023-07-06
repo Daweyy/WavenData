@@ -1,0 +1,203 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "362",
+  "m_id": 362,
+  "m_displayName": "NECROME - FEU - Crevasse Nécromique",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -1487502278,
+    "b": 307694388,
+    "c": -822832453,
+    "d": -972102817,
+    "e": -129606596
+  },
+  "m_i18nDescriptionId": {
+    "a": -1487502278,
+    "b": 307694388,
+    "c": -822832453,
+    "d": -972102817,
+    "e": 275900775
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 362,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      792162,
+      794910,
+      558
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        68
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": true
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 9
+            },
+            {
+              "type": "NegativeValue",
+              "referenceId": "",
+              "valueToNeg": {
+                "type": "CompanionsInReserveValue",
+                "referenceId": "",
+                "playerSelector": {
+                  "type": "CasterSelector"
+                },
+                "companionState": 2
+              }
+            },
+            {
+              "type": "NegativeValue",
+              "referenceId": "",
+              "valueToNeg": {
+                "type": "NumberOfEquippedCompanionsWithFamilyValue",
+                "referenceId": "",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "family": 68
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "",
+          "axe": 0
+        },
+        "startPosition": {
+          "type": "CasterHeroSelector"
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "d",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 677,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Crevasse Nécromique",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {value:d}  dégâts en ligne devant votre héros. Déclenche FLUX DES ÂMES par adversaire touché.\nNÉCROMAGE\n",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

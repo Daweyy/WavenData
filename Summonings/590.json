@@ -48,18 +48,10 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "c",
-          "value": 1
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": [
-        "PUSH"
-      ]
+      "keywordReferences": []
     },
     "families": [
       73
@@ -73,7 +65,7 @@
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 3
+      "value": 4
     },
     "actionValue": {
       "type": "ConstIntegerValue",
@@ -83,7 +75,18 @@
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
-    "customActionTarget": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "EntityTypeFilter",
+          "condition": 1,
+          "entityTypes": [
+            1
+          ]
+        }
+      ]
+    },
     "actionType": 1,
     "actionRange": null,
     "lifeScale": null,
@@ -100,7 +103,7 @@
     "pt": "Dambala"
   },
   "description": {
-    "fr": "{%attack} {#PUSH} de {cell:c}.",
+    "fr": "{%noeffect}",
     "en": "{%attack} {#PUSH} {cell:c}.",
     "es": "{%attack} {#PUSH} {cell:c}.",
     "de": "{%attack} {#PUSH} {cell:c} zurück.",

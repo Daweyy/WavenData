@@ -81,31 +81,19 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 8
+              "value": 7
             },
             {
-              "type": "MultValue",
+              "type": "ConditionalValue",
               "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "pa",
-                  "value": -1
-                },
-                {
-                  "type": "EntityCountValue",
-                  "referenceId": "",
+              "condition": {
+                "type": "NumberOfEntityCondition",
+                "selector": {
+                  "type": "FilteredEntitySelector",
                   "from": {
-                    "type": "AllObjectMechanismsSelector"
+                    "type": "AllBoardPresencesSelector"
                   },
-                  "entityFilters": [
-                    {
-                      "type": "OwnerFilter",
-                      "isIdentical": true,
-                      "reference": {
-                        "type": "CasterSelector"
-                      }
-                    },
+                  "filters": [
                     {
                       "type": "FamilyFilter",
                       "condition": 1,
@@ -114,8 +102,26 @@
                       ]
                     }
                   ]
+                },
+                "value": {
+                  "type": "GreaterEqualThan",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "a",
+                    "value": 2
+                  }
                 }
-              ]
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "pa",
+                "value": -1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
             }
           ]
         }
@@ -145,6 +151,11 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": -1
         },
@@ -154,7 +165,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 32
+            "value": 46
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -199,7 +210,7 @@
     "pt": "Protocolo: Aniquilação"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} au coût de ce {%SPELLCOUNT} pour chacun de vos <b>SINISTROS</b> en jeu.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} au coût de ce {%SPELLCOUNT} si vous avez au moins {value:a} <b>SINISTROS</b> en jeu.",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} to the cost of this {%SPELLCOUNT} for each of your <b>SINISTROS</b> in play.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} al coste de este {%SPELLCOUNT} por cada uno de tus <b>SINISTROS</b> en juego.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} auf Kosten dieses {%SPELLCOUNT}s für jeden deiner <b>SINISTROS</b> im Spiel.",

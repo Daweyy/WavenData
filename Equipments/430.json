@@ -60,7 +60,13 @@
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "L",
+          "value": 20
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -69,18 +75,6 @@
     "equipmentType": 1,
     "petSkins": null,
     "passiveModifiers": [
-      {
-        "type": "CaracBuffModifier",
-        "holder": 8,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 20
-        },
-        "caracIds": [
-          1
-        ]
-      },
       {
         "type": "CaracBuffModifier",
         "holder": 8,
@@ -105,7 +99,7 @@
     "pt": "Anel de Aço"
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%FightStarted} {value:L,percent,+} de <b>VIE</b> à votre héros.",
     "en": "{%empty}",
     "es": "{%empty}",
     "de": "{%empty}",

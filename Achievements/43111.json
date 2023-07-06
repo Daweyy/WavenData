@@ -10,7 +10,7 @@
   },
   "m_Name": "43111",
   "m_id": 43111,
-  "m_displayName": "VAMPYRE - HUB - 14_Achever un Vampyre avec 3 Auras Goutte de Sang",
+  "m_displayName": "VAMPYRE - SUCCES - 16_Achever un Vampyre avec 3 Auras Goutte de Sang",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": -1653323757,
@@ -43,10 +43,38 @@
     "secret": false,
     "achievementType": 0,
     "rewards": [],
-    "onSuccess": []
+    "onSuccess": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        "DRAIN",
+        {
+          "type": 20,
+          "id": 82
+        },
+        "DALLE",
+        {
+          "type": 6,
+          "id": 385
+        },
+        {
+          "type": 22,
+          "id": 97
+        }
+      ]
+    }
   },
   "name": {
-    "fr": "Achever un Vampyre avec au moins 3 Auras Goutte de Sang",
+    "fr": "Achever un Vampyre avec au moins {value:v}\\_{aura:97,value:v}.",
     "en": "Finish off a Vampyre with at least 3 Drop of Blood Auras",
     "es": "Acabar con un vampyro con al menos 3 auras gota de sangre",
     "de": "Besiege einen Vampyr mit mindestens 3 Blutstropfen-Auren",

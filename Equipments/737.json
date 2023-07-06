@@ -10,7 +10,7 @@
   },
   "m_Name": "737",
   "m_id": 737,
-  "m_displayName": "PIN - Monarque Chafer Elem ",
+  "m_displayName": "PIN - CHAFER - Monarque Chafer Elem ",
   "m_availability": 2,
   "m_i18nNameId": {
     "a": -1182075155,
@@ -53,10 +53,21 @@
     "useCharges": true,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 30
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 274
+        }
+      ]
     },
     "family": 0,
     "equipmentType": 4,
@@ -72,7 +83,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%FightStarted}\nInvoque le {Summoning:274}\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Chafers\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
     "en": "",
     "es": "",
     "de": "",

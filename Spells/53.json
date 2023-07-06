@@ -1,0 +1,166 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "53",
+  "m_id": 53,
+  "m_displayName": "NECROME - AIR - Repousse Nécromique",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -2054990155,
+    "b": -317496812,
+    "c": 1296688091,
+    "d": -561336847,
+    "e": -443887818
+  },
+  "m_i18nDescriptionId": {
+    "a": -2054990155,
+    "b": -317496812,
+    "c": 1296688091,
+    "d": -561336847,
+    "e": 617049498
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 53,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      791015,
+      793052,
+      793385
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        68
+      ],
+      "heroSkillPointsCost": null,
+      "bannedInPvp": true
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 9
+            },
+            {
+              "type": "NegativeValue",
+              "referenceId": "",
+              "valueToNeg": {
+                "type": "NumberOfEquippedCompanionsWithFamilyValue",
+                "referenceId": "",
+                "player": {
+                  "type": "CasterSelector"
+                },
+                "family": 68
+              }
+            },
+            {
+              "type": "NegativeValue",
+              "referenceId": "",
+              "valueToNeg": {
+                "type": "CompanionsInReserveValue",
+                "referenceId": "",
+                "playerSelector": {
+                  "type": "CasterSelector"
+                },
+                "companionState": 2
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d",
+          "value": 8
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Repousse Nécromique",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Inflige {value:d} dégâts et repousse de 3 cases une cible adjacente à votre héros. Déclenche FLUX DES ÂMES par COLLISION.\nNÉCROMAGE",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

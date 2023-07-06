@@ -83,64 +83,7 @@
         }
       }
     ],
-    "castCondition": {
-      "type": "ConditionalCastCondition",
-      "condition": {
-        "type": "NumberOfEntityCondition",
-        "selector": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllBoardPresencesSelector"
-          },
-          "filters": [
-            {
-              "type": "AroundSquaredTargetFilter",
-              "targetsToCompare": {
-                "type": "FilteredCharacterSelector",
-                "filters": [
-                  {
-                    "type": "TeamFilter",
-                    "isIdentical": true,
-                    "reference": {
-                      "type": "CasterSelector"
-                    }
-                  }
-                ]
-              },
-              "distance": {
-                "type": "EqualsTo",
-                "dynamicValue": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                }
-              }
-            },
-            {
-              "type": "TeamFilter",
-              "isIdentical": false,
-              "reference": {
-                "type": "CasterSelector"
-              }
-            }
-          ]
-        },
-        "value": {
-          "type": "GreaterThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 0
-          }
-        }
-      },
-      "ifTrue": {
-        "type": "SuccessCastCondition"
-      },
-      "ifFalse": {
-        "type": "FailureCastCondition"
-      }
-    },
+    "castCondition": null,
     "castTarget": {
       "type": "TwoCastTargetDefinition",
       "selector1": {
@@ -151,6 +94,29 @@
             "isIdentical": true,
             "reference": {
               "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundSquaredTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
             }
           }
         ]
@@ -202,7 +168,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 9
+            "value": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -220,86 +186,36 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "SumValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
-          "valuesToSum": [
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
             {
-              "type": "BuffedScalingDynamicValue",
-              "referenceId": null,
-              "baseValue": {
+              "type": "SkillBuff",
+              "skillId": 550,
+              "percentBuff": {
                 "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 6
-              },
-              "factor": {
-                "type": "ReferenceScalingFactor",
-                "reference": 12
-              },
-              "buffs": [
-                51,
-                25
-              ],
-              "skillBuffs": [
-                {
-                  "type": "SkillBuff",
-                  "skillId": 550,
-                  "percentBuff": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "d1",
-                    "value": 30
-                  }
-                }
-              ],
-              "from": {
-                "type": "CasterSelector"
-              },
-              "addInsteadOfMultiply": false
-            },
-            {
-              "type": "ConditionalValue",
-              "referenceId": null,
-              "condition": {
-                "type": "SupportCondition"
-              },
-              "ifTrue": {
-                "type": "BuffedScalingDynamicValue",
-                "referenceId": "d2",
-                "baseValue": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 8
-                },
-                "factor": {
-                  "type": "ReferenceScalingFactor",
-                  "reference": 12
-                },
-                "buffs": [
-                  51,
-                  25
-                ],
-                "skillBuffs": [
-                  {
-                    "type": "SkillBuff",
-                    "skillId": 550,
-                    "percentBuff": {
-                      "type": "ConstIntegerValue",
-                      "referenceId": null,
-                      "value": 30
-                    }
-                  }
-                ],
-                "from": {
-                  "type": "CasterSelector"
-                },
-                "addInsteadOfMultiply": false
-              },
-              "ifFalse": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
+                "referenceId": "d1",
+                "value": 30
               }
             }
-          ]
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",

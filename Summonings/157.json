@@ -10,28 +10,28 @@
   },
   "m_Name": "157",
   "m_id": 157,
-  "m_displayName": "MONSTRE CHAFER - BOSS - Monarque Chafer ",
+  "m_displayName": "EQUIPMENT - PIN - CHAFER - Monarque Chafer ",
   "m_availability": 2,
   "m_i18nNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 2102949578,
+    "b": -1204832316,
+    "c": 1348012283,
+    "d": -1770047893,
+    "e": -617986129
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 2102949578,
+    "b": -1204832316,
+    "c": 1348012283,
+    "d": -1770047893,
+    "e": 56314645
   },
   "m_i18nDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 2102949578,
+    "b": -1204832316,
+    "c": 1348012283,
+    "d": -1770047893,
+    "e": -1895330031
   },
   "values": {
     "type": "SummoningDefinition",
@@ -48,7 +48,18 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": -20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ps",
+          "value": 20
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -56,51 +67,56 @@
     "families": [
       40
     ],
-    "baseProperties": [
-      20
-    ],
+    "baseProperties": [],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 200
+      "value": 400
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 2
+      "value": 4
     },
-    "actionValue": null,
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
-    "actionType": 3,
+    "actionType": 1,
     "actionRange": null,
     "lifeScale": {
       "type": "ReferenceScalingFactor",
       "reference": 16
     },
-    "attackScale": null,
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
     "spells": [],
     "grade": 2,
     "growInto": null
   },
   "name": {
-    "fr": "",
+    "fr": "Monarque Chafer",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "",
+    "fr": "<b>Lorsque ce personnage subit des dégâts :</b> réduit son {%AT} de {value:pc,percent,+} jusqu’à la fin du tour.\n\\---\n<b>MORT D’UN CHAFER :</b> {value:ps,percent,+} jusqu à l’attaque de ce personnage.\n",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "championName": {
-    "fr": "",
+    "fr": "Monarque Chafer ",
     "en": "",
     "es": "",
     "de": "",
