@@ -32,21 +32,23 @@
   "values": {
     "type": "SkillDefinition",
     "id": 149624,
+    "skillTier": 2,
     "skillUsageType": 1,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 25,
-          "id": 770
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
@@ -57,10 +59,10 @@
     "pt": "{%NEW_SKILL}"
   },
   "description": {
-    "fr": "{%ATTACK} Ajoute le sort {Spell:770} à la main de la cible.",
-    "en": "{%ATTACK} Adds the {Spell:770} spell to the target's hand.",
-    "es": "{%ATTACK} Añade el hechizo {Spell:770} a la mano del objetivo.",
-    "de": "{%ATTACK} Fügt der Hand des Ziels den Zauber {Spell:770} hinzu.",
-    "pt": "{%ATTACK} Adiciona o feitiço {Spell:770} à mão do alvo."
+    "fr": "{%ATTACK} {WATERGAUGEvalue:pa} au coût de {Companion:847!}.",
+    "en": "{%ATTACK} {WATERGAUGEvalue:pa} to the cost of {Companion:847!}.",
+    "es": "{%ATTACK} {WATERGAUGEvalue:pa} al coste de {Companion:847!}.",
+    "de": "{%ATTACK} {WATERGAUGEvalue:pa} auf Kosten von {Companion:847!}.",
+    "pt": "{%ATTACK} {WATERGAUGEvalue:pa} ao custo de {Companion:847!}."
   }
 }

@@ -41,7 +41,7 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      94991,
+      2837,
       168,
       954
     ],
@@ -112,7 +112,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 20
+            "value": 17
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -125,7 +125,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 21,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "Bper",
@@ -166,6 +166,40 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": true
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            91,
+            48
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 751,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,8 +42,8 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "at",
-          "value": 20
+          "referenceId": "Pc",
+          "value": 100
         }
       ],
       "externalDynamicValueReferences": [],
@@ -58,10 +59,10 @@
     "pt": "Fogo de Expingarda"
   },
   "description": {
-    "fr": "Lorsque votre héros gagne une {%AURA_SIGHT}\\_:\\v Inflige {value:at,percent} de son {%AT} autour\\_<sprite name=\"cell_around\"> de lui. \n",
-    "en": "When your hero gains a {%AURA_SIGHT}:\\v Inflicts {value:at,percent} of their {%AT} around\\_<sprite name=\"cell_around\"> them. \n",
-    "es": "Cuando tu héroe gana un {%AURA_SIGHT}:\\v Inflige un {value:at,percent} de su {%AT} a su alrededor\\_<sprite name=\"cell_around\">. \n",
-    "de": "Wenn dein Held eine\\_{%AURA_SIGHT} erhält:\\v Verursacht ringsum\\_<sprite name=\"cell_around\"> {value:at,percent} seines {%AT} als Schaden. \n",
-    "pt": "Quando seu herói ganha uma {%AURA_SIGHT}:\\v Inflige {value:at,percent} do seu {%AT} em\\_volta\\_<sprite name=\"cell_around\"> dele.\n"
+    "fr": "Toutes les libérations d'{%AURA_SIGHT,plural:other} de votre héros sont augmentées de 1.\n\\---\n{value:Pc,+, percent} aux <b>DÉGÂTS</b> des {%AURA_SIGHT,plural:other} de votre héros.",
+    "en": "When your hero gains a {%AURA_SIGHT}:\\vInflicts {value:at,percent} of their {%AT} around\\_<sprite name=\"cell_around\"> them. \n",
+    "es": "Cuando tu héroe gana un {%AURA_SIGHT}:\\v Inflige un {value:at,percent} de su {%AT} alrededor\\_<sprite name=\"cell_around\">. \n",
+    "de": "Wenn dein Held eine\\_{%AURA_SIGHT} erhält:\\v Verursacht ringsum\\_<sprite name=\"cell_around\"> {value:at,percent} seines {%AT}<b>S</b> als Schaden.\n",
+    "pt": "Quando seu herói ganha uma {%AURA_SIGHT}:\\v Inflige {value:at,percent} do seu {%AT} em\\_volta\\_<sprite name=\"cell_around\">.\n"
   }
 }

@@ -56,24 +56,14 @@
       "heroSkillPointsCost": 5,
       "bannedInPvp": false
     },
-    "gaugeToModifyOnSpellPlay": [
-      {
-        "type": "GaugeValue",
-        "element": 57,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": null,
-          "value": 1
-        }
-      }
-    ],
+    "gaugeToModifyOnSpellPlay": [],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "value": 3
         }
       }
     ],
@@ -121,6 +111,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "v",
           "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -136,7 +131,7 @@
     "pt": "Carrilhão"
   },
   "description": {
-    "fr": "Ciblez un de vos <b>SINISTROS</b>.\n\\---\n{value:v,+}\\_{%AURA_OWL,plural:other} du même élément à votre héros.",
+    "fr": "Ciblez un de vos <b>SINISTROS</b>.\n\\---\n{value:v,+}\\_{%AURA_OWL,plural:other} du même élément à votre héros et {PA_RESvalue:pa,+}.",
     "en": "Target one of your <b>SINISTROS</b>.\n\\---\n{value:v,+}\\_{%AURA_OWL,plural:other} in the same element to your hero.",
     "es": "Seleccionas uno de tus <b>SINISTROS</b>.\n\\---\n{value:v,+}\\_{%AURA_OWL,plural:other} del mismo elemento que tu héroe.",
     "de": "Visiert einen deiner <b>SINISTROS</b> an.\n\\---\n{value:v,+}\\_{%AURA_OWL,plural:other} desselben Elements für deinen Helden.",

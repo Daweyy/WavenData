@@ -66,24 +66,14 @@
       "heroSkillPointsCost": 10,
       "bannedInPvp": false
     },
-    "gaugeToModifyOnSpellPlay": [
-      {
-        "type": "GaugeValue",
-        "element": 57,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
-        }
-      }
-    ],
+    "gaugeToModifyOnSpellPlay": [],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "value": 3
         }
       }
     ],
@@ -158,7 +148,9 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "SUPPORT"
+      ]
     }
   },
   "name": {
@@ -169,10 +161,10 @@
     "pt": "Emergência"
   },
   "description": {
-    "fr": "Téléporte un allié jusqu'à {cell:c} et lui confère l'{%AT} de votre héros en {%AR}.",
-    "en": "Teleports an ally up to {cell:c} and confers your hero's {%AT} on them as {%AR}.",
-    "es": "Teletransporta a un aliado hasta {cell:c} y le confiere el {%AT} de tu héroe en {%AR}.",
-    "de": "Teleportiert einen Verbündeten bis auf {cell:c} und gewährt ihm den {%AT} deines Helden als {%AR}.",
-    "pt": "Teletransporta um aliado a até {cell:c} e concede a ele o {%AT} do herói em {%AR}."
+    "fr": "Téléporte un allié jusqu'à {cell:c}.\n{#SUPPORT} : lui confère l'{%AT} de votre héros en {%AR}.",
+    "en": "Teleports an ally up to {cell:c}.\n{#SUPPORT}: Confers your hero's {%AT} on them as {%AR}.",
+    "es": "Teletransporta a un aliado hasta {cell:c} \n{#SUPPORT}: le confiere el {%AT} de tu héroe en {%AR}.",
+    "de": "Teleportiert einen Verbündeten bis zu {cell:c}.\n{#SUPPORT}: Überträgt ihm den {%AT} deines Helden als {%AR}.",
+    "pt": "Teletransporta um aliado a até {cell:c}\n{#SUPPORT}: concede a ele o {%AT} do herói em {%AR}."
   }
 }

@@ -73,71 +73,35 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "value": 3
         }
       }
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "ConditionalCastTargetDefinition",
-      "condition": {
-        "type": "NumberOfEntityCondition",
-        "selector": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllFloorMechanismsSelector"
-          },
-          "filters": [
-            {
-              "type": "OwnerFilter",
-              "isIdentical": true,
-              "reference": {
-                "type": "CasterSelector"
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
               }
             }
-          ]
-        },
-        "value": {
-          "type": "GreaterEqualThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 2
           }
-        }
-      },
-      "selectorIfTrue": {
-        "type": "TwoCastTargetDefinition",
-        "selector1": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
-        },
-        "selector2": {
-          "type": "FilteredCoordSelector",
-          "filters": [
-            {
-              "type": "AroundTargetFilter",
-              "targetsToCompare": {
-                "type": "FirstCastTargetSelector"
-              },
-              "distance": {
-                "type": "EqualsTo",
-                "dynamicValue": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                }
-              }
-            }
-          ]
-        }
-      },
-      "selectorIfFalse": {
-        "type": "OneCastTargetDefinition",
-        "selector": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
-        }
+        ]
       }
     },
     "spellEffectData": [
@@ -164,8 +128,8 @@
       "hasEffects": true,
       "keywordReferences": [
         "TRAP",
-        "PUSH",
-        "TRAPPER"
+        "TRAPPER",
+        "PUSH"
       ]
     }
   },
@@ -177,7 +141,7 @@
     "pt": "Afastamento Surokan"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_: {#Push} de {cell:c}.",
+    "fr": "{#Push} de {cell:c}.\n\\---\n{#TRAPPER}\\_: Inflige l'{%AT} de votre héros.",
     "en": "Inflicts your hero's {%AT}.\n\\---\n{#TRAPPER}: {#Push} {cell:c}.",
     "es": "Inflige el {%AT} de tu héroe.\n\\---\n{#TRAPPER}: {#Push} {cell:c}.",
     "de": "Verursacht den {%AT} deines Helden.\n\\---\n{#TRAPPER}: {#Push} {cell:c}.",

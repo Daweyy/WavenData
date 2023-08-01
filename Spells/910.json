@@ -11,7 +11,7 @@
   "m_Name": "910",
   "m_id": 910,
   "m_displayName": "SACRIEUR - ARME - TONFAVIK - EAU - Tonfa Cinglant",
-  "m_availability": 3,
+  "m_availability": 2,
   "m_i18nNameId": {
     "a": 702438140,
     "b": 823074596,
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      494,
-      588467,
-      588555
+      2450,
+      1834,
+      1833
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -122,7 +122,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 97409,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "percentSkill",
@@ -139,6 +139,40 @@
           "type": "ConstIntegerValue",
           "referenceId": "percentSkill",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            90,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

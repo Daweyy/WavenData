@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      195438,
-      221825,
-      417354
+      2452,
+      2629,
+      2270
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -111,7 +111,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 16
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -124,7 +124,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 85,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "Bper",
@@ -144,11 +144,11 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmgExplosion",
+          "referenceId": "ex",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 8
+            "value": 11
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -159,7 +159,17 @@
             88,
             25
           ],
-          "skillBuffs": [],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
           "from": {
             "type": "CasterSelector"
           },
@@ -169,33 +179,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgMelee",
           "baseValue": {
-            "type": "SumValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valuesToSum": [
-              {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
-              },
-              {
-                "type": "ConditionalValue",
-                "referenceId": "",
-                "condition": {
-                  "type": "ThisSpellHasSkillCondition",
-                  "skillId": 85
-                },
-                "ifTrue": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                },
-                "ifFalse": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 0
-                }
-              }
-            ]
+            "value": 6
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -205,7 +191,17 @@
             25,
             51
           ],
-          "skillBuffs": [],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
           "from": {
             "type": "CasterSelector"
           },
@@ -230,10 +226,10 @@
     "pt": "Toque Flamejante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: Inflige {magicalDamage:dmgMelee} autour<sprite name=\"cell_around\"> de votre héros.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Does {magicalDamage:dmgMelee} around<sprite name=\"cell_around\"> your hero.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} alrededor<sprite name=\"cell_around\"> de tu héroe.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Verursacht {magicalDamage:dmgMelee} in der Nähe\\_<sprite name=\"cell_around\"> deines Helden.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} em\\_volta\\_<sprite name=\"cell_around\"> do seu herói."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: Inflige {magicalDamage:dmgMelee} aux adversaires autour<sprite name=\"cell_around\"> de votre héros.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Does {magicalDamage:dmgMelee} to opponents around<sprite name=\"cell_around\"> your hero.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} a los adversarios de alrededor<sprite name=\"cell_around\"> de tu héroe.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Fügt Gegnern rings um\\_<sprite name=\"cell_around\"> deinen Helden {magicalDamage:dmgMelee} zu.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói."
   }
 }

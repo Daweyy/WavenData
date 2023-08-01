@@ -11,7 +11,7 @@
   "m_Name": "832",
   "m_id": 832,
   "m_displayName": "SACRIEUR - ARME - TONFAVIK - FEU - Tonfa Fulgurant",
-  "m_availability": 3,
+  "m_availability": 2,
   "m_i18nNameId": {
     "a": -1415560024,
     "b": -163160460,
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      589961,
+      2448,
       919,
-      590264
+      1830
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -122,7 +122,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 97963,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "percentSkill",
@@ -159,7 +159,40 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 97963,
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "",

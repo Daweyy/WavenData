@@ -10,8 +10,8 @@
   },
   "m_Name": "171",
   "m_id": 171,
-  "m_displayName": "NECROME - FEU - Feu nécrome",
-  "m_availability": 2,
+  "m_displayName": "NECROME - FEU - Feu Nécrome",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 1132351335,
     "b": 1143675924,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "75d6b662e0140d64ab9a5403475ff151"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      792167,
-      795204,
-      795460
+      457,
+      360,
+      382
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -89,35 +89,47 @@
         "filters": []
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "19a9e400129b90647960de89f3c64ec1",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
           "referenceId": "d",
-          "value": 8
+          "value": 18
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "e",
-          "value": 4
+          "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL"
+      ]
     }
   },
   "name": {
-    "fr": "Feu nécrome",
+    "fr": "Feu Nécrome",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "Inflige {value:d}  dégâts.\nDEUIL : +{value:e}  dégâts.\n",
+    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}\\_: {magicalDamage:e,+}.",
     "en": "",
     "es": "",
     "de": "",

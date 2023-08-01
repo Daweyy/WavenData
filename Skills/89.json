@@ -10,7 +10,7 @@
   },
   "m_Name": "89",
   "m_id": 89,
-  "m_displayName": "SPELL - Generic - Jauge Feu",
+  "m_displayName": "SPELL - GENERIC - CRITICAL - Jauge Feu",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 890590572,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 89,
+    "skillTier": 2,
     "skillUsageType": 0,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -39,7 +40,9 @@
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "Spell.231460.jaugeGain"
+      ],
       "hasEffects": false,
       "keywordReferences": [
         "CRITICAL"
@@ -54,7 +57,7 @@
     "pt": "{%CRITICAL_SKILL}"
   },
   "description": {
-    "fr": "{#CRITICAL}\\_: +1 jauge {%FIRE}.",
+    "fr": "{#critical}\\_: {FIREGAUGEvalue:Spell.231460.jaugeGain,+}.",
     "en": "{#CRITICAL}: +1 {%FIRE} Gauge.",
     "es": "{#CRITICAL}: +1 indicador de {%FIRE}.",
     "de": "{#CRITICAL}: +1\\_{%FIRE}-Statusanzeige.",

@@ -11,7 +11,7 @@
   "m_Name": "49",
   "m_id": 49,
   "m_displayName": "RING - BEGINNER - COMMON - Anneau Verbouke",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -492929014,
     "b": 1921640500,
@@ -49,18 +49,25 @@
     "rarity": 0,
     "unlockableSkillIds": [
       714,
-      788630,
+      605,
       862,
-      787208,
-      787316,
-      787320
+      676,
+      675,
+      666,
+      1053
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 10
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -69,18 +76,6 @@
     "equipmentType": 1,
     "petSkins": null,
     "passiveModifiers": [
-      {
-        "type": "CaracBuffModifier",
-        "holder": 9,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 10
-        },
-        "caracIds": [
-          28
-        ]
-      },
       {
         "type": "CaracBuffModifier",
         "holder": 8,
@@ -105,7 +100,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%fightStarted} {value:p,+,percent} aux <b>DÉGATS</b> de vos sorts.",
     "en": "",
     "es": "",
     "de": "",

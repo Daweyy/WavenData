@@ -49,18 +49,25 @@
     "rarity": 0,
     "unlockableSkillIds": [
       243,
-      636518,
-      645262,
+      1758,
+      1711,
       793,
-      635050,
-      18
+      1764,
+      18,
+      2877
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [
         "ParameterizedEffectExecution.801.bc"
       ],
@@ -97,11 +104,11 @@
     "pt": "Braçadeira Fulminante"
   },
   "description": {
-    "fr": "{%ATTACK} Déclenche {lightning:ParameterizedEffectExecution.801.bc}.",
-    "en": "{%ATTACK} Triggers {lightning:ParameterizedEffectExecution.801.bc}.",
-    "es": "{%ATTACK} Activa {lightning:ParameterizedEffectExecution.801.bc}.",
-    "de": "{%ATTACK} Löst {lightning:ParameterizedEffectExecution.801.bc} aus.",
-    "pt": "{%ATTACK} Aciona {lightning:ParameterizedEffectExecution.801.bc}."
+    "fr": "{%ATTACK} Déclenche {value:v} fois {lightning:ParameterizedEffectExecution.801.bc}.",
+    "en": "{%ATTACK} Triggers {value:v} {lightning:ParameterizedEffectExecution.801.bc}.",
+    "es": "{%ATTACK} Activa {value:v} {lightning:ParameterizedEffectExecution.801.bc}.",
+    "de": "{%ATTACK} Löst {value:v}{lightning:ParameterizedEffectExecution.801.bc} aus.",
+    "pt": "{%ATTACK} Aciona {value:v} {lightning:ParameterizedEffectExecution.801.bc}."
   },
   "bgDescription": {
     "fr": "{%empty}",

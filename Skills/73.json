@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 73,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,13 +42,18 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "Sight",
+          "referenceId": "Pc",
           "value": 100
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "LIGHTNING",
+        "FLAME",
+        "ROCK",
+        "RAIN"
+      ]
     }
   },
   "name": {
@@ -58,10 +64,10 @@
     "pt": "Precisão Expingarda"
   },
   "description": {
-    "fr": "{value:Sight,percent,+} aux dégâts des {%AURA_SIGHT,plural:other} de votre héros.",
-    "en": "{value:Sight,percent,+} to your hero's {%AURA_SIGHT,plural:one} damage.",
-    "es": "{value:Sight,percent,+} a los daños de las {%AURA_SIGHT,plural:other} de tu héroe.",
-    "de": "{value:Sight,percent,+} SCHADEN für die {%AURA_SIGHT,plural:other} deines Helden.",
-    "pt": "{value:Sight,percent,+} aos danos das {%AURA_SIGHT,plural:other} do seu herói."
+    "fr": "Lorsqu'un de vos personnages gagne une {%AURA_SIGHT,plural:one}\\_: applique l’effet {#rain} / {#rock} / {#flame} / {#lightning} du même élément aux ennemis alignés avec lui.\n\\---\n{value:Pc,+, percent} aux <b>DÉGÂTS</b> des {%AURA_SIGHT,plural:other} de votre héros.",
+    "en": "{%FightStarted} Your {%AURA_SIGHT,plural:other} gain {value:v,percent} of your hero's {%AT} as an aura bonus.",
+    "es": "{%FightStarted} Tus {%AURA_SIGHT} ganan un {value:v,percent} del {%AT} de tu héroe en bonus a las auras.",
+    "de": "{%FightStarted} Deine {%AURA_SIGHT} erhält {value:v,percent} des {%AT}<b>S</b> deines Helden als Aurabonus.",
+    "pt": "{%FightStarted} Suas {%AURA_SIGHT} ganham {value:v,percent} do {%AT} do seu herói em bônus de auras."
   }
 }

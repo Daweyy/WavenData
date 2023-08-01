@@ -32,20 +32,28 @@
   "values": {
     "type": "SkillDefinition",
     "id": 157849,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "t",
+          "value": 3
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
           "type": 20,
           "id": 5
-        }
+        },
+        "TRAP"
       ]
     }
   },
@@ -57,7 +65,7 @@
     "pt": "Retirada Kartana"
   },
   "description": {
-    "fr": "Lorsque votre héros déclenche un {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié\\_:\\v Rejoue son tour et le {PropertyEffect:5}.",
+    "fr": "Lorsque votre héros déclenche un {#TRAP} <b>SRAM</b> allié\\_:\\v Rejoue son tour et le {PropertyEffect:5}.\n\\---\n<rem>Limité à {value:t} fois par tour.</i></rem>",
     "en": "When your hero triggers an allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}:\\v Replays turn and {PropertyEffect:5} it.",
     "es": "Cuando un héroe activa una {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliado:\\v Vuelve a jugar su turno y le {PropertyEffect:5}.",
     "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME} auslöst:\\vSpielt seine Runde erneut und wird {PropertyEffect:5}.",

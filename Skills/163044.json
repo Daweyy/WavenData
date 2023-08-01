@@ -10,7 +10,7 @@
   },
   "m_Name": "163044",
   "m_id": 163044,
-  "m_displayName": "EQUIPMENT - Bonus damage on crit",
+  "m_displayName": "EQUIPMENT - NECROME - Bonus damage on crit",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 1563521916,
@@ -32,27 +32,36 @@
   "values": {
     "type": "SkillDefinition",
     "id": 163044,
+    "skillTier": 1,
     "skillUsageType": 2,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 50
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "CRITICAL"
+      ]
     }
   },
   "name": {
-    "fr": " Bonus damage on crit",
+    "fr": "{%CRITICAL_SKILL}",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "Critique : +50% de dégats",
+    "fr": "{#CRITICAL}\\_: Inflige à nouveau {value:v, percent} de l'{%AT} de votre héros.",
     "en": "",
     "es": "",
     "de": "",

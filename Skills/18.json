@@ -10,7 +10,7 @@
   },
   "m_Name": "18",
   "m_id": 18,
-  "m_displayName": "WEAPON - IOP - KASAÏ - Armure Kasaï",
+  "m_displayName": "WEAPON - IOP - KASAÏ - Attaque Kasaï",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": -912834352,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 18,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,8 +42,13 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "p",
-          "value": 25
+          "referenceId": "t",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "redu",
+          "value": 50
         }
       ],
       "externalDynamicValueReferences": [],
@@ -51,17 +57,17 @@
     }
   },
   "name": {
-    "fr": "Armure Kasaï",
+    "fr": "Attaque Kasaï",
     "en": "Kasai Armor",
     "es": "Armadura Kasai",
     "de": "Kasai-Rüstung",
     "pt": "Armadura Kasai"
   },
   "description": {
-    "fr": "Lorsque vous appliquez un état\\_:\\v Votre héros gagne {value:p, percent} de son {%AT} en {%AR}.\n",
-    "en": "When you apply a state:\\v Your hero gains {value:p, percent} of their {%AT} as {%AR}.\n",
-    "es": "Cuando aplicas un estado:\\v Tu héroe gana un {value:p, percent} de su {%AT} en {%AR}.\n",
-    "de": "Wenn du einen Zustand wirkst:\\v Dein Held erhält {value:p, percent} seines {%AT} als {%AR}.\n",
-    "pt": "Ao aplicar um estado:\\v Seu herói ganha {value:p, percent} do seu {%AT} em {%AR}.\n"
+    "fr": "{%Attack} Si la cible à un état élémentaire, le consomme pour déclencher une {%at} supplémentaire infligeant {value:redu,percent} de <b>DÉGÂTS</b>.\n\\---\n<rem>Limité à {value:t} fois par tour.</i></rem>",
+    "en": "ATTACK: If the target has an elemental state, consumes it to trigger an additional attack.",
+    "es": "ATAQUE: Si el objetivo tiene un estado elemental, lo consume y provoca un ataque adicional.",
+    "de": "ANGRIFF: Wenn das Ziel über einen Elementarzustand verfügt: Verbraucht ihn, um einen zusätzlichen Angriff auszulösen.",
+    "pt": "ATAQUE: Se o alvo possuir um estado elementar, este é consumido para acionar um ataque adicional."
   }
 }

@@ -73,11 +73,37 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 5
+          "value": 4
         }
       }
     ],
-    "castCondition": null,
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "FloatingCounterCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 5
+        },
+        "value": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
@@ -100,12 +126,12 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "draw",
-          "value": 2
+          "referenceId": "nb",
+          "value": 1
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "nb",
+          "referenceId": "draw",
           "value": 1
         }
       ],
@@ -122,7 +148,7 @@
     "pt": "Temporização"
   },
   "description": {
-    "fr": "Piochez {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} à votre héros s'il en possède déjà.",
+    "fr": "{value:nb,+}\\_{%AURA_OWL,value:nb} à votre héros s'il en possède déjà.\n\\---\nPiochez {SPELLCOUNTvalue:draw} par {%AURA_OWL,value:nb} que possède votre héros.",
     "en": "Draw {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} to your hero if they have any already.",
     "es": "Sacas {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} a tu héroe si ya tiene.",
     "de": "Zieht {SPELLCOUNTvalue:draw}.\n\\---\n{value:nb,+}\\_{%AURA_OWL,value:nb} für deinen Helden, falls er dies bereits besitzt.",

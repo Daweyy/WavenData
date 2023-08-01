@@ -11,7 +11,7 @@
   "m_Name": "674",
   "m_id": 674,
   "m_displayName": "BRACELET - BEGINNER - RARE - Brassard Toung",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 1679567994,
     "b": 136361108,
@@ -34,10 +34,10 @@
     "e": -1243895428
   },
   "m_illustration": {
-    "assetGuid": ""
+    "assetGuid": "92c7e370eb4451b4c9f4c65f23ea0cce"
   },
   "m_illustrationBig": {
-    "assetGuid": ""
+    "assetGuid": "92c7e370eb4451b4c9f4c65f23ea0cce"
   },
   "m_affinity": 0,
   "m_elementaryStates": 1,
@@ -48,12 +48,13 @@
     "premiumItem": false,
     "rarity": 1,
     "unlockableSkillIds": [
-      789542,
-      789995,
-      790559,
-      790606,
+      569,
+      556,
+      531,
+      527,
       44,
-      790609
+      508,
+      2307
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 274,
@@ -62,13 +63,14 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "LinearScaleLevelOnlyBasedDynamicValue",
-          "referenceId": "x",
-          "baseValue": 5,
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          }
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 10
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "limit",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
@@ -103,7 +105,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%DEATHBLOW} Inflige {magicalDamage:x} aux aversaires adjacents\\_<sprite name=\"cell_cross\">.",
+    "fr": "{%AT} : {value:pc,percent,+} d'{%AT} à votre héros.\n\\---\n<rem>Limité à {value:limit} fois par combat.</rem> ",
     "en": "",
     "es": "",
     "de": "",

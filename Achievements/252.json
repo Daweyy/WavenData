@@ -37,7 +37,7 @@
     "type": "AchievementDefinition",
     "id": 252,
     "subAchievements": [
-      22456
+      2161
     ],
     "points": 20,
     "secret": false,
@@ -46,7 +46,13 @@
     "onSuccess": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 5
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
@@ -58,11 +64,11 @@
     }
   },
   "name": {
-    "fr": "Vaincre l'adversaire alors qu'il possède 5 {aura:113}",
-    "en": "Defeat the opponent when they have 5 Auras",
-    "es": "Vencer al adversario cuando tenga 5 auras",
-    "de": "Besieg den Gegner, wenn er 5 Auren besitzt",
-    "pt": "Derrotar um adversário que estiver com 5 Auras"
+    "fr": "Vaincre l'adversaire alors qu'il possède {value:v}\\_{aura:113,value:v}",
+    "en": "Defeat the opponent when they have {value:v}\\_{aura:113,value:v}",
+    "es": "Vencer al adversario cuando tenga {value:v}\\_{aura:113,value:v}",
+    "de": "Besiege den Gegner, während er {value:v}\\_{aura:113,value:v} besitzt",
+    "pt": "Derrotar um adversário que estiver com {value:v}\\_{aura:113,value:v}"
   },
   "description": {
     "fr": "",

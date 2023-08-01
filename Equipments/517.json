@@ -10,8 +10,8 @@
   },
   "m_Name": "517",
   "m_id": 517,
-  "m_displayName": "NECROME - Manteau de Toross",
-  "m_availability": 2,
+  "m_displayName": "RING - NECROME - Manteau de Toross",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -1199353958,
     "b": 912327332,
@@ -27,17 +27,17 @@
     "e": -1366496487
   },
   "m_i18nBgDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -1199353958,
+    "b": 912327332,
+    "c": -1120454775,
+    "d": 1139628358,
+    "e": -497428925
   },
   "m_illustration": {
-    "assetGuid": ""
+    "assetGuid": "3614590b98c4b474588c4c2328a09c41"
   },
   "m_illustrationBig": {
-    "assetGuid": ""
+    "assetGuid": "3614590b98c4b474588c4c2328a09c41"
   },
   "m_affinity": 0,
   "m_elementaryStates": 1,
@@ -47,7 +47,13 @@
     "merchantCosts": [],
     "premiumItem": false,
     "rarity": 2,
-    "unlockableSkillIds": [],
+    "unlockableSkillIds": [
+      235,
+      220,
+      213,
+      210,
+      641
+    ],
     "equipableByPlayers": true,
     "upgradeRuleId": 636,
     "useCharges": false,
@@ -56,12 +62,46 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        {
+          "type": 20,
+          "id": 8
+        },
+        "STREAMOFSOULS"
+      ]
     },
     "family": 68,
     "equipmentType": 1,
     "petSkins": null,
-    "passiveModifiers": [],
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          58
+        ]
+      },
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          1
+        ]
+      }
+    ],
     "spellEffectData": []
   },
   "name": {
@@ -72,14 +112,14 @@
     "pt": ""
   },
   "description": {
-    "fr": "Lorsque vous déclenchez FLUX DES ÂMES votre héros gagne BOUCLIER.",
+    "fr": "Lorsque vous déclenchez {#STREAMOFSOULS}\\_:\\v Confère {PropertyEffect:8} à votre héros.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "bgDescription": {
-    "fr": "",
+    "fr": "{%empty}",
     "en": "",
     "es": "",
     "de": "",

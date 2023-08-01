@@ -56,7 +56,17 @@
       "heroSkillPointsCost": null,
       "bannedInPvp": false
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
@@ -78,8 +88,8 @@
       }
     },
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
         "type": "FilteredCharacterSelector",
         "filters": [
           {
@@ -95,6 +105,17 @@
             "reference": {
               "type": "CasterSelector"
             }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CornerCoordFilter"
+          },
+          {
+            "type": "CellValidForCharacterFilter"
           }
         ]
       }
@@ -131,10 +152,10 @@
     "pt": "Invocação do Kamard"
   },
   "description": {
-    "fr": "Sacrifie un de vos compagnons pour invoquer {Summoning:196}.\n\\---\n{%DestroyOnPlayed}",
-    "en": "Sacrifices one of your companions to summon {Summoning:196}.\n\\---\n{%DestroyOnPlayed}",
-    "es": "Sacrifica a uno de tus compañeros para invocar {Summoning:196}.\n\\---\n{%DestroyOnPlayed}",
-    "de": "Opfert einen deiner Begleiter, um {Summoning:196} zu beschwören.\n\\---\n{%DestroyOnPlayed}",
-    "pt": "Sacrifica um dos seus companheiros para invocar {Summoning:196}.\n\\---\n{%DestroyOnPlayed}"
+    "fr": "Sacrifie un de vos compagnons pour invoquer {Summoning:196} dans un coin.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Sacrifices one of your companions to summon {Summoning:196} in a corner.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Sacrifica a uno de tus compañeros para invocar a {Summoning:196} en un rincón.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Opfert einen deiner Begleiter, um {Summoning:196} in einer Ecke zu beschwören.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Sacrifica um dos seus companheiros para invocar {Summoning:196} em um canto.\n\\---\n{%DestroyOnPlayed}"
   }
 }

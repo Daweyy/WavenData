@@ -56,7 +56,17 @@
       "heroSkillPointsCost": 10,
       "bannedInPvp": false
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
@@ -92,7 +102,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
-          "value": 10
+          "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
@@ -108,7 +118,7 @@
     "pt": "Reserva Tako"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros.\n\\---\n{value:pc, +, percent} de <b>DÉGÂTS</b> par {%PA_RES}.",
+    "fr": "Inflige l'{%AT} de votre héros.\n\\---\n{value:pc, +, percent} de <b>DÉGÂTS</b> à votre prochain sort par {%PA_RES}.",
     "en": "Inflicts your hero's {%AT}.\n\\---\n{value:pc, +, percent} <b>DAMAGE</b> per {%PA_RES}.",
     "es": "Inflige el {%AT} de tu héroe.\n\\---\n{value:pc, +, percent} de <b>DAÑOS</b> por {%PA_RES}.",
     "de": "Verursacht den {%AT} deines Helden als Schaden.\n\\---\n{value:pc, +, percent} <b>SCHADEN</b> je {%PA_RES}.",

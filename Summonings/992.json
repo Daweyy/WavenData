@@ -10,8 +10,8 @@
   },
   "m_Name": "992",
   "m_id": 992,
-  "m_displayName": "EQUIPMENT - PIN - TAURE - Caraisse",
-  "m_availability": 2,
+  "m_displayName": "EQUIPMENT - PIN - TAURE - Elite",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -1290330759,
     "b": 1326926740,
@@ -41,14 +41,20 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 6245,
+      "defaultSkinId": 4221,
       "skinIds": [
-        6245
+        4221
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dis",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -75,7 +81,22 @@
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
-    "customActionTarget": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "TeamFilter",
+          "isIdentical": true,
+          "reference": {
+            "type": "EffectHolderSelector"
+          }
+        },
+        {
+          "type": "WoundedFilter",
+          "isWounded": true
+        }
+      ]
+    },
     "actionType": 2,
     "actionRange": {
       "type": "ActionRange",
@@ -110,7 +131,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "DEBUT DE TOUR : Pour chaque ennemi à plus de 2 cases de distance de lui, leur inflige BEAUCOUP de dégats\n",
+    "fr": "<rem>{range}</rem>\n\\---\n{%FightTurnStarted} Inflige son l'{%AT} aux adversaires à plus de {cell:dis}.",
     "en": "",
     "es": "",
     "de": "",

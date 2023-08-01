@@ -32,20 +32,28 @@
   "values": {
     "type": "SkillDefinition",
     "id": 418,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 100
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
           "type": 20,
           "id": 18
-        }
+        },
+        "TRAP"
       ]
     }
   },
@@ -57,10 +65,10 @@
     "pt": "Defasagem Ourai"
   },
   "description": {
-    "fr": "Lorsqu’un de vos {%KEYWORD.TRAP.NAME,plural:other} est déclenché\\_: Confère {PropertyEffect:18} à votre héros jusqu'à la fin de son tour.",
-    "en": "When one of your {%KEYWORD.TRAP.NAME,plural:other} is triggered: Confers {PropertyEffect:18} on your hero until the end of their turn.",
-    "es": "Cuando se activa una de tus {%KEYWORD.TRAP.NAME,plural:other}: Confiere {PropertyEffect:18} a tu héroe hasta el final de su turno.",
-    "de": "Wenn eine deiner {%KEYWORD.TRAP.NAME,plural:other} ausgelöst wird: Verleiht deinem Helden bis zum Ende seiner Runde {PropertyEffect:18}.",
-    "pt": "Quando uma das suas {%KEYWORD.TRAP.NAME,plural:other} é acionada: Concede {PropertyEffect:18} ao seu herói até o fim do seu turno."
+    "fr": "Lorsqu’un de vos {#TRAP, plural:other} est déclenché\\_: Confère {PropertyEffect:18} à votre héros et {ATvalue:pc,percent,+} jusqu'à la fin du tour.",
+    "en": "When one of your {%KEYWORD.TRAP.NAME,plural:other} is triggered: Confers {PropertyEffect:18} on your hero and {value:pc,percent,+} {%AT} until the end of their turn.",
+    "es": "Cuando se activa una de tus {%KEYWORD.TRAP.NAME,plural:other}: Confiere {PropertyEffect:18} a tu héroe y {value:pc,percent,+} de {%AT} hasta el final de su turno.",
+    "de": "Wenn eine deiner {%KEYWORD.TRAP.NAME,plural:other} ausgelöst wird: Verleiht deinem Helden {PropertyEffect:18} und {value:pc,percent,+} des {%AT}<b>S</b> bis zum Ende seiner Runde.",
+    "pt": "Quando uma das suas {%KEYWORD.TRAP.NAME,plural:other} é acionada: Concede {PropertyEffect:18} ao seu herói e {value:pc,percent,+} de {%AT} até o fim do seu turno."
   }
 }

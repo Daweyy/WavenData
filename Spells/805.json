@@ -11,7 +11,7 @@
   "m_Name": "805",
   "m_id": 805,
   "m_displayName": "NECROME - Flux de Toross",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 760116294,
     "b": -386030060,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "63e25fe52676de54cb1e026b42201f51"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -82,31 +82,29 @@
       "type": "OneCastTargetDefinition",
       "selector": {
         "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
-            },
-            "distance": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
-              }
-            }
-          }
-        ]
+        "filters": []
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "cca8f2514ae2986469c6203f2b459775",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "STREAMOFSOULS"
+      ]
     }
   },
   "name": {
@@ -117,7 +115,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "Inflige l’ATTAQUE de votre héros et \ndéclenche « FLUX DES ÂMES ». ",
+    "fr": "Inflige l’{%AT} de votre héros et déclenche {#STREAMOFSOULS}.",
     "en": "",
     "es": "",
     "de": "",

@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 486,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -43,12 +44,18 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "col",
+          "value": 25
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "PUSH"
+        "PUSH",
+        "TRAP"
       ]
     }
   },
@@ -60,10 +67,10 @@
     "pt": "Empurrão Kartana"
   },
   "description": {
-    "fr": "Lorsque votre héros déclenche un {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié\\_:\\v  {#PUSH} les adversaires adjacents\\_<sprite name=\"cell_cross\"> de {cell:c}.\n\\---\n{passiveModifiers}",
-    "en": "When your hero triggers an allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}:\\v {#PUSH} adjacent\\_<sprite name=\"cell_cross\"> opponents {cell:c}.\n\\---\n{passiveModifiers}",
-    "es": "Cuando tu héroe activa una {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada:\\v  {#PUSH} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> {cell:c}.\n\\---\n{passiveModifiers}",
-    "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME} auslöst:\\v {#PUSH} die Gegner ringsum\\_<sprite name=\"cell_cross\"> um {cell:c} zurück.\n\\---\n{passiveModifiers}",
-    "pt": "Quando seu herói aciona uma {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada:\\v {#PUSH} os adversários adjacentes\\_<sprite name=\"cell_cross\"> por {cell:c}.\n\\---\n{passiveModifiers}"
+    "fr": "Lorsque votre héros déclenche un {#TRAP} <b>SRAM</b> allié\\_:\\v {#PUSH} les adversaires adjacents\\_<sprite name=\"cell_cross\"> de {cell:c}.\n\\---\n{value:col,percent} de vos bonus d'{%AT} sont convertis en <b>DÉGÂTS</b> de <b>COLLISION</b>.",
+    "en": "When your hero triggers an allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}: \\v{#PUSH} adjacent\\_<sprite name=\"cell_cross\"> opponents {cell:c}.\n\\---\n{value:col,+,percent} to your <b>COLLISION</b> <b>DAMAGE</b>.",
+    "es": "Cuando tu héroe activa una {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada:\\v  {#PUSH} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> {cell:c}.\n\\---\n{value:col,+,percent} a los <b>DAÑOS</b> de tus <b>COLISIONES</b>.",
+    "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME} auslöst:\\v Die Gegner ringsum\\_<sprite name=\"cell_cross\"> werden {cell:c} {#PUSH}.\n\\---\n{value:col,+,percent} auf den <b>SCHADEN</b> deiner <b>ZUSAMMENSTÖSSE</b>.",
+    "pt": "Quando seu herói aciona uma {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada:\\v {#PUSH} os adversários adjacentes\\_<sprite name=\"cell_cross\"> por {cell:c}.\n\\---\n{value:col,+,percent} aos <b>DANOS</b> de suas <b>COLISÕES</b>."
   }
 }

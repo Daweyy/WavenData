@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 13,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,11 +42,13 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 20
+          "referenceId": "Pc",
+          "value": 100
         }
       ],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "Weapon.998.nb"
+      ],
       "hasEffects": true,
       "keywordReferences": []
     }
@@ -58,7 +61,7 @@
     "pt": "Mestre Expingarda"
   },
   "description": {
-    "fr": "Lorsque votre héros gagne une {%AURA_SIGHT}\\_:\\v {value:v,+,percent} à son {%AT} jusqu’à la fin du tour.",
+    "fr": "Lorsque votre héros gagne {value:Weapon.998.nb} {%AURA_SIGHT,plural:one}, vos compagnons gagnent la même.\n\\---\n{value:Pc,+, percent} aux <b>DÉGÂTS</b> des {%AURA_SIGHT,plural:other} de votre héros.",
     "en": "When your hero gains a {%AURA_SIGHT}:\\v {value:v,+,percent} to their {%AT} until the end of the turn.",
     "es": "Cuando tu héroe gana un {%AURA_SIGHT}:\\v {value:v,+,percent} a su {%AT} hasta el final.",
     "de": "Wenn deine Held eine\\_{%AURA_SIGHT} erhält:\\vBis zum Ende der Runde {value:v,+,percent} auf seinen {%AT}.",

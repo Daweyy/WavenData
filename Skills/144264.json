@@ -10,7 +10,7 @@
   },
   "m_Name": "144264",
   "m_id": 144264,
-  "m_displayName": "WEAPON - XELOR - JIKAN - Précision Jikan",
+  "m_displayName": "WEAPON - XELOR - JIKAN - Attaque Jikan",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 646415065,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 144264,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -40,9 +41,29 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "pc",
-          "value": 100
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "d",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            22,
+            24,
+            23,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -51,17 +72,17 @@
     }
   },
   "name": {
-    "fr": "Précision Jikan",
+    "fr": "Attaque Jikan",
     "en": "Jikan Precision",
     "es": "Precisión Darena",
     "de": "Jikan-Präzision",
     "pt": "Precisão Jikan"
   },
   "description": {
-    "fr": "{value:pc,percent,+} aux <b>DÉGÂTS</b>, <b>SOINS</b> et gains d’{%AR} et de {%BL} des {%AURA_OWL,plural:other} de votre héros.",
-    "en": "{value:pc,percent,+} to your hero's {%AURA_OWL,plural:one} <b>DAMAGE</b>, <b>HEALS</b> and {%AR} and {%BL} gains.",
-    "es": "{value:pc,percent,+} a los <b>DAÑOS</b>, <b>CURAS</b> y ganancia de {%AR} y de {%BL} de las {%AURA_OWL,plural:other} de tu héroe.",
-    "de": "{value:pc,percent,+} <b>SCHADEN</b>, <b>HEILUNG</b>, {%AR}-Gewinn und {%BL} für die {%AURA_OWL,plural:other} deines Helden.",
-    "pt": "{value:pc,percent,+} aos <b>DANOS</b>, <b>CURAS</b> e ganhos de {%AR} e {%BL} das {%AURA_OWL,plural:other} do seu herói."
+    "fr": "Quand vous consommez un état\\_: Inflige {magicalDamage:d}.\n\\---\n<rem>Les dégâts sont basés sur vos magies élémentaires.</rem>",
+    "en": "When you consume a state: Does {value:d} damage.\n\\---\n<rem>The damage is based on your elemental magics.</rem>",
+    "es": "Cuando consumes un estado: Inflige {value:d} de daño.\n\\---\n<rem>Los daños se basan en tus magias elementales.</rem>",
+    "de": "Wenn du einen Zustand verbrauchst: Verursacht {value:d} Schaden.\n\\---\n<rem>Der Schaden richtet sich nach deiner Elementarmagie.</rem>",
+    "pt": "Quando você consome um estado: Inflige {value:d} danos.\n\\---\n<rem>Os danos são baseados em suas magias elementares.</rem>"
   }
 }

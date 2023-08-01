@@ -120,11 +120,33 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            91,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.895.pt"
-      ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "PEAT"
@@ -139,10 +161,10 @@
     "pt": "Pá de Ruel"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {peat:ParameterizedEffectExecution.895.pt} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {peat:ParameterizedEffectExecution.895.pt} if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {peat:ParameterizedEffectExecution.895.pt} si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {peat:ParameterizedEffectExecution.895.pt} aus, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {peat:ParameterizedEffectExecution.895.pt} se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {peat:pt} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {peat:pt} if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {peat:pt} si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {peat:pt} aus, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {peat:pt} se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
   }
 }

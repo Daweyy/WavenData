@@ -98,7 +98,13 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 50
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -112,7 +118,7 @@
     "pt": "Golpe do Pincel"
   },
   "description": {
-    "fr": "Consomme l'{%AR} de vos personnages et inflige autant de dégâts à un adversaire.",
+    "fr": "Inflige {value:v,percent} de l'{%AR} de vos personnages à un adversaire.",
     "en": "Consumes your character's {%AR} and does the same amount of damage to an opponent.",
     "es": "Consume la {%AR} de tus personajes e inflige daños equivalentes a un adversario.",
     "de": "Verbraucht den {%AR} deiner Charaktere und verursacht bei einem Gegner Schaden in gleicher Höhe.",

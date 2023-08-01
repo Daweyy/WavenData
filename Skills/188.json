@@ -10,7 +10,7 @@
   },
   "m_Name": "188",
   "m_id": 188,
-  "m_displayName": "SPELL - Generic - Jauge Terre",
+  "m_displayName": "SPELL - GENERIC - CRITICAL - Jauge Terre",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 1656405415,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 188,
+    "skillTier": 2,
     "skillUsageType": 0,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -39,7 +40,9 @@
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "Spell.231587.jaugeGain"
+      ],
       "hasEffects": false,
       "keywordReferences": [
         "CRITICAL"
@@ -54,7 +57,7 @@
     "pt": "{%CRITICAL_SKILL}"
   },
   "description": {
-    "fr": "{#CRITICAL}\\_: +1 jauge {%EARTH}.",
+    "fr": "{#critical}\\_: {EARTHGAUGEvalue:Spell.231587.jaugeGain,+}.",
     "en": "{#CRITICAL}: +1 {%EARTH} Gauge.",
     "es": "{#CRITICAL}: +1 indicador de {%EARTH}.",
     "de": "{#CRITICAL}: +1\\_{%EARTH}-Statusanzeige.",

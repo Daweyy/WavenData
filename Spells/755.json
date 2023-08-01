@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      207260,
-      213576,
-      414569
+      1864,
+      2654,
+      2284
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -111,7 +111,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 19
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -124,7 +124,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 855,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "percentSkill",
@@ -143,9 +143,36 @@
           "value": 30
         },
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "percentRipost",
-          "value": 5
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 4
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "PercentageOfValue",
@@ -174,7 +201,7 @@
             "skillBuffs": [
               {
                 "type": "SkillBuff",
-                "skillId": 855,
+                "skillId": 118841,
                 "percentBuff": {
                   "type": "ConstIntegerValue",
                   "referenceId": "",
@@ -192,7 +219,6 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "RESPONSE",
         {
           "type": 19,
           "id": 455
@@ -208,10 +234,10 @@
     "pt": "Fulgor"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: {value:percentRipost,percent,+} de {#response} à votre héros jusqu'à son prochain tour.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {value:percentRipost,percent,+} {#response} to your hero until their next turn.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {value:percentRipost,percent,+} de {#response} a tu héroe hasta su próximo turno.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {value:percentRipost,percent,+} {#response} für deinen Helden bis zu seiner nächsten Runde.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {value:percentRipost,percent,+} de {#response} ao seu herói até seu próximo turno."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: {magicalDamage:dmg2,+}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {magicalDamage:dmg2,+}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {magicalDamage:dmg2,+}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {magicalDamage:dmg2,+}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {magicalDamage:dmg2,+}."
   }
 }

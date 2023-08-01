@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 155486,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -40,11 +41,9 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "CharacterActionValue",
+          "type": "ConstIntegerValue",
           "referenceId": "pow",
-          "entitySelector": {
-            "type": "EffectHolderSelector"
-          }
+          "value": 50
         }
       ],
       "externalDynamicValueReferences": [],
@@ -60,10 +59,10 @@
     "pt": "Coletivo Kokoro"
   },
   "description": {
-    "fr": "Lorsque vous invoquez un compagnon\\_:\\v Lui confère l'{%AT} de votre héros en {%AR}.",
-    "en": "When you summon a companion:\\v Confers your hero's {%AT} on them as {%AR}.",
-    "es": "Cuando invocas un compañero:\\vLe confiere el {%AT} de tu héroe en {%AR}.",
-    "de": "Wenn du einen Begleiter beschwörst:\\vVerleiht ihm den {%AT} deines Helden als {%AR}.",
-    "pt": "Ao invocar um companheiro:\\v Concede a ele o {%AT} do seu herói em {%AR}."
+    "fr": "Lorsque vous invoquez un compagnon\\_:\\v Confère {value:pow,percent} de l'{%AT} de votre héros en {%AR} à vos compagnons.",
+    "en": "When you summon a companion: \\vConfers {value:pow,percent} of your {%AT} on all your companions.",
+    "es": "Cuando invocas un compañero:\\v Confiere un {value:pow,percent} de tu {%AT} a todos tus compañeros.",
+    "de": "Wenn du einen Begleiter beschwörst:\\v Überträgt {value:pow,percent} deines {%AT}<b>S</b> an all deine Begleiter.",
+    "pt": "Ao invocar um companheiro:\\v Concede {value:pow,percent} do seu {%AT} a todos os seus companheiros."
   }
 }

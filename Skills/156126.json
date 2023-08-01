@@ -10,7 +10,7 @@
   },
   "m_Name": "156126",
   "m_id": 156126,
-  "m_displayName": "WEAPON - ENIRIPSA - GEMME - Vigueur Déphasante.",
+  "m_displayName": "WEAPON - ENIRIPSA - GEMME - Concentration Déphasante",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 1025428320,
@@ -32,13 +32,20 @@
   "values": {
     "type": "SkillDefinition",
     "id": 156126,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 20
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -50,17 +57,17 @@
     }
   },
   "name": {
-    "fr": "Vigueur Déphasante",
+    "fr": "Concentration Déphasante",
     "en": "Dephasing Vigor",
     "es": "Vigor Desfasador",
     "de": "Phasenverschiebende Lebenskraft",
     "pt": "Vigor Defasante"
   },
   "description": {
-    "fr": "L’{%AT} de votre héros n’est pas réduite par le {PropertyEffect:18}.",
-    "en": "Your hero's {%AT} is not reduced by {PropertyEffect:18}.",
-    "es": "El {%AT} de tu héroe no es reducido por el {PropertyEffect:18}.",
-    "de": "Der {%AT} deines Helden wird nicht durch {PropertyEffect:18} verringert.",
-    "pt": "O {%AT} do seu herói não é mais diminuído por {PropertyEffect:18}."
+    "fr": "Lorsque votre héros est {PropertyEffect:18[DÉPHASÉ]}\\_: {value:p,percent,+} aux <b>DÉGÂTS</b> de votre prochain sort par adversaire traversé.",
+    "en": "When your hero is {PropertyEffect:18[DEPHASED]}: You gain {value:p,percent} spell <b>DAMAGE</b> per opponent gone through.",
+    "es": "Cuando tu héroe está {PropertyEffect:18[DESFASADO]}: Ganas un {value:p,percent} de <b>DAÑOS</b> en tus hechizos por adversario atravesado.",
+    "de": "Wenn dein Held {PropertyEffect:18[PHASENVERSCHOBEN]} wird: Der <b>SCHADEN</b> deiner Zauber wird pro überquertem Gegner um {value:p,percent} erhöht.",
+    "pt": "Quando seu herói entra no estado {PropertyEffect:18[DEFASADO]}: Você ganha {value:p,percent} de <b>DANOS</b> em seus feitiços por adversário atravessado."
   }
 }

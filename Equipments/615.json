@@ -49,25 +49,28 @@
     "rarity": 0,
     "unlockableSkillIds": [
       257,
-      683813,
-      709902,
-      684501,
-      684860,
-      685572
+      1488,
+      1325,
+      1483,
+      1481,
+      1476,
+      1811
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.801.bc"
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 25
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": [
-        "LIGHTNING"
-      ]
+      "keywordReferences": []
     },
     "family": 0,
     "equipmentType": 1,
@@ -75,7 +78,7 @@
     "passiveModifiers": [
       {
         "type": "CaracBuffModifier",
-        "holder": 9,
+        "holder": 8,
         "value": {
           "type": "LinearLevelOnlyBasedDynamicValue",
           "referenceId": "",
@@ -83,7 +86,7 @@
           "factor": 1
         },
         "caracIds": [
-          24
+          1
         ]
       }
     ],
@@ -97,11 +100,11 @@
     "pt": "Oscilanel"
   },
   "description": {
-    "fr": "{%COMPANION_DEATH} Déclenche {lightning:ParameterizedEffectExecution.801.bc} sur les adversaires adjacents<sprite name=\"cell_cross\">.",
-    "en": "{%COMPANION_DEATH} Triggers {lightning:ParameterizedEffectExecution.801.bc} on adjacent<sprite name=\"cell_cross\"> opponents.",
-    "es": "{%COMPANION_DEATH} Activa {lightning:ParameterizedEffectExecution.801.bc} sobre los adversarios adyacentes<sprite name=\"cell_cross\">.",
-    "de": "{%COMPANION_DEATH} Löst {lightning:ParameterizedEffectExecution.801.bc} bei den angrenzenden<sprite name=\"cell_cross\"> Gegnern aus.",
-    "pt": "{%COMPANION_DEATH} Aciona {lightning:ParameterizedEffectExecution.801.bc} nos adversários adjacentes<sprite name=\"cell_cross\">."
+    "fr": "Tant que votre héros possède de l'{%AR} : {value:pc,percent,+} à l'{%AT} de votre héros.",
+    "en": "{%COMPANION_DEATH} Triggers {lightning:ParameterizedEffectExecution.801.bc} on surrounding<sprite name=\"cell_around\"> opponents.",
+    "es": "{%COMPANION_DEATH} Activa {lightning:ParameterizedEffectExecution.801.bc} sobre los adversarios de alrededor<sprite name=\"cell_around\">.",
+    "de": "{%COMPANION_DEATH} Löst {lightning:ParameterizedEffectExecution.801.bc} bei Gegnern ringsum\\_<sprite name=\"cell_around\"> aus.",
+    "pt": "{%COMPANION_DEATH} Aciona {lightning:ParameterizedEffectExecution.801.bc} nos adversários em\\_volta\\_<sprite name=\"cell_around\">."
   },
   "bgDescription": {
     "fr": "Un anneau taillé avec précision. C'est à peu près tout. Mais c'est déjà bien.",

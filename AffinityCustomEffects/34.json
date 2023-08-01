@@ -69,20 +69,25 @@
             "value": 15
           },
           "factor": {
-            "type": "CustomScalingFactor",
-            "computer": {
-              "type": "LinearScalingFactorComputer",
-              "scale": 0
-            }
+            "type": "ReferenceScalingFactor",
+            "reference": 12
           },
           "buffs": [
-            81
+            81,
+            22,
+            25,
+            51
           ],
           "skillBuffs": [],
           "from": {
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "heal",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],

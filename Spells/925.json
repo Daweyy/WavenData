@@ -92,6 +92,11 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "v",
           "value": 1
         }
@@ -99,13 +104,11 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "EPHEMERAL",
+        "COMBO",
         {
-          "type": 25,
-          "id": 552
-        },
-        "ARCHER",
-        "COMBO"
+          "type": 22,
+          "id": 40
+        }
       ]
     }
   },
@@ -117,7 +120,7 @@
     "pt": "Recarga Voldorak"
   },
   "description": {
-    "fr": "Piochez {SPELLCOUNTvalue:v}.\n\\---\n{#COMBO}\\_: {#ARCHER}.",
+    "fr": "{value:a,+}\\_{aura:40,value:a} à votre héros.\n\\---\n{#COMBO}\\_: {value:a,+}\\_{aura:40,value:v} à votre héros.",
     "en": "Draw {SPELLCOUNTvalue:v}.\n\\---\n{#COMBO}: {#ARCHER}.",
     "es": "Sacas {SPELLCOUNTvalue:v}.\n\\---\n{#COMBO}: {#ARCHER}.",
     "de": "Zieht {SPELLCOUNTvalue:v}.\n\\---\n{#COMBO}: {#ARCHER}.",

@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 261,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,13 +42,8 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 2
-        },
-        {
-          "type": "ConstIntegerValue",
           "referenceId": "pc",
-          "value": 30
+          "value": 20
         }
       ],
       "externalDynamicValueReferences": [],
@@ -63,10 +59,10 @@
     "pt": "Potência Bumelâmina"
   },
   "description": {
-    "fr": "{ATvalue:pc,percent,+} à votre héros tant que vous avez {SPELLCOUNTvalue:v} ou moins en main.",
-    "en": "{ATvalue:pc,percent,+} to your hero while you have {SPELLCOUNTvalue:v} or less in hand.",
-    "es": "{ATvalue:pc,percent,+}a tu héroe mientras tengas {SPELLCOUNTvalue:v} o menos en mano.",
-    "de": "{ATvalue:pc,percent,+} für deinen Helden, solange du höchstens {SPELLCOUNTvalue:v} auf der Hand hast.",
-    "pt": "{ATvalue:pc,percent,+} ao seu herói se você possuir {SPELLCOUNTvalue:v} ou menos na mão."
+    "fr": "{%fightTurnEnded} {ATvalue:pc,percent,+} à votre héros par sort pioché ce tour jusqu'à la fin de son prochain tour.",
+    "en": "{%fightTurnEnded} {value:pc,percent,+} of your hero's {%AT} per card drawn during this turn until the end of their next turn.",
+    "es": "{%fightTurnEnded} {value:pc,percent,+} al {%AT} de tu héroe por carta sacada durante este turno hasta el final de su próximo turno.",
+    "de": "{%fightTurnEnded} {value:pc,percent,+} auf den {%AT} deines Helden pro gezogener Karte während dieser Runde bis zum Ende seiner nächsten Runde.",
+    "pt": "{%fightTurnEnded} {value:pc,percent,+} ao {%AT} do seu herói por carta comprada durante o turno até o fim do seu próximo turno."
   }
 }

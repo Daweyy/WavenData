@@ -10,8 +10,8 @@
   },
   "m_Name": "771",
   "m_id": 771,
-  "m_displayName": "RING - COMMON - Anneau Lele",
-  "m_availability": 3,
+  "m_displayName": "RING - KROSMIQUE - Anneau Lele",
+  "m_availability": 2,
   "m_i18nNameId": {
     "a": 1681470977,
     "b": 1621253748,
@@ -46,28 +46,60 @@
     "id": 771,
     "merchantCosts": [],
     "premiumItem": false,
-    "rarity": 0,
+    "rarity": 2,
     "unlockableSkillIds": [
-      685849,
-      685882,
-      709961,
+      1473,
+      1472,
+      1324,
       408,
-      686082,
-      686129
+      1471,
+      1470,
+      1371
     ],
     "equipableByPlayers": true,
-    "upgradeRuleId": 594,
+    "upgradeRuleId": 636,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.983.bc"
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "pow",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 5
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 49
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "skill",
+                "value": 5
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "skill",
+          "value": 5
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": [
-        "FLAME"
-      ]
+      "keywordReferences": []
     },
     "family": 0,
     "equipmentType": 1,
@@ -83,7 +115,7 @@
           "factor": 1
         },
         "caracIds": [
-          25
+          28
         ]
       }
     ],
@@ -97,11 +129,11 @@
     "pt": "Anel Lelê"
   },
   "description": {
-    "fr": "{%Companion_Death} Déclenche {flame:ParameterizedEffectExecution.983.bc} sur les adversaires adjacents<sprite name=\"cell_cross\">.",
-    "en": "{%Companion_Death} Triggers {flame:ParameterizedEffectExecution.983.bc} on adjacent<sprite name=\"cell_cross\"> opponents.",
-    "es": "{%Companion_Death} Activa {flame:ParameterizedEffectExecution.983.bc} sobre los adversarios adyacentes<sprite name=\"cell_cross\">.",
-    "de": "{%Companion_Death} Löst {flame:ParameterizedEffectExecution.983.bc} bei den angrenzenden<sprite name=\"cell_cross\"> Gegnern aus.",
-    "pt": "{%Companion_Death} Aciona {flame:ParameterizedEffectExecution.983.bc} nos adversários adjacentes<sprite name=\"cell_cross\">."
+    "fr": "{%FightStarted} {value:pow,percent} de vos bonus aux <b>DÉGÂTS</b> des <b>SORTS</b> deviennent également des bonus à l'{%AT} de votre héros",
+    "en": "{%Companion_Death} Triggers {flame:ParameterizedEffectExecution.983.bc} on surrounding<sprite name=\"cell_around\"> opponents.",
+    "es": "{%Companion_Death} Activa {flame:ParameterizedEffectExecution.983.bc} sobre los adversarios de alrededor<sprite name=\"cell_around\">.",
+    "de": "{%Companion_Death} Löst {flame:ParameterizedEffectExecution.983.bc} bei Gegnern ringsum\\_<sprite name=\"cell_around\"> aus.",
+    "pt": "{%Companion_Death} Aciona {flame:ParameterizedEffectExecution.983.bc} nos adversários em\\_volta\\_<sprite name=\"cell_around\">."
   },
   "bgDescription": {
     "fr": "« Oh lé lé, Oh la la, quand il faut y aller, on est toujours là ! »",

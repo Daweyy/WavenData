@@ -48,12 +48,13 @@
     "premiumItem": false,
     "rarity": 1,
     "unlockableSkillIds": [
-      644077,
+      1717,
       125,
-      644382,
-      644395,
-      644600,
-      644961
+      1716,
+      1715,
+      1714,
+      1713,
+      1231
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 274,
@@ -117,11 +118,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "c2",
           "value": 1
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "per",
-          "value": 500
         }
       ],
       "externalDynamicValueReferences": [
@@ -136,7 +132,21 @@
     "family": 0,
     "equipmentType": 2,
     "petSkins": null,
-    "passiveModifiers": [],
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          58
+        ]
+      }
+    ],
     "spellEffectData": []
   },
   "name": {
@@ -147,11 +157,11 @@
     "pt": "Braçadeira de Empurrão Chuvoso"
   },
   "description": {
-    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de déclencher {rain:ParameterizedEffectExecution.978.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
-    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} of triggering {rain:ParameterizedEffectExecution.978.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
-    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de activar {rain:ParameterizedEffectExecution.978.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
-    "de": "{%Attack} {#PUSH} um {cell:c}.\n\\---\nChance von {LUCKSELFvalue:per,permil}, je <b>{%KEYWORD.COLLISION.NAME}</b>-Feld {rain:ParameterizedEffectExecution.978.bc} auszulösen.",
-    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de acionar {rain:ParameterizedEffectExecution.978.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
+    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\nDéclenche {rain:ParameterizedEffectExecution.978.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\nTriggers {rain:ParameterizedEffectExecution.978.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
+    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\nActiva {rain:ParameterizedEffectExecution.978.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "de": "{%Attack} {#PUSH} um {cell:c}.\n\\---\nLöst {rain:ParameterizedEffectExecution.978.bc} pro <b>{%KEYWORD.COLLISION.NAME}</b>-Feld aus.",
+    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\nAciona {rain:ParameterizedEffectExecution.978.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
   },
   "bgDescription": {
     "fr": "{%empty}",

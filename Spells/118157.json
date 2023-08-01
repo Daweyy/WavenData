@@ -41,8 +41,8 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      196548,
-      219928,
+      2683,
+      2633,
       843
     ],
     "upgradeRuleId": 247,
@@ -147,7 +147,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 25
+            "value": 24
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -160,7 +160,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 140,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "percentSkill",
@@ -177,11 +177,42 @@
           "type": "ConstIntegerValue",
           "referenceId": "percentSkill",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.782.bc"
-      ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "BOUNCE"
@@ -196,10 +227,10 @@
     "pt": "Estocada Trovão"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent<sprite name=\"cell_cross\"> à votre héros.\n\\---\nDéclenche {bounce:ParameterizedEffectExecution.782.bc} si la cible est <b>ÉVENTÉE<b>\\_<sprite name=\"ventilated\">.",
-    "en": "Does {magicalDamage:dmg} to an opponent adjacent<sprite name=\"cell_cross\"> to your hero.\n\\---\nTriggers {bounce:ParameterizedEffectExecution.782.bc} if the target is <b>VENTILATED<b>\\_<sprite name=\"ventilated\">.",
-    "es": "Inflige {magicalDamage:dmg} a un adversario adyacente<sprite name=\"cell_cross\"> a tu héroe.\n\\---\nActiva {bounce:ParameterizedEffectExecution.782.bc} si el objetivo está <b>AIREADO<b>\\_<sprite name=\"ventilated\">.",
-    "de": "Fügt einem Gegner, der an deinen Helden angrenzt <sprite name=\"cell_cross\">, {magicalDamage:dmg} zu.\n\\---\nLöst {bounce:ParameterizedEffectExecution.782.bc} aus, wenn das Ziel <b>WINDIG<b>\\_<sprite name=\"ventilated\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> ao seu herói.\n\\---\nAciona {bounce:ParameterizedEffectExecution.782.bc} se o alvo estiver <b>AERADO<b>\\_<sprite name=\"ventilated\">."
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent<sprite name=\"cell_cross\"> à votre héros.\n\\---\nDéclenche {bounce:bc} si la cible est <b>ÉVENTÉE<b>\\_<sprite name=\"ventilated\">.",
+    "en": "Does {magicalDamage:dmg} to an opponent adjacent<sprite name=\"cell_cross\"> to your hero.\n\\---\nTriggers {bounce:bc} if the target is <b>VENTILATED<b>\\_<sprite name=\"ventilated\">.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario adyacente<sprite name=\"cell_cross\"> a tu héroe.\n\\---\nActiva {bounce:bc} si el objetivo está <b>AIREADO<b>\\_<sprite name=\"ventilated\">.",
+    "de": "Fügt einem Gegner, der an deinen Helden angrenzt\\_<sprite name=\"cell_cross\">, {magicalDamage:dmg} zu.\n\\---\nLöst {bounce:bc} aus, wenn das Ziel <b>WINDIG<b>\\_<sprite name=\"ventilated\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> ao seu herói.\n\\---\nAciona {bounce:bc} se o alvo estiver <b>AERADO<b>\\_<sprite name=\"ventilated\">."
   }
 }

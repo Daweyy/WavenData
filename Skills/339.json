@@ -32,13 +32,20 @@
   "values": {
     "type": "SkillDefinition",
     "id": 339,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 75
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -52,10 +59,10 @@
     "pt": "Astral Shugen"
   },
   "description": {
-    "fr": "Lorsque vous appliquez l’état <b>ASTRAL</b>\\_<sprite name=\"astral\">\\_:\\v Inflige l’{%AT} de votre héros à la cible. ",
-    "en": "When you apply the <b>ASTRAL</b>\\_<sprite name=\"astral\"> state:\\v Inflicts your hero's {%AT} on the target.",
-    "es": "Cuando aplicas el estado <b>ASTRAL</b>\\_<sprite name=\"astral\">:\\v Inflige el {%AT} de tu héroe al objetivo.",
-    "de": "Wenn du den Zustand <b>ASTRAL</b>\\_<sprite name=\"astral\"> anwendest:\\v Verursacht beim Ziel {%AT} deines Helden als Schaden.",
-    "pt": "Ao aplicar o estado <b>ASTRAL</b>\\_<sprite name=\"astral\">:\\v Inflige o {%AT} do seu herói ao alvo."
+    "fr": "Lorsque <b>ASTRAL</b>\\_<sprite name=\"astral\"> est appliqué\\_:\\v Inflige {value:pc,percent} de l'{%AT} de votre héros à la cible.",
+    "en": "When <b>ASTRAL</b>\\_<sprite name=\"astral\"> is applied:\\vInflicts {value:pc,percent} of your hero's {%AT} on the target.",
+    "es": "Cuando se aplica <b>ASTRAL</b><sprite name=\"astral\">:\\v Inflige un {value:pc,percent} del {%AT} de tu héroe al objetivo. ",
+    "de": "Wenn <b>ASTRAL</b>\\_<sprite name=\"astral\"> angewendet wird:\\v Fügt dem Ziel {value:pc,percent} des {%AT}<b>S</b> deines Helden als Schaden zu.",
+    "pt": "Quando <b>ASTRAL</b>\\_<sprite name=\"astral\"> é aplicado:\\v Inflige {value:pc,percent} do {%AT} do seu herói ao alvo."
   }
 }

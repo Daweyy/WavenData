@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 143274,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -42,7 +43,12 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "Sight",
-          "value": 100
+          "value": 25
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Sight2",
+          "value": 25
         }
       ],
       "externalDynamicValueReferences": [],
@@ -58,10 +64,10 @@
     "pt": "Precisão Voldorak"
   },
   "description": {
-    "fr": "{value:Sight,+,percent} aux <b>DÉGÂTS</b> des {%AURA_SIGHT,plural:other} de votre héros.  \n",
-    "en": "{value:Sight,+,percent} to the <b>DAMAGE</b> from your hero's {%AURA_SIGHT,plural:other}.  \n",
-    "es": "{value:Sight,+,percent} a los <b>DAÑOS</b> de las {%AURA_SIGHT,plural:other} de tu héroe.  \n",
-    "de": "{value:Sight,+,percent} <b>SCHADEN</b> für die {%AURA_SIGHT,plural:other} deines Helden.  \n",
-    "pt": "{value:Sight,+,percent} aos <b>DANOS</b> das {%AURA_SIGHT,plural:other} do seu herói.\n"
+    "fr": "{value:Sight,+,percent} aux <b>DÉGÂTS</b> des {%AURA_SIGHT,plural:other} de votre héros.\n\\---\nLorsque vous jouez un {%SPELLCOUNT}\\_: {value:Sight2,+,percent} supplémentaires pour le tour.",
+    "en": "{value:Sight,+,percent} to your hero's {%AURA_SIGHT,plural:one} <b>DAMAGE</b>.\n{#COMBO}: {value:Sight2,+,percent} extra for the turn.\n",
+    "es": "{value:Sight,+,percent} a los <b>DAÑOS</b> de las {%AURA_SIGHT,plural:other} de tu héroe.\n{#COMBO}: {value:Sight2,+,percent} adicional durante el turno.\n",
+    "de": "{value:Sight,+,percent} <b>SCHADEN</b> für die {%AURA_SIGHT,plural:other} deines Helden.\n{#COMBO}: Zusätzliche {value:Sight2,+,percent} für die Runde.\n",
+    "pt": "{value:Sight,+,percent} aos <b>DANOS</b> das {%AURA_SIGHT,plural:other} do seu herói.\n{#COMBO}: {value:Sight2,+,percent} adicional durante o turno.\n"
   }
 }

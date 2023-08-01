@@ -41,8 +41,8 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      841,
-      470645,
+      1821,
+      2131,
       589
     ],
     "upgradeRuleId": 247,
@@ -165,7 +165,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 46
+            "value": 39
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -178,7 +178,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 470,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "Bper",
@@ -195,6 +195,40 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            90,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -211,9 +245,9 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} au coût de ce {%SPELLCOUNT} si vous avez au moins {value:a} <b>SINISTROS</b> en jeu.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} to the cost of this {%SPELLCOUNT} for each of your <b>SINISTROS</b> in play.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} al coste de este {%SPELLCOUNT} por cada uno de tus <b>SINISTROS</b> en juego.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} auf Kosten dieses {%SPELLCOUNT}s für jeden deiner <b>SINISTROS</b> im Spiel.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} ao custo deste {%SPELLCOUNT} para cada um dos seus <b>SINISTROS</b> em jogo."
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} to the cost of this {%SPELLCOUNT} if you have at least {value:a} <b>{a, plural, one[SINISTRO] other[SINISTROS]}</b> in play.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} al coste de este {%SPELLCOUNT} si tienes al menos {value:a} <b>SINISTROS</b> en juego.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} auf Kosten dieses {%SPELLCOUNT}s, wenn du mindestens {value:a}\\_<b>SINISTROS</b> im Spiel hast.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} ao custo deste {%SPELLCOUNT} se você tiver {value:a} <b>SINISTROS</b> ou mais no jogo."
   }
 }

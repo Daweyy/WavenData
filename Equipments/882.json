@@ -10,8 +10,8 @@
   },
   "m_Name": "882",
   "m_id": 882,
-  "m_displayName": "RING - COMMON - Anneau Lyve",
-  "m_availability": 3,
+  "m_displayName": "RING - KROSMIQUE - Anneau Lyve",
+  "m_availability": 2,
   "m_i18nNameId": {
     "a": -1785546328,
     "b": 454497332,
@@ -46,28 +46,60 @@
     "id": 882,
     "merchantCosts": [],
     "premiumItem": false,
-    "rarity": 0,
+    "rarity": 2,
     "unlockableSkillIds": [
-      686221,
-      686732,
-      710001,
-      687131,
-      687367,
-      514
+      1468,
+      1464,
+      1323,
+      1462,
+      1461,
+      514,
+      2049
     ],
     "equipableByPlayers": true,
-    "upgradeRuleId": 594,
+    "upgradeRuleId": 636,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.275.bc"
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "pow",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 2
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 311
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "skill",
+                "value": 2
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "skill",
+          "value": 2
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": [
-        "ROCK"
-      ]
+      "keywordReferences": []
     },
     "family": 0,
     "equipmentType": 1,
@@ -75,7 +107,7 @@
     "passiveModifiers": [
       {
         "type": "CaracBuffModifier",
-        "holder": 9,
+        "holder": 8,
         "value": {
           "type": "LinearLevelOnlyBasedDynamicValue",
           "referenceId": "",
@@ -83,7 +115,7 @@
           "factor": 1
         },
         "caracIds": [
-          23
+          58
         ]
       }
     ],
@@ -97,11 +129,11 @@
     "pt": "Olivanel"
   },
   "description": {
-    "fr": "{%Companion_Death} Déclenche {rock:ParameterizedEffectExecution.275.bc} sur les adversaires adjacents<sprite name=\"cell_cross\">.",
-    "en": "{%Companion_Death} Triggers {rock:ParameterizedEffectExecution.275.bc} on adjacent<sprite name=\"cell_cross\"> opponents.",
-    "es": "{%Companion_Death} Activa {rock:ParameterizedEffectExecution.275.bc} sobre los adversarios adyacentes<sprite name=\"cell_cross\">.",
-    "de": "{%Companion_Death} Löst {rock:ParameterizedEffectExecution.275.bc} bei den angrenzenden<sprite name=\"cell_cross\"> Gegnern aus.",
-    "pt": "{%Companion_Death} Aciona {rock:ParameterizedEffectExecution.275.bc} nos adversários adjacentes<sprite name=\"cell_cross\">."
+    "fr": "{%FightStarted} {value:pow,percent} de vos bonus à l'{%AT} de votre héros deviennent également des bonus aux <b>DÉGÂTS</b> des <b>SORTS</b>",
+    "en": "{%Companion_Death} Triggers {rock:ParameterizedEffectExecution.275.bc} on surrounding<sprite name=\"cell_around\"> opponents.",
+    "es": "{%Companion_Death} Activa {rock:ParameterizedEffectExecution.275.bc} sobre los adversarios de alrededor<sprite name=\"cell_around\">.",
+    "de": "{%Companion_Death} Löst {rock:ParameterizedEffectExecution.275.bc} bei Gegnern ringsum\\_<sprite name=\"cell_around\"> aus.",
+    "pt": "{%Companion_Death} Aciona {rock:ParameterizedEffectExecution.275.bc} nos adversários em\\_volta\\_<sprite name=\"cell_around\">."
   },
   "bgDescription": {
     "fr": "{%empty}",

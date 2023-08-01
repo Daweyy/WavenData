@@ -48,22 +48,44 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      80653,
-      80890,
+      2840,
+      2841,
       539,
-      639292,
-      438045,
-      356
+      1750,
+      2223,
+      356,
+      2074
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.932.ex"
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            88,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
         "EXPLOSION"
@@ -97,11 +119,11 @@
     "pt": "Braçadeira Explosiva"
   },
   "description": {
-    "fr": "{%Attack} Déclenche {explosion:ParameterizedEffectExecution.932.ex} si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
-    "en": "{%Attack} Triggers {explosion:ParameterizedEffectExecution.932.ex} if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
-    "es": "{%Attack} Activa {explosion:ParameterizedEffectExecution.932.ex} si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
-    "de": "{%Attack} Löst {explosion:ParameterizedEffectExecution.932.ex} aus, falls das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
-    "pt": "{%Attack} Aciona {explosion:ParameterizedEffectExecution.932.ex} se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+    "fr": "{%Attack} Déclenche {explosion:ex} si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "{%Attack} Triggers {explosion:ex} if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "{%Attack} Activa {explosion:ex} si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "{%Attack} Löst {explosion:ex} aus, falls das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "{%Attack} Aciona {explosion:ex} se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
   },
   "bgDescription": {
     "fr": "Un brassard qui mettra vos ennemis dans tous leurs états.",

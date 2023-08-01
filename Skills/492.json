@@ -32,13 +32,20 @@
   "values": {
     "type": "SkillDefinition",
     "id": 492,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 5
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -57,10 +64,10 @@
     "pt": "Espectralização"
   },
   "description": {
-    "fr": "Lorsqu’un de vos compagnons meurt\\_:\\v Invoque une {Summoning:399} sur sa case.",
-    "en": "When one of your companions dies:\\v Summons one {Summoning:399} on their cell.",
-    "es": "Cuando uno de tus compañeros muere:\\v Invoca un {Summoning:399} en su casilla.",
-    "de": "Wenn einer deiner Begleiter stirbt:\\v Beschwört eine\\_{Summoning:399} auf seinem Feld.",
-    "pt": "Quando um dos seus companheiros morre:\\v Invoca uma {Summoning:399} sobre sua célula."
+    "fr": "Lorsqu’un de vos compagnons meurt\\_:\\v Invoque une {Summoning:399} sur sa case.\nVotre héros s'inflige {value:pc,percent} de sa {%PVMAX}.",
+    "en": "When one of your companions dies:\\vSummons one {Summoning:399} on their cell.\nYour hero inflicts {value:pc,percent} of their max health on themself.",
+    "es": "Cuando uno de tus compañeros muere:\\v Invoca un {Summoning:399} en su casilla.\nTu héroe se inflige un {value:pc,percent} de su vida máx.",
+    "de": "Wenn einer deiner Begleiter stirbt:\\v Beschwört eine\\_{Summoning:399} auf seinem Feld.\nDein Held verursacht {value:pc,percent} seiner max. LP als Schaden.",
+    "pt": "Quando um dos seus companheiros morre:\\v Invoca uma {Summoning:399} sobre sua célula.\nSeu herói se inflige {value:pc,percent} de sua vida máx."
   }
 }

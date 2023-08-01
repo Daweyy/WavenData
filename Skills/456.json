@@ -10,7 +10,7 @@
   },
   "m_Name": "456",
   "m_id": 456,
-  "m_displayName": "WEAPON - SRAM - SURIN SUROKAN  - Maitre Sourokan",
+  "m_displayName": "WEAPON - SRAM - SURIN SUROKAN  - Génération Sourokan",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 1820499276,
@@ -32,39 +32,47 @@
   "values": {
     "type": "SkillDefinition",
     "id": 456,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "pc",
-          "value": 50
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        {
+          "type": 6,
+          "id": 191
+        },
+        "EPHEMERAL",
         "TRAP",
+        {
+          "type": 25,
+          "id": 512
+        },
         "TRAPPER"
       ]
     }
   },
   "name": {
-    "fr": "Maitre Sourokan",
+    "fr": "Génération Sourokan",
     "en": "Surokan Master",
     "es": "Maestro Surokán",
     "de": "Meister Surokan",
     "pt": "Mestre Surokan"
   },
   "description": {
-    "fr": "{value:pc,percent,+} aux <b>DÉGÂTS</b> de vos {%Spellcount,plural:other} déclenchant {#Trapper}.",
-    "en": "{value:pc,percent,+} to the <b>DAMAGE</b> of your {%Spellcount,plural:other} that trigger {#Trapper}.",
-    "es": "{value:pc,percent,+} a los <b>DAÑOS</b> de tus {%Spellcount,plural:other} activando {#Trapper}.",
-    "de": "{value:pc,percent,+} <b>SCHADEN</b> für die {%Spellcount,plural:other}, die {#Trapper} auslösen.",
-    "pt": "{value:pc,percent,+} aos <b>DANOS</b> dos seus {%Spellcount,plural:other} que acionam {#Trapper}."
+    "fr": "Lorsque vous déclenchez {#Trapper}\\_:\\v Ajoute le sort {Spell:512} à votre main.",
+    "en": "{#Trapper}: Adds the {Spell:512} spell to your hand.",
+    "es": "{#Trapper}: Añade el hechizo {Spell:512} a tu mano.",
+    "de": "{#Trapper}: Fügt den Zauber {Spell:512} deiner Hand hinzu.",
+    "pt": "{#Trapper}: Adiciona o feitiço {Spell:512} à sua mão."
   }
 }

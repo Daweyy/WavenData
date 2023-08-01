@@ -89,10 +89,33 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.640.pt"
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            91,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "PEAT",
@@ -108,10 +131,10 @@
     "pt": "Página 3 do Grimório das Rochas"
   },
   "description": {
-    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nDéclenche {peat:ParameterizedEffectExecution.640.pt}.",
-    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTriggers {peat:ParameterizedEffectExecution.640.pt}.",
-    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nActiva {peat:ParameterizedEffectExecution.640.pt}.",
-    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nLöst {peat:ParameterizedEffectExecution.640.pt} aus.",
-    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nAciona {peat:ParameterizedEffectExecution.640.pt}."
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nDéclenche {peat:pt}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTriggers {peat:pt}.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nActiva {peat:pt}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nLöst {peat:pt} aus.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nAciona {peat:pt}."
   }
 }

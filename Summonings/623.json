@@ -10,8 +10,8 @@
   },
   "m_Name": "623",
   "m_id": 623,
-  "m_displayName": "EQUIPMENT - PIN - COCHON - Monarque Cochon",
-  "m_availability": 2,
+  "m_displayName": "EQUIPMENT - PIN - COCHON - Monarque 1",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -913212432,
     "b": -176281212,
@@ -41,9 +41,9 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 7681,
       "skinIds": [
-        1
+        7681
       ]
     },
     "precomputedData": {
@@ -51,7 +51,17 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "dcc",
+          "value": 1000
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "a",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "b",
           "value": 1
         }
       ],
@@ -91,7 +101,7 @@
     },
     "actionCriticalBonus": {
       "type": "ConstIntegerValue",
-      "referenceId": null,
+      "referenceId": "dcc",
       "value": 1000
     },
     "customActionTarget": null,
@@ -110,21 +120,21 @@
     "growInto": null
   },
   "name": {
-    "fr": "Monarque Cochon",
+    "fr": "Groin d'Acier",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "Lorsque vous jouez un sort applique l’état de l’élément correspondant au monarque.\n\\---\nLorsque Astral\\_<sprite name=\"astral\"> est appliqué le consomme  {value:a,+}\\_{aura:76,value:a}\n\\---\nLes dégâts critiques sont augmentés de 100%",
+    "fr": "{%FightTurnStarted} {value:b,+}\\_{aura:76,value:a}.\n\\---\nQuand il est ciblé par un <b>SORT ÉLÉMENTAIRE</b>\\_:\\v Applique l'état du même élément.\n\\---\nQuand {%astral} est appliqué\\_:\\v {value:a,+}\\_{aura:76,value:a} et consomme l'{%ELEMENTARY_STATE}.\n\\---\n{value:dcc,permil,+} aux <b>DÉGÂTS</b> de {%CRITICAL_HIT,plural:one}.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "championName": {
-    "fr": "Monarque Cochon",
+    "fr": "Groin d'Acier",
     "en": "",
     "es": "",
     "de": "",

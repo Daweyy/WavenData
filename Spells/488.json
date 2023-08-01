@@ -43,7 +43,7 @@
     "unlockableSkillIds": [
       726,
       339,
-      452041
+      2186
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -121,7 +121,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 21
+            "value": 16
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -134,7 +134,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 59125,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "d1",
@@ -154,11 +154,11 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmgExplosion",
+          "referenceId": "ex",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 8
+            "value": 11
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -169,7 +169,17 @@
             88,
             25
           ],
-          "skillBuffs": [],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
           "from": {
             "type": "CasterSelector"
           },

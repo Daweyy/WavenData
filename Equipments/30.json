@@ -11,7 +11,7 @@
   "m_Name": "30",
   "m_id": 30,
   "m_displayName": "PIN - CRAQUELEUR - Broche Rocheuse",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -109998299,
     "b": -441784732,
@@ -27,17 +27,17 @@
     "e": 533955336
   },
   "m_i18nBgDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -109998299,
+    "b": -441784732,
+    "c": 2139391419,
+    "d": -1650144992,
+    "e": -1279009083
   },
   "m_illustration": {
-    "assetGuid": "dbe33df39f1eee54cb0de8d2bd352a37"
+    "assetGuid": "3b453649a228ea949b0614d94191c77a"
   },
   "m_illustrationBig": {
-    "assetGuid": "bf781edd72b96fb4bbc416b11356c5f9"
+    "assetGuid": "3b453649a228ea949b0614d94191c77a"
   },
   "m_affinity": 0,
   "m_elementaryStates": 1,
@@ -57,12 +57,22 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
-          "value": 30
+          "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percent1",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1607
+        },
         {
           "type": 4,
           "id": 169
@@ -83,14 +93,14 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightStarted}\nInvoque la {Summoning:169}\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Craqueleurs\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
+    "fr": "{%FightStarted}\nInvoque {Summoning:169} dans l'équipe adverse.\n\\---\n{value:pc,percent,+} à la {%pvmax} et {value:percent1,percent,+} à l'{%AT} des {%Family_Craqueleur_Name,plural:other}.\n\\---\n<rem>Valable uniquement sur l'{WorldZone:18}.</rem>",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "bgDescription": {
-    "fr": "",
+    "fr": "{%empty}",
     "en": "",
     "es": "",
     "de": "",

@@ -89,10 +89,32 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.182.ex"
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "EXPLOSION",
@@ -108,10 +130,10 @@
     "pt": "Página 3 do Grimório das Chamas"
   },
   "description": {
-    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nVotre héros déclenche {explosion:ParameterizedEffectExecution.182.ex}.",
-    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nYour hero triggers {explosion:ParameterizedEffectExecution.182.ex}.",
-    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTu héroe activa {explosion:ParameterizedEffectExecution.182.ex}.",
-    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nDein Held löst {explosion:ParameterizedEffectExecution.182.ex} aus.",
-    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nSeu herói aciona {explosion:ParameterizedEffectExecution.182.ex}."
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nVotre héros déclenche {explosion:ex}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nYour hero triggers {explosion:ex}.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTu héroe activa {explosion:ex}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nDein Held löst {explosion:ex} aus.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nSeu herói aciona {explosion:ex}."
   }
 }

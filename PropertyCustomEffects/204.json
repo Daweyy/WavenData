@@ -1,0 +1,98 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 2925596167494062000
+  },
+  "m_Name": "204",
+  "m_id": 204,
+  "m_displayName": "AirBuff",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1015259121,
+    "b": 1569817076,
+    "c": -1176561127,
+    "d": 33482533,
+    "e": 2061255780
+  },
+  "m_i18nDescriptionId": {
+    "a": -1015259121,
+    "b": 1569817076,
+    "c": -1176561127,
+    "d": 33482533,
+    "e": 10803076
+  },
+  "m_illustration": {
+    "assetGuid": ""
+  },
+  "m_attachableFxReference": {
+    "assetGuid": ""
+  },
+  "values": {
+    "type": "PropertyCustomEffectDefinition",
+    "id": 204,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "a",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 25
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+                },
+                "skillId": 1605
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "b",
+                "value": 25
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "b",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

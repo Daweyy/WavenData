@@ -66,24 +66,14 @@
       "heroSkillPointsCost": 10,
       "bannedInPvp": false
     },
-    "gaugeToModifyOnSpellPlay": [
-      {
-        "type": "GaugeValue",
-        "element": 57,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
-        }
-      }
-    ],
+    "gaugeToModifyOnSpellPlay": [],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 6
+          "value": 2
         }
       }
     ],
@@ -110,8 +100,8 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "pc",
-          "value": 30
+          "referenceId": "g",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -127,7 +117,7 @@
     "pt": "Parede de Miras Piven"
   },
   "description": {
-    "fr": "Inflige {ATvalue:pc,percent} autour\\_<sprite name=\"cell_around\"> de votre héros par {%AURA_SIGHT} qu'il possède.",
+    "fr": "Tous les gains d'{%AURA_SIGHT,plural:other} de votre héros sont augmentés de {value:g} jusqu'à la fin du tour.",
     "en": "Inflicts {ATvalue:pc,percent} around\\_<sprite name=\"cell_around\"> your hero for each {%AURA_SIGHT} they have.",
     "es": "Inflige un {ATvalue:pc,percent} alrededor\\_<sprite name=\"cell_around\"> de tu héroe por {%AURA_SIGHT} que tenga.",
     "de": "Verursacht {ATvalue:pc,percent} in der Nähe\\_<sprite name=\"cell_around\"> deines Helden pro {%AURA_SIGHT}, die er besitzt.",

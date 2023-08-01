@@ -10,7 +10,7 @@
   },
   "m_Name": "454",
   "m_id": 454,
-  "m_displayName": "WEAPON - CRA - SHIRU SHADEN - Recharge Shaden",
+  "m_displayName": "WEAPON - CRA - SHIRU SHADEN - Alignement Shaden",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": -1746880039,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 454,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,13 +42,8 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "t",
-          "value": 3
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "spell",
-          "value": 1
+          "referenceId": "s",
+          "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
@@ -56,17 +52,17 @@
     }
   },
   "name": {
-    "fr": "Recharge Shaden",
+    "fr": "Alignement Shaden",
     "en": "Shaden Recharge",
     "es": "Recarga Shaden",
     "de": "Shaden-Aufladung",
     "pt": "Recarga Shaden"
   },
   "description": {
-    "fr": "Lorsque votre héros se téléporte\\_: Piochez {SPELLCOUNTvalue:spell}.\n\\---\n<rem>Limité à {value:t} fois par tour.</i></rem>",
-    "en": "When your hero teleports: Draw {SPELLCOUNTvalue:spell}.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</i></rem>",
-    "es": "Cuando tu héroe se teletransporta: Sacas {SPELLCOUNTvalue:spell}.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</i></rem>",
-    "de": "Wenn dein Held sich teleportiert: Zieht {SPELLCOUNTvalue:spell}.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</i></rem>",
-    "pt": "Quando seu herói se teletransporta: Compre {SPELLCOUNTvalue:spell}.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</i></rem>"
+    "fr": "Lorsque votre héros se téléporte\\_: Inflige {value:s,percent} de sa {%PVMAX} aux adversaires alignés avec lui.",
+    "en": "When your hero teleports: Inflicts {value:s,percent} of their {%PVMAX} on opponents in line with them.",
+    "es": "Cuando tu héroe se teletransporta: Inflige un {value:s,percent} de su {%PVMAX} a los adversarios en línea con él.",
+    "de": "Wenn dein Held sich teleportiert: Fügt Gegnern, die mit ihm in einer Reihe stehen, {value:s,percent} seiner {%PVMAX} als Schaden zu.",
+    "pt": "Quando seu herói se teletransporta: Inflige {value:s,percent} da sua {%PVMAX} aos adversários alinhados a ele."
   }
 }

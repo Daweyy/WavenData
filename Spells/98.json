@@ -11,7 +11,7 @@
   "m_Name": "98",
   "m_id": 98,
   "m_displayName": "SACRIEUR - ARME - TONFAVIK - TERRE - Tonfa Percutant",
-  "m_availability": 3,
+  "m_availability": 2,
   "m_i18nNameId": {
     "a": 1615398437,
     "b": -1107052684,
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      590431,
-      590619,
-      590804
+      55,
+      1828,
+      1827
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -169,7 +169,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 98054,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "percentSkill",
@@ -206,7 +206,41 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 98054,
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            91,
+            48
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "",

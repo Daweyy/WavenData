@@ -32,17 +32,22 @@
   "values": {
     "type": "SkillDefinition",
     "id": 154608,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": true,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "Weapon.967.p"
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "vae",
+          "value": 20
+        }
       ],
-      "hasEffects": false,
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
       "keywordReferences": [
         "SUPPORT"
       ]
@@ -56,10 +61,10 @@
     "pt": "Domínio Kokoro"
   },
   "description": {
-    "fr": "Lorsque vous déclenchez {#SUPPORT}\\_: Votre héros gagne {value:Weapon.967.p,percent} de son {%AT} en {%AR} en plus.",
-    "en": "When you trigger {#SUPPORT}: Your hero gains {value:Weapon.967.p,percent} of their {%AT} as extra {%AR}.",
-    "es": "Cuando activas {#SUPPORT}: Tu héroe gana un {value:Weapon.967.p,percent} de su {%AT} en {%AR} adicional.",
-    "de": "Wenn du {#SUPPORT} auslöst: Dein Held erhält zusätzlich {value:Weapon.967.p,percent} seiner {%AT} als {%AR}.",
-    "pt": "Ao acionar {#SUPPORT}: Seu herói ganha mais {value:Weapon.967.p,percent} do seu {%AT} em {%AR}."
+    "fr": "Lorsque vous déclenchez {#SUPPORT}\\_: Tous les alliés gagnent {value:vae,percent} de l'{%AT} de votre héros en {%AR}.",
+    "en": "When you trigger {#SUPPORT}: Your entire team gains {value:vae,percent} of your hero's {%AT} as {%AR}.",
+    "es": "Cuando activas {#SUPPORT}: Todo tu equipo gana un {value:vae,percent} del {%AT} de tu héroe en {%AR}.",
+    "de": "Wenn du {#SUPPORT} auslöst: Dein gesamtes Team erhält {value:vae,percent} des {%AT}<b>S</b> deines Helden als {%AR}.",
+    "pt": "Ao acionar {#SUPPORT}: Toda a sua equipe ganha {value:vae,percent} do {%AT} do seu herói em {%AR}."
   }
 }

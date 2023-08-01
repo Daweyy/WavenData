@@ -10,8 +10,8 @@
   },
   "m_Name": "570",
   "m_id": 570,
-  "m_displayName": "EQUIPMENT - PIN - TOFU - Tofu d'Elite",
-  "m_availability": 2,
+  "m_displayName": "EQUIPMENT - PIN - TOFU - Elite",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 1651340197,
     "b": 230720820,
@@ -41,18 +41,19 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 9329,
+      "defaultSkinId": 7788,
       "skinIds": [
-        9329
+        7788
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "LinearLevelOnlyBasedDynamicValue",
           "referenceId": "v",
-          "value": 400
+          "baseValue": 0,
+          "factor": 5
         },
         {
           "type": "ConstIntegerValue",
@@ -62,7 +63,9 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "COLLISION"
+      ]
     },
     "families": [
       37
@@ -106,21 +109,21 @@
     "growInto": null
   },
   "name": {
-    "fr": "Tofu d'Elite",
+    "fr": "Le Butor Jaune",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "Lorsqu’ils attaquent, les TOFUS repoussent leur cible de 2 cases.\n-\nLes dégâts de COLLISION des TOFUS sont quintuplés. ",
+    "fr": "Lorsqu’un {%Family_Tofu_Name,plural:one} {%attack} Repousse la cible de {cell:c}.\n\\---\n{value:v,+,percent} aux <b>DÉGÂTS</b> de {#COLLISION} des {%Family_Tofu_Name,plural:other}.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "championName": {
-    "fr": "Tofu d'Elite",
+    "fr": "Le Butor Jaune",
     "en": "",
     "es": "",
     "de": "",

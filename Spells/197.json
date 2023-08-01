@@ -41,8 +41,8 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      216,
-      569540,
+      2413,
+      1899,
       498
     ],
     "upgradeRuleId": 247,
@@ -124,7 +124,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 88900,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "percentSkill",
@@ -143,14 +143,45 @@
           "value": 30
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "auraGain",
           "value": 1
         }
       ],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.782.bc"
-      ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "BOUNCE"
@@ -165,10 +196,10 @@
     "pt": "Desencadeamento"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {bounce:ParameterizedEffectExecution.782.bc} si la cible est <b>ÉVENTÉE<b>\\_<sprite name=\"ventilated\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {bounce:ParameterizedEffectExecution.782.bc} if the target is <b>VENTILATED<b>\\_<sprite name=\"ventilated\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {bounce:ParameterizedEffectExecution.782.bc} si el objetivo está <b>AIREADO<b>\\_<sprite name=\"ventilated\">.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {bounce:ParameterizedEffectExecution.782.bc} aus, wenn das Ziel <b>WINDIG<b>\\_<sprite name=\"ventilated\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {bounce:ParameterizedEffectExecution.782.bc} se o alvo estiver <b>AERADO<b>\\_<sprite name=\"ventilated\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {bounce:bc} si la cible est <b>ÉVENTÉE<b>\\_<sprite name=\"ventilated\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {bounce:bc} if the target is <b>VENTILATED<b>\\_<sprite name=\"ventilated\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {bounce:bc} si el objetivo está <b>AIREADO<b>\\_<sprite name=\"ventilated\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {bounce:bc} aus, wenn das Ziel <b>WINDIG<b>\\_<sprite name=\"ventilated\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {bounce:bc} se o alvo estiver <b>AERADO<b>\\_<sprite name=\"ventilated\">."
   }
 }

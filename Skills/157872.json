@@ -10,7 +10,7 @@
   },
   "m_Name": "157872",
   "m_id": 157872,
-  "m_displayName": "WEAPON - SRAM - LAME OURAI - Drain Ourai",
+  "m_displayName": "WEAPON - SRAM - LAME OURAI - Survitalité Ourai",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": -111090329,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 157872,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,29 +42,27 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "d",
-          "value": 50
+          "referenceId": "pc",
+          "value": 3
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        "DRAIN"
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "Drain Ouraï",
+    "fr": "Survitalité Ouraï",
     "en": "Amurai Drain",
     "es": "Drenaje Murái",
     "de": "Urai-Entzug",
     "pt": "Dreno Ourai"
   },
   "description": {
-    "fr": "Lorsqu’un de vos {%KEYWORD.TRAP.NAME,plural:other} est déclenché\\_:\\v {value:d,+,percent} de {#Drain} à votre héros jusqu’à la fin de votre tour.",
-    "en": "When one of your {%KEYWORD.TRAP.NAME,plural:other} is triggered:\\v {value:d,+,percent} {#Drain} to your hero until the end of your turn.",
-    "es": "Cuando se activa una de tus {%KEYWORD.TRAP.NAME,plural:other}: \\v {value:d,+,percent} de {#Drain} a tu héroe hasta el final de tu turno.",
-    "de": "Wenn eine\\_deiner {%KEYWORD.TRAP.NAME,plural:other} ausgelöst wird:\\v {value:d,+,percent} {#Drain} für deinen Helden bis zum Ende der Runde.",
-    "pt": "Quando uma das suas {%KEYWORD.TRAP.NAME,plural:other} é acionada:\\v {value:d,+,percent} de {#Drain} ao seu herói até o fim do seu turno."
+    "fr": "Lorsque votre héros est soigné : Inflige {value:pc,percent} de sa {%PV} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
+    "en": "When your hero is healed: Inflicts {value:pc,percent} of their <b>CURRENT HEALTH POINTS</b> on adjacent\\_<sprite name=\"cell_cross\"> enemies.",
+    "es": "Cuando tu héroe es curado: Inflige un {value:pc,percent} de sus <b>PUNTOS DE VIDA ACTUALES</b> a los enemigos adyacentes\\_<sprite name=\"cell_cross\">",
+    "de": "Wenn dein Held geheilt wird: Fügt angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {value:pc,percent} seiner <b>AKTUELLEN LEBENSPUNKTE</b> als Schaden zu.",
+    "pt": "Quando seu herói é curado: Inflige {value:pc,percent} de seus <b>PONTOS DE VIDA ATUAIS</b> aos inimigos adjacentes\\_<sprite name=\"cell_cross\">"
   }
 }

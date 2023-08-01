@@ -10,7 +10,7 @@
   },
   "m_Name": "528",
   "m_id": 528,
-  "m_displayName": "SPELL - Generic - Jauge Air",
+  "m_displayName": "SPELL - GENERIC - CRITICAL - Jauge Air",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 719826024,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 528,
+    "skillTier": 2,
     "skillUsageType": 0,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -39,7 +40,9 @@
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "Spell.231259.jaugeGain"
+      ],
       "hasEffects": false,
       "keywordReferences": [
         "CRITICAL"
@@ -54,7 +57,7 @@
     "pt": "{%CRITICAL_SKILL}"
   },
   "description": {
-    "fr": "{#CRITICAL}\\_: +1 jauge {%AIR}.",
+    "fr": "{#critical}\\_: {AIRGAUGEvalue:Spell.231259.jaugeGain,+}.",
     "en": "{#CRITICAL}: +1 {%AIR} Gauge.",
     "es": "{#CRITICAL}: +1 indicador de {%AIR}.",
     "de": "{#CRITICAL}: +1\\_{%AIR}-Statusanzeige.",

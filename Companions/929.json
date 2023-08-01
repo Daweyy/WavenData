@@ -10,8 +10,8 @@
   },
   "m_Name": "929",
   "m_id": 929,
-  "m_displayName": "NECROME - AFFAMÉ LE FAMÉLIQUE ",
-  "m_availability": 2,
+  "m_displayName": "NECROMIQUE - Affamé Le Famélique",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 1027086787,
     "b": -1686661100,
@@ -34,9 +34,9 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 8350,
       "skinIds": [
-        1
+        8350
       ]
     },
     "precomputedData": {
@@ -44,7 +44,11 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "STREAMOFSOULS",
+        "NECROMIQUE_HEROS"
+      ]
     },
     "families": [
       68
@@ -53,7 +57,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "value": 160
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -63,7 +67,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 20
+      "value": 35
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -82,7 +86,14 @@
     "spells": [],
     "merchantCosts": [],
     "premiumItem": false,
-    "unlockableSkillIds": [],
+    "unlockableSkillIds": [
+      150,
+      167,
+      144,
+      126,
+      122,
+      124
+    ],
     "rarity": 2,
     "equipableByPlayers": true,
     "upgradeRuleId": 407,
@@ -103,17 +114,73 @@
         "filters": [
           {
             "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
-      "casterHeroRange": null,
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
     "cost": [
       {
         "type": "ElementPointsCost",
-        "element": 11,
+        "element": 14,
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
@@ -125,14 +192,14 @@
     "gatheringAbilities": []
   },
   "name": {
-    "fr": "Pinpin Necrome",
+    "fr": "Affamé Le Famélique",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "ATTAQUE : Déclenche FLUX DES ÂMES si la cible est ÉVENTÉE. \nLes ÂMES de FLUX DES ÂMES repousse d’une case aléatoire.\nHÉROS NÉCROME\n",
+    "fr": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%Attack} Déclenche {#STREAMOFSOULS} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.\n\\---\nVos {#STREAMOFSOULS} repoussent d’une case dans une direction aléatoire.",
     "en": "",
     "es": "",
     "de": "",

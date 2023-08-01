@@ -11,7 +11,7 @@
   "m_Name": "187",
   "m_id": 187,
   "m_displayName": "PIN - BOUFTOU - Licrone Corrompue",
-  "m_availability": 2,
+  "m_availability": 0,
   "m_i18nNameId": {
     "a": -747210702,
     "b": -145443644,
@@ -48,8 +48,8 @@
     "premiumItem": false,
     "rarity": 4,
     "unlockableSkillIds": [],
-    "equipableByPlayers": true,
-    "upgradeRuleId": 525,
+    "equipableByPlayers": false,
+    "upgradeRuleId": null,
     "useCharges": true,
     "precomputedData": {
       "type": "PrecomputedData",
@@ -57,7 +57,12 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
-          "value": 30
+          "value": 40
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percent1",
+          "value": 20
         }
       ],
       "externalDynamicValueReferences": [],
@@ -87,7 +92,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightStarted}\nInvoque la {Summoning:263}\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Bouftous\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
+    "fr": "{%FightStarted}\nInvoque {Summoning:263} dans l'équipe adverse.\n\\---\n{value:pc,percent,+} à la {%pvmax} et {value:percent1,percent,+} à l'{%AT} des {%Family_Bouftou_Name,plural:other}.\n\\---\n<rem>Conditions\\_: Uniquement à 2 ou 3 joueurs. Être sur l'{WorldZone:4}.</rem>",
     "en": "",
     "es": "",
     "de": "",

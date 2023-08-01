@@ -10,7 +10,7 @@
   },
   "m_Name": "275",
   "m_id": 275,
-  "m_displayName": "XELOR - ARME - PRAMIUM - ETHER - Onde Pramium",
+  "m_displayName": "XELOR - ARME - PRAMIUM - ETHER - Énergie Pramium",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 1468168693,
@@ -82,48 +82,16 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "AreaFromTargetsSelector",
-        "originSelector": {
-          "type": "CasterHeroSelector"
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 0
-        },
-        "targets": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllMechanismsSelector"
-          },
-          "filters": [
-            {
-              "type": "OwnerFilter",
-              "isIdentical": true,
-              "reference": {
-                "type": "CasterSelector"
-              }
-            },
-            {
-              "type": "FamilyFilter",
-              "condition": 1,
-              "families": [
-                20
-              ]
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
             }
-          ]
-        },
-        "areaOfEffect": {
-          "type": "SquareAreaOfEffectSelector",
-          "originSelector": {
-            "type": "EngineDeterminedHolder"
-          },
-          "size": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 1
           }
-        }
+        ]
       }
     },
     "spellEffectData": [
@@ -146,14 +114,14 @@
     }
   },
   "name": {
-    "fr": "Onde Pramium",
+    "fr": "Énergie Pramium",
     "en": "Pramium Wave",
     "es": "Onda Prámium",
     "de": "Pramium-Welle",
     "pt": "Onda Pramium"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> de vos <b>SINISTROS</b>.\n",
+    "fr": "La cible rejoue son tour.",
     "en": "Inflicts your hero's {%AT} around\\_<sprite name=\"cell_around\"> your <b>SINISTROS</b>.\n",
     "es": "Inflige el {%AT} de tu héroe alrededor\\_<sprite name=\"cell_around\"> de tus <b>SINISTROS</b>.\n",
     "de": "Verursacht den {%AT} deines Helden in der Nähe\\_<sprite name=\"cell_around\"> deiner <b>SINISTROS</b>.\n",

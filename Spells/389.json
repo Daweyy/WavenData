@@ -11,7 +11,7 @@
   "m_Name": "389",
   "m_id": 389,
   "m_displayName": "NECROME - WATER - Tempête Nécromique",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -1464938168,
     "b": 111500820,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "51039daab221f3440b7973658933b80f"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -42,8 +42,8 @@
     "rarity": 0,
     "unlockableSkillIds": [
       173,
-      795731,
-      796077
+      342,
+      2445
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -119,19 +119,61 @@
         "filters": []
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "99785878f4b6d2c42b5cdb6e1efb5e0d",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "value": 16
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "NECROMAGE",
+        "AURA",
+        "STREAMOFSOULS"
+      ]
     }
   },
   "name": {
@@ -142,7 +184,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "Inflige {value:d} dégâts. Déclenche FLUX DES ÂMES par aura que possède votre héros.\nNÉCROMAGE\n",
+    "fr": "Inflige {magicalDamage:d}. \nDéclenche un {#STREAMOFSOULS} par {#AURA} que possède votre héros.\n\\---\n{#NECROMAGE}",
     "en": "",
     "es": "",
     "de": "",

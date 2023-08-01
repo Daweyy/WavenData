@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 145795,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,8 +42,8 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 10
+          "referenceId": "per",
+          "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
@@ -58,10 +59,10 @@
     "pt": "Potência Tako"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Soigne votre héros de {value:v,percent} de son {%AT} par {%PA} non consommés.",
-    "en": "{%FightTurnEnded} Heals your hero with {value:v,percent} of their {%AT} for each unconsumed {%PA}.",
-    "es": "{%FightTurnEnded}Cura a tu héroe un {value:v,percent} de su {%AT} por {%PA} no consumidos.",
-    "de": "{%FightTurnEnded} Heilt deinen Helden um {value:v,percent} seines {%AT} pro nicht verbrauchten {%PA}.",
-    "pt": "{%FightTurnEnded} Cura seu herói em {value:v,percent} do seu {%AT} por {%PA} não utilizado."
+    "fr": "Lorsqu'un de vos personnage <b>ATTAQUE</b>\\_:\\v Inflige {value:per,percent,+} de <b>DÉGÂTS</b> par {%PA} restant.",
+    "en": "When one of your characters performs an {%Attack} Does {value:per,percent,+} extra <b>DAMAGE</b> per playable {%PA}.",
+    "es": "Cuando uno de tus personajes inflige un {%Attack} Causa {value:per,percent,+} de <b>DAÑO</b> adicional por {%PA} jugable.",
+    "de": "Führt einer deiner Charaktere einen {%Attack} aus, verursacht er {value:per,percent,+} zusätzlichen <b>SCHADEN</b> pro einsetzbarem {%PA}.",
+    "pt": "Quando um de seus personagens {%Attack} Inflige {value:per,percent,+} de <b>DANOS</b> adicionais por {%PA} jogável."
   }
 }

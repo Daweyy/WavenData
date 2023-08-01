@@ -11,7 +11,7 @@
   "m_Name": "645",
   "m_id": 645,
   "m_displayName": "NATION - ASTRUB - INTRO 04",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 1771588221,
     "b": 1619798484,
@@ -47,7 +47,38 @@
         "difficulty": 1,
         "monsterLevel": 2,
         "rewards": null,
-        "oneTimeRewards": null,
+        "oneTimeRewards": {
+          "type": "SerializedDropTableDefinitionProvider",
+          "dropTable": {
+            "type": "DropTable",
+            "entries": [
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 58,
+                    "value": 611
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 1
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "availabilityValue": 3
+        },
         "forcedDestinationOnExit": null
       }
     ]

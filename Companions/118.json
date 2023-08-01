@@ -10,8 +10,8 @@
   },
   "m_Name": "118",
   "m_id": 118,
-  "m_displayName": "NECROME - Toross Roi des Nécromes ",
-  "m_availability": 2,
+  "m_displayName": "NECROMIQUE - Toross, Roi des Necromes",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -1459202366,
     "b": -1815037420,
@@ -50,7 +50,11 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "STREAMOFSOULS",
+        "NECROMIQUE_HEROS"
+      ]
     },
     "families": [
       68
@@ -88,7 +92,14 @@
     "spells": [],
     "merchantCosts": [],
     "premiumItem": false,
-    "unlockableSkillIds": [],
+    "unlockableSkillIds": [
+      21,
+      14,
+      734,
+      6,
+      3,
+      160
+    ],
     "rarity": 2,
     "equipableByPlayers": true,
     "upgradeRuleId": 407,
@@ -109,10 +120,66 @@
         "filters": [
           {
             "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
-      "casterHeroRange": null,
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
@@ -159,14 +226,14 @@
     "gatheringAbilities": []
   },
   "name": {
-    "fr": "Toross Roi des Nécromes ",
+    "fr": "Toross, Roi des Necromes",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "ATTAQUE : Déclenche FLUX DES ÂMES. \nDEUIL : -1 jauge au coût de TOROSS.",
+    "fr": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%AT}\\_: Déclenche {#STREAMOFSOULS}.\n\\---\n{#DEUIL}\\_: {NEUTRALGAUGEvalue:x} au coût de ce compagnon.",
     "en": "",
     "es": "",
     "de": "",

@@ -11,7 +11,7 @@
   "m_Name": "32",
   "m_id": 32,
   "m_displayName": "NECROME - EARTH - Roche Nécrome",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -2006584270,
     "b": 31204916,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "b22e2e7788bf7c34db013f2c362d4144"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      791946,
-      794004,
-      794123
+      492,
+      385,
+      2681
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -89,35 +89,74 @@
         "filters": []
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "616e66fb4a7ee12439904bd78f7f2e6c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "value": 8
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "e",
-          "value": 5
+          "value": 4
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL"
+      ]
     }
   },
   "name": {
-    "fr": "Spell Necrom low earth",
+    "fr": "Roche Nécrome",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "Inflige {value:d}  dégâts.\nDEUIL : +{value:e}  POINTS D’ARMURE à votre héros.\n",
+    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}\\_: {ARvalue:e,+} à votre héros.",
     "en": "",
     "es": "",
     "de": "",

@@ -11,7 +11,7 @@
   "m_Name": "953",
   "m_id": 953,
   "m_displayName": "RING - BEGINNER - RARE - Anneau Siff",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 109768593,
     "b": 280541012,
@@ -48,19 +48,31 @@
     "premiumItem": false,
     "rarity": 1,
     "unlockableSkillIds": [
-      788708,
-      788741,
-      788755,
-      787327,
+      601,
+      593,
+      591,
+      658,
       250,
-      787463
+      653,
+      1969
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 274,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "h",
+          "value": -10
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -69,30 +81,6 @@
     "equipmentType": 1,
     "petSkins": null,
     "passiveModifiers": [
-      {
-        "type": "CaracBuffModifier",
-        "holder": 8,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 15
-        },
-        "caracIds": [
-          58
-        ]
-      },
-      {
-        "type": "CaracBuffModifier",
-        "holder": 8,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": -5
-        },
-        "caracIds": [
-          1
-        ]
-      },
       {
         "type": "CaracBuffModifier",
         "holder": 8,
@@ -117,7 +105,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%fightStarted} \n{value:p,percent,+} d'{%AT}\n{value:h,percent,+} de {%PV}",
     "en": "",
     "es": "",
     "de": "",

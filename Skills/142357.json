@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 142357,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -42,7 +43,12 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "Pc",
-          "value": 20
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
@@ -58,10 +64,10 @@
     "pt": "Reforço Expingarda"
   },
   "description": {
-    "fr": "Lorsque votre héros gagne une {%AURA_SIGHT}\\_:\\v Gagne {value:Pc,percent} de son {%AT} en {%AR}.",
-    "en": "When your hero gains a {%AURA_SIGHT}:\\v Gains {value:Pc,percent} of their {%AT} as {%AR}.",
-    "es": "Cuando tu héroe gana un {%AURA_SIGHT}:\\v Gana {value:Pc,percent} de su {%AT} en {%AR}.",
-    "de": "Wenn dein Held eine\\_{%AURA_SIGHT} erhält:\\vErhält {value:Pc,percent} seines {%AT} als {%AR}.",
-    "pt": "Quando seu herói ganha uma {%AURA_SIGHT}:\\v Ganha {value:Pc,percent} do seu {%AT} em {%AR}."
+    "fr": "Lorsque vous jouez un sort qui coûte {PAvalue:v} ou plus\\_: +1\\_{%AURA_SIGHT,plural:one} du même élément.\n\\---\n{value:Pc,+, percent} aux <b>DÉGÂTS</b> des {%AURA_SIGHT,plural:other} de votre héros.",
+    "en": "Your spells release an extra {%AURA_SIGHT}. \n{value:Pc,percent,+} to your {%AURA_SIGHT} <b>DAMAGE</b>.",
+    "es": "Tus hechizos liberan un {%AURA_SIGHT} adicional. \n{value:Pc,percent,+} a los <b>DAÑOS</b> de tus {%AURA_SIGHT}.",
+    "de": "Deine Zauber lösen eine zusätzliche {%AURA_SIGHT} aus. \n{value:Pc,percent,+} <b>SCHADEN</b> für deine {%AURA_SIGHT}.",
+    "pt": "Seus feitiços liberam uma {%AURA_SIGHT} adicional. \n{value:Pc,percent,+} aos <b>DANOS</b> das suas {%AURA_SIGHT}."
   }
 }

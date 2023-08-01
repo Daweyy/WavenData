@@ -32,13 +32,20 @@
   "values": {
     "type": "SkillDefinition",
     "id": 566,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "col",
+          "value": 25
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -54,10 +61,10 @@
     "pt": "Empurrão Orok"
   },
   "description": {
-    "fr": "Lorsque votre héros <b>CHARGE</b>\\_:\\v {#PUSH} la cible du nombre de cases parcourues.\n\\---\n{passiveModifiers}",
-    "en": "When your hero <b>CHARGES</b>:\\v {#PUSH} the target as many cells as were covered.\n\\---\n{passiveModifiers}",
-    "es": "Cuando tu héroe <b>CARGA</b>:\\v {#PUSH} al objetivo el número de casillas recorridas.\n\\---\n{passiveModifiers}",
-    "de": "Wenn dein Held <b>ANSTÜRMT</b>:\\v {#PUSH} das Ziel um die Anzahl der überquerten Felder zurück.\n\\---\n{passiveModifiers}",
-    "pt": "Quando seu herói usa <b>INVESTIDA</b>:\\v {#PUSH} o alvo pelo número de células percorridas.\n\\---\n{passiveModifiers}"
+    "fr": "Lorsque votre héros <b>CHARGE</b>\\_:\\v {#PUSH} la cible du nombre de cases parcourues.\n\\---\n{value:col,percent} de vos bonus d'{%AT} sont convertis en <b>DÉGÂTS</b> de <b>COLLISION</b>.",
+    "en": "When your hero <b>CHARGES</b>: \\v{#PUSH} the target as many cells as were covered.\n\\---\n{value:col,+,percent} to your <b>COLLISION</b> <b>DAMAGE</b>.",
+    "es": "Cuando tu héroe <b>CARGA</b>:\\v {#PUSH} al objetivo el número de casillas recorridas.\n\\---\n{value:col,+,percent} al <b>DAÑO</b> de tus <b>COLISIONES</b>.",
+    "de": "Wenn dein Held <b>ANSTÜRMT</b>:\\v Das Ziel wird um die Anzahl der überquerten Felder {#PUSH}.\n\\---\n{value:col,+,percent} auf den <b>SCHADEN</b> deiner <b>ZUSAMMENSTÖSSE</b>.",
+    "pt": "Quando seu herói usa <b>INVESTIDA</b>:\\v {#PUSH} o alvo pelo número de células percorridas.\n\\---\n{value:col,+,percent} aos <b>DANOS</b> de suas <b>COLISÕES</b>."
   }
 }

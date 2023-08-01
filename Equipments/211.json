@@ -10,7 +10,7 @@
   },
   "m_Name": "211",
   "m_id": 211,
-  "m_displayName": "RING - COMMON - Anneau limit",
+  "m_displayName": "RING - INFINITE - Anneau limit",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 1976845256,
@@ -46,28 +46,25 @@
     "id": 211,
     "merchantCosts": [],
     "premiumItem": false,
-    "rarity": 0,
+    "rarity": 4,
     "unlockableSkillIds": [
+      1605,
       307,
       626,
-      689978,
-      690124,
-      690529,
-      690554
+      1435,
+      1434,
+      1431,
+      2851
     ],
     "equipableByPlayers": true,
-    "upgradeRuleId": 594,
+    "upgradeRuleId": 525,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "x",
-          "value": -30
-        }
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "PropertyEffect.204.a"
       ],
-      "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
     },
@@ -82,10 +79,23 @@
           "type": "LinearLevelOnlyBasedDynamicValue",
           "referenceId": "",
           "baseValue": 0,
-          "factor": 5
+          "factor": 1
         },
         "caracIds": [
-          71
+          28
+        ]
+      },
+      {
+        "type": "CaracBuffModifier",
+        "holder": 0,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          1
         ]
       }
     ],
@@ -99,7 +109,7 @@
     "pt": "Anel Noulimit"
   },
   "description": {
-    "fr": "{%FightStarted} Votre héros perd {value:x,percent,abs} de sa {%PV}.",
+    "fr": "{%FightTurnStarted} Augmente les <b>DÉGÂTS</b> de vos sorts d'un élément aléatoire de {value:PropertyEffect.204.a,percent,+}.",
     "en": "{%FightStarted} Your hero loses {value:x,percent,abs} of their {%PV}.",
     "es": "{%FightStarted} Tu héroe pierde un {value:x,percent,abs} de su {%PV}.",
     "de": "{%FightStarted} Dein Held verliert {value:x,percent,abs} seiner {%PV}.",

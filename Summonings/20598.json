@@ -10,8 +10,8 @@
   },
   "m_Name": "20598",
   "m_id": 20598,
-  "m_displayName": "EQUIPMENT - PIN - VAMPYRE - Monarque Vampyre",
-  "m_availability": 2,
+  "m_displayName": "EQUIPMENT - PIN - VAMPYRE - Frankenstruk",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 447766110,
     "b": 1656275428,
@@ -41,24 +41,38 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 3561,
       "skinIds": [
-        1
+        3561
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 50
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DRAIN",
+        {
+          "type": 20,
+          "id": 82
+        },
+        {
+          "type": 20,
+          "id": 195
+        }
+      ]
     },
     "families": [
       55
     ],
-    "baseProperties": [
-      20
-    ],
+    "baseProperties": [],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -88,27 +102,30 @@
       "type": "ReferenceScalingFactor",
       "reference": 16
     },
-    "attackScale": null,
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
     "spells": [],
     "grade": 2,
     "growInto": null
   },
   "name": {
-    "fr": "Monarque Vampyre",
+    "fr": "Frankenstruk",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "DEBUT DE TOUR : S’il n’y a pas de VAMPYRE assoiffé autour : +50% AT et lui confère “Oxydation” jusqu’à la fin du tour. \n\nATTAQUE : si Oxydé soigne tous les alliés de 100% des dégâts infligés.",
+    "fr": "{%FightTurnStarted} Il gagne {ATvalue:v, +, percent} et {PropertyEffect:195} pour le tour s’il n’y a pas de {%Family_Vampyre_Name,plural:one} {PropertyEffect:82} autour\\_<sprite name=\"cell_around\">,\n\\---\n{%Attack} S'il est {PropertyEffect:195[oxydé]}, soigne les alliés des dégâts infligés.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "championName": {
-    "fr": "Monarque Vampyre",
+    "fr": "Frankenstruk",
     "en": "",
     "es": "",
     "de": "",

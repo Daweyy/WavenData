@@ -48,19 +48,26 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      637107,
-      636794,
+      1756,
+      1757,
       924,
       42,
-      635246,
-      763
+      1763,
+      763,
+      1785
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [
         "ParameterizedEffectExecution.978.bc"
       ],
@@ -97,11 +104,11 @@
     "pt": "Braçadeira Chuvosa"
   },
   "description": {
-    "fr": "{%ATTACK} Déclenche {rain:ParameterizedEffectExecution.978.bc}.",
-    "en": "{%ATTACK} Triggers {rain:ParameterizedEffectExecution.978.bc}.",
-    "es": "{%ATTACK} Activa {rain:ParameterizedEffectExecution.978.bc}.",
-    "de": "{%ATTACK} Löst {rain:ParameterizedEffectExecution.978.bc} aus.",
-    "pt": "{%ATTACK} Aciona {rain:ParameterizedEffectExecution.978.bc}."
+    "fr": "{%ATTACK} Déclenche {value:v} fois {rain:ParameterizedEffectExecution.978.bc}.",
+    "en": "{%ATTACK} Triggers {value:v} {rain:ParameterizedEffectExecution.978.bc}.",
+    "es": "{%ATTACK} Activa {value:v} {rain:ParameterizedEffectExecution.978.bc}.",
+    "de": "{%ATTACK} Löst {value:v}{rain:ParameterizedEffectExecution.978.bc} aus.",
+    "pt": "{%ATTACK} Aciona {value:v} {rain:ParameterizedEffectExecution.978.bc}."
   },
   "bgDescription": {
     "fr": "{%empty}",

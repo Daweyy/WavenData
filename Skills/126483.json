@@ -10,7 +10,7 @@
   },
   "m_Name": "126483",
   "m_id": 126483,
-  "m_displayName": "EQUIPMENT - MORT COMPA - Reduc 1 PA AIR",
+  "m_displayName": "EQUIPMENT - ARMOR - Armor gain",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": -275933143,
@@ -32,21 +32,35 @@
   "values": {
     "type": "SkillDefinition",
     "id": 126483,
+    "skillTier": 4,
     "skillUsageType": 2,
     "hideDescriptionInTooltip": false,
-    "passiveModifiers": [],
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "ar",
+          "value": 20
+        },
+        "caracIds": [
+          48
+        ]
+      }
+    ],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "pa",
-          "value": -1
+          "referenceId": "ar",
+          "value": 20
         }
       ],
       "externalDynamicValueReferences": [],
-      "hasEffects": true,
+      "hasEffects": false,
       "keywordReferences": []
     }
   },
@@ -58,7 +72,7 @@
     "pt": "{%NEW_SKILL}"
   },
   "description": {
-    "fr": "{%COMPANION_DEATH} {PAvalue:pa} au coût de votre prochain sort <b>AIR</b>.",
+    "fr": "{value:ar,percent,+} aux gains d'{%aR} de votre héros.",
     "en": "{%COMPANION_DEATH} {PAvalue:pa} to the cost of your next <b>AIR</b> spell.",
     "es": "{%COMPANION_DEATH} {PAvalue:pa} al coste de tu próximo hechizo de <b>AIRE</b>.",
     "de": "{%COMPANION_DEATH} {PAvalue:pa} auf die Kosten deines nächsten <b>LUFTZAUBERS</b>.",

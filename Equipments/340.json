@@ -11,7 +11,7 @@
   "m_Name": "340",
   "m_id": 340,
   "m_displayName": "PIN - BOUFTOU - Broche Laineuse",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 125982345,
     "b": -1582153548,
@@ -27,17 +27,17 @@
     "e": 392540872
   },
   "m_i18nBgDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 125982345,
+    "b": -1582153548,
+    "c": 1413571099,
+    "d": 975238393,
+    "e": 1264271894
   },
   "m_illustration": {
-    "assetGuid": "dbe33df39f1eee54cb0de8d2bd352a37"
+    "assetGuid": "9c7b564b7833035479f5e0a689ec7bfe"
   },
   "m_illustrationBig": {
-    "assetGuid": "bf781edd72b96fb4bbc416b11356c5f9"
+    "assetGuid": "9c7b564b7833035479f5e0a689ec7bfe"
   },
   "m_affinity": 0,
   "m_elementaryStates": 1,
@@ -57,7 +57,12 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
-          "value": 30
+          "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percent1",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
@@ -83,14 +88,14 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightStarted}\nInvoque la {Summoning:847}\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Bouftous\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
+    "fr": "{%FightStarted}\nInvoque {Summoning:847} dans l'équipe adverse.\n\\---\n{value:pc,percent,+} à la {%pvmax} et {value:percent1,percent,+} à l'{%AT} des {%Family_Bouftou_Name,plural:other}.\n\\---\n<rem>Valable uniquement sur l'{WorldZone:4}.</rem>",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "bgDescription": {
-    "fr": "",
+    "fr": "{%empty}",
     "en": "",
     "es": "",
     "de": "",

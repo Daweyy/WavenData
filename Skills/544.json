@@ -32,17 +32,22 @@
   "values": {
     "type": "SkillDefinition",
     "id": 544,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": true,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "Weapon.919.s"
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 15
+        }
       ],
-      "hasEffects": false,
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
       "keywordReferences": [
         {
           "type": 19,
@@ -59,10 +64,10 @@
     "pt": "Mestre Justalâmina"
   },
   "description": {
-    "fr": "Lorsque vous déclenchez {NamedEffect:455}\\_: Votre héros gagne {value:Weapon.919.s, percent} de son {%AT} en {%AR} en plus.",
-    "en": "When you trigger {NamedEffect:455}: Your hero gains {value:Weapon.919.s, percent} of their {%AT} as extra {%AR}.",
-    "es": "Cuando activas {NamedEffect:455}: Tu héroe gana un {value:Weapon.919.s, percent} de su {%AT} en {%AR} adicionalmente.",
-    "de": "Wenn du {NamedEffect:455} auslöst: Dein Held erhält zusätzlich {value:Weapon.919.s, percent} seiner {%AT} als {%AR}.",
-    "pt": "Ao acionar {NamedEffect:455}: Seu herói ganha mais {value:Weapon.919.s, percent} do seu {%AT} em {%AR}."
+    "fr": "Lorsque vous déclenchez {NamedEffect:455}\\_: Votre héros gagne {value:s, percent} de son {%AT} en {%AR} par adversaire autour <sprite name=\"cell_around\"> de lui.",
+    "en": "When you trigger {NamedEffect:455}: Your hero gains {value:s, percent} of their {%AT} as {%AR} per opponent around <sprite name=\"cell_around\"> them.",
+    "es": "Cuando activas {NamedEffect:455}: Tu héroe gana un {value:s, percent} de su {%AT} en {%AR} por adversario a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Wenn du {NamedEffect:455} auslöst: Dein Held erhält {value:s, percent} seines {%AT}<b>S</b> pro an ihn angrenzenden\\_<sprite name=\"cell_around\"> Gegner als {%AR}.",
+    "pt": "Ao acionar {NamedEffect:455}: Seu herói ganha {value:s, percent} de seu {%AT} em {%AR} por adversário em\\_volta <sprite name=\"cell_around\"> dele."
   }
 }

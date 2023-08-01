@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      196079,
-      220933,
-      417323
+      2664,
+      2631,
+      2271
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -133,7 +133,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 212,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "percentSkill",
@@ -153,11 +153,11 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmgExplosion",
+          "referenceId": "ex",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 13
+            "value": 11
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -165,9 +165,20 @@
           },
           "buffs": [
             51,
-            88
+            88,
+            25
           ],
-          "skillBuffs": [],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
           "from": {
             "type": "CasterSelector"
           },
@@ -189,10 +200,10 @@
     "pt": "Estocada Detonante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {explosion:dmgExplosion} autour<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {explosion:dmgExplosion} around\\_<sprite name=\"cell_around\"/> the target\\v if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {explosion:dmgExplosion} alrededor<sprite name=\"cell_around\"/> del objetivo\\v si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {explosion:dmgExplosion} in der Nähe\\_<sprite name=\"cell_around\"/> des Ziels aus,\\v wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {explosion:dmgExplosion} em\\_volta\\_<sprite name=\"cell_around\"/> do alvo\\v se ele estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {explosion:ex} autour<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {explosion:ex} around\\_<sprite name=\"cell_around\"/> the target \\vif the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {explosion:ex} alrededor<sprite name=\"cell_around\"/> del objetivo\\v si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {explosion:ex} rings um\\_<sprite name=\"cell_around\"/> das Ziel aus,\\v wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {explosion:ex} em\\_volta\\_<sprite name=\"cell_around\"/> do alvo\\v se ele estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
   }
 }

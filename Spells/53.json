@@ -11,7 +11,7 @@
   "m_Name": "53",
   "m_id": 53,
   "m_displayName": "NECROME - AIR - Repousse Nécromique",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -2054990155,
     "b": -317496812,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "653673c3e46d92c47bc4ed2939e789ca"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      791015,
-      793052,
-      793385
+      505,
+      423,
+      361
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -134,19 +134,69 @@
         ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "1652a160507174546bfcd7f6c680bf7c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "CasterHeroSelector"
+        },
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "value": 8
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "NECROMAGE",
+        "COLLISION",
+        "STREAMOFSOULS",
+        "PUSH"
+      ]
     }
   },
   "name": {
@@ -157,7 +207,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "Inflige {value:d} dégâts et repousse de 3 cases une cible adjacente à votre héros. Déclenche FLUX DES ÂMES par COLLISION.\nNÉCROMAGE",
+    "fr": "Inflige {magicalDamage:d} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à votre héros et le {#PUSH} de {cell:c}.\nDéclenche un {#STREAMOFSOULS} par {#COLLISION}.\n\\---\n{#NECROMAGE}",
     "en": "",
     "es": "",
     "de": "",

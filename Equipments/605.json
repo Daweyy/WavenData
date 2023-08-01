@@ -48,12 +48,13 @@
     "premiumItem": false,
     "rarity": 1,
     "unlockableSkillIds": [
-      646608,
+      1700,
       258,
-      646691,
-      646693,
-      646711,
-      647352
+      1699,
+      1698,
+      1697,
+      1694,
+      2362
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 274,
@@ -117,11 +118,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "c2",
           "value": 1
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "per",
-          "value": 500
         }
       ],
       "externalDynamicValueReferences": [
@@ -136,7 +132,21 @@
     "family": 0,
     "equipmentType": 2,
     "petSkins": null,
-    "passiveModifiers": [],
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          58
+        ]
+      }
+    ],
     "spellEffectData": []
   },
   "name": {
@@ -147,11 +157,11 @@
     "pt": "Braçadeira de Empurrão Fulminante"
   },
   "description": {
-    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de déclencher {lightning:ParameterizedEffectExecution.801.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
-    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} of triggering {lightning:ParameterizedEffectExecution.801.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
-    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de activar {lightning:ParameterizedEffectExecution.801.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
-    "de": "{%Attack} {#PUSH} {cell:c}.\n\\---\nChance von {LUCKSELFvalue:per,permil}, je <b>{%KEYWORD.COLLISION.NAME}</b>-Feld {lightning:ParameterizedEffectExecution.801.bc} auszulösen.",
-    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\n{LUCKSELFvalue:per,permil} de acionar {lightning:ParameterizedEffectExecution.801.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
+    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\nDéclenche {lightning:ParameterizedEffectExecution.801.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\nTriggers {lightning:ParameterizedEffectExecution.801.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
+    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\nActiva {lightning:ParameterizedEffectExecution.801.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
+    "de": "{%Attack} Das Ziel wird {cell:c} {#PUSH}.\n\\---\nLöst {lightning:ParameterizedEffectExecution.801.bc} pro <b>{%KEYWORD.COLLISION.NAME}</b>-Feld aus.",
+    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\nAciona {lightning:ParameterizedEffectExecution.801.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
   },
   "bgDescription": {
     "fr": "{%empty}",

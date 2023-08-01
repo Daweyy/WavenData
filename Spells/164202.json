@@ -69,21 +69,68 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredEntitySelector",
-        "from": {
-          "type": "AllObjectMechanismsSelector"
-        },
-        "filters": [
-          {
-            "type": "OwnerFilter",
-            "isIdentical": true,
-            "reference": {
-              "type": "CasterSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "CasterHeroHasSkillCondition",
+        "skillId": 145067
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllEntitiesWithLifeSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "EntityTypeFilter",
+              "condition": 1,
+              "entityTypes": [
+                7,
+                2
+              ]
             }
-          }
-        ]
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllEntitiesWithLifeSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "EntityTypeFilter",
+                "condition": 1,
+                "entityTypes": [
+                  2,
+                  3,
+                  6,
+                  8,
+                  1
+                ]
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -115,10 +162,10 @@
     "pt": "Ativação"
   },
   "description": {
-    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nDéclenche l'effet d'un de vos {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}.",
-    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTriggers one of your {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}' effect.",
-    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nActiva el efecto de uno de tus {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}.",
-    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nLöst den Effekt eines deiner {%KEYWORD.OBJECTMECHANISM.NAME, plural:other} aus.",
-    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nAciona o efeito de um de seus {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}."
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nDéclenche l'effet d'un de vos {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}.\n",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTriggers the effect of one of your {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}.\n\\---\n<b>OR</b>\n\\---\nDraw your next {%KEYWORD.OBJECTMECHANISM.NAME,plural:one} spell.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nActiva el efecto de uno de tus {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}.\n\\---\n<b>O</b>\n\\---\nSacas tu próximo hechizo de {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nLöst den Effekt eines deiner {%KEYWORD.OBJECTMECHANISM.NAME, plural:other} aus.\n\\---\n<b>ODER</b>\n\\---\nZiehe deinen nächsten {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}-Zauber.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nAciona o efeito de um de seus {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}.\n\\---\n<b>OU</b>\n\\---\nCompre seu próximo feitiço de {%KEYWORD.OBJECTMECHANISM.NAME, plural:other}."
   }
 }

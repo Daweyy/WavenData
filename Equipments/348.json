@@ -49,21 +49,44 @@
     "rarity": 0,
     "unlockableSkillIds": [
       349,
-      80521,
+      2839,
       572,
       146,
-      437323,
-      638299
+      2225,
+      1753,
+      2740
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.93.bc"
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
         "BOUNCE"
@@ -97,11 +120,11 @@
     "pt": "Braçadeira Saltadora"
   },
   "description": {
-    "fr": "{%Attack} Déclenche {bounce:ParameterizedEffectExecution.93.bc} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
-    "en": "{%Attack} Triggers {bounce:ParameterizedEffectExecution.93.bc} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
-    "es": "{%Attack} Activa {bounce:ParameterizedEffectExecution.93.bc} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
-    "de": "{%Attack} Löst {bounce:ParameterizedEffectExecution.93.bc} aus, falls das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
-    "pt": "{%Attack} Aciona {bounce:ParameterizedEffectExecution.93.bc} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
+    "fr": "{%Attack} Déclenche {bounce:bc} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
+    "en": "{%Attack} Triggers {bounce:bc} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
+    "es": "{%Attack} Activa {bounce:bc} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
+    "de": "{%Attack} Löst {bounce:bc} aus, falls das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
+    "pt": "{%Attack} Aciona {bounce:bc} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
   },
   "bgDescription": {
     "fr": "Sur l’étiquette, on peut lire «\\_article ni repris, ni échangé, ni remboursé\\_».\nIl vous faudra faire avec.",

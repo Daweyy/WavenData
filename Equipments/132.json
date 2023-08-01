@@ -50,53 +50,21 @@
     "unlockableSkillIds": [
       923,
       353,
-      664891,
-      665001,
-      665250,
-      520
+      1599,
+      1598,
+      1596,
+      520,
+      1932
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "SumValue",
-          "referenceId": "v",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 1
-            },
-            {
-              "type": "ConditionalValue",
-              "referenceId": "",
-              "condition": {
-                "type": "HolderHasSkillCondition",
-                "skill": 86
-              },
-              "ifTrue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "bonus",
-                "value": 1
-              },
-              "ifFalse": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
-              }
-            }
-          ]
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "bonus",
-          "value": 1
-        }
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "PropertyEffect.200.Elem"
       ],
-      "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
     },
@@ -106,7 +74,7 @@
     "passiveModifiers": [
       {
         "type": "CaracBuffModifier",
-        "holder": 8,
+        "holder": 9,
         "value": {
           "type": "LinearLevelOnlyBasedDynamicValue",
           "referenceId": "",
@@ -114,7 +82,7 @@
           "factor": 1
         },
         "caracIds": [
-          1
+          28
         ]
       }
     ],
@@ -128,7 +96,7 @@
     "pt": "Anel Devyda"
   },
   "description": {
-    "fr": "{%FightStarted} {PA_RESvalue:v,+}.",
+    "fr": "Quand vous jouez un sort élémentaire\\_: {value:PropertyEffect.200.Elem,percent,+} aux <b>DÉGÂTS</b> de votre prochain sort qui n'est pas du même élément.",
     "en": "{%FightStarted} {PA_RESvalue:v,+}.",
     "es": "{%FightStarted} {PA_RESvalue:v,+}.",
     "de": "{%FightStarted} {PA_RESvalue:v,+}.",

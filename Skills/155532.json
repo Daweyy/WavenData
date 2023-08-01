@@ -10,7 +10,7 @@
   },
   "m_Name": "155532",
   "m_id": 155532,
-  "m_displayName": "WEAPON - ENIRIPSA - SCALPEL DE L APOSTRUKER - Soin Apostruker",
+  "m_displayName": "WEAPON - ENIRIPSA - SCALPEL DE L APOSTRUKER - Armure Apostruker",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 52982353,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 155532,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,8 +42,8 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "h",
-          "value": 50
+          "referenceId": "v",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
@@ -58,10 +59,10 @@
     "pt": "Cura Apostruker"
   },
   "description": {
-    "fr": "{%FightTurnStarted} Votre héros se soigne de {value:h,percent} de son {%AT}. ",
-    "en": "{%FightTurnStarted} Your hero is healed {value:h,percent} of their {%AT}.",
-    "es": "{%FightTurnStarted} Tu héroe se cura un {value:h,percent} de su {%AT}.",
-    "de": "{%FightTurnStarted} Dein Held heilt sich um {value:h,percent} seines {%AT}.",
-    "pt": "{%FightTurnStarted} Seu herói se cura em {value:h,percent} do seu {%AT}."
+    "fr": "Lorsqu'il gagne de l'{%AR}\\_: Votre héros déclenche son passif.\n\\---\nLorsqu'il est soigné\\_: Votre héros gagne {value:v,percent} de sa {%PVMAX} en {%AR}.",
+    "en": "Your {%AR} gains trigger your passive.\nWhen you heal yourself, you gain {%AR} equivalent to {value:v} of your {%PVMAX}.\n",
+    "es": "Tus ganancias de {%AR} activan tu pasivo.\nCuando te curas, ganas {%AR} equivalente a {value:v} de tu {%PVMAX}.\n",
+    "de": "Dein {%AR}-Gewinn löst deine passive Fähigkeit aus.\nWenn du dich heilst, erhältst du {%AR} in Höhe von {value:v} deiner {%PVMAX}.\n",
+    "pt": "Seus ganhos de {%AR} acionam o seu passivo.\nAo se curar, você ganha em {%AR} o equivalente a {value:v} de sua {%PVMAX}.\n"
   }
 }

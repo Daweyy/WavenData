@@ -37,7 +37,7 @@
     "type": "AchievementDefinition",
     "id": 365,
     "subAchievements": [
-      23143
+      2159
     ],
     "points": 10,
     "secret": false,
@@ -46,10 +46,20 @@
     "onSuccess": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 5
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
+        {
+          "type": 25,
+          "id": 156978
+        },
         {
           "type": 22,
           "id": 113
@@ -58,11 +68,11 @@
     }
   },
   "name": {
-    "fr": "Remporter un combat en ayant retiré 5 {aura:113} à un adversaire avec le sort Temps",
-    "en": "Win a fight having removed 5 Auras from an opponent using the Time spell",
-    "es": "Ganar un combate habiéndole retirado 5 auras a un adversario con el hechizo Tiempo",
-    "de": "Gewinn einen Kampf, nachdem du 5 Auren von einem Gegner mit dem Zeit-Zauber entfernt hast.",
-    "pt": "Vencer um combate tendo retirado 5 Auras de um adversário com o feitiço Tempo"
+    "fr": "Remporter un combat en ayant retiré {value:v}\\_{aura:113,value:v} à un adversaire avec le sort {Spell:156978}",
+    "en": "Win a fight having removed {value:v}\\_{aura:113,value:v} from an opponent using the Time spell",
+    "es": "Ganar un combate habiéndole retirado {value:v}\\_{aura:113,value:v} a un adversario con el hechizo Tiempo",
+    "de": "Gewinne einen Kampf, indem du mit dem Zeit-Zauber {value:v}\\_{aura:113,value:v} von einem Gegner entfernst",
+    "pt": "Vencer um combate tendo retirado {value:v}\\_{aura:113,value:v} de um adversário com o feitiço Tempo"
   },
   "description": {
     "fr": "",

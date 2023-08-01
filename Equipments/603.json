@@ -50,10 +50,11 @@
     "unlockableSkillIds": [
       887,
       542,
-      81218,
+      2842,
       792,
       947,
-      637574
+      1754,
+      2166
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
@@ -66,11 +67,32 @@
           "referenceId": "cc",
           "baseValue": 0,
           "factor": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            90,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.719.hl"
-      ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
         "HAIL"
@@ -104,11 +126,11 @@
     "pt": "Braçadeira de Granizo"
   },
   "description": {
-    "fr": "{%Attack} Déclenche {hail:ParameterizedEffectExecution.719.hl} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
-    "en": "{%Attack} Triggers {hail:ParameterizedEffectExecution.719.hl} if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
-    "es": "{%Attack} Activa {hail:ParameterizedEffectExecution.719.hl} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
-    "de": "{%Attack} Löst {hail:ParameterizedEffectExecution.719.hl} aus, falls das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
-    "pt": "{%Attack} Aciona {hail:ParameterizedEffectExecution.719.hl} se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+    "fr": "{%Attack} Déclenche {hail:hl} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "en": "{%Attack} Triggers {hail:hl} if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
+    "es": "{%Attack} Activa {hail:hl} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
+    "de": "{%Attack} Löst {hail:hl} aus, falls das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
+    "pt": "{%Attack} Aciona {hail:hl} se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
   },
   "bgDescription": {
     "fr": "D'accord, il serre un peu mais au moins, il reste silencieux, lui.",

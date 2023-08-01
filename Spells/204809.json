@@ -89,10 +89,32 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.782.bc"
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "BOUNCE",
@@ -108,10 +130,10 @@
     "pt": "Página 3 do Grimório dos Ventos"
   },
   "description": {
-    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nVotre héros déclenche {bounce:ParameterizedEffectExecution.782.bc}.",
-    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nYour hero triggers {bounce:ParameterizedEffectExecution.782.bc}.",
-    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTu héroe activa {bounce:ParameterizedEffectExecution.782.bc}.",
-    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nDein Held löst {bounce:ParameterizedEffectExecution.782.bc} aus.",
-    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nSeu herói aciona {bounce:ParameterizedEffectExecution.782.bc}."
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nVotre héros déclenche {bounce:bc}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nYour hero triggers {bounce:bc}.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTu héroe activa {bounce:bc}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nDein Held löst {bounce:bc} aus.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nSeu herói aciona {bounce:bc}."
   }
 }

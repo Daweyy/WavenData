@@ -11,7 +11,7 @@
   "m_Name": "574",
   "m_id": 574,
   "m_displayName": "ASTRUB - CHACHA - Feulement",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -208313669,
     "b": -1239141084,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "fd3d96ee1ee7e974386ca8fef7c10352"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -67,13 +67,61 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": []
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllBoardPresencesSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "CharacterEntityFilter"
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "192d892ebff54f14bb0bfb0c5d12b294",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
@@ -113,16 +161,16 @@
   },
   "name": {
     "fr": "Feulement",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "en": "Yowling",
+    "es": "Bufido",
+    "de": "Fauchen",
+    "pt": "Rugido"
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg} et {#PUSH} la cible de {cell:c}.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "en": "Does {magicalDamage:dmg} and {#PUSH} the target {cell:c}.",
+    "es": "Inflige {magicalDamage:dmg} y {#PUSH} al objetivo {cell:c}.",
+    "de": "Verursacht {magicalDamage:dmg} und {#PUSH} das Ziel um {cell:c} zurück.",
+    "pt": "Inflige {magicalDamage:dmg} e {#PUSH} o alvo por {cell:c}."
   }
 }

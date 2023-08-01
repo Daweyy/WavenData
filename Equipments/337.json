@@ -48,22 +48,38 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      655107,
-      655217,
-      655448,
+      1656,
+      1655,
+      1654,
       198,
-      658733,
-      659024
+      1627,
+      1626,
+      2703
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 33,
+          "id": 65
+        },
+        {
+          "type": 33,
+          "id": 329
+        }
+      ]
     },
     "family": 0,
     "equipmentType": 2,
@@ -81,30 +97,6 @@
         "caracIds": [
           58
         ]
-      },
-      {
-        "type": "CaracBuffModifier",
-        "holder": 9,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 50
-        },
-        "caracIds": [
-          71
-        ]
-      },
-      {
-        "type": "CaracBuffModifier",
-        "holder": 9,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 5
-        },
-        "caracIds": [
-          69
-        ]
       }
     ],
     "spellEffectData": []
@@ -117,11 +109,11 @@
     "pt": "Braçadeira Kalibur"
   },
   "description": {
-    "fr": "{%empty}",
-    "en": "{%empty}",
-    "es": "{%empty}",
-    "de": "{%empty}",
-    "pt": "{%empty}"
+    "fr": "{%AT} : {value:p,percent,+} à vos gains de {Resource:329,plural:other} et de {Resource:65,plural:other}.",
+    "en": "{%AT}: {value:p,percent,+} to your {%Xp} and {%Kamas} gains.",
+    "es": "{%AT}: {value:p,percent,+} a tus ganancias de {%Xp} y de {%Kamas}",
+    "de": "{%AT}: {value:p,percent,+} auf deine Zugewinne von {%Xp} und {%Kamas}",
+    "pt": "{%AT}: {value:p,percent,+} aos seus ganhos de {%Xp} e de {%Kamas}"
   },
   "bgDescription": {
     "fr": "{%empty}",

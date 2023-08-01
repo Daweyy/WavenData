@@ -10,7 +10,7 @@
   },
   "m_Name": "158315",
   "m_id": 158315,
-  "m_displayName": "WEAPON - SRAM - SURIN SUROKAN  - Armure Sourokan",
+  "m_displayName": "WEAPON - SRAM - SURIN SUROKAN  - Ombre Sourokan",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": -1617107619,
@@ -32,39 +32,46 @@
   "values": {
     "type": "SkillDefinition",
     "id": 158315,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "ar",
-          "value": 30
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
         "TRAP",
-        "TRAPPER"
+        {
+          "type": 6,
+          "id": 191
+        },
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 512
+        }
       ]
     }
   },
   "name": {
-    "fr": "Armure Sourokan",
-    "en": "Surokan Armor",
-    "es": "Armadura Surokán",
-    "de": "Sorokan-Rüstung",
-    "pt": "Sabre Surokan"
+    "fr": "Ombre Sourokan",
+    "en": "Surokan Shadow",
+    "es": "Sombra Surokán",
+    "de": "Surokan-Schatten",
+    "pt": "Sombra Surokan"
   },
   "description": {
-    "fr": "Lorsque vous déclenchez {#Trapper}\\_:\\v Votre héros gagne {value:ar,percent} de son {%AT} en {%AR}.",
-    "en": "When you trigger {#Trapper}:\\v Your hero gains {value:ar,percent} of their {%AT} as {%AR}.",
-    "es": "Cuando activas {#Trapper}: \\vTu héroe gana un {value:ar,percent} de su {%AT} en {%AR}.",
-    "de": "Wenn du {#Trapper} auslöst:\\vDein Held erhält {value:ar,percent} seines {%AT} als {%AR}.",
-    "pt": "Ao acionar {#Trapper}:\\v Seu herói ganha {value:ar,percent} do seu {%AT} em {%AR}."
+    "fr": "Lorsqu'un adversaire active un {Spell:512}\\_: Votre héros se téléporte sur une case adjacente\\_<sprite name=\"cell_cross\"> et lui inflige son {%AT}.",
+    "en": "When an opponent activates a {Spell:512}: Your hero teleports to an adjacent cell and inflicts their attack on them.",
+    "es": "Cuando un adversario activa una {Spell:512}: Tu héroe se teletransporta a una casilla adyacente y le inflige su ataque.",
+    "de": "Wenn ein Gegner den Zauber {Spell:512} aktiviert: Dein Held teleportiert sich auf ein angrenzendes Feld und greift ihn an.",
+    "pt": "Quando um adversário ativa um {Spell:512}: Seu herói se teletransporta sobre uma célula adjacente e inflige seu ataque."
   }
 }

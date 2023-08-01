@@ -11,7 +11,7 @@
   "m_Name": "630",
   "m_id": 630,
   "m_displayName": "PIN - TOFU - Broche emplumé",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 950406200,
     "b": 1645988484,
@@ -27,17 +27,17 @@
     "e": 477833348
   },
   "m_i18nBgDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 950406200,
+    "b": 1645988484,
+    "c": -1506337432,
+    "d": 1449000742,
+    "e": 874732427
   },
   "m_illustration": {
-    "assetGuid": "dbe33df39f1eee54cb0de8d2bd352a37"
+    "assetGuid": "4aed452705f2ae94ab8aa01ecb560f27"
   },
   "m_illustrationBig": {
-    "assetGuid": "bf781edd72b96fb4bbc416b11356c5f9"
+    "assetGuid": "4aed452705f2ae94ab8aa01ecb560f27"
   },
   "m_affinity": 0,
   "m_elementaryStates": 1,
@@ -57,12 +57,18 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
-          "value": 30
+          "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percent1",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
+        "COLLISION",
         {
           "type": 4,
           "id": 570
@@ -83,14 +89,14 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightStarted}\nInvoque le {Summoning:570}.\n\\---\n{value:pc,percent,+} à la <b>VIE</b> et à l'{%AT} des Tofus\n\\---\n<rem>Condition : Uniquement à 2 ou 3 joueurs.</rem>",
+    "fr": "{%FightStarted}\nInvoque {Summoning:570} dans l'équipe adverse.\n\\---\n{value:pc,percent,+} à la {%pvmax} et {value:percent1,percent,+} à l'{%AT} des {%family_Tofu_Name,plural:other}.\n\\---\n<rem>Valable uniquement sur l'{WorldZone:3}.</rem>",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "bgDescription": {
-    "fr": "",
+    "fr": "{%empty}",
     "en": "",
     "es": "",
     "de": "",

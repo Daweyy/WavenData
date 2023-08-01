@@ -10,7 +10,7 @@
   },
   "m_Name": "144020",
   "m_id": 144020,
-  "m_displayName": "WEAPON - XELOR - Jikan - Soin Jikan",
+  "m_displayName": "WEAPON - XELOR - Jikan - Magie Jikan",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 263215007,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 144020,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,8 +42,8 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 50
+          "referenceId": "p",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
@@ -51,17 +52,17 @@
     }
   },
   "name": {
-    "fr": "Soin Jikan",
+    "fr": "Magie Jikan",
     "en": "Jikan Healing",
     "es": "Cura Darena",
     "de": "Jikan-Heilung",
     "pt": "Cura Jikan"
   },
   "description": {
-    "fr": "Lorsque vous appliquez un état\\_:\\v votre héros se soigne de {value:v,percent} de son {%AT}.",
-    "en": "When you apply a state:\\v Your hero heals themself {value:v,percent} of their {%AT}.",
-    "es": "Cuando aplicas un estado:\\v Tu héroe se cura un {value:v,percent} de su {%AT}.",
-    "de": "Wenn du einen Zustand wirkst:\\vDein Held heilt sich um {value:v,percent} seines {%AT}.",
-    "pt": "Ao aplicar um estado:\\v Seu herói se cura em {value:v,percent} do seu {%AT}."
+    "fr": "{value:p, +, percent} à vos <b>DÉGÂTS</b> élémentaires par {%AURA_OWL} que possède votre héros.",
+    "en": "{value:p,percent,+} to your elemental damage per {%AURA_OWL} that your hero has.",
+    "es": "{value:p,percent,+} a tus daños elementales por {%AURA_OWL} que tenga tu héroe. ",
+    "de": "{value:p,percent,+} Elementarschaden pro {%AURA_OWL}, die dein Held besitzt.",
+    "pt": "{value:p,percent,+} aos danos adicionais do seu herói por {%AURA_OWL} que ele possuir."
   }
 }

@@ -49,11 +49,12 @@
     "rarity": 0,
     "unlockableSkillIds": [
       460,
-      419525,
-      672770,
+      2263,
+      1561,
       138,
-      672895,
-      673157
+      1559,
+      1557,
+      2716
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
@@ -67,14 +68,45 @@
           "value": 12
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "SumValue",
           "referenceId": "pa",
-          "value": 2
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 2
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 86
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "Skill",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "Skill",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "TOME"
+      ]
     },
     "family": 0,
     "equipmentType": 1,
@@ -104,7 +136,7 @@
     "pt": "Anel Obstinado"
   },
   "description": {
-    "fr": "{tome:g}\n\\---\n{%FightStarted} {PA_RESvalue:pa,+}.",
+    "fr": "{#TOME} ({value:g})\n\\---\n{%FightStarted} {PA_RESvalue:pa,+}.",
     "en": "{tome:g}\n\\---\n{%FightStarted} {PA_RESvalue:pa,+}.",
     "es": "{tome:g}\n\\---\n{%FightStarted} {PA_RESvalue:pa,+}.",
     "de": "{tome:g}\n\\---\n{%FightStarted} {PA_RESvalue:pa,+}.",
@@ -113,7 +145,7 @@
   "bgDescription": {
     "fr": "Non, ce n'est pas une bague, c'est un anneau ! UN ANNEAU !!!",
     "en": "No, it's not a wedding band, it's a ring! A RING!!",
-    "es": "Que no es una alianza, ¡que es una anillo! ¡¡UN ANILLO!!",
+    "es": "Que no es una alianza, ¡que es un anillo! ¡¡UN ANILLO!!",
     "de": "Nein, das ist nicht bloß ein Schmuckring, sondern ein Ring! EIN RING!!!",
     "pt": "Não, não é uma piada, é um anel! UM ANEL!!!"
   }

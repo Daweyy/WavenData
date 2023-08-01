@@ -100,7 +100,13 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 200
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -117,7 +123,7 @@
     "pt": "Golpe Surokan"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{#Trapper} : Inflige l’{%AT} de votre héros.",
+    "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{#Trapper} : Inflige {value:pc,percent} de l’{%AT} de votre héros.",
     "en": "Inflicts your hero's {%AT}.\n\\---\n{#Trapper}: Inflicts your hero's {%AT}.",
     "es": "Inflige el {%AT} de tu héroe.\n\\---\n{#Trapper}: Inflige el {%AT} de tu héroe.",
     "de": "Verursacht den {%AT} deines Helden als Schaden.\n\\---\n{#Trapper}: Verursacht den {%AT} deines Helden als Schaden.",

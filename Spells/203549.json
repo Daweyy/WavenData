@@ -89,10 +89,33 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.756.hl"
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            90,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "HAIL",
@@ -108,10 +131,10 @@
     "pt": "Página 3 do Grimório das Ondas"
   },
   "description": {
-    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nDéclenche {hail:ParameterizedEffectExecution.756.hl}.",
-    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTriggers {hail:ParameterizedEffectExecution.756.hl}.",
-    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nActiva {hail:ParameterizedEffectExecution.756.hl}.",
-    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nLöst {hail:ParameterizedEffectExecution.756.hl} aus.",
-    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nAciona {hail:ParameterizedEffectExecution.756.hl}."
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nDéclenche {hail:hl}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTriggers {hail:hl}.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nActiva {hail:hl}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nLöst {hail:hl} aus.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nAciona {hail:hl}."
   }
 }

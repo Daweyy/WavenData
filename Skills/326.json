@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 326,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,15 +42,18 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "t",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "Pc",
           "value": 50
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        "COMBO"
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
@@ -60,10 +64,10 @@
     "pt": "Mestre Voldorak"
   },
   "description": {
-    "fr": "{value:Pc,+,percent} aux <b>DÉGÂTS</b> de vos sorts de {#COMBO}.",
-    "en": "{value:Pc,+,percent} to your {#COMBO} spell <b>DAMAGE</b>.",
-    "es": "{value:Pc,+,percent} a los <b>DAÑOS</b> de tus hechizos de {#COMBO}.",
-    "de": "{value:Pc,+,percent} <b>SCHADEN</b> für deine {#COMBO}-Zauber.",
-    "pt": "{value:Pc,+,percent} aos <b>DANOS</b> dos seus feitiços de {#COMBO}."
+    "fr": "Lorsque vous jouez un sort\\_: {value:Pc,percent,+} aux <b>DÉGATS</b> de vos prochains sorts joués ce tour.\n\\---\n<rem>Limité à {value:t} fois par tour.</i></rem>",
+    "en": "{%FightTurnStarted} After casting a spell: {value:Pc,percent,+} to the damage of the next spells cast during the turn.",
+    "es": "{%FightTurnStarted} Después de lanzar un hechizo: {value:Pc,percent,+} a los daños de los próximos hechizos lanzados durante el turno.",
+    "de": "{%FightTurnStarted} Wenn ein Zauber gewirkt wurde: {value:Pc,percent,+} Schaden für die nächsten Zauber, die während der Runde gewirkt werden.",
+    "pt": "{%FightTurnStarted} Após lançar um feitiço: {value:Pc,percent,+} aos danos dos próximos feitiços lançados durante o turno."
   }
 }

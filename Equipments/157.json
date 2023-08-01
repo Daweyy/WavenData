@@ -50,10 +50,11 @@
     "unlockableSkillIds": [
       730,
       966,
-      651069,
-      651231,
+      1679,
+      1676,
       618,
-      651393
+      1675,
+      2589
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 636,
@@ -62,14 +63,38 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "SumValue",
           "referenceId": "arA",
-          "value": 50
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 25
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 230
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "arB",
+                "value": 10
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "arB",
-          "value": 50
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],

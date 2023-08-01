@@ -48,22 +48,45 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      81247,
-      81406,
-      287184,
-      638319,
-      437597,
-      638831
+      2843,
+      2844,
+      2557,
+      1752,
+      2224,
+      1751,
+      2562
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.52.pt"
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            91,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
         "PEAT"
@@ -97,16 +120,16 @@
     "pt": "Braçadeira Turfosa"
   },
   "description": {
-    "fr": "{%Attack} Déclenche {peat:ParameterizedEffectExecution.52.pt} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
-    "en": "{%Attack} Triggers {peat:ParameterizedEffectExecution.52.pt} if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
-    "es": "{%Attack} Activa {peat:ParameterizedEffectExecution.52.pt} si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
-    "de": "{%Attack} Löst {peat:ParameterizedEffectExecution.52.pt} aus, falls das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
-    "pt": "{%Attack} Aciona {peat:ParameterizedEffectExecution.52.pt} se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+    "fr": "{%Attack} Déclenche {peat:pt} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "en": "{%Attack} Triggers {peat:pt} if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "{%Attack} Activa {peat:pt} si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "{%Attack} Löst {peat:pt} aus, falls das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
+    "pt": "{%Attack} Aciona {peat:pt} se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
   },
   "bgDescription": {
     "fr": "Une longue et périlleuse quête vous attend. Mais ce brassard n'y est pour rien.",
     "en": "A long and perilous quest awaits you. But this armband has nothing to do with that.",
-    "es": "Te aguarda una misión larga y llena de peligros. Pero este brazalete no tiene nada que ver con esto.",
+    "es": "Te aguarda una búsqueda larga y llena de peligros. Pero este brazalete no tiene nada que ver con esto.",
     "de": "Auf dich wartet eine lange wie beschwerliche Quest. Kann die Armbinde aber nichts für.",
     "pt": "Uma longa e perigosa missão espera por você. Mas esta braçadeira não tem culpa de nada."
   }

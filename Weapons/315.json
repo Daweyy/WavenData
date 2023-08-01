@@ -66,7 +66,18 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "max",
+          "value": 4
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "min",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -89,7 +100,7 @@
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 1
+      "value": 3
     },
     "actionValue": {
       "type": "ConstIntegerValue",
@@ -112,7 +123,7 @@
     },
     "attackScale": {
       "type": "ReferenceScalingFactor",
-      "reference": 10
+      "reference": 5
     },
     "merchantCosts": [],
     "premiumItem": false,
@@ -138,7 +149,7 @@
     "pt": "Fantasma"
   },
   "description": {
-    "fr": "<rem>{PropertyEffect:14}</rem>\n",
+    "fr": "<rem>{PropertyEffect:14}</rem>\n\\---\n{%FightTurnEnded} Se téléporte de {value:min} à {cell:max} de sa position.",
     "en": "<rem>{PropertyEffect:14}</rem>\n",
     "es": "<rem>{PropertyEffect:14}</rem>\n",
     "de": "<rem>{PropertyEffect:14}</rem>\n",

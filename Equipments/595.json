@@ -50,10 +50,11 @@
     "unlockableSkillIds": [
       905,
       806,
-      683287,
-      683401,
-      683808,
-      885
+      1495,
+      1492,
+      1489,
+      885,
+      819
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
@@ -62,11 +63,9 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "CharacterActionValue",
+          "type": "ConstIntegerValue",
           "referenceId": "pow",
-          "entitySelector": {
-            "type": "EffectHolderSelector"
-          }
+          "value": 50
         }
       ],
       "externalDynamicValueReferences": [],
@@ -101,11 +100,11 @@
     "pt": "Anel Muscapol"
   },
   "description": {
-    "fr": "{%COMPANION_APPEARANCE} Lui confère l'{%AT} de votre héros en {%AR}.",
-    "en": "{%COMPANION_APPEARANCE} Confers your hero's {%AT} on them as {%AR}.",
-    "es": "{%COMPANION_APPEARANCE} Le confiere el {%AT} de tu héroe en {%AR}.",
-    "de": "{%COMPANION_APPEARANCE} Verleiht ihm den {%AT} deines Helden als {%AR}.",
-    "pt": "{%COMPANION_APPEARANCE} Concede a ele o {%AT} do herói em {%AR}."
+    "fr": "{%COMPANION_APPEARANCE} Lui confère {value:pow,percent} de l'{%AT} de votre héros en {%AR}.",
+    "en": "{%COMPANION_APPEARANCE} Confers {value:pow,percent} of your hero's {%AT} on them as {%AR}.",
+    "es": "{%COMPANION_APPEARANCE} Le confiere un {value:pow,percent} del {%AT} de tu héroe en {%AR}.",
+    "de": "{%COMPANION_APPEARANCE} Überträgt ihm {value:pow,percent} des {%AT}<b>S</b> deines Helden als {%AR}.",
+    "pt": "{%COMPANION_APPEARANCE} Concede a ele {value:pow,percent} do {%AT} do herói em {%AR}."
   },
   "bgDescription": {
     "fr": "{%empty}",

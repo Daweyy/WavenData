@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 344,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -42,12 +43,15 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
-          "value": 30
+          "value": 25
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "TRAP",
+        "TRAPPER"
+      ]
     }
   },
   "name": {
@@ -58,10 +62,10 @@
     "pt": "Domínio Surokan"
   },
   "description": {
-    "fr": "{value:pc,percent,+} aux <b>DÉGÂTS</b> de vos {%KEYWORD.TRAP.NAME, plural:other}.",
-    "en": "{value:pc,percent,+} to your {%KEYWORD.TRAP.NAME,plural:one} <b>DAMAGE</b>.",
-    "es": "{value:pc,percent,+} a los <b>DAÑOS</b> de tus {%KEYWORD.TRAP.NAME, plural:other}.",
-    "de": "{value:pc,percent,+} <b>SCHADEN</b> für deine {%KEYWORD.TRAP.NAME, plural:other}.",
-    "pt": "{value:pc,percent,+} aos <b>DANOS</b> das suas {%KEYWORD.TRAP.NAME, plural:other}."
+    "fr": "Lorsque vous déclenchez {#Trapper}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de vos {#TRAP, plural:other} pour le tour.",
+    "en": "{#Trapper}: {value:pc,percent,+} to your {%KEYWORD.TRAP.NAME,plural:one} <b>DAMAGE</b> for the turn.",
+    "es": "{#Trapper}: {value:pc,percent,+} a los <b>DAÑOS</b> de tus {%KEYWORD.TRAP.NAME, plural:other} durante el turno.",
+    "de": "{#Trapper}: {value:pc,percent,+} auf den <b>SCHADEN</b> deiner {%KEYWORD.TRAP.NAME, plural:other} für die Runde.",
+    "pt": "{#Trapper}: {value:pc,percent,+} aos <b>DANOS</b> das suas {%KEYWORD.TRAP.NAME, plural:other} durante o turno."
   }
 }

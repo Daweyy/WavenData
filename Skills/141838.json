@@ -10,7 +10,7 @@
   },
   "m_Name": "141838",
   "m_id": 141838,
-  "m_displayName": "WEAPON - CRA - BUNELAME - Armure Bunelame",
+  "m_displayName": "WEAPON - CRA - BUNELAME - Défausse Bunelame",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 1316169964,
@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 141838,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,13 +42,13 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 2
+          "referenceId": "d",
+          "value": 1
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "pc",
-          "value": 100
+          "referenceId": "v",
+          "value": 25
         }
       ],
       "externalDynamicValueReferences": [],
@@ -56,17 +57,17 @@
     }
   },
   "name": {
-    "fr": "Armure Bunelame",
+    "fr": "Défausse Bunelame",
     "en": "Buneblade Armor",
     "es": "Armadura Bunehoja",
     "de": "Bunklingen-Rüstung",
     "pt": "Armadura Bumelâmina"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Votre héros gagne {value:pc,percent} de son {%AT} en {%AR} si vous avez {SPELLCOUNTvalue:v} ou moins en main.",
-    "en": "{%FightTurnEnded} Your hero gains {value:pc,percent} of their {%AT} as {%AR} if you have {SPELLCOUNTvalue:v} or less in hand.",
-    "es": "{%FightTurnEnded}Tu héroe gana un {value:pc,percent} de su {%AT} en {%AR} o si tienes {SPELLCOUNTvalue:v} menos en mano.",
-    "de": "{%FightTurnEnded} Dein Held erhält {value:pc,percent} seines {%AT} als {%AR}, wenn du höchstens {SPELLCOUNTvalue:v} auf der Hand hast.",
-    "pt": "{%FightTurnEnded} Seu herói ganha {value:pc,percent} do seu {%AT} em {%AR} se você tiver {SPELLCOUNTvalue:v} ou menos na mão."
+    "fr": "{value:v,percent} aux <b>DÉGÂTS</b> de vos sorts.\\v Lorsque vous jouez un sort, vous en défaussez un autre aléatoire.",
+    "en": "Your spell damage is increased by {value:v,percent}. When you play a spell, you discard another at random.",
+    "es": "Los daños de tus hechizos aumentan un {value:v,percent}. Cuando usas un hechizo, descartas otro al azar.",
+    "de": "Der Schaden deiner Zauber erhöht sich um\\_{value:v,percent}. Wenn du einen Zauber wirkst, wird ein weiterer, zufälliger Zauber abgelegt.",
+    "pt": "Os danos dos seus feitiços aumentam em {value:v,percent}. Ao lançar um feitiço você descarta outro aleatório."
   }
 }

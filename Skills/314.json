@@ -32,6 +32,7 @@
   "values": {
     "type": "SkillDefinition",
     "id": 314,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
@@ -41,13 +42,18 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "pc",
-          "value": 75
+          "referenceId": "va",
+          "value": 3
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "pa",
-          "value": 3
+          "referenceId": "pc",
+          "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 20
         }
       ],
       "externalDynamicValueReferences": [],
@@ -63,10 +69,10 @@
     "pt": "Mestre Bumelâmina"
   },
   "description": {
-    "fr": "{value:pc,percent,+} de dégâts à vos sorts coûtant {PAvalue:pa} ou moins. \n",
-    "en": "{value:pc,percent,+} damage to your spells costing {PAvalue:pa} or less. \n",
-    "es": "{value:pc,percent,+} de daños a tus hechizos que cuestan {PAvalue:pa} o menos. \n",
-    "de": "{value:pc,percent,+} Schaden für deine Zauber, die höchstens {PAvalue:pa} kosten. \n",
-    "pt": "{value:pc,percent,+} de danos aos seus feitiços que custam {PAvalue:pa} ou menos.\n"
+    "fr": "Lorsque vous jouez un sort coûtant {PAvalue:va} ou moins\\_: {ATvalue:per,percent,+} à votre héros et {value:pc,percent,+} aux <b>DÉGÂTS</b> de vos sorts pour le tour.",
+    "en": "After casting a spell that costs {value:va} or less: {value:per,percent,+} to the {%AT} and {value:pc,percent,+} to the <b>DAMAGE</b> of your spells for the turn.",
+    "es": "Después de lanzar un hechizo que cueste {value:va} o menos: {value:per,percent,+} al {%AT} y {value:pc,percent,+} a los <b>DAÑOS</b> de tus hechizos durante el turno.",
+    "de": "Nachdem ein Zauber für {value:va} oder weniger gewirkt wurde: Für die Runde {value:per,percent,+} {%AT} und {value:pc,percent,+} auf den <b>SCHADEN</b> deiner Zauber.",
+    "pt": "Depois de lançar um feitiço que custa {value:va} ou menos: {value:per,percent,+} ao {%AT} e {value:pc,percent,+} aos <b>DANOS</b> dos seus feitiços durante o turno."
   }
 }

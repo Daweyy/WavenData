@@ -161,11 +161,32 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.504.ex"
-      ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "EXPLOSION"
@@ -180,10 +201,10 @@
     "pt": "Salto de Gultar"
   },
   "description": {
-    "fr": "Téléporte {Companion:144!} jusqu'à {cell:c}.\n\\---\nDéclenche {explosion:ParameterizedEffectExecution.504.ex} autour de lui.",
-    "en": "Teleports {Companion:144!} up to {cell:c}.\n\\---\nTriggers {explosion:ParameterizedEffectExecution.504.ex} around him.",
-    "es": "Teletransporta a {Companion:144!} hasta {cell:c}.\n\\---\nActiva {explosion:ParameterizedEffectExecution.504.ex} a su alrededor.",
-    "de": "Teleportiert {Companion:144!} bis zu {cell:c}.\n\\---\nLöst {explosion:ParameterizedEffectExecution.504.ex} in der Nähe aus.",
-    "pt": "Teletransporta {Companion:144!} a até {cell:c}.\n\\---\nAciona {explosion:ParameterizedEffectExecution.504.ex} em\\_volta dele."
+    "fr": "Téléporte {Companion:144!} jusqu'à {cell:c}.\n\\---\nDéclenche {explosion:ex} autour de lui.",
+    "en": "Teleports {Companion:144!} up to {cell:c}.\n\\---\nTriggers {explosion:ex} around him.",
+    "es": "Teletransporta a {Companion:144!} hasta {cell:c}.\n\\---\nActiva {explosion:ex} a su alrededor.",
+    "de": "Teleportiert {Companion:144!} bis zu {cell:c}.\n\\---\nLöst {explosion:ex} in der Nähe aus.",
+    "pt": "Teletransporta {Companion:144!} a até {cell:c}.\n\\---\nAciona {explosion:ex} em\\_volta dele."
   }
 }

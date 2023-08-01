@@ -10,7 +10,7 @@
   },
   "m_Name": "979",
   "m_id": 979,
-  "m_displayName": "WEAPON - IOP - JUSTELAME - Bouclier Justelame",
+  "m_displayName": "WEAPON - IOP - JUSTELAME - Frappe Justelame",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": 1475614213,
@@ -32,35 +32,37 @@
   "values": {
     "type": "SkillDefinition",
     "id": 979,
+    "skillTier": 1,
     "skillUsageType": 5,
     "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 35
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 20,
-          "id": 8
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "Bouclier Justelame",
+    "fr": "Frappe Justelame",
     "en": "Fairblade Shield",
     "es": "Escudo Hojajusta",
     "de": "Justus-Schild",
     "pt": "Escudo Justalâmina"
   },
   "description": {
-    "fr": "Lorsque votre héros perd de l’{%AR}\\_:\\v lui confère {PropertyEffect:8}.\n",
-    "en": "When your hero loses {%AR}:\\v Confers {PropertyEffect:8} on them.\n",
-    "es": "Cuando tu héroe pierde {%AR}:\\v le confiere {PropertyEffect:8}.\n",
-    "de": "Wenn dein Held {%AR} verliert:\\v Verleiht ihm {PropertyEffect:8}.\n",
-    "pt": "Quando seu herói perde {%AR}:\\v Concede {PropertyEffect:8} a ele.\n"
+    "fr": "{%Attack} Inflige {value:v,percent} de son {%AR} en <b>DÉGÂTS</b> supplémentaires à la cible.",
+    "en": "When your hero performs an {%AT}: Inflicts {value:v,percent} of their {%AR} as extra <b>DAMAGE</b> on the target.\n\n<rem>The armor added to the {%AT} is consumed.</rem>",
+    "es": "Cuando tu héroe inflige un {%AT}: Inflige un {value:v,percent} de su {%AR} en <b>DAÑO</b> adicional al objetivo. \n\n<rem>La armadura añadida al {%AT} se consume.</rem>",
+    "de": "Wenn dein Held einen {%AT} ausführt: Fügt dem Ziel {value:v,percent} seiner {%AR} als zusätzlichen <b>SCHADEN</b> zu. \n\n<rem>Die dem {%AT} hinzugefügte Rüstung wird verbraucht.</rem>",
+    "pt": "Quando seu herói lança um {%AT}: Inflige {value:v,percent} da sua {%AR} em <b>DANOS</b> adicionais ao alvo.\n\n<rem>A armadura adicionada ao {%AT} é consumida.</rem>"
   }
 }

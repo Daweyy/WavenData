@@ -48,19 +48,26 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      636127,
-      636310,
-      645325,
+      1760,
+      1759,
+      1710,
       185,
       836,
-      634959
+      1765,
+      2850
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [
         "ParameterizedEffectExecution.983.bc"
       ],
@@ -97,11 +104,11 @@
     "pt": "Braçadeira Flamejante"
   },
   "description": {
-    "fr": "{%ATTACK} Déclenche {flame:ParameterizedEffectExecution.983.bc}.",
-    "en": "{%ATTACK} Triggers {flame:ParameterizedEffectExecution.983.bc}.",
-    "es": "{%ATTACK} Activa {flame:ParameterizedEffectExecution.983.bc}.",
-    "de": "{%ATTACK} Löst {flame:ParameterizedEffectExecution.983.bc} aus.",
-    "pt": "{%ATTACK} Aciona {flame:ParameterizedEffectExecution.983.bc}."
+    "fr": "{%ATTACK} Déclenche {value:v} fois {flame:ParameterizedEffectExecution.983.bc}.",
+    "en": "{%ATTACK} Triggers {value:v} {flame:ParameterizedEffectExecution.983.bc}.",
+    "es": "{%ATTACK} Activa {value:v} {flame:ParameterizedEffectExecution.983.bc}.",
+    "de": "{%ATTACK} Löst {value:v}{flame:ParameterizedEffectExecution.983.bc} aus.",
+    "pt": "{%ATTACK} Aciona {value:v} {flame:ParameterizedEffectExecution.983.bc}."
   },
   "bgDescription": {
     "fr": "{%empty}",

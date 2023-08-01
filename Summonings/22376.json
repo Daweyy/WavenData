@@ -10,8 +10,8 @@
   },
   "m_Name": "22376",
   "m_id": 22376,
-  "m_displayName": "EQUIPMENT - PIN - CHUCHOTEUR - Bakulac",
-  "m_availability": 2,
+  "m_displayName": "EQUIPMENT - PIN - CHUCHOTEUR - Elite",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -1737761209,
     "b": -605111804,
@@ -41,9 +41,9 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 7110,
+      "defaultSkinId": 110,
       "skinIds": [
-        7110
+        110
       ]
     },
     "precomputedData": {
@@ -52,12 +52,14 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
-          "value": 50
+          "value": 750
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "PHYSICAL_PROTECTION"
+      ]
     },
     "families": [
       52
@@ -82,7 +84,7 @@
     "actionCriticalChance": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "value": 50
     },
     "actionCriticalBonus": null,
     "customActionTarget": null,
@@ -101,21 +103,21 @@
     "growInto": null
   },
   "name": {
-    "fr": "BAKULAC",
+    "fr": "Bakulac",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "{%FightTurnStarted} Se téléporte sur une case adjacente\\_<sprite name=\"cell_cross\"> à l'adversaire ayant le plus de {%PV} et lui inflige son {%AT}.\n\\---\n<b>ESQUIVE PHYSIQUE</b> :\\_{value:pc,percent}",
+    "fr": "{%FightTurnStarted} Se téléporte sur une case adjacente\\_<sprite name=\"cell_cross\"> à l'adversaire ayant le plus de {%PV} et lui inflige son {%AT}.\n\\---\n{value:pc,permil,+} de {#PHYSICAL_PROTECTION}.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "championName": {
-    "fr": "BAKULAC",
+    "fr": "Bakulac",
     "en": "",
     "es": "",
     "de": "",

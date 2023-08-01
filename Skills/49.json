@@ -10,7 +10,7 @@
   },
   "m_Name": "49",
   "m_id": 49,
-  "m_displayName": "EQUIPMENT - MORT COMPA - Reduc 1 PA FEU",
+  "m_displayName": "EQUIPMENT - MORT COMPA - Bonus effet",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": -824965156,
@@ -32,21 +32,18 @@
   "values": {
     "type": "SkillDefinition",
     "id": 49,
+    "skillTier": 4,
     "skillUsageType": 2,
-    "hideDescriptionInTooltip": false,
+    "hideDescriptionInTooltip": true,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "pa",
-          "value": -1
-        }
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "Equipment.771.skill"
       ],
-      "externalDynamicValueReferences": [],
-      "hasEffects": true,
+      "hasEffects": false,
       "keywordReferences": []
     }
   },
@@ -58,7 +55,7 @@
     "pt": "{%NEW_SKILL}"
   },
   "description": {
-    "fr": "{%COMPANION_DEATH} {PAvalue:pa} le coût de votre prochain sort {%FIRE}.",
+    "fr": "{%FightStarted} {value:Equipment.771.skill,percent} supplémentaires de vos bonus de dégats aux sorts augmentent votre {%AT}.",
     "en": "{%COMPANION_DEATH} {PAvalue:pa} the cost of your next {%FIRE} spell.",
     "es": "{%COMPANION_DEATH} {PAvalue:pa} al coste de tu próximo hechizo {%FIRE}.",
     "de": "{%COMPANION_DEATH} die Kosten deines nächsten {%FIRE}-Zaubers um {PAvalue:pa}.",

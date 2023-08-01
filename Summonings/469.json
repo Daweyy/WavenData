@@ -10,8 +10,8 @@
   },
   "m_Name": "469",
   "m_id": 469,
-  "m_displayName": "EQUIPMENT - PIN - TOFU - Berger Divin Kalimera",
-  "m_availability": 2,
+  "m_displayName": "EQUIPMENT - PIN - TOFU - Kalimera",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -395462854,
     "b": 1739586788,
@@ -20,11 +20,11 @@
     "e": 1855000172
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -395462854,
+    "b": 1739586788,
+    "c": 1903968570,
+    "d": -1878301970,
+    "e": 1156606009
   },
   "m_i18nDescriptionId": {
     "a": -395462854,
@@ -41,17 +41,38 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 7440,
       "skinIds": [
-        1
+        7440
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "aura",
+          "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "b",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 120
+        }
+      ]
     },
     "families": [
       37
@@ -95,21 +116,21 @@
     "growInto": null
   },
   "name": {
-    "fr": "Berger Divin Kalimera",
+    "fr": "Kalimera",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "En cas de sort Air ou Eau, tous les tofus 5 auras PIC ORAGE.\n-\naprès une attaque tous les tofus gagnent 50% d’attaque supplémentaire jusqu’à la fin de leur tour.\n\n{%Turnstarted} : +1 aura pic orage a tous les tofus de son équipe.",
+    "fr": "Lorsqu'un sort {%air} ou {%water} est joué\\_:\\v {value:aura,plural:other,+}\\_ {aura:120} {%Family_Tofu_Name,plural:other}.\n\\---\nQuand un {%Family_Tofu_Name,plural:one} {%attack} il gagne {ATvalue:b,percent} pour le tour.\n\\---\n{%fightTurnstarted} {value:v,+} {aura:120} à {Summoning:469} et à un allié aléatoire.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "championName": {
-    "fr": "",
+    "fr": "Kalimera",
     "en": "",
     "es": "",
     "de": "",

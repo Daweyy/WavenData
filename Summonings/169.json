@@ -10,8 +10,8 @@
   },
   "m_Name": "169",
   "m_id": 169,
-  "m_displayName": "EQUIPMENT - PIN - CRAQUELEUR - Elite Craqueleur",
-  "m_availability": 2,
+  "m_displayName": "EQUIPMENT - PIN - CRAQUELEUR - Elite",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 587411019,
     "b": 1630256052,
@@ -41,9 +41,9 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 4168,
+      "defaultSkinId": 7157,
       "skinIds": [
-        4168
+        7157
       ]
     },
     "precomputedData": {
@@ -51,13 +51,19 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "pc",
-          "value": 20
+          "referenceId": "pm",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "OBJECTMECHANISM",
+        {
+          "type": 7,
+          "id": 1607
+        }
+      ]
     },
     "families": [
       41
@@ -101,21 +107,21 @@
     "growInto": null
   },
   "name": {
-    "fr": "Elite Craqueleur",
+    "fr": "Brokrok",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "Début de tour monstre : Fait apparaître un rocher autour de lui. \n\\---\nLorsqu'un rocher est détruit les craqueleurs gagnent un PM pour le tour.",
+    "fr": "{%FightStarted} Pose un {ObjectMechanism:1607} autour\\_<sprite name=\"cell_around\"> de lui. \n\\---\n<b>DESTRUCTION</b> d'un {ObjectMechanism:1607!}\\_: {PMvalue:pm,+} aux {%FAMILY_CRAQUELEUR_NAME, plural:other} pour le tour.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "championName": {
-    "fr": "Elite Craqueleur",
+    "fr": "Brokrok",
     "en": "",
     "es": "",
     "de": "",

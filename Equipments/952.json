@@ -49,18 +49,25 @@
     "rarity": 0,
     "unlockableSkillIds": [
       61,
-      637316,
-      645120,
+      1755,
+      1712,
       890,
-      635597,
-      635964
+      1762,
+      1761,
+      1
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [
         "ParameterizedEffectExecution.275.bc"
       ],
@@ -97,11 +104,11 @@
     "pt": "Braçadeira Rochosa"
   },
   "description": {
-    "fr": "{%ATTACK} Déclenche {rock:ParameterizedEffectExecution.275.bc}.",
-    "en": "{%ATTACK} Triggers {rock:ParameterizedEffectExecution.275.bc}.",
-    "es": "{%ATTACK} Activa {rock:ParameterizedEffectExecution.275.bc}.",
-    "de": "{%ATTACK} Löst {rock:ParameterizedEffectExecution.275.bc} aus.",
-    "pt": "{%ATTACK} Aciona {rock:ParameterizedEffectExecution.275.bc}."
+    "fr": "{%ATTACK} Déclenche {value:v} fois {rock:ParameterizedEffectExecution.275.bc}.",
+    "en": "{%ATTACK} Triggers {value:v} {rock:ParameterizedEffectExecution.275.bc}.",
+    "es": "{%ATTACK} Activa {value:v} {rock:ParameterizedEffectExecution.275.bc}.",
+    "de": "{%ATTACK} Löst {value:v} {rock:ParameterizedEffectExecution.275.bc} aus.",
+    "pt": "{%ATTACK} Aciona {value:v} {rock:ParameterizedEffectExecution.275.bc}."
   },
   "bgDescription": {
     "fr": "{%empty}",

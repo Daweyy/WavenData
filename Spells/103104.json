@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      149019,
-      158768,
-      500302
+      1560,
+      2771,
+      2023
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -128,7 +128,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 5
+            "value": 9
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -141,7 +141,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 718,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "Bper",
@@ -158,11 +158,42 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.782.bc"
-      ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "BOUNCE",
@@ -178,10 +209,10 @@
     "pt": "Frasco de Ricochete"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\n{#SUPPORT}\\_: L'allié déclenche {bounce:ParameterizedEffectExecution.782.bc}.",
-    "en": "Does {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to an ally.\n\\---\n{#SUPPORT}: The ally triggers {bounce:ParameterizedEffectExecution.782.bc}.",
-    "es": "Inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a un aliado.\n\\---\n{#SUPPORT}: El aliado activa {bounce:ParameterizedEffectExecution.782.bc}.",
-    "de": "Verursacht {magicalDamage:dmg} bei den angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern eines Verbündeten.\n\\---\n{#SUPPORT}: Der Verbündete löst {bounce:ParameterizedEffectExecution.782.bc} aus.",
-    "pt": "Inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\n{#SUPPORT}: O aliado aciona {bounce:ParameterizedEffectExecution.782.bc}."
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\n{#SUPPORT}\\_: L'allié déclenche {bounce:bc}.",
+    "en": "Does {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to an ally.\n\\---\n{#SUPPORT}: The ally triggers {bounce:bc}.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a un aliado.\n\\---\n{#SUPPORT}: El aliado activa {bounce:bc}.",
+    "de": "Fügt Gegnern, die an einen Verbündeten angrenzen\\_<sprite name=\"cell_cross\">, {magicalDamage:dmg} zu.\n\\---\n{#SUPPORT}: Der Verbündete löst {bounce:bc} aus.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\n{#SUPPORT}: O aliado aciona {bounce:bc}."
   }
 }

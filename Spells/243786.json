@@ -11,7 +11,7 @@
   "m_Name": "243786",
   "m_id": 243786,
   "m_displayName": "NECROME - WATER - Vague Nécrome",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 1896825235,
     "b": 1901967508,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "42524560f0fe7dc4ba61c439967c8891"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      792174,
+      443,
       134,
-      796975
+      2670
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -89,24 +89,63 @@
         "filters": []
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d029c77eb1947aa4588bf02f4dfdefc0",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "value": 8
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "e",
-          "value": 8
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL"
+      ]
     }
   },
   "name": {
@@ -117,7 +156,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "Inflige {value:d}  dégâts.\nDEUIL : Soigne votre héros de {value:e} POINTS DE VIE.\n",
+    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}\\_: Soigne votre héros de {PVvalue:e}.",
     "en": "",
     "es": "",
     "de": "",

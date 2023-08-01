@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      36,
-      454305,
-      386592
+      1901,
+      2179,
+      2358
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -138,7 +138,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 26
+            "value": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -151,7 +151,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 19,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "Bper",
@@ -175,7 +175,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "value": 9
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -188,7 +188,40 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 19,
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "",

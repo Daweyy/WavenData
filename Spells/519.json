@@ -11,7 +11,7 @@
   "m_Name": "519",
   "m_id": 519,
   "m_displayName": "NECROME - AIR - Souffle Nécrome",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 1404448110,
     "b": -1435580364,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "ec58ab8664dccbb498dce8dbb9c603c2"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      791523,
-      792587,
-      792980
+      502,
+      433,
+      1956
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -83,55 +83,132 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "TwoCastTargetDefinition",
-      "selector1": {
-        "type": "FilteredCharacterSelector",
-        "filters": []
-      },
-      "selector2": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "FirstCastTargetSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "DynamicValueEvaluatorCondition",
+        "value": {
+          "type": "SumValue",
+          "referenceId": null,
+          "valuesToSum": [
+            {
+              "type": "CompanionsInReserveValue",
+              "referenceId": null,
+              "playerSelector": {
+                "type": "CasterSelector"
+              },
+              "companionState": 2
             },
-            "distance": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
+            {
+              "type": "NumberOfEquippedCompanionsWithFamilyValue",
+              "referenceId": "",
+              "player": {
+                "type": "CasterSelector"
+              },
+              "family": 68
+            }
+          ]
+        },
+        "evaluator": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "selectorIfTrue": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
               }
             }
-          }
-        ]
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "415d015d354e5ec48a1a320d94224567",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "value": 8
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
-          "type": "CompanionsInReserveValue",
-          "referenceId": "c",
-          "playerSelector": {
-            "type": "OwnerOfSelector",
-            "selector": {
-              "type": "CasterSelector"
-            }
-          },
-          "companionState": 2
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "PUSH",
+        "DEUIL"
+      ]
     }
   },
   "name": {
@@ -142,7 +219,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "Inflige {value:d} dégâts.\nDEUIL : Repousse de 1 case par compagnon mort",
+    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}\\_: {#PUSH} la cible de {cell:v}.",
     "en": "",
     "es": "",
     "de": "",

@@ -10,7 +10,7 @@
   },
   "m_Name": "156007",
   "m_id": 156007,
-  "m_displayName": "WEAPON - ENIRIPSA - VORACIUS - Maîtrise Voracius",
+  "m_displayName": "WEAPON - ENIRIPSA - VORACIUS - Vitalité Voracius",
   "m_availability": 3,
   "m_i18nNameId": {
     "a": -2130648101,
@@ -32,34 +32,37 @@
   "values": {
     "type": "SkillDefinition",
     "id": 156007,
+    "skillTier": 1,
     "skillUsageType": 5,
-    "hideDescriptionInTooltip": true,
+    "hideDescriptionInTooltip": false,
     "passiveModifiers": [],
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "Weapon.202.s"
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 2
+        }
       ],
-      "hasEffects": false,
-      "keywordReferences": [
-        "DRAIN"
-      ]
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "Maîtrise Voracius",
+    "fr": "Vitalité Voracius",
     "en": "Voracius Mastery",
     "es": "Dominio Voracius",
     "de": "Nimmersatt-Beherrschung",
     "pt": "Domínio Voracius"
   },
   "description": {
-    "fr": "{DRAINvalue:Weapon.202.s,+,percent} à votre héros en plus.",
-    "en": "{DRAINvalue:Weapon.202.s,+,percent} extra to your hero.",
-    "es": "{DRAINvalue:Weapon.202.s,+,percent} más a tu héroe.",
-    "de": "{DRAINvalue:Weapon.202.s,+,percent} zusätzlich für deinen Helden.",
-    "pt": "{DRAINvalue:Weapon.202.s,+,percent} ao seu herói."
+    "fr": "{%FightStarted} Votre héros gagne {value:pc,percent} de sa {%PVMAX} en {%AT}.",
+    "en": "{%FightStarted} Your hero gains {value:pc,percent} of their {%PVMAX} as {%AT}.",
+    "es": "{%FightStarted} Tu héroe gana un {value:pc,percent} de su {%PVMAX} en {%AT}.",
+    "de": "{%FightStarted} Dein Held erhält {value:pc,percent} seiner {%PVMAX} als {%AT}.",
+    "pt": "{%FightStarted} Seu herói ganha {value:pc,percent} dos seus {%PVMAX} em {%AT}."
   }
 }

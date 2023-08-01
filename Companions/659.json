@@ -10,8 +10,8 @@
   },
   "m_Name": "659",
   "m_id": 659,
-  "m_displayName": "NECROME - MEURT-DE-FAIM ",
-  "m_availability": 2,
+  "m_displayName": "NECROMIQUE - Meurt-De-Faim",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -1751345687,
     "b": -519703996,
@@ -34,17 +34,23 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 9405,
       "skinIds": [
-        1
+        9405
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.894.meurt"
+      ],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "STREAMOFSOULS",
+        "NECROMIQUE_HEROS"
+      ]
     },
     "families": [
       68
@@ -53,7 +59,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "value": 170
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -62,8 +68,8 @@
     },
     "actionValue": {
       "type": "ConstIntegerValue",
-      "referenceId": "",
-      "value": 20
+      "referenceId": null,
+      "value": 30
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -82,7 +88,14 @@
     "spells": [],
     "merchantCosts": [],
     "premiumItem": false,
-    "unlockableSkillIds": [],
+    "unlockableSkillIds": [
+      48,
+      46,
+      45,
+      36,
+      962,
+      380
+    ],
     "rarity": 2,
     "equipableByPlayers": true,
     "upgradeRuleId": 407,
@@ -103,17 +116,73 @@
         "filters": [
           {
             "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
-      "casterHeroRange": null,
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
     "cost": [
       {
         "type": "ElementPointsCost",
-        "element": 12,
+        "element": 13,
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
@@ -125,14 +194,14 @@
     "gatheringAbilities": []
   },
   "name": {
-    "fr": "MEURT-DE-FAIM",
+    "fr": "Meurt-De-Faim",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "ATTAQUE : Déclenche FLUX DES ÂMES si la cible est BOUEUSE. \n+30% aux dégâts de FLUX DES ÂMES.\nHÉROS NÉCROME",
+    "fr": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%Attack} Déclenche {#STREAMOFSOULS} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.\n\\---\nVos {#STREAMOFSOULS} infligent {value:ParameterizedEffectExecution.894.meurt,+,percent} de l'{%AT} de votre héros en <b>DÉGÂTS</b> supplémentaires.",
     "en": "",
     "es": "",
     "de": "",

@@ -41,8 +41,8 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      147029,
-      156793,
+      1001,
+      2779,
       515
     ],
     "upgradeRuleId": 247,
@@ -170,7 +170,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 26
+            "value": 24
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -183,7 +183,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 911,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "d1",
@@ -200,11 +200,43 @@
           "type": "ConstIntegerValue",
           "referenceId": "d1",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23,
+            91,
+            48
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.640.pt"
-      ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "PEAT",
@@ -220,10 +252,10 @@
     "pt": "Bálsamo Turfoso"
   },
   "description": {
-    "fr": "Soigne un allié de {PVvalue:ar} et Inflige {magicalDamage:dmg} à un adversaire aligné à lui.\n\\---\n{#SUPPORT}\\_: Déclenche {peat:ParameterizedEffectExecution.640.pt}.",
-    "en": "Heals an ally {PVvalue:ar} and does {magicalDamage:dmg} to an opponent in line with the them.\n\\---\n{#SUPPORT}: Triggers {peat:ParameterizedEffectExecution.640.pt}.",
-    "es": "Cura a un aliado {PVvalue:ar} e inflige {magicalDamage:dmg} a un adversario alineado con él.\n\\---\n{#SUPPORT}: Activa {peat:ParameterizedEffectExecution.640.pt}.",
-    "de": "Heilt einen Verbündeten um {PVvalue:ar} und verursacht bei einem Gegner in derselben Reihe {magicalDamage:dmg}.\n\\---\n{#SUPPORT}: Löst {peat:ParameterizedEffectExecution.640.pt} aus.",
-    "pt": "Cura um aliado em {PVvalue:ar} e inflige {magicalDamage:dmg} a um adversário alinhado a ele.\n\\---\n{#SUPPORT}: Aciona {peat:ParameterizedEffectExecution.640.pt}."
+    "fr": "Soigne un allié de {PVvalue:ar} et inflige {magicalDamage:dmg} à un adversaire aligné à lui.\n\\---\n{#SUPPORT}\\_: Déclenche {peat:pt}.",
+    "en": "Heals an ally {PVvalue:ar} and does {magicalDamage:dmg} to an opponent in line with them.\n\\---\n{#SUPPORT}: Triggers {peat:pt}.",
+    "es": "Cura a un aliado {PVvalue:ar} e inflige {magicalDamage:dmg} a un adversario alineado con él.\n\\---\n{#SUPPORT}: Activa {peat:pt}.",
+    "de": "Heilt einen Verbündeten um {PVvalue:ar} und fügt einem Gegner in derselben Reihe {magicalDamage:dmg} zu.\n\\---\n{#SUPPORT}: Löst {peat:pt} aus.",
+    "pt": "Cura um aliado em {PVvalue:ar} e inflige {magicalDamage:dmg} a um adversário alinhado a ele.\n\\---\n{#SUPPORT}: Aciona {peat:pt}."
   }
 }

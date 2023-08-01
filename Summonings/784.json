@@ -11,7 +11,7 @@
   "m_Name": "784",
   "m_id": 784,
   "m_displayName": "EQUIPMENT - PIN - CRAQUELEUR - Crakdark",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 456528124,
     "b": -879160300,
@@ -59,6 +59,10 @@
       "hasEffects": true,
       "keywordReferences": [
         "OBJECTMECHANISM",
+        "FLAME",
+        "RAIN",
+        "LIGHTNING",
+        "ROCK",
         {
           "type": 7,
           "id": 1607
@@ -114,7 +118,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightTurnStarted} Gagne un état élémentaire aléatoire et pose un {ObjectMechanism:1607}.\n\\---\nLes rochers déclenchent un effet de pluie, rocher, vague ou flamme correspondant à l'état de Crakdark\n\\---\nCrakdark est insensible aux effets de sorts du même élément que celui de l'état sur lui.\n\\---\n{%AT} : {ATvalue:pc,+,percent} par {ObjectMechanism:1607!} sur le terrain.",
+    "fr": "{%FightTurnStarted} {Summoning:784!} gagne un {%ELEMENTARY_STATE} aléatoire et pose un {ObjectMechanism:1607}.\n\\---\nLes {ObjectMechanism:1607,plural:other!} déclenchent un effet de {#ROCK}, {#LIGHTNING}, {#RAIN} ou {#FLAME} correspondant à l'état présent sur {Summoning:784!}.\n\\---\n{Summoning:784!} est insensible aux effets des sorts du même élément présent sur lui.\n\\---\n{%AT} : {ATvalue:pc,+,percent} par {ObjectMechanism:1607!} sur le terrain.",
     "en": "",
     "es": "",
     "de": "",

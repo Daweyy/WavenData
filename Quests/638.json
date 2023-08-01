@@ -11,7 +11,7 @@
   "m_Name": "638",
   "m_id": 638,
   "m_displayName": "NATION - ASTRUB - INTRO 03",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -384627217,
     "b": -2018524316,
@@ -47,7 +47,61 @@
         "difficulty": 1,
         "monsterLevel": 2,
         "rewards": null,
-        "oneTimeRewards": null,
+        "oneTimeRewards": {
+          "type": "SerializedDropTableDefinitionProvider",
+          "dropTable": {
+            "type": "DropTable",
+            "entries": [
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 58,
+                    "value": 611
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 1
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 1
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 58,
+                    "value": 972
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 1
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "availabilityValue": 3
+        },
         "forcedDestinationOnExit": null
       }
     ]

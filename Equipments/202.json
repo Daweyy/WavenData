@@ -11,7 +11,7 @@
   "m_Name": "202",
   "m_id": 202,
   "m_displayName": "RING - BEGINNER - COMMON - Anneau Rnitorin",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -2057181859,
     "b": -892855516,
@@ -49,18 +49,25 @@
     "rarity": 0,
     "unlockableSkillIds": [
       888,
-      788536,
+      606,
       488,
-      786902,
-      786985,
-      787202
+      688,
+      682,
+      677,
+      2763
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": 10
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -69,18 +76,6 @@
     "equipmentType": 1,
     "petSkins": null,
     "passiveModifiers": [
-      {
-        "type": "CaracBuffModifier",
-        "holder": 7,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 10
-        },
-        "caracIds": [
-          1
-        ]
-      },
       {
         "type": "CaracBuffModifier",
         "holder": 7,
@@ -105,7 +100,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%COMPANION_APPEARANCE} {value:x,percent,+} à sa {%PVMAX}.",
     "en": "",
     "es": "",
     "de": "",

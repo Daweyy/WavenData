@@ -56,7 +56,17 @@
       "heroSkillPointsCost": 10,
       "bannedInPvp": false
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
@@ -88,7 +98,13 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 50
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -102,7 +118,7 @@
     "pt": "Armadura Brutal"
   },
   "description": {
-    "fr": "Inflige l'{%AR} de votre héros à la cible,\\v puis la consomme.",
+    "fr": "Inflige {value:v,percent} de l'{%AR} de votre héros à la cible.\\v",
     "en": "Inflicts your hero's {%AR} on the target\\v then consumes it.",
     "es": "Inflige la {%AR} de tu héroe al objetivo\\v y la consume.",
     "de": "Fügt dem Ziel die {%AR} deines Helden als Schaden zu \\vund verbraucht sie dann.",

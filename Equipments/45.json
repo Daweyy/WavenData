@@ -10,8 +10,8 @@
   },
   "m_Name": "45",
   "m_id": 45,
-  "m_displayName": "NECROME - Deuil de Toros",
-  "m_availability": 2,
+  "m_displayName": "RING - NECROME - Deuil de Toross",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -211782428,
     "b": 1832019732,
@@ -27,17 +27,17 @@
     "e": -1362513457
   },
   "m_i18nBgDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -211782428,
+    "b": 1832019732,
+    "c": 1699504474,
+    "d": -1537327202,
+    "e": -1130632923
   },
   "m_illustration": {
-    "assetGuid": ""
+    "assetGuid": "0a37e2d1ebc222a46bf05d2fbed23f84"
   },
   "m_illustrationBig": {
-    "assetGuid": ""
+    "assetGuid": "0a37e2d1ebc222a46bf05d2fbed23f84"
   },
   "m_affinity": 0,
   "m_elementaryStates": 1,
@@ -47,39 +47,77 @@
     "merchantCosts": [],
     "premiumItem": false,
     "rarity": 2,
-    "unlockableSkillIds": [],
+    "unlockableSkillIds": [
+      300,
+      472,
+      282,
+      773,
+      281
+    ],
     "equipableByPlayers": true,
     "upgradeRuleId": 636,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.894.Deuil"
+      ],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "STREAMOFSOULS"
+      ]
     },
     "family": 68,
     "equipmentType": 1,
     "petSkins": null,
-    "passiveModifiers": [],
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          58
+        ]
+      },
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          1
+        ]
+      }
+    ],
     "spellEffectData": []
   },
   "name": {
-    "fr": "Deuil de Toros",
+    "fr": "Deuil de Toross",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "+30% aux dégâts de FLUX DES ÂMES.\n",
+    "fr": "{value:ParameterizedEffectExecution.894.Deuil,+,percent} de <b>DÉGÂTS</b> à vos {#STREAMOFSOULS}.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "bgDescription": {
-    "fr": "",
+    "fr": "{%empty}",
     "en": "",
     "es": "",
     "de": "",

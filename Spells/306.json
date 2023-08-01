@@ -11,7 +11,7 @@
   "m_Name": "306",
   "m_id": 306,
   "m_displayName": "SACRIEUR - ARME - TONFAVIK - AIR - Tonfa Accablant",
-  "m_availability": 3,
+  "m_availability": 2,
   "m_i18nNameId": {
     "a": -1757273910,
     "b": 149780628,
@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      476,
+      2419,
       678,
-      588294
+      1835
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -169,7 +169,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 936,
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "percentSkill",
@@ -206,7 +206,40 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 936,
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "",

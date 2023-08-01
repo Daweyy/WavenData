@@ -73,7 +73,7 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 7
+          "value": 3
         }
       }
     ],
@@ -81,16 +81,7 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
-            }
-          }
-        ]
+        "type": "CasterHeroSelector"
       }
     },
     "spellEffectData": [
@@ -106,13 +97,7 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "at",
-          "value": 50
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -126,7 +111,7 @@
     "pt": "Voo Jikan"
   },
   "description": {
-    "fr": "Inflige {value:at, percent} de l'{%AT} de votre héros par {%AURA_OWL} qu'il possède.\n\\---\nLibère ses {%AURA_OWL, plural:other}.",
+    "fr": "Libère les {%AURA_OWL, plural:other} de votre héros.",
     "en": "Inflicts {value:at, percent} of your hero's {%AT} per {%AURA_OWL} that they have.\n\\---\nReleases their {%AURA_OWL, plural:other}.",
     "es": "Inflige {value:at, percent} del {%AT} de tu héroe por {%AURA_OWL} que tenga.\n\\---\nLibera sus {%AURA_OWL, plural:other}.",
     "de": "Verursacht {value:at, percent} des {%AT} deines Helden pro {%AURA_OWL}, die er besitzt, als Schaden.\n\\---\nLöst seine {%AURA_OWL, plural:other} aus.",

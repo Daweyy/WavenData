@@ -10,8 +10,8 @@
   },
   "m_Name": "886",
   "m_id": 886,
-  "m_displayName": "NECROME - EARTH - éboulement Nécromique",
-  "m_availability": 2,
+  "m_displayName": "NECROME - EARTH - Éboulement Nécromique",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": -441836574,
     "b": 541411732,
@@ -28,7 +28,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "6e2700bac4669b446a8b94e532bd9372"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -42,8 +42,8 @@
     "rarity": 0,
     "unlockableSkillIds": [
       713,
-      793992,
-      729
+      386,
+      51
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -126,30 +126,87 @@
         }
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ff630699b6093d64d9984a334b55264c",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "value": 8
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "NECROMAGE",
+        "STREAMOFSOULS"
+      ]
     }
   },
   "name": {
-    "fr": "éboulement Nécromique",
+    "fr": "Éboulement Nécromique",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "Inflige {value:d}  dégâts sur les cases adjacentes à votre héros. Déclenche FLUX DES ÂMES par adversaire touché.\nNÉCROMAGE",
+    "fr": "Inflige {magicalDamage:d} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros. Déclenche un {#STREAMOFSOULS} par adversaire touché.\n\\---\n{#NECROMAGE}",
     "en": "",
     "es": "",
     "de": "",

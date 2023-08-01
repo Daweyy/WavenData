@@ -11,7 +11,7 @@
   "m_Name": "147",
   "m_id": 147,
   "m_displayName": "RING - BEGINNER - COMMON - Anneau Massif",
-  "m_availability": 2,
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 686783858,
     "b": -1762325228,
@@ -48,19 +48,26 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      787737,
+      650,
       939,
-      788253,
-      785178,
-      785235,
-      785723
+      648,
+      710,
+      706,
+      697,
+      2846
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 594,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "x",
+          "value": 10
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -69,18 +76,6 @@
     "equipmentType": 1,
     "petSkins": null,
     "passiveModifiers": [
-      {
-        "type": "CaracBuffModifier",
-        "holder": 7,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 10
-        },
-        "caracIds": [
-          58
-        ]
-      },
       {
         "type": "CaracBuffModifier",
         "holder": 0,
@@ -105,7 +100,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%empty}",
+    "fr": "{%COMPANION_APPEARANCE} {value:x,percent,+} d'{%AT} à vos compagnons.",
     "en": "",
     "es": "",
     "de": "",

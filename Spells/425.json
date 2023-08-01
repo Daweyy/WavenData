@@ -41,9 +41,9 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
-      151923,
+      2793,
       786,
-      503434
+      2015
     ],
     "upgradeRuleId": 247,
     "canCrit": true,
@@ -112,7 +112,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 30
+            "value": 26
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -125,7 +125,7 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 759,
+              "skillId": 382,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "d1",
@@ -149,7 +149,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 41
+            "value": 37
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -163,7 +163,41 @@
           "skillBuffs": [
             {
               "type": "SkillBuff",
-              "skillId": 759,
+              "skillId": 382,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            90,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 382,
               "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "",
@@ -177,9 +211,7 @@
           "addInsteadOfMultiply": false
         }
       ],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.756.hl"
-      ],
+      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "HAIL",
@@ -195,10 +227,10 @@
     "pt": "Palavra de Granizo"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire <b>OU</b> Soigne un allié de {PVvalue:h}.\n\\---\n{#SUPPORT}\\_: Déclenche {hail:ParameterizedEffectExecution.756.hl}.",
-    "en": "Does {magicalDamage:dmg} to an opponent <b>OR</b> heals an ally {PVvalue:h}.\n\\---\n{#SUPPORT}: Triggers {hail:ParameterizedEffectExecution.756.hl}.",
-    "es": "Inflige {magicalDamage:dmg} a un adversario <b>O</b> Cura a un aliado {PVvalue:h}.\n\\---\n{#SUPPORT}: Activa {hail:ParameterizedEffectExecution.756.hl}.",
-    "de": "Verursacht bei einem Gegner {magicalDamage:dmg} <b>ODER</b> heilt einen Verbündeten um {PVvalue:h}.\n\\---\n{#SUPPORT}: Löst {hail:ParameterizedEffectExecution.756.hl} aus.",
-    "pt": "Inflige {magicalDamage:dmg} a um adversário <b>OU</b> Cura um aliado em {PVvalue:h}.\n\\---\n{#SUPPORT}: Aciona {hail:ParameterizedEffectExecution.756.hl}."
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire <b>OU</b> Soigne un allié de {PVvalue:h}.\n\\---\n{#SUPPORT}\\_: Déclenche {hail:hl}.",
+    "en": "Does {magicalDamage:dmg} to an opponent <b>OR</b> heals an ally {PVvalue:h}.\n\\---\n{#SUPPORT}: Triggers {hail:hl}.",
+    "es": "Inflige {magicalDamage:dmg} a un adversario <b>O</b> Cura a un aliado {PVvalue:h}.\n\\---\n{#SUPPORT}: Activa {hail:hl}.",
+    "de": "Fügt einem Gegner {magicalDamage:dmg} zu <b>ODER</b> heilt einen Verbündeten um {PVvalue:h}.\n\\---\n{#SUPPORT}: Löst {hail:hl} aus.",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário <b>OU</b> Cura um aliado em {PVvalue:h}.\n\\---\n{#SUPPORT}: Aciona {hail:hl}."
   }
 }

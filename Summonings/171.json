@@ -10,8 +10,8 @@
   },
   "m_Name": "171",
   "m_id": 171,
-  "m_displayName": "EQUIPMENT - PIN - TAURE - Berger Divin Torra Bella",
-  "m_availability": 2,
+  "m_displayName": "EQUIPMENT - PIN - TAURE - Torra Bella",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 2060606423,
     "b": 1199955892,
@@ -50,9 +50,15 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "LinearLevelOnlyBasedDynamicValue",
           "referenceId": "v",
-          "value": 200
+          "baseValue": 0,
+          "factor": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
@@ -73,7 +79,7 @@
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 2
+      "value": 3
     },
     "actionValue": {
       "type": "ConstIntegerValue",
@@ -103,21 +109,21 @@
     "growInto": null
   },
   "name": {
-    "fr": "Berger Divin Torra Bella",
+    "fr": "Torra Bella",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "Lorsqu'un adversaire subit une {#COLLISION}\\_:\\v{Summoning:171!} gagne autant d'{%AR} que de dégâts infligés.\n\\---\n{value:v,+,percent} aux dégâts de {#COLLISION} des <b>TAURES</b>.",
+    "fr": "Lorsqu'un adversaire subit une {#COLLISION}\\_:\\v{Summoning:171!} gagne autant d'{%AR} que de dégâts infligés.\n\\---\nLorsqu’un {%Family_Taure_Name,plural:one} attaque\\_: Repousse la cible de {cell:c}.\n\\---\n{value:v,+,percent} aux <b>DÉGÂTS</b> de {#COLLISION} des {%Family_Taure_Name,plural:other}.",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "championName": {
-    "fr": "Berger Divin Torra Bella",
+    "fr": "Torra Bella",
     "en": "",
     "es": "",
     "de": "",

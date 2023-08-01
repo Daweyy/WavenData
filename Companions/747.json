@@ -10,8 +10,8 @@
   },
   "m_Name": "747",
   "m_id": 747,
-  "m_displayName": "NECROME - CLAQUE-FAIM",
-  "m_availability": 2,
+  "m_displayName": "NECROMIQUE - Claque-Faim",
+  "m_availability": 3,
   "m_i18nNameId": {
     "a": 463163868,
     "b": 293758932,
@@ -34,9 +34,9 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 82,
       "skinIds": [
-        1
+        82
       ]
     },
     "precomputedData": {
@@ -44,7 +44,11 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "DEUIL",
+        "STREAMOFSOULS",
+        "NECROMIQUE_HEROS"
+      ]
     },
     "families": [
       68
@@ -53,7 +57,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "value": 180
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -63,7 +67,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 20
+      "value": 25
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -82,7 +86,14 @@
     "spells": [],
     "merchantCosts": [],
     "premiumItem": false,
-    "unlockableSkillIds": [],
+    "unlockableSkillIds": [
+      561,
+      111,
+      110,
+      102,
+      613,
+      93
+    ],
     "rarity": 2,
     "equipableByPlayers": true,
     "upgradeRuleId": 407,
@@ -103,17 +114,73 @@
         "filters": [
           {
             "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
-      "casterHeroRange": null,
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
     "cost": [
       {
         "type": "ElementPointsCost",
-        "element": 13,
+        "element": 11,
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
@@ -132,7 +199,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "ATTAQUE : Déclenche FLUX DES ÂMES si la cible est HUILÉE. \n+1 ÂME à FLUX DES ÂMES.\nHÉROS NÉCROME",
+    "fr": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%Attack} Déclenche {#STREAMOFSOULS} si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.\n\\---\nVos {#STREAMOFSOULS} ont un déclenchement supplémentaire.",
     "en": "",
     "es": "",
     "de": "",
