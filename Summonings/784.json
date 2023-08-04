@@ -58,11 +58,15 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        {
+          "type": 20,
+          "id": 14
+        },
         "OBJECTMECHANISM",
-        "FLAME",
-        "RAIN",
-        "LIGHTNING",
-        "ROCK",
+        {
+          "type": 7,
+          "id": 355
+        },
         {
           "type": 7,
           "id": 1607
@@ -118,7 +122,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightTurnStarted} {Summoning:784!} gagne un {%ELEMENTARY_STATE} aléatoire et pose un {ObjectMechanism:1607}.\n\\---\nLes {ObjectMechanism:1607,plural:other!} déclenchent un effet de {#ROCK}, {#LIGHTNING}, {#RAIN} ou {#FLAME} correspondant à l'état présent sur {Summoning:784!}.\n\\---\n{Summoning:784!} est insensible aux effets des sorts du même élément présent sur lui.\n\\---\n{%AT} : {ATvalue:pc,+,percent} par {ObjectMechanism:1607!} sur le terrain.",
+    "fr": "{%FightTurnStarted} {Summoning:784!} gagne un {%ELEMENTARY_STATE} aléatoire et pose un {ObjectMechanism:1607}, si  {%astral} est déjà présent sur lui pose un {ObjectMechanism:355} à la place.\n\\---\n{Summoning:784!} est insensible aux effets des sorts du même élément présent sur lui.\n\\---\n{%AT} : Inflige {value:pc,percent} de son {%AT} en plus par {ObjectMechanism:1607!} sur le terrain.",
     "en": "",
     "es": "",
     "de": "",

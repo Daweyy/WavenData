@@ -17,6 +17,8 @@
     "id": 25,
     "firstWorldId": 10,
     "playerInitialBoat": 78,
+    "asyncArenaWorld": 186,
+    "pvpWorld": 209,
     "playerInitializationConstant": {
       "type": "PlayerInitializationConstants",
       "unlockedCharacterSlots": 5
@@ -1875,7 +1877,8 @@
             44,
             638,
             1732,
-            1730
+            1730,
+            2106
           ],
           "prismAchievementIds": []
         }
@@ -2158,17 +2161,44 @@
         "type": "BackofficeShopArticle",
         "key": "com.ankama.waven.goldplatinumpass"
       },
-      "smallFoundersPackArticleKey": {
-        "type": "BackofficeShopArticle",
-        "key": "com.ankama.waven.founderspack.standard.showcase"
-      },
-      "mediumFoundersPackArticleKey": {
-        "type": "BackofficeShopArticle",
-        "key": "com.ankama.waven.founderspack.deluxe.showcase"
-      },
-      "largeFoundersPackArticleKey": {
-        "type": "BackofficeShopArticle",
-        "key": "com.ankama.waven.founderspack.premium.showcase"
+      "foundersPack": {
+        "type": "ShopArticleWithUpgrades",
+        "standardShowcase": {
+          "type": "BackofficeShopArticle",
+          "key": "com.ankama.waven.founderspack.standard.showcase"
+        },
+        "deluxeShowcase": {
+          "type": "BackofficeShopArticle",
+          "key": "com.ankama.waven.founderspack.deluxe.showcase"
+        },
+        "premiumShowcase": {
+          "type": "BackofficeShopArticle",
+          "key": "com.ankama.waven.founderspack.premium.showcase"
+        },
+        "standard": {
+          "type": "BackofficeShopArticle",
+          "key": "STEAM_APP_ID_2534320"
+        },
+        "deluxe": {
+          "type": "BackofficeShopArticle",
+          "key": "STEAM_APP_ID_2534330"
+        },
+        "premium": {
+          "type": "BackofficeShopArticle",
+          "key": "STEAM_APP_ID_2534340"
+        },
+        "standardToDeluxe": {
+          "type": "BackofficeShopArticle",
+          "key": "com.ankama.waven.founderspack.standardToDeluxe"
+        },
+        "deluxeToPremium": {
+          "type": "BackofficeShopArticle",
+          "key": "com.ankama.waven.founderspack.deluxeToPremium"
+        },
+        "standardToPremium": {
+          "type": "BackofficeShopArticle",
+          "key": "com.ankama.waven.founderspack.standardToPremium"
+        }
       },
       "smallStarterPackArticleKey": {
         "type": "BackofficeShopArticle",
@@ -2185,51 +2215,27 @@
       "allOthersArticleKeys": [
         {
           "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.hardcurrency1"
+          "key": "com.ankama.waven.gems1"
         },
         {
           "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.hardcurrency2"
+          "key": "com.ankama.waven.gems2"
         },
         {
           "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.hardcurrency3"
+          "key": "com.ankama.waven.gems3"
         },
         {
           "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.hardcurrency4"
+          "key": "com.ankama.waven.gems4"
         },
         {
           "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.hardcurrency5"
+          "key": "com.ankama.waven.gems5"
         },
         {
           "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.hardcurrency6"
-        },
-        {
-          "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.founderspack.standard"
-        },
-        {
-          "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.founderspack.deluxe"
-        },
-        {
-          "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.founderspack.premium"
-        },
-        {
-          "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.founderspack.standardToDeluxe"
-        },
-        {
-          "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.founderspack.standardToPremium"
-        },
-        {
-          "type": "BackofficeShopArticle",
-          "key": "com.ankama.waven.founderspack.deluxeToPremium"
+          "key": "com.ankama.waven.gems6"
         }
       ],
       "characterSlotPrice": [

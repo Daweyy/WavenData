@@ -56,6 +56,11 @@
         },
         {
           "type": "ConstIntegerValue",
+          "referenceId": "limit",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "d",
           "value": 3
         }
@@ -63,6 +68,7 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        "TENAILLE",
         {
           "type": 4,
           "id": 4
@@ -118,7 +124,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%FightStarted} Invoque un {Summoning:4}.\n\\---\n{%attack} Téléporte le {Summoning:4} à coté de la cible et déclenche son {%AT} sur la cible, puis se téléporte de {cell:d}.\n\\---\n{%Death} {ATvalue:pc,percent,+} au {Summoning:4}.",
+    "fr": "{%FightStarted} Invoque un {Summoning:4}.\n\\---\n{%attack} Si la cible est en {#TENAILLE}, téléporte le {Summoning:4} à coté de la cible et déclenche son {%AT} sur la cible, puis le téléporte de {cell:d}.\n\\---\n<rem>Limité à {value:limit} fois par tour.</rem>\n\\---\n{%Death} {ATvalue:pc,percent,+} au {Summoning:4}.",
     "en": "",
     "es": "",
     "de": "",

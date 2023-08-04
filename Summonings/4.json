@@ -56,6 +56,11 @@
         },
         {
           "type": "ConstIntegerValue",
+          "referenceId": "limit",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "t",
           "value": 3
         }
@@ -66,7 +71,8 @@
         {
           "type": 4,
           "id": 23387
-        }
+        },
+        "TENAILLE"
       ]
     },
     "families": [
@@ -118,7 +124,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "{%attack} Téléporte {Summoning:23387} à coté de la cible et déclenche son {%AT} sur la cible, puis se téléporte de {cell:t}. \n\\---\n{%Death} {ATvalue:pc,percent,+} à {Summoning:23387}.",
+    "fr": "{%attack} Si la cible est en {#TENAILLE} téléporte {Summoning:23387} à coté de la cible et déclenche son {%AT} sur la cible, puis le téléporte de {cell:t}.\n\\---\n<rem>Limité à {value:limit} fois par tour.</rem>\n\\---\n{%Death} {ATvalue:pc,percent,+} à {Summoning:23387}.",
     "en": "",
     "es": "",
     "de": "",

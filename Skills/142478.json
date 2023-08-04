@@ -41,12 +41,17 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 75
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 15
+            "value": 20
           },
           "factor": {
             "type": "CustomScalingFactor",
@@ -89,7 +94,7 @@
     "pt": "Restabelecimento Voldorak"
   },
   "description": {
-    "fr": "Lorsque vous libérez une {aura:40}\\_: Inflige également 75% de ses dégâts aux adversaires alignés avec la cible.",
+    "fr": "Lorsque vous libérez une {aura:40}\\_: Inflige également {value:pc,percent} de ses <b>DÉGÂTS</b> aux adversaires alignés avec la cible.",
     "en": "When you release {aura:40,plural:other}: Also does damage to enemies in line with the target.",
     "es": "Cuando liberas un {aura:40}: Inflige también los daños a todos los enemigos alineados con el objetivo.",
     "de": "Wenn du eine {aura:40} auslöst: Fügt allen Gegnern, die sich in derselben Reihe wie das Ziel befinden, ebenfalls Schaden zu.",
