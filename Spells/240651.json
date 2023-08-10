@@ -83,30 +83,17 @@
     "castTarget": {
       "type": "ConditionalCastTargetDefinition",
       "condition": {
-        "type": "NumberOfEntityCondition",
+        "type": "PropertyCondition",
         "selector": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllFloorMechanismsSelector"
-          },
-          "filters": [
-            {
-              "type": "OwnerFilter",
-              "isIdentical": true,
-              "reference": {
-                "type": "CasterSelector"
-              }
-            }
-          ]
+          "type": "CasterHeroSelector"
         },
-        "value": {
-          "type": "GreaterEqualThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 2
+        "comparison": 2,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 189
           }
-        }
+        ]
       },
       "selectorIfTrue": {
         "type": "TwoCastTargetDefinition",
@@ -174,7 +161,7 @@
   "name": {
     "fr": "Repousse Shugen",
     "en": "Shugen Push",
-    "es": "Empuje Fab'hugen",
+    "es": "Empujón Fab'hugen",
     "de": "Shugen-Rückstoß",
     "pt": "Empurrão Shugen"
   },
