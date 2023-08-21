@@ -1,4 +1,4 @@
 # Waven Game Data
 Please build something amazing ✨
 
-Extract from build 0.12.1.40485
+Extract from build 0.12.2.40522
