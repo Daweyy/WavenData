@@ -64,6 +64,11 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 4
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "x",
           "value": 1
         }
@@ -100,11 +105,11 @@
     "pt": "Anel Télo"
   },
   "description": {
-    "fr": "{%COMPANION_APPEARANCE} Piochez {value:x}\\_{x, plural, one[sort] other[sorts]}.",
-    "en": "{%COMPANION_APPEARANCE} Draw {value:x}\\_{x, plural, one[spell] other[spells]}.",
-    "es": "{%COMPANION_APPEARANCE} Sacas {value:x}\\_{x, plural, one[hechizo] other[hechizos]}.",
-    "de": "{%COMPANION_APPEARANCE}: Zieht {value:x}\\_{x, plural, one[Zauber] other[Zauber]}.",
-    "pt": "{%COMPANION_APPEARANCE} Compre {value:x}\\_{x, plural, one[feitiço] other[feitiços]}."
+    "fr": "{%COMPANION_APPEARANCE} Piochez {value:x}\\_{x, plural, one[sort] other[sorts]}.\n\\---\n<rem>Limité à {value:draw} fois par tour</rem> ",
+    "en": "{%COMPANION_APPEARANCE} Draw {value:x}\\_{x, plural, one[spell] other[spells]}.\n\\---\n<rem>Limit: {value:draw} {draw, plural, one[time] other[times]} per turn.</rem> ",
+    "es": "{%COMPANION_APPEARANCE} Sacas {value:x}\\_{x, plural, one[hechizo] other[hechizos]}.\n\\---\n<rem>Limitado a {value:draw} {draw, plural, one[vez] other[veces]} por turno</rem> ",
+    "de": "{%COMPANION_APPEARANCE} Zieht {value:x}\\_{x, plural, one[Zauber] other[Zauber]}.\n\\---\n<rem>Auf {value:draw}-mal pro Runde begrenzt.</rem>",
+    "pt": "{%COMPANION_APPEARANCE} Compre {value:x}\\_{x, plural, one[feitiço] other[feitiços]}.\n\\---\n<rem>Limite de {value:draw} {??, plural, one[vez] other[vezes]} por turno</rem> "
   },
   "bgDescription": {
     "fr": "Cet anneau vous aidera à écrire la suite de vos aventures, mais ne vous préservera pas d'une fin tragique.",

@@ -64,18 +64,20 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "min",
-          "value": 3
+          "referenceId": "g",
+          "value": 15
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "max",
-          "value": 4
+          "referenceId": "pow",
+          "value": 30
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "TOME"
+      ]
     },
     "family": 0,
     "equipmentType": 1,
@@ -105,11 +107,11 @@
     "pt": "Anel Pressão"
   },
   "description": {
-    "fr": "Vos sorts coûtant {value:min} et {PAvalue:max} sont placés dans votre main de départ.",
-    "en": "Your spells costing {value:min} and {PAvalue:max} are put in your hand at the start.",
-    "es": "Tus hechizos que cuesten {value:min} y {PAvalue:max} se colocan en tu mano inicial.",
-    "de": "Deine Zauber, die {value:min} und {PAvalue:max} kosten, werden in deiner Starthand platziert.",
-    "pt": "Seus feitiços que custam {value:min} e {PAvalue:max} são colocados na sua mão inicial."
+    "fr": "{#TOME} ({value:g})\n\\---\n{%FightStarted} {value:pow,percent,+} de {%pv} à votre héros.",
+    "en": "{#TOME} ({value:g})\n\\---\n{%FightStarted} {value:pow,percent,+} {%pv} to your hero.",
+    "es": "{#TOME} ({value:g})\n\\---\n{%FightStarted} {value:pow,percent,+} de {%pv} a tu héroe.",
+    "de": "{#TOME} ({value:g})\n\\---\n{%FightStarted} {value:pow,percent,+} {%pv} für deinen Helden.",
+    "pt": "{#TOME} ({value:g})\n\\---\n{%FightStarted} {value:pow,percent,+} de {%pv} ao seu herói."
   },
   "bgDescription": {
     "fr": "{%empty}",
