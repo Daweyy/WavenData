@@ -86,6 +86,23 @@
             "families": [
               40
             ]
+          },
+          {
+            "type": "EntitiesWithHighestLowestCaracFilter",
+            "superlative": 1,
+            "carac": 1
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "SummoningDefinitionFilter",
+              "condition": 1,
+              "summonings": [
+                442,
+                27,
+                17
+              ]
+            }
           }
         ]
       },
@@ -93,11 +110,8 @@
         "type": "FilteredCharacterSelector",
         "filters": [
           {
-            "type": "TeamFilter",
-            "isIdentical": true,
-            "reference": {
-              "type": "CasterSelector"
-            }
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
           },
           {
             "type": "FamilyFilter",
@@ -107,8 +121,15 @@
             ]
           },
           {
-            "type": "NotAPreviousCastTargetFilter",
-            "castTargetIndex": 0
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntitiesWithHighestLowestActionValueFilter",
+            "superlative": 1
           }
         ]
       }
