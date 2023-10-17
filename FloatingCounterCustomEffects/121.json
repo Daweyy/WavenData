@@ -39,21 +39,72 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
+          "type": "RandomRangeValue",
           "referenceId": "dmg",
-          "baseValue": {
-            "type": "RandomRangeValue",
-            "referenceId": "",
-            "max": {
+          "max": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "max",
+            "baseValue": {
               "type": "ConstIntegerValue",
-              "referenceId": "max",
+              "referenceId": "",
               "value": 45
             },
-            "min": {
+            "factor": {
+              "type": "CustomScalingFactor",
+              "computer": {
+                "type": "LinearScalingFactorComputer",
+                "scale": 0.05
+              }
+            },
+            "buffs": [
+              40,
+              24,
+              22,
+              25,
+              23
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "EffectHolderSelectorEvenIfRemoved"
+            },
+            "addInsteadOfMultiply": false
+          },
+          "min": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "min",
+            "baseValue": {
               "type": "ConstIntegerValue",
-              "referenceId": "min",
+              "referenceId": "",
               "value": 15
-            }
+            },
+            "factor": {
+              "type": "CustomScalingFactor",
+              "computer": {
+                "type": "LinearScalingFactorComputer",
+                "scale": 0.05
+              }
+            },
+            "buffs": [
+              40,
+              24,
+              22,
+              25,
+              23
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "EffectHolderSelectorEvenIfRemoved"
+            },
+            "addInsteadOfMultiply": false
+          }
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "min",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
           },
           "factor": {
             "type": "CustomScalingFactor",
@@ -64,10 +115,10 @@
           },
           "buffs": [
             40,
-            25,
+            24,
             22,
-            23,
-            24
+            25,
+            23
           ],
           "skillBuffs": [],
           "from": {
@@ -76,14 +127,32 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "min",
-          "value": 15
-        },
-        {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "max",
-          "value": 45
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 45
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0.05
+            }
+          },
+          "buffs": [
+            40,
+            24,
+            22,
+            25,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelectorEvenIfRemoved"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

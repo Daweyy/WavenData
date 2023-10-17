@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "986",
+  "m_id": 986,
+  "m_displayName": "SEASON - CIRE MOMORE - Bond dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1378446560,
+    "b": -1272481612,
+    "c": -295370903,
+    "d": 508530334,
+    "e": -1249020035
+  },
+  "m_i18nDescriptionId": {
+    "a": -1378446560,
+    "b": -1272481612,
+    "c": -295370903,
+    "d": 508530334,
+    "e": -291270444
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "95cc3e3746892a1489a829bc7eee1cbe"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0e3f7ab565e1a994399c5913832f7338"
+      },
+      {
+        "assetGuid": "5d60c9d5cc093594fb4d9b36d5c70e40"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 986,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bond d'Albuera",
+    "en": "Albueran Jump",
+    "es": "Salto de Albuera",
+    "de": "Albuera-Sprung",
+    "pt": "Salto de Albuera"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nTéléporte {Weapon:372!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à un adversaire et lui inflige son {%AT}.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeleports {Weapon:372!} to a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent and inflicts {%AT} on them.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeletransporta a {Weapon:372!} a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un adversario y le inflige su {%AT}.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeleportiert einen\\_{Weapon:372!} auf ein Feld, das an einen Gegner angrenzt\\_<sprite name=\"cell_cross\"> und verursacht bei ihm seinen {%AT,plural:one} als Schaden.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeletransporta {Weapon:372!} para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um adversário e lhe inflige seu {%AT}."
+  }
+}

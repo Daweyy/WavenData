@@ -1,0 +1,248 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1113",
+  "m_id": 1113,
+  "m_displayName": "ALBUERA - FIRE - Explosion dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -388146159,
+    "b": 400928004,
+    "c": 119550280,
+    "d": -787890291,
+    "e": 106238146
+  },
+  "m_i18nDescriptionId": {
+    "a": -388146159,
+    "b": 400928004,
+    "c": 119550280,
+    "d": -787890291,
+    "e": 1355335663
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1fdc870bb09881a43874ac7b6514c16f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1113,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3536,
+      3428,
+      3804
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "NeverAvailable"
+      },
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        104
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "4e482edcfd90f384588362e9e03d83a0",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": null,
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": null,
+              "valuesToSum": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 100
+                },
+                {
+                  "type": "MultValue",
+                  "referenceId": "",
+                  "valuesToMult": [
+                    {
+                      "type": "EntityCaracValue",
+                      "referenceId": "x",
+                      "entitySelector": {
+                        "type": "CasterSelector"
+                      },
+                      "carac": 20
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 5
+                    }
+                  ]
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 14
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "CasterSelector"
+          },
+          "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "re",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "j",
+          "value": 10
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            88,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "MAGIE_D_ALBUERA",
+        "EXPLOSION",
+        "JAUGE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Explosion d'Albuera",
+    "en": "Albuera Explosion",
+    "es": "Explosión de Albuera",
+    "de": "Albuera-Explosion",
+    "pt": "Explosão de Albuera"
+  },
+  "description": {
+    "fr": "Inflige {value:v} dégâts.\n\\---\n{#Jauge} ({value:j}) : Déclenche {value:re} {explosion:ex} autour de la cible.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Jauges générées : {value:x}</rem>",
+    "en": "Does {value:v} damage.\n\\---\n{#Jauge} ({value:j}): Triggers {explosion:ex} {value:re} {re, plural, one[time] other[times]} around the target.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Gauges generated: {value:x}</rem>",
+    "es": "Inflige {value:v} de daño.\n\\---\n{#Jauge} ({value:j}): Activa {value:re} {explosion:ex} alrededor del objetivo.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Indicadores generados: {value:x}</rem>",
+    "de": "Verursacht {value:v} Schaden.\n\\---\n{#Jauge} ({value:j}): Löst {value:re} {explosion:ex} im Umkreise des Ziels aus.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
+    "pt": "Inflige {value:v} danos.\n\\---\n{#Jauge} ({value:j}): Aciona {value:re} {explosion:ex} em\\_volta do alvo.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Cargas geradas: {value:x}</rem>"
+  }
+}

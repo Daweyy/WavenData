@@ -1,0 +1,217 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1432",
+  "m_id": 1432,
+  "m_displayName": "SEASON - CIRE MOMORE - Reflux dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 605246572,
+    "b": -833218188,
+    "c": 2077995275,
+    "d": -1044485688,
+    "e": -643487541
+  },
+  "m_i18nDescriptionId": {
+    "a": 605246572,
+    "b": -833218188,
+    "c": 2077995275,
+    "d": -1044485688,
+    "e": -1565810140
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "4f6f3ba175253d845a4459b87b002dd0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1432,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "DynamicValueEvaluatorCondition",
+        "value": {
+          "type": "EntityCaracValue",
+          "referenceId": "",
+          "entitySelector": {
+            "type": "EffectHolderSelector"
+          },
+          "carac": 20
+        },
+        "evaluator": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          }
+        }
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "AllCharactersSelector"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "AllCharactersSelector"
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "2efb530fb97bdb241bf932bab1e73c0b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "dmg",
+          "percentage": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 100
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "p",
+                    "value": 5
+                  },
+                  {
+                    "type": "EntityCaracValue",
+                    "referenceId": "x",
+                    "entitySelector": {
+                      "type": "CasterSelector"
+                    },
+                    "carac": 20
+                  }
+                ]
+              }
+            ]
+          },
+          "from": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 90
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 5
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "CasterSelector"
+          },
+          "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "j",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "MAGIE_D_ALBUERA",
+        "JAUGE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Reflux d'Albuera",
+    "en": "Albuera Reflux",
+    "es": "Reflujo de Albuera",
+    "de": "Albuera-Rückfluss",
+    "pt": "Refluxo de Albuera"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j})\\_: Inflige les <b>DÉGÂTS</b> de ce sort autour\\_<sprite name=\"cell_around\"> de la cible.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Jauges générées\\_: {value:x}</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Does this spell's <b>DAMAGE</b> around\\_<sprite name=\"cell_around\"> the target.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Gauges generated: {value:x}</rem>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Inflige los <b>DAÑOS</b> de este hechizo alrededor\\_<sprite name=\"cell_around\"> del objetivo.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Indicadores generados: {value:x}</rem>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Verursacht den <b>SCHADEN</b> dieses Zaubers im Umkreis\\_<sprite name=\"cell_around\"> des Ziels.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Inflige os <b>DANOS</b> deste feitiço em\\_volta\\_<sprite name=\"cell_around\"> do alvo.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Cargas geradas: {value:x}</rem>"
+  }
+}

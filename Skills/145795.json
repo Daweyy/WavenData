@@ -41,9 +41,29 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "per",
-          "value": 5
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            25,
+            23,
+            24,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -59,10 +79,10 @@
     "pt": "Potência Tako"
   },
   "description": {
-    "fr": "Lorsqu'un de vos personnage <b>ATTAQUE</b>\\_:\\v Inflige {value:per,percent,+} de <b>DÉGÂTS</b> par {%PA} restant.",
-    "en": "When one of your characters performs an <b>ATTACK</b>: \\vDoes {value:per,percent,+} <b>DAMAGE</b> per remaining {%PA}.",
-    "es": "Cuando uno de tus personajes <b>ATACA</b>:\\v Inflige {value:per,percent,+} de <b>DAÑOS</b> por {%PA} restante.",
-    "de": "Beim <b>ANGRIFF</b> deines Charakters:\\v Verursacht {value:per,percent,+} <b>SCHADEN</b> pro verbleibendem {%PA}.",
-    "pt": "Quando um dos seus personagens <b>ATACA</b>:\\v Inflige {value:per,percent,+} de <b>DANOS</b> por {%PA} restante."
+    "fr": "Lorsque votre héros <b>ATTAQUE</b>\\_:\\v Inflige {value:per} <b>DÉGÂTS</b> par {%PA} restant.\n\\---\n<rem>Les dégâts sont basés sur vos magies élémentaires.</rem>",
+    "en": "When your hero performs an <b>ATTACK</b>: \\vDoes {value:per} <b>DAMAGE</b> per remaining {%PA}.\n\\---\n<rem>The damage is based on your elemental magics.</rem>",
+    "es": "Cuando tu héroe <b>ATACA</b>:\\v Inflige {value:per} <b>DAÑOS</b> por {%PA} restante.\n\\---\n<rem>Los daños se basan en tus magias elementales.</rem>",
+    "de": "Beim <b>ANGRIFF</b> deines Helden:\\v Verursacht {value:per} <b>SCHADEN</b> pro verbleibendem {%PA}.\n\\---\n<rem>Der Schaden richtet sich nach deiner Elementarmagie.</rem>",
+    "pt": "Quando seu herói <b>ATACA</b>:\\v Inflige {value:per} <b>DANOS</b> por {%PA} restante.\n\\---\n<rem>Os danos são baseados em suas magias elementares.</rem>"
   }
 }

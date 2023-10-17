@@ -54,13 +54,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 4,
       "specificToWeapon": 967,
       "families": [
         3
       ],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -171,66 +173,45 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "SumValue",
-            "referenceId": "",
-            "valuesToSum": [
-              {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 35
-              },
-              {
-                "type": "ConditionalValue",
-                "referenceId": "",
-                "condition": {
-                  "type": "SupportCondition"
-                },
-                "ifTrue": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "Supp",
-                  "value": 15
-                },
-                "ifFalse": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 0
-                }
-              }
-            ]
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 35
           },
           "factor": {
             "type": "ReferenceScalingFactor",
             "reference": 12
           },
           "buffs": [
-            51,
-            24
+            24,
+            51
           ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 118841,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": "d1",
-                "value": 30
-              }
-            }
-          ],
+          "skillBuffs": [],
           "from": {
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "Supp",
-          "value": 15
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "d1",
-          "value": 30
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -252,6 +233,6 @@
     "en": "Does {magicalDamage:dmg} to an opponent adjacent\\_<sprite name=\"cell_cross\"> to an ally. \n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}.",
     "es": "Inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a un aliado. \n\\---\n{#SUPPORT}:\\_{magicalDamage:Supp,+}.",
     "de": "Fügt einem an einen Verbündeten angrenzenden\\_<sprite name=\"cell_cross\">Gegner {magicalDamage:dmg} zu.\n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}",
-    "pt": "Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\n{#SUPPORT}: Aciona {magicalDamage:Supp,+}."
+    "pt": "Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> a um aliado. \n\\---\n{#SUPPORT}:\\_{magicalDamage:Supp,+}."
   }
 }

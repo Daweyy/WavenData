@@ -1,0 +1,237 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "833",
+  "m_id": 833,
+  "m_displayName": "ALBUERA - Chaille",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -357353646,
+    "b": -732448588,
+    "c": 951998107,
+    "d": 908388939,
+    "e": 861345045
+  },
+  "m_i18nDescriptionId": {
+    "a": -357353646,
+    "b": -732448588,
+    "c": 951998107,
+    "d": 908388939,
+    "e": 734326186
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 833,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 271,
+      "skinIds": [
+        271,
+        1230
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      104
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 95
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 16
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      3486,
+      3779,
+      3073,
+      3194,
+      3557,
+      3942
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "pvpAvailability": {
+      "type": "SeasonBasedAvailability",
+      "inclusiveFrom": 8,
+      "inclusiveTo": null
+    },
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          833
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 0,
+        "max": 3
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Chaille",
+    "en": "Shay",
+    "es": "Chert",
+    "de": "Wachtelschnuff",
+    "pt": "Chaile"
+  },
+  "description": {
+    "fr": "Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v {ARvalue:v,+} par {%GAUGE} générée.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "When you generate {%GAUGE, plural:other}: \\v{ARvalue:v,+} per {%GAUGE} generated.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "Cuando generas {%GAUGE, plural:other}:\\v {ARvalue:v,+} por {%GAUGE} generado.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "Wenn du {%GAUGE, plural:other} generierst:\\v {ARvalue:v,+} pro generiertem {%GAUGE}.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "Quando você gera {%GAUGE, plural:other}:\\v {ARvalue:v,+} por {%GAUGE} gerada.\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+  }
+}

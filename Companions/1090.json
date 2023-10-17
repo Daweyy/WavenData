@@ -1,0 +1,209 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "1090",
+  "m_id": 1090,
+  "m_displayName": "SEASON - CIRE MOMORE - Biste Jeune",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1109461330,
+    "b": -1771781916,
+    "c": -500728424,
+    "d": 1953859800,
+    "e": -1120646694
+  },
+  "m_i18nDescriptionId": {
+    "a": 1109461330,
+    "b": -1771781916,
+    "c": -500728424,
+    "d": 1953859800,
+    "e": -1135998827
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 1090,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 70,
+      "skinIds": [
+        70
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 650
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 200
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 2,
+    "equipableByPlayers": false,
+    "pvpAvailability": {
+      "type": "AlwaysAvailable"
+    },
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          1090
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Biste",
+    "en": "Biste",
+    "es": "Bist",
+    "de": "Biesti",
+    "pt": "Biste"
+  },
+  "description": {
+    "fr": "Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v {ATvalue:pow,percent,+} par {%GAUGE} générée.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "When you generate {%GAUGE, plural:other}: \\v{ATvalue:pow,percent,+} per {%GAUGE} generated.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "Cuando generas {%GAUGE, plural:other}:\\v {ATvalue:pow,percent,+} por {%GAUGE} generado.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "Wenn du {%GAUGE, plural:other} generierst:\\v {ATvalue:pow,percent,+} pro generiertem {%GAUGE}.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "Quando você gera {%GAUGE, plural:other}:\\v {ATvalue:pow,percent,+} por {%GAUGE} gerada.\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+  }
+}

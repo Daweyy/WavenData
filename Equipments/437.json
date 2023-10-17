@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -3207076657884500500
+  },
+  "m_Name": "437",
+  "m_id": 437,
+  "m_displayName": "BRACELET - ALBUERA - INFINITE - Brassard d'Albuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 695531341,
+    "b": 1930735412,
+    "c": -2135154678,
+    "d": -1811974681,
+    "e": 139300481
+  },
+  "m_i18nDescriptionId": {
+    "a": 695531341,
+    "b": 1930735412,
+    "c": -2135154678,
+    "d": -1811974681,
+    "e": -651943619
+  },
+  "m_i18nBgDescriptionId": {
+    "a": 0,
+    "b": 0,
+    "c": 0,
+    "d": 0,
+    "e": 0
+  },
+  "m_illustration": {
+    "assetGuid": "b021a0ffa5f49bc48af660976d4f0b9a"
+  },
+  "m_illustrationBig": {
+    "assetGuid": "b021a0ffa5f49bc48af660976d4f0b9a"
+  },
+  "m_affinity": 0,
+  "m_elementaryStates": 1,
+  "values": {
+    "type": "EquipmentDefinition",
+    "id": 437,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 4,
+    "unlockableSkillIds": [
+      3455,
+      2949,
+      3712,
+      3608,
+      3518,
+      3456
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 525,
+    "useCharges": false,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "bonus",
+          "condition": {
+            "type": "CaracValueCondition",
+            "selector": {
+              "type": "OwnerOfSelector",
+              "selector": {
+                "type": "EffectHolderSelector"
+              }
+            },
+            "carac": 20,
+            "value": {
+              "type": "LowerThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "limit",
+                "value": 10
+              }
+            }
+          },
+          "ifTrue": {
+            "type": "MultValue",
+            "referenceId": null,
+            "valuesToMult": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "per",
+                "value": 5
+              },
+              {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+                },
+                "carac": 20
+              }
+            ]
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "limit",
+          "value": 10
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "family": 0,
+    "equipmentType": 2,
+    "petSkins": null,
+    "passiveModifiers": [
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          58
+        ]
+      },
+      {
+        "type": "CaracBuffModifier",
+        "holder": 8,
+        "value": {
+          "type": "LinearLevelOnlyBasedDynamicValue",
+          "referenceId": "",
+          "baseValue": 0,
+          "factor": 1
+        },
+        "caracIds": [
+          32,
+          1
+        ]
+      }
+    ],
+    "spellEffectData": []
+  },
+  "name": {
+    "fr": "Brassard d'Albuera",
+    "en": "Albuera Armband",
+    "es": "Brazalete de Albuera",
+    "de": "Albuera-Armschiene",
+    "pt": "Braçadeira de Albuera"
+  },
+  "description": {
+    "fr": "{%ATTACK} {value:per,percent,+} de <b>DÉGÂTS</b> par {%GAUGE} que vous avez générée durant le combat.\n\\---\n<rem>Bonus actuel\\_: {value:bonus,percent,+} de <b>DÉGÂTS</b>.\n\\---\nLimité à {value:limit} fois par combat.</rem> ",
+    "en": "{%ATTACK} {value:per,percent,+} <b>DAMAGE</b> per {%GAUGE} that you've generated during the fight.\n\\---\n<rem>Current bonus: {value:bonus,percent,+} <b>DAMAGE</b>.\n\\---\nLimit: {value:limit} {limit, plural, one[time] other[times]} per fight.</rem>",
+    "es": "{%ATTACK} {value:per,percent,+} de <b>DAÑOS</b> por {%GAUGE} que hayas generado durante el combate.\n\\---\n<rem>Bonus actual: {value:bonus,percent,+} de <b>DAÑOS</b>.\n\\---\nLimitado a {value:limit} {limit, plural, one[vez] other[veces]} por combate.</rem> ",
+    "de": "{%ATTACK} {value:per,percent,+} <b>SCHADEN</b> pro {%GAUGE}, den du während des Kampfs generiert hast.\n\\---\n<rem>Aktueller Bonus: {value:bonus,percent,+} <b>SCHADEN</b>.\n\\---\nAuf {value:limit}-mal pro Kampf begrenzt.</rem> ",
+    "pt": "{%ATTACK} {value:per,percent,+} de <b>DANOS</b> por {%GAUGE} que você tiver gerado durante o combate.\n\\---\n<rem>Bônus atual: {value:bonus,percent,+} de <b>DANOS</b>.\n\\---\nLimite de {value:limit} {limit, plural, one[vez] other[vezes]} por combate.</rem>"
+  },
+  "bgDescription": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

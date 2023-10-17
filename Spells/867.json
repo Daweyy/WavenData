@@ -54,13 +54,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 1,
       "specificToWeapon": null,
       "families": [
         3
       ],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -173,11 +175,6 @@
           "value": 50
         },
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "d2",
-          "value": 50
-        },
-        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ex",
           "baseValue": {
@@ -230,7 +227,7 @@
     "fr": "Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'un allié.\n\\---\n{#SUPPORT}\\_: {DRAINvalue:drain,percent,+} à votre héros pour le tour.",
     "en": "Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> an ally.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} to your hero for the turn.",
     "es": "Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de un aliado.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} a tu héroe durante el turno.",
-    "de": "Verursacht {magicalDamage:dmg} ringsum\\_<sprite name=\"cell_around\"> eines Verbündeten.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} für deinen Helden für die Runde.",
+    "de": "Verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> eines Verbündeten.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} für deinen Helden für die Runde.",
     "pt": "Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> de um aliado.\n\\---\n{#SUPPORT}: {DRAINvalue:drain,percent,+} ao seu herói durante o turno."
   }
 }

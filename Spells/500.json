@@ -48,13 +48,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": null,
       "families": [
         3
       ],
-      "heroSkillPointsCost": 5,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 5
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -73,7 +75,7 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "value": 1
         }
       }
     ],
@@ -140,7 +142,7 @@
     "fr": "Sacrifie un personnage allié et inflige son {%at} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.",
     "en": "Sacrifices an allied character and inflicts their {%at} on opponents around\\_<sprite name=\"cell_around\"> them.",
     "es": "Sacrifica a un personaje aliado e inflige su {%at} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.",
-    "de": "Opfert einen verbündeten Charakter und verursacht seinen {%at} bei den Gegnern ringsum\\_<sprite name=\"cell_around\">.",
+    "de": "Opfert einen verbündeten Charakter und verursacht seinen {%at,plural:one} bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> als Schaden.",
     "pt": "Sacrifica um personagem aliado e inflige seu {%at} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele."
   }
 }

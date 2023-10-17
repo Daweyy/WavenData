@@ -48,13 +48,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": 637,
       "families": [
         3
       ],
-      "heroSkillPointsCost": 10,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 10
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -126,12 +128,12 @@
               "type": "UnionOfEntityFilter",
               "firstFilter": {
                 "type": "EntitiesWithHighestLowestCaracFilter",
-                "superlative": 1,
+                "superlative": 0,
                 "carac": 1
               },
               "secondFilter": {
                 "type": "EntitiesWithHighestLowestCaracFilter",
-                "superlative": 0,
+                "superlative": 1,
                 "carac": 1
               }
             }
@@ -157,10 +159,10 @@
     "pt": "Bisturi Apostruker"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros aux adversaires ayant le plus et le moins de {%PV}.\n",
-    "en": "Inflicts your hero's {%AT} on the opponents with the most and the least {%PV}.\n",
-    "es": "Inflige el {%AT} de tu héroe a los adversarios que tengan más y menos {%PV}.\n",
-    "de": "Fügt den Gegnern mit den meisten und wenigsten {%PV} den {%AT} deines Helden als Schaden zu.\n",
-    "pt": "Inflige o {%AT} do seu herói aos adversários que tiverem mais e menos {%PV}.\n"
+    "fr": "Inflige l'{%AT} de votre héros à l'adversaire ayant le moins de {%PV} puis à celui en ayant le plus.",
+    "en": "Inflicts your hero's {%AT} on the opponent with the least {%PV} then on the one with the most.",
+    "es": "Inflige el {%AT} de tu héroe al adversario que tenga menos {%PV} y después, al que tenga más.",
+    "de": "Verursacht den {%AT} deines Helden erst bei dem Gegner mit den wenigsten {%PV} als Schaden, dann bei dem mit dem meisten.",
+    "pt": "Inflige o {%AT} do seu herói ao adversário que tiver menos {%PV} e, em seguida, ao que tiver mais."
   }
 }

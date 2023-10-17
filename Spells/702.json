@@ -54,13 +54,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 3,
       "specificToWeapon": 919,
       "families": [
         1
       ],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -116,6 +118,29 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -150,29 +175,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "percentSkill",
           "value": 30
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "ar",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 8
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            23,
-            51,
-            48
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
         },
         {
           "type": "BuffedScalingDynamicValue",

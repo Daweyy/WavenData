@@ -1,0 +1,192 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "392",
+  "m_id": 392,
+  "m_displayName": "SEASON - BELLADONE - Permutation du lancier",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1078058495,
+    "b": -555566268,
+    "c": -843229269,
+    "d": -389699042,
+    "e": 2005342333
+  },
+  "m_i18nDescriptionId": {
+    "a": 1078058495,
+    "b": -555566268,
+    "c": -843229269,
+    "d": -389699042,
+    "e": -1251656082
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3c95a631ba097ac42bdf2bd0a70ecb1c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0e3f7ab565e1a994399c5913832f7338"
+      },
+      {
+        "assetGuid": "5d60c9d5cc093594fb4d9b36d5c70e40"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 392,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "ObjectMechanismDefinitionFilter",
+              "condition": 1,
+              "objectMechanisms": [
+                26,
+                85,
+                305,
+                51
+              ]
+            },
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": null
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              26,
+              85,
+              305,
+              51
+            ]
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": null
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Permutation du lancier",
+    "en": "Lancer Permutation",
+    "es": "Permutación de Lancero",
+    "de": "Tausch des Lanzenreiters",
+    "pt": "Permutação do Lanceiro"
+  },
+  "description": {
+    "fr": "Votre héros et sa lance échangent leur place s'ils sont alignés.\n\\---\nInflige ensuite {value:v,percent} de l'{%AT} de votre héros aux adversaires situés entre eux.",
+    "en": "Your hero and their lance switch places if they are in line.\n\\---\nThen inflicts {value:v,percent} of your hero's {%AT} on opponents between them.",
+    "es": "Tu héroe y su lanza intercambian posición si están alineados.\n\\---\nInflige seguidamente un {value:v,percent} del {%AT} de tu héroe a los adversarios situados entre ellos.",
+    "de": "Dein Held und seine Lanze tauschen die Position, wenn sie sich in derselben Reihe befinden.\n\\---\nVerursacht dann bei Gegnern, die sich zwischen den beiden befinden {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.",
+    "pt": "Seu herói e sua lança trocam de posição se estiverem alinhados.\n\\---\nEm seguida, inflige {value:v,percent} do {%AT} do seu herói aos adversários situados entre eles."
+  }
+}

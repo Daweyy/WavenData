@@ -54,13 +54,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 2,
       "specificToWeapon": 919,
       "families": [
         1
       ],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -107,6 +109,29 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "healMelee",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -141,29 +166,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "percentSkill",
           "value": 30
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "healMelee",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 6
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            22,
-            51,
-            50
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -222,6 +224,6 @@
     "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Heals your hero {PVvalue:healMelee}.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Cura a tu héroe {PVvalue:healMelee}.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Heilt deinen Helden um {PVvalue:healMelee}.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Cura seu herói em {PVvalue:healMelee}."
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Cura {PVvalue:healMelee} do seu herói."
   }
 }

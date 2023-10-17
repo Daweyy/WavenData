@@ -1,0 +1,153 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1670",
+  "m_id": 1670,
+  "m_displayName": "AMAKNA - Q19 - Canne a peche",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -496639219,
+    "b": -522290940,
+    "c": 1262368458,
+    "d": -1470191752,
+    "e": -1132506956
+  },
+  "m_i18nDescriptionId": {
+    "a": -496639219,
+    "b": -522290940,
+    "c": 1262368458,
+    "d": -1470191752,
+    "e": 186316709
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1670,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "NeverAvailable"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllBoardPresencesSelector"
+        },
+        "filters": [
+          {
+            "type": "FloorMechanismDefinitionFilter",
+            "condition": 1,
+            "floorMechanisms": [
+              438,
+              205,
+              486
+            ]
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "CharacterEntityFilter"
+                }
+              ]
+            },
+            "distance": null
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllBoardPresencesSelector"
+        },
+        "filters": [
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          },
+          {
+            "type": "CharacterEntityFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "v",
+          "baseValue": 13,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Canne à pêche",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Attire un personnage sur un legume aligné.\n\\---\nInflige {magicalDamage:v}.\n\\---\nAugmente son cout de +1 {%PA} pour chaque utilisation jusqu'à la fin du tour.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

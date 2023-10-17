@@ -60,11 +60,13 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": null,
       "families": [],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -91,27 +93,35 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterSpecificCompanionSelector",
-              "companion": 590
-            },
-            "distance": {
-              "type": "LowerEqualThan",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "c",
-                "value": 3
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterSpecificCompanionSelector",
+                "companion": 590
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
               }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
             }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
-          }
-        ]
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
       }
     },
     "spellEffectData": [],
@@ -140,7 +150,7 @@
     "fr": "Téléporte {Companion:590!} jusqu'à {cell:c}.\n\\---\nInflige son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée et se soigne de la moitié de son {%AT} pour chaque personnage touché.",
     "en": "Teleports {Companion:590!} up to {cell:c}.\n\\---\nInflicts his {%AT} on opponents around\\_<sprite name=\"cell_around\"> the destination cell and heals himself half his {%AT} for each character hit.",
     "es": "Teletransporta a {Companion:590!} hasta {cell:c}.\n\\---\nInflige su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada y se cura la mitad de su {%AT} por cada personaje alcanzado.",
-    "de": "Teleportiert {Companion:590!} bis auf {cell:c}.\n\\---\nFügt den Gegnern in der Nähe\\_<sprite name=\"cell_around\"> seines Zielfelds seinen {%AT} als Schaden zu und heilt sich um die Hälfte seines {%AT} für jeden getroffenen Charakter.",
-    "pt": "Teletransporta {Companion:590!} a até {cell:c}.\n\\---\nInflige seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de sua célula de chegada e se cura em metade do seu {%AT} por cada personagem atingido."
+    "de": "Teleportiert {Companion:590!} bis zu {cell:c}.\n\\---\nFügt den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> seines Zielfelds seinen {%AT,plural:one} als Schaden zu und heilt sich um die Hälfte seines {%AT,plural:two} für jeden getroffenen Charakter.",
+    "pt": "Teletransporta {Companion:590!} por até {cell:c}.\n\\---\nInflige seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de sua célula de chegada e se cura da metade do seu {%AT} por cada personagem atingido."
   }
 }

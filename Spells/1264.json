@@ -1,0 +1,227 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1264",
+  "m_id": 1264,
+  "m_displayName": "SEASON - CIRE MOMORE - Sable dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2070578711,
+    "b": -1514580380,
+    "c": 1655951305,
+    "d": 342320058,
+    "e": 597491937
+  },
+  "m_i18nDescriptionId": {
+    "a": 2070578711,
+    "b": -1514580380,
+    "c": 1655951305,
+    "d": 342320058,
+    "e": -551766934
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "60470fa47c446eb4ea41763cf4dd9ab0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1264,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "CaracValueCondition",
+        "selector": {
+          "type": "CasterSelector"
+        },
+        "carac": 20,
+        "value": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 10
+          }
+        }
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "AreaFromTargetsSelector",
+          "originSelector": {
+            "type": "AllCharactersSelector"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          },
+          "targets": {
+            "type": "CasterHeroSelector"
+          },
+          "areaOfEffect": {
+            "type": "CrossAreaOfEffectSelector",
+            "originSelector": {
+              "type": "EngineDeterminedHolder"
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 7
+            }
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "AllCharactersSelector"
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "919c18fafc36d8544a60f6e92b99ccfd",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "dmg",
+          "percentage": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 100
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "p",
+                    "value": 5
+                  },
+                  {
+                    "type": "EntityCaracValue",
+                    "referenceId": "x",
+                    "entitySelector": {
+                      "type": "CasterSelector"
+                    },
+                    "carac": 20
+                  }
+                ]
+              }
+            ]
+          },
+          "from": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 90
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 5
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "CasterSelector"
+          },
+          "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "j",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "MAGIE_D_ALBUERA",
+        "JAUGE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Sable d'Albuera",
+    "en": "Albuera Sand",
+    "es": "Arena de Albuera",
+    "de": "Albuera-Sand",
+    "pt": "Areia de Albuera"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j})\\_: Inflige les <b>DÉGÂTS</b> de ce sort aux adversaires alignés à votre héros.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Jauges générées\\_: {value:x}</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Does this spell's <b>DAMAGE</b> to opponents in line with your hero.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Gauges generated: {value:x}</rem>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Inflige los <b>DAÑOS</b> de este hechizo a los adversarios alineados con tu héroe.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Indicadores generados: {value:x}</rem>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Verursacht den <b>SCHADEN</b> dieses Zaubers bei den Gegnern, die sich in derselben Reihe wie dein Held befinden.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Inflige os <b>DANOS</b> deste feitiço aos adversários alinhados com o seu herói.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Cargas geradas: {value:x}</rem>"
+  }
+}

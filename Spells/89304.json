@@ -48,13 +48,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": null,
       "families": [
         7
       ],
-      "heroSkillPointsCost": 5,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 5
     },
     "gaugeToModifyOnSpellPlay": [],
     "costs": [
@@ -63,7 +65,7 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 6
+          "value": 5
         }
       }
     ],
@@ -117,7 +119,7 @@
     "fr": "Piochez {SPELLCOUNTvalue:v}.\n\\---\n{#CHRONO}\\_: {PAvalue:pa} au coût de votre prochain {%SPELLCOUNT}.",
     "en": "Draw {SPELLCOUNTvalue:v}.\n\\---\n{#CHRONO}: {PAvalue:pa} to the cost of your next {%SPELLCOUNT}.",
     "es": "Sacas {SPELLCOUNTvalue:v}.\n\\---\n{#CHRONO}: {PAvalue:pa} al coste de tu próximo hechizo {%SPELLCOUNT}.",
-    "de": "Zieht {SPELLCOUNTvalue:v}.\n\\---\n{#CHRONO}: {PAvalue:pa} auf die Kosten deines nächsten {%SPELLCOUNT}.",
+    "de": "Zieht {SPELLCOUNTvalue:v}.\n\\---\n{#CHRONO}: {PAvalue:pa} auf die Kosten deines nächsten {%SPELLCOUNT,plural:two}.",
     "pt": "Compre {SPELLCOUNTvalue:v}.\n\\---\n{#CHRONO}: {PAvalue:pa} ao custo do seu próximo {%SPELLCOUNT}."
   }
 }

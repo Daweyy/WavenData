@@ -58,13 +58,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": 846,
       "families": [
         2
       ],
-      "heroSkillPointsCost": 10,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 10
     },
     "gaugeToModifyOnSpellPlay": [],
     "costs": [
@@ -107,7 +109,9 @@
         "originTarget": {
           "type": "FirstCastTargetSelector"
         },
-        "orientation": null,
+        "orientation": {
+          "type": "CasterHeroSelector"
+        },
         "delay": null
       }
     ],
@@ -144,7 +148,7 @@
     "fr": "{#PUSH} de {cell:c1} un personnage aligné avec votre héros.\n\\---\nVotre héros recule de {cell:c2} par {#COLLISION}.",
     "en": "{#PUSH} a character in line with your hero {cell:c1}.\n\\---\nYour hero moves back {cell:c2} per {#COLLISION}.",
     "es": "{#PUSH} {cell:c1} a un personaje alineado con tu héroe.\n\\---\nTu héroe retrocede {cell:c2} por {#COLLISION}.",
-    "de": "{#PUSH} einen Charakter um {cell:c1}, der sich in derselben Reihe befindet wie dein Held.\n\\---\nDein Held zieht sich um {cell:c2} je {#COLLISION} zurück.",
+    "de": "{#PUSH,plural:few} einen Charakter um {cell:c1} zurück, der sich in derselben Reihe befindet wie dein Held.\n\\---\nDein Held zieht sich um {cell:c2} pro {#COLLISION} zurück.",
     "pt": "{#PUSH} por {cell:c1} um personagem alinhado com seu herói.\n\\---\nSeu herói recua por {cell:c2} por {#COLLISION}."
   }
 }

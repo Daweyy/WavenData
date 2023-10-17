@@ -1,0 +1,242 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "360",
+  "m_id": 360,
+  "m_displayName": "ALBUERA - Mouche",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1316760923,
+    "b": -45163468,
+    "c": 77989128,
+    "d": -1184153955,
+    "e": -1472504748
+  },
+  "m_i18nDescriptionId": {
+    "a": -1316760923,
+    "b": -45163468,
+    "c": 77989128,
+    "d": -1184153955,
+    "e": -421939786
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 360,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 859,
+      "skinIds": [
+        859,
+        683
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "g",
+          "value": 5
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "j",
+          "entitySelector": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 19
+        },
+        "JAUGE"
+      ]
+    },
+    "families": [
+      104
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 84
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 14
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 21
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 22
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      3755,
+      3392,
+      2961,
+      3414,
+      3700,
+      3587
+    ],
+    "rarity": 1,
+    "equipableByPlayers": true,
+    "pvpAvailability": {
+      "type": "SeasonBasedAvailability",
+      "inclusiveFrom": 8,
+      "inclusiveTo": null
+    },
+    "upgradeRuleId": 940,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          360
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 0,
+        "max": 3
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Mouche",
+    "en": "Bull",
+    "es": "Mouche",
+    "de": "Fliege",
+    "pt": "Mosca"
+  },
+  "description": {
+    "fr": "{#Jauge}\\_({value:g}) et {%APPEARANCE}\\v Gagne {PropertyEffect:19} et piochez {value:v}\\_{%spellcount,v}.\n\\---\n<rem>Jauges générées\\_: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "{#Jauge}\\_({value:g}) and {%APPEARANCE} \\vGains {PropertyEffect:19}. Draw {value:v}\\_{%spellcount,v}.\n\\---\n<rem>Gauges generated: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "{#Jauge}\\_({value:g}) y {%APPEARANCE}\\v Gana {PropertyEffect:19}, y sacas {value:v}\\_{%spellcount,v}.\n\\---\n<rem>Indicadores generados: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "{#Jauge}\\_({value:g}) und {%APPEARANCE}\\v Erhält {PropertyEffect:19} und zieht {value:v}\\_{%spellcount,v}.\n\\---\n<rem>Generierte Elementarpunkte: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "{#Jauge}\\_({value:g}) e {%APPEARANCE}\\v Ganha {PropertyEffect:19}. Compre {value:v}\\_{%spellcount,v}.\n\\---\n<rem>Cargas geradas: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+  }
+}

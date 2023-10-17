@@ -48,13 +48,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": null,
       "families": [
         7
       ],
-      "heroSkillPointsCost": 5,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 5
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -124,7 +126,13 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 200
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -138,10 +146,10 @@
     "pt": "Engrenagem"
   },
   "description": {
-    "fr": "Inflige le {%BL} de vos <b>SINISTROS</b> aux adversaires autour<sprite name=\"cell_around\"> de chacun d'entre eux.\n\\---\nPiochez votre prochain {%SPELLCOUNT} de <b>SINISTRO</b>.",
-    "en": "Inflicts the {%BL} of your <b>SINISTROS</b> on opponents around<sprite name=\"cell_around\"> each of them.\n\\---\nDraw your next <b>SINISTRO</b> {%SPELLCOUNT}.",
-    "es": "Inflige el {%BL} de tus <b>SINISTROS</b> a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de cada uno de ellos.\n\\---\nSacas tu próximo {%SPELLCOUNT} de <b>SINISTRO</b>.",
-    "de": "Verursacht die {%BL} deiner <b>SINISTROS</b> bei an sie angrenzenden\\_<sprite name=\"cell_around\"> Gegnern als Schaden.\n\\---\nZiehe deinen nächsten <b>SINISTRO</b>-{%SPELLCOUNT}.",
-    "pt": "Inflige a {%BL} dos seus <b>SINISTROS</b> aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de cada um deles.\n\\---\nCompre seu próximo {%SPELLCOUNT} de <b>SINISTRO</b>."
+    "fr": "Inflige {value:p, percent} du {%BL} de vos <b>SINISTROS</b> aux adversaires autour<sprite name=\"cell_around\"> de chacun d'entre eux.\n\\---\nPiochez votre prochain {%SPELLCOUNT} de <b>SINISTRO</b>.",
+    "en": "Inflicts {value:p, percent} of your <b>SINISTROS'</b> {%BL} on opponents around<sprite name=\"cell_around\"> each of them.\n\\---\nDraw your next <b>SINISTRO</b> {%SPELLCOUNT}.",
+    "es": "Inflige un {value:p, percent} del {%BL} de tus <b>SINISTROS</b> a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de cada uno de ellos.\n\\---\nSacas tu próximo {%SPELLCOUNT} de <b>SINISTRO</b>.",
+    "de": "Verursacht {value:p, percent} der {%BL} deiner <b>SINISTROS</b> bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> als Schaden.\n\\---\nZieht deinen nächsten <b>SINISTRO</b>-{%SPELLCOUNT}.",
+    "pt": "Inflige {value:p, percent} da {%BL} dos seus <b>SINISTROS</b> aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de cada um deles.\n\\---\nCompre seu próximo {%SPELLCOUNT} de <b>SINISTRO</b>."
   }
 }

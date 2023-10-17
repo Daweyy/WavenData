@@ -48,10 +48,10 @@
     "premiumItem": false,
     "rarity": 0,
     "unlockableSkillIds": [
+      1569,
       1571,
       1570,
       545,
-      1569,
       936,
       1568,
       2597
@@ -68,9 +68,22 @@
           "value": 12
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "ConditionalValue",
           "referenceId": "x",
-          "value": 1
+          "condition": {
+            "type": "HolderHasSkillCondition",
+            "skill": 252
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       ],
       "externalDynamicValueReferences": [],
@@ -104,7 +117,7 @@
     "en": "Whowho Ring",
     "es": "Noranillons",
     "de": "Singring",
-    "pt": "Anel Whowho"
+    "pt": "Anel Joranones"
   },
   "description": {
     "fr": "{#TOME} ({value:g})\n\\---\n{%FightStarted} {NEUTRALGAUGEvalue:x,+}.",

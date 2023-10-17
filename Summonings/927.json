@@ -48,10 +48,21 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 268
+        }
+      ]
     },
     "families": [
       0
@@ -98,11 +109,11 @@
     "pt": "Kychu, o Boneco"
   },
   "description": {
-    "fr": "{%FightTurnStarted} Invoque 1 {Summoning:268!}.",
-    "en": "{%FightTurnStarted} Summons 1 {Summoning:268!}.",
-    "es": "{%FightTurnStarted} Invoca 1 {Summoning:268!}.",
-    "de": "{%FightTurnStarted} Beschwört einen {Summoning:268!}.",
-    "pt": "{%FightTurnStarted} Invoca 1 {Summoning:268!}."
+    "fr": "{%FightTurnStarted} Invoque {value:v}\\_{Summoning:268,value:v}.",
+    "en": "{%FightTurnStarted} Summons {value:v}\\_{Summoning:268,value:v}.",
+    "es": "{%FightTurnStarted} Invoca {value:v}\\_{Summoning:268,value:v}.",
+    "de": "{%FightTurnStarted} Beschwört {value:v}\\_{Summoning:268,value:v}.",
+    "pt": "{%FightTurnStarted} Invoca {value:v}\\_{Summoning:268,value:v}."
   },
   "championName": {
     "fr": "Kychu le Doudou",

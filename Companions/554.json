@@ -1,0 +1,232 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "554",
+  "m_id": 554,
+  "m_displayName": "ALBUERA - Lance Dur",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 2084226663,
+    "b": -283273628,
+    "c": -100144808,
+    "d": 1223224236,
+    "e": -880549395
+  },
+  "m_i18nDescriptionId": {
+    "a": 2084226663,
+    "b": -283273628,
+    "c": -100144808,
+    "d": 1223224236,
+    "e": -537074799
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 554,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 491,
+      "skinIds": [
+        491,
+        694
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      104
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 155
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 30
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      3380,
+      3390,
+      3513,
+      3127,
+      3066,
+      3654
+    ],
+    "rarity": 4,
+    "equipableByPlayers": true,
+    "pvpAvailability": {
+      "type": "SeasonBasedAvailability",
+      "inclusiveFrom": 8,
+      "inclusiveTo": null
+    },
+    "upgradeRuleId": 36,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          554
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 0,
+        "max": 3
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Lance Dur",
+    "en": "Lance Dur",
+    "es": "Lance Dur",
+    "de": "Hartspeer",
+    "pt": "Lance Dur"
+  },
+  "description": {
+    "fr": "{%ATTACK} Téléporte votre héros sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible et lui inflige son {%AT}.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "{%ATTACK} Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to the target and inflicts {%AT} on them.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "{%ATTACK} Teletransporta a tu héroe a una casilla adyacente\\_<sprite name=\"cell_cross\"> al objetivo y le inflige su {%AT}.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "{%ATTACK} Teleportiert deinen Helden auf ein Feld, das an das Ziel angrenzt\\_<sprite name=\"cell_cross\"> und verursacht bei ihm seinen {%AT} als Schaden.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "{%ATTACK} Teletransporta seu herói para uma célula adjacente\\_<sprite name=\"cell_cross\"> ao alvo e lhe inflige seu {%AT}.\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+  }
+}

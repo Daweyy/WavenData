@@ -1,0 +1,181 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1294",
+  "m_id": 1294,
+  "m_displayName": "SEASON - CIRE MOMORE - Senteur dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1123767942,
+    "b": -1393470700,
+    "c": 246503593,
+    "d": -813083871,
+    "e": -1902410847
+  },
+  "m_i18nDescriptionId": {
+    "a": 1123767942,
+    "b": -1393470700,
+    "c": 246503593,
+    "d": -813083871,
+    "e": -1672509560
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c4a56d3386df27b4c980c1c716630182"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1294,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a828f3b9cc97b424caeb0665a8fe811c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "dmg",
+          "percentage": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 100
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "p",
+                    "value": 5
+                  },
+                  {
+                    "type": "EntityCaracValue",
+                    "referenceId": "x",
+                    "entitySelector": {
+                      "type": "CasterSelector"
+                    },
+                    "carac": 20
+                  }
+                ]
+              }
+            ]
+          },
+          "from": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 60
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 5
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "CasterSelector"
+          },
+          "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "j",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "MAGIE_D_ALBUERA",
+        "JAUGE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Senteur d'Albuera",
+    "en": "Albuera Scent",
+    "es": "Aroma de Albuera",
+    "de": "Albuera-Flair",
+    "pt": "Fragrância de Albuera"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}) : Téléporte votre héros dans le coin le plus proche.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Jauges générées : {value:x}</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Teleports your hero to the closest corner.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Gauges generated: {value:x}</rem>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Teletransporta a tu héroe al rincón más próximo.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Indicadores generados: {value:x}</rem>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Teleportiert deinen Helden in die nächste Ecke.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Teletransporta seu herói para o canto mais próximo.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Cargas geradas: {value:x}</rem>"
+  }
+}

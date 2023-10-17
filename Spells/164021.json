@@ -48,13 +48,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": 366,
       "families": [
         7
       ],
-      "heroSkillPointsCost": 10,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 10
     },
     "gaugeToModifyOnSpellPlay": [],
     "costs": [
@@ -67,7 +69,33 @@
         }
       }
     ],
-    "castCondition": null,
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "FloatingCounterCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 5
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
@@ -110,7 +138,7 @@
     "fr": "Libère une {%AURA_OWL,plural:one}.\n\\---\nPiochez {value:v}\\_{%SPELLCOUNT,value:v}.",
     "en": "Releases one {%AURA_OWL,plural:one}.\n\\---\nDraw {value:v}\\_{%SPELLCOUNT,value:v}.",
     "es": "Libera un {%AURA_OWL,plural:one}.\n\\---\nSacas {value:v}\\_{%SPELLCOUNT,value:v}.",
-    "de": "Löst eine {%AURA_OWL,plural:one} aus.\n\\---\nZiehe {value:v}\\_{%SPELLCOUNT,value:v}.",
+    "de": "Löst eine {%AURA_OWL,plural:one} aus.\n\\---\nZieht {value:v}\\_{%SPELLCOUNT,value:v}.",
     "pt": "Libera uma {%AURA_OWL,plural:one}.\n\\---\nCompre {value:v}\\_{%SPELLCOUNT,value:v}."
   }
 }

@@ -50,13 +50,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": null,
       "families": [
         1
       ],
-      "heroSkillPointsCost": 5,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 5
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -177,7 +179,7 @@
     "fr": "Votre héros <b>CHARGE</b> un personnage aligné avec lui jusqu'à {cell:c} et lui inflige son {%at}.\n\\---\nPiochez {value:v} sort.",
     "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%at} on them.\n\\---\nDraw {value:v} {%SPELLCOUNT,value:v}.",
     "es": "Tu héroe <b>CARGA</b> contra un personaje alineado con él hasta a {cell:c} y le inflige su {%at}.\n\\---\nSacas {value:v} hechizo.",
-    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe auf eine Entfernung bis {cell:c} zu und fügt ihm seinen {%at} als Schaden zu.\n\\---\nZiehe {value:v} Zauber.",
-    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado com ele a até {cell:c} e inflige seu {%at}.\n\\---\nCompre {value:v} feitiço."
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe auf eine Entfernung bis {cell:c} zu und fügt ihm seinen {%at,plural:one} als Schaden zu.\n\\---\nZieht {value:v} Zauber.",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado com ele a até {cell:c} e inflige seu {%at}.\n\\---\nCompre {value:v} {v, plural, one[feitiço] other[feitiços]}."
   }
 }

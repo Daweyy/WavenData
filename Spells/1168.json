@@ -1,0 +1,186 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1168",
+  "m_id": 1168,
+  "m_displayName": "SEASON - CIRE MOMORE - Salve dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1503389690,
+    "b": 698047716,
+    "c": 23235290,
+    "d": -1274114273,
+    "e": 953507895
+  },
+  "m_i18nDescriptionId": {
+    "a": -1503389690,
+    "b": 698047716,
+    "c": 23235290,
+    "d": -1274114273,
+    "e": 808025041
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3e8a593635df9e145a103d1ed3bd0042"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1168,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "abf40f809e8f0794bba97f67c06088b3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "dmg",
+          "percentage": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 100
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "p",
+                    "value": 5
+                  },
+                  {
+                    "type": "EntityCaracValue",
+                    "referenceId": "x",
+                    "entitySelector": {
+                      "type": "CasterSelector"
+                    },
+                    "carac": 20
+                  }
+                ]
+              }
+            ]
+          },
+          "from": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 75
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 5
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "CasterSelector"
+          },
+          "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "j",
+          "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 25
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "MAGIE_D_ALBUERA",
+        "JAUGE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Salve d'Albuera",
+    "en": "Albuera Salvo",
+    "es": "Salva de Albuera",
+    "de": "Albuera-Salve",
+    "pt": "Salva de Albuera"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j})\\_: {ATvalue:pow,percent,+} à votre héros jusqu'à la fin du tour.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Jauges générées\\_: {value:x}</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {ATvalue:pow,percent,+} to your hero until the end of the turn.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Gauges generated: {value:x}</rem>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {ATvalue:pow,percent,+} a tu héroe hasta el final del turno.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Indicadores generados: {value:x}</rem>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {ATvalue:pow,percent,+} für deinen Helden bis zum Rundenende.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {ATvalue:pow,percent,+} ao seu herói até o fim do turno.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Cargas geradas: {value:x}</rem>"
+  }
+}

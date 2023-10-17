@@ -50,13 +50,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": 497,
       "families": [
         1
       ],
-      "heroSkillPointsCost": 10,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 10
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -154,6 +156,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 80
         }
       ],
       "externalDynamicValueReferences": [],
@@ -175,10 +182,10 @@
     "pt": "Dupla Investida Orok"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige son {%AT}.\n\\---\nAjoute le sort {Spell:238213} à votre main.\n",
-    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%AT} on them.\n\\---\nAdds the {Spell:238213} spell to your hand.\n",
-    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige su {%AT}.\n\\---\nAñade el hechizo {Spell:238213} a tu mano.\n",
-    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis zu {cell:c} in derselben Reihe zu und verursacht bei ihm seinen {%AT} als Schaden.\n\\---\nFügt deiner Hand den Zauber {Spell:238213} hinzu.\n",
-    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e inflige seu {%AT}.\n\\---\nAdiciona o feitiço {Spell:238213} à sua mão.\n"
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige {value:per, percent} de son {%AT}.\n\\---\nAjoute le sort {Spell:238213} à votre main.\n",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts {value:per, percent} of their {%AT} on them.\n\\---\nAdds the {Spell:238213} spell to your hand.\n",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige un {value:per, percent} de su {%AT}.\n\\---\nAñade el hechizo {Spell:238213} a tu mano.\n",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter auf bis zu {cell:c} in derselben Reihe zu und verursacht bei ihm {value:per, percent} seines {%AT,plural:two} als Schaden.\n\\---\nFügt deiner Hand den Zauber „{Spell:238213}“ hinzu.\n",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e inflige {value:per, percent} de seu {%AT}.\n\\---\nAdiciona o feitiço {Spell:238213} à sua mão.\n"
   }
 }

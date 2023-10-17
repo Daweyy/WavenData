@@ -46,6 +46,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "x",
           "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -102,6 +107,9 @@
     ],
     "rarity": 2,
     "equipableByPlayers": true,
+    "pvpAvailability": {
+      "type": "AlwaysAvailable"
+    },
     "upgradeRuleId": 407,
     "castCondition": {
       "type": "CanCastCompanionCondition",
@@ -214,10 +222,10 @@
     "pt": "Percimol"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Gagne {value:x,percent} de sa {%PVMAX} en {%AR} par {%PA_res}.",
-    "en": "{%FightTurnEnded} Gains {value:x,percent} of his {%PVMAX} as {%AR} per {%PA_res}.",
-    "es": "{%FightTurnEnded} Gana {value:x,percent} de su {%PVMAX} en {%AR} por {%PA_res}.",
-    "de": "{%FightTurnEnded} Erhält {value:x,percent} seiner {%PVMAX} als {%AR} pro {%PA_res}.",
-    "pt": "{%FightTurnEnded} Ganha {value:x,percent} dos seus {%PVMAX} em {%AR} por {%PA_res}."
+    "fr": "{%FightTurnEnded} Gagne {value:x,percent} de sa {%PVMAX} en {%AR} par {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}.",
+    "en": "{%FightTurnEnded} Gains {value:x,percent} of his {%PVMAX} as {%AR} per {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}.",
+    "es": "{%FightTurnEnded} Gana un {value:x,percent} de su {%PVMAX} en {%AR} por {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}.",
+    "de": "{%FightTurnEnded} Erhält {value:x,percent} seiner {%PVMAX} als {%AR} pro {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}.",
+    "pt": "{%FightTurnEnded} Ganha {value:x,percent} da sua {%PVMAX} em {%AR} por {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}."
   }
 }

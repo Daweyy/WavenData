@@ -18,7 +18,7 @@
     "firstWorldId": 10,
     "playerInitialBoat": 78,
     "asyncArenaWorld": 186,
-    "pvpWorld": 209,
+    "pvpWorld": 98,
     "playerInitializationConstant": {
       "type": "PlayerInitializationConstants",
       "unlockedCharacterSlots": 5
@@ -945,7 +945,8 @@
       "defenseFightRules": 673,
       "debugFight": 1,
       "debugFightEmpty": 219,
-      "aiDebugFight": 470
+      "aiDebugFight": 470,
+      "aiVsAiDebugFight": 1296
     },
     "fightConstants": {
       "type": "FightBaseConstants",
@@ -955,7 +956,7 @@
         "baseValue": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "value": 3
         },
         "factor": {
           "type": "ReferenceScalingFactor",
@@ -994,14 +995,14 @@
           "k": 15,
           "v": {
             "type": "LinearScalingFactorComputer",
-            "scale": 0.04
+            "scale": 0.05
           }
         },
         {
           "k": 6,
           "v": {
             "type": "LinearScalingFactorComputer",
-            "scale": 0.04
+            "scale": 0.05
           }
         },
         {
@@ -1249,6 +1250,11 @@
     },
     "asyncConstants": {
       "type": "AsyncConstants",
+      "costPerFight": [],
+      "dailyFreeResource": null,
+      "actionAtEndOfSeason": {
+        "type": "LeaveTickets"
+      },
       "losesUntilRunIsLost": 3,
       "costToRerun": [
         {
@@ -1563,6 +1569,11 @@
     },
     "pvp1v1Constants": {
       "type": "PvpConstants",
+      "costPerFight": [],
+      "dailyFreeResource": null,
+      "actionAtEndOfSeason": {
+        "type": "LeaveTickets"
+      },
       "losesUntilRunIsLost": 3,
       "costToRerun": [
         {
@@ -1766,6 +1777,11 @@
     },
     "wavesFightConstants": {
       "type": "WavesFightConstants",
+      "costPerFight": [],
+      "dailyFreeResource": null,
+      "actionAtEndOfSeason": {
+        "type": "LeaveTickets"
+      },
       "losesUntilRunIsLost": 3,
       "costToRerun": [],
       "dropsPerVictory": [],
@@ -1776,6 +1792,29 @@
       "maxShopItems": 5,
       "reRollShopCost": 1,
       "spawnMechanism": 1766
+    },
+    "battlePassFightConstants": {
+      "type": "BattlePassFightConstants",
+      "costPerFight": [
+        {
+          "type": "ResourceCost",
+          "amount": 1,
+          "resourceId": 60
+        }
+      ],
+      "dailyFreeResource": 60,
+      "actionAtEndOfSeason": {
+        "type": "TransformTickets",
+        "targetResource": 392,
+        "ratio": 1000
+      },
+      "losesUntilRunIsLost": null,
+      "costToRerun": [],
+      "dropsPerVictory": [],
+      "ladderRewards": {
+        "type": "LadderRewards",
+        "maxRewardedIndex": 99
+      }
     },
     "passiveModifiers": {
       "type": "PassiveModifiersConstants",
@@ -1907,6 +1946,10 @@
         {
           "k": 4,
           "v": 1.5
+        },
+        {
+          "k": 5,
+          "v": 1.8
         }
       ],
       "worldLootsLists": [
@@ -2129,11 +2172,21 @@
     },
     "battlePass": {
       "type": "BattlePassConstants",
+      "referenceDateString": "2023-08-01T08:00:00Z",
       "addHighestHeroLevel": true,
       "standardLootChestLevels": 5,
       "premiumLootChestLevels": 20,
       "platinumLootChestLevels": 40,
       "defaultPeriodDefinition": 876,
+      "missionPointsToValidateLevels": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        30,
+        30
+      ],
       "numberOfDaysInSeason": 28,
       "fightsCountToValidateLevel": 2,
       "numberOfDaysInSeasonSubPeriod": 7,
@@ -2166,6 +2219,21 @@
         "key": "com.ankama.waven.goldplatinumpass",
         "androidKey": "com.ankama.waven.goldplatinumpass",
         "iosKey": "com.ankama.waven.goldplatinumpass"
+      },
+      "welcomePack": {
+        "type": "ShopArticleWithShowcase",
+        "showcase": {
+          "type": "BackofficeShopArticle",
+          "key": "com.ankama.waven.welcomepack.showcase",
+          "androidKey": "steam_app_id_2635090",
+          "iosKey": "steam_app_id_2635090"
+        },
+        "article": {
+          "type": "BackofficeShopArticle",
+          "key": "steam_app_id_2635090",
+          "androidKey": "steam_app_id_2635090",
+          "iosKey": "steam_app_id_2635090"
+        }
       },
       "foundersPack": {
         "type": "ShopArticleWithUpgrades",
@@ -2268,7 +2336,22 @@
           "amount": 100,
           "resourceId": 922
         }
-      ]
+      ],
+      "shopFreeArticle": {
+        "type": "ShopFreeArticle",
+        "item": {
+          "type": "OwnableItemInfo",
+          "ownableProviderId": {
+            "typeEnum": 33,
+            "value": 392
+          },
+          "quantity": {
+            "type": "MinMax",
+            "min": 100,
+            "max": 100
+          }
+        }
+      }
     },
     "precomputedData": {
       "type": "PrecomputedData",

@@ -61,13 +61,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": 846,
       "families": [
         2
       ],
-      "heroSkillPointsCost": 10,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 10
     },
     "gaugeToModifyOnSpellPlay": [],
     "costs": [
@@ -108,9 +110,28 @@
           "value": 10
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "a",
-          "value": 1
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": true
         }
       ],
       "externalDynamicValueReferences": [],
@@ -125,13 +146,13 @@
     "en": "Piven Pirouette",
     "es": "Giro Piven",
     "de": "Tannen-Wirbel",
-    "pt": "Cambalhota Piven"
+    "pt": "Giro Piven"
   },
   "description": {
     "fr": "Inflige {value:pc,percent} de l'{%AT} de votre héros à la cible.\n\\---\n{#COMBO}\\_: {value:a,+}\\_{%AURA_SIGHT,value:a} à votre héros s'il en possède déjà",
     "en": "Inflicts {value:pc,percent} of your hero's {%AT} on the target.\n\\---\n{#COMBO}: {value:a,+}\\_{%AURA_SIGHT,value:a} to your hero if they have any already.",
     "es": "Inflige un {value:pc,percent} del {%AT} de tu héroe al objetivo.\n\\---\n{#COMBO}: {value:a,+} \\_{%AURA_SIGHT,value:a} a tu héroe si ya tiene.",
-    "de": "Verursacht beim Ziel {value:pc,percent} des {%AT} deines Helden als Schaden.\n\\---\n{#COMBO}: {value:a,+}\\_{%AURA_SIGHT,value:a} für deinen Helden, falls er bereits welche besitzt.",
-    "pt": "Inflige {value:pc,percent} do {%AT} do seu herói ao alvo.\n\\---\n{#COMBO}: {value:a,+}\\_{%AURA_SIGHT,value:a} ao seu herói se ele já possuir."
+    "de": "Verursacht beim Ziel {value:pc,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{#COMBO}: {value:a,+}\\_{%AURA_SIGHT,value:a} für deinen Helden, falls er bereits welche besitzt.",
+    "pt": "Inflige {value:pc,percent} do {%AT} do seu herói ao alvo.\n\\---\n{#COMBO}: {value:a,+}\\_{%AURA_SIGHT,value:a} ao seu herói se ele já possuir alguma."
   }
 }

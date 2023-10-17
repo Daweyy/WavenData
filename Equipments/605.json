@@ -118,6 +118,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "c2",
           "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "coll",
+          "value": 30
         }
       ],
       "externalDynamicValueReferences": [
@@ -153,15 +158,15 @@
     "fr": "Brassard de Repousse Foudroyante",
     "en": "Lightning Push Armband",
     "es": "Brazalete de Empujón Fulminante",
-    "de": "Armschiene des überwältigenden Rückstoßes",
+    "de": "Armschiene des blitzartigen Rückstoßes",
     "pt": "Braçadeira de Empurrão Fulminante"
   },
   "description": {
-    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\nDéclenche {lightning:ParameterizedEffectExecution.801.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
-    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\nTriggers {lightning:ParameterizedEffectExecution.801.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
-    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\nActiva {lightning:ParameterizedEffectExecution.801.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
-    "de": "{%Attack} Das Ziel wird {cell:c} {#PUSH}.\n\\---\nLöst {lightning:ParameterizedEffectExecution.801.bc} pro <b>{%KEYWORD.COLLISION.NAME}</b>-Feld aus.",
-    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\nAciona {lightning:ParameterizedEffectExecution.801.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
+    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\nDéclenche {lightning:ParameterizedEffectExecution.801.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.\n\\---\n{%fightstarted} {value:coll,percent,+} à vos dégats de <b>COLLISION</b>.",
+    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\nTriggers {lightning:ParameterizedEffectExecution.801.bc} for each <b>{%KEYWORD.COLLISION.NAME}</b> cell.\n\\---\n{%fightstarted} {value:coll,percent,+} to your <b>COLLISION</b> damage.",
+    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\nActiva {lightning:ParameterizedEffectExecution.801.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.\n\\---\n{%fightstarted} {value:coll,percent,+} a tus daños de <b>COLISIÓN</b>.",
+    "de": "{%Attack} {#PUSH,plural:one} um {cell:c}.\n\\---\nLöst {lightning:ParameterizedEffectExecution.801.bc} pro <b>{%KEYWORD.COLLISION.NAME}</b>-Feld aus.\n\\---\n{%fightstarted} {value:coll,percent,+} für deinen <b>ZUSAMMENSTOSS</b>-Schaden.",
+    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\nAciona um {lightning:ParameterizedEffectExecution.801.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>.\n\\---\n{%fightstarted} {value:coll,percent,+} aos seus danos de <b>COLISÃO</b>."
   },
   "bgDescription": {
     "fr": "{%empty}",

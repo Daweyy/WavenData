@@ -1,0 +1,215 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "450",
+  "m_id": 450,
+  "m_displayName": "ALBUERA - Agard",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -89437089,
+    "b": -1652111596,
+    "c": -8798149,
+    "d": -936973543,
+    "e": -2051303761
+  },
+  "m_i18nDescriptionId": {
+    "a": -89437089,
+    "b": -1652111596,
+    "c": -8798149,
+    "d": -936973543,
+    "e": 1299492559
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 450,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 843,
+      "skinIds": [
+        843
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    },
+    "families": [
+      104
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 69
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 12
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 14
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 5
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      3051,
+      3881,
+      3052,
+      3778,
+      3555,
+      3091
+    ],
+    "rarity": 0,
+    "equipableByPlayers": true,
+    "pvpAvailability": {
+      "type": "SeasonBasedAvailability",
+      "inclusiveFrom": 8,
+      "inclusiveTo": null
+    },
+    "upgradeRuleId": 985,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          450
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 0,
+        "max": 3
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Agard",
+    "en": "Agard",
+    "es": "Agard",
+    "de": "Agard",
+    "pt": "Agard"
+  },
+  "description": {
+    "fr": "Lorsque vous générez des {%GAUGE, plural:other}\\_: {#PUSH} les adversaires alignés de 1\\_case par {%GAUGE} générée.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "When you generate {%GAUGE, plural:other}: {#PUSH} in-line opponents 1\\_cell per {%GAUGE} generated.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "Cuando generas {%GAUGE, plural:other}: {#PUSH} a los adversarios alineados 1\\_casilla por {%GAUGE} generado.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "Wenn du {%GAUGE, plural:other} generierst: {#PUSH,plural:one} der Gegner in derselben Reihe um ein\\_Feld pro generiertem {%GAUGE}.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "Quando você gera {%GAUGE, plural:other}: {#PUSH} os adversários alinhados por 1\\_célula por {%GAUGE} gerada.\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+  }
+}

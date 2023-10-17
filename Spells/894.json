@@ -65,13 +65,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 4,
       "specificToWeapon": 36,
       "families": [
         6
       ],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -133,7 +135,19 @@
         ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "8daa59015fe408f4f967a236646f8d1b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
@@ -192,13 +206,13 @@
     "en": "Sneaky Tracking",
     "es": "Rastreo Solapado",
     "de": "Heimtückische Verfolgungsjagd",
-    "pt": "Caçada Traiçoeira"
+    "pt": "Rastreamento Traiçoeiro"
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg} et {#Push} de {cell:c}.\n\\---\nÉchange la position de votre héros avec la cible si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
     "en": "Does {magicalDamage:dmg} and {#Push} {cell:c}. \n\\---\nSwitches your hero's position with the target if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
     "es": "Inflige {magicalDamage:dmg} y {#Push} {cell:c}.\n\\---\nIntercambia la posición de tu héroe con la del objetivo si está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
-    "de": "Verursacht {magicalDamage:dmg} und {#Push} um {cell:c}.\n\\---\nTauscht die Position deines Helden mit der des Ziels, falls es <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg} e {#Push} por {cell:c}.\n\\---\nTroca a posição do seu herói com o alvo, se este estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
+    "de": "Verursacht {magicalDamage:dmg} und einen {#Push,plural:one} um {cell:c}.\n\\---\nTauscht die Position deines Helden mit der des Ziels, falls es <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg} e {#Push} por {cell:c}.\n\\---\nTroca a posição do seu herói com a do alvo se este estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
   }
 }

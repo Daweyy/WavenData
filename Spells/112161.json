@@ -48,13 +48,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": 143,
       "families": [
         1
       ],
-      "heroSkillPointsCost": 10,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 10
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -95,7 +97,7 @@
             "targetsToCompare": {
               "type": "FilteredEntitySelector",
               "from": {
-                "type": "AllBoardPresencesSelector"
+                "type": "AllCharactersSelector"
               },
               "filters": [
                 {
@@ -158,7 +160,13 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 200
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -172,10 +180,10 @@
     "pt": "Sacrifício Espectral"
   },
   "description": {
-    "fr": "Sacrifie un allié.\n\\---\nInflige l'{%AT} de votre héros à un adversaire adjacent\\_<sprite name=\"cell_cross\">.",
-    "en": "Sacrifices an ally.\n\\---\nInflicts your hero's {%AT} on an adjacent\\_<sprite name=\"cell_cross\"> opponent.",
-    "es": "Sacrifica a un aliado.\n\\---\nInflige el {%AT} de tu héroe a un adversario adyacente\\_<sprite name=\"cell_cross\">.",
-    "de": "Opfert einen Verbündeten.\n\\---\nFügt einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner den {%AT} deines Helden als Schaden zu.",
-    "pt": "Sacrifica um aliado.\n\\---\nInflige o {%AT} do seu herói a um adversário adjacente\\_<sprite name=\"cell_cross\">."
+    "fr": "Sacrifie un allié.\n\\---\nInflige {value:per,percent} de l'{%AT} de votre héros à un adversaire adjacent\\_<sprite name=\"cell_cross\">.",
+    "en": "Sacrifices an ally.\n\\---\nInflicts {value:per,percent} of your hero's {%AT} on an adjacent\\_<sprite name=\"cell_cross\"> opponent.",
+    "es": "Sacrifica a un aliado.\n\\---\nInflige un {value:per,percent} del {%AT} de tu héroe a un adversario adyacente\\_<sprite name=\"cell_cross\">.",
+    "de": "Opfert einen Verbündeten.\n\\---\nFügt einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner {value:per,percent} des {%AT,plural:two} deines Helden als Schaden zu.",
+    "pt": "Sacrifica um aliado.\n\\---\nInflige {value:per,percent} do {%AT} do seu herói a um adversário adjacente\\_<sprite name=\"cell_cross\">."
   }
 }

@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1242",
+  "m_id": 1242,
+  "m_displayName": "SEASON - BELLADONE - Lance Eau",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 666335036,
+    "b": 1048959124,
+    "c": -1554744568,
+    "d": -1791312557,
+    "e": -2021062525
+  },
+  "m_i18nDescriptionId": {
+    "a": 666335036,
+    "b": 1048959124,
+    "c": -1554744568,
+    "d": -1791312557,
+    "e": -1619682018
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "33f9e86abccce484584570a7fb25cd1a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1242,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      10,
+      24
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 2,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 6
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 6
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 7,
+          "id": 85
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Lance Eau",
+    "en": "Water Lance",
+    "es": "Lanza de Agua",
+    "de": "Wasserlanze",
+    "pt": "Lança Água"
+  },
+  "description": {
+    "fr": "Construit une {ObjectMechanism:85} jusqu'à {cell:c} de votre héros.",
+    "en": "Builds one {ObjectMechanism:85} up to {cell:c} from your hero.",
+    "es": "Construye una {ObjectMechanism:85} hasta a {cell:c} de tu héroe.",
+    "de": "Errichtet eine {ObjectMechanism:85} bis auf {cell:c} von deinem Helden entfernt.",
+    "pt": "Constrói uma {ObjectMechanism:85} a até {cell:c} do seu herói."
+  }
+}

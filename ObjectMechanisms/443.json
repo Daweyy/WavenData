@@ -1,0 +1,120 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -6943090813380698000
+  },
+  "m_Name": "443",
+  "m_id": 443,
+  "m_displayName": "Lance Terre",
+  "m_availability": 2,
+  "m_i18nNameId": {
+    "a": -692994764,
+    "b": -820868636,
+    "c": 545170121,
+    "d": 993428936,
+    "e": -423968252
+  },
+  "m_i18nDescriptionId": {
+    "a": -692994764,
+    "b": -820868636,
+    "c": 545170121,
+    "d": 993428936,
+    "e": -289587172
+  },
+  "values": {
+    "type": "ObjectMechanismDefinition",
+    "id": 443,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 847,
+      "skinIds": [
+        847
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConditionalValue",
+            "referenceId": "",
+            "condition": {
+              "type": "HolderHasSkillCondition",
+              "skill": 1191
+            },
+            "ifTrue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 48
+            },
+            "ifFalse": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 12
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      1
+    ],
+    "baseProperties": [],
+    "spells": [],
+    "grade": 0,
+    "scale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 17
+    },
+    "baseMecaLife": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    }
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

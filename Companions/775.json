@@ -10,7 +10,7 @@
   },
   "m_Name": "775",
   "m_id": 775,
-  "m_displayName": "QUETE - BONTA - 19 - nom",
+  "m_displayName": "QUETE - BONTA - 19 - Alfredo Bebel",
   "m_availability": 2,
   "m_i18nNameId": {
     "a": -1640716840,
@@ -49,13 +49,9 @@
         }
       ],
       "externalDynamicValueReferences": [],
-      "hasEffects": true,
+      "hasEffects": false,
       "keywordReferences": [
-        "PUSH",
-        {
-          "type": 20,
-          "id": 8
-        }
+        "PUSH"
       ]
     },
     "families": [],
@@ -63,7 +59,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 110
+      "value": 300
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -92,6 +88,9 @@
     "unlockableSkillIds": [],
     "rarity": 0,
     "equipableByPlayers": false,
+    "pvpAvailability": {
+      "type": "AlwaysAvailable"
+    },
     "upgradeRuleId": null,
     "castCondition": {
       "type": "CanCastCompanionCondition",
@@ -110,66 +109,10 @@
         "filters": [
           {
             "type": "CellValidForCharacterFilter"
-          },
-          {
-            "type": "OrCoordFilter",
-            "filters": [
-              {
-                "type": "CombinedCoordFilter",
-                "filters": [
-                  {
-                    "type": "AroundTargetFilter",
-                    "targetsToCompare": {
-                      "type": "CasterHeroSelector"
-                    },
-                    "distance": {
-                      "type": "GreaterEqualThan",
-                      "dynamicValue": {
-                        "type": "ConstIntegerValue",
-                        "referenceId": "",
-                        "value": 1
-                      }
-                    }
-                  },
-                  {
-                    "type": "AroundTargetFilter",
-                    "targetsToCompare": {
-                      "type": "CasterHeroSelector"
-                    },
-                    "distance": {
-                      "type": "LowerEqualThan",
-                      "dynamicValue": {
-                        "type": "SumValue",
-                        "referenceId": "",
-                        "valuesToSum": [
-                          {
-                            "type": "EntityCaracValue",
-                            "referenceId": "",
-                            "entitySelector": {
-                              "type": "CasterSelector"
-                            },
-                            "carac": 64
-                          },
-                          {
-                            "type": "ConstIntegerValue",
-                            "referenceId": "",
-                            "value": 2
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            ]
           }
         ]
       },
-      "casterHeroRange": {
-        "type": "MinMax",
-        "min": 1,
-        "max": 2
-      },
+      "casterHeroRange": null,
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
@@ -178,14 +121,14 @@
     "gatheringAbilities": []
   },
   "name": {
-    "fr": "nom",
+    "fr": "Alfredo Bebel",
     "en": "",
     "es": "",
     "de": "",
     "pt": ""
   },
   "description": {
-    "fr": "{%fightTurnStarted} Gagne {PropertyEffect:8}.\n\\---\n{%ATTACK} {#PUSH} de {cell:c}.",
+    "fr": "{%ATTACK} {#PUSH} de {cell:c}.",
     "en": "",
     "es": "",
     "de": "",

@@ -50,13 +50,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": 497,
       "families": [
         1
       ],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [],
     "costs": [
@@ -144,6 +146,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 80
         }
       ],
       "externalDynamicValueReferences": [],
@@ -161,10 +168,10 @@
     "pt": "Investida Fantasma"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige son {%AT}.\n\\---\n{#Ephemeral}",
-    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%AT} on them.\n\\---\n{#Ephemeral}",
-    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige su {%AT}.\n\\---\n{#Ephemeral}",
-    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis zu {cell:c} in derselben Reihe und fügt ihm seinen {%AT} als Schaden zu.\n\\---\n{#Ephemeral}",
-    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e inflige seu {%AT}.\n\\---\n{#Ephemeral}"
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige {value:per, percent} de son {%AT}.\n\\---\n{#Ephemeral}",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts {value:per, percent} of their {%AT} on them.\n\\---\n{#Ephemeral}",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige un {value:per, percent} de su {%AT}.\n\\---\n{#Ephemeral}",
+    "de": "Dein Gegner <b>STÜRMT</b> auf einen Charakter in derselben Reihe bis auf {cell:c} zu und verursacht bei ihm {value:per, percent} seines {%AT,plural:two} als Schaden.\n\\---\n{#Ephemeral}",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige {value:per, percent} de seu {%AT}.\n\\---\n{#Ephemeral}"
   }
 }

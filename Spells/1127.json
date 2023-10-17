@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1127",
+  "m_id": 1127,
+  "m_displayName": "SEASON - BELLADONE - Lance Air",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -2029741346,
+    "b": -2043309900,
+    "c": 338862152,
+    "d": -1837828982,
+    "e": 1503007950
+  },
+  "m_i18nDescriptionId": {
+    "a": -2029741346,
+    "b": -2043309900,
+    "c": 338862152,
+    "d": -1837828982,
+    "e": -1062705082
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "145d75fbe49743a4fac4930a9b82a9d5"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1127,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      10,
+      24
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 6
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 6
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 7,
+          "id": 26
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Lance Air",
+    "en": "Air Lance",
+    "es": "Lanza de Aire",
+    "de": "Luftlanze",
+    "pt": "Lança Ar"
+  },
+  "description": {
+    "fr": "Construit une {ObjectMechanism:26} jusqu'à {cell:c} de votre héros.",
+    "en": "Builds one {ObjectMechanism:26} up to {cell:c} from your hero.",
+    "es": "Construye una {ObjectMechanism:26} hasta a {cell:c} de tu héroe.",
+    "de": "Errichtet eine {ObjectMechanism:26} bis auf {cell:c} von deinem Helden entfernt.",
+    "pt": "Coloca uma {ObjectMechanism:26} a até {cell:c} do seu herói."
+  }
+}

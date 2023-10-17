@@ -1,0 +1,229 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "446",
+  "m_id": 446,
+  "m_displayName": "ALBUERA - Biste",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -1227053110,
+    "b": 1132091124,
+    "c": 708858139,
+    "d": -202731620,
+    "e": -392032534
+  },
+  "m_i18nDescriptionId": {
+    "a": -1227053110,
+    "b": 1132091124,
+    "c": 708858139,
+    "d": -202731620,
+    "e": 230096599
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 446,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 44,
+      "skinIds": [
+        44,
+        70
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      104
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 102
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 20
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 23
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 24
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [
+      3588,
+      3152,
+      3828,
+      3927,
+      3015,
+      3950
+    ],
+    "rarity": 2,
+    "equipableByPlayers": true,
+    "pvpAvailability": {
+      "type": "SeasonBasedAvailability",
+      "inclusiveFrom": 8,
+      "inclusiveTo": null
+    },
+    "upgradeRuleId": 407,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          446
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 0,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      },
+      {
+        "type": "ElementPointsCost",
+        "element": 11,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Biste",
+    "en": "Biste",
+    "es": "Bist",
+    "de": "Biesti",
+    "pt": "Biste"
+  },
+  "description": {
+    "fr": "Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v {ATvalue:v,percent,+} par {%GAUGE} générée.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "When you generate {%GAUGE, plural:other}: \\v{ATvalue:v,percent,+} per {%GAUGE} generated.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "Cuando generas {%GAUGE, plural:other}:\\v {ATvalue:v,percent,+} por {%GAUGE} generado.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "Wenn du {%GAUGE, plural:other} generierst:\\v {ATvalue:v,percent,+} pro generiertem {%GAUGE}.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "Quando você gera {%GAUGE, plural:other}:\\v {ATvalue:v,percent,+} por {%GAUGE} gerada.\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+  }
+}

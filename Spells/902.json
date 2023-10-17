@@ -54,13 +54,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 1,
       "specificToWeapon": 967,
       "families": [
         3
       ],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -159,13 +161,40 @@
           "value": 30
         },
         {
-          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "Supp",
-          "baseValue": 6,
+          "baseValue": {
+            "type": "LinearScaleLevelOnlyBasedDynamicValue",
+            "referenceId": "",
+            "baseValue": 6,
+            "factor": {
+              "type": "ReferenceScalingFactor",
+              "reference": 12
+            }
+          },
           "factor": {
             "type": "ReferenceScalingFactor",
             "reference": 12
-          }
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -186,7 +215,7 @@
     "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\">\\_d'un\\_allié. \n\\---\n{#SUPPORT}\\_: {magicalDamage:Supp,+}",
     "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> an\\_ally.\n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}.",
     "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\">\\_de un\\_aliado. \n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}",
-    "de": "Verursacht bei den Gegnern ringsum\\_<sprite name=\"cell_around\"> eines Verbündeten {magicalDamage:dmg}.\n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}",
+    "de": "Verursacht bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> eines Verbündeten {magicalDamage:dmg}.\n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}",
     "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\">\\_de\\_um\\_aliado. \n\\---\n{#SUPPORT}: {magicalDamage:Supp,+}"
   }
 }

@@ -60,11 +60,13 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 1,
       "specificToWeapon": null,
       "families": [],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -112,45 +114,53 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "FilteredEntitySelector",
-              "from": {
-                "type": "AllCompanionsSelector"
-              },
-              "filters": [
-                {
-                  "type": "CompanionDefinitionFilter",
-                  "condition": 1,
-                  "companions": [
-                    144
-                  ]
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FilteredEntitySelector",
+                "from": {
+                  "type": "AllCompanionsSelector"
                 },
-                {
-                  "type": "OwnerFilter",
-                  "isIdentical": true,
-                  "reference": {
-                    "type": "CasterSelector"
+                "filters": [
+                  {
+                    "type": "CompanionDefinitionFilter",
+                    "condition": 1,
+                    "companions": [
+                      144
+                    ]
+                  },
+                  {
+                    "type": "OwnerFilter",
+                    "isIdentical": true,
+                    "reference": {
+                      "type": "CasterSelector"
+                    }
                   }
+                ]
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
                 }
-              ]
-            },
-            "distance": {
-              "type": "LowerEqualThan",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "c",
-                "value": 3
               }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
             }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
-          }
-        ]
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
       }
     },
     "spellEffectData": [],
@@ -204,7 +214,7 @@
     "fr": "Téléporte {Companion:144!} jusqu'à {cell:c}.\n\\---\nDéclenche {explosion:ex} autour de lui.",
     "en": "Teleports {Companion:144!} up to {cell:c}.\n\\---\nTriggers {explosion:ex} around him.",
     "es": "Teletransporta a {Companion:144!} hasta {cell:c}.\n\\---\nActiva {explosion:ex} a su alrededor.",
-    "de": "Teleportiert {Companion:144!} bis zu {cell:c}.\n\\---\nLöst {explosion:ex} in der Nähe aus.",
-    "pt": "Teletransporta {Companion:144!} a até {cell:c}.\n\\---\nAciona {explosion:ex} em\\_volta dele."
+    "de": "Teleportiert {Companion:144!} bis zu {cell:c}.\n\\---\nLöst im Umkreis {explosion:ex}.",
+    "pt": "Teletransporta {Companion:144!} por até {cell:c}.\n\\---\nAciona {explosion:ex} em\\_volta dele."
   }
 }

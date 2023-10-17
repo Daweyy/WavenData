@@ -118,6 +118,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "c2",
           "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "coll",
+          "value": 30
         }
       ],
       "externalDynamicValueReferences": [
@@ -157,11 +162,11 @@
     "pt": "Braçadeira de Empurrão Rochoso"
   },
   "description": {
-    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\nDéclenche {rock:ParameterizedEffectExecution.275.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.",
-    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\nTriggers {rock:ParameterizedEffectExecution.275.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.",
-    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\nActiva {rock:ParameterizedEffectExecution.275.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.",
-    "de": "{%Attack} {#PUSH} um {cell:c}.\n\\---\nLöst {rock:ParameterizedEffectExecution.275.bc} pro <b>{%KEYWORD.COLLISION.NAME}</b>-Feld aus.",
-    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\nAciona {rock:ParameterizedEffectExecution.275.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>."
+    "fr": "{%Attack} {#PUSH} de {cell:c}.\n\\---\nDéclenche {rock:ParameterizedEffectExecution.275.bc} par case de <b>{%KEYWORD.COLLISION.NAME}</b>.\n\\---\n{%fightstarted} {value:coll,percent,+} à vos dégats de <b>COLLISION</b>.",
+    "en": "{%Attack} {#PUSH} {cell:c}.\n\\---\nTriggers {rock:ParameterizedEffectExecution.275.bc} per <b>{%KEYWORD.COLLISION.NAME}</b> cell.\n\\---\n{%fightstarted} {value:coll,percent,+} to your <b>COLLISION</b> damage.",
+    "es": "{%Attack} {#PUSH} {cell:c}.\n\\---\nActiva {rock:ParameterizedEffectExecution.275.bc} por casilla de <b>{%KEYWORD.COLLISION.NAME}</b>.\n\\---\n{%fightstarted} {value:coll,percent,+} a tus daños de <b>COLISIÓN</b>.",
+    "de": "{%Attack} {#PUSH,plural:one} um {cell:c}.\n\\---\nLöst {rock:ParameterizedEffectExecution.275.bc} pro <b>{%KEYWORD.COLLISION.NAME}</b>-Feld aus.\n\\---\n{%fightstarted} {value:coll,percent,+} für deinen <b>ZUSAMMENSTOSS</b>-Schaden.",
+    "pt": "{%Attack} {#PUSH} por {cell:c}.\n\\---\nAciona uma {rock:ParameterizedEffectExecution.275.bc} por célula de <b>{%KEYWORD.COLLISION.NAME}</b>.\n\\---\n{%fightstarted} {value:coll,percent,+} aos seus danos de <b>COLISÃO</b>."
   },
   "bgDescription": {
     "fr": "{%empty}",

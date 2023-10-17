@@ -39,7 +39,13 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "blA",
+          "value": 100
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -53,10 +59,10 @@
     "pt": "Encadeamento Pramium"
   },
   "description": {
-    "fr": "Lorsqu'un compagnon allié <b>ATTAQUE</b>\\_:\\v Déclenche l'effet de vos <b>SINISTROS</b>.",
-    "en": "When an allied companion performs an <b>ATTACK</b>: \\vTriggers the effect of your <b>SINISTROS</b>.",
-    "es": "Cuando un compañero aliado <b>ATACA</b>:\\v Activa el efecto de tus <b>SINISTROS</b>.",
-    "de": "Beim <b>ANGRIFF</b> eines verbündeten Begleiters:\\v Löst den Effekt deiner<b>SINISTROS</b> aus.",
-    "pt": "Quando um companheiro aliado <b>ATACA</b>:\\v Aciona o efeito dos seus <b>SINISTROS</b>."
+    "fr": "Lorsqu'un compagnon allié <b>ATTAQUE</b>\\_:\\v Déclenche l'effet de vos <b>SINISTROS</b>.\n\\---\nLorsque vous invoquez un {%KEYWORD.OBJECTMECHANISM.NAME}\\_:\\v {value:blA,percent,+} de {%BL}.",
+    "en": "When an allied companion performs an <b>ATTACK</b>: \\vTriggers the effect of your <b>SINISTROS</b>.\n\\---\nWhen you summon a {%KEYWORD.OBJECTMECHANISM.NAME}: \\v{value:blA,percent,+} {%BL}.",
+    "es": "Cuando un compañero aliado <b>ATACA</b>:\\v Activa el efecto de tus <b>SINISTROS</b>.\n\\---\nCuando invocas un {%KEYWORD.OBJECTMECHANISM.NAME}:\\v {value:blA,percent,+} de {%BL}.",
+    "de": "Beim <b>ANGRIFF</b> eines verbündeten Begleiters:\\v Löst den Effekt deiner<b>SINISTROS</b> aus.\n\\---\nWenn du einen {%KEYWORD.OBJECTMECHANISM.NAME} beschwörst:\\v {value:blA,percent,+} {%BL}.",
+    "pt": "Quando um companheiro aliado <b>ATACA</b>:\\v Aciona o efeito dos seus <b>SINISTROS</b>.\n\\---\nQuando você invoca um {%KEYWORD.OBJECTMECHANISM.NAME}:\\v {value:blA,percent,+} de {%BL}."
   }
 }

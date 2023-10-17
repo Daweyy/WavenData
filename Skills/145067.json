@@ -39,9 +39,15 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pv",
+          "value": 20
+        }
+      ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": [
         "EPHEMERAL",
         {
@@ -59,10 +65,10 @@
     "pt": "Motivação Pramium"
   },
   "description": {
-    "fr": "Vous pouvez jouer le sort {Spell:164202} sur un compagnon allié pour lui faire rejouer son tour.",
-    "en": "You can cast the {Spell:164202} spell on an allied companion to make them replay their turn.",
-    "es": "Puedes lanzar el hechizo {Spell:164202} a un compañero aliado para que pueda volver a jugar su turno.",
-    "de": "Du kannst den Zauber {Spell:164202} auf einen verbündeten Begleiter wirken, damit er seine Runde erneut spielt.",
-    "pt": "Você pode lançar o feitiço {Spell:164202} em um companheiro aliado para que ele jogue um turno extra."
+    "fr": "Vous pouvez jouer le sort {Spell:164202} sur un compagnon allié pour lui faire rejouer son tour.\n\\---\n{%COMPANION_APPEARANCE} {value:pv,percent,+} de {%pv} à vos compagnons.",
+    "en": "You can cast the {Spell:164202} spell on an allied companion to make them replay their turn.\n\\---\n{%COMPANION_APPEARANCE} {value:pv,percent,+} {%pv} to your companions.",
+    "es": "Puedes lanzar el hechizo {Spell:164202} a un compañero aliado para que pueda volver a jugar su turno.\n\\---\n{%COMPANION_APPEARANCE} {value:pv,percent,+} de {%pv} a tus compañeros.",
+    "de": "Du kannst den Zauber „{Spell:164202}“ gegen einen verbündeten Begleiter ausspielen, damit er seine Runde erneut spielt.\n\\---\n{%COMPANION_APPEARANCE} {value:pv,percent,+} {%pv} für deine Begleiter.",
+    "pt": "Você pode lançar o feitiço {Spell:164202} em um companheiro aliado para que ele jogue um turno extra.\n\\---\n{%COMPANION_APPEARANCE} {value:pv,percent,+} de {%pv} aos seus companheiros."
   }
 }

@@ -48,13 +48,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "NeverAvailable"
+      },
       "element": 6,
       "specificToWeapon": null,
       "families": [
         3
       ],
-      "heroSkillPointsCost": 20,
-      "bannedInPvp": true
+      "heroSkillPointsCost": 20
     },
     "gaugeToModifyOnSpellPlay": [],
     "costs": [
@@ -92,7 +94,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "d",
-          "value": 25
+          "value": 35
         },
         {
           "type": "ThisSpellEvolutionValue",
@@ -115,7 +117,7 @@
     "fr": "Inflige l'{%AT} de votre héros.\n\\---\nLorsque l'un de vos personnages libère une {%AURA_HEART}\\_:\\v {value:d, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur <b>AURAS LIBÉRÉES</b>\\_: {value:Lv}</rem>",
     "en": "Inflicts your hero's {%AT}.\n\\---\nWhen one of your characters releases a {%AURA_HEART}: \\v{value:d, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem><b>RELEASED AURA</b> Count: {value:Lv}.</rem>",
     "es": "Inflige el {%AT} de tu héroe.\n\\---\nCuando uno de tus personajes libera un {%AURA_HEART}:\\v {value:d, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador <b>AURAS LIBERADAS</b>: {value:Lv}</rem>",
-    "de": "Verursacht den {%AT} deines Helden als Schaden.\n\\---\nWenn dein Held 1\\_{%AURA_HEART} auslöst:\\v {value:d, +, percent} auf den <b>SCHADEN</b> dieses Zaubers.\n\\---\n<rem>Zähler für <b>AUSGELÖSTE AUREN</b>: {value:Lv}</rem>",
+    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\nWenn dein Held 1\\_{%AURA_HEART} auslöst:\\v {value:d, +, percent} auf den <b>SCHADEN</b> dieses Zaubers.\n\\---\n<rem>Zähler für <b>AUSGELÖSTE AUREN</b>: {value:Lv}</rem>",
     "pt": "Inflige o {%AT} do seu herói.\n\\---\nQuando um dos seus personagens libera uma {%AURA_HEART}:\\v {value:d, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de <b>AURAS LIBERADAS</b>: {value:Lv}</rem>"
   }
 }

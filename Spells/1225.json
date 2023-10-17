@@ -1,0 +1,185 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1225",
+  "m_id": 1225,
+  "m_displayName": "SEASON - CIRE MOMORE - Bouclier dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -770771432,
+    "b": 1471395716,
+    "c": -1677917078,
+    "d": 1989189855,
+    "e": 432369849
+  },
+  "m_i18nDescriptionId": {
+    "a": -770771432,
+    "b": 1471395716,
+    "c": -1677917078,
+    "d": 1989189855,
+    "e": 616803364
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "067a04d63510528499e242697a538063"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1225,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 3,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "7a0b33b1ab21b29499a319864d138499",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "dmg",
+          "percentage": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 100
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "p",
+                    "value": 5
+                  },
+                  {
+                    "type": "EntityCaracValue",
+                    "referenceId": "x",
+                    "entitySelector": {
+                      "type": "CasterSelector"
+                    },
+                    "carac": 20
+                  }
+                ]
+              }
+            ]
+          },
+          "from": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 30
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 5
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "CasterSelector"
+          },
+          "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "j",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "MAGIE_D_ALBUERA",
+        {
+          "type": 20,
+          "id": 8
+        },
+        "JAUGE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bouclier d'Albuera",
+    "en": "Albuera Shield",
+    "es": "Escudo de Albuera",
+    "de": "Albuera-Schild",
+    "pt": "Escudo de Albuera"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j})\\_: Confère {PropertyEffect:8} à votre héros.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Jauges générées\\_: {value:x}</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Confers {PropertyEffect:8} on your hero.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Gauges generated: {value:x}</rem>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Confiere {PropertyEffect:8} a tu héroe.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Indicadores generados: {value:x}</rem>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Verleiht deinem Helden {PropertyEffect:8}.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Concede {PropertyEffect:8} ao seu herói.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Cargas geradas: {value:x}</rem>"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1520",
+  "m_id": 1520,
+  "m_displayName": "SEASON - CIRE MOMORE - Charge dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1778981673,
+    "b": -1924706700,
+    "c": 543734680,
+    "d": -22370126,
+    "e": -219789878
+  },
+  "m_i18nDescriptionId": {
+    "a": 1778981673,
+    "b": -1924706700,
+    "c": 543734680,
+    "d": -22370126,
+    "e": 776573453
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0b991fc99b701d14ba5ac3a6e909521b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1520,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      8
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "CharacterEntityFilter"
+                }
+              ]
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllBoardPresencesSelector"
+        },
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CharacterEntityFilter"
+          },
+          {
+            "type": "HasEmptyPathInLineToTargetFilter",
+            "startCoords": {
+              "type": "FirstCastTargetSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "23319486d12db8543ae8c0c7d43139ea",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Charge d'Albuera",
+    "en": "Albuera Charge",
+    "es": "Carga de Albuera",
+    "de": "Albuera-Ansturm",
+    "pt": "Investida de Albuera"
+  },
+  "description": {
+    "fr": "L'allié ciblé <b>CHARGE</b> un personnage aligné et lui inflige son {%at}.",
+    "en": "The targeted ally <b>CHARGES</b> an in-line character and inflicts their {%at} on them.",
+    "es": "El aliado objetivo <b>CARGA</b> contra un personaje alineado y le inflige su {%at}.",
+    "de": "Der anvisierte Verbündete <b>STÜRMT</b> auf einen Charakter in derselben Reihe zu und verursacht bei ihm seinen {%at} als Schaden.",
+    "pt": "O aliado visado <b>INVESTE</b> contra um personagem alinhado e lhe inflige seu {%at}."
+  }
+}

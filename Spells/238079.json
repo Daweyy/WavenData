@@ -50,13 +50,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": 919,
       "families": [
         1
       ],
-      "heroSkillPointsCost": 10,
-      "bannedInPvp": false
+      "heroSkillPointsCost": 10
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -79,7 +81,7 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 6
+              "value": 7
             },
             {
               "type": "MultValue",
@@ -175,7 +177,7 @@
     "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{NamedEffect:455}\\_: -1 PA au coût de ce sort.",
     "en": "Inflicts your hero's {%AT}.\n\\---\n{NamedEffect:455}: -1 AP to the cost of this spell.",
     "es": "Inflige el {%AT} de tu héroe.\n\\---\n{NamedEffect:455}: -1 PA al coste de este hechizo.",
-    "de": "Verursacht den {%AT} deines Helden als Schaden.\n\\---\n{NamedEffect:455}: -1\\_AP auf die Kosten dieses Zaubers.",
+    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{NamedEffect:455}: -1\\_AP auf die Kosten dieses Zaubers.",
     "pt": "Inflige o {%AT} do seu herói.\n\\---\n{NamedEffect:455}: -1 PA ao custo deste feitiço."
   }
 }

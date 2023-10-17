@@ -1,0 +1,169 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1494",
+  "m_id": 1494,
+  "m_displayName": "COMPAGNON - CADENCE - Activation de Compagnon",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": -161894775,
+    "b": 348981652,
+    "c": 1323155051,
+    "d": 701578135,
+    "e": -1087842671
+  },
+  "m_i18nDescriptionId": {
+    "a": -161894775,
+    "b": 348981652,
+    "c": 1323155051,
+    "d": 701578135,
+    "e": -572363785
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "cd147e86d2c2d444ebbbd8b6e192395a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1494,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllBoardPresencesSelector"
+          },
+          "filters": [
+            {
+              "type": "EntityTypeFilter",
+              "condition": 1,
+              "entityTypes": [
+                2
+              ]
+            },
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "EntityTypeFilter",
+            "condition": 1,
+            "entityTypes": [
+              2
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d2276c9a6bf6b5445b99208841fb5f0b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Activation de Compagnon",
+    "en": "Companion Activation",
+    "es": "Activación de Compañero",
+    "de": "Begleiteraktivierung",
+    "pt": "Ativação de Companheiro"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nLe compagnon ciblé rejoue son tour.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nThe targeted companion replays their turn.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nEl compañero objetivo vuelve a jugar su turno.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nDer anvisierte Begleiter spielt seine Runde erneut.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nO companheiro visado joga um turno extra."
+  }
+}

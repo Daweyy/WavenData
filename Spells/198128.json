@@ -55,13 +55,15 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 1,
       "specificToWeapon": 36,
       "families": [
         6
       ],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [
       {
@@ -105,10 +107,10 @@
         "type": "SpellEffectInstantiationData",
         "spellEffect": "f92b27994524af24c942a67cde13cb54",
         "originTarget": {
-          "type": "CasterHeroSelector"
+          "type": "FirstCastTargetSelector"
         },
         "orientation": {
-          "type": "FirstCastTargetSelector"
+          "type": "CasterHeroSelector"
         },
         "delay": null
       }
@@ -164,7 +166,7 @@
     "en": "Devouring Tracking",
     "es": "Rastreo Voraz",
     "de": "Verzehrende Jagd",
-    "pt": "Caçada Devoradora"
+    "pt": "Rastreamento Devorador"
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg} à un personnage aligné avec votre héros.\n\\---\nVotre héros traverse la ligne si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",

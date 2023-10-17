@@ -60,11 +60,13 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": null,
       "families": [],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [],
     "costs": [
@@ -100,6 +102,9 @@
                 "value": 1
               }
             }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
           }
         ]
       }
@@ -124,13 +129,13 @@
     "en": "Dance Step",
     "es": "Paso de Baile",
     "de": "Tanzschritt",
-    "pt": "Passo de dança"
+    "pt": "Passo de Dança"
   },
   "description": {
     "fr": "Téléporte la cible de {cell:c}.\n\\---\n{%DestroyOnPlayed}",
     "en": "Teleports the target {cell:c}.\n\\---\n{%DestroyOnPlayed}",
     "es": "Teletransporta al objetivo {cell:c}.\n\\---\n{%DestroyOnPlayed}",
     "de": "Teleportiert das Ziel um {cell:c}.\n\\---\n{%DestroyOnPlayed}",
-    "pt": "Teletransporta o alvo a até {cell:c}.\n\\---\n{%DestroyOnPlayed}"
+    "pt": "Teletransporta o alvo por até {cell:c}.\n\\---\n{%DestroyOnPlayed}"
   }
 }

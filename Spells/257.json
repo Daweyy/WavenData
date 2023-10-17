@@ -48,11 +48,13 @@
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "AlwaysAvailable"
+      },
       "element": 6,
       "specificToWeapon": null,
       "families": [],
-      "heroSkillPointsCost": null,
-      "bannedInPvp": false
+      "heroSkillPointsCost": null
     },
     "gaugeToModifyOnSpellPlay": [],
     "costs": [
@@ -76,6 +78,13 @@
             "condition": 1,
             "families": [
               92
+            ]
+          },
+          {
+            "type": "EntityGradeFilter",
+            "condition": 2,
+            "entityGrades": [
+              2
             ]
           }
         ]

@@ -63,9 +63,26 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "per",
-          "value": 40
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "d",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -112,11 +129,11 @@
     "pt": "Braçadeira de Nevasca"
   },
   "description": {
-    "fr": "{%attack} {value:per,percent,+} de <b>DÉGÂTS</b> si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
-    "en": "{%attack} {value:per,percent,+} <b>DAMAGE</b> if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
-    "es": "{%attack} {value:per,percent,+} de <b>DAÑOS</b> si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
-    "de": "{%attack} {value:per,percent,+} <b>SCHADEN</b>, falls das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
-    "pt": "{%attack} {value:per,percent,+} de <b>DANOS</b> se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
+    "fr": "{%attack} Inflige {magicalDamage:d} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
+    "en": "{%attack} Does {magicalDamage:d} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
+    "es": "{%attack} Inflige {magicalDamage:d} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
+    "de": "{%attack} Verursacht {magicalDamage:d}, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
+    "pt": "{%attack} Inflige {magicalDamage:d} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
   },
   "bgDescription": {
     "fr": "{%empty}",

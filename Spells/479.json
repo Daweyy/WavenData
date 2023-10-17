@@ -1,0 +1,269 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "479",
+  "m_id": 479,
+  "m_displayName": "ALBUERA - AIR - Air dAlbuera",
+  "m_availability": 3,
+  "m_i18nNameId": {
+    "a": 1412072634,
+    "b": 462443796,
+    "c": 1248560074,
+    "d": -2145673730,
+    "e": 1681910624
+  },
+  "m_i18nDescriptionId": {
+    "a": 1412072634,
+    "b": 462443796,
+    "c": 1248560074,
+    "d": -2145673730,
+    "e": -1168456923
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "4b4b514b4c766074db81ac528f7b1a4e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      1811
+    ],
+    "m_values": [
+      {
+        "assetGuid": "de955c2194cc22144a2f88dd003d8498"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 479,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3613,
+      3959,
+      3607
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "NeverAvailable"
+      },
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [
+        104
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "ConditionalSelector",
+        "condition": {
+          "type": "DynamicValueEvaluatorCondition",
+          "value": {
+            "type": "EntityCaracValue",
+            "referenceId": "",
+            "entitySelector": {
+              "type": "CasterSelector"
+            },
+            "carac": 20
+          },
+          "evaluator": {
+            "type": "GreaterEqualThan",
+            "dynamicValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 5
+            }
+          }
+        },
+        "selectorIfTrue": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "selectorIfFalse": null
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c63aa5f2d64cbe14facf8e96927b6c16",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "dmg",
+          "percentage": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 100
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "p",
+                    "value": 5
+                  },
+                  {
+                    "type": "EntityCaracValue",
+                    "referenceId": "x",
+                    "entitySelector": {
+                      "type": "CasterSelector"
+                    },
+                    "carac": 20
+                  }
+                ]
+              }
+            ]
+          },
+          "from": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": null,
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 11
+            },
+            "factor": {
+              "type": "ReferenceScalingFactor",
+              "reference": 12
+            },
+            "buffs": [
+              24,
+              51
+            ],
+            "skillBuffs": [
+              {
+                "type": "SkillBuff",
+                "skillId": 118841,
+                "percentBuff": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 30
+                }
+              }
+            ],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 5
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "CasterSelector"
+          },
+          "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "j",
+          "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c2",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "MAGIE_D_ALBUERA",
+        "PUSH",
+        "JAUGE"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Air d'Albuera",
+    "en": "Albuera Air",
+    "es": "Aire de Albuera",
+    "de": "Albuera-Luft",
+    "pt": "Ar de Albuera"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}) : {#PUSH} la cible de {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Jauges générées : {value:x}</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {#PUSH} the target {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Gauges generated: {value:x}</rem>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {#PUSH} al objetivo {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Indicadores generados: {value:x}</rem>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {#PUSH,plural:few} das Ziel um {cell:c2} zurück.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {#PUSH} o alvo por {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n\\---\n<rem>Cargas geradas: {value:x}</rem>"
+  }
+}
