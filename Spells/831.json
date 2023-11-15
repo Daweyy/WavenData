@@ -83,15 +83,23 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "SquareAreaOfEffectSelector",
+        "type": "AreaFromTargetsSelector",
         "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "targets": {
           "type": "FilteredEntitySelector",
           "from": {
-            "type": "AllObjectMechanismsSelector"
+            "type": "AllBoardPresencesSelector"
           },
           "filters": [
             {
-              "type": "TeamFilter",
+              "type": "OwnerFilter",
               "isIdentical": true,
               "reference": {
                 "type": "CasterSelector"
@@ -106,10 +114,16 @@
             }
           ]
         },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
+        "areaOfEffect": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "EngineDeterminedHolder"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       }
     },

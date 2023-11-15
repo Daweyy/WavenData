@@ -63,47 +63,110 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "MultValue",
+          "type": "ConditionalValue",
           "referenceId": "bonus",
-          "valuesToMult": [
-            {
+          "condition": {
+            "type": "DynamicValueEvaluatorCondition",
+            "value": {
               "type": "EntityCaracValue",
-              "referenceId": null,
+              "referenceId": "",
               "entitySelector": {
                 "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
               },
               "carac": 20
             },
-            {
-              "type": "SumValue",
-              "referenceId": "pow1",
-              "valuesToSum": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 5
+            "evaluator": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 20
+              }
+            }
+          },
+          "ifTrue": {
+            "type": "MultValue",
+            "referenceId": null,
+            "valuesToMult": [
+              {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
                 },
-                {
-                  "type": "ConditionalValue",
-                  "referenceId": "",
-                  "condition": {
-                    "type": "HolderHasSkillCondition",
-                    "skill": 417
-                  },
-                  "ifTrue": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "pow2",
-                    "value": 5
-                  },
-                  "ifFalse": {
+                "carac": 20
+              },
+              {
+                "type": "SumValue",
+                "referenceId": "pow1",
+                "valuesToSum": [
+                  {
                     "type": "ConstIntegerValue",
                     "referenceId": "",
-                    "value": 0
+                    "value": 4
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "HolderHasSkillCondition",
+                      "skill": 417
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "pow2",
+                      "value": 4
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
                   }
-                }
-              ]
-            }
-          ]
+                ]
+              }
+            ]
+          },
+          "ifFalse": {
+            "type": "MultValue",
+            "referenceId": "max",
+            "valuesToMult": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 20
+              },
+              {
+                "type": "SumValue",
+                "referenceId": null,
+                "valuesToSum": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 4
+                  },
+                  {
+                    "type": "ConditionalValue",
+                    "referenceId": "",
+                    "condition": {
+                      "type": "HolderHasSkillCondition",
+                      "skill": 417
+                    },
+                    "ifTrue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 4
+                    },
+                    "ifFalse": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "SumValue",
@@ -112,7 +175,7 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 5
+              "value": 4
             },
             {
               "type": "ConditionalValue",
@@ -124,7 +187,7 @@
               "ifTrue": {
                 "type": "ConstIntegerValue",
                 "referenceId": "pow2",
-                "value": 5
+                "value": 4
               },
               "ifFalse": {
                 "type": "ConstIntegerValue",
@@ -137,7 +200,47 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "pow2",
-          "value": 5
+          "value": 4
+        },
+        {
+          "type": "MultValue",
+          "referenceId": "max",
+          "valuesToMult": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 20
+            },
+            {
+              "type": "SumValue",
+              "referenceId": null,
+              "valuesToSum": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 4
+                },
+                {
+                  "type": "ConditionalValue",
+                  "referenceId": "",
+                  "condition": {
+                    "type": "HolderHasSkillCondition",
+                    "skill": 417
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 4
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          ]
         }
       ],
       "externalDynamicValueReferences": [],
@@ -172,11 +275,11 @@
     "pt": "Anel Límpico"
   },
   "description": {
-    "fr": "Vos compagnons gagnent {ATvalue:pow1,percent,+} par {%GAUGE} que vous avez générée durant le combat.\n\\---\n<rem>Bonus actuel\\_: {value:bonus,percent,+} d'{%AT}.</rem>",
-    "en": "Your companions gain {ATvalue:pow1,percent,+} per {%GAUGE} that you've generated during the fight.\n\\---\n<rem>Current bonus: {value:bonus,percent,+} {%AT}.</rem>",
-    "es": "Tus compañeros ganan {ATvalue:pow1,percent,+} por {%GAUGE} que hayas generado durante el combate.\n\\---\n<rem>Bonus actual: {value:bonus,percent,+} de {%AT}.</rem>",
-    "de": "Deine Begleiter erhalten {ATvalue:pow1,percent,+} pro {%GAUGE}, den du während des Kampfs generiert hast.\n\\---\n<rem>Aktueller Bonus: {value:bonus,percent,+} {%AT}.</rem>",
-    "pt": "Seus companheiros ganham {ATvalue:pow1,percent,+} por {%GAUGE} que você tiver gerado durante o combate.\n\\---\n<rem>Bônus atual: {value:bonus,percent,+} de {%AT}.</rem>"
+    "fr": "{ATvalue:pow1,percent,+} à vos compagnons par {%GAUGE} que vous générez durant le combat.\n\\---\n<rem>Bonus actuel\\_: {ATvalue:bonus,percent,+}.\nBonus maximum\\_: {ATvalue:max,percent,+}</rem>",
+    "en": "{ATvalue:pow1,percent,+} to your companions for each {%GAUGE} you generate during the fight.\n\\---\n<rem>Current Bonus: {ATvalue:bonus,percent,+}.\nMaximum Bonus: {ATvalue:max,percent,+}.</rem>",
+    "es": "{ATvalue:pow1,percent,+} a tus compañeros por {%GAUGE} que generes durante el combate.\n\\---\n<rem>Bonus actual: {ATvalue:bonus,percent,+}.\nBonus máximo: {ATvalue:max,percent,+}</rem>",
+    "de": "{ATvalue:pow1,percent,+} für deine Begleiter pro {%GAUGE}, den du im Kampf generiert hast.\n\\---\n<rem>Aktueller Bonus: {ATvalue:bonus,percent,+}.\nMaximaler Bonus: {ATvalue:max,percent,+}</rem>",
+    "pt": "{ATvalue:pow1,percent,+} aos seus companheiros por {%GAUGE} que você gerar durante o combate.\n\\---\n<rem>Bônus atual: {ATvalue:bonus,percent,+}.\nBônus máximo: {ATvalue:max,percent,+}</rem>"
   },
   "bgDescription": {
     "fr": "Un anneau taillé pour les champions ! Ou en tout cas, ceux qui pensent l'être.",

@@ -51,47 +51,41 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "d",
+          "referenceId": "pow",
           "value": 50
         },
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "p",
-          "value": 200
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 100
+          "type": "CharacterActionValue",
+          "referenceId": "d",
+          "entitySelector": {
+            "type": "EffectHolderSelector"
+          }
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 20,
-          "id": 14
-        }
-      ]
+      "keywordReferences": []
     },
     "families": [
       0
     ],
-    "baseProperties": [],
+    "baseProperties": [
+      173
+    ],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 1000
+      "value": 500
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 2
+      "value": 1
     },
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 10
+      "value": 50
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -113,11 +107,11 @@
     "pt": "Beladona"
   },
   "description": {
-    "fr": "{%FightTurnStarted} Gagne {PropertyEffect:14} pour le tour si un autre allié est en jeu.\\vPuis Inflige {magicalDamage:d} au personnage adverse avec le plus de {%PV} si {Summoning:1440} possède {ATvalue:p} ou plus.\n\\---\nLorsqu'un allié meurt : {ATvalue:v,percent,+}.\n\\---\n{%Death} Ressuscite avec toute sa {%PVMAX}.",
-    "en": "{%FightTurnStarted} Gains {PropertyEffect:14} for the turn if another ally is in play.\\vThen inflicts {magicalDamage:d} on the opposing character with the most {%PV} if {Summoning:1440} has {ATvalue:p} or more.\n\\---\nWhen an ally dies: {ATvalue:v,percent,+}.\n\\---\n{%Death} Revives with all her {%PVMAX}.",
-    "es": "{%FightTurnStarted} Gana {PropertyEffect:14} durante el turno si otro aliado está en juego.\\vLuego inflige {magicalDamage:d} al personaje contrario con más {%PV} si {Summoning:1440} posee {ATvalue:p} o más.\n\\---\nCuando un aliado muere: {ATvalue:v,percent,+}.\n\\---\n{%Death} Resucita con toda su {%PVMAX}.",
-    "de": "{%FightTurnStarted} Wird {PropertyEffect:14} für die Runde, wenn ein anderer Verbündeter im Spiel ist.\\vVerursacht dann beim gegnerischen Charakter mit den meisten {%PV} {magicalDamage:d}, solange {Summoning:1440} mindestens {ATvalue:p} besitzt.\n\\---\nWenn ein Verbündeter stirbt: {ATvalue:v,percent,+}.\n\\---\n{%Death} Wird mit vollen {%PVMAX} wiederbelebt.",
-    "pt": "{%FightTurnStarted} Ganha {PropertyEffect:14} durante o turno se houver outro aliado no jogo.\\vDepois, inflige {magicalDamage:d} ao personagem adversário com mais {%PV} se {Summoning:1440} possuir {ATvalue:p} ou mais.\n\\---\nQuando um aliado morre: {ATvalue:v,percent,+}.\n\\---\n{%Death} Ressuscita com toda a sua {%PVMAX}."
+    "fr": "Lorsque {Summoning:1440!} est déplacée par un sort ou un effet\\_: Inflige son {%AT} aux personnages autour <sprite name=\"cell_around\"> d'elle.\n\\---\n{%Death} Ressuscite avec toute sa {%PVMAX} et gagne {ATvalue:pow,percent,+}.",
+    "en": "When {Summoning:1440!} is moved by a spell or an effect: Inflicts her {%AT} on characters around <sprite name=\"cell_around\"> her.\n\\---\n{%Death} Revives with all her {%PVMAX} and gains {ATvalue:pow,percent,+}.",
+    "es": "Cuando un hechizo o un efecto desplaza a {Summoning:1440!}: Inflige su {%AT} a los personajes a su alrededor <sprite name=\"cell_around\">.\n\\---\n{%Death} Resucita con toda su {%PVMAX} y gana {ATvalue:pow,percent,+}.",
+    "de": "Wird {Summoning:1440!} durch einen Zauber oder Effekt bewegt: Verursacht ihren {%AT} bei Charakteren in ihrem Umkreis <sprite name=\"cell_around\"> als Schaden.\n\\---\n{%Death} Wird mit {%PVMAX} wiedererweckt und erhält {ATvalue:pow,percent,+}.",
+    "pt": "Quando {Summoning:1440!} é deslocada por um feitiço ou um efeito: Inflige seu {%AT} aos personagens em\\_volta\\_<sprite name=\"cell_around\"> dela.\n\\---\n{%Death} Ressuscita com toda a sua {%PVMAX} e ganha {ATvalue:pow,percent,+}."
   },
   "championName": {
     "fr": "Belladone",

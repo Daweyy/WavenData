@@ -171,26 +171,30 @@
           "value": 2
         },
         {
-          "type": "BuffedScalingDynamicValue",
+          "type": "CharacterActionValue",
           "referenceId": "dmg",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 20
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51,
-            25
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "entitySelector": {
+            "type": "RandomFilteredEntitySelector",
+            "from": {
+              "type": "AllBoardPresencesSelector"
+            },
+            "filters": [
+              {
+                "type": "CompanionDefinitionFilter",
+                "condition": 1,
+                "companions": [
+                  176
+                ]
+              },
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterHeroSelector"
+                }
+              }
+            ]
+          }
         }
       ],
       "externalDynamicValueReferences": [],

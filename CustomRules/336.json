@@ -49,30 +49,31 @@
         },
         {
           "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "seuil",
+          "value": 200
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "pow",
           "value": 5
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "ar",
-          "value": 15
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
         {
-          "type": 20,
-          "id": 14
-        },
-        "DALLE",
-        {
           "type": 4,
           "id": 1440
-        },
-        {
-          "type": 6,
-          "id": 31
         }
       ]
     }
@@ -85,10 +86,10 @@
     "pt": "Portal de Beladona"
   },
   "description": {
-    "fr": "{%FightTurnEndedMonsters}\\v\ninvoque un\\_monstre.\\vEn invoque un supplémentaire par tour de jeu.\n<rem>Limité à {value:m} monstres maximum.</rem>\n\\---\nPuis Pose une\\_{FloorMechanism:31,plural:one}.\n\\---\nPuis confère {ATvalue:pow,percent,+} et {ARvalue:ar,+} par tour de jeu aux adversaires sauf {Summoning:1440}.",
-    "en": "{%FightTurnEndedMonsters}\\v\nSummons one\\_monster.\\vSummons an additional one per game turn.\n<rem>Limit: {value:m} {m, plural, one[monster] other[monsters]} maximum.</rem>\n\\---\nThen places one\\_{FloorMechanism:31,plural:one}.\n\\---\nThen confers {ATvalue:pow,percent,+} and {ARvalue:ar,+} per game turn on opponents except for {Summoning:1440}.",
-    "es": "{%FightTurnEndedMonsters}\\v\nInvoca un\\_monstruo.\\vInvoca uno más por turno de juego.\n<rem>Limitado a {value:m} monstruos como máximo.</rem>\n\\---\nLuego pone una\\_{FloorMechanism:31,plural:one}.\n\\---\nConfiere {ATvalue:pow,percent,+} y {ARvalue:ar,+} por turno de juego a todos los adversarios menos a {Summoning:1440}.",
-    "de": "{%FightTurnEndedMonsters}\\v\nBeschwört ein Monster.\\vBeschwört ein zusätzliches pro Spielrunde.\n<rem>Auf max. {value:m}\\_Monster begrenzt.</rem>\n\\---\nPlatziert dann eine\\_{FloorMechanism:31,plural:one}.\n\\---\nVerleiht anschließend allen Gegnern außer {Summoning:1440} {ATvalue:pow,percent,+} und {ARvalue:ar,+} pro Spielrunde.",
-    "pt": "{%FightTurnEndedMonsters}\\v\nInvoca um\\_monstro.\\vInvoca um monstro adicional por turno de jogo.\n<rem>Limite de {value:m} monstros no máximo.</rem>\n\\---\nDepois, coloca uma\\_{FloorMechanism:31,plural:one}.\n\\---\nEm seguida, concede {ATvalue:pow,percent,+} e {ARvalue:ar,+} por turno de jogo aos adversários, exceto {Summoning:1440}."
+    "fr": "{%FightTurnEndedMonsters}\\v\nInvoque un\\_monstre.\\vEn invoque un supplémentaire par tour de jeu.\n<rem>Limité à {value:m} monstres maximum.</rem>\n\\---\nPuis {PMvalue:pm,+} aux monstres qui ont {ATvalue:seuil} ou plus, n'affecte pas {Summoning:1440}.",
+    "en": "{%FightTurnEndedMonsters}\\v\nSummons a\\_monster.\\vSummons one extra per game turn.\n<rem>Limit: {value:m} {m, plural, one[monster] other[monsters]} maximum.</rem>\n\\---\nThen {PMvalue:pm,+} to monsters that have {ATvalue:seuil} or more. Does not affect {Summoning:1440}.",
+    "es": "{%FightTurnEndedMonsters}\\v\nInvoca un\\_monstruo.\\vInvoca uno adicional por turno de juego.\n<rem>Limitado a {value:m} monstruos como máximo.</rem>\n\\---\nLuego {PMvalue:pm,+} a los monstruos que tienen {ATvalue:seuil} o más, no afecta a {Summoning:1440}.",
+    "de": "{%FightTurnEndedMonsters}\\v\nBeschwört ein\\_Monster.\\vBeschwört ein zusätzliches pro Runde.\n<rem>Begrenzt auf max. {value:m}\\_Monster.</rem>\n\\---\nAnschließend {PMvalue:pm,+} für Monster, die mind. {ATvalue:seuil} haben, gilt allerdings nicht für {Summoning:1440}.",
+    "pt": "{%FightTurnEndedMonsters}\\v\nInvoca um\\_monstro.\\vInvoca um monstro adicional por turno de jogo.\n<rem>Limite de {value:m} monstros no máximo.</rem>\n\\---\nDepois, {PMvalue:pm,+} aos monstros que tiverem {ATvalue:seuil} ou mais. Não afeta {Summoning:1440}."
   }
 }

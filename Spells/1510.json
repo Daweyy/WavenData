@@ -6,29 +6,29 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": 4088305958716738000
+    "m_PathID": 4149792116076202500
   },
-  "m_Name": "1339",
-  "m_id": 1339,
-  "m_displayName": "SEASON - CIRE MOMORE - Repositionnement dAlbuera",
+  "m_Name": "1510",
+  "m_id": 1510,
+  "m_displayName": "SEASON - BELLADONE - Repousse florale",
   "m_availability": 3,
   "m_i18nNameId": {
-    "a": 510125822,
-    "b": -1400778796,
-    "c": 1363055850,
-    "d": 1154087142,
-    "e": 683916530
+    "a": 249472996,
+    "b": 44650804,
+    "c": 1061822906,
+    "d": 985731308,
+    "e": -1068050098
   },
   "m_i18nDescriptionId": {
-    "a": 510125822,
-    "b": -1400778796,
-    "c": 1363055850,
-    "d": 1154087142,
-    "e": -2070981974
+    "a": 249472996,
+    "b": 44650804,
+    "c": 1061822906,
+    "d": 985731308,
+    "e": -1559205526
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "f498fcde2215309448f5e36501253584"
+    "assetGuid": "f02dc7c6bacae4e44819d32ec1c10a38"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -36,7 +36,7 @@
   },
   "values": {
     "type": "SpellDefinition",
-    "id": 1339,
+    "id": 1510,
     "merchantCosts": [],
     "premiumItem": false,
     "rarity": 0,
@@ -71,23 +71,22 @@
     "castTarget": {
       "type": "TwoCastTargetDefinition",
       "selector1": {
-        "type": "FilteredCharacterSelector",
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllBoardPresencesSelector"
+        },
         "filters": [
           {
-            "type": "TeamFilter",
-            "isIdentical": true,
-            "reference": {
-              "type": "CasterSelector"
-            }
-          },
-          {
-            "type": "EntityHasAdjacentCellValidForCharacterFilter"
+            "type": "CharacterEntityFilter"
           }
         ]
       },
       "selector2": {
         "type": "FilteredCoordSelector",
         "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
           {
             "type": "InLineTargetFilter",
             "targetsToCompare": {
@@ -103,7 +102,7 @@
               "maxIncluded": {
                 "type": "ConstIntegerValue",
                 "referenceId": "c",
-                "value": 2
+                "value": 4
               }
             }
           },
@@ -112,9 +111,6 @@
             "startCoords": {
               "type": "FirstCastTargetSelector"
             }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
           }
         ]
       }
@@ -122,11 +118,13 @@
     "spellEffectData": [
       {
         "type": "SpellEffectInstantiationData",
-        "spellEffect": "9e87069a9b0e8e14b810a68b21a64622",
+        "spellEffect": "a6596c2d809117846a39a7a68cff53f1",
         "originTarget": {
           "type": "FirstCastTargetSelector"
         },
-        "orientation": null,
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
         "delay": null
       }
     ],
@@ -136,31 +134,28 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "c",
-          "value": 2
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "nb",
-          "value": 1
+          "value": 4
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "PUSH"
+      ]
     }
   },
   "name": {
-    "fr": "Repositionnement d'Albuera",
-    "en": "Albuera Repositioning",
-    "es": "Reposicionamiento de Albuera",
-    "de": "Albuera-Neupositionierung",
-    "pt": "Reposicionamento de Albuera"
+    "fr": "Repousse florale",
+    "en": "Floral Push",
+    "es": "Empujón floral",
+    "de": "Floraler Rückstoß",
+    "pt": "Empurrão Floral"
   },
   "description": {
-    "fr": "Déplace un de vos personnages jusqu'à {cell:c} en ligne.\n\\---\nPiochez {SPELLCOUNTvalue:nb}.",
-    "en": "Moves one of your characters up to {cell:c} in a line.\n\\---\nDraw {SPELLCOUNTvalue:nb}.",
-    "es": "Desplaza a uno de tus personajes hasta {cell:c} en línea.\n\\---\nSacas {SPELLCOUNTvalue:nb}.",
-    "de": "Bewegt einen deiner Charaktere um bis zu {cell:c} in einer Reihe.\n\\---\nZieht {SPELLCOUNTvalue:nb}.",
-    "pt": "Desloca um dos seus personagens por até {cell:c} em linha.\n\\---\nCompre {SPELLCOUNTvalue:nb}."
+    "fr": "{#PUSH} la cible jusqu'à {cell:c}.\n\\---\nCe sort revient dans votre main.",
+    "en": "{#PUSH} the target up to {cell:c}.\n\\---\nThis spell returns to your hand.",
+    "es": "{#PUSH} al objetivo hasta {cell:c}.\n\\---\nEste hechizo vuelve a tu mano.",
+    "de": "{#PUSH,plural:one} des Ziels um bis zu {cell:c}.\n\\---\nDieser Zauber geht zurück auf deine Hand.",
+    "pt": "{#PUSH} o alvo a até {cell:c}.\n\\---\nEste feitiço volta para sua mão."
   }
 }

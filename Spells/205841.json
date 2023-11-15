@@ -81,6 +81,26 @@
             "reference": {
               "type": "CasterSelector"
             }
+          },
+          {
+            "type": "PropertiesFilter",
+            "comparison": 4,
+            "properties": [
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 1
+              },
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 4
+              }
+            ]
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "EntityIsMarkedAsPlayedFilter"
+            }
           }
         ]
       }

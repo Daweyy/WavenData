@@ -61,10 +61,41 @@
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "PropertyEffect.204.a"
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "a",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 25
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "PlayerHasEquipmentSkillCondition",
+                "player": {
+                  "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+                },
+                "skillId": 1605
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 25
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
     },
@@ -109,11 +140,11 @@
     "pt": "Anel Noulimit"
   },
   "description": {
-    "fr": "{%FightTurnStarted} Augmente les <b>DÉGÂTS</b> de vos sorts d'un élément aléatoire de {value:PropertyEffect.204.a,percent,+}.",
-    "en": "{%FightTurnStarted} Increases the <b>DAMAGE</b> of your spells in a random element by {value:PropertyEffect.204.a,percent,+}.",
-    "es": "{%FightTurnStarted} Aumenta los <b>DAÑOS</b> de tus hechizos de un elemento aleatorio un {value:PropertyEffect.204.a,percent,+}.",
-    "de": "{%FightTurnStarted} Erhöht den <b>SCHADEN</b> deiner Zauber eines zufälligen Elements um {value:PropertyEffect.204.a,percent,+}.",
-    "pt": "{%FightTurnStarted} Aumenta em {value:PropertyEffect.204.a,percent,+} os <b>DANOS</b> dos seus feitiços de um elemento aleatório."
+    "fr": "{%FightTurnStarted} Augmente les <b>DÉGÂTS</b> de vos sorts d'un élément aléatoire de {value:a,percent,+}.",
+    "en": "{%FightTurnStarted} Increases your spell <b>DAMAGE</b> in a random element by {value:a,percent,+}.",
+    "es": "{%FightTurnStarted} Aumenta los <b>DAÑOS</b> de tus hechizos de un elemento aleatorio un {value:a,percent,+}.",
+    "de": "{%FightTurnStarted} Erhöht den <b>SCHADEN</b> deiner Zauber eines zufälligen Elements um {value:a,percent,+}.",
+    "pt": "{%FightTurnStarted} Aumenta em {value:a,percent,+} os <b>DANOS</b> dos seus feitiços de um elemento aleatório."
   },
   "bgDescription": {
     "fr": "Étrangement, les porteurs de cet anneau sont fréquemment pris d'envie de fredonner à tue-tête des \"no no no no\". Heureusement, il ne s'agit pas d'un mal très dommageable, excepté pour leur entourage.",

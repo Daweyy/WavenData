@@ -39,7 +39,13 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "limit",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -55,10 +61,10 @@
     "pt": "{%CRITICAL_SKILL}"
   },
   "description": {
-    "fr": "{#CRITICAL}\\_: Rejoue son tour.",
-    "en": "{#CRITICAL}: Replays turn.",
-    "es": "{#CRITICAL}: Vuelve a jugar su turno.",
-    "de": "{#CRITICAL}: Spielt seine Runde erneut.",
-    "pt": "{#CRITICAL}: Joga um turno extra."
+    "fr": "{#CRITICAL}\\_: Rejoue son tour.\n\\---\n<rem>Limité à {value:limit} fois par tour.</rem> ",
+    "en": "{#CRITICAL}: Replays turn.\n\\---\n<rem>Limit: {value:limit} {limit, plural, one[time] other[times]} per turn.</rem>",
+    "es": "{#CRITICAL}: Vuelve a jugar su turno.\n\\---\n<rem>Limitado a {value:limit} {limit, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "{#CRITICAL}: Spielt seine Runde erneut.\n\\---\n<rem>Begrenzt auf {value:limit}-mal pro Runde.</rem>",
+    "pt": "{#CRITICAL}: Joga um turno extra.\n\\---\n<rem>Limite de {value:limit} {limit, plural, one[vez] other[vezes]} por turno.</rem>"
   }
 }
