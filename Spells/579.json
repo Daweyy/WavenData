@@ -12,6 +12,7 @@
   "m_id": 579,
   "m_displayName": "SRAM - ARME - ORISHI - ETHER - Poussette Orishi",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1800423627,
     "b": -28065180,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 620,
@@ -58,7 +59,26 @@
       ],
       "heroSkillPointsCost": 10
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpValue",
+          "referenceId": "",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",

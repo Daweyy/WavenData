@@ -12,6 +12,7 @@
   "m_id": 83872,
   "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - FEU - Phase Enivrante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -35228356,
     "b": -1478288332,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 141,
@@ -85,41 +86,10 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "ConditionalCastTargetDefinition",
-      "condition": {
-        "type": "PropertyCondition",
-        "selector": {
-          "type": "CasterHeroSelector"
-        },
-        "comparison": 1,
-        "properties": [
-          {
-            "type": "SpecificPropertyIdResolvable",
-            "propertyId": 18
-          }
-        ]
-      },
-      "selectorIfTrue": {
-        "type": "OneCastTargetDefinition",
-        "selector": {
-          "type": "SquareAreaOfEffectSelector",
-          "originSelector": {
-            "type": "FilteredCharacterSelector",
-            "filters": []
-          },
-          "size": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 1
-          }
-        }
-      },
-      "selectorIfFalse": {
-        "type": "OneCastTargetDefinition",
-        "selector": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
-        }
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
       }
     },
     "spellEffectData": [
@@ -140,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 15
+            "valueInPvM": 23,
+            "valueInPvP": 19
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -177,9 +148,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg2",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 16
+            "valueInPvM": 8,
+            "valueInPvP": 5
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -189,17 +161,7 @@
             51,
             25
           ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 118841,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": null,
-                "value": 30
-              }
-            }
-          ],
+          "skillBuffs": [],
           "from": {
             "type": "CasterSelector"
           },
@@ -208,12 +170,7 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 20,
-          "id": 18
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
@@ -224,7 +181,7 @@
     "pt": "Fase Inebriante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nInflige {magicalDamage:dmg2} aux adversaires autour\\_<sprite name=\"cell_around\"> de la cible si votre héros est {PropertyEffect:18[DÉPHASÉ]}.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nJusqu'à la fin du tour, inflige {value:dmg2} dégâts aux adversaires traversés par votre héros.",
     "en": "Does {magicalDamage:dmg}.\n\\---\nDoes {magicalDamage:dmg2} on opponents around\\_<sprite name=\"cell_around\"> the target if your hero is {PropertyEffect:18[DEPHASED]}.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\nInflige {magicalDamage:dmg2} a los adversarios alrededor\\_<sprite name=\"cell_around\"> del objetivo si tu héroe está {PropertyEffect:18[DESFASADO]}.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\nFügt Gegnern im Umkreis\\_<sprite name=\"cell_around\"> des Ziels {magicalDamage:dmg2} zu, wenn dein Held {PropertyEffect:18[PHASENVERSCHOBEN]} ist.",

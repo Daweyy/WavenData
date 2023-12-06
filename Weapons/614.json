@@ -12,6 +12,7 @@
   "m_id": 614,
   "m_displayName": "XELOR - Catalysateur Pramium",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 427919553,
     "b": -1896729932,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "580df1f1dba7ccd40b97223dc551439e"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -88,9 +92,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 392
+      "valueInPvM": 392,
+      "valueInPvP": 397
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -98,9 +103,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 28
+      "valueInPvM": 28,
+      "valueInPvP": 25
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -132,6 +138,9 @@
     "defaultSkinIdMale": 3371,
     "defaultSkinIdFemale": 8549,
     "god": 7,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

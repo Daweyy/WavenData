@@ -12,6 +12,7 @@
   "m_id": 199321,
   "m_displayName": "SRAM - ARME - LAME OURAI - AIR - Amorce Electrique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -325735034,
     "b": 1589150452,
@@ -65,7 +66,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 830,
@@ -128,9 +129,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 27
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 27
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 30
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

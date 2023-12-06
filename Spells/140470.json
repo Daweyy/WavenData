@@ -12,6 +12,7 @@
   "m_id": 140470,
   "m_displayName": "CRA - ARME - PIVEN - AIR - Impact Nebuleux",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1136422426,
     "b": -351787516,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 846,
@@ -116,9 +117,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 28
+            "valueInPvM": 28,
+            "valueInPvP": 35
           },
           "factor": {
             "type": "ReferenceScalingFactor",

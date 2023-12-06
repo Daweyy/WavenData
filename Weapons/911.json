@@ -12,6 +12,7 @@
   "m_id": 911,
   "m_displayName": "IOP - Glaive Stalaktoss",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 668314820,
     "b": -502431052,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "cdc185fa173dc564c92089752ebf9e3c"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -93,9 +97,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 401
+      "valueInPvM": 401,
+      "valueInPvP": 395
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -103,9 +108,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 32
+      "valueInPvM": 32,
+      "valueInPvP": 38
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -137,6 +143,9 @@
     "defaultSkinIdMale": 7614,
     "defaultSkinIdFemale": 4131,
     "god": 1,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

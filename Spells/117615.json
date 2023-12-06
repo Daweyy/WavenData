@@ -12,6 +12,7 @@
   "m_id": 117615,
   "m_displayName": "IOP - ARME - LAMARGUEDON SPECTRAL - FEU - Brulure Spectrale",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -351612938,
     "b": -1613138972,
@@ -65,7 +66,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 143,
@@ -197,9 +198,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 22
+            "valueInPvM": 22,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 336,
   "m_displayName": "EQUIPMENT - BRACELET - Repositionnement adverse",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1825425915,
     "b": 1459731940,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": false,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -71,23 +72,26 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "PropertyFilter",
+            "property": {
+              "type": "SpecificPropertyIdResolvable",
+              "propertyId": 169
+            }
+          }
+        ]
+      },
+      "selector2": {
         "type": "FilteredCoordSelector",
         "filters": [
           {
             "type": "AroundTargetFilter",
             "targetsToCompare": {
-              "type": "FilteredCharacterSelector",
-              "filters": [
-                {
-                  "type": "PropertyFilter",
-                  "property": {
-                    "type": "SpecificPropertyIdResolvable",
-                    "propertyId": 169
-                  }
-                }
-              ]
+              "type": "FirstCastTargetSelector"
             },
             "distance": {
               "type": "LowerEqualThan",

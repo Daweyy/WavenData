@@ -10,8 +10,9 @@
   },
   "m_Name": "646",
   "m_id": 646,
-  "m_displayName": "NATION - ASTRUB - INTRO 05",
+  "m_displayName": "STORY MODE - ACTE I - 04",
   "m_availability": 3,
+  "m_wip": 1,
   "m_i18nNameId": {
     "a": 2068280467,
     "b": -1940820188,
@@ -22,15 +23,18 @@
   "values": {
     "type": "QuestDefinition",
     "id": 646,
-    "questType": 5,
+    "questType": 10,
     "hideLevel": false,
     "chaptersVisualId": 930,
     "minPlayers": 1,
     "maxPlayers": 1,
-    "accessCondition": null,
+    "accessCondition": {
+      "type": "StoryMainQuestProgressionCondition",
+      "concernedPlayers": 0,
+      "questId": 646
+    },
     "npcForChapters": 1431,
-    "npcForFightResults": null,
-    "npcForFightResultTexts": null,
+    "npcName": null,
     "ranks": [
       {
         "type": "QuestRank",
@@ -43,8 +47,7 @@
       {
         "type": "ArenaChapterDefinition",
         "chapterIndex": 0,
-        "npcForChaptersTexts": null,
-        "difficulty": 1,
+        "visualIndex": 0,
         "monsterLevel": 2,
         "rewards": null,
         "oneTimeRewards": {
@@ -100,7 +103,7 @@
               }
             ]
           },
-          "availabilityValue": 3
+          "wip": false
         },
         "forcedDestinationOnExit": null
       }

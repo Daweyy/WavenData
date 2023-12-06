@@ -12,6 +12,7 @@
   "m_id": 200841,
   "m_displayName": "CRA - CLASSE - ETHER - Blaster",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -723017698,
     "b": -1332026332,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -94,6 +95,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "p",
           "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p2",
+          "value": 100
         }
       ],
       "externalDynamicValueReferences": [],
@@ -109,7 +115,7 @@
     "pt": "Blaster"
   },
   "description": {
-    "fr": "{value:p,percent,+} aux <b>DÉGÂTS</b> du prochain sort que vous jouez ce tour.",
+    "fr": "<if pvm>{value:p,percent,+} aux <b>DÉGÂTS</b> du prochain sort que vous jouez ce tour.</if><if pvp>{value:p2,percent,+} aux <b>DÉGÂTS</b> du prochain sort <b>ÉLÉMENTAIRE</b> que vous jouez ce tour.</if>",
     "en": "{value:p,percent,+} <b>DAMAGE</b> to the next spell you play this turn.",
     "es": "{value:p,percent,+} a los <b>DAÑOS</b> del próximo hechizo que lances este turno.",
     "de": "{value:p,percent,+} auf den <b>SCHADEN</b> des nächsten Zaubers, den du in dieser Runde ausspielst.",

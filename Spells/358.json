@@ -12,6 +12,7 @@
   "m_id": 358,
   "m_displayName": "SRAM - CLASSE - AIR - La ou ca fait mal",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1446324897,
     "b": -1554599404,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -111,9 +112,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 27
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 27
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 24
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -143,12 +153,47 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "buff",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 20,
           "id": 18
         }
@@ -163,7 +208,7 @@
     "pt": "Cutucando a Ferida"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}\n\\---\nConfère {PropertyEffect:18} à votre héros pour le tour si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
+    "fr": "Inflige {magicalDamage:dmg}\n\\---\n<if pvm>Confère {PropertyEffect:18} à votre héros pour le tour si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{magicalDamage:buff,+} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\nConfers {PropertyEffect:18} on your hero for the turn if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
     "es": "Inflige {magicalDamage:dmg}\n\\---\nConfiere {PropertyEffect:18} a tu a tu héroe durante el turno si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\nVerleiht deinem Helden {PropertyEffect:18} für die Runde, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",

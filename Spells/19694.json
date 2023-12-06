@@ -12,6 +12,7 @@
   "m_id": 19694,
   "m_displayName": "SRAM - CLASSE - ETHER - Attaque sournoise",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 858719624,
     "b": 698486468,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -60,14 +61,42 @@
       ],
       "heroSkillPointsCost": 5
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpValue",
+          "referenceId": "",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 2
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 3
+          }
         }
       }
     ],
@@ -94,14 +123,16 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "pow2",
-          "value": 25
+          "valueInPvM": 25,
+          "valueInPvP": 23
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "pow",
-          "value": -25
+          "valueInPvM": -25,
+          "valueInPvP": -23
         },
         {
           "type": "ConstIntegerValue",

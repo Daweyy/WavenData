@@ -12,6 +12,7 @@
   "m_id": 114837,
   "m_displayName": "IOP - ARME - BOUVALOIR OROK - EAU - Remous Favorable",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1638013854,
     "b": -1288643596,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 497,
@@ -109,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 18
+            "valueInPvM": 18,
+            "valueInPvP": 11
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -132,9 +134,10 @@
           "referenceId": "reduc",
           "valuesToSum": [
             {
-              "type": "ConstIntegerValue",
+              "type": "PvmOrPvpConstIntegerValue",
               "referenceId": "",
-              "value": -1
+              "valueInPvM": -1,
+              "valueInPvP": -2
             },
             {
               "type": "ConditionalValue",

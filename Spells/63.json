@@ -12,6 +12,7 @@
   "m_id": 63,
   "m_displayName": "ENIRIPSA - CLASSE - EAU - Mot Vexant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 528909813,
     "b": 30605732,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -145,9 +146,32 @@
           "value": 30
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "j",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        },
+        {
+          "type": "PvmOrPvpValue",
+          "referenceId": "pa",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         },
         {
           "type": "ConstIntegerValue",
@@ -159,6 +183,9 @@
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 22,
           "id": 118
         }
@@ -173,7 +200,7 @@
     "pt": "Palavra Vexatória"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:j,+}\\_{aura:118,value:j} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{value:j,+}\\_{aura:118,value:j} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if><if pvp> {WATERGAUGEvalue:pa,+} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\"></if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{value:j,+}\\_{aura:118,value:j} if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:j,+}\\_{aura:118,value:j} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:j,+}\\_{aura:118,value:j}, falls das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",

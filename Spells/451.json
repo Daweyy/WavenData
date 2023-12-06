@@ -12,6 +12,7 @@
   "m_id": 451,
   "m_displayName": "SRAM - CLASSE - ETHER - Passe-Muraille",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1487013832,
     "b": 884396004,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -58,14 +59,42 @@
       ],
       "heroSkillPointsCost": 5
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpValue",
+          "referenceId": "",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 2
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 3
+          }
         }
       }
     ],
@@ -89,11 +118,27 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "heal",
+          "value": 11
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 20,
+          "id": 18
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 20,
           "id": 18
         }
@@ -108,7 +153,7 @@
     "pt": "Atravessa Muros"
   },
   "description": {
-    "fr": "Confère {PropertyEffect:18} à votre héros pour le tour.",
+    "fr": "<if pvm>Confère {PropertyEffect:18} à votre héros pour le tour.</if><if pvp>Confère {PropertyEffect:18} à votre héros pour le tour et le soigne de {PVvalue:heal}.</if>",
     "en": "Confers {PropertyEffect:18} on your hero for the turn.",
     "es": "Confiere {PropertyEffect:18} a tu héroe durante el turno.",
     "de": "Verleiht deinem Helden {PropertyEffect:18} für die Runde.",

@@ -12,6 +12,7 @@
   "m_id": 21099,
   "m_displayName": "SRAM - Lame Ouraï",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1532081369,
     "b": -1474102252,
@@ -69,9 +70,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 40
+      "valueInPvM": 40,
+      "valueInPvP": 32
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -109,7 +111,7 @@
     "pt": "Espada Murai"
   },
   "description": {
-    "fr": "{%Appearance} Gagne {value:pop,percent} de l'{%AT} de votre héros.\n\\---\nLorsque votre héros se soigne\\_:\\v {ATvalue:p, +, percent}.",
+    "fr": "<if pvm>{%Appearance} Gagne {value:pop,percent} de l'{%AT} de votre héros.\\--- </if>Lorsque votre héros se soigne\\_:\\v {ATvalue:p, +, percent}.",
     "en": "{%Appearance} Gains {value:pop,percent} of your hero's {%AT}.\n\\---\nWhen your hero heals themself: \\v{ATvalue:p, +, percent}.",
     "es": "{%Appearance} Gana un {value:pop,percent} del {%AT} de tu héroe.\n\\---\nCuando tu héroe se cura:\\v {ATvalue:p, +, percent}.",
     "de": "{%Appearance} Erhält {value:pop,percent} des {%AT,plural:two} deines Helden.\n\\---\nWenn dein Held sich heilt:\\v {ATvalue:p, +, percent}.",

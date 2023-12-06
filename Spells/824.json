@@ -12,6 +12,7 @@
   "m_id": 824,
   "m_displayName": "XELOR - CLASSE - FEU - Brulure Temporelle",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 892439159,
     "b": 34843092,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -125,9 +126,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 26
+            "valueInPvM": 26,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -162,9 +164,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "d1",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 12
+            "valueInPvM": 12,
+            "valueInPvP": 0
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -222,6 +225,27 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgSin",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -239,7 +263,7 @@
     "pt": "Queimadura Temporal"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\n{#CHRONO}\\_: {magicalDamage:d1,+}",
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\n{#CHRONO}\\_: <if pvm>{magicalDamage:d1,+}</if><if pvp>Vos <b>SINISTROS</b> infligent {magicalDamage:dmgSin} autour\\_<sprite name=\"cell_around\"> d'eux.</if>",
     "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}.",
     "es": "Inflige {magicalDamage:dmg} a los adversarios alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}",
     "de": "Verursacht {magicalDamage:dmg} bei den Feinden im Umkreis\\_<sprite name=\"cell_around\"> deines Helden.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}",

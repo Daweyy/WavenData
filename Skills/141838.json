@@ -12,6 +12,7 @@
   "m_id": 141838,
   "m_displayName": "WEAPON - CRA - BUNELAME - Défausse Bunelame",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1316169964,
     "b": -726356412,
@@ -41,9 +42,97 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "exp",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 0
+          },
+          "buffs": [
+            88,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "d",
           "value": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 0
+          },
+          "buffs": [
+            22,
+            90
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 0
+          },
+          "buffs": [
+            23,
+            91
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bounce",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 0
+          },
+          "buffs": [
+            24,
+            89
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -53,7 +142,9 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "QUINTESSENCE"
+      ]
     }
   },
   "name": {
@@ -64,10 +155,10 @@
     "pt": "Descarte Bumelâmina"
   },
   "description": {
-    "fr": "{value:v,percent} aux <b>DÉGÂTS</b> de vos sorts.\\v Lorsque vous jouez un sort, vous en défaussez un autre aléatoire.",
-    "en": "{value:v,percent} to your spell <b>DAMAGE</b>. \\vWhen you play a spell, you discard another one at random.",
-    "es": "{value:v,percent} a los <b>DAÑOS</b> de tus hechizos.\\v Cuando utilizas un hechizo, descartas otro aleatoriamente.",
-    "de": "{value:v,percent} <b>SCHADEN</b> für deine Zauber.\\v Wenn du einen Zauber wirkst, legst du einen zufälligen anderen Zauber ab.",
-    "pt": "{value:v,percent} aos <b>DANOS</b> de seus feitiços.\\v Quando lança um feitiço, você descarta um outro aleatório."
+    "fr": "{value:v,percent} aux <b>DÉGÂTS</b> de vos sorts.\n\\---\nLorsque vous jouez un sort, vous en défaussez un autre aléatoire du même élément. Si un sort est défaussé de cette manière déclenche l'effet de {#QUINTESSENCE} correspondant.",
+    "en": "{value:v,percent} to your spell <b>DAMAGE</b>.\n\\---\nWhen you play a spell, you discard another one in the same element at random. If a spell is discarded in this way, triggers the corresponding {#QUINTESSENCE} effect.",
+    "es": "{value:v,percent} a los <b>DAÑOS</b> de tus hechizos.\n\\---\nCuando lanzas un hechizo, descartas otro aleatorio del mismo elemento. Si un hechizo se descarta de esta manera, activa el efecto de {#QUINTESSENCE} correspondiente.",
+    "de": "{value:v,percent} <b>SCHADEN</b> durch deine Zauber.\n\\---\nWenn du einen Zauber wirkst, legst du einen zufälligen anderen Zauber desselben Elements ab. Wenn ein Zauber auf diese Weise abgelegt wird, wird der entsprechende {#QUINTESSENCE}-Effekt gewirkt.",
+    "pt": "{value:v,percent} aos <b>DANOS</b> de seus feitiços.\n\\---\nQuando lança um feitiço, você descarta um outro aleatório do mesmo elemento. Se um feitiço for descartado dessa maneira, aciona o efeito de {#QUINTESSENCE} correspondente."
   }
 }

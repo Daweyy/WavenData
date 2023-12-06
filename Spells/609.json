@@ -12,6 +12,7 @@
   "m_id": 609,
   "m_displayName": "ENIRIPSA - CLASSE - EAU - Mot Vibrant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1795744250,
     "b": -1212962780,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -109,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 6
+            "valueInPvM": 6,
+            "valueInPvP": 9
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -146,9 +148,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 8
+            "valueInPvM": 8,
+            "valueInPvP": 0
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -189,7 +192,7 @@
     "pt": "Palavra Vibrante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nSoigne votre héros de {PVvalue:h}.",
+    "fr": "Inflige {magicalDamage:dmg}.<ifpvm>\n\\---\nSoigne votre héros de {PVvalue:h}.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\nHeals your hero {PVvalue:h}.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\nCura a tu héroe {PVvalue:h}.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\nHeilt deinen Helden um {PVvalue:h}.",

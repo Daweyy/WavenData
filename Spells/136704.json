@@ -12,6 +12,7 @@
   "m_id": 136704,
   "m_displayName": "XELOR - CLASSE - ETHER - Equinoxe",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1748083662,
     "b": 1055371588,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -176,6 +177,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "r",
           "value": -3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 20
         }
       ],
       "externalDynamicValueReferences": [],
@@ -193,7 +199,7 @@
     "pt": "Equinócio"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros aux adversaires autour\\_<sprite name=\"cell_around\"> de lui ou d'un vos <b>SINISTROS</b>.\n\\---\n{#CHRONO}\\_: {PAvalue:r} au coût de ce {%SPELLCOUNT}.",
+    "fr": "<if pvm>Inflige l'{%AT} de votre héros aux adversaires autour\\_<sprite name=\"cell_around\"> de lui  ou d'un vos <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui  ou d'un vos <b>SINISTROS</b>.</if>\n\\---\n{#CHRONO}\\_: {PAvalue:r} au coût de ce {%SPELLCOUNT}.",
     "en": "Inflicts your hero's {%AT} on opponents around\\_<sprite name=\"cell_around\"> them or one of your <b>SINISTROS</b>.\n\\---\n{#CHRONO}: {PAvalue:r} to the cost of this {%SPELLCOUNT}.",
     "es": "Inflige el {%AT} de tu héroe a los adversarios alrededor\\_<sprite name=\"cell_around\"> de este o de uno de tus <b>SINISTROS</b>.\n\\---\n{#CHRONO}: {PAvalue:r} al coste de este {%SPELLCOUNT}.",
     "de": "Fügt Gegnern im Umkreis\\_<sprite name=\"cell_around\"> des Helden oder eines deiner <b>SINISTROS</b> den {%AT,plural:one} deines Helden als Schaden zu.\n\\---\n{#CHRONO}: {PAvalue:r} auf die Kosten dieses {%SPELLCOUNT,plural:two}.",

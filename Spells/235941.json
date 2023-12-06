@@ -12,6 +12,7 @@
   "m_id": 235941,
   "m_displayName": "XELOR - ARME - TAKO - ETHER - Repousse Tako",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -971562388,
     "b": 433543396,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 490,
@@ -58,67 +59,54 @@
       ],
       "heroSkillPointsCost": 10
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 3
         }
       }
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "ConditionalCastTargetDefinition",
-      "condition": {
-        "type": "CaracValueCondition",
-        "selector": {
-          "type": "CasterSelector"
-        },
-        "carac": 19,
-        "value": {
-          "type": "GreaterThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 0
-          }
-        }
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
       },
-      "selectorIfTrue": {
-        "type": "TwoCastTargetDefinition",
-        "selector1": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
-        },
-        "selector2": {
-          "type": "FilteredCoordSelector",
-          "filters": [
-            {
-              "type": "AroundTargetFilter",
-              "targetsToCompare": {
-                "type": "FirstCastTargetSelector"
-              },
-              "distance": {
-                "type": "EqualsTo",
-                "dynamicValue": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                }
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
               }
             }
-          ]
-        }
-      },
-      "selectorIfFalse": {
-        "type": "OneCastTargetDefinition",
-        "selector": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
-        }
+          }
+        ]
       }
     },
     "spellEffectData": [
@@ -134,11 +122,43 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ba",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 11
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbc",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbcb",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "PUSH"
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "CHRONO"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "PUSH"
+        }
       ]
     }
   },
@@ -150,10 +170,10 @@
     "pt": "Empurrão Tako"
   },
   "description": {
-    "fr": "{#PUSH} de 1\\_case par {%PA_RES}.",
-    "en": "{#PUSH} 1\\_cell per {%PA_RES}.",
-    "es": "{#PUSH} 1\\_casilla por {%PA_RES}.",
-    "de": "{#PUSH,plural:few} das Ziel pro {%PA_RES} 1\\_Feld zurück.",
-    "pt": "{#PUSH} por 1\\_célula por {%PA_RES}."
+    "fr": "<if pvm>{#PUSH} la cible de {value:ba} case + 1 supplémentaire par {%PA_RES}.</if><if pvp>Inflige {magicalDamage:dmg} et {#PUSH} la cible de {cell:nbc}.</if><if pvp>\n\\---\n{#CHRONO}\\_: {#PUSH} la cible de {cell:nbcb} supplémentaires.</if>",
+    "en": "{#PUSH} the target {value:ba} {ba, plural, one[cell] other[cells]} +1 extra per {%PA_RES}.",
+    "es": "{#PUSH} al objetivo {value:ba} casillas + 1 adicional por {%PA_RES}.",
+    "de": "{#PUSH,plural:few} das Ziel um {value:ba} Felder zurück, +1 zusätzliches Feld je {%PA_RES}.",
+    "pt": "{#PUSH} o alvo por {value:ba} células + 1 adicional por {%PA_RES}."
   }
 }

@@ -12,6 +12,7 @@
   "m_id": 830,
   "m_displayName": "CRA - CLASSE - AIR - Pointe Nebulaire",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1898579278,
     "b": 809334036,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -112,9 +113,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 16
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 16
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 20
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

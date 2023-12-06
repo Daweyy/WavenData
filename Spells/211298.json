@@ -12,6 +12,7 @@
   "m_id": 211298,
   "m_displayName": "XELOR - CLASSE - AIR - Detraquement",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -713477347,
     "b": -1846377628,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -125,9 +126,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 43
+            "valueInPvM": 43,
+            "valueInPvP": 45
           },
           "factor": {
             "type": "ReferenceScalingFactor",

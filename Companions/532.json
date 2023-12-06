@@ -12,6 +12,7 @@
   "m_id": 532,
   "m_displayName": "DECK - RARE - EAU - Héros Impartial",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -90883380,
     "b": 1541460180,
@@ -48,6 +49,16 @@
           "type": "ConstIntegerValue",
           "referenceId": "v",
           "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "hpPVP",
+          "value": 40
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "vPVP",
+          "value": 100
         }
       ],
       "externalDynamicValueReferences": [],
@@ -59,9 +70,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 82
+      "valueInPvM": 82,
+      "valueInPvP": 80
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -69,9 +81,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 16
+      "valueInPvM": 16,
+      "valueInPvP": 13
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -105,7 +118,7 @@
     "rarity": 1,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 940,
     "castCondition": {
@@ -210,7 +223,7 @@
     "pt": "Herói Imparcial"
   },
   "description": {
-    "fr": "{%attack} {value:v,percent,+} de <b>DÉGÂTS</b> s'il possède toute sa {%PV,plural:other}.",
+    "fr": "{%attack} <if pvm>{value:v,percent,+} de <b>DÉGÂTS</b> s'il possède toute sa {%PV,plural:other}</if><if pvp>{value:vPVP,percent,+} de <b>DÉGÂTS</b> s'il possède au moins {PVvalue:hpPVP}</if>.",
     "en": "{%attack} {value:v,percent,+} <b>DAMAGE</b> if he has all his {%PV,plural:other}.",
     "es": "{%attack} {value:v,percent,+} de <b>DAÑOS</b> si tiene toda su {%PV,plural:other}.",
     "de": "{%attack} {value:v,percent,+} <b>SCHADEN</b>, falls er seine gesamten {%PV,plural:other} hat.",

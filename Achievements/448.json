@@ -12,6 +12,7 @@
   "m_id": 448,
   "m_displayName": "CRAQUELEUR - SUCCES - 18_Terminer son tour avec 6 rochers autour de son heros",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 727829398,
     "b": 1564518644,
@@ -46,7 +47,13 @@
     "onSuccess": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 6
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
@@ -59,11 +66,11 @@
     }
   },
   "name": {
-    "fr": "Terminer un tour avec 6 {ObjectMechanism:1607,plural:other} autour de son héros",
-    "en": "Finish a turn with 6 {ObjectMechanism:1607,plural:other} around your hero",
-    "es": "Terminar un turno con 6 {ObjectMechanism:1607,plural:other} alrededor del héroe",
-    "de": "Beende eine Runde, mit 6\\_{ObjectMechanism:1607,plural:other} ringsum deinen Helden",
-    "pt": "Terminar um turno com 6 {ObjectMechanism:1607,plural:other} em\\_volta do seu herói"
+    "fr": "Terminer un tour avec {value:nb} {ObjectMechanism:1607,value:nb} autour de son héros",
+    "en": "Finish a turn with {value:nb} {ObjectMechanism:1607,value:nb} around your hero",
+    "es": "Terminar un turno con {value:nb} {ObjectMechanism:1607,value:nb} alrededor del héroe",
+    "de": "Beende eine Runde mit {value:nb} {ObjectMechanism:1607,value:nb} im Umkreis deines Helden",
+    "pt": "Terminar um turno com {value:nb} {ObjectMechanism:1607,value:nb} em\\_volta do seu herói"
   },
   "description": {
     "fr": "",

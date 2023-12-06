@@ -12,6 +12,7 @@
   "m_id": 468,
   "m_displayName": "IOP - CLASSE - ETHER - Bond",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1581066537,
     "b": 1910027348,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -159,6 +160,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "purcent",
           "value": 25
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
@@ -174,7 +180,7 @@
     "pt": "Salto"
   },
   "description": {
-    "fr": "Téléporte votre héros jusqu'à {cell:nb}.\n\\---\nInflige {value:purcent,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.",
+    "fr": "Téléporte votre héros jusqu'à {cell:nb}.\n\\---\n<if pvm>Inflige {value:purcent,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.</if>",
     "en": "Teleports your hero up to {cell:nb}.\n\\---\nInflicts {value:purcent,percent} of their {%AT} on opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.",
     "es": "Teletransporta a tu héroe hasta a {cell:nb}.\n\\---\nInflige un {value:purcent,percent} de su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.",
     "de": "Teleportiert deinen Helden bis zu {cell:nb}.\n\\---\nVerursacht bei den an sein Ankunftsfeld angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {value:purcent,percent} seines {%AT,plural:two} als Schaden.",

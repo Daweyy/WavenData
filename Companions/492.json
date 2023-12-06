@@ -12,6 +12,7 @@
   "m_id": 492,
   "m_displayName": "DECK - COMMON - EARTH - Ashmal",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 228783717,
     "b": -210776940,
@@ -43,7 +44,18 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "arPVP",
+          "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "healPVP",
+          "value": 5
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -53,9 +65,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 63
+      "valueInPvM": 63,
+      "valueInPvP": 60
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -63,9 +76,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 12
+      "valueInPvM": 12,
+      "valueInPvP": 10
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -99,7 +113,7 @@
     "rarity": 0,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 985,
     "castCondition": {
@@ -204,7 +218,7 @@
     "pt": "Ashmal"
   },
   "description": {
-    "fr": "{%appearance} Confère l'{%AT} de ce compagnon en {%AR} à votre héros.",
+    "fr": "<if pvm>{%appearance} Confère l'{%AT} de ce compagnon en {%AR} à votre héros.</if><if pvp>{%AT}: {ARvalue:arPVP,+} et soigne votre héros de {PVvalue:healPVP}</if>",
     "en": "{%appearance} Confers this companion's {%AT} as {%AR} on your hero.",
     "es": "{%appearance} Otorga el {%AT} de este compañero en {%AR} a tu héroe.",
     "de": "{%appearance} Gewährt deinem Helden den {%AT,plural:one} dieses Begleiters als {%AR}.",

@@ -12,6 +12,7 @@
   "m_id": 714,
   "m_displayName": "XELOR - CLASSE - EAU - Aiguille Aquatique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1062757352,
     "b": 1122387012,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -73,15 +74,26 @@
           "referenceId": "",
           "value": 1
         }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
       }
     ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 6
         }
       }
     ],
@@ -111,9 +123,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 14
+            "valueInPvM": 14,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -148,12 +161,33 @@
           "type": "ConstIntegerValue",
           "referenceId": "a",
           "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbPVP",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 22,
+          "id": 137
+        },
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "CHRONO"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 22,
           "id": 137
         }
@@ -168,7 +202,7 @@
     "pt": "Ponteiro Aquático"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:137,value:a} à votre héros si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{value:a,+}\\_{aura:137,value:a} à votre héros si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if><if pvp>{#CHRONO}\\_: {value:nbPVP,+}\\_{aura:137,value:nbPVP} à votre héros.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:137,value:a} to your hero if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:137,value:a} a tu héroe si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:137,value:a} für deinen Helden, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",

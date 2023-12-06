@@ -12,6 +12,7 @@
   "m_id": 372,
   "m_displayName": "IOP - CLASSE - FEU - Corriger",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1690221736,
     "b": -1364637804,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -118,9 +119,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 30
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 30
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 21
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

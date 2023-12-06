@@ -1,0 +1,131 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1548",
+  "m_id": 1548,
+  "m_displayName": "ALBUERA - 05 - Traitement",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1601251459,
+    "b": 2092379092,
+    "c": 708535386,
+    "d": -1250675745,
+    "e": 1024603647
+  },
+  "m_i18nDescriptionId": {
+    "a": 1601251459,
+    "b": 2092379092,
+    "c": 708535386,
+    "d": -1250675745,
+    "e": 9888827
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "88f704fb5fe447540a99674b1f86179d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1548,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "5183a95952c7e78469b552aa24126027",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 8
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Traitement",
+    "en": "Treatment",
+    "es": "Tratamiento",
+    "de": "Behandlung",
+    "pt": "Tratamento"
+  },
+  "description": {
+    "fr": "Confère {PropertyEffect:8} à un allié.\n\\---\nPiochez {SPELLCOUNTvalue:s}.",
+    "en": "Confers {PropertyEffect:8} on an ally.\n\\---\nDraw {SPELLCOUNTvalue:s}.",
+    "es": "Confiere {PropertyEffect:8} a un aliado.\n\\---\nSacas {SPELLCOUNTvalue:s}.",
+    "de": "Verleiht einem Verbündeten {PropertyEffect:8}.\n\\---\nZieht {SPELLCOUNTvalue:s}.",
+    "pt": "Concede {PropertyEffect:8} a um aliado.\n\\---\nCompre {SPELLCOUNTvalue:s}."
+  }
+}

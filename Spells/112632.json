@@ -12,6 +12,7 @@
   "m_id": 112632,
   "m_displayName": "IOP - CLASSE - TERRE - Fracturation Rocheuse",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -474149267,
     "b": 495277748,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -120,9 +121,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 43
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 43
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 37
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 59,
   "m_displayName": "CRA - CLASSE - AIR - Pointe des Cieux Divins",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1399833143,
     "b": 1670199396,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -125,9 +126,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 41
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 41
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 33
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

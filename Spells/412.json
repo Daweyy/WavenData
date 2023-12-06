@@ -12,6 +12,7 @@
   "m_id": 412,
   "m_displayName": "SRAM - ARME - LAME OURAI - ETHER - Vol de vie Ouraï",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -718641434,
     "b": 1041254260,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 830,
@@ -119,7 +120,29 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -137,7 +160,7 @@
     "pt": "Roubo de Vida Murai"
   },
   "description": {
-    "fr": "Inflige l’ATTAQUE de votre héros à un adversaire adjacent\\_<sprite name=\"cell_cross\">.\n\\---\n{#Trapper} : {#Lifesteal}",
+    "fr": "<if pvm>Inflige l’{%AT} de votre héros à un adversaire adjacent\\_<sprite name=\"cell_cross\">.</if><if pvp>Inflige {magicalDamage:dmg}  à un adversaire adjacent\\_<sprite name=\"cell_cross\">.</if>\n\\---\n{#Trapper} : {#Lifesteal}",
     "en": "Inflicts your hero's ATTACK on an adjacent<sprite name=\"cell_cross\"> opponent.\n\\---\n{#Trapper}: {#Lifesteal}.",
     "es": "Inflige el ATAQUE de tu héroe a un adversario adyacente\\_<sprite name=\"cell_cross\">.\n\\---\n{#Trapper}: {#Lifesteal}",
     "de": "Verursacht bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner den ANGRIFF deines Helden als Schaden.\n\\---\n{#Trapper}: {#Lifesteal}",

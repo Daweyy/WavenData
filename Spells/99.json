@@ -12,6 +12,7 @@
   "m_id": 99,
   "m_displayName": "CRA - CLASSE - EAU - Trait Aqueux",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -76897473,
     "b": 2117342196,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -112,9 +113,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 21
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 21
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 23
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 202,
   "m_displayName": "XELOR - ARME - GURPAPA - TERRE - Protocole Destruction",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1995663935,
     "b": -299374300,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 161,
@@ -220,9 +221,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 20
+            "valueInPvM": 20,
+            "valueInPvP": 16
           },
           "factor": {
             "type": "ReferenceScalingFactor",

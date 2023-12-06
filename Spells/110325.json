@@ -12,6 +12,7 @@
   "m_id": 110325,
   "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - TERRE - Estoc Tellurique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1152526907,
     "b": 123903908,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 534,
@@ -111,9 +112,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 14
+            "valueInPvM": 14,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -148,9 +150,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ARBuff",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 6
+            "valueInPvM": 6,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",

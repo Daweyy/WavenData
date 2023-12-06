@@ -12,6 +12,7 @@
   "m_id": 128,
   "m_displayName": "CRA - ARME - BUNELAME - ETHER - Recharge Bunelame",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -774552996,
     "b": -442635884,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 477,
@@ -103,13 +104,20 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "d",
-          "value": 2
+          "referenceId": "dmg",
+          "value": 26
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "d",
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        },
+        {
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "s",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -125,7 +133,7 @@
     "pt": "Recarga Bumelâmina"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à la cible.\n\\---\nPiochez {SPELLCOUNTvalue:d} si vous en avez {value:s} ou moins en main.",
+    "fr": "<if pvm>Inflige l'{%AT} de votre héros à la cible.</if><if pvp>Inflige {magicalDamage:dmg} à la cible.</if>\n\\---\nPiochez {SPELLCOUNTvalue:d} si vous en avez {value:s} ou moins en main.",
     "en": "Inflicts your hero's {%AT} on the target.\n\\---\nDraw {SPELLCOUNTvalue:d} if you have {value:s} or less in hand.",
     "es": "Inflige el {%AT} de tu héroe al objetivo.\n\\---\nSacas {SPELLCOUNTvalue:d} si tienes {value:s} o menos en la mano.",
     "de": "Fügt dem Ziel den {%AT,plural:one} deines Helden als Schaden zu.\n\\---\nZieht {SPELLCOUNTvalue:d}, wenn du höchstens {value:s} auf der Hand hast.",

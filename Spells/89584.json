@@ -12,6 +12,7 @@
   "m_id": 89584,
   "m_displayName": "CRA - CLASSE - ETHER - Liberation",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1492896724,
     "b": 1262728644,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -122,6 +123,11 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 29
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 2
         }
@@ -142,7 +148,7 @@
     "pt": "Liberação"
   },
   "description": {
-    "fr": "{#PUSH} de {cell:c} les adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros.\n\\---\n{#COMBO}\\_: Leur inflige l'{%AT} de votre héros.",
+    "fr": "{#PUSH} de {cell:c} les adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros.\n\\---\n{#COMBO}\\_: <if pvm>Leur inflige l'{%AT} de votre héros.</if><if pvp>Leur inflige {magicalDamage:dmg}.</if>",
     "en": "{#PUSH} opponents adjacent\\_<sprite name=\"cell_cross\"> to your hero {cell:c}.\n\\---\n{#COMBO}: Inflicts your hero's {%AT} on them.",
     "es": "{#PUSH} {cell:c} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a tu héroe.\n\\---\n{#COMBO}: Les inflige el {%AT} de tu héroe.",
     "de": "{#PUSH,plural:few} die an deinen Helden angrenzenden\\_<sprite name=\"cell_cross\"> Gegner um {cell:c} zurück.\n\\---\n{#COMBO}: Verursacht bei ihnen den {%AT,plural:one} deines Helden als Schaden.",

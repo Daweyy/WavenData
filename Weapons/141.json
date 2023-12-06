@@ -12,6 +12,7 @@
   "m_id": 141,
   "m_displayName": "ENIRIPSA - Gemme Déphasante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1708993960,
     "b": -1434030044,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "327e8a64b946ed74b969b91b04dc4ac7"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 141,
@@ -74,9 +78,29 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "pm",
-          "value": 1
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            25,
+            23,
+            24,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -92,12 +116,14 @@
       3
     ],
     "baseProperties": [
-      114
+      114,
+      18
     ],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 401
+      "valueInPvM": 401,
+      "valueInPvP": 385
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -105,9 +131,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 18
+      "valueInPvM": 22,
+      "valueInPvP": 18
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -139,6 +166,9 @@
     "defaultSkinIdMale": 5769,
     "defaultSkinIdFemale": 8412,
     "god": 3,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -172,7 +202,7 @@
     "pt": "Gema Defasante"
   },
   "description": {
-    "fr": "Lorsque vous appliquez un état élémentaire\\_:\\v Confère {PropertyEffect:18} et {PMvalue:pm,+} à votre héros pour le tour.\n\\---\n<rem>{PropertyEffect:18} ne réduit pas l'{%AT} de votre héros.\nLimité à 1 fois par tour.</rem>",
+    "fr": "{%fightstarted}\\v Confère {PropertyEffect:18} à votre héros.<ifpvm>\n\\---\nLorsque vous traversez un adversaire : Lui inflige {value:v} dégâts.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if>\n\\---\n<rem>{PropertyEffect:18} ne réduit pas l'{%AT} de votre héros.</rem>",
     "en": "When you apply an elemental state: \\vConfers {PropertyEffect:18} and {PMvalue:pm,+} on your hero for the turn.\n\\---\n<rem>{PropertyEffect:18} does not reduce your hero's {%AT}.\nLimit: 1 time per turn.</rem>",
     "es": "Cuando aplicas un estado elemental:\\v Confiere {PropertyEffect:18} y {PMvalue:pm,+} a tu héroe durante el turno.\n\\---\n<rem>{PropertyEffect:18} no reduce el {%AT} de tu héroe.\nLimitado a una vez por turno.</rem>",
     "de": "Wenn du einen Elementarzustand wirkst: \\vGewährt deinem Helden für diese Runde {PropertyEffect:18} und {PMvalue:pm,+}.\n\\---\n<rem>{PropertyEffect:18} verringert den {%AT} deines Helden nicht.\nAuf 1-mal pro Runde begrenzt.</rem>",

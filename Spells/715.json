@@ -12,6 +12,7 @@
   "m_id": 715,
   "m_displayName": "CRA - CLASSE - ETHER - Artillerie",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -659983261,
     "b": -721671436,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -99,7 +100,34 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -113,7 +141,7 @@
     "pt": "Artilharia"
   },
   "description": {
-    "fr": "Libère toutes vos {%AURA_SIGHT,plural:other} sur la cible.",
+    "fr": "<if pvm>Libère toutes vos {%AURA_SIGHT,plural:other} sur la cible.</if><if pvp>Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} pour le tour à votre héros par {%AURA_SIGHT} qu'il possède. \n\\---\nConsomme vos {%AURA_SIGHT, plural:other}.</if>",
     "en": "Releases all your {%AURA_SIGHT,plural:other} on the target.",
     "es": "Libera todas tus {%AURA_SIGHT,plural:other} sobre el objetivo.",
     "de": "Löst alle deine {%AURA_SIGHT,plural:other} beim Ziel aus.",

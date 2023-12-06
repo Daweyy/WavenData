@@ -12,6 +12,7 @@
   "m_id": 96,
   "m_displayName": "XELOR - CLASSE - TERRE - Sinistro Terre",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1876566459,
     "b": -1393039164,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -88,60 +89,126 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CombinedTargetSelector",
-        "selectors": [
-          {
-            "type": "FilteredCoordSelector",
-            "filters": [
-              {
-                "type": "AroundTargetFilter",
-                "targetsToCompare": {
-                  "type": "CasterHeroSelector"
-                },
-                "distance": {
-                  "type": "Between",
-                  "minIncluded": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": null,
-                    "value": 1
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CombinedTargetSelector",
+          "selectors": [
+            {
+              "type": "FilteredCoordSelector",
+              "filters": [
+                {
+                  "type": "AroundTargetFilter",
+                  "targetsToCompare": {
+                    "type": "CasterHeroSelector"
                   },
-                  "maxIncluded": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "c",
-                    "value": 3
+                  "distance": {
+                    "type": "Between",
+                    "minIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 1
+                    },
+                    "maxIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 3
+                    }
                   }
+                },
+                {
+                  "type": "CellValidForMechanismFilter"
                 }
-              },
-              {
-                "type": "CellValidForMechanismFilter"
-              }
-            ]
-          },
-          {
-            "type": "FilteredEntitySelector",
-            "from": {
-              "type": "AllObjectMechanismsSelector"
+              ]
             },
-            "filters": [
-              {
-                "type": "OwnerFilter",
-                "isIdentical": true,
-                "reference": {
-                  "type": "CasterSelector"
-                }
+            {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
               },
-              {
-                "type": "ObjectMechanismDefinitionFilter",
-                "condition": 1,
-                "objectMechanisms": [
-                  583
-                ]
-              }
-            ]
-          }
-        ]
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "ObjectMechanismDefinitionFilter",
+                  "condition": 1,
+                  "objectMechanisms": [
+                    955,
+                    559,
+                    583,
+                    398
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CombinedTargetSelector",
+          "selectors": [
+            {
+              "type": "FilteredCoordSelector",
+              "filters": [
+                {
+                  "type": "AroundTargetFilter",
+                  "targetsToCompare": {
+                    "type": "CasterHeroSelector"
+                  },
+                  "distance": {
+                    "type": "Between",
+                    "minIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 1
+                    },
+                    "maxIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c",
+                      "value": 3
+                    }
+                  }
+                },
+                {
+                  "type": "CellValidForMechanismFilter"
+                }
+              ]
+            },
+            {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "ObjectMechanismDefinitionFilter",
+                  "condition": 1,
+                  "objectMechanisms": [
+                    583
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [],
@@ -167,15 +234,12 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        {
-          "type": 22,
-          "id": 136
-        },
-        "OBJECTMECHANISM",
+        "PEAT",
         {
           "type": 7,
           "id": 807
         },
+        "OBJECTMECHANISM",
         {
           "type": 7,
           "id": 583
@@ -191,7 +255,7 @@
     "pt": "Sinistro Terra"
   },
   "description": {
-    "fr": "Construit un {ObjectMechanism:583} jusqu'à {mechanismSpawnRange:c} de votre héros.\n<rem>Détruit votre précédent {ObjectMechanism:583!}.</rem>\n\\---\n<b>OU</b>\n\\---\nTransforme votre {ObjectMechanism:583!} en {ObjectMechanism:807}.",
+    "fr": "Construit un {ObjectMechanism:583} jusqu'à {mechanismSpawnRange:c} de votre héros.\n<rem>Détruit votre précédent {ObjectMechanism:583!}.</rem>\n\\---\n<b>OU</b>\n\\---\n<if pvm>Transforme votre {ObjectMechanism:583!} en {ObjectMechanism:807}.</if><if pvp>Transforme le <b>SINISTRO</b> ciblé en {ObjectMechanism:807}.</if>",
     "en": "Builds one {ObjectMechanism:583} up to {mechanismSpawnRange:c} from your hero.\n<rem>Destroys your previous {ObjectMechanism:583!}.</rem>\n\\---\n<b>OR</b>\n\\---\nTurns your {ObjectMechanism:583!} into a {ObjectMechanism:807}.",
     "es": "Construye un {ObjectMechanism:583} hasta a {mechanismSpawnRange:c} de tu héroe.\n<rem>Destruye tu {ObjectMechanism:583!} anterior.</rem>\n\\---\n<b>O</b>\n\\---\nTransforma tu {ObjectMechanism:583!} en {ObjectMechanism:807}.",
     "de": "Errichtet einen\\_{ObjectMechanism:583} bis zu {mechanismSpawnRange:c} von deinem Helden entfernt.\n<rem>Zerstört deinen vorherigen {ObjectMechanism:583!}.</rem>\n\\---\n<b>ODER</b>\n\\---\nVerwandelt deinen {ObjectMechanism:583!} in {ObjectMechanism:807}.",

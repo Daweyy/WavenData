@@ -12,6 +12,7 @@
   "m_id": 597,
   "m_displayName": "IOP - CLASSE - FEU - Charge Detonante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1287586975,
     "b": -1259447660,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -173,9 +174,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 19
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 19
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 26
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -211,9 +221,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgB",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 15
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 15
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 26
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

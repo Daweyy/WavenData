@@ -12,6 +12,7 @@
   "m_id": 366,
   "m_displayName": "XELOR - Sabliaton Jikan",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -964682071,
     "b": -757507164,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "5c06049562ddf6b42bab0352a0fd5d5f"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -88,9 +92,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 392
+      "valueInPvM": 392,
+      "valueInPvP": 398
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -98,9 +103,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 28
+      "valueInPvM": 28,
+      "valueInPvP": 25
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -132,6 +138,9 @@
     "defaultSkinIdMale": 9731,
     "defaultSkinIdFemale": 9367,
     "god": 7,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

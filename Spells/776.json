@@ -12,6 +12,7 @@
   "m_id": 776,
   "m_displayName": "XELOR - CLASSE - EAU - Gelure",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 945990414,
     "b": 1419691732,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -111,9 +112,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 16
+            "valueInPvM": 16,
+            "valueInPvP": 20
           },
           "factor": {
             "type": "ReferenceScalingFactor",

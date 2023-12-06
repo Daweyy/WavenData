@@ -12,6 +12,7 @@
   "m_id": 686,
   "m_displayName": "SRAM - CLASSE - AIR - Pulsion",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -640354234,
     "b": 222930148,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -87,29 +88,119 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "TwoCastTargetDefinition",
-      "selector1": {
-        "type": "FilteredCharacterSelector",
-        "filters": []
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
       },
-      "selector2": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "FirstCastTargetSelector"
+      "selectorIfTrue": {
+        "type": "ConditionalCastTargetDefinition",
+        "condition": {
+          "type": "NumberOfEntityCondition",
+          "selector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllFloorMechanismsSelector"
             },
-            "distance": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": null,
-                "value": 1
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
               }
+            ]
+          },
+          "value": {
+            "type": "GreaterEqualThan",
+            "dynamicValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 2
             }
           }
-        ]
+        },
+        "selectorIfTrue": {
+          "type": "TwoCastTargetDefinition",
+          "selector1": {
+            "type": "FilteredCharacterSelector",
+            "filters": []
+          },
+          "selector2": {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "InLineTargetFilter",
+                "targetsToCompare": {
+                  "type": "FirstCastTargetSelector"
+                },
+                "distance": {
+                  "type": "LowerEqualThan",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "cM",
+                    "value": 2
+                  }
+                }
+              },
+              {
+                "type": "CellValidForCharacterFilter"
+              }
+            ]
+          }
+        },
+        "selectorIfFalse": {
+          "type": "TwoCastTargetDefinition",
+          "selector1": {
+            "type": "FilteredCharacterSelector",
+            "filters": []
+          },
+          "selector2": {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "FirstCastTargetSelector"
+                },
+                "distance": {
+                  "type": "EqualsTo",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 1
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -129,12 +220,31 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "cM",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 6
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 6
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 11
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -164,11 +274,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "c",
-          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -177,10 +282,18 @@
         "EPHEMERAL",
         "TRAP",
         {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 25,
           "id": 393
         },
-        "TRAPPER",
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "TRAPPER"
+        },
         "PUSH"
       ]
     }
@@ -193,7 +306,7 @@
     "pt": "Impulso"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} et {#PUSH} de {cell:c}.\n\\---\n{#TRAPPER}\\_: Ajoute le sort {Spell:393} à votre main.",
+    "fr": "Inflige {magicalDamage:dmg} et {#PUSH} de {cell:c}.\n\\---\n<if pvm>{#TRAPPER}\\_: Ajoute le sort {Spell:393} à votre main.</if><if pvp>{#TRAPPER}\\_: {#PUSH} jusqu'à une case supplémentaire.</if>",
     "en": "Does {magicalDamage:dmg} and {#PUSH} {cell:c}.\n\\---\n{#TRAPPER}: Adds the {Spell:393} spell to your hand.",
     "es": "Inflige {magicalDamage:dmg} y {#PUSH} {cell:c}.\n\\---\n{#TRAPPER}: Añade el hechizo {Spell:393} a tu mano.",
     "de": "Verursacht {magicalDamage:dmg} und einen {#PUSH,plural:one} um {cell:c}.\n\\---\n{#TRAPPER}: Fügt deiner Hand den Zauber {Spell:393} hinzu.",

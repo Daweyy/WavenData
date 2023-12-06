@@ -12,6 +12,7 @@
   "m_id": 206637,
   "m_displayName": "IOP - CLASSE - ETHER - Cuirasse Iop",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1736929817,
     "b": 1873582244,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -73,9 +74,18 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 5
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          }
         }
       }
     ],
@@ -124,10 +134,10 @@
     "pt": "Couraça Iop"
   },
   "description": {
-    "fr": "Confère {PropertyEffect:8} <if not spellskill=978>à votre héros.</if><if spellskill=978>à votre héros et aux alliés autour\\_<sprite name=\"cell_around\">.</if>\n\\---\nPiochez {value:drawValue}\\_{drawValue,plural, one[sort] other[sorts]}.",
-    "en": "Confers {PropertyEffect:8} <if not spellskill=978>on your hero.</if><if spellskill=978>on your hero and surrounding\\_<sprite name=\"cell_around\"> allies.</if>\n\\---\nDraw {value:drawValue}\\_{drawValue,plural, one[spell] other[spells]}.",
-    "es": "Confiere {PropertyEffect:8} <if not spellskill=978>a tu héroe.</if><if spellskill=978>a tu héroe y a los aliados de alrededor\\_<sprite name=\"cell_around\">.</if>\n\\---\nSacas {value:drawValue}\\_{drawValue,plural, one[hechizo] other[hechizos]}.",
-    "de": "Verleiht deinem Helden {PropertyEffect:8} <if not spellskill=978>.</if><if spellskill=978>für deinen Helden und die Verbündeten im Umkreis\\_<sprite name=\"cell_around\">.</if>\n\\---\nZieht {value:drawValue}\\_{drawValue,plural, one[Zauber] other[Zauber]}.",
-    "pt": "Concede {PropertyEffect:8} <if not spellskill=978>ao seu herói.</if><if spellskill=978>ao seu herói e aos aliados em\\_volta\\_<sprite name=\"cell_around\">.</if>\n\\---\nCompre {value:drawValue}\\_{drawValue,plural, one[feitiço] other[feitiços]}."
+    "fr": "Confère {PropertyEffect:8} à votre héros.\n\\---\nPiochez {value:drawValue}\\_{drawValue,plural, one[sort] other[sorts]}.",
+    "en": "Confers {PropertyEffect:8} on your hero.\n\\---\nDraw {value:drawValue}\\_{drawValue,plural, one[spell] other[spells]}.",
+    "es": "Confiere {PropertyEffect:8} a tu héroe.\n\\---\nSacas {value:drawValue}\\_{drawValue,plural, one[hechizo] other[hechizos]}.",
+    "de": "Verleiht deinem Helden einen {PropertyEffect:8}.\n\\---\nZieht {value:drawValue}\\_{drawValue,plural, one[Zauber] other[Zauber]}.",
+    "pt": "Concede {PropertyEffect:8} ao seu herói.\n\\---\nCompre {value:drawValue}\\_{drawValue,plural, one[feitiço] other[feitiços]}."
   }
 }

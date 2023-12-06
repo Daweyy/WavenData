@@ -12,6 +12,7 @@
   "m_id": 497,
   "m_displayName": "IOP - Bouvaloir Orok",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1387392475,
     "b": 111833140,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "4d890c1d0099aef459abe274051b016e"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -106,6 +110,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "s",
           "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 15
         }
       ],
       "externalDynamicValueReferences": [],
@@ -161,6 +170,9 @@
     "defaultSkinIdMale": 1020,
     "defaultSkinIdFemale": 6598,
     "god": 1,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -194,7 +206,7 @@
     "pt": "Bonescudo Orok"
   },
   "description": {
-    "fr": "Lorsque votre héros <b>CHARGE</b>\\_:\\v Inflige {value:p, percent} de son {%at} à la cible.",
+    "fr": "Lorsque votre héros <b>CHARGE</b>\\_:\\v<if pvm>Inflige {value:p, percent} de son {%at}</if><if pvp>Inflige {magicalDamage:dmg}</if> à la cible.",
     "en": "When your hero <b>CHARGES</b>:\\v Inflicts {value:p, percent} of their {%at} on the target.",
     "es": "Cuando tu héroe <b>CARGA</b>:\\v Inflige un {value:p, percent} de su {%at} al objetivo.",
     "de": "Wenn dein Held <b>ANSTÜRMT</b>:\\v Verusacht beim Ziel {value:p, percent} seines {%at,plural:two} als Schaden.",

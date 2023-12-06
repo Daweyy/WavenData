@@ -12,6 +12,7 @@
   "m_id": 163867,
   "m_displayName": "ENIRIPSA - CLASSE - ETHER - Devouement",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 449607735,
     "b": 1532605572,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -123,7 +124,50 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "h",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -137,7 +181,7 @@
     "pt": "Devoção"
   },
   "description": {
-    "fr": "Consomme une {%AURA_HEART} pour infliger l'{%AT} de votre héros aux adversaires adjacents<sprite name=\"cell_cross\">.",
+    "fr": "<if pvm>Consomme une {%AURA_HEART} pour infliger l'{%AT} de votre héros aux adversaires adjacents\\_<sprite name=\"cell_cross\"></if><if pvp>Consomme une {%AURA_HEART} pour infliger {magicalDamage:v} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros</if>.<if pvp>\n\\---\nSoigne votre héros de {PVvalue:h}</if>",
     "en": "Consumes one {%AURA_HEART} to inflict your hero's {%AT} on adjacent<sprite name=\"cell_cross\"> opponents.",
     "es": "Consume un {%AURA_HEART} e inflige el {%AT} de tu héroe a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
     "de": "Verbraucht eine {%AURA_HEART}, um den an deinen Helden angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern den {%AT,plural:one} als Schaden zuzufügen.",

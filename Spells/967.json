@@ -12,6 +12,7 @@
   "m_id": 967,
   "m_displayName": "CRA - ARME - BUNELAME - AIR - Bumbon",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1534152642,
     "b": -1381672748,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 477,
@@ -111,9 +112,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 8
+            "valueInPvM": 8,
+            "valueInPvP": 18
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -153,9 +155,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "bc",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "valueInPvM": 11,
+            "valueInPvP": 18
           },
           "factor": {
             "type": "ReferenceScalingFactor",

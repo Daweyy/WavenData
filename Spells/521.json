@@ -12,6 +12,7 @@
   "m_id": 521,
   "m_displayName": "XELOR - ARME - JIKAN - ETHER - Coalition Jikan",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1703116261,
     "b": -1324349804,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 366,
@@ -108,6 +109,16 @@
           "type": "ConstIntegerValue",
           "referenceId": "d2",
           "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 14
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg2",
+          "value": 4
         }
       ],
       "externalDynamicValueReferences": [],
@@ -123,7 +134,7 @@
     "pt": "Coalizão Jikan"
   },
   "description": {
-    "fr": "Inflige {value:d1, percent} de l'{%AT} de votre héros.\n\\---\n{value:d2, +, percent} de <b>DÉGÂTS</b> par {%AURA_OWL} que possède votre héros.",
+    "fr": "<if pvm>Inflige {value:d1, percent} de l'{%AT} de votre héros</if><if pvp>Inflige {magicalDamage:dmg}</if>.\n\\---\n<if pvm>{value:d2, +, percent} par {%AURA_OWL} que possède votre héros.</if><if pvp>{magicalDamage:dmg2,+} par {%AURA_OWL} que possède votre héros.</if>",
     "en": "Inflicts {value:d1, percent} of your hero's {%AT}.\n\\---\n{value:d2, +, percent} <b>DAMAGE</b> per {%AURA_OWL} that your hero has.",
     "es": "Inflige un {value:d1, percent} del {%AT} de tu héroe.\n\\---\n{value:d2, +, percent} de <b>DAÑOS</b> por {%AURA_OWL} que tenga tu héroe.",
     "de": "Verursacht {value:d1, percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{value:d2, +, percent} <b>SCHADEN</b> pro {%AURA_OWL}, die dein Held besitzt.",

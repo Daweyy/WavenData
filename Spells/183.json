@@ -12,6 +12,7 @@
   "m_id": 183,
   "m_displayName": "XELOR - ARME - TAKO - FEU - Style Flamme",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1630475167,
     "b": 1306002452,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 490,
@@ -142,9 +143,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 23
+            "valueInPvM": 23,
+            "valueInPvP": 27
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -179,9 +181,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "aoe",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 8
+            "valueInPvM": 8,
+            "valueInPvP": 10
           },
           "factor": {
             "type": "ReferenceScalingFactor",

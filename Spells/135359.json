@@ -12,6 +12,7 @@
   "m_id": 135359,
   "m_displayName": "XELOR - ARME - JIKAN - FEU - Sablier Ardent",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 2061068571,
     "b": 540888932,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 366,
@@ -111,9 +112,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgA",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 18
+            "valueInPvM": 18,
+            "valueInPvP": 28
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -148,9 +150,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgB",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 7
+            "valueInPvM": 7,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",

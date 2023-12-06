@@ -12,6 +12,7 @@
   "m_id": 182,
   "m_displayName": "SRAM - Ken Kartana",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1504240924,
     "b": 1134620820,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "deda5e03ab598aa44aa47e70444fb442"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 182,
@@ -80,7 +84,7 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 70
+              "value": 75
             },
             {
               "type": "ConditionalValue",
@@ -92,7 +96,7 @@
               "ifTrue": {
                 "type": "ConstIntegerValue",
                 "referenceId": "p",
-                "value": 70
+                "value": 75
               },
               "ifFalse": {
                 "type": "ConstIntegerValue",
@@ -105,7 +109,12 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "p",
-          "value": 70
+          "value": 75
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "sPVP",
+          "value": 15
         }
       ],
       "externalDynamicValueReferences": [],
@@ -117,9 +126,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 392
+      "valueInPvM": 392,
+      "valueInPvP": 396
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -127,9 +137,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 22
+      "valueInPvM": 22,
+      "valueInPvP": 30
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -161,6 +172,9 @@
     "defaultSkinIdMale": 7797,
     "defaultSkinIdFemale": 9948,
     "god": 6,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -194,7 +208,7 @@
     "pt": "Ken Kartana"
   },
   "description": {
-    "fr": "Lorsque votre héros déclenche un {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié\\_: Inflige {value:s,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\">.",
+    "fr": "Lorsque votre héros déclenche un {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié\\_: <if pvm>Inflige {value:s,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\">.</if><if pvp>Inflige {magicalDamage:sPVP} aux adversaires autour\\_<sprite name=\"cell_around\">.</if>",
     "en": "When your hero triggers an allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}: Inflicts {value:s,percent} of {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.",
     "es": "Cuando tu héroe activa una {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada: Inflige un {value:s,percent} de su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\">.",
     "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME} auslöst: Verursacht bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> {value:s,percent} seines {%AT,plural:two} als Schaden.",

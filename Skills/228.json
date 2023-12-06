@@ -10,8 +10,9 @@
   },
   "m_Name": "228",
   "m_id": 228,
-  "m_displayName": "EQUIPMENT - AFFINITY - Avalanche 50",
+  "m_displayName": "EQUIPMENT - AFFINITY - Affinité Global",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -713575744,
     "b": 1921035924,
@@ -42,10 +43,15 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "stat",
-          "value": 50
+          "value": 75
         },
         "caracIds": [
-          83
+          83,
+          84,
+          81,
+          85,
+          82,
+          80
         ]
       }
     ],
@@ -56,7 +62,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "stat",
-          "value": 50
+          "value": 75
         }
       ],
       "externalDynamicValueReferences": [],
@@ -64,23 +70,44 @@
       "keywordReferences": [
         {
           "type": 23,
+          "id": 33
+        },
+        {
+          "type": 23,
+          "id": 35
+        },
+        {
+          "type": 23,
+          "id": 38
+        },
+        {
+          "type": 23,
+          "id": 34
+        },
+        {
+          "type": 23,
+          "id": 37
+        },
+        {
+          "type": 23,
           "id": 36
-        }
+        },
+        "AFFINITY"
       ]
     }
   },
   "name": {
-    "fr": "Avalanche",
-    "en": "Avalanche",
-    "es": "Avalancha",
-    "de": "Lawine",
-    "pt": "Avalanche"
+    "fr": "AFFINITÉS",
+    "en": "AFFINITIES",
+    "es": "AFINIDADES",
+    "de": "VORLIEBEN",
+    "pt": "AFINIDADES"
   },
   "description": {
-    "fr": "{passiveModifiers}",
-    "en": "{passiveModifiers}",
-    "es": "{passiveModifiers}",
-    "de": "{passiveModifiers}",
-    "pt": "{passiveModifiers}"
+    "fr": "{value:stat,+,percent} à vos {#AFFINITY,plural:other}.",
+    "en": "{value:stat,+,percent} to your {#AFFINITY,plural:other}.",
+    "es": "{value:stat,+,percent} a tus {#AFFINITY,plural:other}.",
+    "de": "{value:stat,+,percent} auf deine {#AFFINITY,plural:other}.",
+    "pt": "{value:stat,+,percent} às suas {#AFFINITY,plural:other}."
   }
 }

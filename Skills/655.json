@@ -12,6 +12,7 @@
   "m_id": 655,
   "m_displayName": "WEAPON - SRAM - CISAILLE ORISHI  - Stratégie Orishi",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1528305475,
     "b": 276985028,
@@ -43,7 +44,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "col",
-          "value": 50
+          "value": 60
         }
       ],
       "externalDynamicValueReferences": [],
@@ -51,6 +52,7 @@
       "keywordReferences": [
         "PUSH",
         "EPHEMERAL",
+        "COLLISION",
         {
           "type": 25,
           "id": 393
@@ -66,10 +68,10 @@
     "pt": "Estratégia Orishi"
   },
   "description": {
-    "fr": "{%Attack} Ajoute le sort {Spell:393} à votre main.\n\\---\n{value:col,+,percent} au <b>DÉGÂTS</b> de vos <b>COLLISIONS</b>.",
-    "en": "{%Attack} Adds the {Spell:393} spell to your hand.\n\\---\n{value:col,+,percent} to your <b>COLLISION</b> <b>DAMAGE</b>.",
-    "es": "{%Attack} Añade el hechizo {Spell:393} a tu mano.\n\\---\n{value:col,+,percent} al <b>DAÑO</b> de tus <b>COLISIONES</b>.",
-    "de": "{%Attack}: Fügt deiner Hand den Zauber {Spell:393} hinzu.\n\\---\n{value:col,+,percent} <b>SCHADEN</b> für deine <b>ZUSAMMENSTÖSSE</b>.",
-    "pt": "{%Attack} Adiciona o feitiço {Spell:393} à sua mão.\n\\---\n{value:col,+,percent} aos <b>DANOS</b> de suas <b>COLISÕES</b>."
+    "fr": "{%Attack} Ajoute le sort {Spell:393} à votre main.\n\\---\n{value:col,+,percent} aux <b>DÉGÂTS</b> de vos {#COLLISION, plural:other}.",
+    "en": "{%Attack} Adds the {Spell:393} spell to your hand.\n\\---\n{value:col,+,percent} to your {#COLLISION,plural:one} <b>DAMAGE</b>.",
+    "es": "{%Attack} Añade el hechizo {Spell:393} a tu mano.\n\\---\n{value:col,+,percent} a los <b>DAÑOS</b> de tus {#COLLISION, plural:other}.",
+    "de": "{%Attack}: Fügt deiner Hand den Zauber „{Spell:393}“ hinzu.\n\\---\n{value:col,+,percent} <b>SCHADEN</b> für deine {#COLLISION, plural:other}.",
+    "pt": "{%Attack} Adiciona o feitiço {Spell:393} à sua mão.\n\\---\n{value:col,+,percent} aos <b>DANOS</b> de suas {#COLLISION, plural:other}."
   }
 }

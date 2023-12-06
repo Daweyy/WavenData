@@ -12,6 +12,7 @@
   "m_id": 341,
   "m_displayName": "SRAM - CLASSE - ETHER - Chausse-Trappe",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1878432810,
     "b": -630887836,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -117,9 +118,18 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "nb",
-          "value": 2
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 3
+          }
         }
       ],
       "externalDynamicValueReferences": [],

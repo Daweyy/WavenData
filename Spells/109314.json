@@ -12,6 +12,7 @@
   "m_id": 109314,
   "m_displayName": "ENIRIPSA - ARME - LAME VORACIUS - FEU - Aiguillon Perforant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -127027359,
     "b": -178151404,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 202,
@@ -111,9 +112,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 18
+            "valueInPvM": 18,
+            "valueInPvP": 27
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -143,9 +145,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "p",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 7
+            "valueInPvM": 7,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",

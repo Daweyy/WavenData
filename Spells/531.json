@@ -12,6 +12,7 @@
   "m_id": 531,
   "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - ETHER - Repousse Kasaï",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 554504616,
     "b": -1798416684,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 534,
@@ -81,28 +82,55 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "TwoCastTargetDefinition",
-      "selector1": {
-        "type": "AllBoardPresencesSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "FloatingCounterCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 2
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
       },
-      "selector2": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "FirstCastTargetSelector"
-            },
-            "distance": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
+      "selectorIfTrue": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "AllCharactersSelector"
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
               }
             }
-          }
-        ]
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "AllCharactersSelector"
+        }
       }
     },
     "spellEffectData": [
@@ -123,13 +151,25 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "PUSH"
+        }
+      ]
     }
   },
   "name": {
@@ -140,7 +180,7 @@
     "pt": "Empurrão Kasai"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros et repousse de {cell:c} pour chaque {%AURA_SWORD} qu’il possède.",
+    "fr": "<if pvm>Inflige l’{%AT} de votre héros et {#PUSH} de {cell:c} pour chaque {%AURA_SWORD} qu’il possède.</if><if pvp>Inflige {magicalDamage:dmg} et {#PUSH} de {cell:c} pour chaque {%AURA_SWORD} que votre héros possède.</if> ",
     "en": "Inflicts your hero's {%AT} and pushes {cell:c} for each {%AURA_SWORD} that they have.",
     "es": "Inflige el {%AT} de tu héroe y empuja {cell:c} por cada {%AURA_SWORD} que tenga.",
     "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden. Rückstoß um {cell:c} pro {%AURA_SWORD}, die er besitzt.",

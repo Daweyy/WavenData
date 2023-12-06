@@ -12,6 +12,7 @@
   "m_id": 136082,
   "m_displayName": "XELOR - CLASSE - ETHER - Temporisation",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -740657959,
     "b": 1407839188,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -73,9 +74,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "valueInPvM": 4,
+          "valueInPvP": 5
         }
       }
     ],
@@ -103,7 +105,16 @@
         "type": "SuccessCastCondition"
       },
       "ifFalse": {
-        "type": "FailureCastCondition"
+        "type": "ConditionalCastCondition",
+        "condition": {
+          "type": "PvpFightCondition"
+        },
+        "ifTrue": {
+          "type": "SuccessCastCondition"
+        },
+        "ifFalse": {
+          "type": "FailureCastCondition"
+        }
       }
     },
     "castTarget": {
@@ -135,6 +146,16 @@
           "type": "ConstIntegerValue",
           "referenceId": "draw",
           "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "drawPVP",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -150,7 +171,7 @@
     "pt": "Temporização"
   },
   "description": {
-    "fr": "{value:nb,+}\\_{%AURA_OWL,value:nb} à votre héros s'il en possède déjà.\n\\---\nPiochez {SPELLCOUNTvalue:draw} par {%AURA_OWL,plural:one} que possède votre héros.",
+    "fr": "<if pvm>{value:nb,+}\\_{%AURA_OWL,value:nb} à votre héros s'il en possède déjà.</if><if pvp>Piochez {SPELLCOUNTvalue:drawPVP}.</if>\n\\---\n<if pvm>Piochez {SPELLCOUNTvalue:draw} par {%AURA_OWL,plural:one} que possède votre héros.</if><if pvp>{PA_RESvalue:paPVP,+}.</if>",
     "en": "{value:nb,+}\\_{%AURA_OWL,value:nb} to your hero if they have any already.\n\\---\nDraw {SPELLCOUNTvalue:draw} per {%AURA_OWL,plural:one} that your hero has.",
     "es": "{value:nb,+}\\_{%AURA_OWL,value:nb} a tu héroe si ya tiene.\n\\---\nSacas {SPELLCOUNTvalue:draw} por {%AURA_OWL,plural:one} que tenga tu héroe.",
     "de": "{value:nb,+}\\_{%AURA_OWL,value:nb} für deinen Helden, falls er bereits eine besitzt.\n\\---\nZieht {SPELLCOUNTvalue:draw} pro {%AURA_OWL,plural:one} im Besitz deines Helden.",

@@ -12,6 +12,7 @@
   "m_id": 478,
   "m_displayName": "XELOR - CLASSE - AIR - Aiguille venteuse",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -928438635,
     "b": 729443700,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -67,9 +68,20 @@
         "type": "GaugeValue",
         "element": 19,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -109,9 +121,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 18
+            "valueInPvM": 18,
+            "valueInPvP": 12
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -151,12 +164,33 @@
           "type": "ConstIntegerValue",
           "referenceId": "d2",
           "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbPVP",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 22,
+          "id": 138
+        },
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "CHRONO"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 22,
           "id": 138
         }
@@ -171,7 +205,7 @@
     "pt": "Ponteiro Ventoso"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} à votre héros si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{value:nb,+}\\_{aura:138,value:nb} à votre héros si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{#CHRONO}\\_: {value:nbPVP,+}\\_{aura:138,value:nbPVP} à votre héros.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} to your hero if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} a tu héroe si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:nb,+}\\_{aura:138,value:nb} für deinen Helden, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",

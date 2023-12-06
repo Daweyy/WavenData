@@ -12,6 +12,7 @@
   "m_id": 34,
   "m_displayName": "DECK - KROSMIQUE - MULTI - Percimol",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1196385415,
     "b": -386207884,
@@ -62,9 +63,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 110
+      "valueInPvM": 110,
+      "valueInPvP": 98
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -72,9 +74,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 25
+      "valueInPvM": 25,
+      "valueInPvP": 28
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -108,7 +111,7 @@
     "rarity": 2,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 407,
     "castCondition": {
@@ -196,9 +199,10 @@
         "type": "ElementPointsCost",
         "element": 12,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 2
         }
       },
       {
@@ -222,7 +226,7 @@
     "pt": "Percimol"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Gagne {value:x,percent} de sa {%PVMAX} en {%AR} par {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}.",
+    "fr": "{%appearance} {PA_RESvalue:pa,+}<if pvp> et échange sa position avec celle de votre héros.</if><if pvm>.\n\\---\n{%FightTurnEnded} Gagne {value:x,percent} de sa {%PVMAX} en {%AR} par {%PA_res}.</if>",
     "en": "{%FightTurnEnded} Gains {value:x,percent} of his {%PVMAX} as {%AR} per {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}.",
     "es": "{%FightTurnEnded} Gana un {value:x,percent} de su {%PVMAX} en {%AR} por {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}.",
     "de": "{%FightTurnEnded} Erhält {value:x,percent} seiner {%PVMAX} als {%AR} pro {%PA_res}.\n\\---\n{%appearance} {PA_RESvalue:pa,+}.",

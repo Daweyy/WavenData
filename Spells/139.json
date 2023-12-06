@@ -12,6 +12,7 @@
   "m_id": 139,
   "m_displayName": "IOP - CLASSE - AIR - Tonnerre En Série",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2005777863,
     "b": -1237397356,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -117,9 +118,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 24
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 24
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 26
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -139,9 +149,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "bc",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 11
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 11
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 26
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

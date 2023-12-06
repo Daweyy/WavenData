@@ -12,6 +12,7 @@
   "m_id": 662,
   "m_displayName": "DECK - COMMON - MULTI - Brute Impie",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1252122659,
     "b": 2016983268,
@@ -59,9 +60,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 88
+      "valueInPvM": 88,
+      "valueInPvP": 85
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -105,7 +107,7 @@
     "rarity": 0,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 985,
     "castCondition": {
@@ -219,7 +221,7 @@
     "pt": "Bruta Ímpia"
   },
   "description": {
-    "fr": "{%appearance} Sacrifie votre compagnon ayant le moins de {%PV} pour gagner {ATvalue:pwr,percent}.",
+    "fr": "{%appearance} Sacrifie votre compagnon ayant le moins de {%PV} pour gagner {ATvalue:pwr,percent}.<if pvp>\n\\---\n{%AT} : Echange de place avec la cible.</if>",
     "en": "{%appearance} Sacrifices your companion with the least {%PV} to gain {ATvalue:pwr,percent}.",
     "es": "{%appearance} Sacrifica a tu compañero que tenga menos {%PV} para ganar un {ATvalue:pwr,percent}.",
     "de": "{%appearance} Opfert deinen Begleiter mit den wenigsten {%PV}, um {ATvalue:pwr,percent} zu erhalten.",

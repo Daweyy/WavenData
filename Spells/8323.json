@@ -12,6 +12,7 @@
   "m_id": 8323,
   "m_displayName": "ENIRIPSA - CLASSE - ETHER - Arcone Mortis",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 219047257,
     "b": -432941196,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -82,16 +83,25 @@
     "castCondition": {
       "type": "ConditionalCastCondition",
       "condition": {
-        "type": "HasFloatingCounterCondition",
-        "selector": {
-          "type": "CasterHeroSelector"
-        }
+        "type": "PvpFightCondition"
       },
       "ifTrue": {
         "type": "SuccessCastCondition"
       },
       "ifFalse": {
-        "type": "FailureCastCondition"
+        "type": "ConditionalCastCondition",
+        "condition": {
+          "type": "HasFloatingCounterCondition",
+          "selector": {
+            "type": "CasterHeroSelector"
+          }
+        },
+        "ifTrue": {
+          "type": "SuccessCastCondition"
+        },
+        "ifFalse": {
+          "type": "FailureCastCondition"
+        }
       }
     },
     "castTarget": {
@@ -123,14 +133,22 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DRAIN",
-        {
-          "type": 20,
-          "id": 114
-        },
         {
           "type": 20,
           "id": 18
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "DRAIN"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "type": 20,
+          "id": 114
         },
         {
           "type": 22,

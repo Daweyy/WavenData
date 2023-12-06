@@ -12,6 +12,7 @@
   "m_id": 357,
   "m_displayName": "XELOR - ARME - PIKUXALA - ETHER - Fuite Pikuxala",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -818580475,
     "b": 402003172,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 945,
@@ -70,7 +71,18 @@
       ],
       "heroSkillPointsCost": 10
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
@@ -115,6 +127,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "pc",
           "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 27
         }
       ],
       "externalDynamicValueReferences": [],
@@ -130,7 +147,7 @@
     "pt": "Fuga Pikuxala"
   },
   "description": {
-    "fr": "Inflige {value:pc,percent} de l'{%AT} de votre héros à un adversaire.\n\\---\nTéléporte votre héros sur sa case de début de tour.",
+    "fr": "<if pvm>Inflige {value:pc,percent} de l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire.</if>\n\\---\nTéléporte votre héros sur sa case de début de tour.",
     "en": "Inflicts {value:pc,percent} of your hero's {%AT} on an opponent.\n\\---\nTeleports your hero to their start-of-turn cell.",
     "es": "Inflige un {value:pc,percent} del {%AT} de tu héroe a un adversario.\n\\---\nTeletransporta a tu héroe a su casilla de inicio del turno.",
     "de": "Fügt einem Gegner {value:pc,percent} des {%AT,plural:two} deines Helden als Schaden zu.\n\\---\nTeleportiert deinen Helden auf das Feld, auf dem er seine Runde begonnen hat.",

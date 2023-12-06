@@ -12,6 +12,7 @@
   "m_id": 548,
   "m_displayName": "ENIRIPSA - CLASSE - TERRE - Baume Tourbe",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1381429585,
     "b": -645455916,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -147,9 +148,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 11
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 11
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -170,9 +180,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 24
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 24
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 20
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

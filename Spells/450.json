@@ -10,8 +10,9 @@
   },
   "m_Name": "450",
   "m_id": 450,
-  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - ETHER - Maître du Déphasage",
+  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - ETHER - Course Déphasée",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -943986760,
     "b": 1660639940,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 141,
@@ -73,9 +74,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "valueInPvM": 5,
+          "valueInPvP": 2
         }
       }
     ],
@@ -99,32 +101,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "pm",
-          "value": 1
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
           "type": 20,
-          "id": 18
+          "id": 5
         }
       ]
     }
   },
   "name": {
-    "fr": "Maître du Déphasage",
+    "fr": "Course Déphasée",
     "en": "Master of Dephasing",
     "es": "Maestro del Desfase",
     "de": "Meister der Phasenverschiebung",
     "pt": "Mestre da Defasagem"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros aux adversaires autour\\_<sprite name=\"cell_around\"> s'il est {PropertyEffect:18[DÉPHASÉ]}.\n\\---\nSinon, lui confère {PropertyEffect:18} et {PMvalue:pm,+} pour le tour.",
+    "fr": "Votre héros rejoue son tour et le {PropertyEffect:5}.",
     "en": "Inflicts your hero's {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents if they are {PropertyEffect:18[DEPHASED]}.\n\\---\nOtherwise, confers {PropertyEffect:18} and {PMvalue:pm,+} on them for the turn.",
     "es": "Inflige el {%AT} de tu héroe a los adversarios de alrededor\\_<sprite name=\"cell_around\"> si está {PropertyEffect:18[DESFASADO]}.\n\\---\nSi no, le confiere {PropertyEffect:18} y {PMvalue:pm,+} durante el turno.",
     "de": "Verusacht bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> den {%AT,plural:one} deines Helden als Schaden, wenn er {PropertyEffect:18[PHASENVERSCHOBEN]} ist.\n\\---\nVerleiht ihm andernfalls {PropertyEffect:18} und {PMvalue:pm,+} für die Runde.",

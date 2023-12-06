@@ -12,6 +12,7 @@
   "m_id": 566,
   "m_displayName": "WEAPON - IOP - BOUVALOIR - Repousse Orok",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -961541285,
     "b": -1993885164,
@@ -54,6 +55,7 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        "COLLISION",
         "PUSH"
       ]
     }
@@ -66,10 +68,10 @@
     "pt": "Empurrão Orok"
   },
   "description": {
-    "fr": "Lorsque votre héros <b>CHARGE</b>\\_:\\v {#PUSH} la cible de {value:c} case + le nombre de cases parcourues pendant la <b>CHARGE</b>.\n\\---\n{value:col,percent} de vos bonus d'{%AT} sont convertis en <b>DÉGÂTS</b> de <b>COLLISION</b>.",
-    "en": "When your hero <b>CHARGES</b>: \\v{#PUSH} the target {value:c} plus the number of cells gone through during the <b>CHARGE</b>.\n\\---\n{value:col,percent} of your {%AT} bonus is converted into <b>COLLISION</b> <b>DAMAGE</b>.",
-    "es": "Cuando tu héroe <b>CARGA</b>:\\v {#PUSH} al objetivo {value:c} casillas y el número de casillas recorridas durante la <b>CARGA</b>.\n\\---\nUn {value:col,percent} de tus bonus de {%AT} se convierten en <b>DAÑOS</b> de <b>COLISIÓN</b>.",
-    "de": "Wenn dein Held <b>ANSTÜRMT</b>:\\v {#PUSH,plural:few} das Ziel um {value:c} Felder + die Anzahl der während des <b>ANSTURMS</b> überquerten Felder zurück.\n\\---\n{value:col,percent} deiner {%AT,plural:two}boni werden in <b>ZUSAMMENSTOSS</b><b>SCHADEN</b> umgewandelt.",
-    "pt": "Quando seu herói usa <b>INVESTIDA</b>:\\v {#PUSH} o alvo por {value:c} células + o número de células percorridas durante a <b>INVESTIDA</b>.\n\\---\n{value:col,percent} de seus bônus de {%AT} são convertidos em <b>DANOS</b> de <b>COLISÃO</b>."
+    "fr": "Lorsque votre héros <b>CHARGE</b>\\_:\\v {#PUSH} la cible de {value:c} case + le nombre de cases parcourues pendant la <b>CHARGE</b>.\n\\---\n{%FightStarted} {value:col,percent} de vos bonus d'{%AT} sont convertis en <b>DÉGÂTS</b> de {#COLLISION}.",
+    "en": "When your hero <b>CHARGES</b>:\\v{#PUSH} the target {value:c} {c, plural, one[cell] other[cells]} plus the number of cells gone through during the <b>CHARGE</b>.\n\\---\n{%FightStarted} {value:col,percent} of your {%AT} bonus is converted into {#COLLISION} <b>DAMAGE</b>.",
+    "es": "Cuando tu héroe <b>CARGA</b>:\\v {#PUSH} al objetivo {value:c} casillas y el número de casillas recorridas durante la <b>CARGA</b>.\n\\---\nUn {%FightStarted} {value:col,percent} de tus bonus de {%AT} se convierten en <b>DAÑOS</b> de {#COLLISION}.",
+    "de": "Wenn dein Held <b>ANSTÜRMT</b>:\\v {#PUSH,plural:few} das Ziel um {value:c} Felder + die Anzahl der während des <b>ANSTURMS</b> überquerten Felder zurück.\n\\---\n{%FightStarted}{value:col,percent} deiner {%AT,plural:one}-Boni werden in {#COLLISION}<b>-SCHADEN</b> umgewandelt.",
+    "pt": "Quando seu herói usa <b>INVESTIDA</b>:\\v {#PUSH} o alvo por {value:c} {c,plural,one[célula] other[células]} + o número de células percorridas durante a <b>INVESTIDA</b>.\n\\---\n{%FightStarted} {value:col,percent} de seus bônus de {%AT} são convertidos em <b>DANOS</b> de {#COLLISION}."
   }
 }

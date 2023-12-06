@@ -12,6 +12,7 @@
   "m_id": 197392,
   "m_displayName": "SRAM - ARME - SHUGEN - ETHER - Attaque Shugen",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1202129135,
     "b": -1001571260,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 36,
@@ -75,9 +76,18 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 6
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 6
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 4
+          }
         }
       }
     ],
@@ -128,9 +138,15 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "at",
-          "value": 50
+          "valueInPvM": 50,
+          "valueInPvP": 0
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "atBoost",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
@@ -146,7 +162,7 @@
     "pt": "Ataque Shugen"
   },
   "description": {
-    "fr": "Votre héros déclenche son {%AT} sur un adversaire adjacent\\_<sprite name=\"cell_cross\">.\n\\---\n{value:at,percent,+} de <b>DÉGÂTS</b> si la cible a un {%ELEMENTARY_STATE}.",
+    "fr": "Votre héros déclenche son {%AT} sur un adversaire adjacent\\_<sprite name=\"cell_cross\">.\n\\---\n<if pvm> {magicalDamage:at,percent,+} si la cible a un {%ELEMENTARY_STATE}.</if><if pvp> {magicalDamage:atBoost,+} si la cible a un {%ELEMENTARY_STATE}.</if>",
     "en": "Your hero triggers their {%AT} on an adjacent\\_<sprite name=\"cell_cross\"> opponent.\n\\---\n{value:at,percent,+} <b>DAMAGE</b> if the target has an {%ELEMENTARY_STATE}.",
     "es": "Tu héroe activa su {%AT} en un adversario adyacente\\_<sprite name=\"cell_cross\">.\n\\---\n{value:at,percent,+} de <b>DAÑOS</b> si el objetivo tiene un {%ELEMENTARY_STATE}.",
     "de": "Dein Held löst seinen {%AT,plural:one} gegen einen angrenzenden\\_<sprite name=\"cell_cross\"> Gegner aus.\n\\---\n{value:at,percent,+} <b>SCHADEN</b>, wenn das Ziel einen {%ELEMENTARY_STATE} hat.",

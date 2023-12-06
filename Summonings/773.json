@@ -12,6 +12,7 @@
   "m_id": 773,
   "m_displayName": "ENIRIPSA - Nocturien",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1206176997,
     "b": 1866462308,
@@ -50,9 +51,18 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "p",
-          "value": 25
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 25
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 21
+          }
         }
       ],
       "externalDynamicValueReferences": [],
@@ -76,9 +86,10 @@
       "value": 1
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 6
+      "valueInPvM": 6,
+      "valueInPvP": 10
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -110,7 +121,7 @@
     "pt": "{0, plural, one[Noturniano] other[Noturnianos]}"
   },
   "description": {
-    "fr": "{%AT} : {ATvalue:p, +, percent} à votre héros jusqu'à ce que ce nocturien meurt",
+    "fr": "{%AT} : {ATvalue:p, +, percent} à votre héros jusqu'à ce que ce nocturien meurt.",
     "en": "{%AT}: {ATvalue:p, +, percent} to your hero until this Nocturian dies.",
     "es": "{%AT}: {ATvalue:p, +, percent} a tu héroe hasta que este nocturiano muera.",
     "de": "{%AT,plural:one}: {ATvalue:p, +, percent} für deinen Helden, bis dieser Nokturianer stirbt.",

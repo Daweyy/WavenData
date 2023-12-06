@@ -12,6 +12,7 @@
   "m_id": 3332,
   "m_displayName": "CRA - CLASSE - AIR - Pointe Repulsive",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -553594746,
     "b": 947670788,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -132,9 +133,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 8
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 8
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 11
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 890,
   "m_displayName": "XELOR - CLASSE - AIR - Oscillation",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2085142583,
     "b": 1757027284,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -79,9 +80,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "valueInPvM": 4,
+          "valueInPvP": 3
         }
       }
     ],
@@ -111,9 +113,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 16
+            "valueInPvM": 16,
+            "valueInPvP": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",

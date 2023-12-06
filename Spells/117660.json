@@ -12,6 +12,7 @@
   "m_id": 117660,
   "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - FEU - Estoc Detonant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1451909795,
     "b": 816506244,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 534,
@@ -120,9 +121,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 23
+            "valueInPvM": 23,
+            "valueInPvP": 28
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -152,6 +154,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "percentSkill",
           "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "drain",
+          "value": 50
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -190,6 +197,12 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "DRAIN"
+        },
         "EXPLOSION"
       ]
     }
@@ -202,7 +215,7 @@
     "pt": "Estocada Detonante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {explosion:ex} autour<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Déclenche {explosion:ex} autour<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if><if pvp>{DRAINvalue:drain,+,percent} à votre héros pour le tour si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {explosion:ex} around\\_<sprite name=\"cell_around\"/> the target \\vif the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {explosion:ex} alrededor<sprite name=\"cell_around\"/> del objetivo\\v si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {explosion:ex} im Umkreis\\_<sprite name=\"cell_around\"/> des Ziels aus,\\v wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",

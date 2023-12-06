@@ -12,6 +12,7 @@
   "m_id": 854,
   "m_displayName": "SRAM - ARME - LAME OURAI - TERRE - Amorce Turbulente",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1286739869,
     "b": -132023388,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 830,
@@ -87,16 +88,36 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CrossAreaOfEffectSelector",
-        "originSelector": {
-          "type": "CasterHeroSelector"
-        },
-        "size": {
-          "type": "MapSizeValue",
-          "referenceId": "c",
-          "axe": 0
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CrossAreaOfEffectSelector",
+          "originSelector": {
+            "type": "CasterHeroSelector"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "cPVP",
+            "value": 3
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CrossAreaOfEffectSelector",
+          "originSelector": {
+            "type": "CasterHeroSelector"
+          },
+          "size": {
+            "type": "MapSizeValue",
+            "referenceId": "c",
+            "axe": 0
+          }
         }
       }
     },
@@ -115,6 +136,11 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "cPVP",
+          "value": 3
+        },
+        {
           "type": "MapSizeValue",
           "referenceId": "c",
           "axe": 0
@@ -123,9 +149,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 14
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 14
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 20
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -173,7 +208,7 @@
     "pt": "Isca Turbulenta"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} aux adversaires alignés à votre héros.\n\\---\n{#TRAPPER}\\_: Attire vos premiers {%KEYWORD.TRAP.NAME,plural:other} alignés jusqu'à {cell:c} de votre héros.",
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires alignés à votre héros.\n\\---\n{#TRAPPER}\\_: Attire vos premiers {%KEYWORD.TRAP.NAME,plural:other} alignés jusqu'à <if pvm>{cell:c}</if><if pvp>{cell:cPVP}</if> de votre héros.",
     "en": "Does {magicalDamage:dmg} to opponents in line with your hero.\n\\---\n{#TRAPPER}: Attracts your first in-line {%KEYWORD.TRAP.NAME,plural:other} up to {cell:c} away from your hero.",
     "es": "Inflige {magicalDamage:dmg} a los adversarios alineados con tu héroe.\n\\---\n{#TRAPPER}: Atrae tus primeras {%KEYWORD.TRAP.NAME,plural:other} alineadas hasta a {cell:c} casillas de tu héroe.",
     "de": "Verursacht {magicalDamage:dmg} bei den Gegnern, die sich in derselben Reihe wie dein Held befinden.\n\\---\n{#TRAPPER}: Zieht deine ersten {%KEYWORD.TRAP.NAME,plural:other}, die sich in derselben Reihe befinden, bis auf {cell:c} an deinen Helden heran.",

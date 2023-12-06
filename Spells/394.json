@@ -10,8 +10,9 @@
   },
   "m_Name": "394",
   "m_id": 394,
-  "m_displayName": "IOP - ARME - ASTRAMANTIS - ETHER - Permutation du lancier",
-  "m_availability": 2,
+  "m_displayName": "IOP - ARME - ASTRAMANTIS - ETHER - Convocation du lancier",
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -496622948,
     "b": 1233106100,
@@ -31,18 +32,8 @@
     "assetGuid": "3c95a631ba097ac42bdf2bd0a70ecb1c"
   },
   "m_spellEffectOverrideReferences": {
-    "m_keys": [
-      2050,
-      2051
-    ],
-    "m_values": [
-      {
-        "assetGuid": "0e3f7ab565e1a994399c5913832f7338"
-      },
-      {
-        "assetGuid": "5d60c9d5cc093594fb4d9b36d5c70e40"
-      }
-    ]
+    "m_keys": [],
+    "m_values": []
   },
   "values": {
     "type": "SpellDefinition",
@@ -59,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Hidden"
       },
       "element": 6,
       "specificToWeapon": 619,
@@ -85,118 +76,70 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "value": 6
         }
       }
     ],
-    "castCondition": {
-      "type": "ConditionalCastCondition",
-      "condition": {
-        "type": "NumberOfEntityCondition",
-        "selector": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllObjectMechanismsSelector"
-          },
-          "filters": [
-            {
-              "type": "ObjectMechanismDefinitionFilter",
-              "condition": 1,
-              "objectMechanisms": [
-                26,
-                85,
-                305,
-                51,
-                370,
-                487,
-                125,
-                443
-              ]
-            },
-            {
-              "type": "InLineTargetFilter",
-              "targetsToCompare": {
-                "type": "CasterHeroSelector"
-              },
-              "distance": null
-            }
-          ]
-        },
-        "value": {
-          "type": "GreaterThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 0
-          }
-        }
-      },
-      "ifTrue": {
-        "type": "SuccessCastCondition"
-      },
-      "ifFalse": {
-        "type": "FailureCastCondition"
-      }
-    },
+    "castCondition": null,
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredEntitySelector",
-        "from": {
-          "type": "AllObjectMechanismsSelector"
-        },
-        "filters": [
-          {
-            "type": "ObjectMechanismDefinitionFilter",
-            "condition": 1,
-            "objectMechanisms": [
-              26,
-              85,
-              305,
-              51,
-              370,
-              487,
-              125,
-              443
-            ]
-          },
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
-            },
-            "distance": null
-          }
-        ]
+        "type": "FilteredCharacterSelector",
+        "filters": []
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3592412b43e6594459123f87099974a5",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "EntityCaracValue",
+          "referenceId": "g",
+          "entitySelector": {
+            "type": "CasterSelector"
+          },
+          "carac": 20
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "v",
-          "value": 50
+          "value": 8
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "b",
+          "value": 15
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "JAUGE"
+      ]
     }
   },
   "name": {
-    "fr": "Permutation du lancier",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Convocation du lancier",
+    "en": "Lancer Summoning",
+    "es": "Convocatoria de Lancero",
+    "de": "Beschwörung des Lanzenreiters",
+    "pt": "Convocação do Lanceiro"
   },
   "description": {
-    "fr": "Votre héros et sa lance échangent leur place s'ils sont alignés.\nInflige ensuite {value:v,percent} de l'{%AT} de votre héros aux adversaires situés entre eux.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Inflige l’ATTAQUE de votre héros.\n\\---\n{#Jauge}\\_({value:v})\\_: Confère Réinvocable à un compagnon mort aléatoire.\\v\n{#Jauge}\\_({value:b})\\_: Confère Réinvocable à un compagnon mort aléatoire supplémentaire.\n\\---\n<rem>Jauges générées\\_: {value:g}</rem>",
+    "en": "Inflicts your hero's ATTACK.\n\\---\n{#Jauge}\\_({value:v}): Confers Resummonable on a dead companion at random.\\v\n{#Jauge}\\_({value:b}): Confers Resummonable on an additional dead companion at random.\n\\---\n<rem>Gauges generated: {value:g}</rem>",
+    "es": "Inflige el ATAQUE de tu héroe.\n\\---\n{#Jauge}\\_({value:v}): Confiere Reinvocable a un compañero muerto aleatorio.\\v\n{#Jauge}\\_({value:b}): Confiere Reinvocable a un compañero muerto aleatorio adicional.\n\\---\n<rem>Indicadores generados: {value:g}</rem>",
+    "de": "Verursacht den ANGRIFF deines Helden als Schaden.\n\\---\n{#Jauge}\\_({value:v}): Gewährt einem zufälligen toten Begleiter „Erneut einsetzbar“.\\v\n{#Jauge}\\_({value:b}): Gewährt einem weiteren zufälligen toten Begleiter „Erneut einsetzbar“.\n\\---\n<rem>Generierte Elementarpunkte: {value:g}</rem>",
+    "pt": "Inflige o ATAQUE do seu herói.\n\\---\n{#Jauge}\\_({value:v}): Concede Reinvocável a um companheiro morto aleatório.\\v\n{#Jauge}\\_({value:b}): Concede Reinvocável a um companheiro morto aleatório adicional.\n\\---\n<rem>Cargas geradas: {value:g}</rem>"
   }
 }

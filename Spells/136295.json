@@ -12,6 +12,7 @@
   "m_id": 136295,
   "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - EAU - Phase Regenerante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1314542941,
     "b": -1488462460,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 141,
@@ -108,9 +109,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 24
+            "valueInPvM": 24,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -146,9 +148,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "h2",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 10
+            "valueInPvM": 8,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -159,19 +162,9 @@
             22,
             50
           ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 180,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 30
-              }
-            }
-          ],
+          "skillBuffs": [],
           "from": {
-            "type": "CasterHeroSelector"
+            "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
         }

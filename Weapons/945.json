@@ -12,6 +12,7 @@
   "m_id": 945,
   "m_displayName": "XELOR - Aiguille Pikuxala",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1712271071,
     "b": 541716756,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "74931c063a6f47c4cbadcbaa0afe8c57"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 945,
@@ -72,43 +76,11 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "SumValue",
-          "referenceId": "s",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 35
-            },
-            {
-              "type": "ConditionalValue",
-              "referenceId": "",
-              "condition": {
-                "type": "HolderHasSkillCondition",
-                "skill": 143401
-              },
-              "ifTrue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "p",
-                "value": 30
-              },
-              "ifFalse": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
-              }
-            }
-          ]
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "p",
-          "value": 30
-        }
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.321.dmgPVP",
+        "ParameterizedEffectExecution.321.s"
       ],
-      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
     },
@@ -117,9 +89,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 394
+      "valueInPvM": 394,
+      "valueInPvP": 396
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -127,9 +100,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 28
+      "valueInPvM": 28,
+      "valueInPvP": 26
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -161,6 +135,9 @@
     "defaultSkinIdMale": 3568,
     "defaultSkinIdFemale": 1048,
     "god": 7,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -194,11 +171,11 @@
     "pt": "Ponteiro Pikuxala"
   },
   "description": {
-    "fr": "Lorsque votre héros se téléporte\\_: Inflige {value:s,percent} de son {%AT} à l'adversaire ayant le plus de {%PV}.",
-    "en": "When your hero teleports: Inflicts {value:s,percent} of their {%AT} on the opponent with the most {%PV}.",
-    "es": "Cuando tu héroe se teletransporta: Inflige un {value:s,percent} de su {%AT} al adversario que tenga más {%PV}.",
-    "de": "Wenn dein Held sich teleportiert: Verursacht beim Gegner mit den meisten {%PV} {value:s,percent} seines {%AT,plural:two} als Schaden.",
-    "pt": "Quando seu herói se teletransporta: Inflige {value:s,percent} de seu {%AT} ao\\_adversário que tiver mais {%PV}."
+    "fr": "Lorsque votre héros se téléporte\\_: <if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} à l'adversaire ayant le plus de {%PV}.</if><if pvm>Inflige {value:ParameterizedEffectExecution.321.s,percent} de son {%AT} à l'adversaire ayant le plus de {%PV}.</if>",
+    "en": "When your hero teleports: Inflicts {value:ParameterizedEffectExecution.321.s,percent} of their {%AT} on the opponent with the most {%PV}.",
+    "es": "Cuando tu héroe se teletransporta: Inflige un {value:ParameterizedEffectExecution.321.s,percent} de su {%AT} al adversario que tenga más {%PV}.",
+    "de": "Wenn dein Held sich teleportiert: Verursacht beim Gegner mit den meisten {%PV} {value:ParameterizedEffectExecution.321.s,percent} ihres {%AT,plural:two} als Schaden.",
+    "pt": "Quando seu herói se teletransporta: Inflige {value:ParameterizedEffectExecution.321.s,percent} de seu {%AT} ao adversário que tiver mais {%PV}."
   },
   "gameplayDescription": {
     "fr": "<color=#7FD5E4>TÉLÉPORTATION</color>\\_: Vos acrobaties vous sortiront de situations dangereuses ou vous feront gagner du terrain.\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",

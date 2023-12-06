@@ -1,0 +1,156 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1584",
+  "m_id": 1584,
+  "m_displayName": "SEASON - CHUCHOTEUR - Ouverture",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1042725933,
+    "b": -475141676,
+    "c": 1612260826,
+    "d": -1144920154,
+    "e": 1577878490
+  },
+  "m_i18nDescriptionId": {
+    "a": 1042725933,
+    "b": -475141676,
+    "c": 1612260826,
+    "d": -1144920154,
+    "e": 414184144
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c313ca1c690f37640b4501e7fac395b7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0e8af0eeda2394644a333107124a587c"
+      },
+      {
+        "assetGuid": "3bf2a9476b8edd047aa53d29f8c29f01"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1584,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "DiagonalAlignedFilter",
+            "from": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "tp",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "tp",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Ouverture",
+    "en": "Opening",
+    "es": "Apertura",
+    "de": "Eröffnung",
+    "pt": "Abertura"
+  },
+  "description": {
+    "fr": "Téléporte l'allié ciblé jusqu'à {cell:tp} en diagonale.",
+    "en": "Teleports the targeted ally up to {cell:tp} diagonally.",
+    "es": "Teletransporta al aliado objetivo hasta {cell:tp} en diagonal.",
+    "de": "Teleportiert den ausgewählten Verbündeten diagonal bis zu {cell:tp}.",
+    "pt": "Teletransporta o aliado visado por até {cell:tp} na diagonal."
+  }
+}

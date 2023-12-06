@@ -11,7 +11,8 @@
   "m_Name": "70",
   "m_id": 70,
   "m_displayName": "AMAKNA - 12 - Le temps des recoltes",
-  "m_availability": 2,
+  "m_availability": 3,
+  "m_wip": 0,
   "m_illustration": {
     "assetGuid": "48928bc7c67e2304f8fdfdf634b40330"
   },
@@ -41,7 +42,13 @@
     "id": 70,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
@@ -58,16 +65,16 @@
   },
   "name": {
     "fr": "Le temps des récoltes",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "en": "Harvest Time",
+    "es": "El momento de la recolección",
+    "de": "Erntezeit",
+    "pt": "Tempo das colheitas"
   },
   "description": {
-    "fr": "{%FightTurnStartedPlayers} Construit 2 {FloorMechanism:848, plural:other} sur une case aléatoire.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "{%FightTurnStartedPlayers} Construit un {FloorMechanism:848} sur {cell:c} aléatoires.",
+    "en": "{%FightTurnStartedPlayers} Builds one {FloorMechanism:848} on {cell:c} at random.",
+    "es": "{%FightTurnStartedPlayers} Construye una {FloorMechanism:848} en {cell:c} aleatorias.",
+    "de": "{%FightTurnStartedPlayers} Platziert ein {FloorMechanism:848}. Die {cell:c} werden zufällig ausgewählt.",
+    "pt": "{%FightTurnStartedPlayers} Constrói um {FloorMechanism:848} em {cell:c} aleatórias."
   }
 }

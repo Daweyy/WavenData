@@ -12,6 +12,7 @@
   "m_id": 288,
   "m_displayName": "CRA - ARME - VOLDORAK - ETHER - Méthode Voldorak",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 190093475,
     "b": 1221328164,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 953,
@@ -91,8 +92,14 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "Rpa",
+          "valueInPvM": -1,
+          "valueInPvP": 0
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
           "value": -1
         }
       ],
@@ -111,7 +118,7 @@
     "pt": "Método Voldorak"
   },
   "description": {
-    "fr": "Piochez votre prochain {%SPELLCOUNT} {#COMBO}.\n\\---\n{PAvalue:Rpa} au coût du {%SPELLCOUNT} pioché.",
+    "fr": "Piochez votre prochain {%SPELLCOUNT} {#COMBO}.\n\\---\n<if pvm>{PAvalue:Rpa} au coût du {%SPELLCOUNT} pioché.</if><if pvp>{PAvalue:pa} au coût du prochain sort que vous jouez.</if>",
     "en": "Draw your next {#COMBO} {%SPELLCOUNT}.\n\\---\n{PAvalue:Rpa} to the cost of the drawn {%SPELLCOUNT}.",
     "es": "Sacas tu próximo {%SPELLCOUNT} {#COMBO}.\n\\---\n{PAvalue:Rpa} al coste del {%SPELLCOUNT} sacado.",
     "de": "Zieht deinen nächsten {#COMBO}-{%SPELLCOUNT}.\n\\---\n{PAvalue:Rpa} auf die Kosten des gezogenen {%SPELLCOUNT,plural:two}.",

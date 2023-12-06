@@ -12,6 +12,7 @@
   "m_id": 118756,
   "m_displayName": "IOP - ARME - BOUVALOIR OROK - FEU - Fièvre",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -12142624,
     "b": 1547966628,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 497,
@@ -109,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 12
+            "valueInPvM": 12,
+            "valueInPvP": 20
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -132,9 +134,10 @@
           "referenceId": "b",
           "valuesToSum": [
             {
-              "type": "ConstIntegerValue",
+              "type": "PvmOrPvpConstIntegerValue",
               "referenceId": "",
-              "value": 50
+              "valueInPvM": 50,
+              "valueInPvP": 38
             },
             {
               "type": "ConditionalValue",

@@ -12,6 +12,7 @@
   "m_id": 593,
   "m_displayName": "ENIRIPSA - CLASSE - ETHER - Sante de Fer",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -187679221,
     "b": 174206756,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -115,6 +116,27 @@
           "value": 10
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "v",
           "value": 2
@@ -133,7 +155,7 @@
     "pt": "Saúde de Ferro"
   },
   "description": {
-    "fr": "Confère {value:pow,percent} de la {%PVMAX} de votre héros en {%AR} à un allié.\n\\---\nPiochez {SPELLCOUNTvalue:v}.",
+    "fr": "<if pvm>Confère {value:pow,percent} de la {%PVMAX} de votre héros en {%AR} à un allié.</if><ifpvp>Confère {ARvalue:ar} à un allié.</if>\n\\---\nPiochez {SPELLCOUNTvalue:v}.",
     "en": "Confers {value:pow,percent} of your hero's {%PVMAX} as {%AR} on an ally.\n\\---\nDraw {SPELLCOUNTvalue:v}.",
     "es": "Confiere un {value:pow,percent} de la {%PVMAX} de tu héroe en {%AR} a un aliado.\n\\---\nSacas {SPELLCOUNTvalue:v}.",
     "de": "Verleiht einem Verbündeten {value:pow,percent} der {%PVMAX} deines Helden als {%AR}.\n\\---\nZieht {SPELLCOUNTvalue:v}.",

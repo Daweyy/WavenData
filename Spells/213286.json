@@ -12,6 +12,7 @@
   "m_id": 213286,
   "m_displayName": "SRAM - ARME - ORISHI - TERRE - Double Cisaille Boueuse",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -785956518,
     "b": -335297212,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 620,
@@ -69,9 +70,18 @@
         "type": "GaugeValue",
         "element": 13,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          }
         }
       }
     ],
@@ -79,9 +89,18 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 4
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 4
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 6
+          }
         }
       }
     ],
@@ -199,6 +218,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "pm",
           "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pmPVP",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [
@@ -226,7 +250,7 @@
     "pt": "Tesoura Dupla Enlameada"
   },
   "description": {
-    "fr": "Construit 2\\_{FloorMechanism:1483,plural:other} ({value:FloorMechanism.1483.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\n{PMvalue:pm} pour le tour aux adversaires situés entre ces {%KEYWORD.TRAP.NAME,plural:other}.",
+    "fr": "Construit 2\\_{FloorMechanism:1483,plural:other} ({value:FloorMechanism.1483.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\n<if pvm>{PMvalue:pm} pour le tour aux adversaires situés entre ces {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Vole {PMvalue:pmPVP} pour le tour aux adversaires situés entre ces {%KEYWORD.TRAP.NAME,plural:other}.</if>",
     "en": "Builds 2\\_{FloorMechanism:1483,plural:other} ({value:FloorMechanism.1483.dmg}) up to {cell:c} from your hero.\n\\---\n{PMvalue:pm} to opponents located between these {%KEYWORD.TRAP.NAME,plural:other} for the turn.",
     "es": "Construye 2\\_{FloorMechanism:1483,plural:other} ({value:FloorMechanism.1483.dmg}) hasta a {cell:c} de tu héroe.\n\\---\n{PMvalue:pm} durante el turno a los adversarios situados entre estas {%KEYWORD.TRAP.NAME,plural:other}.",
     "de": "Errichtet 2\\_{FloorMechanism:1483,plural:other} ({value:FloorMechanism.1483.dmg}) auf eine Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\n{PMvalue:pm} für die Runde für die Gegner zwischen diesen {%KEYWORD.TRAP.NAME,plural:other}.",

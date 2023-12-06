@@ -12,6 +12,7 @@
   "m_id": 44,
   "m_displayName": "ENIRIPSA - ARME - PINCEAU KOKORO - ETHER - Frappe du Pinceau",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 465919001,
     "b": 610605428,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 967,
@@ -73,18 +74,52 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 6
+          "valueInPvM": 6,
+          "valueInPvP": 1
         }
       }
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": []
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvmFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      },
+      "selectorIfFalse": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "selector2": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -120,7 +155,7 @@
     "pt": "Golpe do Pincel"
   },
   "description": {
-    "fr": "Inflige {value:v,percent} de l'{%AR} de vos personnages à un adversaire.",
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AR} de vos personnages à un adversaire.</if><if pvp>Consomme l'{%ar} d'un de vos personnages et inflige autant de dégâts à un adversaire.</if>",
     "en": "Inflicts {value:v,percent} of your characters' {%AR} on an opponent.",
     "es": "Inflige un {value:v,percent} de la {%AR} de tus personajes a un adversario.",
     "de": "Fügt einem Gegner {value:v,percent} der {%AR} deiner Charaktere als Schaden zu.",

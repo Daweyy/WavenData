@@ -12,6 +12,7 @@
   "m_id": 3,
   "m_displayName": "XELOR - CLASSE - TERRE - Rayon Obscur",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 2026408396,
     "b": -958840060,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -71,15 +72,26 @@
           "referenceId": "",
           "value": 1
         }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
       }
     ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "valueInPvM": 4,
+          "valueInPvP": 6
         }
       }
     ],
@@ -116,9 +128,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 17
+            "valueInPvM": 17,
+            "valueInPvP": 25
           },
           "factor": {
             "type": "ReferenceScalingFactor",

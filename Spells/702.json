@@ -12,6 +12,7 @@
   "m_id": 702,
   "m_displayName": "IOP - ARME - JUSTELAME - TERRE - Touche Terrestre",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1000871604,
     "b": 245219892,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 919,
@@ -120,9 +121,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 8
+            "valueInPvM": 8,
+            "valueInPvP": 5
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -143,9 +145,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 26
+            "valueInPvM": 26,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",

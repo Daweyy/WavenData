@@ -12,6 +12,7 @@
   "m_id": 46,
   "m_displayName": "IceSword",
   "m_availability": 3,
+  "m_wip": 0,
   "m_illustration": {
     "assetGuid": "0714740788dd429458ee906d4c2fd10b"
   },
@@ -42,9 +43,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "IceSwordDmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 6
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 6
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 9
+            }
           },
           "factor": {
             "type": "CustomScalingFactor",
@@ -55,8 +65,8 @@
           },
           "buffs": [
             40,
-            12,
-            51
+            51,
+            22
           ],
           "skillBuffs": [],
           "from": {

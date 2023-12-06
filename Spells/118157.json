@@ -12,6 +12,7 @@
   "m_id": 118157,
   "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - AIR - Estoc Tonnerre",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1697691975,
     "b": 1140879188,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 534,
@@ -147,9 +148,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 24
+            "valueInPvM": 24,
+            "valueInPvP": 30
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -179,6 +181,38 @@
           "type": "ConstIntegerValue",
           "referenceId": "percentSkill",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgBoost",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -229,7 +263,7 @@
     "pt": "Estocada Trovejante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent<sprite name=\"cell_cross\"> à votre héros.\n\\---\nDéclenche {bounce:bc} si la cible est <b>ÉVENTÉE<b>\\_<sprite name=\"ventilated\">.",
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent<sprite name=\"cell_cross\"> à votre héros.\n\\---\n<if pvm>Déclenche {bounce:bc} si la cible est <b>ÉVENTÉE<b>\\_<sprite name=\"ventilated\">.</if><if pvp>{magicalDamage:dmgBoost,+} si la cible est <b>ÉVENTÉE<b>\\_<sprite name=\"ventilated\">.</if>",
     "en": "Does {magicalDamage:dmg} to an opponent adjacent<sprite name=\"cell_cross\"> to your hero.\n\\---\nTriggers {bounce:bc} if the target is <b>VENTILATED<b>\\_<sprite name=\"ventilated\">.",
     "es": "Inflige {magicalDamage:dmg} a un adversario adyacente<sprite name=\"cell_cross\"> a tu héroe.\n\\---\nActiva {bounce:bc} si el objetivo está <b>AIREADO<b>\\_<sprite name=\"ventilated\">.",
     "de": "Fügt einem Gegner, der an deinen Helden angrenzt\\_<sprite name=\"cell_cross\">, {magicalDamage:dmg} zu.\n\\---\nLöst {bounce:bc} aus, wenn das Ziel <b>WINDIG<b>\\_<sprite name=\"ventilated\"> ist.",

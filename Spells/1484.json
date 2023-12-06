@@ -11,7 +11,8 @@
   "m_Name": "1484",
   "m_id": 1484,
   "m_displayName": "IOP - ARME - ASTRAMANTIS - ETHER - Obéissance Astramantis",
-  "m_availability": 2,
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1227084131,
     "b": -1774219228,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Hidden"
       },
       "element": 6,
       "specificToWeapon": 619,
@@ -137,6 +138,13 @@
         },
         "filters": [
           {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
             "type": "ObjectMechanismDefinitionFilter",
             "condition": 1,
             "objectMechanisms": [
@@ -189,16 +197,16 @@
   },
   "name": {
     "fr": "Obéissance Astramantis",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "en": "Astramantis Obedience",
+    "es": "Obediencia Astramantis",
+    "de": "Astramantis-Gehorsam",
+    "pt": "Obediência Astramantis"
   },
   "description": {
-    "fr": "Si votre héros est aligné avec sa LANCE. La ramene dans votre main infligeant 50% de l'{%AT} de votre héros aux ennemis entre elle et vous. ",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Inflige {value:v,percent} {%AT} de votre héros aux adversaires situés entre lui et une de vos <b>LANCES</b>, puis déclenche son effet.\n\\---\nReplace le sort de <b>LANCE</b> correspondant dans votre main.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT} on opponents located between them and one of your <b>LANCES</b>, then triggers its effect.\n\\---\nPuts the corresponding <b>LANCE</b> spell back in your hand.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe a los adversarios situados entre él y una de tus <b>LANZAS</b> y activa su efecto.\n\\---\nVuelve a poner el hechizo de <b>LANZA</b> correspondiente en tu mano.",
+    "de": "Fügt Gegnern, die sich zwischen ihm und einer deiner <b>LANZEN</b> befinden, {value:v,percent} des {%AT,plural:two} deines Helden als Schaden zu und wendet anschließend dessen Effekt an.\n\\---\nErsetzt den entsprechenden <b>LANZEN</b>-ZAUBER in deiner Hand.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói aos adversários situados entre ele e uma de suas <b>LANÇAS</b>, depois aciona seu efeito.\n\\---\nColoca o feitiço de <b>LANÇA</b> correspondente de volta na sua mão."
   }
 }

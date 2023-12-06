@@ -12,6 +12,7 @@
   "m_id": 573,
   "m_displayName": "XELOR - CLASSE - FEU - Teleportation Longue",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2096364355,
     "b": 219309844,
@@ -65,7 +66,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -183,9 +184,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 9
+            "valueInPvM": 9,
+            "valueInPvP": 16
           },
           "factor": {
             "type": "ReferenceScalingFactor",

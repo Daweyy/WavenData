@@ -12,6 +12,7 @@
   "m_id": 105734,
   "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - EAU - Coupe Cinglante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1002445960,
     "b": 709507460,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 637,
@@ -125,9 +126,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 24
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 24
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 15
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -163,9 +173,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg2",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 14
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 14
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 16
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

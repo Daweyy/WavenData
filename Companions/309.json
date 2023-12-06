@@ -12,6 +12,7 @@
   "m_id": 309,
   "m_displayName": "DECK - INFINITE - MULTI - Justice",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1069897110,
     "b": -468680060,
@@ -41,13 +42,39 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "healPVP",
+          "value": 15
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "MAGICAL_PROTECTION",
-        "PHYSICAL_PROTECTION",
         {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 21,
+          "id": 3
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "MAGICAL_PROTECTION"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "PHYSICAL_PROTECTION"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 21,
           "id": 3
         }
@@ -58,9 +85,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 158
+      "valueInPvM": 158,
+      "valueInPvP": 117
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -68,9 +96,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 28
+      "valueInPvM": 28,
+      "valueInPvP": 25
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -104,7 +133,7 @@
     "rarity": 4,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Hidden"
     },
     "upgradeRuleId": 36,
     "castCondition": {
@@ -227,7 +256,7 @@
     "pt": "Justiça"
   },
   "description": {
-    "fr": "{%Appearance} Devient {LinkEffect:3} de l'allié ayant le moins de\\_{%PV,plural:other} pour le tour et gagne 75% de {#PHYSICAL_PROTECTION} et {#MAGICAL_PROTECTION}.",
+    "fr": "{%Appearance} <if pvm>Devient {LinkEffect:3} de l'allié ayant le moins de\\_{%PV,plural:other} pour le tour et gagne 75% de {#PHYSICAL_PROTECTION} et {#MAGICAL_PROTECTION}.</if><if pvp>Devient {LinkEffect:3} de l'allié ayant le moins de\\_{%PV,plural:other} pour le tour. \\--- \nSoigne cet allié de {PVvalue:healPVP}.</if>",
     "en": "{%Appearance} Becomes the {LinkEffect:3} of the ally with the least\\_{%PV,plural:other} for the turn and gains 75% {#PHYSICAL_PROTECTION} and {#MAGICAL_PROTECTION}.",
     "es": "{%Appearance} Se vuelve {LinkEffect:3} del aliado que tenga menos\\_{%PV,plural:other} durante el turno y gana un 75% de {#PHYSICAL_PROTECTION} y de {#MAGICAL_PROTECTION}.",
     "de": "{%Appearance} Wird für die Runde zum {LinkEffect:3} des Verbündeten mit den wenigsten\\_{%PV,plural:other} und erhält: 75\\_% {#PHYSICAL_PROTECTION} und {#MAGICAL_PROTECTION}.",

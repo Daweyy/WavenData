@@ -10,8 +10,9 @@
   },
   "m_Name": "1091",
   "m_id": 1091,
-  "m_displayName": "IOP - ARME - ASTRAMANTIS - TERRE - Lance Terre",
-  "m_availability": 2,
+  "m_displayName": "IOP - ARME - ASTRAMANTIS - TERRE - Lance Terrestre",
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -387276269,
     "b": 1502199492,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 619,
@@ -70,9 +71,10 @@
         "type": "GaugeValue",
         "element": 13,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
         }
       }
     ],
@@ -80,9 +82,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 3
         }
       }
     ],
@@ -102,7 +105,7 @@
               "dynamicValue": {
                 "type": "ConstIntegerValue",
                 "referenceId": "c",
-                "value": 6
+                "value": 5
               }
             }
           },
@@ -112,14 +115,24 @@
         ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "dbe3a05d227650943baa2c1490f3398b",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
           "referenceId": "c",
-          "value": 6
+          "value": 5
         },
         {
           "type": "ConstIntegerValue",
@@ -138,17 +151,17 @@
     }
   },
   "name": {
-    "fr": "Lance Terre",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Lance Terrestre",
+    "en": "Earthy Lance",
+    "es": "Lanza Terrestre",
+    "de": "Erdlanze",
+    "pt": "Lança Terrestre"
   },
   "description": {
-    "fr": "Construit une {ObjectMechanism:443} jusqu'à {cell:c} de votre héros.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Construit une {ObjectMechanism:443} jusqu'à {cell:c} de votre héros.\n<rem>Détruit votre {ObjectMechanism:443!} déjà en jeu.</rem>",
+    "en": "Builds one {ObjectMechanism:443} up to {cell:c} from your hero.\n<rem>Destroys your {ObjectMechanism:443!} already in play.</rem>",
+    "es": "Construye una {ObjectMechanism:443} hasta a {cell:c} de tu héroe.\n<rem>Destruye tu {ObjectMechanism:443!} ya en juego.</rem>",
+    "de": "Baut eine\\_{ObjectMechanism:443} bis zu {cell:c} deines Helden entfernt.\n<rem>Zerstört deine {ObjectMechanism:443!}, die bereits im Spiel ist.</rem>",
+    "pt": "Constrói uma {ObjectMechanism:443} a até {cell:c} do seu herói.\n<rem>Destrói sua {ObjectMechanism:443!} já presente no jogo.</rem>"
   }
 }

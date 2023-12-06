@@ -12,6 +12,7 @@
   "m_id": 186202,
   "m_displayName": "ENIRIPSA - CLASSE - FEU - Coeur Ardent",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -359412551,
     "b": 505296420,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -125,9 +126,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 38
+            "valueInPvM": 38,
+            "valueInPvP": 34
           },
           "factor": {
             "type": "ReferenceScalingFactor",

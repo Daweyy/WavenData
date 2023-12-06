@@ -12,6 +12,7 @@
   "m_id": 131098,
   "m_displayName": "XELOR - CLASSE - ETHER - Maitrise Sinistre",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -755029788,
     "b": -362901004,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -65,9 +66,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 2
         }
       }
     ],
@@ -106,7 +108,15 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 20,
+          "id": 8
+        }
+      ]
     }
   },
   "name": {
@@ -117,7 +127,7 @@
     "pt": "Domínio Sinistro"
   },
   "description": {
-    "fr": "Transforme un de vos <b>SINISTROS</b> et déclenche son effet.",
+    "fr": "<if pvm>Transforme un de vos <b>SINISTROS</b> et déclenche son effet</if><if pvp>Transforme un de vos <b>SINISTROS</b> et lui confère {PropertyEffect:8}</if>.",
     "en": "Transforms one of your <b>SINISTROS</b> and triggers its effect.",
     "es": "Transforma uno de tus <b>SINISTROS</b> y activa su efecto.",
     "de": "Verwandelt einen deiner <b>SINISTROS</b> und löst seinen Effekt aus.",

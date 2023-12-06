@@ -12,6 +12,7 @@
   "m_id": 214741,
   "m_displayName": "DQ - CONTRAT - TOFU - 4_Brochette de tofu roti",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1398074700,
     "b": -547775660,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": false,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -72,7 +73,15 @@
       "type": "OneCastTargetDefinition",
       "selector": {
         "type": "FilteredCharacterSelector",
-        "filters": []
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [

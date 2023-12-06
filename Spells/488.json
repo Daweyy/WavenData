@@ -12,6 +12,7 @@
   "m_id": 488,
   "m_displayName": "CRA - ARME - BUNELAME - FEU - Brasero",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1339521571,
     "b": -143246908,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 477,
@@ -118,12 +119,18 @@
           "value": 30
         },
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg2",
+          "value": 10
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 16
+            "valueInPvM": 16,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -191,7 +198,12 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "LIFESTEAL"
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "LIFESTEAL"
+        }
       ]
     }
   },
@@ -203,7 +215,7 @@
     "pt": "Braseiro"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL} si vous avez {SPELLCOUNTvalue:s} ou moins en main.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{#LIFESTEAL}</if><if pvp>{magicalDamage:dmg2,+}</if> si vous avez {SPELLCOUNTvalue:s} ou moins en main.",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL} if you have {SPELLCOUNTvalue:s} or less in hand.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL} si tienes {SPELLCOUNTvalue:s} o menos en mano.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#LIFESTEAL}, wenn du höchstens {SPELLCOUNTvalue:s} auf der Hand hast.",

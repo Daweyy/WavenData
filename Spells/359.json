@@ -12,6 +12,7 @@
   "m_id": 359,
   "m_displayName": "XELOR - CLASSE - EAU - Poussiere Temporelle",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1375734210,
     "b": 1811774020,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -150,9 +151,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 12
+            "valueInPvM": 12,
+            "valueInPvP": 20
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -187,9 +189,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "d1",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 17
+            "valueInPvM": 17,
+            "valueInPvP": 0
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -214,6 +217,11 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -231,7 +239,7 @@
     "pt": "Poeira Temporal"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} aux adversaires dans la zone\\_<sprite name=\"cell_cross\"> ciblée.\n\\---\n{#CHRONO}\\_: {magicalDamage:d1,+}.",
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires dans la zone\\_<sprite name=\"cell_cross\"> ciblée.\n\\---\n{#CHRONO}\\_: <if pvm>{magicalDamage:d1,+}.</if><if pvp>{PA_RESvalue:pa,+}</if>",
     "en": "Does {magicalDamage:dmg} to opponents in the targeted <sprite name=\"cell_cross\">\\_zone.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}.",
     "es": "Inflige {magicalDamage:dmg} a los adversarios de la zona\\_<sprite name=\"cell_cross\"> objetivo.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}.",
     "de": "Verursacht bei den Gegnern im Wirkungsbereich\\_<sprite name=\"cell_cross\"> {magicalDamage:dmg}.\n\\---\n{#CHRONO}: {magicalDamage:d1,+}.",

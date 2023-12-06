@@ -1,0 +1,166 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1536",
+  "m_id": 1536,
+  "m_displayName": "STORY MODE - 39 - Traversee de Goultard",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 68416394,
+    "b": -1319252220,
+    "c": -624901544,
+    "d": -127791502,
+    "e": 508393019
+  },
+  "m_i18nDescriptionId": {
+    "a": 68416394,
+    "b": -1319252220,
+    "c": -624901544,
+    "d": -127791502,
+    "e": 1197796315
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e729c892cffb19142aa5e5f0ab321fc8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1536,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 6
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d92318da4c80c0c44a2428cac4e4724a",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 6
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "x",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Traversée de Goultard",
+    "en": "Goultard's Crossing",
+    "es": "Travesía de Gúltar",
+    "de": "Goultards Überquerung",
+    "pt": "Travessia de Gultar"
+  },
+  "description": {
+    "fr": "{Weapon:561!} traverse jusqu'à {cell:c} et inflige {magicalDamage:x} aux adversaires traversés.",
+    "en": "{Weapon:561!} goes through up to {cell:c} and does {magicalDamage:x} to the opponents gone through.",
+    "es": "{Weapon:561!} atraviesa hasta {cell:c} e inflige {magicalDamage:x} a los adversarios atravesados.",
+    "de": "{Weapon:561!} überquert bis zu {cell:c} und verursacht {magicalDamage:x} bei den überquerten Gegnern.",
+    "pt": "{Weapon:561!} atravessa até {cell:c} e inflige {magicalDamage:x} aos adversários atravessados."
+  }
+}

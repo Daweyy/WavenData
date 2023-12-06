@@ -12,6 +12,7 @@
   "m_id": 116,
   "m_displayName": "FireHeart",
   "m_availability": 3,
+  "m_wip": 0,
   "m_illustration": {
     "assetGuid": "28664c53d32ebf04eb2cda55fd91d06d"
   },
@@ -42,9 +43,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 11
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 11
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 4
+            }
           },
           "factor": {
             "type": "CustomScalingFactor",

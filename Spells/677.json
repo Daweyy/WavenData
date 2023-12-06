@@ -12,6 +12,7 @@
   "m_id": 677,
   "m_displayName": "SRAM - CLASSE - FEU - Midnight Meat Fist",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 2039282273,
     "b": -873446396,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -69,18 +70,36 @@
         "type": "GaugeValue",
         "element": 11,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          }
         }
       },
       {
         "type": "GaugeValue",
         "element": 19,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": null,
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
         }
       }
     ],
@@ -120,9 +139,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 36
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 36
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 29
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -154,14 +182,16 @@
           "value": 30
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "pow2",
-          "value": 25
+          "valueInPvM": 25,
+          "valueInPvP": 32
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "pow",
-          "value": -25
+          "valueInPvM": -25,
+          "valueInPvP": -32
         }
       ],
       "externalDynamicValueReferences": [],
@@ -177,7 +207,7 @@
     "pt": "O Último Soco"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} à votre héros et {ATvalue:pow,percent} à la cible pour le tour si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} à votre héros et {ATvalue:pow,percent} à la cible pour le tour si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} to your hero and {ATvalue:pow,percent} to the target for the turn if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} a tu héroe y {ATvalue:pow,percent} al objetivo durante el turno si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{ATvalue:pow2,percent,+} für deinen Helden und {ATvalue:pow,percent} für das Ziel für die Runde, wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",

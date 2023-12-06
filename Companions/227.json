@@ -12,6 +12,7 @@
   "m_id": 227,
   "m_displayName": "DECK - COMMON - MULTI - Héros Martyr",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1357001861,
     "b": 1168588708,
@@ -43,7 +44,13 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "hPVP",
+          "value": 20
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -53,9 +60,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 82
+      "valueInPvM": 82,
+      "valueInPvP": 74
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -99,7 +107,7 @@
     "rarity": 0,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 985,
     "castCondition": {
@@ -213,7 +221,7 @@
     "pt": "Herói Mártir"
   },
   "description": {
-    "fr": "{%death} Soigne vos personnages du double de son\\_{%at}.",
+    "fr": "{%death} <if pvm>Soigne vos personnages du double de son\\_{%at}.</if><if pvp>Soigne vos personnages de {PVvalue:hPVP}</if>",
     "en": "{%death} Heals your characters double his\\_{%at}.",
     "es": "{%death} Cura a tus personajes el doble de su\\_{%at}.",
     "de": "{%death} Heilt deine Charaktere um das Doppelte seines {%at,plural:one}.",

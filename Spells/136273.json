@@ -12,6 +12,7 @@
   "m_id": 136273,
   "m_displayName": "XELOR - ARME - TAKO - AIR - Style Vent",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 669701730,
     "b": 1851162532,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 490,
@@ -153,9 +154,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 20
+            "valueInPvM": 20,
+            "valueInPvP": 30
           },
           "factor": {
             "type": "ReferenceScalingFactor",

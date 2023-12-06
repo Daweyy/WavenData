@@ -12,6 +12,7 @@
   "m_id": 695,
   "m_displayName": "SRAM - ARME - ORISHI - ETHER - Pichenette Orishi",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1129172978,
     "b": -981749468,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 620,
@@ -93,46 +94,129 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "TwoCastTargetDefinition",
-      "selector1": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
-            }
-          }
-        ]
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
       },
-      "selector2": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "FirstCastTargetSelector"
+      "selectorIfTrue": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
             },
-            "distance": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "nbcell",
+                  "value": 2
+                }
               }
             }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
-          }
-        ]
+          ]
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbcell",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 16
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
         {
           "type": "ConstIntegerValue",
           "referenceId": "c",
@@ -142,7 +226,12 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "PUSH"
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "PUSH"
+        }
       ]
     }
   },
@@ -154,7 +243,7 @@
     "pt": "Peteleco Orishi"
   },
   "description": {
-    "fr": "Téléporte votre héros sur une case adjacente<sprite name=\"cell_cross\"> à un adversaire et le {#PUSH} de {cell:c}. ",
+    "fr": "<if pvm>Téléporte votre héros sur une case adjacente<sprite name=\"cell_cross\"> à un adversaire et le {#PUSH} de {cell:c}.</if><if pvp>Téléporte votre héros sur une case adjacente<sprite name=\"cell_cross\"> à un adversaire jusqu'à {cell:nbcell}, lui inflige {magicalDamage:dmg} et le {#PUSH} de {cell:c}.</if>",
     "en": "Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent and {#PUSH} them {cell:c}.",
     "es": "Teletransporta a tu héroe a una casilla adyacente<sprite name=\"cell_cross\"> a un adversario y lo {#PUSH} {cell:c}.",
     "de": "Teleportiert deinen Helden auf ein an einen Gegner angrenzendes\\_<sprite name=\"cell_cross\"> Feld und {#PUSH,plural:few} ihn um {cell:c} zurück.",

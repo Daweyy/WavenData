@@ -12,6 +12,7 @@
   "m_id": 153,
   "m_displayName": "XELOR - ARME - GURPAPA - ETHER - Evolution Gurpapa",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1890281379,
     "b": -342826684,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 161,
@@ -128,9 +129,40 @@
       }
     },
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CasterHeroSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllObjectMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        }
       }
     },
     "spellEffectData": [
@@ -160,10 +192,10 @@
     "pt": "Evolução Gurpapa"
   },
   "description": {
-    "fr": "Transforme vos <b>SINISTROS</b> en jeu. \n",
+    "fr": "<if pvm>Transforme vos <b>SINISTROS</b> en jeu.</if><if pvp>Transforme le <b>SINISTRO</b> ciblé.</if>\n",
     "en": "Transforms your <b>SINISTROS</b> in play. \n",
     "es": "Transforma a tus <b>SINISTROS</b> en juego. \n",
     "de": "Verwandelt deine <b>SINISTROS</b> im Spiel.\n",
-    "pt": "Transforma seus <b>SINISTROS</b> presentes no jogo.\n"
+    "pt": "Transforma seus <b>SINISTROS</b> presentes no jogo. \n"
   }
 }

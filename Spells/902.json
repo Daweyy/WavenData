@@ -12,6 +12,7 @@
   "m_id": 902,
   "m_displayName": "ENIRIPSA - ARME - PINCEAU KOKORO - FEU - Kokoro Brulant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 340199143,
     "b": -242514492,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 967,
@@ -127,9 +128,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": null,
-            "value": 14
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 14
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 20
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -164,12 +174,17 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "Supp",
           "baseValue": {
-            "type": "LinearScaleLevelOnlyBasedDynamicValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "baseValue": 6,
-            "factor": {
-              "type": "ReferenceScalingFactor",
-              "reference": 12
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 6
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 11
             }
           },
           "factor": {

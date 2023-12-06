@@ -1,0 +1,127 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1426",
+  "m_id": 1426,
+  "m_displayName": "ALBUERA - 05 - Fouettage",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 729179531,
+    "b": 50545924,
+    "c": 1720840602,
+    "d": 1654522011,
+    "e": -1030371057
+  },
+  "m_i18nDescriptionId": {
+    "a": 729179531,
+    "b": 50545924,
+    "c": 1720840602,
+    "d": 1654522011,
+    "e": 1152567904
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e7402d48e17f20043b09d2609533ed2b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1426,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "166b2371ee299854f81d6d81641c543c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": 15,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Fouettage",
+    "en": "Whipping",
+    "es": "Latigazo",
+    "de": "Auspeitschen",
+    "pt": "Chicoteio"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nPiochez {SPELLCOUNTvalue:s}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nDraw {SPELLCOUNTvalue:s}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nSacas {SPELLCOUNTvalue:s}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n Zieht {SPELLCOUNTvalue:s}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nCompre {SPELLCOUNTvalue:s}."
+  }
+}

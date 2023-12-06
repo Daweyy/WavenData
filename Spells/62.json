@@ -12,6 +12,7 @@
   "m_id": 62,
   "m_displayName": "XELOR - CLASSE - AIR - Alignement",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 280781150,
     "b": 1000408404,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -181,9 +182,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "d1",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "valueInPvM": 11,
+            "valueInPvP": 12
           },
           "factor": {
             "type": "ReferenceScalingFactor",

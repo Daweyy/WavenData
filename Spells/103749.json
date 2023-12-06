@@ -12,6 +12,7 @@
   "m_id": 103749,
   "m_displayName": "ENIRIPSA - ARME - LAME VORACIUS - TERRE - Aiguillon Lancinant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 384949947,
     "b": 266421700,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 202,
@@ -133,9 +134,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 26
+            "valueInPvM": 26,
+            "valueInPvP": 31
           },
           "factor": {
             "type": "ReferenceScalingFactor",

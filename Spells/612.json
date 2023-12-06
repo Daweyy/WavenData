@@ -12,6 +12,7 @@
   "m_id": 612,
   "m_displayName": "ENIRIPSA - ARME - AMBRE TAMASHI - EAU - Soin Nocturne",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1366527105,
     "b": -1148565164,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 277,
@@ -124,9 +125,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 26
+            "valueInPvM": 26,
+            "valueInPvP": 18
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -172,7 +174,7 @@
     "pt": "Cura Noturna"
   },
   "description": {
-    "fr": "Sacrifie l'un de vos {Summoning:773, plural:other!}.\n\\---\nSoigne les alliés adjacents\\_<sprite name=\"cell_cross\"> de {PVvalue:h}.",
+    "fr": "Sacrifie l'un de vos {Summoning:773, plural:other!}.\n\\---\n<if pvm>Soigne les alliés adjacents\\_<sprite name=\"cell_cross\"> de {PVvalue:h}.</if><if pvp>Soigne les alliés autour\\_<sprite name=\"cell_around\"> de {PVvalue:h}.</if> ",
     "en": "Sacrifices one of your {Summoning:773, plural:other!}.\n\\---\nHeals adjacent\\_<sprite name=\"cell_cross\"> allies {PVvalue:h}.",
     "es": "Sacrifica uno de tus {Summoning:773, plural:other!}.\n\\---\nCura a los aliados adyacentes\\_<sprite name=\"cell_cross\"> {PVvalue:h}.",
     "de": "Opfert einen deiner {Summoning:773, plural:other!}.\n\\---\nHeilt die angrenzenden\\_<sprite name=\"cell_cross\"> Verbündeten um {PVvalue:h}.",

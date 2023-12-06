@@ -12,6 +12,7 @@
   "m_id": 132422,
   "m_displayName": "XELOR - ARME - PIKUXALA - AIR - Teleport Offensif",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1474626897,
     "b": -553688524,
@@ -65,7 +66,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 945,
@@ -147,9 +148,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 14
+            "valueInPvM": 14,
+            "valueInPvP": 23
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 930,
   "m_displayName": "SRAM - CLASSE - EAU - Assassin des glaces",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -810596253,
     "b": 1771501668,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -111,9 +112,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 16
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 16
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 18
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

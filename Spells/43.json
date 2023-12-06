@@ -12,6 +12,7 @@
   "m_id": 43,
   "m_displayName": "XELOR - CLASSE - AIR - Choc Temporel",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -201484823,
     "b": -2068406028,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -69,9 +70,20 @@
         "type": "GaugeValue",
         "element": 14,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -111,9 +123,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 12
+            "valueInPvM": 12,
+            "valueInPvP": 18
           },
           "factor": {
             "type": "ReferenceScalingFactor",

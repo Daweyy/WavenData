@@ -12,6 +12,7 @@
   "m_id": 94808,
   "m_displayName": "CRA - ARME - PIVEN - FEU - Impact Ardent",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1446335238,
     "b": -61950108,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 846,
@@ -85,16 +86,36 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "SquareAreaOfEffectSelector",
-        "originSelector": {
-          "type": "CasterHeroSelector"
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvmFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "CasterHeroSelector"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "AllCharactersSelector"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       }
     },
@@ -151,6 +172,50 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgPVP2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "ex",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -203,7 +268,7 @@
     "pt": "Impacto Ardente"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\">\\_de votre héros.\n\\---\n{#archer}",
+    "fr": "<if pvm>Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\">\\_de votre héros.</if><if pvp>Inflige {magicalDamage:dmgPVP} à la cible.\n\\---\nInflige {magicalDamage:dmgPVP2} aux adversaires autour\\_<sprite name=\"cell_around\"> de la cible.</if>\n\\---\n{#archer}",
     "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your\\_hero.\n\\---\n{#archer}",
     "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\">\\_de tu héroe.\n\\---\n{#archer}",
     "de": "Verursacht {magicalDamage:dmg} bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\">\\_deines Helden.\n\\---\n{#archer}",

@@ -12,6 +12,7 @@
   "m_id": 401,
   "m_displayName": "DECK - INFINITE - FEU - Julith",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1934777259,
     "b": -785269132,
@@ -51,6 +52,16 @@
           "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "sortPVP",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -63,9 +74,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 140
+      "valueInPvM": 140,
+      "valueInPvP": 141
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -73,9 +85,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 27
+      "valueInPvM": 27,
+      "valueInPvP": 21
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -109,7 +122,7 @@
     "rarity": 4,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 36,
     "castCondition": {
@@ -214,7 +227,7 @@
     "pt": "Julith"
   },
   "description": {
-    "fr": "Lorsqu'un adversaire meurt\\_: Piochez {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} au coût de {sort,plural,one[ce] other[ces]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>",
+    "fr": "Lorsqu'un adversaire meurt\\_: Piochez <if pvm>{SPELLCOUNTvalue:sort}</if><if pvp>{SPELLCOUNTvalue:sortPVP}</if>.\n\\---\n<if pvm>{PAvalue:pa} au coût de {sort,plural,one[ce] other[ces]} {%SPELLCOUNT,value:sort}.</if><if pvp>{PAvalue:paPVP} au coût du prochain sort</if>\\v<family>{%Family_JorisComrades_Name}</family>",
     "en": "When an opponent dies: Draw {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} to the cost of {sort,plural,one[this] other[these]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>",
     "es": "Cuando un adversario muere: Sacas {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} al coste de {sort,plural,one[este] other[estos]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>",
     "de": "Falls ein Gegner stirbt: Zieht {SPELLCOUNTvalue:sort}.\n\\---\n{PAvalue:pa} auf die Kosten von {sort,plural,one[diesem] other[diesen]} {%SPELLCOUNT,value:sort}.\\v<family>{%Family_JorisComrades_Name}</family>",

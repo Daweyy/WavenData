@@ -12,6 +12,7 @@
   "m_id": 666,
   "m_displayName": "ENIRIPSA - CLASSE - FEU - Cure Devorante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 708973091,
     "b": 1139463220,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -168,9 +169,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "pv",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 13
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 13
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -191,9 +201,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 5
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 5
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 14
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -228,9 +247,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "d2",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 7
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 7
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

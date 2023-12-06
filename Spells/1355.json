@@ -12,6 +12,7 @@
   "m_id": 1355,
   "m_displayName": "IOP - CLASSE - ETHER - Charge et recharge",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 990150482,
     "b": -2003730108,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -159,6 +160,11 @@
         },
         {
           "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 33
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "v",
           "value": 1
         }
@@ -176,10 +182,10 @@
     "pt": "Investe e Reinveste"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un personnage aligné avec lui jusqu'à {cell:c} et lui inflige son {%at}.\n\\---\nPiochez {value:v} sort.",
+    "fr": "<if pvm>Votre héros <b>CHARGE</b> un personnage aligné avec lui jusqu'à {cell:c} et lui inflige son {%at}.</if><if pvp>Votre héros <b>CHARGE</b> un personnage aligné avec lui jusqu'à {cell:c} et inflige {magicalDamage:dmg}.</if>\n\\---\nPiochez {value:v} sort.",
     "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%at} on them.\n\\---\nDraw {value:v} {%SPELLCOUNT,value:v}.",
     "es": "Tu héroe <b>CARGA</b> contra un personaje alineado con él hasta a {cell:c} y le inflige su {%at}.\n\\---\nSacas {value:v} hechizo.",
     "de": "Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe auf eine Entfernung bis {cell:c} zu und fügt ihm seinen {%at,plural:one} als Schaden zu.\n\\---\nZieht {value:v} Zauber.",
-    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado com ele a até {cell:c} e inflige seu {%at}.\n\\---\nCompre {value:v} {v, plural, one[feitiço] other[feitiços]}."
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado com ele a até {cell:c} e inflige seu {%at}.\n\\---\nCompre {value:v} {v,plural,one[feitiço] other[feitiços]}."
   }
 }

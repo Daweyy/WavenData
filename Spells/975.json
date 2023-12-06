@@ -12,6 +12,7 @@
   "m_id": 975,
   "m_displayName": "XELOR - CLASSE - EAU - Sinistro Eau",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1533841501,
     "b": -992384188,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -88,60 +89,126 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CombinedTargetSelector",
-        "selectors": [
-          {
-            "type": "FilteredCoordSelector",
-            "filters": [
-              {
-                "type": "AroundTargetFilter",
-                "targetsToCompare": {
-                  "type": "CasterHeroSelector"
-                },
-                "distance": {
-                  "type": "Between",
-                  "minIncluded": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": null,
-                    "value": 1
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CombinedTargetSelector",
+          "selectors": [
+            {
+              "type": "FilteredCoordSelector",
+              "filters": [
+                {
+                  "type": "AroundTargetFilter",
+                  "targetsToCompare": {
+                    "type": "CasterHeroSelector"
                   },
-                  "maxIncluded": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "c",
-                    "value": 3
+                  "distance": {
+                    "type": "Between",
+                    "minIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 1
+                    },
+                    "maxIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 3
+                    }
                   }
+                },
+                {
+                  "type": "CellValidForMechanismFilter"
                 }
-              },
-              {
-                "type": "CellValidForMechanismFilter"
-              }
-            ]
-          },
-          {
-            "type": "FilteredEntitySelector",
-            "from": {
-              "type": "AllObjectMechanismsSelector"
+              ]
             },
-            "filters": [
-              {
-                "type": "OwnerFilter",
-                "isIdentical": true,
-                "reference": {
-                  "type": "CasterSelector"
-                }
+            {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
               },
-              {
-                "type": "ObjectMechanismDefinitionFilter",
-                "condition": 1,
-                "objectMechanisms": [
-                  559
-                ]
-              }
-            ]
-          }
-        ]
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "ObjectMechanismDefinitionFilter",
+                  "condition": 1,
+                  "objectMechanisms": [
+                    955,
+                    559,
+                    583,
+                    398
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CombinedTargetSelector",
+          "selectors": [
+            {
+              "type": "FilteredCoordSelector",
+              "filters": [
+                {
+                  "type": "AroundTargetFilter",
+                  "targetsToCompare": {
+                    "type": "CasterHeroSelector"
+                  },
+                  "distance": {
+                    "type": "Between",
+                    "minIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 1
+                    },
+                    "maxIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c",
+                      "value": 3
+                    }
+                  }
+                },
+                {
+                  "type": "CellValidForMechanismFilter"
+                }
+              ]
+            },
+            {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "ObjectMechanismDefinitionFilter",
+                  "condition": 1,
+                  "objectMechanisms": [
+                    559
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [],
@@ -167,15 +234,12 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        {
-          "type": 22,
-          "id": 137
-        },
-        "OBJECTMECHANISM",
+        "HAIL",
         {
           "type": 7,
           "id": 22
         },
+        "OBJECTMECHANISM",
         {
           "type": 7,
           "id": 559
@@ -191,7 +255,7 @@
     "pt": "Sinistro Água"
   },
   "description": {
-    "fr": "Construit un {ObjectMechanism:559} jusqu'à {cell:c} de votre héros.\n<rem>Détruit votre précédent {ObjectMechanism:559!}.</rem>\n\\---\n<b>OU</b>\n\\---\nTransforme votre {ObjectMechanism:559!} en {ObjectMechanism:22}.",
+    "fr": "Construit un {ObjectMechanism:559} jusqu'à {cell:c} de votre héros.\n<rem>Détruit votre précédent {ObjectMechanism:559!}.</rem>\n\\---\n<b>OU</b>\n\\---\n<if pvm>Transforme votre {ObjectMechanism:559!} en {ObjectMechanism:22}.</if><if pvp>Transforme le <b>SINISTRO</b> ciblé en {ObjectMechanism:22}.</if>",
     "en": "Builds one {ObjectMechanism:559} up to {cell:c} from your hero.\n<rem>Destroys your previous {ObjectMechanism:559!}.</rem>\n\\---\n<b>OR</b>\n\\---\nTurns your {ObjectMechanism:559!} into a {ObjectMechanism:22}.",
     "es": "Construye un {ObjectMechanism:559} hasta a {cell:c} de tu héroe.\n<rem>Destruye tu {ObjectMechanism:559!} anterior.</rem>\n\\---\n<b>O</b>\n\\---\nTransforma tu {ObjectMechanism:559!} en {ObjectMechanism:22}.",
     "de": "Errichtet einen\\_{ObjectMechanism:559} bis zu {cell:c} von deinem Helden entfernt.\n<rem>Zerstört deinen vorherigen {ObjectMechanism:559!}.</rem>\n\\---\n<b>ODER</b>\n\\---\nVerwandelt deinen {ObjectMechanism:559!} in {ObjectMechanism:22}.",

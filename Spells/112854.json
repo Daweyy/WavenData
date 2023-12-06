@@ -12,6 +12,7 @@
   "m_id": 112854,
   "m_displayName": "IOP - ARME - GLAIVE STALAKTOSS - ETHER - Maitre Dephase",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 724580094,
     "b": -1018395356,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 911,
@@ -110,11 +111,9 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "CharacterActionValue",
+          "type": "ConstIntegerValue",
           "referenceId": "dmg",
-          "entitySelector": {
-            "type": "CasterHeroSelector"
-          }
+          "value": 19
         },
         {
           "type": "ConstIntegerValue",
@@ -140,7 +139,7 @@
     "pt": "Mestre Defasado"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à un adversaire.\n\\---\nConfère {PropertyEffect:18} pour le tour à votre héros ou {PMvalue:PMBuff,+} pour le tour s'il est déjà {PropertyEffect:18[DÉPHASÉ]}.",
+    "fr": "<if pvm>Inflige l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire.</if>\n\\---\nConfère {PropertyEffect:18} pour le tour à votre héros ou {PMvalue:PMBuff,+} pour le tour s'il est déjà {PropertyEffect:18[DÉPHASÉ]}.",
     "en": "Inflicts your hero's {%AT} on an opponent.\n\\---\nConfers {PropertyEffect:18} on your hero for the turn or {PMvalue:PMBuff,+} for the turn if they are already {PropertyEffect:18[DEPHASED]}.",
     "es": "Inflige el {%AT} de tu héroe a un adversario.\n\\---\nConfiere {PropertyEffect:18} durante el turno a tu héroe o {PMvalue:PMBuff,+} durante el turno si está ya {PropertyEffect:18[DESFASADO]}.",
     "de": "Fügt einem Gegner den {%AT,plural:one} deines Helden als Schaden zu.\n\\---\nGewährt deinem Helden {PropertyEffect:18} oder {PMvalue:PMBuff,+} für die Runde, wenn er bereits {PropertyEffect:18[PHASENVERSCHOBEN]} ist.",

@@ -12,6 +12,7 @@
   "m_id": 792,
   "m_displayName": "DECK - RARE - TERRE - Héros Endurci",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -164508724,
     "b": -1650566348,
@@ -77,6 +78,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "ar2",
           "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "arPVP",
+          "value": 8
         }
       ],
       "externalDynamicValueReferences": [],
@@ -88,9 +94,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 86
+      "valueInPvM": 86,
+      "valueInPvP": 77
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -134,7 +141,7 @@
     "rarity": 1,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 940,
     "castCondition": {
@@ -239,7 +246,7 @@
     "pt": "Herói Calejado"
   },
   "description": {
-    "fr": "{%attack} Gagne {value:ar1,percent} de son {%AT} en {%AR}.",
+    "fr": "{%attack} <if pvm>Gagne {value:ar1,percent} de son {%AT} en {%AR}.</if><if pvp>{ARvalue:arPVP,+}</if>",
     "en": "{%attack} Gains {value:ar1,percent} of his {%AT} as {%AR}.",
     "es": "{%attack} Gana un {value:ar1,percent} de su {%AT} en {%AR}.",
     "de": "{%attack} Erhält {value:ar1,percent} seines {%AT,plural:two} als {%AR}.",

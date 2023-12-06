@@ -12,6 +12,7 @@
   "m_id": 82,
   "m_displayName": "ENIRIPSA - ARME - LAME VORACIUS - ETHER - Voracite",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1400989861,
     "b": -616966924,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 202,
@@ -100,7 +101,29 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "p",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -116,7 +139,7 @@
     "pt": "Voracidade"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros.\n\\---\n{#LIFESTEAL}",
+    "fr": "<if pvm>Inflige l'{%AT} de votre héros.</if><ifpvp>Inflige {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
     "en": "Inflicts your hero's {%AT}.\n\\---\n{#LIFESTEAL}.",
     "es": "Inflige el {%AT} de tu héroe.\n\\---\n{#LIFESTEAL}",
     "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{#LIFESTEAL}",

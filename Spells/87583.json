@@ -12,6 +12,7 @@
   "m_id": 87583,
   "m_displayName": "XELOR - ARME - PRAMIUM - FEU - Declic Enflamme",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 2129142222,
     "b": 1111208964,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 614,
@@ -211,9 +212,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 24
+            "valueInPvM": 24,
+            "valueInPvP": 13
           },
           "factor": {
             "type": "ReferenceScalingFactor",

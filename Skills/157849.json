@@ -12,6 +12,7 @@
   "m_id": 157849,
   "m_displayName": "WEAPON - SRAM - KEN KARTANA  - Retrait Kartana",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1760135338,
     "b": 521123236,
@@ -42,8 +43,8 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "t",
-          "value": 3
+          "referenceId": "pm",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -65,10 +66,10 @@
     "pt": "Retirada Kartana"
   },
   "description": {
-    "fr": "Lorsque votre héros déclenche un {#TRAP} <b>SRAM</b> allié\\_:\\v Rejoue son tour et le {PropertyEffect:5}.\n\\---\n<rem>Limité à {value:t} fois par tour.</i></rem>",
-    "en": "When your hero triggers an allied <b>SRAM</b> {#TRAP}: \\vReplays turn and {PropertyEffect:5} it.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</i></rem>",
-    "es": "Cuando tu héroe activa una {#TRAP} <b>SRAM</b> aliada:\\v Vuelve a jugar su turno y la {PropertyEffect:5}.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</i></rem>",
-    "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{#TRAP} auslöst:\\vSpielt seine Runde erneut und {PropertyEffect:5[ENTSCHÄRFT]} sie.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</i></rem>",
-    "pt": "Quando seu herói aciona uma {#TRAP} <b>SRAM</b> aliada:\\v Joga um turno extra e a {PropertyEffect:5}.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</i></rem>"
+    "fr": "Lorsque votre héros déclenche un {#TRAP} <b>SRAM</b> allié\\_:\\v Rejoue son tour, le {PropertyEffect:5} et lui retire {PMvalue:pm} jusqu'à la fin du tour.\n",
+    "en": "When your hero triggers an allied <b>SRAM</b> {#TRAP}:\\vReplays turn, {PropertyEffect:5} it, and removes {PMvalue:pm} from it until the end of the turn.\n",
+    "es": "Cuando un héroe activa una {#TRAP} <b>SRAM</b> aliada:\\v Vuelve a jugar su turno, le {PropertyEffect:5} y le retira {PMvalue:pm} hasta el final del turno.\n",
+    "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{#TRAP} auslöst:\\v Spielt seine Runde erneut. {PropertyEffect:5} sie. Entzieht {PMvalue:pm} bis zum Rundenende.\n",
+    "pt": "Quando seu herói aciona uma {#TRAP} <b>SRAM</b> aliada:\\v Joga um turno extra, o {PropertyEffect:5} e retira {PMvalue:pm} até o fim do turno.\n"
   }
 }

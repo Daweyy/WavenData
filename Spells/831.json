@@ -12,6 +12,7 @@
   "m_id": 831,
   "m_displayName": "XELOR - CLASSE - ETHER - Rouage",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 895500167,
     "b": -209398028,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -144,7 +145,28 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "p",
-          "value": 200
+          "value": 150
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 17
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -160,7 +182,7 @@
     "pt": "Engrenagem"
   },
   "description": {
-    "fr": "Inflige {value:p, percent} du {%BL} de vos <b>SINISTROS</b> aux adversaires autour<sprite name=\"cell_around\"> de chacun d'entre eux.\n\\---\nPiochez votre prochain {%SPELLCOUNT} de <b>SINISTRO</b>.",
+    "fr": "<if pvm>Inflige {value:p, percent} du {%BL} de vos <b>SINISTROS</b> aux adversaires autour<sprite name=\"cell_around\"> de chacun d'entre eux.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires autour<sprite name=\"cell_around\"> de chacun de vos <b>SINISTROS</b>.</if>\n\\---\nPiochez votre prochain {%SPELLCOUNT} de <b>SINISTRO</b>.",
     "en": "Inflicts {value:p, percent} of your <b>SINISTROS'</b> {%BL} on opponents around<sprite name=\"cell_around\"> each of them.\n\\---\nDraw your next <b>SINISTRO</b> {%SPELLCOUNT}.",
     "es": "Inflige un {value:p, percent} del {%BL} de tus <b>SINISTROS</b> a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de cada uno de ellos.\n\\---\nSacas tu próximo {%SPELLCOUNT} de <b>SINISTRO</b>.",
     "de": "Verursacht {value:p, percent} der {%BL} deiner <b>SINISTROS</b> bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> als Schaden.\n\\---\nZieht deinen nächsten <b>SINISTRO</b>-{%SPELLCOUNT}.",

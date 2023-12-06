@@ -12,6 +12,7 @@
   "m_id": 590,
   "m_displayName": "IOP - ARME - LAMARGUEDON SPECTRAL - ETHER - Le chant du cygne",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -959071936,
     "b": 214895972,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Hidden"
       },
       "element": 6,
       "specificToWeapon": 143,
@@ -81,6 +82,20 @@
             "reference": {
               "type": "CasterSelector"
             }
+          },
+          {
+            "type": "PropertiesFilter",
+            "comparison": 4,
+            "properties": [
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 41
+              },
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 88
+              }
+            ]
           }
         ]
       }

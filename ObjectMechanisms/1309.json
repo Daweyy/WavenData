@@ -12,6 +12,7 @@
   "m_id": 1309,
   "m_displayName": "CRA - Meurtrière",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 328136089,
     "b": 1356569140,
@@ -44,11 +45,11 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "v",
+          "referenceId": "vPVP",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 2
+            "value": 1
           },
           "factor": {
             "type": "CustomScalingFactor",
@@ -65,6 +66,36 @@
             "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": true
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": "",
+            "valueInPvM": 2,
+            "valueInPvP": 1
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": true
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "blPVP",
+          "value": -5
         }
       ],
       "externalDynamicValueReferences": [],
@@ -84,9 +115,10 @@
       "reference": 17
     },
     "baseMecaLife": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 1
+      "valueInPvM": 1,
+      "valueInPvP": 20
     }
   },
   "name": {

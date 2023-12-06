@@ -12,6 +12,7 @@
   "m_id": 131,
   "m_displayName": "XELOR - ARME - JIKAN - AIR - Sablier Electrique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 314535742,
     "b": -1905840956,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 366,
@@ -142,9 +143,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 19
+            "valueInPvM": 19,
+            "valueInPvP": 30
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -176,9 +178,10 @@
           "value": 30
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "c",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 4
         }
       ],
       "externalDynamicValueReferences": [],

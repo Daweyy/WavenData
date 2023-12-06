@@ -12,6 +12,7 @@
   "m_id": 490,
   "m_displayName": "XELOR - Synchronisateur Tako",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1144043206,
     "b": -1730218984,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "35592d411554fe740ab97e07df346d21"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -116,9 +120,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 391
+      "valueInPvM": 391,
+      "valueInPvP": 394
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -126,9 +131,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 24
+      "valueInPvM": 24,
+      "valueInPvP": 21
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -160,6 +166,9 @@
     "defaultSkinIdMale": 5446,
     "defaultSkinIdFemale": 5057,
     "god": 7,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

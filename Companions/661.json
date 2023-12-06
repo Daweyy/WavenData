@@ -12,6 +12,7 @@
   "m_id": 661,
   "m_displayName": "DECK - INFINITE - AIR - Grougaloragran",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -51631828,
     "b": 599329540,
@@ -43,19 +44,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "AT",
-          "value": 36
+          "valueInPvM": 36,
+          "valueInPvP": 40
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "n",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 2
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "pa",
-          "value": -1
+          "valueInPvM": -2,
+          "valueInPvP": 0
         }
       ],
       "externalDynamicValueReferences": [],
@@ -67,9 +71,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 171
+      "valueInPvM": 171,
+      "valueInPvP": 154
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -77,9 +82,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "AT",
-      "value": 36
+      "valueInPvM": 36,
+      "valueInPvP": 40
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -113,7 +119,7 @@
     "rarity": 4,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 36,
     "castCondition": {
@@ -218,7 +224,7 @@
     "pt": "Grugaloragran"
   },
   "description": {
-    "fr": "{%attack} Piochez {SPELLCOUNTvalue:n}. Il coûte {PAvalue:pa}.",
+    "fr": "{%attack} Piochez {SPELLCOUNTvalue:n}.<if pvm> Il coûte {PAvalue:pa}.</if>",
     "en": "{%attack} Draw {SPELLCOUNTvalue:n}. {n, plural, one[It costs] other[They cost]} {PAvalue:pa}.",
     "es": "{%attack} Sacas {SPELLCOUNTvalue:n}. Cuesta {PAvalue:pa}.",
     "de": "{%attack} Zieht {SPELLCOUNTvalue:n}. Er kostet {PAvalue:pa}.",

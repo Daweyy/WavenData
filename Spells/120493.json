@@ -12,6 +12,7 @@
   "m_id": 120493,
   "m_displayName": "IOP - ARME - LAMARGUEDON SPECTRAL - EAU - Onde Spectrale",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -979418040,
     "b": 1872246340,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 143,
@@ -189,9 +190,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 42
+            "valueInPvM": 42,
+            "valueInPvP": 43
           },
           "factor": {
             "type": "ReferenceScalingFactor",

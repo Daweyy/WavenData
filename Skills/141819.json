@@ -12,6 +12,7 @@
   "m_id": 141819,
   "m_displayName": "WEAPON - CRA - BUNELAME - Consécration Bunelame",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1718053640,
     "b": 2090662004,
@@ -42,23 +43,38 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 2
+          "referenceId": "hand",
+          "value": 0
         },
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "v2",
-          "value": 1
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            24,
+            22,
+            23,
+            25,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 22,
-          "id": 22
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
@@ -69,10 +85,10 @@
     "pt": "Consagração Bumelâmina"
   },
   "description": {
-    "fr": "{%FightTurnEnded} {value:v2,+} {aura:22} à votre héros si vous avez {SPELLCOUNTvalue:v} ou moins en main. ",
-    "en": "{%FightTurnEnded} {value:v2,+} {aura:22} to your hero if you have {SPELLCOUNTvalue:v} or less in hand.",
-    "es": "{%FightTurnEnded} {value:v2,+} {aura:22} a tu héroe si tienes {SPELLCOUNTvalue:v} o menos en mano. ",
-    "de": "{%FightTurnEnded} {value:v2,+} {aura:22} für deinen Helden, wenn du höchstens {SPELLCOUNTvalue:v} auf der Hand hast.",
-    "pt": "{%FightTurnEnded} {value:v2,+} {aura:22} ao seu herói se você possuir {SPELLCOUNTvalue:v} ou menos na mão."
+    "fr": "Lorsque votre main devient vide : Inflige {value:v} dégâts aux ennemis autour\\_<sprite name=\"cell_around\"> de votre héros par sorts joués ce tour-ci.\n\\---\n<rem>Les dégâts sont basés sur vos magies élémentaires.</rem>",
+    "en": "When your hand becomes empty: Does {value:v} damage to enemies around\\_<sprite name=\"cell_around\"> your hero per spell played this turn.\n\\---\n<rem>The damage is based on your elemental magics.</rem>",
+    "es": "Cuando tu mano se queda vacía: Inflige {value:v} daños a los enemigos alrededor\\_<sprite name=\"cell_around\"> de tu héroe por hechizos lanzados en este turno.\n\\---\n<rem>Los daños se basan en tus magias elementales.</rem>",
+    "de": "Wenn deine Hand leer ist: Verursacht {value:v} Schaden bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden für jeden in dieser Runde gewirkten Zauber.\n\\---\n<rem>Der Schaden richtet sich nach deiner Elementarmagie.</rem>",
+    "pt": "Quando sua mão fica vazia: Inflige {value:v} danos aos inimigos em\\_volta\\_<sprite name=\"cell_around\"> do seu herói por feitiço lançado no turno.\n\\---\n<rem>Os danos são baseados em suas magias elementares.</rem>"
   }
 }

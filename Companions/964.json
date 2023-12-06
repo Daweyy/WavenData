@@ -1,0 +1,201 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -7636804426726794000
+  },
+  "m_Name": "964",
+  "m_id": 964,
+  "m_displayName": "SEASON - ALBUERA - Compagnon 4",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 979943097,
+    "b": 335676500,
+    "c": -945600005,
+    "d": -117016022,
+    "e": -727581127
+  },
+  "m_i18nDescriptionId": {
+    "a": 979943097,
+    "b": 335676500,
+    "c": -945600005,
+    "d": -117016022,
+    "e": 1539502828
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 964,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 232,
+      "skinIds": [
+        232
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 25
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "merchantCosts": [],
+    "premiumItem": false,
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "pvpAvailability": {
+      "type": "Available"
+    },
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          964
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "CustomCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "OrEntityFilter",
+                  "filters": [
+                    {
+                      "type": "CombinedEntityFilter",
+                      "filters": [
+                        {
+                          "type": "EntityTypeFilter",
+                          "condition": 1,
+                          "entityTypes": [
+                            1
+                          ]
+                        },
+                        {
+                          "type": "TeamFilter",
+                          "isIdentical": true,
+                          "reference": {
+                            "type": "CasterSelector"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "CombinedEntityFilter",
+                      "filters": [
+                        {
+                          "type": "EntityGradeFilter",
+                          "condition": 1,
+                          "entityGrades": [
+                            4
+                          ]
+                        },
+                        {
+                          "type": "TeamFilter",
+                          "isIdentical": true,
+                          "reference": {
+                            "type": "CasterSelector"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 12,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Soldat Lancier",
+    "en": "Lancer Soldier",
+    "es": "Soldado Lancero",
+    "de": "Lanzenkämpfer",
+    "pt": "Soldado Lanceiro"
+  },
+  "description": {
+    "fr": "{%appearance} Consomme toutes vos {%GAUGE,plural:other}\\_{%water} et {%neutral}.\n\\---\n{value:pow,percent,+} de {%PV} et d'{%AT} par jauge consommée.",
+    "en": "{%appearance} Consumes all your {%water} and {%neutral}\\_{%GAUGE,plural:other}.\n\\---\n{value:pow,percent,+} {%PV} and {%AT} per gauge consumed.",
+    "es": "{%appearance} Consume todos tus {%GAUGE,plural:other}\\_{%water} y {%neutral}.\n\\---\n{value:pow,percent,+} de {%PV} y de {%AT} por indicador consumido.",
+    "de": "{%appearance} Verbraucht all deine {%water}- und {%neutral}-{%GAUGE,plural:other}.\n\\---\n{value:pow,percent,+} {%PV} und {%AT} pro verbrauchtem Elementarpunkt.",
+    "pt": "{%appearance} Consome todas as suas {%GAUGE,plural:other} de {%water} e {%neutral}.\n\\---\n{value:pow,percent,+} de {%PV} e de {%AT} por carga consumida."
+  }
+}

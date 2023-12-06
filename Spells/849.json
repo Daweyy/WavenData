@@ -12,6 +12,7 @@
   "m_id": 849,
   "m_displayName": "CRA - CLASSE - FEU - Fleche Miroitante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1886645119,
     "b": 990338804,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -112,9 +113,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 26
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 26
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 23
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 629,
   "m_displayName": "IOP - ARME - BOUVALOIR OROK - ETHER - Charge Temporelle",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 327874300,
     "b": -1489897820,
@@ -52,7 +53,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 497,
@@ -122,9 +123,10 @@
                 "value": 1
               },
               "maxIncluded": {
-                "type": "ConstIntegerValue",
+                "type": "PvmOrPvpConstIntegerValue",
                 "referenceId": "c",
-                "value": 6
+                "valueInPvM": 6,
+                "valueInPvP": 5
               }
             }
           },
@@ -154,9 +156,15 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "c",
-          "value": 6
+          "valueInPvM": 6,
+          "valueInPvP": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 37
         }
       ],
       "externalDynamicValueReferences": [],
@@ -172,7 +180,7 @@
     "pt": "Investida Temporal"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige son {%AT}.\n\\---\nIl revient ensuite sur sa case de début de tour.",
+    "fr": "<if pvm>Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige son {%AT}</if><if pvp>Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige {magicalDamage:dmg}</if>.\n\\---\nIl revient ensuite sur sa case de début de tour.",
     "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%AT} on them.\n\\---\nThey then return to their start-of-turn cell.",
     "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige su {%AT}.\n\\---\nLuego vuelve a su casilla de inicio de turno.",
     "de": "Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe bis zu {cell:c} zu und verursacht bei ihm seinen {%AT,plural:one} als Schaden.\n\\---\nEr kehrt anschließend auf das Ausgangsfeld zu Beginn seiner Runde zurück.",

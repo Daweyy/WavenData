@@ -10,8 +10,9 @@
   },
   "m_Name": "157746",
   "m_id": 157746,
-  "m_displayName": "WEAPON - SRAM - ECORCHEUR  - Magie Shugen",
+  "m_displayName": "WEAPON - SRAM - ECORCHEUR  - Puissance Shugen",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1426805352,
     "b": -1235680796,
@@ -42,13 +43,13 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "buff",
-          "value": 25
+          "referenceId": "p",
+          "value": 15
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "buff2",
-          "value": 20
+          "referenceId": "pow",
+          "value": 25
         }
       ],
       "externalDynamicValueReferences": [],
@@ -57,17 +58,17 @@
     }
   },
   "name": {
-    "fr": "Magie Shugen",
-    "en": "Shugen Magic",
-    "es": "Magia Fab'hugen",
-    "de": "Shugen-Magie",
-    "pt": "Magia Shugen"
+    "fr": "Puissance Shugen",
+    "en": "Shugen Power",
+    "es": "Potencia Fab'hugen",
+    "de": "Shugen-Schlagkraft",
+    "pt": "Potência Shugen"
   },
   "description": {
-    "fr": "{value:buff,percent,+} aux <b>DÉGÂTS</b> de vos {%SPELLCOUNT,plural:other} <b>ÉLÉMENTAIRES</b> par adversaire ayant un {%ELEMENTARY_STATE}.\n\\---\n{%DEATHBLOW} {value:buff2,percent,+} aux <b>DÉGÂTS</b> de vos {%SPELLCOUNT,plural:other} <b>ÉLÉMENTAIRES</b>.",
-    "en": "{value:buff,percent,+} to your <b>ELEMENTAL</b> {%SPELLCOUNT,plural:one} <b>DAMAGE</b> per opponent with an {%ELEMENTARY_STATE}.\n\\---\n{%DEATHBLOW} {value:buff2,percent,+} to your <b>ELEMENTAL</b> {%SPELLCOUNT,plural:one} <b>DAMAGE</b>.",
-    "es": "{value:buff,percent,+} a los <b>DAÑOS</b> de tus {%SPELLCOUNT,plural:other} <b>ELEMENTALES</b> por adversario que tenga un {%ELEMENTARY_STATE}.\n\\---\n{%DEATHBLOW} {value:buff2,percent,+} a los <b>DAÑOS</b> de tus {%SPELLCOUNT,plural:other} <b>ELEMENTALES</b>.",
-    "de": "{value:buff,percent,+} <b>SCHADEN</b> für deine <b>ELEMENTAR</b>-{%SPELLCOUNT,plural:other} pro Gegner mit einem\\_{%ELEMENTARY_STATE}.\n\\---\n{%DEATHBLOW} {value:buff2,percent,+} <b>SCHADEN</b> für deine <b>ELEMENTAR</b>-{%SPELLCOUNT,plural:other}.",
-    "pt": "{value:buff,percent,+} aos <b>DANOS</b> dos seus {%SPELLCOUNT,plural:other} <b>ELEMENTARES</b> por adversário que tenha um {%ELEMENTARY_STATE}.\n\\---\n{%DEATHBLOW} {value:buff2,percent,+} aos <b>DANOS</b> dos seus {%SPELLCOUNT,plural:other} <b>ELEMENTARES</b>."
+    "fr": "{value:p, +, percent} aux <b>DÉGÂTS</b> de vos sorts et {ATvalue:pow, +, percent} à votre héros par {%AURA_trap} que possède votre héros.",
+    "en": "{value:p, +, percent} to your spell <b>DAMAGE</b> and {ATvalue:pow, +, percent} to your hero per {%AURA_trap} that your hero has.",
+    "es": "{value:p, +, percent} a los <b>DAÑOS</b> de tus hechizos y {ATvalue:pow, +, percent} a tu héroe por {%AURA_trap} que tenga tu héroe.",
+    "de": "{value:p, +, percent} <b>SCHADEN</b> durch deine Zauber und {ATvalue:pow, +, percent} für deinen Helden je {%AURA_trap} in seinem Besitz.",
+    "pt": "{value:p, +, percent} aos <b>DANOS</b> dos seus feitiços e {ATvalue:pow, +, percent} ao seu herói por {%AURA_trap} que ele possuir."
   }
 }

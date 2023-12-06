@@ -12,6 +12,7 @@
   "m_id": 717,
   "m_displayName": "XELOR - CLASSE - AIR - Teleportation Flexible",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -227527752,
     "b": -1021162364,
@@ -65,7 +66,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -79,9 +80,20 @@
         "type": "GaugeValue",
         "element": 14,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -175,9 +187,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 17
+            "valueInPvM": 17,
+            "valueInPvP": 23
           },
           "factor": {
             "type": "ReferenceScalingFactor",

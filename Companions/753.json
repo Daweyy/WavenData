@@ -12,6 +12,7 @@
   "m_id": 753,
   "m_displayName": "DECK - COMMON - FIRE - Championne Perimee",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -40510059,
     "b": -1466600444,
@@ -48,6 +49,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -59,9 +65,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 66
+      "valueInPvM": 66,
+      "valueInPvP": 64
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -69,9 +76,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 14
+      "valueInPvM": 14,
+      "valueInPvP": 12
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -105,7 +113,7 @@
     "rarity": 0,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 985,
     "castCondition": {
@@ -210,7 +218,7 @@
     "pt": "Campeã Obsoleta"
   },
   "description": {
-    "fr": "{%attack} {PAvalue:pa} au coût du premier sort de votre main.",
+    "fr": "{%attack} <if pvm>{PAvalue:pa} au coût du premier sort de votre main.</if><if pvp>{PAvalue:paPVP} au coût du prochain sort.</if>",
     "en": "{%attack} {PAvalue:pa} to the cost of the first spell in your hand.",
     "es": "{%attack} {PAvalue:pa} al coste del primer hechizo de tu mano.",
     "de": "{%attack} {PAvalue:pa} auf die Kosten deines ersten Zaubers auf der Hand.",

@@ -12,6 +12,7 @@
   "m_id": 118650,
   "m_displayName": "IOP - CLASSE - FEU - Explosion Brutale",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1008074709,
     "b": -707139948,
@@ -65,7 +66,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -79,9 +80,36 @@
         "type": "GaugeValue",
         "element": 11,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 2
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 2
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpValue",
+          "referenceId": "",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       }
     ],
@@ -168,9 +196,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 21
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 21
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 24
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

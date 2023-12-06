@@ -12,6 +12,7 @@
   "m_id": 460,
   "m_displayName": "ENIRIPSA - CLASSE - AIR - Laboratoire de Vent",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 231618124,
     "b": -1942727420,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -135,10 +136,15 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "PUSH",
         {
           "type": 22,
           "id": 119
+        },
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "PUSH"
         },
         {
           "type": 25,

@@ -12,6 +12,7 @@
   "m_id": 107167,
   "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - AIR - Coupe Mordante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -338383154,
     "b": 1151727764,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 637,
@@ -131,9 +132,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 30
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 30
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 28
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -168,9 +178,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg2",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 12
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 12
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

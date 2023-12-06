@@ -12,6 +12,7 @@
   "m_id": 406,
   "m_displayName": "DQ - CONTRAT - TOFU - 4_Mixte de brochette de tofu ",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1403381204,
     "b": 902004116,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": false,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -82,7 +83,15 @@
       "type": "OneCastTargetDefinition",
       "selector": {
         "type": "FilteredCharacterSelector",
-        "filters": []
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [

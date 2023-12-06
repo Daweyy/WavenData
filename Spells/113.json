@@ -12,6 +12,7 @@
   "m_id": 113,
   "m_displayName": "XELOR - CLASSE - TERRE - Blindage Temporel",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -977198459,
     "b": -213223484,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -109,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 14
+            "valueInPvM": 14,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -185,11 +187,60 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heroArPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            6
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "blPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 6
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            49
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "CHRONO"
+        }
+      ]
     }
   },
   "name": {
@@ -200,7 +251,7 @@
     "pt": "Blindagem Temporal"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} à votre héros et {BLvalue:bl,+} à vos <b>SINISTROS</b> si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ARvalue:ar,+} à votre héros et {BLvalue:bl,+} à vos <b>SINISTROS</b> si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.</if><if pvp>{#CHRONO}\\_:\\_{ARvalue:heroArPVP,+} à votre héros et {BLvalue:blPVP,+} à vos <b>SINISTROS</b></if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} to your hero and {BLvalue:bl,+} to your <b>SINISTROS</b> if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} a tu héroe y {BLvalue:bl,+} a tus <b>SINISTROS</b> si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{ARvalue:ar,+} für deinen Helden und {BLvalue:bl,+} für deine <b>SINISTROS</b>, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",

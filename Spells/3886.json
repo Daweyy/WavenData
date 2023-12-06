@@ -12,6 +12,7 @@
   "m_id": 3886,
   "m_displayName": "CRA - CLASSE - TERRE - Tir Graveleux",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -510838200,
     "b": 987505764,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -112,9 +113,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 14
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 14
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 20
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

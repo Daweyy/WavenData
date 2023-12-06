@@ -12,6 +12,7 @@
   "m_id": 191,
   "m_displayName": "CRA - Shiru Shaden",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2069645725,
     "b": 1823658084,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "51578926ec617f340bdca2221ad9e6b8"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -88,9 +92,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 383
+      "valueInPvM": 383,
+      "valueInPvP": 395
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -98,15 +103,17 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 22
+      "valueInPvM": 22,
+      "valueInPvP": 26
     },
     "riposte": null,
     "actionCriticalChance": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 50
+      "valueInPvM": 50,
+      "valueInPvP": 0
     },
     "actionCriticalBonus": null,
     "customActionTarget": null,
@@ -132,6 +139,9 @@
     "defaultSkinIdMale": 7476,
     "defaultSkinIdFemale": 8335,
     "god": 2,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

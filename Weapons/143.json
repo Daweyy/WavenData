@@ -12,6 +12,7 @@
   "m_id": 143,
   "m_displayName": "IOP - Lamarguedon Spectral",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2142790662,
     "b": -229711388,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "c8f58f07898f023458ec633202f363e5"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -91,9 +95,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 396
+      "valueInPvM": 396,
+      "valueInPvP": 395
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -135,6 +140,9 @@
     "defaultSkinIdMale": 7460,
     "defaultSkinIdFemale": 7063,
     "god": 1,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -179,7 +187,7 @@
     "en": "{Summoning:898,plural:other}: Once on the field, these creatures will do damage based on your {%at}!\n\\---\n<color=#7FD5E4>SPELLS</color>: Your creature isn't really alive… Why not sacrifice it to do extra damage?!",
     "es": "{Summoning:898}: Una vez en el terreno, esta criatura infligirá daños basados en tu {%at}.\n\\---\n<color=#7FD5E4>HECHIZOS</color>: Tu criatura no está precisamente viva… ¡No hay razón para no sacrificarla a cambio de algo de daño adicional!",
     "de": "{Summoning:898}: Ist sie erst einmal auf dem Spielfeld, verursacht diese Kreatur Schaden entsprechend deines {%at,plural:two}!\n\\---\n<color=#7FD5E4>ZAUBER</color>: Deine Kreatur lebt nicht wirklich\\_… Es gibt also keinen Grund, sie nicht für irgendwelchen zusätzlichen Schaden zu opfern!",
-    "pt": "{Summoning:898}: No campo de batalha, esta criatura infligirá danos com base no seu {%at}!\n\\---\n<color=#7FD5E4>FEITIÇOS</color>: Sua criatura não está viva de verdade... Então por que não sacrificá-la para causar dano adicional?!"
+    "pt": "{Summoning:898}: No campo de batalha, esta criatura infligirá danos com base no seu {%at}!\n\\---\n<color=#7FD5E4>FEITIÇOS</color>: Sua criatura não está viva de verdade… Então por que não sacrificá-la para causar dano adicional?!"
   },
   "simpleName": {
     "fr": "{%OnboardingSimpleNameIop}",

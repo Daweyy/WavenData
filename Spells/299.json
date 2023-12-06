@@ -12,6 +12,7 @@
   "m_id": 299,
   "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - ETHER - Soin Curatif",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2140880391,
     "b": 1672710068,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 637,
@@ -108,7 +109,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 19
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -122,7 +142,7 @@
     "pt": "Cura Curativa"
   },
   "description": {
-    "fr": "Soigne un allié de l'{%AT} de votre héros.\n",
+    "fr": "<if pvm>Soigne un allié de l'{%AT} de votre héros.</if><if pvp>Soigne un allié de {PVvalue:v}.</if>",
     "en": "Heals an ally with your hero's {%AT}.\n",
     "es": "Cura a un aliado el {%AT} de tu héroe.\n",
     "de": "Heilt einen Verbündeten um den {%AT,plural:one} deines Helden.\n",

@@ -12,6 +12,7 @@
   "m_id": 953,
   "m_displayName": "CRA - Voldorak Vo",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1138611728,
     "b": -711485708,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "7e9169470e0318f46b15d17540e8d49e"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -94,9 +98,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 380
+      "valueInPvM": 380,
+      "valueInPvP": 392
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -104,15 +109,17 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 22
+      "valueInPvM": 22,
+      "valueInPvP": 25
     },
     "riposte": null,
     "actionCriticalChance": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 50
+      "valueInPvM": 50,
+      "valueInPvP": 0
     },
     "actionCriticalBonus": null,
     "customActionTarget": null,
@@ -138,6 +145,9 @@
     "defaultSkinIdMale": 8446,
     "defaultSkinIdFemale": 1376,
     "god": 2,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

@@ -12,6 +12,7 @@
   "m_id": 107295,
   "m_displayName": "XELOR - ARME - GURPAPA - FEU - Protocole explosion",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1632963279,
     "b": 241401972,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 161,
@@ -141,9 +142,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgA",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 14
+            "valueInPvM": 14,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -183,9 +185,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgB",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 6
+            "valueInPvM": 6,
+            "valueInPvP": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",

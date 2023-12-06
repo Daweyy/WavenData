@@ -12,6 +12,7 @@
   "m_id": 847,
   "m_displayName": "DECK - INFINITE - EAU - Nox",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1957791218,
     "b": 1783421652,
@@ -63,9 +64,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 162
+      "valueInPvM": 162,
+      "valueInPvP": 149
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -73,9 +75,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 30
+      "valueInPvM": 30,
+      "valueInPvP": 35
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -109,7 +112,7 @@
     "rarity": 4,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 36,
     "castCondition": {
@@ -214,7 +217,7 @@
     "pt": "Nox"
   },
   "description": {
-    "fr": "{%attack} Invoque une {Summoning:605} derrière la cible.\n\\---\n{%death} Détruit les {Summoning:605,plural:other!} alliées en jeu.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "fr": "{%attack} Invoque une {Summoning:605} derrière la cible.\n\\---\n{%death} <if pvm>Détruit les {Summoning:605,plural:other!} alliées en jeu.</if><if pvp>Détruit la {Summoning:605} alliée en jeu.</if>\\v<family>{%Family_GreatVilain_Name}</family>",
     "en": "{%attack} Summons one {Summoning:605} behind the target.\n\\---\n{%death} Destroys the allied {Summoning:605,plural:other!} in play.\\v<family>{%Family_GreatVilain_Name}</family>",
     "es": "{%attack} Invoca una {Summoning:605} detrás del objetivo.\n\\---\n{%death} Destruye las {Summoning:605,plural:other!} aliadas en juego.\\v<family>{%Family_GreatVilain_Name}</family>",
     "de": "{%attack}: Beschwört eine\\_{Summoning:605} hinter dem Ziel.\n\\---\n{%death} Zerstört die verbündeten {Summoning:605,plural:other!} im Spiel.\\v<family>{%Family_GreatVilain_Name}</family>",

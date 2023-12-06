@@ -10,8 +10,9 @@
   },
   "m_Name": "501",
   "m_id": 501,
-  "m_displayName": "WEAPON - IOP - KASAÏ - Puissance Kasaï",
+  "m_displayName": "WEAPON - IOP - KASAÏ - Surcharge Kasaï",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -564954557,
     "b": -1330539964,
@@ -42,8 +43,13 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "p",
-          "value": 25
+          "referenceId": "cost",
+          "value": 4
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 60
         }
       ],
       "externalDynamicValueReferences": [],
@@ -52,17 +58,17 @@
     }
   },
   "name": {
-    "fr": "Puissance Kasaï",
-    "en": "Kasai Power",
-    "es": "Potencia Kasai",
-    "de": "Kasai-Schlagkraft",
-    "pt": "Potência Kasai"
+    "fr": "Surcharge Kasaï",
+    "en": "Kasai Overload",
+    "es": "Sobrecarga Kasai",
+    "de": "Kasai-Überladung",
+    "pt": "Sobrecarga Kasai"
   },
   "description": {
-    "fr": "{ATvalue:p, +, percent} à votre héros par {%AURA_SWORD} qu’il possède.",
-    "en": "{ATvalue:p, +, percent} to your hero per {%AURA_SWORD} that they have.",
-    "es": "{ATvalue:p, +, percent} a tu héroe por {%AURA_SWORD} que posea.",
-    "de": "{ATvalue:p, +, percent} für deinen Helden pro {%AURA_SWORD}, die er besitzt.",
-    "pt": "{ATvalue:p, +, percent} ao seu herói por {%AURA_SWORD} que ele possuir."
+    "fr": "<b>Lorsque vous lancez un sort élémentaire à {PAvalue:cost} ou plus :</b> Applique l’état élémentaire correspondant à la cible.\n\\---\nLorsque vous appliquez {%astral} : {value:v,percent,+} à vos bonus aux <b>AURAS</b>.",
+    "en": "<b>When you cast an elemental spell that costs {PAvalue:cost} or more:</b> Applies the corresponding elemental state on the target.\n\\---\nWhen you apply {%astral}: {value:v,percent,+} to your <b>AURA</b> bonuses.",
+    "es": "<b>Cuando lanzas un hechizo elemental a {PAvalue:cost} o más:</b> Aplica el estado elemental correspondiente al objetivo.\n\\---\nCuando aplicas {%astral}: {value:v,percent,+} a tus bonus a las <b>AURAS</b>.",
+    "de": "<b>Wenn du einen Elementarzauber für {PAvalue:cost} oder mehr wirkst:</b> Wendet den entsprechenden Elementarzustand beim Ziel an.\n\\---\nWenn du {%astral} anwendest: {value:v,percent,+} auf deinen <b>AURA</b>-Bonus.",
+    "pt": "<b>Quando você lança um feitiço elementar de {PAvalue:cost} ou mais:</b> Aplica o estado elementar correspondente ao alvo.\n\\---\nQuando você aplica {%astral}: {value:v,percent,+} aos seus bônus de <b>AURAS</b>."
   }
 }

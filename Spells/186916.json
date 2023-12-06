@@ -12,6 +12,7 @@
   "m_id": 186916,
   "m_displayName": "IOP - CLASSE - TERRE - Charge Tellurique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1081497791,
     "b": -1631980908,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -171,9 +172,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 11
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 11
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 27
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

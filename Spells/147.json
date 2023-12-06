@@ -12,6 +12,7 @@
   "m_id": 147,
   "m_displayName": "XELOR - CLASSE - FEU - Midi Pile",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -287476217,
     "b": -909805356,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -67,9 +68,20 @@
         "type": "GaugeValue",
         "element": 19,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 2
         }
       }
     ],
@@ -77,9 +89,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 5
         }
       }
     ],
@@ -109,9 +122,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 21
+            "valueInPvM": 21,
+            "valueInPvP": 28
           },
           "factor": {
             "type": "ReferenceScalingFactor",

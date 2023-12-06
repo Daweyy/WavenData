@@ -12,6 +12,7 @@
   "m_id": 271,
   "m_displayName": "IOP - CLASSE - ETHER - Colère de Iop",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -545797608,
     "b": 1728018340,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -104,6 +105,32 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 40
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgBoost",
+          "value": 13
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "percentMelee",
           "value": 50
@@ -127,7 +154,7 @@
     "pt": "Ira de Iop"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à un adversaire.\n\\---\n{NamedEffect:455}\\_: {value:percentMelee,percent,+} aux <b>DÉGÂTS</b> de ce sort.",
+    "fr": "<if pvm>Inflige l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire.</if>\n\\---\n{NamedEffect:455}\\_: <if pvm>{value:percentMelee,percent,+} aux <b>DÉGÂTS</b> de ce sort.</if><if pvp>{magicalDamage:dmgBoost,+}</if>",
     "en": "Inflicts your hero's {%AT} on an opponent.\n\\---\n{NamedEffect:455}: {value:percentMelee,percent,+} to this spell's <b>DAMAGE</b>.",
     "es": "Inflige el {%AT} de tu héroe a un adversario.\n\\---\n{NamedEffect:455}: {value:percentMelee,percent,+} a los <b>DAÑOS</b> de este hechizo.",
     "de": "Fügt einem Gegner den {%AT,plural:one} deines Helden als Schaden zu.\n\\---\n{NamedEffect:455}: {value:percentMelee,percent,+} auf den <b>SCHADEN</b> dieses Zaubers.",

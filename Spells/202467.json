@@ -12,6 +12,7 @@
   "m_id": 202467,
   "m_displayName": "IOP - CLASSE - EAU - Onde de Choc",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1508548321,
     "b": -1322752524,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -79,56 +80,68 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "SumValue",
+          "type": "ConditionalValue",
           "referenceId": "",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 8
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "pa",
-                  "value": -1
-                },
-                {
-                  "type": "EntityCountValue",
-                  "referenceId": "",
-                  "from": {
-                    "type": "AllCharactersSelector"
+          "condition": {
+            "type": "PvpFightCondition"
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 7
+          },
+          "ifFalse": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 8
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "pa",
+                    "value": -1
                   },
-                  "entityFilters": [
-                    {
-                      "type": "AroundSquaredTargetFilter",
-                      "targetsToCompare": {
-                        "type": "CasterHeroSelector"
+                  {
+                    "type": "EntityCountValue",
+                    "referenceId": "",
+                    "from": {
+                      "type": "AllCharactersSelector"
+                    },
+                    "entityFilters": [
+                      {
+                        "type": "AroundSquaredTargetFilter",
+                        "targetsToCompare": {
+                          "type": "CasterHeroSelector"
+                        },
+                        "distance": {
+                          "type": "EqualsTo",
+                          "dynamicValue": {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 1
+                          }
+                        }
                       },
-                      "distance": {
-                        "type": "EqualsTo",
-                        "dynamicValue": {
-                          "type": "ConstIntegerValue",
-                          "referenceId": "",
-                          "value": 1
+                      {
+                        "type": "TeamFilter",
+                        "isIdentical": false,
+                        "reference": {
+                          "type": "CasterSelector"
                         }
                       }
-                    },
-                    {
-                      "type": "TeamFilter",
-                      "isIdentical": false,
-                      "reference": {
-                        "type": "CasterSelector"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     ],
@@ -160,12 +173,26 @@
           "value": -1
         },
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -1
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 38
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 38
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 21
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -215,7 +242,7 @@
     "pt": "Onda de Choque"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: {PAvalue:pa} au coût de ce sort.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: <if pvm>{PAvalue:pa} au coût de ce sort</if><if pvp>{PAvalue:paPVP} au coût du prochain sort que vous jouez</if>.",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {PAvalue:pa} to the cost of this spell.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {PAvalue:pa} al coste de este hechizo.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: {PAvalue:pa} auf die Kosten dieses Zaubers.",

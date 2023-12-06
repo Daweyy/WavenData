@@ -12,6 +12,7 @@
   "m_id": 360,
   "m_displayName": "CRA - CLASSE - ETHER - Archerie",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 63883269,
     "b": 755349396,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -102,6 +103,11 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 22
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "v",
           "value": 2
         }
@@ -119,7 +125,7 @@
     "pt": "Tiro com Arco"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à la cible.\n\\---\nPiochez {SPELLCOUNTvalue:v}.",
+    "fr": "<if pvm>Inflige l'{%AT} de votre héros à la cible.</if><if pvp>Inflige {magicalDamage:dmg} à la cible.</if>\n\\---\nPiochez {SPELLCOUNTvalue:v}.",
     "en": "Inflicts your hero's {%AT} on the target.\n\\---\nDraw {SPELLCOUNTvalue:v}.",
     "es": "Inflige el {%AT} de tu héroe al objetivo.\n\\---\nSacas {SPELLCOUNTvalue:v}.",
     "de": "Verursacht beim Ziel den {%AT,plural:one} deines Helden als Schaden.\n\\---\nZieht {SPELLCOUNTvalue:v}.",

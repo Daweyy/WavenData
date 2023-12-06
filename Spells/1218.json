@@ -11,7 +11,8 @@
   "m_Name": "1218",
   "m_id": 1218,
   "m_displayName": "BONTA - Q20 - Appat",
-  "m_availability": 2,
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1261565652,
     "b": 236793428,
@@ -28,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "fe400c7a7472b884cbd4dad37ac5ef82"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -42,14 +43,14 @@
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
-    "canCrit": false,
+    "canCrit": true,
     "isEphemeral": false,
     "tags": [],
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": false,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -102,7 +103,19 @@
         ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "036ef14d85fb375438d79315f0497b81",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
@@ -138,16 +151,16 @@
   },
   "name": {
     "fr": "Appât",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "en": "Lure",
+    "es": "Cebo",
+    "de": "Anlockung",
+    "pt": "Engodo"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} et déplace de {value:c} case la cible.\n\\---\nCe {%SPELLCOUNT} revient en main.\n\\---\n+1 case chaque fois que le sort est joué.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Inflige {magicalDamage:dmg} et déplace la cible de {cell:c}.\n+1 case chaque fois que le sort est joué.\n\\---\nCe {%SPELLCOUNT} revient en main.",
+    "en": "Does {magicalDamage:dmg} and moves the target {cell:c}.\n+1 cell each time the spell is played.\n\\---\nThis {%SPELLCOUNT} returns to your hand.",
+    "es": "Inflige {magicalDamage:dmg} y desplaza al objetivo {cell:c}.\n+1 casilla cada vez que se lanza el hechizo.\n\\---\nEste {%SPELLCOUNT} vuelve a la mano.",
+    "de": "Verursacht {magicalDamage:dmg} und bewegt das Ziel um {cell:c}.\n+1 Feld für jedes Mal, das der Zauber ausgespielt wird.\n\\---\nDieser {%SPELLCOUNT} bleibt auf der Hand.",
+    "pt": "Inflige {magicalDamage:dmg} e desloca o alvo por {cell:c}.\n+1 célula toda vez que o feitiço for lançado.\n\\---\nO {%SPELLCOUNT} volta para sua mão."
   }
 }

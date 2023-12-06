@@ -10,8 +10,9 @@
   },
   "m_Name": "510",
   "m_id": 510,
-  "m_displayName": "CLAN QUEST - ORDER - TRISTEPIN - Tristepin",
+  "m_displayName": "STORY MODE - ACTE I - Tristepin",
   "m_availability": 3,
+  "m_wip": 1,
   "m_i18nNameId": {
     "a": 367569366,
     "b": 1166101476,
@@ -22,30 +23,32 @@
   "values": {
     "type": "QuestDefinition",
     "id": 510,
-    "questType": 11,
+    "questType": 10,
     "hideLevel": false,
     "chaptersVisualId": 74,
     "minPlayers": 1,
     "maxPlayers": 1,
-    "accessCondition": null,
+    "accessCondition": {
+      "type": "StoryMainQuestProgressionCondition",
+      "concernedPlayers": 0,
+      "questId": 510
+    },
     "npcForChapters": 258,
-    "npcForFightResults": null,
-    "npcForFightResultTexts": null,
+    "npcName": null,
     "ranks": [
       {
         "type": "QuestRank",
         "rank": 0,
         "firstChapterOrdinal": 1,
-        "chaptersCount": 5
+        "chaptersCount": 10
       }
     ],
     "chapters": [
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 0,
-        "npcForChaptersTexts": null,
-        "difficulty": 1,
-        "monsterLevel": 2,
+        "visualIndex": 2,
+        "monsterLevel": 30,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -76,14 +79,18 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 85
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 85
+        }
       },
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 1,
-        "npcForChaptersTexts": null,
-        "difficulty": 2,
-        "monsterLevel": 4,
+        "visualIndex": 3,
+        "monsterLevel": 32,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -114,14 +121,18 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 388
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 388
+        }
       },
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 2,
-        "npcForChaptersTexts": null,
-        "difficulty": 3,
-        "monsterLevel": 6,
+        "visualIndex": 4,
+        "monsterLevel": 45,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -152,14 +163,18 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 546
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 546
+        }
       },
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 3,
-        "npcForChaptersTexts": null,
-        "difficulty": 4,
-        "monsterLevel": 8,
+        "visualIndex": 4,
+        "monsterLevel": 50,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -190,14 +205,18 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 79
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 79
+        }
       },
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 4,
-        "npcForChaptersTexts": null,
-        "difficulty": 5,
-        "monsterLevel": 10,
+        "visualIndex": 5,
+        "monsterLevel": 55,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -228,7 +247,87 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 12
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 12
+        }
+      },
+      {
+        "type": "DungeonChapterDefinition",
+        "chapterIndex": 5,
+        "visualIndex": 5,
+        "monsterLevel": 60,
+        "rewards": null,
+        "oneTimeRewards": null,
+        "forcedDestinationOnExit": null,
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 164
+        }
+      },
+      {
+        "type": "DungeonChapterDefinition",
+        "chapterIndex": 6,
+        "visualIndex": 6,
+        "monsterLevel": 70,
+        "rewards": null,
+        "oneTimeRewards": null,
+        "forcedDestinationOnExit": null,
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 200
+        }
+      },
+      {
+        "type": "DungeonChapterDefinition",
+        "chapterIndex": 7,
+        "visualIndex": 7,
+        "monsterLevel": 75,
+        "rewards": null,
+        "oneTimeRewards": null,
+        "forcedDestinationOnExit": null,
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 180
+        }
+      },
+      {
+        "type": "DungeonChapterDefinition",
+        "chapterIndex": 8,
+        "visualIndex": 8,
+        "monsterLevel": 85,
+        "rewards": null,
+        "oneTimeRewards": null,
+        "forcedDestinationOnExit": null,
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 108
+        }
+      },
+      {
+        "type": "DungeonChapterDefinition",
+        "chapterIndex": 9,
+        "visualIndex": 8,
+        "monsterLevel": 90,
+        "rewards": null,
+        "oneTimeRewards": null,
+        "forcedDestinationOnExit": null,
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 193
+        }
       }
     ]
   },

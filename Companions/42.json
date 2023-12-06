@@ -12,6 +12,7 @@
   "m_id": 42,
   "m_displayName": "DECK - RARE - AIR - Duelliste Spectral",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1492253164,
     "b": 627581364,
@@ -73,7 +74,7 @@
                       "ifTrue": {
                         "type": "ConstIntegerValue",
                         "referenceId": "Bper",
-                        "value": 100
+                        "value": 150
                       },
                       "ifFalse": {
                         "type": "ConstIntegerValue",
@@ -101,7 +102,7 @@
                   "ifTrue": {
                     "type": "ConstIntegerValue",
                     "referenceId": "Bper2",
-                    "value": 300
+                    "value": 150
                   },
                   "ifFalse": {
                     "type": "ConstIntegerValue",
@@ -112,9 +113,10 @@
               ]
             },
             "from": {
-              "type": "ConstIntegerValue",
+              "type": "PvmOrPvpConstIntegerValue",
               "referenceId": null,
-              "value": 11
+              "valueInPvM": 11,
+              "valueInPvP": 26
             }
           },
           "factor": {
@@ -137,12 +139,12 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
-          "value": 100
+          "value": 150
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "Bper2",
-          "value": 300
+          "value": 150
         }
       ],
       "externalDynamicValueReferences": [],
@@ -156,9 +158,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 85
+      "valueInPvM": 85,
+      "valueInPvP": 89
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -166,9 +169,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 17
+      "valueInPvM": 17,
+      "valueInPvP": 21
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -202,7 +206,7 @@
     "rarity": 1,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 940,
     "castCondition": {

@@ -12,6 +12,7 @@
   "m_id": 555,
   "m_displayName": "DECK - COMMON - FIRE - Dargone",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 657291510,
     "b": 427534900,
@@ -55,6 +56,9 @@
       "keywordReferences": [
         "LIFESTEAL",
         {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 22,
           "id": 116
         }
@@ -65,9 +69,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 65
+      "valueInPvM": 65,
+      "valueInPvP": 60
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -75,9 +80,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 12
+      "valueInPvM": 12,
+      "valueInPvP": 10
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -111,7 +117,7 @@
     "rarity": 0,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 985,
     "castCondition": {
@@ -216,7 +222,7 @@
     "pt": "Dargona"
   },
   "description": {
-    "fr": "{%Attack} {value:a,+}\\_{aura:116,value:a}.",
+    "fr": "{%Attack} <if pvm>{value:a,+}\\_{aura:116,value:a}</if><if pvp>Soigne votre héros de l'{%AT} de ce personnage</if>.",
     "en": "{%Attack} {value:a,+}\\_{aura:116,value:a}.",
     "es": "{%Attack} {value:a,+}\\_{aura:116,value:a}.",
     "de": "{%Attack}{value:a,+}\\_{aura:116,value:a}.",

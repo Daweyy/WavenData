@@ -10,8 +10,9 @@
   },
   "m_Name": "238866",
   "m_id": 238866,
-  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - ETHER - Course Déphasée",
+  "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - ETHER - Maîtrise du déphasage",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 343598306,
     "b": -460675516,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 141,
@@ -65,7 +66,7 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "value": 2
         }
       }
     ],
@@ -73,7 +74,16 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "CasterHeroSelector"
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [
@@ -102,19 +112,20 @@
         {
           "type": 20,
           "id": 18
-        }
+        },
+        "SUPPORT"
       ]
     }
   },
   "name": {
-    "fr": "Course Déphasée",
+    "fr": "Maîtrise du déphasage",
     "en": "Dephased Race",
     "es": "Carrera Desfasada",
     "de": "Phasenverschobenes Rennen",
     "pt": "Corrida Defasada"
   },
   "description": {
-    "fr": "Confère {PropertyEffect:18} à votre héros et {value:p} {%PM} jusqu'à la fin du tour. \n",
+    "fr": "{value:p,+} {%PM} à un allié jusqu'à la fin du tour. \n\\---\n{#Support} : Confère {PropertyEffect:18} à la cible.",
     "en": "Confers {PropertyEffect:18} on your hero and {value:p} {%PM} until the end of the turn. \n",
     "es": "Confiere {PropertyEffect:18} a tu héroe y {value:p} {%PM} hasta el final del turno. \n",
     "de": "Gewährt deinem Helden bis zum Rundenende {PropertyEffect:18} und {value:p} {%PM}. \n",

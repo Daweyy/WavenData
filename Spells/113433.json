@@ -12,6 +12,7 @@
   "m_id": 113433,
   "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - EAU - Estoc Givre",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1295064472,
     "b": -2013640172,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 534,
@@ -111,9 +112,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 42
+            "valueInPvM": 42,
+            "valueInPvP": 37
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -152,7 +154,15 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 20,
+          "id": 26
+        }
+      ]
     }
   },
   "name": {
@@ -163,7 +173,7 @@
     "pt": "Estocada Congelada"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v si la cible est <b>MOUILLÉE<b>\\_<sprite name=\"wet\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PA_RESvalue:PAReserve,+}\\v si la cible est <b>MOUILLÉE<b>\\_<sprite name=\"wet\">.</if><if pvp>{PropertyEffect:26} la cible si elle est <b>MOUILLÉE<b>\\_<sprite name=\"wet\">.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v if the target is <b>WET<b>\\_<sprite name=\"wet\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v si el objetivo está <b>MOJADO<b>\\_<sprite name=\"wet\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PA_RESvalue:PAReserve,+}\\v, wenn das Ziel <b>DURCHNÄSST<b>\\_<sprite name=\"wet\"> ist.",

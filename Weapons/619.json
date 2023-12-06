@@ -11,7 +11,8 @@
   "m_Name": "619",
   "m_id": 619,
   "m_displayName": "IOP - Pic Astramantis",
-  "m_availability": 2,
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1258278805,
     "b": -1592779644,
@@ -27,28 +28,31 @@
     "e": -932752581
   },
   "m_i18nGameplayDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 1258278805,
+    "b": -1592779644,
+    "c": -217292391,
+    "d": -154238810,
+    "e": -1932279322
   },
   "m_i18nSimpleNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 1258278805,
+    "b": -1592779644,
+    "c": -217292391,
+    "d": -154238810,
+    "e": 1500721347
   },
   "m_i18nSimpleDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 1258278805,
+    "b": -1592779644,
+    "c": -217292391,
+    "d": -154238810,
+    "e": 239856982
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "36926d872a0b81c4989c1ca0b79b8cb5"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": "9ac11c0f880d7d14bad9c2e91e94d582"
   },
   "values": {
     "type": "WeaponDefinition",
@@ -58,32 +62,38 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 411,
       "skinIds": [
-        1
+        411,
+        574,
+        747,
+        113,
+        377,
+        1399
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 100
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 1155
+        }
+      ]
     },
     "families": [
       1
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 410
+      "valueInPvM": 410,
+      "valueInPvP": 394
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -91,9 +101,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 29
+      "valueInPvM": 29,
+      "valueInPvP": 26
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -122,9 +133,24 @@
       3759
     ],
     "difficultyHint": 1,
-    "defaultSkinIdMale": 1,
-    "defaultSkinIdFemale": 1,
+    "defaultSkinIdMale": 411,
+    "defaultSkinIdFemale": 574,
     "god": 1,
+    "conditionalAvailability": {
+      "type": "BattlePassRelatedAvailability",
+      "from": 76,
+      "to": 76,
+      "before": {
+        "type": "SoonInBattlePass",
+        "relatedBp": null
+      },
+      "during": {
+        "type": "UnlockableInCurrentBattlePass"
+      },
+      "after": {
+        "type": "Soon"
+      }
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -146,7 +172,7 @@
       856,
       202467,
       344,
-      142,
+      1309,
       239
     ]
   },
@@ -158,31 +184,31 @@
     "pt": "Ponta Astramantis"
   },
   "description": {
-    "fr": "{%ATTACK} Votre héros se téléporte sur une case adjacente\\_<sprite name=\"cell_cross\"> à l'adversaire ayant le plus de {%PV,plural:other} et lui inflige {value:v,percent} de son {%AT}.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "{%ATTACK} Ajoute le sort {Spell:1155} à votre main<if pvp> si la cible est un adversaire</if>.",
+    "en": "{%ATTACK} Adds the {Spell:1155} spell to your hand.",
+    "es": "{%ATTACK} Añade el hechizo {Spell:1155} a tu mano.",
+    "de": "{%ATTACK} Fügt deiner Hand den Zauber „{Spell:1155}“ hinzu.",
+    "pt": "{%ATTACK} Adiciona o feitiço {Spell:1155} à sua mão."
   },
   "gameplayDescription": {
-    "fr": "",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "<color=#7FD5E4>LANCES</color>\\_: Alignez habilement vos ennemis avec ces mécanismes pour prendre le contrôle du terrain.\n\\---\n<color=#7FD5E4>JAUGE ÉLÉMENTAIRE</color>\\_: Générez cette ressource pour invoquer de puissants compagnons\\_!",
+    "en": "<color=#7FD5E4>LANCES</color>: Line up your enemies cleverly with these mechanisms to take control of the field.\n\\---\n<color=#7FD5E4>ELEMENTAL GAUGES</color>: Generate this resource to summon powerful companions!",
+    "es": "<color=#7FD5E4>LANZA</color>: Alinea con habilidad a tus enemigos con estos mecanismos para controlar el terreno.\n\\---\n<color=#7FD5E4>INDICADOR ELEMENTAL</color>: Genera este recurso para invocar a poderosos compañeros.",
+    "de": "<color=#7FD5E4>LANZE</color>: Bewege deine Gegner mit dieser Mechanik dahin, wo du sie haben willst, und erlange so die Kontrolle über das Schlachtfeld.\n\\---\n<color=#7FD5E4>ELEMENTARPUNKTE</color>: Generiere diese Ressource, um mächtige Begleiter zu beschwören!",
+    "pt": "<color=#7FD5E4>LANÇA</color>: Alinhe habilmente seus inimigos com esses mecanismos para assumir o controle do campo de batalha.\n\\---\n<color=#7FD5E4>CARGA ELEMENTAR</color>: Gere esse recurso para invocar companheiros poderosos!"
   },
   "simpleName": {
-    "fr": "",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "{%OnboardingSimpleNameIop}",
+    "en": "{%OnboardingSimpleNameIop}",
+    "es": "{%OnboardingSimpleNameIop}",
+    "de": "{%OnboardingSimpleNameIop}",
+    "pt": "{%OnboardingSimpleNameIop}"
   },
   "simpleDescription": {
-    "fr": "",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "{%OnboardingSimpleDescriptionIop}",
+    "en": "{%OnboardingSimpleDescriptionIop}",
+    "es": "{%OnboardingSimpleDescriptionIop}",
+    "de": "{%OnboardingSimpleDescriptionIop}",
+    "pt": "{%OnboardingSimpleDescriptionIop}"
   }
 }

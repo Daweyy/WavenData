@@ -12,6 +12,7 @@
   "m_id": 130,
   "m_displayName": "ENIRIPSA - CLASSE - ETHER - Meme pas Mort",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1316612387,
     "b": 1674913540,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -110,6 +111,20 @@
             "entityTypes": [
               2
             ]
+          },
+          {
+            "type": "PropertiesFilter",
+            "comparison": 4,
+            "properties": [
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 41
+              },
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 88
+              }
+            ]
           }
         ]
       }
@@ -130,7 +145,14 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "RESURRECTABLE"
+        }
+      ]
     }
   },
   "name": {
@@ -141,10 +163,10 @@
     "pt": "Nem Morreu"
   },
   "description": {
-    "fr": "Échange la position de votre héros avec celle d'un de vos compagnons, puis le renvoie dans votre deck.",
-    "en": "Switches your hero's position with that of one of your companions then sends the companion back to your deck.",
-    "es": "Intercambia la posición de tu héroe con la de uno de tus compañeros, luego lo reenvía a tu mazo.",
-    "de": "Tauscht die Position deines Helden mit der eines deiner Begleiter und fügt ihn dann wieder deinem Deck hinzu.",
-    "pt": "Troca seu herói de posição com um de seus companheiros, depois manda o companheiro de volta para o seu deck."
+    "fr": "<if pvm>Échange la position de votre héros avec celle d'un de vos compagnons.\n\\---\nRetire ce compagnon du terrain et le rend {#RESURRECTABLE}.</if><if pvp>Retire un de vos compagnons du terrain et le rend {#RESURRECTABLE}.</if>",
+    "en": "Switches your hero's position with that of one of your companions.\n\\---\nRemoves that companion from the field and they become {#RESURRECTABLE}.",
+    "es": "Intercambia la posición de tu héroe con la de uno de tus compañeros.\n\\---\nRetira a este compañero del terreno, y lo vuelve {#RESURRECTABLE}.",
+    "de": "Tauscht die Position deines Helden mit der eines deiner Begleiter.\n\\---\nNimmt diesen Begleiter vom Spielfeld und macht ihn {#RESURRECTABLE}.",
+    "pt": "Troca a posição do seu herói com a de um dos seus companheiros.\n\\---\nRetira este companheiro do campo de batalha e o torna {#RESURRECTABLE}."
   }
 }

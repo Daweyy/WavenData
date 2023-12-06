@@ -12,6 +12,7 @@
   "m_id": 35,
   "m_displayName": "ENIRIPSA - CLASSE - ETHER - Lien d'amitié",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -358153805,
     "b": -1199184620,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -102,9 +103,32 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "a",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        },
+        {
+          "type": "PvmOrPvpValue",
+          "referenceId": "v",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       ],
       "externalDynamicValueReferences": [],
@@ -126,7 +150,7 @@
     "pt": "Vínculo de Amizade"
   },
   "description": {
-    "fr": "Confère {PropertyEffect:8} à un allié.\n\\---\n{#support}\\_: {value:a,+}\\_{%AURA_HEART,value:a} à votre héros s'il en possède déjà.",
+    "fr": "Confère {PropertyEffect:8} à un allié.\n\\---\n{#support}\\_: <if pvm>{value:a,+}\\_{%AURA_HEART,value:a} à votre héros s'il en possède déjà.</if><if pvp>Piochez {SPELLCOUNTvalue:v}.</if>",
     "en": "Confers {PropertyEffect:8} on an ally.\n\\---\n{#support}: {value:a,+}\\_{%AURA_HEART,value:a} to your hero if they have any already.",
     "es": "Confiere {PropertyEffect:8} a un aliado.\n\\---\n{#support}: {value:a,+}\\_{%AURA_HEART,value:a} a tu héroe si ya tiene.",
     "de": "Verleiht einem Verbündeten {PropertyEffect:8}.\n\\---\n{#support}: {value:a,+}\\_{%AURA_HEART,value:a} für deinen Helden, falls er bereits eine besitzt.",

@@ -12,6 +12,7 @@
   "m_id": 178,
   "m_displayName": "ENIRIPSA - CLASSE - EAU - Elixir de Glace",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 309166395,
     "b": -1188039372,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": false,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -81,18 +82,31 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": true,
-            "reference": {
-              "type": "CasterSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
             }
-          }
-        ]
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -109,6 +123,28 @@
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
         {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "heal",
@@ -156,7 +192,7 @@
     "pt": "Elixir de Gelo"
   },
   "description": {
-    "fr": "Soigne un allié de {PVvalue:heal}.\n\\---\n{value:a,+}\\_{aura:118,value:a} à votre héros.\n\\---\n<rem>Ce sort est détruit lorsqu'il est joué.</rem>",
+    "fr": "<if pvm>Soigne un allié de {PVvalue:heal}.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n{value:a,+}\\_{aura:118,value:a} à votre héros.\n\\---\n<rem>Ce sort est détruit lorsqu'il est joué.</rem>",
     "en": "Heals an ally {PVvalue:heal}.\n\\---\n{value:a,+}\\_{aura:118,value:a} to your hero.\n\\---\n<rem>This spell is destroyed when played.</rem>",
     "es": "Cura a un aliado {PVvalue:heal}.\n\\---\n{value:a,+}\\_{aura:118,value:a} a tu héroe.\n\\---\n<rem>Este hechizo se destruye cuando se usa.</rem>",
     "de": "Heilt einen Verbündeten um {PVvalue:heal}\\_.\n\\---\n{value:a,+}\\_{aura:118,value:a} für deinen Helden.\n\\---\n<rem>Dieser Zauber wird zerstört, wenn er ausgespielt wird.</rem>",

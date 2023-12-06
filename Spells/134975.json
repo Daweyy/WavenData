@@ -12,6 +12,7 @@
   "m_id": 134975,
   "m_displayName": "ENIRIPSA - ARME - LAME VORACIUS - AIR - Aiguillon Turbulent",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -60241388,
     "b": -2138507532,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 202,
@@ -135,9 +136,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 40
+            "valueInPvM": 40,
+            "valueInPvP": 42
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -169,9 +171,18 @@
           "value": 30
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "c",
-          "value": 3
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 4
+          }
         }
       ],
       "externalDynamicValueReferences": [],

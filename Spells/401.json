@@ -12,6 +12,7 @@
   "m_id": 401,
   "m_displayName": "XELOR - ARME - PRAMIUM - ETHER - Protection Pramium",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 634424579,
     "b": -325573500,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 614,
@@ -72,9 +73,40 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CasterHeroSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllBoardPresencesSelector"
+          },
+          "filters": [
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                20
+              ]
+            },
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        }
       }
     },
     "spellEffectData": [
@@ -95,6 +127,16 @@
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 20,
+          "id": 8
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 20,
           "id": 8
         }
@@ -109,7 +151,7 @@
     "pt": "Proteção Pramium"
   },
   "description": {
-    "fr": "Confère {PropertyEffect:8} à vos <b>SINISTROS</b>.",
+    "fr": "<if pvm>Confère {PropertyEffect:8} à vos <b>SINISTROS</b></if><if pvp>Confère {PropertyEffect:8} à votre héros et au <b>SINISTRO</b> ciblé</if>.",
     "en": "Confers {PropertyEffect:8} on your <b>SINISTROS</b>.",
     "es": "Confiere {PropertyEffect:8} a tus <b>SINISTROS</b>.",
     "de": "Verleiht deinen <b>SINISTROS</b> {PropertyEffect:8}.",

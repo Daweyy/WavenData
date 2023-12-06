@@ -12,6 +12,7 @@
   "m_id": 1097,
   "m_displayName": "XELOR - Catalyseur Temporel",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1035894142,
     "b": -617704700,
@@ -43,18 +44,59 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bcPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            89,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            89,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
-          "referenceId": "nb",
-          "value": 1
+          "referenceId": "blPVP",
+          "value": -12
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        {
-          "type": 22,
-          "id": 138
-        },
+        "BOUNCE",
         "OBJECTMECHANISM"
       ]
     },
@@ -70,9 +112,10 @@
       "reference": 17
     },
     "baseMecaLife": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 30
+      "valueInPvM": 25,
+      "valueInPvP": 30
     }
   },
   "name": {

@@ -12,6 +12,7 @@
   "m_id": 852,
   "m_displayName": "CRA - CLASSE - FEU - Fleche Affligeante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 985997313,
     "b": -922028236,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -112,9 +113,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 9
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 9
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 6
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

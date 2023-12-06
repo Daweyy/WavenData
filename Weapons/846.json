@@ -12,6 +12,7 @@
   "m_id": 846,
   "m_displayName": "CRA - Arc Piven",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1924960356,
     "b": 1137737924,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "71609f5e33cceb44e9146b57e8d80d68"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 846,
@@ -74,46 +78,15 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "SumValue",
-          "referenceId": "v",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 60
-            },
-            {
-              "type": "ConditionalValue",
-              "referenceId": "",
-              "condition": {
-                "type": "HolderHasSkillCondition",
-                "skill": 136796
-              },
-              "ifTrue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "p",
-                "value": 60
-              },
-              "ifFalse": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
-              }
-            }
-          ]
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "p",
-          "value": 60
-        },
-        {
           "type": "ConstIntegerValue",
           "referenceId": "au",
           "value": 30
         }
       ],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.195.v",
+        "ParameterizedEffectExecution.195.dmg"
+      ],
       "hasEffects": true,
       "keywordReferences": []
     },
@@ -122,9 +95,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 385
+      "valueInPvM": 385,
+      "valueInPvP": 390
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -132,15 +106,17 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 20
+      "valueInPvM": 20,
+      "valueInPvP": 19
     },
     "riposte": null,
     "actionCriticalChance": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 50
+      "valueInPvM": 50,
+      "valueInPvP": 0
     },
     "actionCriticalBonus": null,
     "customActionTarget": null,
@@ -166,6 +142,9 @@
     "defaultSkinIdMale": 1778,
     "defaultSkinIdFemale": 2854,
     "god": 2,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -199,11 +178,11 @@
     "pt": "Arco Piven"
   },
   "description": {
-    "fr": "Lorsque votre héros libère une {%AURA_SIGHT,plural:one}\\_: Inflige {value:v,percent} de son {%AT} à la cible.\n\\---\n{value:au,percent} de vos bonus d'{%AT} sont convertis en <b>BONUS</b> aux <b>AURAS</b>.",
-    "en": "When your hero releases a {%AURA_SIGHT,plural:one}: Inflicts {value:v,percent} of their {%AT} on the target.\n\\---\n{value:au,percent} of your {%AT} bonus is converted into an <b>AURA</b> <b>BONUS</b>.",
-    "es": "Cuando tu héroe libera un {%AURA_SIGHT,plural:one}: Inflige un {value:v,percent} de su {%AT} al objetivo.\n\\---\n{value:au,percent} de tus bonus de {%AT} se convierten en <b>BONUS</b> a las <b>AURAS</b>.",
-    "de": "Wenn dein Held eine {%AURA_SIGHT,plural:one} auslöst: Verursacht beim Ziel {value:v,percent} des {%AT,plural:two} als Schaden.\n\\---\n{value:au,percent} deines {%AT}-Bonus wird in <b>AURA</b>-<b>BONUS</b> umgewandelt.",
-    "pt": "Quando seu herói libera uma {%AURA_SIGHT,plural:one}: Inflige {value:v,percent} de seu {%AT} ao alvo.\n\\---\n{value:au,percent} de seus bônus de {%AT} são convertidos em <b>BÔNUS</b> para as <b>AURAS</b>."
+    "fr": "Lorsque votre héros libère une {%AURA_SIGHT,plural:one}\\_: <if pvm>Inflige {value:ParameterizedEffectExecution.195.v,percent} de son {%AT} à la cible.</if><if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.195.dmg} à la cible.</if><if pvm>\n\\---\n{%FightStarted} {value:au,percent} de vos bonus d'{%AT} sont convertis en <b>BONUS</b> aux <b>AURAS</b>.</if>",
+    "en": "When your hero releases a {%AURA_SIGHT,plural:one}: Inflicts {value:ParameterizedEffectExecution.195.v,percent} of their {%AT} on the target.\n\\---\n{%FightStarted} {value:au,percent} of your {%AT} bonus is converted into an <b>AURA</b> <b>BONUS</b>.",
+    "es": "Cuando tu héroe libera un {%AURA_SIGHT,plural:one}: Inflige un {value:ParameterizedEffectExecution.195.v,percent} de su {%AT} al objetivo.\n\\---\n{%FightStarted} {value:au,percent} de tus bonus de {%AT} se convierten en <b>BONUS</b> a las <b>AURAS</b>.",
+    "de": "Wenn dein Held eine {%AURA_SIGHT,plural:one} auslöst: Verursacht {value:ParameterizedEffectExecution.195.v,percent} seines {%AT,plural:two} beim Ziel als Schaden.\n\\---\n{%FightStarted} {value:au,percent} deines {%AT}-Bonus werden in <b>AURA</b>-<b>BONUS</b> umgewandelt.",
+    "pt": "Quando seu herói libera uma {%AURA_SIGHT,plural:one}: Inflige {value:ParameterizedEffectExecution.195.v,percent} de seu {%AT} ao alvo.\n\\---\n{%FightStarted} {value:au,percent} de seus bônus de {%AT} são convertidos em <b>BÔNUS</b> para as <b>AURAS</b>."
   },
   "gameplayDescription": {
     "fr": "<color=#7FD5E4>AURA MIRE</color>\\_: Cette flèche magique gravite autour de vous pour infliger des dégâts en plus quand vous jouez un sort.\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",

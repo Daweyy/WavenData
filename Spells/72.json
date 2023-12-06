@@ -1,0 +1,167 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "72",
+  "m_id": 72,
+  "m_displayName": "STORY MODE - 39 - Charge de Goultard",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -943657178,
+    "b": -1013143068,
+    "c": -982549175,
+    "d": -804951920,
+    "e": 1153568326
+  },
+  "m_i18nDescriptionId": {
+    "a": -943657178,
+    "b": -1013143068,
+    "c": -982549175,
+    "d": -804951920,
+    "e": 744648348
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "934758bc17f149b48bc9fc086d276c6d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 72,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "43d560c132edaaa4295fc09897ad58ce",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 5
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "x",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Charge de Goultard",
+    "en": "Goultard's Charge",
+    "es": "Carga de Gúltar",
+    "de": "Goultards Stürmen",
+    "pt": "Investida de Gultar"
+  },
+  "description": {
+    "fr": "{#PUSH} les adversaires adjacents\\_<sprite name=\"cell_cross\"> de {cell:c}.\n\\---\n{Weapon:561!} charge l'un d'eux et lui inflige {magicalDamage:x}.",
+    "en": "{#PUSH} adjacent\\_<sprite name=\"cell_cross\"> opponents {cell:c}.\n\\---\n{Weapon:561!} charges one of them and does {magicalDamage:x} to them.",
+    "es": "{#PUSH} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> {cell:c}.\n\\---\n{Weapon:561!} carga contra uno de ellos y le inflige {magicalDamage:x}.",
+    "de": "{#PUSH,plural:few} die angrenzenden\\_<sprite name=\"cell_cross\"> Gegner um {cell:c} zurück.\n\\---\n{Weapon:561!} stürmt auf einen von ihnen zu und verursacht {magicalDamage:x}.",
+    "pt": "{#PUSH} os adversários adjacentes\\_<sprite name=\"cell_cross\"> por {cell:c}.\n\\---\n{Weapon:561!} investe contra um deles e lhe inflige {magicalDamage:x}."
+  }
+}

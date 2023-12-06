@@ -12,6 +12,7 @@
   "m_id": 137783,
   "m_displayName": "CRA - ARME - SHIRU SHADEN - EAU - Shiruken Glace",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1709695898,
     "b": -1722023852,
@@ -66,7 +67,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 191,
@@ -80,9 +81,20 @@
         "type": "GaugeValue",
         "element": 12,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -149,9 +161,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 17
+            "valueInPvM": 17,
+            "valueInPvP": 23
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -186,9 +199,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "pv",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "valueInPvM": 11,
+            "valueInPvP": 10
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 858,
   "m_displayName": "XELOR - CLASSE - FEU - Chronophagie",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -990619563,
     "b": 1609369636,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -87,35 +88,80 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "SquareAreaOfEffectSelector",
-        "originSelector": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllObjectMechanismsSelector"
-          },
-          "filters": [
-            {
-              "type": "OwnerFilter",
-              "isIdentical": true,
-              "reference": {
-                "type": "CasterSelector"
-              }
-            },
-            {
-              "type": "FamilyFilter",
-              "condition": 1,
-              "families": [
-                20
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "UnionOfEntitiesSelector",
+            "first": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "FamilyFilter",
+                  "condition": 1,
+                  "families": [
+                    20
+                  ]
+                }
               ]
+            },
+            "second": {
+              "type": "CasterSelector"
             }
-          ]
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": null,
-          "value": 1
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllObjectMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "FamilyFilter",
+                "condition": 1,
+                "families": [
+                  20
+                ]
+              }
+            ]
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          }
         }
       }
     },
@@ -219,7 +265,7 @@
     "pt": "Cronofagia"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'un de vos <b>SINISTROS</b>.\n\\---\n{#REWIND}",
+    "fr": "<if pvm>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'un de vos <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> de votre héros ou d'un de vos <b>SINISTROS</b>.</if>\n\\---\n{#REWIND}",
     "en": "Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> one of your <b>SINISTROS</b>.\n\\---\n{#REWIND}",
     "es": "Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de uno de tus <b>SINISTROS</b>.\n\\---\n{#REWIND}",
     "de": "Verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> eines deiner <b>Sinistros</b>.\n\\---\n{#REWIND}",

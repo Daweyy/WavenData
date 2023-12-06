@@ -12,6 +12,7 @@
   "m_id": 120121,
   "m_displayName": "IOP - ARME - GLAIVE STALAKTOSS - EAU - Givrure",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 121953598,
     "b": -1855052828,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 911,
@@ -199,9 +200,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 21
+            "valueInPvM": 21,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",

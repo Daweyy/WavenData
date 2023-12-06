@@ -12,6 +12,7 @@
   "m_id": 239738,
   "m_displayName": "SRAM - ARME - KARTANA - ETHER - Kenavo",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1112052337,
     "b": 1279426932,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 182,
@@ -114,36 +115,152 @@
       }
     },
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "ConditionalCastTargetDefinition",
+        "condition": {
+          "type": "NumberOfEntityCondition",
+          "selector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllFloorMechanismsSelector"
             },
-            "distance": {
-              "type": "Between",
-              "minIncluded": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
-              },
-              "maxIncluded": {
-                "type": "ConstIntegerValue",
-                "referenceId": "c",
-                "value": 5
+            "filters": [
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
               }
-            }
+            ]
           },
-          {
-            "type": "HasEmptyPathInLineToTargetFilter",
-            "startCoords": {
-              "type": "CasterHeroSelector"
+          "value": {
+            "type": "GreaterEqualThan",
+            "dynamicValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
             }
           }
-        ]
+        },
+        "selectorIfTrue": {
+          "type": "TwoCastTargetDefinition",
+          "selector1": {
+            "type": "FilteredCharacterSelector",
+            "filters": [
+              {
+                "type": "InLineTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 5
+                  }
+                }
+              },
+              {
+                "type": "HasEmptyPathInLineToTargetFilter",
+                "startCoords": {
+                  "type": "CasterHeroSelector"
+                }
+              }
+            ]
+          },
+          "selector2": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllFloorMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              }
+            ]
+          }
+        },
+        "selectorIfFalse": {
+          "type": "OneCastTargetDefinition",
+          "selector": {
+            "type": "FilteredCharacterSelector",
+            "filters": [
+              {
+                "type": "InLineTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 5
+                  }
+                }
+              },
+              {
+                "type": "HasEmptyPathInLineToTargetFilter",
+                "startCoords": {
+                  "type": "CasterHeroSelector"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 5
+                }
+              }
+            },
+            {
+              "type": "HasEmptyPathInLineToTargetFilter",
+              "startCoords": {
+                "type": "CasterHeroSelector"
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -166,6 +283,27 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 5
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 33
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -181,7 +319,7 @@
     "pt": "Kenavo"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un adversaire aligné avec lui jusqu’à {cell:c} et lui inflige son {%AT}.\n\\---\nIl se téléporte ensuite sur le {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié le plus proche. ",
+    "fr": "<if pvm>Votre héros <b>CHARGE</b> un adversaire aligné avec lui jusqu’à {cell:c} et lui inflige son {%AT}.</if><if pvp>Votre héros <b>CHARGE</b> un adversaire aligné avec lui jusqu’à {cell:c} et lui inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Il se téléporte ensuite sur le {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié le plus proche</if><if pvp>Il se téléporte ensuite sur le {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié ciblé</if>.",
     "en": "Your hero <b>CHARGES</b> an in-line opponent up to {cell:c} away and inflicts their {%AT} on them.\n\\---\nThey then teleport to the nearest allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}.",
     "es": "Tu héroe <b>CARGA</b> contra un adversario alineado con él hasta {cell:c} y le inflige su {%AT}.\n\\---\nLuego se teletransporta a la {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada más cercana.",
     "de": "Dein Held <b>STÜRMT</b> auf einen Gegner bis zu {cell:c} in derselben Reihe zu und fügt ihm seinen {%AT,plural:one} als Schaden zu.\n\\---\nTeleportiert sich anschließend auf die nächste verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME}.",

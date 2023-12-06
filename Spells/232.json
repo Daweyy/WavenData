@@ -12,6 +12,7 @@
   "m_id": 232,
   "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - ETHER - Scalpel Apostruker",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 770119610,
     "b": 1029874500,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 637,
@@ -145,7 +146,29 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -159,7 +182,7 @@
     "pt": "Bisturi Apostruker"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à l'adversaire ayant le moins de {%PV} puis à celui en ayant le plus.",
+    "fr": "<if pvm>Inflige l'{%AT} de votre héros à l'adversaire ayant le moins de {%PV} puis à celui en ayant le plus.</if><if pvp>Inflige {magicalDamage:v} à l'adversaire ayant le moins de {%PV} puis à celui en ayant le plus.</if>",
     "en": "Inflicts your hero's {%AT} on the opponent with the least {%PV} then on the one with the most.",
     "es": "Inflige el {%AT} de tu héroe al adversario que tenga menos {%PV} y después, al que tenga más.",
     "de": "Verursacht den {%AT} deines Helden erst bei dem Gegner mit den wenigsten {%PV} als Schaden, dann bei dem mit dem meisten.",

@@ -12,6 +12,7 @@
   "m_id": 207969,
   "m_displayName": "CRA - CLASSE - EAU - Trait Ondoyant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1496173687,
     "b": 823016212,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -126,9 +127,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgA",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 26
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 26
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 25
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -163,9 +173,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgB",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 7
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 7
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 25
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

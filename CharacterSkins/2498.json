@@ -12,6 +12,7 @@
   "m_id": 2498,
   "m_displayName": "TRANSFORMATION - ENIRIPSA - Arcone Mortis",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1928964966,
     "b": 1676521412,
@@ -75,19 +76,57 @@
           "type": "ConstIntegerValue",
           "referenceId": "dr",
           "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DRAIN",
-        {
-          "type": 20,
-          "id": 114
-        },
         {
           "type": 20,
           "id": 18
+        },
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 22,
+          "id": 53
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "DRAIN"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "type": 20,
+          "id": 114
         }
       ]
     },

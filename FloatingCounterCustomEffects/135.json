@@ -12,6 +12,7 @@
   "m_id": 135,
   "m_displayName": "FireOwl",
   "m_availability": 3,
+  "m_wip": 0,
   "m_illustration": {
     "assetGuid": "a175742ef769f68439d96bfc33cb24ea"
   },
@@ -40,7 +41,38 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmg",
+          "referenceId": "dmgSin",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 4
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0.05
+            }
+          },
+          "buffs": [
+            40,
+            25,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelectorEvenIfRemoved"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgPVP",
+          "value": 10
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgPVM",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,

@@ -1,0 +1,77 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 3841871838608002000
+  },
+  "m_Name": "918",
+  "m_id": 918,
+  "m_displayName": "WEAPON - ENIRIPSA - Apostruker Passiv",
+  "m_availability": 3,
+  "m_wip": 1,
+  "values": {
+    "type": "ParameterizedEffectExecutionDefinition",
+    "id": 918,
+    "parameters": [
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "Source"
+      },
+      {
+        "type": "FightTargetSelectorKey",
+        "name": "Target"
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "perc",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 35
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": null,
+              "condition": {
+                "type": "HolderHasSkillCondition",
+                "skill": 764
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "p",
+                "value": 35
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 35
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pvp",
+          "value": 13
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
+    }
+  }
+}

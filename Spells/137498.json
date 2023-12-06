@@ -12,6 +12,7 @@
   "m_id": 137498,
   "m_displayName": "ENIRIPSA - ARME - AMBRE TAMASHI - ETHER - Nocturancie",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -520473766,
     "b": 405658004,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 277,
@@ -73,18 +74,44 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 7
+          "valueInPvM": 7,
+          "valueInPvP": 5
         }
       }
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": []
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvmFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      },
+      "selectorIfFalse": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "SummoningDefinitionFilter",
+              "condition": 1,
+              "summonings": [
+                773
+              ]
+            }
+          ]
+        },
+        "selector2": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
       }
     },
     "spellEffectData": [
@@ -105,6 +132,29 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 23
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "count",
+          "value": 3
         }
       ],
       "externalDynamicValueReferences": [],
@@ -120,7 +170,7 @@
     "pt": "Noturnancia"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\nTéléporte vos {Summoning:773,plural:other!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible, déclenche leur {%AT} et les téléporte jusqu'à {cell:c}. ",
+    "fr": "<if pvm>Inflige l’{%AT} de votre héros.</if><if pvp>Inflige {value:v} <b>DÉGÂTS</b>.</if>\n\\---\n<if pvm>Téléporte vos {Summoning:773,plural:other!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible, déclenche leur {%AT} et les téléporte jusqu'à {cell:c}.</if><if pvp>Téléporte un {Summoning:773!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible, déclenche {value:count} fois son {%at} puis se téléporte sur sa case de début de tour.</if>",
     "en": "Inflicts your hero's {%AT}.\n\\---\nTeleports your {Summoning:773,plural:other!} to a cell adjacent\\_<sprite name=\"cell_cross\"> to the target, triggers their {%AT} and teleports them up to {cell:c}.",
     "es": "Inflige el {%AT} de tu héroe.\n\\---\nTeletransporta a tus {Summoning:773,plural:other!} a una casilla adyacente\\_<sprite name=\"cell_cross\"> al objetivo, activa su {%AT} y los teletransporta hasta a {cell:c}.",
     "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\nTeleportiert deine {Summoning:773,plural:other!} auf ein an das Ziel angrenzendes\\_<sprite name=\"cell_cross\"> Feld, löst ihren {%AT,plural:one} aus und teleportiert sie bis zu {cell:c}.",

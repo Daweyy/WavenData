@@ -12,6 +12,7 @@
   "m_id": 211,
   "m_displayName": "IOP - ARME - BOUVALOIR OROK - TERRE - Bourbier",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1637689432,
     "b": -114375548,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 497,
@@ -163,9 +164,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 10
+            "valueInPvM": 10,
+            "valueInPvP": 13
           },
           "factor": {
             "type": "ReferenceScalingFactor",

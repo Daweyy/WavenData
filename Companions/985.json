@@ -12,6 +12,7 @@
   "m_id": 985,
   "m_displayName": "DECK - KROSMIQUE - MULTI - Igole",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 414681702,
     "b": 2123107412,
@@ -42,6 +43,11 @@
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -2
+        },
         {
           "type": "SumValue",
           "referenceId": "pa1",
@@ -101,9 +107,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 76
+      "valueInPvM": 76,
+      "valueInPvP": 90
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -111,9 +118,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 16
+      "valueInPvM": 16,
+      "valueInPvP": 15
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -147,7 +155,7 @@
     "rarity": 2,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 407,
     "castCondition": {
@@ -261,7 +269,7 @@
     "pt": "Igol"
   },
   "description": {
-    "fr": "{%appearance} {WATERGAUGEvalue:pa1} au coût de {Companion:847}.\n\\---\n{%deathblow} Rejoue son tour. \n\\---\n<rem>Limité à {value:v} fois par tour.</rem>\\v<family>{%Family_GreatVilain_Name}</family>",
+    "fr": "{%appearance} <if pvm>{WATERGAUGEvalue:pa1}</if><if pvp>{WATERGAUGEvalue:paPVP}</if> au coût de {Companion:847}.\n\\---\n{%deathblow} Rejoue son tour. \n\\---\n<rem>Limité à {value:v} fois par tour.</rem>\\v<family>{%Family_GreatVilain_Name}</family>",
     "en": "{%appearance} {WATERGAUGEvalue:pa1} to the cost of {Companion:847}.\n\\---\n{%deathblow} Replays turn. \n\\---\n<rem>Limit: {value:v} {v, plural, one[time] other[times]} per turn.</rem>\\v<family>{%Family_GreatVilain_Name}</family>",
     "es": "{%appearance} {WATERGAUGEvalue:pa1} al coste de {Companion:847}.\n\\---\n{%deathblow} Vuelve a jugar su turno. \n\\---\n<rem>Limitado a {value:v} {v, plural, one[vez] other[veces]} por turno.</rem>\\v<family>{%Family_GreatVilain_Name}</family>",
     "de": "{%appearance}{WATERGAUGEvalue:pa1} auf die Kosten von {Companion:847}.\n\\---\n{%deathblow} Spielt seine Runde erneut.\n\\---\n<rem>Auf {value:v}-mal pro Runde begrenzt.</rem>\\v<family>{%Family_GreatVilain_Name}</family>",

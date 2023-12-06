@@ -12,6 +12,7 @@
   "m_id": 30,
   "m_displayName": "ENIRIPSA - CLASSE - ETHER - Prevention",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -420011629,
     "b": 1124115460,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -102,9 +103,32 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "v",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        },
+        {
+          "type": "PvmOrPvpValue",
+          "referenceId": "a",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       ],
       "externalDynamicValueReferences": [],
@@ -126,7 +150,7 @@
     "pt": "Prevenção"
   },
   "description": {
-    "fr": "Confère {PropertyEffect:19} à un allié jusqu'au prochain tour.\n\\---\n{#support}\\_: Piochez {SPELLCOUNTvalue:v}.",
+    "fr": "Confère {PropertyEffect:19} à un allié jusqu'au prochain tour.\n\\---\n{#support}\\_: <ifpvm>Piochez {SPELLCOUNTvalue:v}.</if><ifpvp> {value:a,+}\\_{%AURA_HEART,value:a} à votre héros s'il en possède déjà.</if>",
     "en": "Confers {PropertyEffect:19} on an ally until the next turn.\n\\---\n{#support}: Draw {SPELLCOUNTvalue:v}.",
     "es": "Confiere {PropertyEffect:19} a un aliado hasta el próximo turno.\n\\---\n{#support}: Sacas {SPELLCOUNTvalue:v}.",
     "de": "Gewährt einem Verbündeten {PropertyEffect:19} bis zur nächsten Runde.\n\\---\n{#support}: Zieht {SPELLCOUNTvalue:v}.",

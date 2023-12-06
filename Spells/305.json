@@ -12,6 +12,7 @@
   "m_id": 305,
   "m_displayName": "DQ - CONTRAT - TOFU - 4_Brochette de tofu nature",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1779500752,
     "b": -409541660,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": false,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -82,7 +83,15 @@
       "type": "OneCastTargetDefinition",
       "selector": {
         "type": "FilteredCharacterSelector",
-        "filters": []
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [

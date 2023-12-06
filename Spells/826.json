@@ -12,6 +12,7 @@
   "m_id": 826,
   "m_displayName": "CRA - CLASSE - FEU - Fleche Cinglante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2044485091,
     "b": -740187884,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -118,9 +119,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 48
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 48
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 46
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

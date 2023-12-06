@@ -12,6 +12,7 @@
   "m_id": 135380,
   "m_displayName": "XELOR - ARME - JIKAN - EAU - Sablier Cinglant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 817620096,
     "b": -1766798876,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 366,
@@ -109,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 12
+            "valueInPvM": 12,
+            "valueInPvP": 19
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 205,
   "m_displayName": "ENIRIPSA - CLASSE - FEU - Elixir de Flamme",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1585902385,
     "b": 1825797508,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": false,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -121,9 +122,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 4
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 4
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 8
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

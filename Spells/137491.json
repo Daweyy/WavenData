@@ -12,6 +12,7 @@
   "m_id": 137491,
   "m_displayName": "XELOR - CLASSE - TERRE - Aiguille Rocheuse",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1782651441,
     "b": 108828180,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -101,26 +102,32 @@
           {
             "type": "InLineTargetFilter",
             "targetsToCompare": {
-              "type": "FilteredEntitySelector",
-              "from": {
-                "type": "AllMechanismsSelector"
-              },
-              "filters": [
-                {
-                  "type": "OwnerFilter",
-                  "isIdentical": true,
-                  "reference": {
-                    "type": "CasterSelector"
-                  }
+              "type": "UnionOfEntitiesSelector",
+              "first": {
+                "type": "FilteredEntitySelector",
+                "from": {
+                  "type": "AllMechanismsSelector"
                 },
-                {
-                  "type": "FamilyFilter",
-                  "condition": 1,
-                  "families": [
-                    20
-                  ]
-                }
-              ]
+                "filters": [
+                  {
+                    "type": "OwnerFilter",
+                    "isIdentical": true,
+                    "reference": {
+                      "type": "CasterSelector"
+                    }
+                  },
+                  {
+                    "type": "FamilyFilter",
+                    "condition": 1,
+                    "families": [
+                      20
+                    ]
+                  }
+                ]
+              },
+              "second": {
+                "type": "CasterSelector"
+              }
             },
             "distance": null
           }
@@ -145,9 +152,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 15
+            "valueInPvM": 15,
+            "valueInPvP": 17
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -194,7 +202,7 @@
     "pt": "Ponteiro Rochoso"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire aligné à un de vos <b>SINISTROS</b>.\n\\---\n{#REWIND}",
+    "fr": "<if pvm>Inflige {magicalDamage:dmg} à un adversaire aligné à un de vos <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire aligné à votre héros ou un de vos <b>SINISTROS</b>.</if>\n\\---\n{#REWIND}",
     "en": "Does {magicalDamage:dmg} to an opponent in line with one of your <b>SINISTROS</b>.\n\\---\n{#REWIND}",
     "es": "Inflige {magicalDamage:dmg} a un adversario alineado con uno de tus <b>SINISTROS</b>.\n\\---\n{#REWIND}",
     "de": "Fügt einem Gegner, der sich in derselben Reihe wie eines deiner <b>SINISTROS</b> befindet, {magicalDamage:dmg} zu.\n\\---\n{#REWIND}",

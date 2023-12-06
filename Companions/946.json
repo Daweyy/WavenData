@@ -12,6 +12,7 @@
   "m_id": 946,
   "m_displayName": "DECK - RARE - MULTI - Shushire",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -608724625,
     "b": 50427252,
@@ -48,11 +49,23 @@
           "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "drPVP",
+          "value": 50
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "DRAIN"
+        }
+      ]
     },
     "families": [
       4,
@@ -60,9 +73,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 95
+      "valueInPvM": 95,
+      "valueInPvP": 98
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -70,9 +84,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 12
+      "valueInPvM": 12,
+      "valueInPvP": 22
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -106,7 +121,7 @@
     "rarity": 1,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 940,
     "castCondition": {
@@ -220,7 +235,7 @@
     "pt": "Shushir"
   },
   "description": {
-    "fr": "{%appearance} {PAvalue:pa} au coût des sorts de votre main.",
+    "fr": "{%appearance} <if pvm>{PAvalue:pa} au coût des sorts de votre main</if><if pvp>{DRAINvalue:drPVP,percent,+} à votre héros pour le tour</if>.",
     "en": "{%appearance} {PAvalue:pa} to the cost of spells in your hand.",
     "es": "{%appearance} {PAvalue:pa} al coste de los hechizos de tu mano.",
     "de": "{%appearance} {PAvalue:pa} auf die Kosten der Zauber auf deiner Hand.",

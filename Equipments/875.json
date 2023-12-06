@@ -12,6 +12,7 @@
   "m_id": 875,
   "m_displayName": "RING - ALBUERA - RARE - Anneau Fusque",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1898484349,
     "b": -2051979900,
@@ -64,13 +65,57 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "limit",
-          "value": 20
-        },
-        {
-          "type": "ConstIntegerValue",
           "referenceId": "pc",
           "value": 5
+        },
+        {
+          "type": "MultValue",
+          "referenceId": "bonus",
+          "valuesToMult": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 5
+            },
+            {
+              "type": "ClampValue",
+              "referenceId": null,
+              "valueToClamp": {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+                },
+                "carac": 20
+              },
+              "min": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "max": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 20
+              }
+            }
+          ]
+        },
+        {
+          "type": "MultValue",
+          "referenceId": "max",
+          "valuesToMult": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 5
+            },
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 20
+            }
+          ]
         }
       ],
       "externalDynamicValueReferences": [],
@@ -78,8 +123,8 @@
       "keywordReferences": []
     },
     "family": 0,
+    "specificToGod": 0,
     "equipmentType": 1,
-    "petSkins": null,
     "passiveModifiers": [
       {
         "type": "CaracBuffModifier",
@@ -105,11 +150,11 @@
     "pt": "Anel Ofuscado"
   },
   "description": {
-    "fr": "Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de vos sorts {%AIR} par {%GAUGE} générée.\n\\---\n<rem>Limité à {value:limit} fois par combat.</rem> ",
-    "en": "When you generate {%GAUGE, plural:other}: \\v{value:pc,percent,+} to your {%AIR} spell <b>DAMAGE</b> per {%GAUGE} generated.\n\\---\n<rem>Limit: {value:limit} {limit, plural, one[time] other[times]} per fight.</rem>",
-    "es": "Cuando generas {%GAUGE, plural:other}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de tus hechizos de {%AIR} por {%GAUGE} generado.\n\\---\n<rem>Limitado a {value:limit} {limit, plural, one[vez] other[veces]} por combate.</rem>",
-    "de": "Wenn du {%GAUGE, plural:other} generierst:\\v {value:pc,percent,+} <b>SCHADEN</b> für deine {%AIR}-Zauber pro generiertem {%GAUGE}.\n\\---\n<rem>Auf {value:limit}-mal pro Kampf begrenzt.</rem> ",
-    "pt": "Quando você gera {%GAUGE, plural:other}:\\v {value:pc,percent,+} aos <b>DANOS</b> do seus feitiços de {%AIR} por {%GAUGE} gerada.\n\\---\n<rem>Limite de {value:limit} {limit, plural, one[vez] other[vezes]} por combate.</rem>"
+    "fr": "Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de vos sorts {%AIR} par {%GAUGE} générée.\n\\---\n<rem>Bonus actuel\\_: {value:bonus,percent,+}.\nBonus maximum\\_: {value:max,percent,+}.</rem>",
+    "en": "When you generate {%GAUGE, plural:other}:\\v{value:pc,percent,+} to your {%AIR} spell <b>DAMAGE</b> per {%GAUGE} generated.\n\\---\n<rem>Current Bonus: {value:bonus,percent,+}.\nMaximum Bonus: {value:max,percent,+}.</rem>",
+    "es": "Cuando generas {%GAUGE, plural:other}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de tus hechizos de {%AIR} por {%GAUGE} generado.\n\\---\n<rem>Bonus actual: {value:bonus,percent,+}.\nBonus máximo: {value:max,percent,+}.</rem>",
+    "de": "Wenn du {%GAUGE, plural:other} generierst:\\v {value:pc,percent,+} <b>SCHADEN</b> durch deine {%AIR}-Zauber pro generiertem {%GAUGE}.\n\\---\n<rem>Aktueller Bonus: {value:bonus,percent,+}.\nMax. Bonus: {value:max,percent,+}.</rem>",
+    "pt": "Quando você gera {%GAUGE, plural:other}:\\v {value:pc,percent,+} aos <b>DANOS</b> do seus feitiços de {%AIR} por {%GAUGE} gerada.\n\\---\n<rem>Bônus atual: {value:bonus,percent,+}.\nBônus máximo: {value:max,percent,+}.</rem>"
   },
   "bgDescription": {
     "fr": "",

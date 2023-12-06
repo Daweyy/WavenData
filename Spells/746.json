@@ -12,6 +12,7 @@
   "m_id": 746,
   "m_displayName": "CRA - ARME - PIVEN - ETHER - Virevolte Piven",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1297766500,
     "b": 720759828,
@@ -62,7 +63,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 846,
@@ -110,6 +111,11 @@
           "value": 10
         },
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 18
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "a",
           "baseValue": {
@@ -149,7 +155,7 @@
     "pt": "Giro Piven"
   },
   "description": {
-    "fr": "Inflige {value:pc,percent} de l'{%AT} de votre héros à la cible.\n\\---\n{#COMBO}\\_: {value:a,+}\\_{%AURA_SIGHT,value:a} à votre héros s'il en possède déjà",
+    "fr": "<if pvm>Inflige {value:pc,percent} de l'{%AT} de votre héros </if><if pvp>Inflige {magicalDamage:dmg} à la cible.</if>\n\\---\n{#COMBO}\\_: {value:a,+}\\_{%AURA_SIGHT,value:a} à votre héros s'il en possède déjà.",
     "en": "Inflicts {value:pc,percent} of your hero's {%AT} on the target.\n\\---\n{#COMBO}: {value:a,+}\\_{%AURA_SIGHT,value:a} to your hero if they have any already.",
     "es": "Inflige un {value:pc,percent} del {%AT} de tu héroe al objetivo.\n\\---\n{#COMBO}: {value:a,+} \\_{%AURA_SIGHT,value:a} a tu héroe si ya tiene.",
     "de": "Verursacht beim Ziel {value:pc,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{#COMBO}: {value:a,+}\\_{%AURA_SIGHT,value:a} für deinen Helden, falls er bereits welche besitzt.",

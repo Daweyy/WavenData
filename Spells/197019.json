@@ -12,6 +12,7 @@
   "m_id": 197019,
   "m_displayName": "SRAM - ARME - SOUROKAN - FEU - Malediction du Sourokan",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -879890857,
     "b": -1617822972,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 937,
@@ -120,9 +121,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 34
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 34
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 27
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -154,9 +164,10 @@
           "value": 30
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "pow",
-          "value": -25
+          "valueInPvM": -25,
+          "valueInPvP": -29
         },
         {
           "type": "BuffedScalingDynamicValue",

@@ -12,6 +12,7 @@
   "m_id": 137708,
   "m_displayName": "CRA - CLASSE - TERRE - Tir Tactique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -932028919,
     "b": 1354601828,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -109,9 +110,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 17
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 17
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 13
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

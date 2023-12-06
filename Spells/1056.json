@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1056",
+  "m_id": 1056,
+  "m_displayName": "SEASON - CHUCHOTEUR - Baston",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1488939789,
+    "b": -1517648268,
+    "c": 831338377,
+    "d": 1750648023,
+    "e": -2088347476
+  },
+  "m_i18nDescriptionId": {
+    "a": -1488939789,
+    "b": -1517648268,
+    "c": 831338377,
+    "d": 1750648023,
+    "e": -38810746
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f736bab95ab5d814384d32f0752591c8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1056,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c1804396329033c46bd3093e1d80d374",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                52
+              ]
+            },
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Baston",
+    "en": "Brawl",
+    "es": "Pelea",
+    "de": "Schlägerei",
+    "pt": "Briga"
+  },
+  "description": {
+    "fr": "Chaque {%FAMILY_CHUCHOTEUR_NAME} adjacent <sprite name=\"cell_cross\"> à la cible lui inflige son {%AT}.",
+    "en": "Each {%FAMILY_CHUCHOTEUR_NAME} adjacent <sprite name=\"cell_cross\"> to the target inflicts their {%AT} on the target.",
+    "es": "Cada {%FAMILY_CHUCHOTEUR_NAME} adyacente <sprite name=\"cell_cross\"> al objetivo le inflige su {%AT}.",
+    "de": "Jeder an das Ziel angrenzende\\_<sprite name=\"cell_cross\"> {%FAMILY_CHUCHOTEUR_NAME} fügt ihm seinen {%AT} als Schaden zu.",
+    "pt": "Cada {%FAMILY_CHUCHOTEUR_NAME} adjacente\\_<sprite name=\"cell_cross\"> ao alvo inflige a ele seu {%AT}."
+  }
+}

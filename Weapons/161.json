@@ -12,6 +12,7 @@
   "m_id": 161,
   "m_displayName": "XELOR - Régulant Gurpapa",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 72620343,
     "b": -883696332,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "60777a7d24eec9b48b60a2cecafaf16e"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 161,
@@ -80,7 +84,7 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 60
+              "value": 65
             },
             {
               "type": "ConditionalValue",
@@ -92,7 +96,7 @@
               "ifTrue": {
                 "type": "ConstIntegerValue",
                 "referenceId": "s",
-                "value": 50
+                "value": 55
               },
               "ifFalse": {
                 "type": "ConstIntegerValue",
@@ -105,7 +109,12 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "s",
-          "value": 50
+          "value": 55
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 13
         }
       ],
       "externalDynamicValueReferences": [],
@@ -117,9 +126,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 389
+      "valueInPvM": 389,
+      "valueInPvP": 396
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -127,9 +137,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 26
+      "valueInPvM": 26,
+      "valueInPvP": 20
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -161,6 +172,9 @@
     "defaultSkinIdMale": 2157,
     "defaultSkinIdFemale": 2069,
     "god": 7,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -194,7 +208,7 @@
     "pt": "Regulador Gurpapa"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Inflige {value:p,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de chacun de vos <b>SINISTROS</b>.",
+    "fr": "{%FightTurnEnded} <if pvm>Inflige {value:p,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de chacun de vos <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de chacun de vos <b>SINISTROS</b>.</if>",
     "en": "{%FightTurnEnded} Inflicts {value:p,percent} of {%AT} on opponents around\\_<sprite name=\"cell_around\"> each of your <b>SINISTROS</b>.",
     "es": "{%FightTurnEnded} Inflige un {value:p,percent} de su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de cada uno de tus <b>SINISTROS</b>.",
     "de": "{%FightTurnEnded} Verursacht bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> all deiner <b>SINISTROS</b> {value:p,percent} seines {%AT,plural:two} als Schaden.",

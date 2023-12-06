@@ -12,6 +12,7 @@
   "m_id": 112161,
   "m_displayName": "IOP - ARME - LAMARGUEDON SPECTRAL - ETHER - Sacrifice spectral",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1757491036,
     "b": -202735452,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 143,
@@ -117,6 +118,20 @@
                 "value": 1
               }
             }
+          },
+          {
+            "type": "PropertiesFilter",
+            "comparison": 4,
+            "properties": [
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 41
+              },
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 88
+              }
+            ]
           }
         ]
       },
@@ -165,6 +180,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "per",
           "value": 200
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 46
         }
       ],
       "externalDynamicValueReferences": [],
@@ -180,7 +200,7 @@
     "pt": "Sacrifício Espectral"
   },
   "description": {
-    "fr": "Sacrifie un allié.\n\\---\nInflige {value:per,percent} de l'{%AT} de votre héros à un adversaire adjacent\\_<sprite name=\"cell_cross\">.",
+    "fr": "Sacrifie un allié.\n\\---\n<if pvm>Inflige {value:per,percent} de l'{%AT} de votre héros à un adversaire adjacent\\_<sprite name=\"cell_cross\"></if><if pvp>Inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"></if>",
     "en": "Sacrifices an ally.\n\\---\nInflicts {value:per,percent} of your hero's {%AT} on an adjacent\\_<sprite name=\"cell_cross\"> opponent.",
     "es": "Sacrifica a un aliado.\n\\---\nInflige un {value:per,percent} del {%AT} de tu héroe a un adversario adyacente\\_<sprite name=\"cell_cross\">.",
     "de": "Opfert einen Verbündeten.\n\\---\nFügt einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner {value:per,percent} des {%AT,plural:two} deines Helden als Schaden zu.",

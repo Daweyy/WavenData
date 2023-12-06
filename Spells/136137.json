@@ -12,6 +12,7 @@
   "m_id": 136137,
   "m_displayName": "XELOR - CLASSE - FEU - Explosion Temporelle",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -689106054,
     "b": 2123157732,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -73,15 +74,26 @@
           "referenceId": "",
           "value": 2
         }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
       }
     ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 6
+          "valueInPvM": 6,
+          "valueInPvP": 8
         }
       }
     ],
@@ -111,9 +123,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 24
+            "valueInPvM": 24,
+            "valueInPvP": 54
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -133,9 +146,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ex",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 11
+            "valueInPvM": 11,
+            "valueInPvP": 30
           },
           "factor": {
             "type": "ReferenceScalingFactor",

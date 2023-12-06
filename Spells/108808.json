@@ -12,6 +12,7 @@
   "m_id": 108808,
   "m_displayName": "ENIRIPSA - ARME - AMBRE TAMASHI - FEU - Faveur Nocturne",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 163623298,
     "b": -604629628,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 277,
@@ -77,9 +78,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 5
+          "valueInPvM": 5,
+          "valueInPvP": 4
         }
       }
     ],
@@ -156,6 +158,28 @@
           "type": "ConstIntegerValue",
           "referenceId": "id",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "b",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 34
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -171,7 +195,7 @@
     "pt": "Favor Noturno"
   },
   "description": {
-    "fr": "Sacrifie l'un de vos {Summoning:773, plural:other!}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
+    "fr": "Sacrifie l'un de vos {Summoning:773, plural:other!}.\n\\---\n<if pvm>Inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"></if><if pvp>Inflige {magicalDamage:b} aux adversaires autour\\_<sprite name=\"cell_around\"></if>.",
     "en": "Sacrifices one of your {Summoning:773, plural:other!}.\n\\---\nDoes {magicalDamage:dmg} to adjacent\\_<sprite name=\"cell_cross\"> opponents.",
     "es": "Sacrifica a uno de tus {Summoning:773, plural:other!}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
     "de": "Opfert einen deiner {Summoning:773, plural:other!}.\n\\---\nFügt Gegnern in der Nähe\\_<sprite name=\"cell_cross\"> {magicalDamage:dmg} zu.",

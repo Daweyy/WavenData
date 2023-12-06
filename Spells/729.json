@@ -12,6 +12,7 @@
   "m_id": 729,
   "m_displayName": "CRA - CLASSE - ETHER - Acrobatie",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1517431327,
     "b": 1464050708,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -110,6 +111,11 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 33
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 2
         }
@@ -127,7 +133,7 @@
     "pt": "Acrobacia"
   },
   "description": {
-    "fr": "Votre héros inflige son {%AT} à un adversaire aligné puis recule de {cell:c}.",
+    "fr": "<if pvm>Votre héros inflige son {%AT} à un adversaire aligné puis recule de {cell:c}.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire aligné avec votre héros.\n\\---\nVotre héros recule de {cell:c}.</if>",
     "en": "Your hero inflicts their {%AT} on an in-line opponent then moves back {cell:c}.",
     "es": "Tu héroe inflige su {%AT} a un adversario alineado y retrocede {cell:c}.",
     "de": "Dein Held verursacht seinen {%AT,plural:one} als Schaden bei einem ausgerichteten Feind und weicht dann um {cell:c} zurück.",

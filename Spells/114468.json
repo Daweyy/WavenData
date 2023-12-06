@@ -12,6 +12,7 @@
   "m_id": 114468,
   "m_displayName": "IOP - CLASSE - EAU - Charge Envolee",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1923272392,
     "b": -610957004,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -174,9 +175,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 29
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 29
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 32
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -10,8 +10,9 @@
   },
   "m_Name": "1191",
   "m_id": 1191,
-  "m_displayName": "Iop - Magie Astramantis",
-  "m_availability": 2,
+  "m_displayName": "WEAPON - IOP - ASTRAMANTIS - Écho Astramantis",
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -242409903,
     "b": -937954604,
@@ -39,24 +40,50 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25,
+            22,
+            24,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": []
     }
   },
   "name": {
-    "fr": "Magie Astramantis",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Écho Astramantis",
+    "en": "Elite Astramantis",
+    "es": "Eco Astramantis",
+    "de": "Astramantis-Echo",
+    "pt": "Eco Astramantis"
   },
   "description": {
-    "fr": "+300% aux dégâts élémentaires infligés par vos LANCES et applique l'état correspondant à son élément.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Lorsque vous lancez un sort : inflige {value:v} <b>DÉGÂTS</b> aux adversaires autour de vos <b>LANCES</b> et de votre héros par {%PA} dépensé.\n\\---\n{%DAMAGE_BASED_ON_ELEMENTARY}",
+    "en": "When you cast a spell: Does {value:v} <b>DAMAGE</b> to opponents around your <b>LANCES</b> and your hero for each {%PA} spent.",
+    "es": "Cuando lanzas un hechizo: inflige {value:v} <b>DAÑOS</b> a los adversarios de alrededor de tus <b>LANZAS</b> y de tu héroe por {%PA} gastado.",
+    "de": "Wenn du einen Zauber wirkst: Fügt den Gegnern im Umkreis deiner <b>Lanzen</b> und deines Helden {value:v} <b>SCHADEN</b> zu je {%PA}, der ausgegeben wird.",
+    "pt": "Quando você lança um feitiço: inflige {value:v} <b>DANOS</b> aos adversários em volta das suas <b>LANÇAS</b> e do seu herói por {%PA} usado."
   }
 }

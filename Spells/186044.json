@@ -12,6 +12,7 @@
   "m_id": 186044,
   "m_displayName": "ENIRIPSA - CLASSE - TERRE - Coeur Rocheux",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1313937690,
     "b": -750875164,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -111,9 +112,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 21
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 21
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 28
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -145,9 +155,32 @@
           "value": 30
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "a",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        },
+        {
+          "type": "PvmOrPvpValue",
+          "referenceId": "pa",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -188,6 +221,9 @@
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 22,
           "id": 117
         }
@@ -202,7 +238,7 @@
     "pt": "Coração Rochoso"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} à votre héros si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{value:a,+}\\_{aura:117,value:a} à votre héros si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.</if><if pvp>{EARTHGAUGEvalue:pa,+} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} to your hero if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} a tu héroe si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:117,value:a} für deinen Helden, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",

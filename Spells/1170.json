@@ -1,0 +1,162 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1170",
+  "m_id": 1170,
+  "m_displayName": "STORY MODE - 39 - Bond de Goultard",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1630108945,
+    "b": -1875465148,
+    "c": 1222192168,
+    "d": -395486421,
+    "e": 1842104160
+  },
+  "m_i18nDescriptionId": {
+    "a": 1630108945,
+    "b": -1875465148,
+    "c": 1222192168,
+    "d": -395486421,
+    "e": -1256454463
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "78008230e999307478f4b885624b1bc0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1170,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "x",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bond de Goultard",
+    "en": "Goultard's Jump",
+    "es": "Salto de Gúltar",
+    "de": "Goultards Hopser",
+    "pt": "Salto de Gultar"
+  },
+  "description": {
+    "fr": "Téléporte {Weapon:561!} jusqu'à {cell:c} et inflige {magicalDamage:x} autour<sprite name=\"cell_around\"> de sa case d'arrivée.",
+    "en": "Teleports {Weapon:561!} up to {cell:c} and does {magicalDamage:x} around\\_<sprite name=\"cell_around\"> the destination cell.",
+    "es": "Teletransporta a {Weapon:561!} hasta a {cell:c} e inflige {magicalDamage:x} alrededor <sprite name=\"cell_around\"> de su casilla de llegada.",
+    "de": "Teleportiert {Weapon:561!} bis zu {cell:c} und verursacht {magicalDamage:x} im Umkreis\\_<sprite name=\"cell_around\"> seines Ankunftsfelds.",
+    "pt": "Teletransporta {Weapon:561!} por até {cell:c} e inflige {magicalDamage:x} em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada."
+  }
+}

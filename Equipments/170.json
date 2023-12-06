@@ -10,8 +10,9 @@
   },
   "m_Name": "170",
   "m_id": 170,
-  "m_displayName": "PARURE - TEST - XELOR",
-  "m_availability": 0,
+  "m_displayName": "PARURE - TEST - Eniripsa",
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -671212916,
     "b": -2140699756,
@@ -47,40 +48,34 @@
     "merchantCosts": [],
     "premiumItem": false,
     "rarity": 4,
-    "unlockableSkillIds": [],
-    "equipableByPlayers": false,
-    "upgradeRuleId": null,
+    "unlockableSkillIds": [
+      3296,
+      4015
+    ],
+    "equipableByPlayers": true,
+    "upgradeRuleId": 547,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "MultValue",
-          "referenceId": "AR",
-          "valuesToMult": [
-            {
-              "type": "ContextLevelValue",
-              "referenceId": ""
-            },
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 10
-            }
-          ]
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 4
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 25,
+          "id": 1232
+        }
+      ]
     },
-    "family": 7,
-    "equipmentType": 3,
-    "petSkins": {
-      "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
-      "skinIds": []
-    },
+    "family": 0,
+    "specificToGod": 3,
+    "equipmentType": 5,
     "passiveModifiers": [],
     "spellEffectData": []
   },
@@ -92,7 +87,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "Vos Sinistros Déclenchent leurs effets à chaque début de tour en plus de leur autres modes d'activation.\n\nVos Sinistros ont {value:AR,percent,+} de blindage",
+    "fr": "Après avoir soigné des alliés {value:v} fois : Ajoute {Spell:1232} dans votre main.",
     "en": "",
     "es": "",
     "de": "",

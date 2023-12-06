@@ -12,6 +12,7 @@
   "m_id": 840,
   "m_displayName": "XELOR - ARME - GURPAPA - AIR - Protocole regulation",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1951220459,
     "b": 1912905588,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 161,
@@ -109,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgA",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 14
+            "valueInPvM": 14,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -151,9 +153,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgB",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 6
+            "valueInPvM": 6,
+            "valueInPvP": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",

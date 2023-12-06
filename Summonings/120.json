@@ -12,6 +12,7 @@
   "m_id": 120,
   "m_displayName": "SRAM - Ombre Sournoise",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1913658676,
     "b": -390217516,
@@ -59,14 +60,16 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 1
+      "valueInPvM": 1,
+      "valueInPvP": 38
     },
     "movementPoints": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 6
+      "valueInPvM": 6,
+      "valueInPvP": 4
     },
     "actionValue": null,
     "riposte": null,
@@ -75,7 +78,10 @@
     "customActionTarget": null,
     "actionType": 3,
     "actionRange": null,
-    "lifeScale": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 15
+    },
     "attackScale": null,
     "spells": [],
     "grade": 0,
@@ -89,7 +95,7 @@
     "pt": "{0,plural,one[Sombra Traiçoeira] other[Sombras Traiçoeiras]}"
   },
   "description": {
-    "fr": "{%APPEARANCE} Gagne l'{%AT} de votre héros en {%AR,plural:other}.\n\\---\n{%ATTACK} Téléporte la cible dans son dos.",
+    "fr": "<if pvm>{%APPEARANCE} Gagne l'{%AT} de votre héros en {%AR,plural:other}.\\--- </if>{%ATTACK} Téléporte la cible dans son dos.",
     "en": "{%APPEARANCE} Gains your hero's {%AT} as {%AR,plural:other}.\n\\---\n{%ATTACK} Teleports the target behind him.",
     "es": "{%APPEARANCE} Gana el {%AT} de tu héroe en {%AR,plural:other}.\n\\---\n{%ATTACK} Teletransporta al objetivo a su espalda.",
     "de": "{%APPEARANCE} Erhält den {%AT,plural:one} deines Helden als {%AR,plural:other}.\n\\---\n{%ATTACK} Teleportiert das Ziel hinter sich.",

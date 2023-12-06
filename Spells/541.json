@@ -12,6 +12,7 @@
   "m_id": 541,
   "m_displayName": "XELOR - ARME - JIKAN - TERRE - Sablier Mecanique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1810692563,
     "b": 946218868,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 366,
@@ -109,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "valueInPvM": 11,
+            "valueInPvP": 19
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -150,7 +152,15 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 20,
+          "id": 4
+        }
+      ]
     }
   },
   "name": {
@@ -161,7 +171,7 @@
     "pt": "Ampulheta Mecânica"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm} à la cible pour le tour si elle est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PMvalue:pm} à la cible pour le tour si elle est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.</if><if pvp>{PropertyEffect:4} la cible pour le tour si elle est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{PMvalue:pm} to the target for the turn if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm} al objetivo durante el turno si está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PMvalue:pm} für das Ziel, wenn es <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",

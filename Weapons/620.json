@@ -12,6 +12,7 @@
   "m_id": 620,
   "m_displayName": "SRAM - Cisaille Orishi",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -583977120,
     "b": -1289252076,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "cd1d951f59c175043b41f0b6ed017ab6"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 620,
@@ -80,7 +84,7 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 100
+              "value": 110
             },
             {
               "type": "ConditionalValue",
@@ -92,7 +96,7 @@
               "ifTrue": {
                 "type": "ConstIntegerValue",
                 "referenceId": "p",
-                "value": 100
+                "value": 110
               },
               "ifFalse": {
                 "type": "ConstIntegerValue",
@@ -105,7 +109,28 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "p",
-          "value": 100
+          "value": 110
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 24
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -123,9 +148,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 398
+      "valueInPvM": 398,
+      "valueInPvP": 396
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -133,9 +159,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 24
+      "valueInPvM": 24,
+      "valueInPvP": 22
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -167,6 +194,9 @@
     "defaultSkinIdMale": 4860,
     "defaultSkinIdFemale": 4899,
     "god": 6,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -200,7 +230,7 @@
     "pt": "Tesoura Orishi"
   },
   "description": {
-    "fr": "Lorsqu'un adversaire déclenche un de vos {NamedEffect:2,plural:other}\\_: Lui inflige {value:s, percent} de l'{%AT} de votre héros.",
+    "fr": "Lorsqu'un adversaire déclenche un de vos {NamedEffect:2,plural:other}\\_:\\_<if pvm>Lui inflige {value:s, percent} de l'{%AT} de votre héros</if><if pvp>Lui inflige {magicalDamage:dmg} supplémentaires</if>.",
     "en": "When an opponent triggers one of your {NamedEffect:2,plural:other}: Inflicts {value:s, percent} of your hero's {%AT} on them.",
     "es": "Cuando un adversario activa una de tus {NamedEffect:2,plural:other}: Le inflige un {value:s, percent} del {%AT} de tu héroe.",
     "de": "Wenn ein Gegner eine deiner {NamedEffect:2,plural:other} auslöst: Verursacht bei ihm {value:s, percent} des {%AT} deines Helden als Schaden.",

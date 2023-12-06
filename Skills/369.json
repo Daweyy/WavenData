@@ -12,6 +12,7 @@
   "m_id": 369,
   "m_displayName": "WEAPON - SRAM - KEN KARTANA  - Politique Kartana ",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -396022271,
     "b": 681939764,
@@ -39,7 +40,13 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 20
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -55,10 +62,10 @@
     "pt": "Política Kartana"
   },
   "description": {
-    "fr": "Lorsque votre héros déclenche un {#TRAP} <b>SRAM</b> allié\\_:\\v Vous piochez votre prochain sort de {#TRAP}.",
-    "en": "When your hero triggers an allied <b>SRAM</b> {#TRAP}:\\vYou draw your next {#TRAP} spell.",
-    "es": "Cuando tu héroe activa una {#TRAP} <b>SRAM</b> aliada:\\v Sacas tu próximo hechizo de {#TRAP}.",
-    "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{#TRAP} auslöst:\\v Du ziehst deinen nächsten {#TRAP}-Zauber.",
-    "pt": "Quando seu herói aciona uma {#TRAP} <b>SRAM</b> aliada:\\v Você compra seu próximo feitiço de {#TRAP}."
+    "fr": "Lorsque votre héros déclenche un {#TRAP} <b>SRAM</b> allié\\_:\\v Vous piochez votre prochain sort de {#TRAP}.\n\\---\nLorsque vous construisez un {#TRAP} : {value:v,+,percent} à l'{%AT} de votre héros pour le tour.",
+    "en": "When your hero triggers an allied <b>SRAM</b> {#TRAP}:\\vYou draw your next {#TRAP} spell.\n\\---\nWhen you build a {#TRAP}: {value:v,+,percent} to your hero's {%AT} for the turn.",
+    "es": "Cuando tu héroe activa una {#TRAP} <b>SRAM</b> aliada:\\v Sacas tu próximo hechizo de {#TRAP}.\n\\---\nCuando construyes una {#TRAP}: {value:v,+,percent} al {%AT} de tu héroe durante el turno.",
+    "de": "Wenn dein Held eine verbündete <b>SRAM</b>-{#TRAP} auslöst:\\v Du ziehst deinen nächsten {#TRAP}-Zauber.\n\\---\nWenn du eine {#TRAP} baust: {value:v,+,percent} {%AT} für deinen Helden für die Runde.",
+    "pt": "Quando seu herói aciona uma {#TRAP} <b>SRAM</b> aliada:\\v Você compra seu próximo feitiço de {#TRAP}.\n\\---\nQuando você constrói uma {#TRAP}: {value:v,+,percent} ao {%AT} do seu herói durante o turno."
   }
 }

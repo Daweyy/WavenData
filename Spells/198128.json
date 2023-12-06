@@ -12,6 +12,7 @@
   "m_id": 198128,
   "m_displayName": "SRAM - ARME - SHUGEN - FEU - Traque Devorante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1674106958,
     "b": 747245892,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 36,
@@ -88,18 +89,30 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
-            },
-            "distance": null
-          }
-        ]
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "AllCharactersSelector"
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": null
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -122,9 +135,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 14
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 14
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 16
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -154,11 +176,51 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51,
+            88
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 59060,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 25
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 25
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "EXPLOSION"
+      ]
     }
   },
   "name": {
@@ -169,7 +231,7 @@
     "pt": "Rastreamento Devorador"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un personnage aligné avec votre héros.\n\\---\nVotre héros traverse la ligne si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "fr": "<if pvm>Inflige {magicalDamage:dmg} à un personnage aligné avec votre héros.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Votre héros traverse la ligne si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if><if pvp>Déclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"/> de votre héros si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if>",
     "en": "Does {magicalDamage:dmg} to opponents in line with your hero.\n\\---\nYour hero goes through the line if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
     "es": "Inflige {magicalDamage:dmg} a un personaje alineado con tu héroe.\n\\---\nTu héroe atraviesa la línea si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
     "de": "Fügt einem Charakter, der sich in derselben Reihe wie dein Held befindet, {magicalDamage:dmg} zu.\n\\---\nDein Held überquert die Reihe, wenn das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",

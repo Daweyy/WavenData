@@ -12,6 +12,7 @@
   "m_id": 402,
   "m_displayName": "ENIRIPSA - CLASSE - AIR - Fiole Toxique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1029470002,
     "b": 211827332,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -118,9 +119,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": null,
-            "value": 8
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 8
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 9
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -155,9 +165,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "heal",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": null,
-            "value": 4
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 4
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 6
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

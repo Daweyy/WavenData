@@ -12,6 +12,7 @@
   "m_id": 905,
   "m_displayName": "ENIRIPSA - CLASSE - TERRE - Baume Petrificateur",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1772117207,
     "b": -1563854092,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": null,
@@ -140,9 +141,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 17
+            "valueInPvM": 17,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",

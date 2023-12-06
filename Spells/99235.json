@@ -12,6 +12,7 @@
   "m_id": 99235,
   "m_displayName": "CRA - ARME - VOLDORAK - EAU - Poing Fretillant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1079726607,
     "b": 206883508,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 953,
@@ -138,9 +139,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 17
+            "valueInPvM": 17,
+            "valueInPvP": 18
           },
           "factor": {
             "type": "ReferenceScalingFactor",

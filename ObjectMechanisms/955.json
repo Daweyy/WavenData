@@ -12,6 +12,7 @@
   "m_id": 955,
   "m_displayName": "XELOR - Sinistro Feu",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 2119616133,
     "b": 2069341908,
@@ -46,9 +47,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 8
+            "valueInPvM": 8,
+            "valueInPvP": 9
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -68,10 +70,7 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        {
-          "type": 22,
-          "id": 135
-        },
+        "EXPLOSION",
         {
           "type": 7,
           "id": 1653

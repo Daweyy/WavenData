@@ -12,6 +12,7 @@
   "m_id": 310,
   "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - AIR - Phase Petulante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2051800059,
     "b": 2007539140,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 141,
@@ -87,10 +88,38 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": []
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvmFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -111,9 +140,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "valueInPvM": 8,
+            "valueInPvP": 16
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -147,12 +177,7 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 20,
-          "id": 18
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
@@ -163,7 +188,7 @@
     "pt": "Fase Petulante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nÉchange la position de votre héros avec celle de la cible s'il est {PropertyEffect:18[DÉPHASÉ]}.",
+    "fr": "<if pvm>Inflige {magicalDamage:dmg}.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"></if>\n\\---\nÉchange la position de votre héros avec celle de la cible.",
     "en": "Does {magicalDamage:dmg}.\n\\---\nSwitches your hero's position with that of the target if your hero is {PropertyEffect:18[DEPHASED]}.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\nIntercambia la posición de tu héroe con la del objetivo si está {PropertyEffect:18[DESFASADO]}.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\nTauscht die Position deines Helden mit der des Ziels, wenn es {PropertyEffect:18[PHASENVERSCHOBEN]} ist.",

@@ -12,6 +12,7 @@
   "m_id": 637,
   "m_displayName": "ENIRIPSA - Scalpel de l'Apostruker",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1749936890,
     "b": 116925332,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "bc3eee47cf1bb2f49a57990eb0ccdc19"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 637,
@@ -72,43 +76,11 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "SumValue",
-          "referenceId": "perc",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 35
-            },
-            {
-              "type": "ConditionalValue",
-              "referenceId": null,
-              "condition": {
-                "type": "HolderHasSkillCondition",
-                "skill": 764
-              },
-              "ifTrue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "p",
-                "value": 35
-              },
-              "ifFalse": {
-                "type": "ConstIntegerValue",
-                "referenceId": null,
-                "value": 0
-              }
-            }
-          ]
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "p",
-          "value": 35
-        }
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.918.perc",
+        "ParameterizedEffectExecution.918.pvp"
       ],
-      "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
     },
@@ -117,9 +89,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 396
+      "valueInPvM": 396,
+      "valueInPvP": 361
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -127,9 +100,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 22
+      "valueInPvM": 22,
+      "valueInPvP": 25
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -161,6 +135,9 @@
     "defaultSkinIdMale": 956,
     "defaultSkinIdFemale": 4630,
     "god": 3,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -194,11 +171,11 @@
     "pt": "Bisturi Apostruker"
   },
   "description": {
-    "fr": "Lorsque votre héros est soigné\\_: Inflige {value:perc,percent} de son {%AT} à l'adversaire ayant le plus de {%PV,plural:other}.",
-    "en": "When your hero is healed: Inflicts {value:perc,percent} of their {%AT} on the opponent with the most {%PV,plural:other}.",
-    "es": "Cuando tu héroe es curado: Inflige un {value:perc,percent} de su {%AT} al adversario que tenga más {%PV,plural:other}.",
-    "de": "Wenn dein Held geheilt wird: Verursacht beim Gegner, der die meisten {%PV,plural:other} hat, {value:perc,percent} seines {%AT,plural:two} als Schaden.",
-    "pt": "Quando seu herói é curado: Inflige {value:perc,percent} de seu {%AT} ao adversário que tiver mais {%PV,plural:other}."
+    "fr": "Lorsque votre héros est soigné\\_: <if pvm>Inflige {value:ParameterizedEffectExecution.918.perc,percent} de son {%AT}  à l'adversaire ayant le plus de {%PV,plural:other}.</if><if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.918.pvp}  à l'adversaire ayant le plus de {%PV,plural:other}.</if>",
+    "en": "When your hero is healed: Inflicts {value:ParameterizedEffectExecution.918.perc,percent} of their {%AT} on the opponent with the most {%PV,plural:other}.",
+    "es": "Cuando tu héroe es curado: Inflige un {value:ParameterizedEffectExecution.918.perc,percent} de su {%AT} al adversario que tenga más {%PV,plural:other}.",
+    "de": "Wenn dein Held geheilt wird: Verursacht {value:ParameterizedEffectExecution.918.perc,percent} seines {%AT,plural:two} beim Gegner mit den meisten {%PV,plural:other} als Schaden.",
+    "pt": "Quando seu herói é curado: Inflige {value:ParameterizedEffectExecution.918.perc,percent} de seu {%AT} ao adversário que tiver mais {%PV,plural:other}."
   },
   "gameplayDescription": {
     "fr": "<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!\n\\---\n<color=#7FD5E4>SOINS</color>\\_: L'art de la guérison n'a aucun secret pour vous. Il y a toujours un moyen de soigner vos blessures\\_!",

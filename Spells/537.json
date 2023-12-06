@@ -12,6 +12,7 @@
   "m_id": 537,
   "m_displayName": "IOP - CLASSE - FEU - Inspiration",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1061295105,
     "b": -1070114460,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -111,9 +112,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 18
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 18
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 21
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -124,6 +134,39 @@
             25
           ],
           "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "exPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51,
+            88
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 59060,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 25
+              }
+            }
+          ],
           "from": {
             "type": "CasterSelector"
           },
@@ -183,7 +226,7 @@
     "pt": "Inspiração"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Déclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if><if pvp>Déclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"/> de votre héros\\v si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {explosion:ex} around\\_<sprite name=\"cell_around\"/> the target\\v if the target is <b>OILED</b><sprite name=\"oiled\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {explosion:ex} alrededor\\_<sprite name=\"cell_around\"/> del objetivo\\v si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {explosion:ex} im Umkreis\\_<sprite name=\"cell_around\"/> des Ziels aus,\\v wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",

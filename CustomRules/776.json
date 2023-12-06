@@ -1,0 +1,128 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 641088705933543200
+  },
+  "m_Name": "776",
+  "m_id": 776,
+  "m_displayName": "ALBUERA - 01 - ECHAPPATOIRE",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_illustration": {
+    "assetGuid": "2d0a90c38642a5d4d8fbc7800b6a1321"
+  },
+  "m_i18nNameId": {
+    "a": 1345365840,
+    "b": 779430228,
+    "c": 1145518394,
+    "d": -1948086106,
+    "e": 187156932
+  },
+  "m_i18nDescriptionId": {
+    "a": 1345365840,
+    "b": 779430228,
+    "c": 1145518394,
+    "d": -1948086106,
+    "e": 302846311
+  },
+  "m_i18nSummaryId": {
+    "a": 1345365840,
+    "b": 779430228,
+    "c": 1145518394,
+    "d": -1948086106,
+    "e": 1313325841
+  },
+  "values": {
+    "type": "CustomRuleDefinition",
+    "id": 776,
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "value",
+          "value": 1
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "pm",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 3
+            },
+            {
+              "type": "NegativeValue",
+              "referenceId": "",
+              "valueToNeg": {
+                "type": "EntityCountValue",
+                "referenceId": "",
+                "from": {
+                  "type": "AllBoardPresencesSelector"
+                },
+                "entityFilters": [
+                  {
+                    "type": "EntityTypeFilter",
+                    "condition": 1,
+                    "entityTypes": [
+                      1
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 173
+        },
+        {
+          "type": 20,
+          "id": 20
+        },
+        "DALLE",
+        {
+          "type": 22,
+          "id": 208
+        },
+        {
+          "type": 4,
+          "id": 1394
+        },
+        {
+          "type": 6,
+          "id": 262
+        },
+        {
+          "type": 7,
+          "id": 486
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Échappatoire",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "<rem><color=#EEBB44>Détruire les {ObjectMechanism:486,plural:other} pour activer le {FloorMechanism:262}.</color></rem>\n\\---\n{%FightTurnEnded} Pose {value:value} {FloorMechanism:542!} autour\\_<sprite name=\"cell_around\"> d'un {ObjectMechanism:486} par joueur en jeu.\n\\---\nLorsque {Summoning:1394} gagne une {aura:208}\\_: Invoque un Mort-Brûlé autour\\_<sprite name=\"cell_around\"> d'un {ObjectMechanism:486} par {aura:208} qu'il possède.\n\\---\n{PMvalue:pm,+} aux joueurs.",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

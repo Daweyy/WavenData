@@ -12,6 +12,7 @@
   "m_id": 36,
   "m_displayName": "SRAM - Ecorcheur Shugen",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -63524477,
     "b": -1695486236,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "e06efb3df8bb2bd4cb5bcbc075a4f3a4"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -88,9 +92,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 397
+      "valueInPvM": 397,
+      "valueInPvP": 399
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -132,6 +137,9 @@
     "defaultSkinIdMale": 9412,
     "defaultSkinIdFemale": 738,
     "god": 6,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

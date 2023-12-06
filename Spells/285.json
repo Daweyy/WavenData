@@ -1,0 +1,145 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "285",
+  "m_id": 285,
+  "m_displayName": "ALBUERA - 05 - Terre Fertile",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1951609433,
+    "b": 2104098836,
+    "c": -1693504661,
+    "d": -980704819,
+    "e": 1949472492
+  },
+  "m_i18nDescriptionId": {
+    "a": -1951609433,
+    "b": 2104098836,
+    "c": -1693504661,
+    "d": -980704819,
+    "e": 1041388496
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "dda9921226a42c9419bb4633d1c074d7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 285,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DALLE",
+        {
+          "type": 6,
+          "id": 136
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Terre Fertile",
+    "en": "Fertile Ground",
+    "es": "Tierra Fértil",
+    "de": "Fruchtbarer Boden",
+    "pt": "Terra Fértil"
+  },
+  "description": {
+    "fr": "Pose une {FloorMechanism:136} sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.",
+    "en": "Build one {FloorMechanism:136} on a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.",
+    "es": "Construye una {FloorMechanism:136} en una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.",
+    "de": "Errichtet eine\\_{FloorMechanism:136} auf einem an einen Verbündeten angrenzenden\\_<sprite name=\"cell_cross\"> Feld.",
+    "pt": "Constrói uma {FloorMechanism:136} em uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado."
+  }
+}

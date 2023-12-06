@@ -12,6 +12,7 @@
   "m_id": 1809,
   "m_displayName": "ENIRIPSA - Laboratoire de Vent",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -816413856,
     "b": -1686270476,
@@ -43,22 +44,36 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "v",
-          "baseValue": -11,
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 17
+          "pvm": {
+            "type": "LinearScaleLevelOnlyBasedDynamicValue",
+            "referenceId": null,
+            "baseValue": -11,
+            "factor": {
+              "type": "ReferenceScalingFactor",
+              "reference": 17
+            }
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": -10
           }
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "PUSH",
         {
           "type": 22,
           "id": 119
+        },
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "PUSH"
         },
         {
           "type": 25,

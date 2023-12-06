@@ -12,6 +12,7 @@
   "m_id": 982,
   "m_displayName": "IOP - CLASSE - ETHER - Vertu",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1027314896,
     "b": -1091536172,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -120,6 +121,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "a",
           "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "arm",
+          "value": 37
         }
       ],
       "externalDynamicValueReferences": [],
@@ -135,7 +141,7 @@
     "pt": "Virtude"
   },
   "description": {
-    "fr": "Consomme {value:a,abs}\\_{%AURA_SWORD,value:a} de votre héros.\n\\---\nLui confère son {%AT} en {%AR}.",
+    "fr": "Consomme {value:a,abs}\\_{%AURA_SWORD,value:a} de votre héros.\n\\---\n<if pvm>Lui confère son {%AT} en {%AR}.</if><if pvp>Lui confère {value:arm,+} en {%AR}.</if>",
     "en": "Consumes {value:a,abs}\\_of\\_your hero's {%AURA_SWORD,plural:other}.\n\\---\nConfers their {%AT} on them as {%AR}.",
     "es": "Consume {value:a,abs}\\_{%AURA_SWORD,value:a} de tu héroe.\n\\---\nLe confiere su {%AT} en {%AR}.",
     "de": "Verbraucht {value:a,abs}\\_{%AURA_SWORD,value:a} deines Helden.\n\\---\nVerleiht ihm seinen {%AT,plural:one} als {%AR}.",

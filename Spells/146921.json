@@ -12,6 +12,7 @@
   "m_id": 146921,
   "m_displayName": "CRA - ARME - SHIRU SHADEN - FEU - Shiruken Ardent",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 411655677,
     "b": -246207516,
@@ -66,7 +67,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 191,
@@ -80,9 +81,20 @@
         "type": "GaugeValue",
         "element": 11,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -127,6 +139,25 @@
                 "value": 2
               }
             }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCoordSelector",
+              "filters": [
+                {
+                  "type": "CellValidForCharacterFilter"
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
           }
         ]
       },
@@ -166,9 +197,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgA",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 18
+            "valueInPvM": 18,
+            "valueInPvP": 28
           },
           "factor": {
             "type": "ReferenceScalingFactor",

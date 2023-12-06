@@ -12,6 +12,7 @@
   "m_id": 276,
   "m_displayName": "DECK - INFINITE - EAU - Phaeris",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 820959823,
     "b": 625152196,
@@ -46,6 +47,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "r",
           "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cost",
+          "value": -2
         }
       ],
       "externalDynamicValueReferences": [],
@@ -57,9 +63,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 185
+      "valueInPvM": 185,
+      "valueInPvP": 164
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -67,9 +74,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 40
+      "valueInPvM": 40,
+      "valueInPvP": 44
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -103,7 +111,7 @@
     "rarity": 4,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 36,
     "castCondition": {
@@ -208,7 +216,7 @@
     "pt": "Faeris"
   },
   "description": {
-    "fr": "{%attack} {PA_RESvalue:r,+}.",
+    "fr": "{%attack} <if pvm>{PA_RESvalue:r,+}</if><if pvp>{PAvalue:cost} au coût du prochain sort</if>.",
     "en": "{%attack} {PA_RESvalue:r,+}.",
     "es": "{%attack} {PA_RESvalue:r,+}.",
     "de": "{%attack} {PA_RESvalue:r,+}.",

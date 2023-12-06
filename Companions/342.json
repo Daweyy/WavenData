@@ -12,6 +12,7 @@
   "m_id": 342,
   "m_displayName": "DECK - BEGINNER - Suzy",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1876519419,
     "b": -2006263276,
@@ -41,7 +42,13 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgPVP",
+          "value": 14
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -49,9 +56,10 @@
     "families": [],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 65
+      "valueInPvM": 65,
+      "valueInPvP": 76
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -59,9 +67,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 20
+      "valueInPvM": 20,
+      "valueInPvP": 14
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -95,7 +104,7 @@
     "rarity": 1,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 940,
     "castCondition": {
@@ -218,7 +227,7 @@
     "pt": "Suzy"
   },
   "description": {
-    "fr": "{%Appearance} Inflige son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.",
+    "fr": "{%Appearance} <if pvm>Inflige son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.</if><if pvp>Inflige {magicalDamage:dmgPVP} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.</if>",
     "en": "{%Appearance} Inflicts {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.",
     "es": "{%Appearance} Inflige su {%AT} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.",
     "de": "{%Appearance} Verursacht seinen {%AT,plural:one} bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> als Schaden.",

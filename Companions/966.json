@@ -12,6 +12,7 @@
   "m_id": 966,
   "m_displayName": "DECK - COMMON - AIR - Angèle",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1059966022,
     "b": -997420124,
@@ -58,9 +59,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 61
+      "valueInPvM": 61,
+      "valueInPvP": 62
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -68,9 +70,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 16
+      "valueInPvM": 16,
+      "valueInPvP": 12
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -104,7 +107,7 @@
     "rarity": 0,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 985,
     "castCondition": {
@@ -209,7 +212,7 @@
     "pt": "Angélica"
   },
   "description": {
-    "fr": "{%APPEARANCE} Gagne {PropertyEffect:18}.",
+    "fr": "{%APPEARANCE} Gagne {PropertyEffect:18}.\n<if pvp>Soigne les alliés qu'elle traverse de son {%AT}.</if>",
     "en": "{%APPEARANCE} Gains {PropertyEffect:18}.",
     "es": "{%APPEARANCE} Gana {PropertyEffect:18}.",
     "de": "{%APPEARANCE} Erhält {PropertyEffect:18}.",

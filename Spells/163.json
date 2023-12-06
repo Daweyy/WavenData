@@ -12,6 +12,7 @@
   "m_id": 163,
   "m_displayName": "XELOR - CLASSE - AIR - Sinistro Air",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 59042326,
     "b": 1874020132,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -88,60 +89,134 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CombinedTargetSelector",
-        "selectors": [
-          {
-            "type": "FilteredCoordSelector",
-            "filters": [
-              {
-                "type": "AroundTargetFilter",
-                "targetsToCompare": {
-                  "type": "CasterHeroSelector"
-                },
-                "distance": {
-                  "type": "Between",
-                  "minIncluded": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": null,
-                    "value": 1
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CombinedTargetSelector",
+          "selectors": [
+            {
+              "type": "CrossAreaOfEffectSelector",
+              "originSelector": {
+                "type": "FilteredCoordSelector",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "Between",
+                      "minIncluded": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": null,
+                        "value": 1
+                      },
+                      "maxIncluded": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": null,
+                        "value": 3
+                      }
+                    }
                   },
-                  "maxIncluded": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "c",
-                    "value": 3
+                  {
+                    "type": "CellValidForMechanismFilter"
                   }
-                }
-              },
-              {
-                "type": "CellValidForMechanismFilter"
-              }
-            ]
-          },
-          {
-            "type": "FilteredEntitySelector",
-            "from": {
-              "type": "AllObjectMechanismsSelector"
-            },
-            "filters": [
-              {
-                "type": "OwnerFilter",
-                "isIdentical": true,
-                "reference": {
-                  "type": "CasterSelector"
-                }
-              },
-              {
-                "type": "ObjectMechanismDefinitionFilter",
-                "condition": 1,
-                "objectMechanisms": [
-                  398
                 ]
+              },
+              "size": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 2
               }
-            ]
-          }
-        ]
+            },
+            {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "ObjectMechanismDefinitionFilter",
+                  "condition": 1,
+                  "objectMechanisms": [
+                    955,
+                    559,
+                    583,
+                    398
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CombinedTargetSelector",
+          "selectors": [
+            {
+              "type": "FilteredCoordSelector",
+              "filters": [
+                {
+                  "type": "AroundTargetFilter",
+                  "targetsToCompare": {
+                    "type": "CasterHeroSelector"
+                  },
+                  "distance": {
+                    "type": "Between",
+                    "minIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 1
+                    },
+                    "maxIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "c",
+                      "value": 3
+                    }
+                  }
+                },
+                {
+                  "type": "CellValidForMechanismFilter"
+                }
+              ]
+            },
+            {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                },
+                {
+                  "type": "ObjectMechanismDefinitionFilter",
+                  "condition": 1,
+                  "objectMechanisms": [
+                    398
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [],
@@ -167,15 +242,12 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        {
-          "type": 22,
-          "id": 138
-        },
-        "OBJECTMECHANISM",
+        "BOUNCE",
         {
           "type": 7,
           "id": 1097
         },
+        "OBJECTMECHANISM",
         {
           "type": 7,
           "id": 398
@@ -191,7 +263,7 @@
     "pt": "Sinistro Ar"
   },
   "description": {
-    "fr": "Construit un {ObjectMechanism:398} jusqu'à {cell:c} de votre héros.\n<rem>Détruit votre précédent {ObjectMechanism:398!}.</rem>\n\\---\n<b>OU</b>\n\\---\nTransforme votre {ObjectMechanism:398!} en {ObjectMechanism:1097}.",
+    "fr": "Construit un {ObjectMechanism:398} jusqu'à {cell:c} de votre héros.\n<rem>Détruit votre précédent {ObjectMechanism:398!}.</rem>\n\\---\n<b>OU</b>\n\\---\n<if pvm>Transforme votre {ObjectMechanism:398!} en {ObjectMechanism:1097}.</if><if pvp>Transforme le <b>SINISTRO</b> ciblé en {ObjectMechanism:1097}.</if>",
     "en": "Builds one {ObjectMechanism:398} up to {cell:c} from your hero.\n<rem>Destroys your previous {ObjectMechanism:398!}.</rem>\n\\---\n<b>OR</b>\n\\---\nTurns your {ObjectMechanism:398!} into a {ObjectMechanism:1097}.",
     "es": "Construye un {ObjectMechanism:398} hasta a {cell:c} de tu héroe.\n<rem>Destruye tu {ObjectMechanism:398!} anterior.</rem>\n\\---\n<b>O</b>\n\\---\nTransforma tu {ObjectMechanism:398!} en {ObjectMechanism:1097}.",
     "de": "Errichtet einen\\_{ObjectMechanism:398} in einer Entfernung von bis zu {cell:c} von deinem Helden.\n<rem>Zerstört deinen vorherigen {ObjectMechanism:398!}.</rem>\n\\---\n<b>ODER</b>\n\\---\nVerwandelt deinen {ObjectMechanism:398!} in {ObjectMechanism:1097}.",

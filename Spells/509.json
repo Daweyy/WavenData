@@ -12,6 +12,7 @@
   "m_id": 509,
   "m_displayName": "SRAM - CLASSE - EAU - Doigts de grele",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 141444298,
     "b": -976180284,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -120,9 +121,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 25
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 25
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 33
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

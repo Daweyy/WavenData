@@ -12,6 +12,7 @@
   "m_id": 927,
   "m_displayName": "IOP - CLASSE - EAU - Traverse Glacée",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -245277470,
     "b": 373024532,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -162,9 +163,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 8
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 8
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 13
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 108849,
   "m_displayName": "ENIRIPSA - ARME - LAME VORACIUS - EAU - Aiguillon Fremissant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 344802031,
     "b": 2146463796,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 202,
@@ -120,9 +121,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 28
+            "valueInPvM": 28,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",

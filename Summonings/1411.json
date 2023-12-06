@@ -1,0 +1,153 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442430
+  },
+  "m_Name": "1411",
+  "m_id": 1411,
+  "m_displayName": "STORY MODE - MONSTRE SHUSHU - Abral",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1755140534,
+    "b": 1613188132,
+    "c": 849703497,
+    "d": -2058870057,
+    "e": 2041038371
+  },
+  "m_i18nChampionNameId": {
+    "a": 1755140534,
+    "b": 1613188132,
+    "c": 849703497,
+    "d": -2058870057,
+    "e": 1905858038
+  },
+  "m_i18nDescriptionId": {
+    "a": 1755140534,
+    "b": 1613188132,
+    "c": 849703497,
+    "d": -2058870057,
+    "e": 1847680830
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 1411,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 9309,
+      "skinIds": [
+        9309
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        },
+        {
+          "type": "MultValue",
+          "referenceId": "buff",
+          "valuesToMult": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 100
+            },
+            {
+              "type": "FightDataValue",
+              "referenceId": "",
+              "dataName": "BUFF_STACKS",
+              "from": {
+                "type": "EffectHolderSelector"
+              }
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.654.ex"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EXPLOSION",
+        {
+          "type": 20,
+          "id": 45
+        }
+      ]
+    },
+    "families": [
+      73
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 180
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 5,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{Skin:9309}",
+    "en": "{Skin:9309}",
+    "es": "{Skin:9309}",
+    "de": "{Skin:9309}",
+    "pt": "{Skin:9309}"
+  },
+  "description": {
+    "fr": "Tant qu'il est en jeu, les {Summoning:467,plural:other!} gagnent {PMvalue:pm,+}.\n\\---\n{PropertyEffect:45}\\_: Déclenche {explosion:ParameterizedEffectExecution.654.ex}.\n{ATvalue:pow,+,percent} aux {Summoning:467,plural:other!}.",
+    "en": "While in play, the {Summoning:467,plural:other!} gain {PMvalue:pm,+}.\n\\---\n{PropertyEffect:45}: Triggers {explosion:ParameterizedEffectExecution.654.ex}.\n{ATvalue:pow,+,percent} to {Summoning:467,plural:other!}.",
+    "es": "Mientras esté en juego, los {Summoning:467,plural:other!} ganan {PMvalue:pm,+}.\n\\---\n{PropertyEffect:45}: Activa {explosion:ParameterizedEffectExecution.654.ex}.\n{ATvalue:pow,+,percent} a los {Summoning:467,plural:other!}.",
+    "de": "Solange er im Spiel ist, erhalten {Summoning:467,plural:other!} {PMvalue:pm,+}.\n\\---\n{PropertyEffect:45}: Löst {explosion:ParameterizedEffectExecution.654.ex} aus.\n{ATvalue:pow,+,percent} für {Summoning:467,plural:other!}.",
+    "pt": "Enquanto ele estiver no jogo, os {Summoning:467,plural:other!} ganham {PMvalue:pm,+}.\n\\---\n{PropertyEffect:45}: Aciona {explosion:ParameterizedEffectExecution.654.ex}.\n{ATvalue:pow,+,percent} aos {Summoning:467,plural:other!}."
+  },
+  "championName": {
+    "fr": "{Skin:9309}",
+    "en": "{Skin:9309}",
+    "es": "{Skin:9309}",
+    "de": "{Skin:9309}",
+    "pt": "{Skin:9309}"
+  }
+}

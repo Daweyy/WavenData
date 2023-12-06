@@ -12,6 +12,7 @@
   "m_id": 830,
   "m_displayName": "SRAM - Lame Ourai",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 648895812,
     "b": 1593719188,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "fe7de798e23d7bc4b8fdb44771e3e907"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 830,
@@ -77,6 +81,27 @@
           "type": "ConstIntegerValue",
           "referenceId": "h",
           "value": 80
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -88,9 +113,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 374
+      "valueInPvM": 374,
+      "valueInPvP": 365
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -98,9 +124,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 24
+      "valueInPvM": 24,
+      "valueInPvP": 30
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -132,6 +159,9 @@
     "defaultSkinIdMale": 1838,
     "defaultSkinIdFemale": 4095,
     "god": 6,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -165,7 +195,7 @@
     "pt": "Espada Murai"
   },
   "description": {
-    "fr": "Lorsque l'un de vos {%KEYWORD.TRAP.NAME,plural:other} est déclenché\\_:\\v Votre héros se soigne de {value:h,percent} de son {%AT}.",
+    "fr": "Lorsque l'un de vos {%KEYWORD.TRAP.NAME,plural:other} est déclenché\\_:\\v <if pvm>Votre héros se soigne de {value:h,percent} de son {%AT}</if><if pvp>Votre héros se soigne de {PVvalue:hPVP}</if>.",
     "en": "When one of your {%KEYWORD.TRAP.NAME,plural:other} is triggered:\\v Your hero heals {value:h,percent} of their {%AT}.",
     "es": "Cuando una de tus {%KEYWORD.TRAP.NAME,plural:other} es activada:\\v Tu héroe se cura un {value:h,percent} de su {%AT}.",
     "de": "Wenn eine deiner {%KEYWORD.TRAP.NAME,plural:other} ausgelöst wird:\\v Dein Held heilt sich um {value:h,percent} seines {%AT,plural:two}.",

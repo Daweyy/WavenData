@@ -12,6 +12,7 @@
   "m_id": 673,
   "m_displayName": "SRAM - Piège Sram - Eau",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -93824937,
     "b": 1950740868,
@@ -46,9 +47,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 24
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 24
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 18
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -85,9 +95,18 @@
       "type": "BuffedScalingDynamicValue",
       "referenceId": "dmg",
       "baseValue": {
-        "type": "ConstIntegerValue",
+        "type": "PvmOrPvpValue",
         "referenceId": "",
-        "value": 24
+        "pvm": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 24
+        },
+        "pvp": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 18
+        }
       },
       "factor": {
         "type": "ReferenceScalingFactor",

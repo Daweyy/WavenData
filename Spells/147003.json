@@ -12,6 +12,7 @@
   "m_id": 147003,
   "m_displayName": "CRA - ARME - SHIRU SHADEN - TERRE - Shiruken Graveleux",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1936857680,
     "b": -481380684,
@@ -66,7 +67,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 191,
@@ -80,9 +81,20 @@
         "type": "GaugeValue",
         "element": 13,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -143,9 +155,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 13
+            "valueInPvM": 13,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",

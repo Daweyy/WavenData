@@ -1,0 +1,149 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1629",
+  "m_id": 1629,
+  "m_displayName": "ALBUERA - 05 - Photosynthese",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 709146815,
+    "b": -543409996,
+    "c": 184086040,
+    "d": 1382296830,
+    "e": -420818705
+  },
+  "m_i18nDescriptionId": {
+    "a": 709146815,
+    "b": -543409996,
+    "c": 184086040,
+    "d": 1382296830,
+    "e": 1894034381
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "af4382e20b847de4abf80712c11d5f86"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1629,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "WoundedFilter",
+            "isWounded": true
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c9c5994b173aa134791168d7ace65547",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "referenceId": "h",
+          "baseValue": 10,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 4
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Photosynthèse",
+    "en": "Photosynthesis",
+    "es": "Fotosíntesis",
+    "de": "Fotosynthese",
+    "pt": "Fotossíntese"
+  },
+  "description": {
+    "fr": "Soigne un allié de {PVvalue:h} et l'{PropertyEffect:4}.",
+    "en": "Heals an ally {PVvalue:h} and {PropertyEffect:4} them.",
+    "es": "Cura a un aliado {PVvalue:h} y lo {PropertyEffect:4}.",
+    "de": "Heilt einen Verbündeten um {PVvalue:h} und macht ihn {PropertyEffect:4}.",
+    "pt": "Cura um aliado em {PVvalue:h} e o {PropertyEffect:4}."
+  }
+}

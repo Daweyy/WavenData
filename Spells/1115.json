@@ -1,0 +1,149 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1115",
+  "m_id": 1115,
+  "m_displayName": "ALBUERA - 05 - Enchevetrement",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1439727848,
+    "b": -743701404,
+    "c": -335195845,
+    "d": -2031936427,
+    "e": -148169161
+  },
+  "m_i18nDescriptionId": {
+    "a": -1439727848,
+    "b": -743701404,
+    "c": -335195845,
+    "d": -2031936427,
+    "e": 1085124286
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a31b0e1ff7ea8e14086fd9685a28bc69"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1115,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "10bb9df591666ec4da9f620bdb678fb2",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Enchevêtrement",
+    "en": "Entanglement",
+    "es": "Enredo",
+    "de": "Verheddern",
+    "pt": "Trapalhada"
+  },
+  "description": {
+    "fr": "{PMvalue:pm} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à un allié.",
+    "en": "{PMvalue:pm} to an opponent adjacent\\_<sprite name=\"cell_cross\"> to an ally.",
+    "es": "{PMvalue:pm} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a un aliado.",
+    "de": "{PMvalue:pm} für einen an einen Verbündeten angrenzenden\\_<sprite name=\"cell_cross\"> Gegner.",
+    "pt": "{PMvalue:pm} a um adversário adjacente\\_<sprite name=\"cell_cross\"> a um aliado."
+  }
+}

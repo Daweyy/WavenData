@@ -12,6 +12,7 @@
   "m_id": 472,
   "m_displayName": "ENIRIPSA - CLASSE - FEU - Premiere Cure Caustique",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1763310761,
     "b": 1916663044,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -111,9 +112,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 6
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 6
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 3
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

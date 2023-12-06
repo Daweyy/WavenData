@@ -12,6 +12,7 @@
   "m_id": 220101,
   "m_displayName": "XELOR - ARME - PIKUXALA - ETHER - Téléportation Pikuxala",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1346623184,
     "b": 1000057572,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 945,
@@ -143,6 +144,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "x",
           "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 41
         }
       ],
       "externalDynamicValueReferences": [],
@@ -158,7 +164,7 @@
     "pt": "Teletransporte Pikuxala"
   },
   "description": {
-    "fr": "Téléporte votre héros jusqu'à {cell:c} et inflige {value:x,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.\n\\---\nEnsuite, téléporte votre héros sur sa position de début de tour.",
+    "fr": "<if pvm>Téléporte votre héros jusqu'à {cell:c} et inflige {value:x,percent} de son {%AT}  aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.</if><if pvp>Téléporte votre héros jusqu'à {cell:c} et inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.</if>\n\\---\nEnsuite, téléporte votre héros sur sa position de début de tour.",
     "en": "Teleports your hero up to {cell:c} and inflicts {value:x,percent} of their {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.\n\\---\nThen, teleports your hero to their start-of-turn position.",
     "es": "Teletransporta a tu héroe hasta {cell:c} e inflige un {value:x,percent} de su {%AT} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.\n\\---\nA continuación, teletransporta a tu héroe a su posición de inicio de turno.",
     "de": "Teleportiert deinen Helden bis zu {cell:c} und fügt Gegnern im Umkreis\\_<sprite name=\"cell_around\"> {value:x,percent} seines {%AT,plural:two} als Schaden zu.\n\\---\nTeleportiert deinen Helden anschließend auf die Position, die er zu Rundenbeginn innehatte.",

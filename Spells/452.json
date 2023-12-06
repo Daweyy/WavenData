@@ -12,6 +12,7 @@
   "m_id": 452,
   "m_displayName": "SRAM - ARME - SHUGEN - TERRE - Traque Controlee",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -286214319,
     "b": 922873396,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 36,
@@ -111,9 +112,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 12
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 12
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 27
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -148,9 +158,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 17
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 17
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 15
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -12,6 +12,7 @@
   "m_id": 240651,
   "m_displayName": "SRAM - ARME - SHUGEN - ETHER - Repousse Shugen",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 612925379,
     "b": 1622037028,
@@ -51,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 36,
@@ -146,6 +147,27 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 26
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 3
@@ -168,7 +190,7 @@
     "pt": "Empurrão Shugen"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_: {#PUSH} de {cell:c}.",
+    "fr": "<if pvm>Inflige l’{%AT} de votre héros.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}\\_: {#PUSH} de {cell:c}.",
     "en": "Inflicts your hero's {%AT}.\n\\---\n{#TRAPPER}: {#PUSH} {cell:c}.",
     "es": "Inflige el {%AT} de tu héroe.\n\\---\n{#TRAPPER}: {#PUSH} {cell:c}.",
     "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{#TRAPPER}: {#PUSH,plural:one} um {cell:c}.",

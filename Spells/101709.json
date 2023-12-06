@@ -12,6 +12,7 @@
   "m_id": 101709,
   "m_displayName": "CRA - ARME - EXPINGOLE - TERRE - Impulsion",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1048947939,
     "b": 768529044,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 998,
@@ -109,9 +110,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 30
+            "valueInPvM": 30,
+            "valueInPvP": 33
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -143,9 +145,10 @@
           "value": 30
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "pm",
-          "value": -1
+          "valueInPvM": -1,
+          "valueInPvP": -2
         },
         {
           "type": "ConstIntegerValue",

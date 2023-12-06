@@ -12,6 +12,7 @@
   "m_id": 919,
   "m_displayName": "IOP - Justelame Brutale",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 471954167,
     "b": 731936052,
@@ -50,6 +51,9 @@
   "m_weaponIllustrationReference": {
     "assetGuid": "202308b3184cfd14db0b57ec7b8e8330"
   },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
   "values": {
     "type": "WeaponDefinition",
     "id": 919,
@@ -82,6 +86,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "p",
           "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pPVP",
+          "value": 15
         }
       ],
       "externalDynamicValueReferences": [],
@@ -98,9 +107,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 387
+      "valueInPvM": 387,
+      "valueInPvP": 369
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -108,9 +118,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 32
+      "valueInPvM": 32,
+      "valueInPvP": 35
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -142,6 +153,9 @@
     "defaultSkinIdMale": 7765,
     "defaultSkinIdFemale": 8082,
     "god": 1,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -175,7 +189,7 @@
     "pt": ""
   },
   "description": {
-    "fr": "Lorsque vous déclenchez {NamedEffect:455}\\_:\\v Votre héros gagne {value:p,percent} de son {%AT} en {%AR,plural:other}.\n\\---\n<rem>Limité à {value:t} fois par tour.</i></rem>",
+    "fr": "Lorsque vous déclenchez {NamedEffect:455}\\_:\\v<if pvm>Votre héros gagne {value:p,percent} de son {%AT} en {%AR,plural:other}</if><if pvp>Votre héros gagne {ARvalue:pPVP,+}</if>.\n\\---\n<rem>Limité à {value:t} fois par tour.</i></rem>",
     "en": "When you trigger {NamedEffect:455}:\\v Your hero gains {value:p,percent} of their {%AT} as {%AR}.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</i></rem>",
     "es": "Cuando activas {NamedEffect:455}:\\v Tu héroe gana un {value:p,percent} de su {%AT} en {%AR,plural:other}.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</i></rem>",
     "de": "Wenn du {NamedEffect:455} auslöst:\\v Dein Held erhält {value:p,percent} seines {%AT,plural:two} als {%AR,plural:other}.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</i></rem>",

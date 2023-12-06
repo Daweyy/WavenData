@@ -12,6 +12,7 @@
   "m_id": 534,
   "m_displayName": "IOP - Flamboyante Kasaï",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -564322041,
     "b": -2123801500,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "60580cafdfbf3184393af9b3709d4d77"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -88,9 +92,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 399
+      "valueInPvM": 399,
+      "valueInPvP": 400
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -98,9 +103,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 32
+      "valueInPvM": 32,
+      "valueInPvP": 33
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -132,6 +138,9 @@
     "defaultSkinIdMale": 9298,
     "defaultSkinIdFemale": 3377,
     "god": 1,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

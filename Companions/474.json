@@ -12,6 +12,7 @@
   "m_id": 474,
   "m_displayName": "DECK - COMMON - MULTI - Disciple de l'Agonie",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -901482375,
     "b": 1014556148,
@@ -61,9 +62,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 68
+      "valueInPvM": 68,
+      "valueInPvP": 71
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -71,9 +73,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 13
+      "valueInPvM": 13,
+      "valueInPvP": 14
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -107,7 +110,7 @@
     "rarity": 0,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 985,
     "castCondition": {
@@ -221,7 +224,7 @@
     "pt": "Discípulo da Agonia"
   },
   "description": {
-    "fr": "{#RESURRECTABLE}\\_: Le coût de ce compagnon est réduit de {WATERGAUGEvalue:x,abs}.\n\\---\n<rem>Limité à une fois par combat.</rem>",
+    "fr": "{#RESURRECTABLE}\\_<if pvm>: Le coût de ce compagnon est réduit de {WATERGAUGEvalue:x,abs}.</if>\n\\---\n<rem>Limité à une fois par combat.</rem>",
     "en": "{#RESURRECTABLE}: This companion's cost is reduced by {WATERGAUGEvalue:x,abs}.\n\\---\n<rem>Limit: 1 time per fight.</rem>",
     "es": "{#RESURRECTABLE}: El coste de este compañero se reduce en {WATERGAUGEvalue:x,abs}.\n\\---\n<rem>Limitado a una vez por combate.</rem>",
     "de": "{#RESURRECTABLE}: Die Kosten für diesen Begleiter werden um {WATERGAUGEvalue:x,abs} verringert.\n\\---\n<rem>Ist auf einmal pro Kampf begrenzt.</rem>",

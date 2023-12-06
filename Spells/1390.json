@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1390",
+  "m_id": 1390,
+  "m_displayName": "STORY MODE - 39 - Sentence de Goultard",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -1713436198,
+    "b": 2131254820,
+    "c": -626599046,
+    "d": 861027341,
+    "e": -2147382493
+  },
+  "m_i18nDescriptionId": {
+    "a": -1713436198,
+    "b": 2131254820,
+    "c": -626599046,
+    "d": 861027341,
+    "e": -556883789
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ef0b3a403cf7b964eacc814f8829722b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1390,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "AllCoordsSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e5d5abcd7bc90224ea4d0ddc5320ba66",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "x",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 20
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Sentence de Goultard",
+    "en": "Goultard's Sentence",
+    "es": "Sentencia de Gúltar",
+    "de": "Goultards Urteil",
+    "pt": "Sentença de Gultar"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:x} aux adversaires dans la zone<sprite name=\"cell_around\"> ciblée.",
+    "en": "Does {magicalDamage:x} to opponents in the targeted zone<sprite name=\"cell_around\">.",
+    "es": "Inflige {magicalDamage:x} a los adversarios en la zona <sprite name=\"cell_around\"> objetivo.",
+    "de": "Verursacht bei Gegnern im Zielbereich\\_<sprite name=\"cell_around\"> {magicalDamage:x}.",
+    "pt": "Inflige {magicalDamage:x} aos adversários na zona<sprite name=\"cell_around\"> visada."
+  }
+}

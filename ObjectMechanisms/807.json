@@ -12,6 +12,7 @@
   "m_id": 807,
   "m_displayName": "XELOR - Cadran de Xélor",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1862539700,
     "b": 515736036,
@@ -43,18 +44,39 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 11,
+            "valueInPvP": 7
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            91,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
-          "referenceId": "nb",
-          "value": 1
+          "referenceId": "blPVP",
+          "value": -12
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        {
-          "type": 22,
-          "id": 136
-        },
+        "PEAT",
         "OBJECTMECHANISM"
       ]
     },
@@ -70,9 +92,10 @@
       "reference": 17
     },
     "baseMecaLife": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 30
+      "valueInPvM": 25,
+      "valueInPvP": 30
     }
   },
   "name": {

@@ -12,6 +12,7 @@
   "m_id": 992,
   "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - TERRE - Coupe Rutilante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1166022585,
     "b": 1874712836,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 637,
@@ -125,9 +126,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 21
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 21
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 27
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -162,9 +172,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg2",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 8
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 8
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 8
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

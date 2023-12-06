@@ -12,6 +12,7 @@
   "m_id": 919,
   "m_displayName": "SRAM - ARME - LAME OURAI - EAU - Amorce Enivrante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 899133118,
     "b": 878839588,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 830,
@@ -150,9 +151,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 16
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 16
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 23
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -187,9 +197,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": null,
-            "value": 11
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 11
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 10
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

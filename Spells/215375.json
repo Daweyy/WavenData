@@ -12,6 +12,7 @@
   "m_id": 215375,
   "m_displayName": "ENIRIPSA - CLASSE - ETHER - Depannage",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -259211976,
     "b": 206228436,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -89,7 +90,22 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "PvmOrPvpValue",
+          "referenceId": "a",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 0
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -103,7 +119,7 @@
     "pt": "Conserto"
   },
   "description": {
-    "fr": "Piochez votre prochain {%SPELLCOUNT,plural:one} de <b>LABORATOIRE</b>.",
+    "fr": "Piochez votre prochain {%SPELLCOUNT,plural:one} de <b>LABORATOIRE</b>.<if pvp>\n\\---\n{value:a,+}\\_{%AURA_HEART,value:a} à votre héros s'il en possède déjà.</if>",
     "en": "Draw your next <b>LABORATORY</b> {%SPELLCOUNT,plural:one}.",
     "es": "Sacas tu próximo {%SPELLCOUNT,plural:one} de <b>LABORATORIO</b>.",
     "de": "Zieht deinen nächsten <b>LABORATORIUM</b>-{%SPELLCOUNT,plural:one}.",

@@ -12,6 +12,7 @@
   "m_id": 998,
   "m_displayName": "CRA - Expingole",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 477449563,
     "b": 569837060,
@@ -49,6 +50,9 @@
   },
   "m_weaponIllustrationReference": {
     "assetGuid": "f187f8bb5bc1de943b042617d9882a33"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
   },
   "values": {
     "type": "WeaponDefinition",
@@ -88,9 +92,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 385
+      "valueInPvM": 385,
+      "valueInPvP": 392
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -98,15 +103,17 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 24
+      "valueInPvM": 24,
+      "valueInPvP": 23
     },
     "riposte": null,
     "actionCriticalChance": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 50
+      "valueInPvM": 50,
+      "valueInPvP": 0
     },
     "actionCriticalBonus": null,
     "customActionTarget": null,
@@ -132,6 +139,9 @@
     "defaultSkinIdMale": 1250,
     "defaultSkinIdFemale": 3361,
     "god": 2,
+    "conditionalAvailability": {
+      "type": "Available"
+    },
     "playerActionPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",

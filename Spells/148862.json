@@ -12,6 +12,7 @@
   "m_id": 148862,
   "m_displayName": "CRA - ARME - SHIRU SHADEN - AIR - Shiruken Nebuleux",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -768961186,
     "b": -321411596,
@@ -66,7 +67,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 191,
@@ -80,9 +81,20 @@
         "type": "GaugeValue",
         "element": 14,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -143,41 +155,95 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
+          "type": "SumValue",
           "referenceId": "dmg",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 34
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51,
-            24
-          ],
-          "skillBuffs": [
+          "valuesToSum": [
             {
-              "type": "SkillBuff",
-              "skillId": 118841,
-              "percentBuff": {
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": null,
+              "baseValue": {
+                "type": "PvmOrPvpConstIntegerValue",
+                "referenceId": null,
+                "valueInPvM": 34,
+                "valueInPvP": 32
+              },
+              "factor": {
+                "type": "ReferenceScalingFactor",
+                "reference": 12
+              },
+              "buffs": [
+                51,
+                24
+              ],
+              "skillBuffs": [
+                {
+                  "type": "SkillBuff",
+                  "skillId": 118841,
+                  "percentBuff": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "Bper",
+                    "value": 30
+                  }
+                }
+              ],
+              "from": {
+                "type": "CasterSelector"
+              },
+              "addInsteadOfMultiply": false
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "AndCondition",
+                "conditions": [
+                  {
+                    "type": "PvpFightCondition"
+                  },
+                  {
+                    "type": "SpellComboCondition"
+                  }
+                ]
+              },
+              "ifTrue": {
+                "type": "BuffedScalingDynamicValue",
+                "referenceId": null,
+                "baseValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "dmg2",
+                  "value": 10
+                },
+                "factor": {
+                  "type": "ReferenceScalingFactor",
+                  "reference": 12
+                },
+                "buffs": [
+                  51,
+                  24
+                ],
+                "skillBuffs": [],
+                "from": {
+                  "type": "CasterSelector"
+                },
+                "addInsteadOfMultiply": false
+              },
+              "ifFalse": {
                 "type": "ConstIntegerValue",
-                "referenceId": "Bper",
-                "value": 30
+                "referenceId": "",
+                "value": 0
               }
             }
-          ],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          ]
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg2",
+          "value": 10
         }
       ],
       "externalDynamicValueReferences": [],
@@ -195,7 +261,7 @@
     "pt": "Shiruken Nebuloso"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à votre héros.\n\\---\n{#COMBO}\\_: Téléporte votre héros derrière la cible.",
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à votre héros<if pvm>.</if> <if pvp>puis échange de position avec la cible.</if>\n\\---\n{#COMBO}\\_: <if pvm>Téléporte votre héros derrière la cible.</if><if pvp>{magicalDamage:dmg2,+}.</if>",
     "en": "Does {magicalDamage:dmg} to an opponent adjacent\\_<sprite name=\"cell_cross\"> to your hero.\n\\---\n{#COMBO}: Teleports your hero behind the target.",
     "es": "Inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a tu héroe.\n\\---\n{#COMBO}: Teletransporta a tu héroe detrás del objetivo.",
     "de": "Verursacht {magicalDamage:dmg} bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner deinem Helden.\n\\---\n{#COMBO}: Teleportiert deinen Helden hinter das Ziel.",

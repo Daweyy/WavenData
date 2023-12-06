@@ -12,6 +12,7 @@
   "m_id": 238928,
   "m_displayName": "ENIRIPSA - ARME - GEMME DEPHASANTE - ETHER - Mutation Déphasée",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 115080955,
     "b": 1321700068,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Hidden"
       },
       "element": 6,
       "specificToWeapon": 141,
@@ -105,14 +106,22 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DRAIN",
-        {
-          "type": 20,
-          "id": 114
-        },
         {
           "type": 20,
           "id": 18
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "DRAIN"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "type": 20,
+          "id": 114
         },
         {
           "type": 1,

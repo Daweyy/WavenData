@@ -12,6 +12,7 @@
   "m_id": 327,
   "m_displayName": "CRA - CLASSE - EAU - Trait Bouillant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1984329247,
     "b": -419887916,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -111,9 +112,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 24
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 24
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 23
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

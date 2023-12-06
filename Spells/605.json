@@ -12,6 +12,7 @@
   "m_id": 605,
   "m_displayName": "IOP - ARME - GLAIVE STALAKTOSS - ETHER - Glaive Déphasé",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1675824129,
     "b": -677184396,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 911,
@@ -102,6 +103,16 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "pPVP2",
+          "value": 37
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pPVP",
+          "value": 16
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "p",
           "value": 25
         }
@@ -110,6 +121,16 @@
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 20,
+          "id": 18
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 20,
           "id": 18
         }
@@ -124,7 +145,7 @@
     "pt": "Gládio Defasado"
   },
   "description": {
-    "fr": "Confère {PropertyEffect:18} et {ATvalue:p, +, percent} à votre héros pour le tour.",
+    "fr": "<if pvm>Confère {PropertyEffect:18} et {ATvalue:p, +, percent} à votre héros pour le tour.</if><if pvp>{ATvalue:pPVP2, +, percent} à votre héros pour le tour s'il est déjà {PropertyEffect:18[DÉPHASÉ]}.\n\\---\nSinon, confère {PropertyEffect:18} et {ATvalue:pPVP, +, percent} à votre héros pour le tour.</if>",
     "en": "Confers {PropertyEffect:18} and {ATvalue:p, +, percent} on your hero for the turn.",
     "es": "Confiere {PropertyEffect:18} y un {ATvalue:p, +, percent} a tu héroe durante el turno.",
     "de": "Verleiht deinem Helden für die Runde {PropertyEffect:18} und {ATvalue:p, +, percent}.",

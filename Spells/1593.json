@@ -1,0 +1,169 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1593",
+  "m_id": 1593,
+  "m_displayName": "SEASON - CHUCHOTEUR - Revolte",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1650006357,
+    "b": -1483452668,
+    "c": 1955237833,
+    "d": -742972844,
+    "e": -1191362771
+  },
+  "m_i18nDescriptionId": {
+    "a": -1650006357,
+    "b": -1483452668,
+    "c": 1955237833,
+    "d": -742972844,
+    "e": 671618131
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e98c0ba006e54d141898b6274675e838"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1593,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AreaFromTargetsSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "targets": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "CharacterEntityFilter"
+            }
+          ]
+        },
+        "areaOfEffect": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "EngineDeterminedHolder"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f4a0b944d96a69e449d96a067971d58f",
+        "originTarget": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "FamilyFilter",
+              "condition": 1,
+              "families": [
+                52
+              ]
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ex",
+          "value": 40
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EXPLOSION"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Révolte",
+    "en": "Revolt",
+    "es": "Revuelta",
+    "de": "Revolte",
+    "pt": "Revolta"
+  },
+  "description": {
+    "fr": "Tous les {%FAMILY_CHUCHOTEUR_NAME, plural:other} déclenchent {explosion:ex} autour\\_<sprite name=\"cell_around\"> d'eux.",
+    "en": "All the {%FAMILY_CHUCHOTEUR_NAME, plural:other} trigger {explosion:ex} around\\_<sprite name=\"cell_around\"> themselves.",
+    "es": "Todos los {%FAMILY_CHUCHOTEUR_NAME, plural:other} activan {explosion:ex} a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Alle {%FAMILY_CHUCHOTEUR_NAME, plural:other} lösen {explosion:ex} im Umkreis\\_<sprite name=\"cell_around\"> aus.",
+    "pt": "Todos os {%FAMILY_CHUCHOTEUR_NAME, plural:other} acionam {explosion:ex} em\\_volta\\_<sprite name=\"cell_around\"> deles."
+  }
+}

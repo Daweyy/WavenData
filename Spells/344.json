@@ -12,6 +12,7 @@
   "m_id": 344,
   "m_displayName": "IOP - CLASSE - FEU - Charge Explosive",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 67924581,
     "b": -294040188,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -165,9 +166,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 23
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 23
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 34
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

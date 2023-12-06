@@ -12,6 +12,7 @@
   "m_id": 914,
   "m_displayName": "IOP - ARME - LAMARGUEDON SPECTRAL - ETHER - Désigné Volontaire",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1441520687,
     "b": -1333287036,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 143,
@@ -91,6 +92,20 @@
             "reference": {
               "type": "CasterSelector"
             }
+          },
+          {
+            "type": "PropertiesFilter",
+            "comparison": 4,
+            "properties": [
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 41
+              },
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 88
+              }
+            ]
           }
         ]
       }
@@ -122,7 +137,7 @@
     "pt": "Voluntário Escolhido"
   },
   "description": {
-    "fr": "Sacrifie un allié.\n\\---\nVotre héros gagne son {%AT} en {%AR}.",
+    "fr": "Sacrifie un allié.\n\\---\nVotre héros gagne l'{%AT} de la cible en {%AR}.",
     "en": "Sacrifices an ally.\n\\---\nYour hero gains their {%AT} as {%AR}.",
     "es": "Sacrifica a un aliado.\n\\---\nTu héroe gana su {%AT} en {%AR}.",
     "de": "Opfert einen Verbündeten.\n\\---\nDein Held erhält seinen {%AT,plural:one} als {%AR}.",

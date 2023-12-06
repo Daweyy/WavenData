@@ -12,6 +12,7 @@
   "m_id": 295,
   "m_displayName": "CRA - CLASSE - AIR - Pointe Bondissante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -295332870,
     "b": 793428324,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -111,9 +112,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 12
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 12
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 29
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -133,9 +143,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "bc",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 11
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 11
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 29
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

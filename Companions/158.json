@@ -12,6 +12,7 @@
   "m_id": 158,
   "m_displayName": "DECK - KROSMIQUE - MULTI - Kriss La Krass",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -209455130,
     "b": -1144871900,
@@ -41,7 +42,13 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "aurPVP",
+          "value": 3
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -52,9 +59,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 90
+      "valueInPvM": 90,
+      "valueInPvP": 102
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -62,9 +70,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 26
+      "valueInPvM": 26,
+      "valueInPvP": 18
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -98,7 +107,7 @@
     "rarity": 2,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 407,
     "castCondition": {
@@ -212,7 +221,7 @@
     "pt": "Kriss, o Krasso"
   },
   "description": {
-    "fr": "{%appearance} Vole l'{%AR} de l'adversaire qui en possède le\\_moins.\\v<family>{%Family_GreatVilain_Name}</family>",
+    "fr": "{%appearance} <if pvm>Vole l'{%AR} de l'adversaire qui en possède le\\_moins</if><if pvp>{value:aurPVP,+}\\_{aura:75,value:aurPVP!}</if>.\\v<family>{%Family_GreatVilain_Name}</family>",
     "en": "{%appearance} Steals {%AR} from the opponent that has the\\_least.\\v<family>{%Family_GreatVilain_Name}</family>",
     "es": "{%appearance} Roba {%AR} del adversario que menos tenga.\\v<family>{%Family_GreatVilain_Name}</family>",
     "de": "{%appearance} Entzieht dem Gegner mit dem niedrigsten Rüstungswert {%AR}.\\v<family>{%Family_GreatVilain_Name}</family>",

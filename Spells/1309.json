@@ -10,8 +10,9 @@
   },
   "m_Name": "1309",
   "m_id": 1309,
-  "m_displayName": "IOP - ARME - ASTRAMANTIS - AIR - Lance Air",
-  "m_availability": 2,
+  "m_displayName": "IOP - ARME - ASTRAMANTIS - AIR - Lance Aérienne",
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 97379154,
     "b": 860832164,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 619,
@@ -70,9 +71,10 @@
         "type": "GaugeValue",
         "element": 14,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
         }
       }
     ],
@@ -80,9 +82,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 3
         }
       }
     ],
@@ -102,7 +105,7 @@
               "dynamicValue": {
                 "type": "ConstIntegerValue",
                 "referenceId": "c",
-                "value": 6
+                "value": 5
               }
             }
           },
@@ -112,14 +115,24 @@
         ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "dbe3a05d227650943baa2c1490f3398b",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
           "referenceId": "c",
-          "value": 6
+          "value": 5
         },
         {
           "type": "ConstIntegerValue",
@@ -138,17 +151,17 @@
     }
   },
   "name": {
-    "fr": "Lance Air",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Lance Aérienne",
+    "en": "Aerial Lance",
+    "es": "Lanza Aérea",
+    "de": "Luftlanze",
+    "pt": "Lança Aérea"
   },
   "description": {
-    "fr": "Construit une {ObjectMechanism:370} jusqu'à {cell:c} de votre héros.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Construit une {ObjectMechanism:370} jusqu'à {cell:c} de votre héros.\n<rem>Détruit votre {ObjectMechanism:370!} déjà en jeu.</rem>",
+    "en": "Builds one {ObjectMechanism:370} up to {cell:c} from your hero.\n<rem>Destroys your {ObjectMechanism:370!} already in play.</rem>",
+    "es": "Construye una {ObjectMechanism:370} hasta a {cell:c} de tu héroe.\n<rem>Destruye tu {ObjectMechanism:370!} ya en juego.</rem>",
+    "de": "Baut eine\\_{ObjectMechanism:370} bis zu {cell:c} deines Helden entfernt.\n<rem>Zerstört deine {ObjectMechanism:370!}, die bereits im Spiel ist.</rem>",
+    "pt": "Constrói uma {ObjectMechanism:370} a até {cell:c} do seu herói.\n<rem>Destrói sua {ObjectMechanism:370!} já presente no jogo.</rem>"
   }
 }

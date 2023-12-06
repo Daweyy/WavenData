@@ -12,6 +12,7 @@
   "m_id": 818,
   "m_displayName": "XELOR - CLASSE - FEU - Aiguille Ardente",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1021236198,
     "b": -1635365580,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -111,9 +112,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 25
+            "valueInPvM": 25,
+            "valueInPvP": 20
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -148,12 +150,33 @@
           "type": "ConstIntegerValue",
           "referenceId": "a",
           "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbPVP",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "type": 22,
+          "id": 135
+        },
+        {
+          "keywordCondition": {
+            "keyword": 6
+          },
+          "keyword": "CHRONO"
+        },
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
           "type": 22,
           "id": 135
         }
@@ -168,7 +191,7 @@
     "pt": "Ponteiro Ardente"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:135,value:a} à votre héros si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{value:a,+}\\_{aura:135,value:a} à votre héros si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if><if pvp>{#CHRONO}\\_: {value:nbPVP,+}\\_{aura:135,value:nbPVP} à votre héros.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:135,value:a} to your hero if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:135,value:a} a tu héroe si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{value:a,+}\\_{aura:135,value:a} für deinen Helden, wenn das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",

@@ -12,6 +12,7 @@
   "m_id": 19485,
   "m_displayName": "SRAM - ARME - KARTANA - ETHER - Sanglade",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1837319991,
     "b": -1748354444,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 182,
@@ -119,7 +120,29 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 25
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -133,7 +156,7 @@
     "pt": "Correada"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> d’un de vos {%KEYWORD.TRAP.NAME,plural:other}.",
+    "fr": "<if pvm>Inflige l'{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> d’un de vos {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d’un de vos {%KEYWORD.TRAP.NAME,plural:other}.</if>",
     "en": "Inflicts your hero's {%AT} around\\_<sprite name=\"cell_around\"> one of your {%KEYWORD.TRAP.NAME,plural:other}.",
     "es": "Inflige el {%AT} de tu héroe alrededor\\_<sprite name=\"cell_around\"> de una de tus {%KEYWORD.TRAP.NAME,plural:other}.",
     "de": "Verursacht den {%AT,plural:one} deines Helden im Umkreis\\_<sprite name=\"cell_around\"> einer deiner {%KEYWORD.TRAP.NAME,plural:other}.",

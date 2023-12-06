@@ -12,6 +12,7 @@
   "m_id": 39,
   "m_displayName": "FireSword",
   "m_availability": 3,
+  "m_wip": 0,
   "m_illustration": {
     "assetGuid": "0714740788dd429458ee906d4c2fd10b"
   },
@@ -42,9 +43,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "FireSwordDmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 14
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 14
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 13
+            }
           },
           "factor": {
             "type": "CustomScalingFactor",

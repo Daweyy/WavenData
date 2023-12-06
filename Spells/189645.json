@@ -12,6 +12,7 @@
   "m_id": 189645,
   "m_displayName": "IOP - ARME - FLAMBOYANTE KASAI - ETHER - Tranchant Kasai",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 197888472,
     "b": 589698052,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 534,
@@ -72,9 +73,21 @@
     "castCondition": {
       "type": "ConditionalCastCondition",
       "condition": {
-        "type": "HasFloatingCounterCondition",
+        "type": "FloatingCounterCondition",
         "selector": {
           "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 2
+        },
+        "value": {
+          "type": "GreaterEqualThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       },
       "ifTrue": {
@@ -114,11 +127,9 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "CharacterActionValue",
+          "type": "ConstIntegerValue",
           "referenceId": "dmg",
-          "entitySelector": {
-            "type": "CasterHeroSelector"
-          }
+          "value": 34
         }
       ],
       "externalDynamicValueReferences": [],
@@ -134,7 +145,7 @@
     "pt": "Cortante Kasai"
   },
   "description": {
-    "fr": "Consomme une {%AURA_SWORD} et inflige l'{%AT} de votre héros à un adversaire.",
+    "fr": "<if pvm>Consomme une {%AURA_SWORD} et inflige l'{%AT} de votre héros à un adversaire.</if><if pvp>Consomme une {%AURA_SWORD} et inflige {magicalDamage:dmg} à un adversaire.</if>",
     "en": "Consumes one {%AURA_SWORD} and inflicts your hero's {%AT} on an opponent.",
     "es": "Consume un {%AURA_SWORD} e inflige el {%AT} de tu héroe a un adversario.",
     "de": "Verbraucht eine {%AURA_SWORD} und fügt einem Gegner den {%AT,plural:one} deines Helden als Schaden zu.",

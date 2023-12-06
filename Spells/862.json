@@ -12,6 +12,7 @@
   "m_id": 862,
   "m_displayName": "XELOR - CLASSE - AIR - Fletrissement",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -336296031,
     "b": -1995644860,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": null,
@@ -111,9 +112,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 12
+            "valueInPvM": 12,
+            "valueInPvP": 28
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -148,9 +150,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "bc",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 11
+            "valueInPvM": 11,
+            "valueInPvP": 28
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -10,8 +10,9 @@
   },
   "m_Name": "156233",
   "m_id": 156233,
-  "m_displayName": "WEAPON - ENIRIPSA - GEMME - Coeur d'Esprit",
+  "m_displayName": "WEAPON - ENIRIPSA - GEMME - Catalyseur Déphasant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 756467439,
     "b": 667482244,
@@ -41,31 +42,110 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "c",
-          "value": 3
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "exp",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 0
+          },
+          "buffs": [
+            88,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 0
+          },
+          "buffs": [
+            22,
+            90
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pt",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 0
+          },
+          "buffs": [
+            23,
+            91
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bounce",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 0
+          },
+          "buffs": [
+            24,
+            89
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DALLE",
-        {
-          "type": 6,
-          "id": 282
-        }
+        "QUINTESSENCE"
       ]
     }
   },
   "name": {
-    "fr": "Cœur d'Esprit",
+    "fr": "Catalyseur Déphasant",
     "en": "Spirit Heart",
     "es": "Corazón de Espíritu",
     "de": "Seelenherz",
     "pt": "Coração de Espírito"
   },
   "description": {
-    "fr": "Lorsque votre héros traverse un adversaire ayant un {%ELEMENTARY_STATE}\\_: Pose un {FloorMechanism:282} jusqu'à {cell:c} de l'adversaire traversé.\n\\---\n<rem>L'état élémentaire n'est pas consommé.</rem>",
+    "fr": "Lorsque votre héros traverse un adversaire ayant un {%ELEMENTARY_STATE}\\_: le consomme et déclenche l’effet {#QUINTESSENCE} correspondant.",
     "en": "When your hero goes through an opponent with an {%ELEMENTARY_STATE}: Places one {FloorMechanism:282} up to {cell:c} from the opponent gone through.\n\\---\n<rem>The elemental state is not consumed.</rem>",
     "es": "Cuando tu héroe atraviesa a un adversario que tenga un {%ELEMENTARY_STATE}: Pone un {FloorMechanism:282} hasta a {cell:c} del adversario atravesado.\n\\---\n<rem>El estado elemental no se consume.</rem>",
     "de": "Wenn dein Held einen Gegner mit einem {%ELEMENTARY_STATE} überquert: Platziert ein\\_{FloorMechanism:282} bis zu {cell:c} vom überquerten Gegner entfernt.\n\\---\n<rem>Der Elementarzustand wird nicht verbraucht.</rem>",

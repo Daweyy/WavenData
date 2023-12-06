@@ -12,6 +12,7 @@
   "m_id": 179,
   "m_displayName": "ENIRIPSA - Rufus",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -174987979,
     "b": -296671292,
@@ -69,9 +70,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 1
+      "valueInPvM": 1,
+      "valueInPvP": 50
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -89,7 +91,10 @@
     "customActionTarget": null,
     "actionType": 1,
     "actionRange": null,
-    "lifeScale": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 15
+    },
     "attackScale": {
       "type": "ReferenceScalingFactor",
       "reference": 6
@@ -106,7 +111,7 @@
     "pt": "Rufus"
   },
   "description": {
-    "fr": "<b>APPARITION</b>\\_: Gagne {value:p,percent} de l'{%AT} de votre héros et {value:q,percent} de son {%AT} en {%AR}.",
+    "fr": "<if pvm><b>APPARITION</b>\\_: Gagne {value:p,percent} de l'{%AT} de votre héros et {value:q,percent} de son {%AT} en {%AR}.</if>",
     "en": "<b>SPAWN</b>: Gains {value:p,percent} of your hero's {%AT} and {value:q,percent} of his {%AT} as {%AR}.",
     "es": "<b>APARICIÓN</b>: Gana un {value:p,percent} del {%AT} de tu héroe y un {value:q,percent} de su {%AT} en {%AR}.",
     "de": "<b>ERSCHEINUNG</b>: Erhält {value:p,percent} des {%AT,plural:two} deines Helden und {value:q,percent} seines {%AT,plural:two} als {%AR}.",

@@ -12,6 +12,7 @@
   "m_id": 420,
   "m_displayName": "ENIRIPSA - CLASSE - ETHER - Envol",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1599111698,
     "b": -1516014188,
@@ -61,7 +62,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -75,9 +76,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 2
         }
       }
     ],
@@ -165,7 +167,26 @@
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 19
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -179,7 +200,7 @@
     "pt": "Decolagem"
   },
   "description": {
-    "fr": "Téléporte votre héros sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\nSoigne votre héros de son {%AT}.",
+    "fr": "Téléporte votre héros sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\n<if pvm>Soigne votre héros de son {%AT}.</if><if pvp>Soigne votre héros de {PVvalue:v}.</if>",
     "en": "Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.\n\\---\nHeals your hero with their {%AT}.",
     "es": "Teletransporta a tu héroe a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.\n\\---\nCura a tu héroe su {%AT}.",
     "de": "Teleportiert deinen Helden auf ein an einen Verbündeten angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\nHeilt deinen Helden um seinen {%AT,plural:one}.",

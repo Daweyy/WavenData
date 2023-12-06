@@ -12,6 +12,7 @@
   "m_id": 711,
   "m_displayName": "SRAM - CLASSE - ETHER - Grappin",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -720340011,
     "b": -7585196,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -71,52 +72,150 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "TwoCastTargetDefinition",
-      "selector1": {
-        "type": "UnionOfEntitiesSelector",
-        "first": {
-          "type": "CasterHeroSelector"
-        },
-        "second": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllFloorMechanismsSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "UnionOfEntitiesSelector",
+          "first": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "CasterHeroSelector"
+            },
+            "filters": [
+              {
+                "type": "InLineTargetFilter",
+                "targetsToCompare": {
+                  "type": "AllCharactersSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 4
+                  }
+                }
+              }
+            ]
           },
+          "second": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllFloorMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "InLineTargetFilter",
+                "targetsToCompare": {
+                  "type": "AllCharactersSelector"
+                },
+                "distance": {
+                  "type": "LowerEqualThan",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 4
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "selector2": {
+          "type": "FilteredCharacterSelector",
           "filters": [
             {
-              "type": "OwnerFilter",
-              "isIdentical": true,
-              "reference": {
-                "type": "CasterSelector"
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "nbc",
+                  "value": 4
+                }
+              }
+            },
+            {
+              "type": "HasEmptyPathInLineToTargetFilter",
+              "startCoords": {
+                "type": "FirstCastTargetSelector"
               }
             }
           ]
         }
       },
-      "selector2": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
-              "type": "FirstCastTargetSelector"
+      "selectorIfFalse": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "UnionOfEntitiesSelector",
+          "first": {
+            "type": "CasterHeroSelector"
+          },
+          "second": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllFloorMechanismsSelector"
             },
-            "distance": {
-              "type": "GreaterThan",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              }
+            ]
+          }
+        },
+        "selector2": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "GreaterThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "HasEmptyPathInLineToTargetFilter",
+              "startCoords": {
+                "type": "FirstCastTargetSelector"
               }
             }
-          },
-          {
-            "type": "HasEmptyPathInLineToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
-            }
-          }
-        ]
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -134,7 +233,18 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbc",
+          "value": 4
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 18
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -148,7 +258,7 @@
     "pt": "Gancho"
   },
   "description": {
-    "fr": "Attire un personnage aligné à votre héros ou à un de vos {%KEYWORD.TRAP.NAME,plural:other}.",
+    "fr": "<if pvm>Attire un personnage aligné à votre héros ou à un de vos {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Attire un personnage aligné jusqu'à {cell:nbc} avec votre héros ou avec un de vos {%KEYWORD.TRAP.NAME,plural:other}.\n\\---\nSi c'est un adversaire, lui inflige {magicalDamage:dmg}.</if>",
     "en": "Attracts a character in line with your hero or one of your {%KEYWORD.TRAP.NAME,plural:other}.",
     "es": "Atrae a un personaje alineado con tu héroe o a una de tus {%KEYWORD.TRAP.NAME,plural:other}.",
     "de": "Zieht einen Charakter in derselben Reihe wie dein Held oder eine deiner {%KEYWORD.TRAP.NAME,plural:other} heran.",

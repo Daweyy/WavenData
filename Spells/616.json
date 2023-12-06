@@ -12,6 +12,7 @@
   "m_id": 616,
   "m_displayName": "SRAM - CLASSE - ETHER - Peau d'Ombre",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -696704724,
     "b": -1448409532,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -63,9 +64,18 @@
         "type": "GaugeValue",
         "element": 57,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
         }
       }
     ],
@@ -110,13 +120,6 @@
       "hasEffects": true,
       "keywordReferences": [
         {
-          "keywordCondition": {
-            "keyword": 4,
-            "values": [
-              "531"
-            ],
-            "isNot": true
-          },
           "type": 20,
           "id": 19
         }
@@ -131,10 +134,10 @@
     "pt": "Pele de Sombra"
   },
   "description": {
-    "fr": "Piochez {value:draw} sorts.\n\\---\n<if not spellskill=531>Confère {PropertyEffect:19} à votre héros jusqu'au prochain tour.</if><if spellskill=531>Confère {PropertyEffect:19} à votre héros et aux alliés autour de lui jusqu'au prochain tour.</if>",
-    "en": "Draw {value:draw} {%SPELLCOUNT,value:draw}.\n\\---\n<if not spellskill=531>Confers {PropertyEffect:19} on your hero until the next turn.</if><if spellskill=531>Confers {PropertyEffect:19} on your hero and allies around them until the next turn.</if>",
-    "es": "Sacas {value:draw} hechizos.\n\\---\n<if not spellskill=531>Confiere {PropertyEffect:19} a tu héroe hasta el próximo turno.</if><if spellskill=531>Confiere {PropertyEffect:19} a tu héroe y a los aliados a su alrededor hasta el próximo turno.</if>",
-    "de": "Zieht {value:draw} Zauber.\n\\---\n<if not spellskill=531>Verleiht deinem Helden bis zur nächsten Runde {PropertyEffect:19}.</if><if spellskill=531>Verleiht deinem Helden und den Verbündeten in seinem Umkreis {PropertyEffect:19} bis zur nächsten Runde.</if>",
-    "pt": "Compre {value:draw} {draw, plural, one[feitiço] other[feitiços]}.\n\\---\n<if not spellskill=531>Concede {PropertyEffect:19} ao seu herói até o próximo turno.</if><if spellskill=531>Concede {PropertyEffect:19} ao seu herói e aos aliados em\\_volta dele até o próximo turno.</if>"
+    "fr": "Piochez {value:draw} sorts.\n\\---\nConfère {PropertyEffect:19} à votre héros jusqu'au prochain tour.",
+    "en": "Draw {value:draw} {draw, plural, one[spell] other[spells]}.\n\\---\nConfers {PropertyEffect:19} on your hero until the next turn.",
+    "es": "Sacas {value:draw} hechizos.\n\\---\nConfiere {PropertyEffect:19} a tu héroe hasta el próximo turno.",
+    "de": "Zieht {value:draw} Zauber.\n\\---\nMacht deinen Helden bis zur nächsten Runde {PropertyEffect:19}.",
+    "pt": "Compre {value:draw} feitiços.\n\\---\nConcede {PropertyEffect:19} ao seu herói até o próximo turno."
   }
 }

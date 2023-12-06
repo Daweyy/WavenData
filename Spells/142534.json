@@ -12,6 +12,7 @@
   "m_id": 142534,
   "m_displayName": "CRA - ARME - VOLDORAK - FEU - Poing Fulgurant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -141900736,
     "b": 2054730564,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": 953,
@@ -138,9 +139,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgA",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 22
+            "valueInPvM": 22,
+            "valueInPvP": 30
           },
           "factor": {
             "type": "ReferenceScalingFactor",

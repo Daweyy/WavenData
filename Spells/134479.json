@@ -12,6 +12,7 @@
   "m_id": 134479,
   "m_displayName": "ENIRIPSA - ARME - AMBRE TAMASHI - TERRE - Défense Nocturne",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 260835782,
     "b": 952151812,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 277,
@@ -124,9 +125,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 14
+            "valueInPvM": 14,
+            "valueInPvP": 12
           },
           "factor": {
             "type": "ReferenceScalingFactor",

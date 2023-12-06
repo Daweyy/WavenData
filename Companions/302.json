@@ -12,6 +12,7 @@
   "m_id": 302,
   "m_displayName": "DECK - KROSMIQUE - FEU - Elely",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 262953720,
     "b": 2038405860,
@@ -45,6 +46,11 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "at",
+          "value": 75
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "atPVP",
           "value": 100
         }
       ],
@@ -58,9 +64,10 @@
     ],
     "baseProperties": [],
     "life": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "valueInPvM": 100,
+      "valueInPvP": 101
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -104,7 +111,7 @@
     "rarity": 2,
     "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "AlwaysAvailable"
+      "type": "Available"
     },
     "upgradeRuleId": 407,
     "castCondition": {
@@ -209,10 +216,10 @@
     "pt": "Elely"
   },
   "description": {
-    "fr": "{%APPEARANCE} {ATvalue:at,percent,+} si c'est le premier compagnon que vous jouez.\\v<family>{%Family_BrotherHood_Name}</family>",
-    "en": "{%APPEARANCE} {ATvalue:at,percent,+} if this is the first companion that you play.\\v<family>{%Family_BrotherHood_Name}</family>",
-    "es": "{%APPEARANCE} {ATvalue:at,percent,+} si es el primer compañero que juegas.\\v<family>{%Family_BrotherHood_Name}</family>",
-    "de": "{%APPEARANCE} {ATvalue:at,percent,+}, falls es der erste von dir gespielte Begleiter ist.\\v<family>{%Family_BrotherHood_Name}</family>",
-    "pt": "{%APPEARANCE} {ATvalue:at,percent,+} se for o primeiro companheiro que você jogar.\\v<family>{%Family_BrotherHood_Name}</family>"
+    "fr": "{%APPEARANCE} <if pvm>Gagne {ATvalue:at,percent} de votre héros si c'est le premier compagnon que vous jouez.</if><if pvp>Gagne {ATvalue:atPVP,percent} si c'est le premier compagnon que vous jouez.</if>\\v<family>{%Family_BrotherHood_Name}</family>",
+    "en": "{%APPEARANCE} Gains {value:at,percent} of your hero's {%AT} if this is the first companion that you play.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "es": "{%APPEARANCE} Gana {ATvalue:at,percent} de tu héroe si es el primer compañero que juegas.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "de": "{%APPEARANCE} Erhält {ATvalue:at,percent} deines Helden, falls sie der erste von dir ausgespielte Begleiter ist.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "pt": "{%APPEARANCE} Ganha {ATvalue:at,percent} do seu herói se for o primeiro companheiro que você jogar.\\v<family>{%Family_BrotherHood_Name}</family>"
   }
 }

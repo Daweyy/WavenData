@@ -12,6 +12,7 @@
   "m_id": 140298,
   "m_displayName": "CRA - ARME - VOLDORAK - TERRE - Poing Jugulant",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -648980330,
     "b": 207544676,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 953,
@@ -138,9 +139,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 17
+            "valueInPvM": 17,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -175,6 +177,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "pm",
           "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm2",
+          "value": -1
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -226,7 +233,7 @@
     "pt": "Punho Repressor"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire aligné.\n\\---\n{#COMBO}\\_: {PMvalue:pm,+} à votre héros pour le tour.",
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire aligné.\n\\---\n{#COMBO}\\_: <if pvm>{PMvalue:pm,+} à votre héros pour le tour.</if><if pvp>{PMvalue:pm2,+} à la cible pour le tour.</if>",
     "en": "Does {magicalDamage:dmg} to an in-line opponent.\n\\---\n{#COMBO}: {PMvalue:pm,+} to your hero for the turn.",
     "es": "Inflige {magicalDamage:dmg} a un adversario alineado.\n\\---\n{#COMBO}: {PMvalue:pm,+} a tu héroe durante el turno.",
     "de": "Verursacht bei einem Gegner in derselben Reihe {magicalDamage:dmg}.\n\\---\n{#COMBO}: {PMvalue:pm,+} für deinen Helden für die Runde.",

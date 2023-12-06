@@ -12,6 +12,7 @@
   "m_id": 894,
   "m_displayName": "SRAM - ARME - SHUGEN - AIR - Traque Sournoise",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 821468627,
     "b": 537216068,
@@ -66,7 +67,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 4,
       "specificToWeapon": 36,
@@ -155,9 +156,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 21
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 21
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 25
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -192,11 +202,79 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": null,
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": null,
+              "valuesToSum": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 100
+                },
+                {
+                  "type": "MultValue",
+                  "referenceId": "",
+                  "valuesToMult": [
+                    {
+                      "type": "EntityCaracValue",
+                      "referenceId": null,
+                      "entitySelector": {
+                        "type": "CasterSelector"
+                      },
+                      "carac": 20
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 5
+                    }
+                  ]
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 25
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            89,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        "BOUNCE",
         "PUSH"
       ]
     }
@@ -209,7 +287,7 @@
     "pt": "Rastreamento Traiçoeiro"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} et {#Push} de {cell:c}.\n\\---\nÉchange la position de votre héros avec la cible si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
+    "fr": "Inflige {magicalDamage:dmg} et {#Push} de {cell:c}.\n\\---\n<if pvm>Échange la position de votre héros avec la cible si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if><if pvp>Déclenche {bounce:bc} si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if>",
     "en": "Does {magicalDamage:dmg} and {#Push} {cell:c}. \n\\---\nSwitches your hero's position with the target if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
     "es": "Inflige {magicalDamage:dmg} y {#Push} {cell:c}.\n\\---\nIntercambia la posición de tu héroe con la del objetivo si está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
     "de": "Verursacht {magicalDamage:dmg} und einen {#Push,plural:one} um {cell:c}.\n\\---\nTauscht die Position deines Helden mit der des Ziels, falls es <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",

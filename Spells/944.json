@@ -12,6 +12,7 @@
   "m_id": 944,
   "m_displayName": "CRA - CLASSE - FEU - Fleche Detonante",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1340605436,
     "b": -518782796,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 1,
       "specificToWeapon": null,
@@ -69,18 +70,36 @@
         "type": "GaugeValue",
         "element": 11,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          }
         }
       },
       {
         "type": "GaugeValue",
         "element": 19,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 1
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
         }
       }
     ],
@@ -128,9 +147,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 18
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 18
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 30
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -197,12 +225,41 @@
           "type": "ConstIntegerValue",
           "referenceId": "d2",
           "value": 5
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ex",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            88,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "COMBO"
+        "EXPLOSION",
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "COMBO"
+        }
       ]
     }
   },
@@ -214,7 +271,7 @@
     "pt": "Flecha Detonante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_: Inflige {magicalDamage:dmg2} aux adversaires autour\\_<sprite name=\"cell_around\"> de la cible.",
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{#COMBO}\\_: Inflige {magicalDamage:dmg2} aux adversaires autour\\_<sprite name=\"cell_around\"> de la cible.</if><if pvp>{#COMBO}\\_: Déclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"> de la cible.</if>",
     "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: Does {magicalDamage:dmg2} to opponents around\\_<sprite name=\"cell_around\"> the target.",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: Inflige {magicalDamage:dmg2} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> del objetivo.",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}: Verursacht {magicalDamage:dmg2} bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> des Ziels.",

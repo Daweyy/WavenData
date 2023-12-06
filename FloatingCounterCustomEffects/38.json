@@ -12,6 +12,7 @@
   "m_id": 38,
   "m_displayName": "WindSword",
   "m_availability": 3,
+  "m_wip": 0,
   "m_illustration": {
     "assetGuid": "0714740788dd429458ee906d4c2fd10b"
   },
@@ -42,9 +43,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "WindSwordDmgX",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 19
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 19
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 18
+            }
           },
           "factor": {
             "type": "CustomScalingFactor",
@@ -73,7 +83,12 @@
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
-        "PUSH"
+        {
+          "keywordCondition": {
+            "keyword": 7
+          },
+          "keyword": "PUSH"
+        }
       ]
     }
   },

@@ -12,6 +12,7 @@
   "m_id": 425,
   "m_displayName": "ENIRIPSA - CLASSE - EAU - Mot de Grele",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1677673855,
     "b": 285552180,
@@ -56,7 +57,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -112,9 +113,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 26
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 26
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 25
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -149,9 +159,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 37
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 37
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 20
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",

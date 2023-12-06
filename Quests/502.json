@@ -10,8 +10,9 @@
   },
   "m_Name": "502",
   "m_id": 502,
-  "m_displayName": "CLAN QUEST - SCIENCE - Ogrest",
+  "m_displayName": "STORY MODE - ACTE I - Ogrest",
   "m_availability": 3,
+  "m_wip": 1,
   "m_i18nNameId": {
     "a": -1486164654,
     "b": -974783148,
@@ -22,15 +23,18 @@
   "values": {
     "type": "QuestDefinition",
     "id": 502,
-    "questType": 11,
+    "questType": 10,
     "hideLevel": false,
     "chaptersVisualId": 606,
     "minPlayers": 1,
     "maxPlayers": 1,
-    "accessCondition": null,
+    "accessCondition": {
+      "type": "StoryMainQuestProgressionCondition",
+      "concernedPlayers": 0,
+      "questId": 502
+    },
     "npcForChapters": 4271,
-    "npcForFightResults": null,
-    "npcForFightResultTexts": null,
+    "npcName": null,
     "ranks": [
       {
         "type": "QuestRank",
@@ -43,9 +47,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 0,
-        "npcForChaptersTexts": null,
-        "difficulty": 1,
-        "monsterLevel": 2,
+        "visualIndex": 0,
+        "monsterLevel": 8,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -76,14 +79,18 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 93
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 93
+        }
       },
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 1,
-        "npcForChaptersTexts": null,
-        "difficulty": 2,
-        "monsterLevel": 4,
+        "visualIndex": 0,
+        "monsterLevel": 10,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -114,14 +121,18 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 19
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 19
+        }
       },
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 2,
-        "npcForChaptersTexts": null,
-        "difficulty": 3,
-        "monsterLevel": 6,
+        "visualIndex": 1,
+        "monsterLevel": 12,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -152,14 +163,18 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 63
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 63
+        }
       },
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 3,
-        "npcForChaptersTexts": null,
-        "difficulty": 4,
-        "monsterLevel": 8,
+        "visualIndex": 1,
+        "monsterLevel": 14,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -190,14 +205,18 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 5
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 5
+        }
       },
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 4,
-        "npcForChaptersTexts": null,
-        "difficulty": 5,
-        "monsterLevel": 10,
+        "visualIndex": 1,
+        "monsterLevel": 16,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -228,7 +247,12 @@
           ]
         },
         "forcedDestinationOnExit": null,
-        "dungeonZoneId": 887
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 887
+        }
       }
     ]
   },

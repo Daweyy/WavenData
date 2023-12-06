@@ -12,6 +12,7 @@
   "m_id": 198701,
   "m_displayName": "SRAM - CLASSE - ETHER - Guet-Apens",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 195520038,
     "b": -627192380,
@@ -59,7 +60,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -81,27 +82,65 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredEntitySelector",
-        "from": {
-          "type": "AllFloorMechanismsSelector"
-        },
-        "filters": [
-          {
-            "type": "OwnerFilter",
-            "isIdentical": true,
-            "reference": {
-              "type": "CasterSelector"
-            }
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllFloorMechanismsSelector"
+            },
+            "filters": [
+              {
+                "type": "OwnerFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              }
+            ]
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
           }
-        ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllFloorMechanismsSelector"
+          },
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 15
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -115,7 +154,7 @@
     "pt": "Tocaia"
   },
   "description": {
-    "fr": "Échange la position de votre héros avec celle d'un de vos {%KEYWORD.TRAP.NAME,plural:other}.",
+    "fr": "Échange la position de votre héros avec celle d'un de vos {%KEYWORD.TRAP.NAME,plural:other}.<if pvp>\n\\---\nVotre héros inflige {magicalDamage:dmg} autour <sprite name=\"cell_around\"> de sa case d'arrivée.</if>",
     "en": "Switches your hero's position with that of one of your {%KEYWORD.TRAP.NAME,plural:other}.",
     "es": "Intercambia la posición de tu héroe con la de una de tus {%KEYWORD.TRAP.NAME,plural:other}.",
     "de": "Tauscht die Position deines Helden mit der einer deiner {%KEYWORD.TRAP.NAME,plural:other}.",

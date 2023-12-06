@@ -1,0 +1,170 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "276",
+  "m_id": 276,
+  "m_displayName": "IOP - ARME - ASTRAMANTIS - EPHEMERE - Élan Astra",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -491430264,
+    "b": -1261689164,
+    "c": -1201479813,
+    "d": -1968638918,
+    "e": 1765729384
+  },
+  "m_i18nDescriptionId": {
+    "a": -491430264,
+    "b": -1261689164,
+    "c": -1201479813,
+    "d": -1968638918,
+    "e": -10495582
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2c9a3b6edd9f5d643916237111c6246f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "0e3f7ab565e1a994399c5913832f7338"
+      },
+      {
+        "assetGuid": "5d60c9d5cc093594fb4d9b36d5c70e40"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 276,
+    "merchantCosts": [],
+    "premiumItem": false,
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            23,
+            24,
+            25,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Élan Astra",
+    "en": "Astra Momentum",
+    "es": "Impulso Astra",
+    "de": "Astralschwung",
+    "pt": "Impulso Astra"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nTéleporte votre héros sur une case adjacente<sprite name=\"cell_cross\"> à un adversaire et lui inflige {value:v} <b>DÉGÂTS</b>.\n\\---\n{%DAMAGE_BASED_ON_ELEMENTARY}",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeleports your hero to a cell adjacent <sprite name=\"cell_cross\"> to an opponent and inflicts {value:v} <b>DAMAGE</b> on them.\n\\---\n<rem>The damage is based on your elemental magics.</rem>",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeletransporta a tu héroe a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un adversario y le inflige {value:v} <b>DAÑOS</b>.\n\\---\n<rem>Los daños se basan en tus magias elementales.</rem>",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeleportiert deinen Helden auf ein Feld, das an einen Gegner angrenzt\\_<sprite name=\"cell_cross\">, und fügt ihm {value:v} <b>SCHADEN</b> zu.\n\\---\n<rem>Der Schaden richtet sich nach deiner Elementarmagie.</rem>",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nTeletransporta seu herói para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um adversário e lhe inflige {value:v} <b>DANOS</b>.\n\\---\n<rem>Os danos são baseados em suas magias elementares.</rem>"
+  }
+}

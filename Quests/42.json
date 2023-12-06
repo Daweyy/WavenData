@@ -1,0 +1,102 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -5160895254884109000
+  },
+  "m_Name": "42",
+  "m_id": 42,
+  "m_displayName": "STORY MODE - ACTE I - 14",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1924203758,
+    "b": -895330892,
+    "c": -1503308358,
+    "d": -1576127120,
+    "e": -950936613
+  },
+  "values": {
+    "type": "QuestDefinition",
+    "id": 42,
+    "questType": 10,
+    "hideLevel": false,
+    "chaptersVisualId": 36,
+    "minPlayers": 1,
+    "maxPlayers": 3,
+    "accessCondition": {
+      "type": "StoryMainQuestProgressionCondition",
+      "concernedPlayers": 0,
+      "questId": 42
+    },
+    "npcForChapters": 5169,
+    "npcName": null,
+    "ranks": [
+      {
+        "type": "QuestRank",
+        "rank": 2,
+        "firstChapterOrdinal": 1,
+        "chaptersCount": 1
+      }
+    ],
+    "chapters": [
+      {
+        "type": "DungeonChapterDefinition",
+        "chapterIndex": 0,
+        "visualIndex": 2,
+        "monsterLevel": 22,
+        "rewards": null,
+        "oneTimeRewards": {
+          "type": "SerializedDropTableDefinitionProvider",
+          "dropTable": {
+            "type": "DropTable",
+            "entries": [
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 388
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 5
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 5
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "wip": false
+        },
+        "forcedDestinationOnExit": null,
+        "dungeonZone": {
+          "type": "SpawnDestinationInDungeonZone",
+          "subZoneId": null,
+          "spawnPointsInDestination": [],
+          "dungeonZoneId": 112
+        }
+      }
+    ]
+  },
+  "name": {
+    "fr": "",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

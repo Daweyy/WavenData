@@ -12,6 +12,7 @@
   "m_id": 210377,
   "m_displayName": "XELOR - CLASSE - EAU - Sablier du Temps",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1175210173,
     "b": 881454884,
@@ -55,7 +56,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": null,
@@ -79,9 +80,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 5
+          "valueInPvM": 5,
+          "valueInPvP": 4
         }
       }
     ],
@@ -111,9 +113,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 16
+            "valueInPvM": 16,
+            "valueInPvP": 19
           },
           "factor": {
             "type": "ReferenceScalingFactor",

@@ -11,7 +11,8 @@
   "m_Name": "1373",
   "m_id": 1373,
   "m_displayName": "IOP - ARME - ASTRAMANTIS - ETHER - Maîtrise de la lance",
-  "m_availability": 2,
+  "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1870272608,
     "b": 446912852,
@@ -59,7 +60,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 619,
@@ -89,51 +90,7 @@
         }
       }
     ],
-    "castCondition": {
-      "type": "ConditionalCastCondition",
-      "condition": {
-        "type": "NumberOfEntityCondition",
-        "selector": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllObjectMechanismsSelector"
-          },
-          "filters": [
-            {
-              "type": "ObjectMechanismDefinitionFilter",
-              "condition": 1,
-              "objectMechanisms": [
-                26,
-                85,
-                305,
-                51
-              ]
-            },
-            {
-              "type": "InLineTargetFilter",
-              "targetsToCompare": {
-                "type": "CasterHeroSelector"
-              },
-              "distance": null
-            }
-          ]
-        },
-        "value": {
-          "type": "GreaterThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 0
-          }
-        }
-      },
-      "ifTrue": {
-        "type": "SuccessCastCondition"
-      },
-      "ifFalse": {
-        "type": "FailureCastCondition"
-      }
-    },
+    "castCondition": null,
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
@@ -157,11 +114,11 @@
             ]
           },
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
-            },
-            "distance": null
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
           }
         ]
       }
@@ -174,6 +131,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "v",
           "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 22
         }
       ],
       "externalDynamicValueReferences": [],
@@ -183,16 +145,16 @@
   },
   "name": {
     "fr": "Maîtrise de la lance",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "en": "Lance Mastery",
+    "es": "Dominio de la Lanza",
+    "de": "Lanzenbeherrschung",
+    "pt": "Domínio da Lança"
   },
   "description": {
-    "fr": "Votre héros et sa lance échangent leur place s'ils sont alignés. Inflige {value:v,percent} de l'{%AT} de votre héros autour de lui.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "<if pvm>Votre héros échange de place avec une de vos <b>LANCES</b> puis inflige {value:v,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.</if><if pvp>Votre héros échange de place avec une de vos <b>LANCES</b> puis inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.</if>\n\\---\nS’il est aligné avec la <b>LANCE</b> ciblée, déclenche son effet.",
+    "en": "Your hero switches positions with one of your <b>LANCES</b> then inflicts {value:v,percent} of their {%AT} on adjacent\\_<sprite name=\"cell_cross\"> opponents.\n\\---\nIf they are in line with the targeted <b>LANCE</b>, triggers its effect.",
+    "es": "Tu héroe intercambia posición con una de tus <b>LANZAS</b> e inflige un {value:v,percent} de su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.\n\\---\nSi está alineado con la <b>LANZA</b> objetivo, activa su efecto.",
+    "de": "Dein Held tauscht die Position mit einer deiner <b>LANZEN</b> und fügt den angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {value:v,percent} seines {%AT,plural:two} als Schaden zu.\n\\---\nWenn sich dein Held in einer Reihe mit der ausgewählten <b>LANZE</b> befindet, wird sein Effekt angewendet.",
+    "pt": "Seu herói troca de lugar com uma das suas <b>LANÇAS</b>, depois inflige {value:v,percent} de seu {%AT} aos adversários adjacentes\\_<sprite name=\"cell_cross\">.\n\\---\nSe ele estiver alinhado com a <b>LANÇA</b> visada, aciona seu efeito."
   }
 }

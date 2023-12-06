@@ -12,6 +12,7 @@
   "m_id": 134249,
   "m_displayName": "XELOR - ARME - TAKO - TERRE - Style Feuille",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1928976191,
     "b": -138810796,
@@ -53,7 +54,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 3,
       "specificToWeapon": 490,
@@ -142,9 +143,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 18
+            "valueInPvM": 18,
+            "valueInPvP": 26
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -179,9 +181,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg2",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 7
+            "valueInPvM": 7,
+            "valueInPvP": 10
           },
           "factor": {
             "type": "ReferenceScalingFactor",

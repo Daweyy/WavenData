@@ -12,6 +12,7 @@
   "m_id": 142,
   "m_displayName": "ArdenteSight",
   "m_availability": 3,
+  "m_wip": 0,
   "m_illustration": {
     "assetGuid": "eea4671a52d92f243a2f78f693fa27dd"
   },
@@ -42,9 +43,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgA",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 5
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 5
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 11
+            }
           },
           "factor": {
             "type": "CustomScalingFactor",
@@ -69,9 +79,18 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgB",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpValue",
             "referenceId": "",
-            "value": 4
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 4
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 11
+            }
           },
           "factor": {
             "type": "CustomScalingFactor",

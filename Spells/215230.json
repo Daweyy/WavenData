@@ -12,6 +12,7 @@
   "m_id": 215230,
   "m_displayName": "DQ - CONTRAT - TOFU - 4_Brochette de tofu frit",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 598193155,
     "b": 163858788,
@@ -49,7 +50,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": false,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": null,
@@ -72,7 +73,15 @@
       "type": "OneCastTargetDefinition",
       "selector": {
         "type": "FilteredCharacterSelector",
-        "filters": []
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [

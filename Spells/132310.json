@@ -12,6 +12,7 @@
   "m_id": 132310,
   "m_displayName": "XELOR - ARME - PIKUXALA - EAU - Teleport Collaboratif",
   "m_availability": 3,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -361599200,
     "b": 1700130292,
@@ -65,7 +66,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "AlwaysAvailable"
+        "type": "Available"
       },
       "element": 2,
       "specificToWeapon": 945,
@@ -108,93 +109,242 @@
     "castTarget": {
       "type": "ConditionalCastTargetDefinition",
       "condition": {
-        "type": "NumberOfEntityCondition",
-        "selector": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllCharactersSelector"
-          },
-          "filters": [
-            {
-              "type": "TeamFilter",
-              "isIdentical": true,
-              "reference": {
-                "type": "CasterSelector"
-              }
-            },
-            {
-              "type": "NotEntityFilter",
-              "filter": {
-                "type": "CasterHeroFilter"
-              }
-            }
-          ]
-        },
-        "value": {
-          "type": "GreaterThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 0
-          }
-        }
+        "type": "PvpFightCondition"
       },
       "selectorIfTrue": {
-        "type": "TwoCastTargetDefinition",
-        "selector1": {
-          "type": "SquareAreaOfEffectSelector",
-          "originSelector": {
-            "type": "CasterHeroSelector"
-          },
-          "size": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 1
-          }
-        },
-        "selector2": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllCharactersSelector"
-          },
-          "filters": [
-            {
-              "type": "TeamFilter",
-              "isIdentical": true,
-              "reference": {
-                "type": "CasterSelector"
-              }
+        "type": "ConditionalCastTargetDefinition",
+        "condition": {
+          "type": "NumberOfEntityCondition",
+          "selector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllCharactersSelector"
             },
-            {
-              "type": "NotEntityFilter",
-              "filter": {
-                "type": "CasterHeroFilter"
-              }
-            },
-            {
-              "type": "NotEntityFilter",
-              "filter": {
-                "type": "PropertyFilter",
-                "property": {
-                  "type": "SpecificPropertyIdResolvable",
-                  "propertyId": 20
+            "filters": [
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "NotEntityFilter",
+                "filter": {
+                  "type": "CasterHeroFilter"
                 }
               }
+            ]
+          },
+          "value": {
+            "type": "GreaterThan",
+            "dynamicValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 0
             }
-          ]
+          }
+        },
+        "selectorIfTrue": {
+          "type": "TwoCastTargetDefinition",
+          "selector1": {
+            "type": "SquareAreaOfEffectSelector",
+            "originSelector": {
+              "type": "CasterHeroSelector"
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          },
+          "selector2": {
+            "type": "CombinedTargetSelector",
+            "selectors": [
+              {
+                "type": "FilteredEntitySelector",
+                "from": {
+                  "type": "AllCharactersSelector"
+                },
+                "filters": [
+                  {
+                    "type": "TeamFilter",
+                    "isIdentical": true,
+                    "reference": {
+                      "type": "CasterSelector"
+                    }
+                  },
+                  {
+                    "type": "NotEntityFilter",
+                    "filter": {
+                      "type": "CasterHeroFilter"
+                    }
+                  },
+                  {
+                    "type": "NotEntityFilter",
+                    "filter": {
+                      "type": "PropertyFilter",
+                      "property": {
+                        "type": "SpecificPropertyIdResolvable",
+                        "propertyId": 20
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "FilteredCoordSelector",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "EqualsTo",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "CellValidForCharacterFilter"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "selectorIfFalse": {
+          "type": "TwoCastTargetDefinition",
+          "selector1": {
+            "type": "SquareAreaOfEffectSelector",
+            "originSelector": {
+              "type": "CasterHeroSelector"
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          },
+          "selector2": {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "EqualsTo",
+                  "dynamicValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "nbc",
+                    "value": 1
+                  }
+                }
+              },
+              {
+                "type": "CellValidForCharacterFilter"
+              }
+            ]
+          }
         }
       },
       "selectorIfFalse": {
-        "type": "OneCastTargetDefinition",
-        "selector": {
-          "type": "SquareAreaOfEffectSelector",
-          "originSelector": {
-            "type": "CasterHeroSelector"
+        "type": "ConditionalCastTargetDefinition",
+        "condition": {
+          "type": "NumberOfEntityCondition",
+          "selector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllCharactersSelector"
+            },
+            "filters": [
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "NotEntityFilter",
+                "filter": {
+                  "type": "CasterHeroFilter"
+                }
+              }
+            ]
           },
-          "size": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 1
+          "value": {
+            "type": "GreaterThan",
+            "dynamicValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 0
+            }
+          }
+        },
+        "selectorIfTrue": {
+          "type": "TwoCastTargetDefinition",
+          "selector1": {
+            "type": "SquareAreaOfEffectSelector",
+            "originSelector": {
+              "type": "CasterHeroSelector"
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 1
+            }
+          },
+          "selector2": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllCharactersSelector"
+            },
+            "filters": [
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              },
+              {
+                "type": "NotEntityFilter",
+                "filter": {
+                  "type": "CasterHeroFilter"
+                }
+              },
+              {
+                "type": "NotEntityFilter",
+                "filter": {
+                  "type": "PropertyFilter",
+                  "property": {
+                    "type": "SpecificPropertyIdResolvable",
+                    "propertyId": 20
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "selectorIfFalse": {
+          "type": "OneCastTargetDefinition",
+          "selector": {
+            "type": "SquareAreaOfEffectSelector",
+            "originSelector": {
+              "type": "CasterHeroSelector"
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
           }
         }
       }
@@ -214,12 +364,18 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "nbc",
+          "value": 1
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 19
+            "valueInPvM": 19,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -298,7 +454,7 @@
     "pt": "Teletransporte Colaborativo"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\nÉchange la position de votre héros avec celle d'un allié.",
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\n<if pvm>Échange la position de votre héros avec celle d'un allié.</if><if pvp>Échange la position de votre héros avec celle d'un allié ou le téléporte de {cell:nbc}.</if>",
     "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero.\n\\---\nSwitches your hero's position with that of an ally.",
     "es": "Inflige {magicalDamage:dmg} a los adversarios alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\nIntercambia la posición de tu héroe con la de un aliado.",
     "de": "Verursacht bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden {magicalDamage:dmg}.\n\\---\nWechselt die Position deines Helden mit der eines Verbündeten.",
