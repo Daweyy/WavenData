@@ -88,22 +88,72 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "UnionOfEntitiesSelector",
+                "first": {
+                  "type": "FilteredEntitySelector",
+                  "from": {
+                    "type": "AllMechanismsSelector"
+                  },
+                  "filters": [
+                    {
+                      "type": "OwnerFilter",
+                      "isIdentical": true,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    },
+                    {
+                      "type": "FamilyFilter",
+                      "condition": 1,
+                      "families": [
+                        20
+                      ]
+                    }
+                  ]
+                },
+                "second": {
+                  "type": "CasterHeroSelector"
+                }
+              },
+              "distance": null
             }
-          },
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
-              "type": "UnionOfEntitiesSelector",
-              "first": {
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
                 "type": "FilteredEntitySelector",
                 "from": {
                   "type": "AllMechanismsSelector"
@@ -125,13 +175,10 @@
                   }
                 ]
               },
-              "second": {
-                "type": "CasterSelector"
-              }
-            },
-            "distance": null
-          }
-        ]
+              "distance": null
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -155,7 +202,7 @@
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
             "valueInPvM": 15,
-            "valueInPvP": 17
+            "valueInPvP": 12
           },
           "factor": {
             "type": "ReferenceScalingFactor",

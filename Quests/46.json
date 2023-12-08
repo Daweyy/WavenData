@@ -50,7 +50,38 @@
         "visualIndex": 9,
         "monsterLevel": 100,
         "rewards": null,
-        "oneTimeRewards": null,
+        "oneTimeRewards": {
+          "type": "SerializedDropTableDefinitionProvider",
+          "dropTable": {
+            "type": "DropTable",
+            "entries": [
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 849
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 20
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 20
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "wip": false
+        },
         "forcedDestinationOnExit": null,
         "dungeonZone": {
           "type": "SpawnDestinationInDungeonZone",
