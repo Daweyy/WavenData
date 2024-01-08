@@ -69,53 +69,42 @@
           "value": 5
         },
         {
-          "type": "MultValue",
+          "type": "ClampValue",
           "referenceId": "bonus",
-          "valuesToMult": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 5
-            },
-            {
-              "type": "ClampValue",
-              "referenceId": null,
-              "valueToClamp": {
+          "valueToClamp": {
+            "type": "MultValue",
+            "referenceId": null,
+            "valuesToMult": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 5
+              },
+              {
                 "type": "EntityCaracValue",
                 "referenceId": null,
                 "entitySelector": {
                   "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
                 },
                 "carac": 20
-              },
-              "min": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
-              },
-              "max": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 20
               }
-            }
-          ]
+            ]
+          },
+          "min": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          },
+          "max": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 100
+          }
         },
         {
-          "type": "MultValue",
+          "type": "ConstIntegerValue",
           "referenceId": "max",
-          "valuesToMult": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 5
-            },
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 20
-            }
-          ]
+          "value": 100
         }
       ],
       "externalDynamicValueReferences": [],
@@ -154,7 +143,7 @@
     "en": "When you generate {%GAUGE, plural:other}:\\v{value:pc,percent,+} to your {%WATER} spell <b>DAMAGE</b> per {%GAUGE} generated.\n\\---\n<rem>Current Bonus: {value:bonus,percent,+}.\nMaximum Bonus: {value:max,percent,+}.</rem>",
     "es": "Cuando generas {%GAUGE, plural:other}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de tus hechizos de {%WATER} por {%GAUGE} generado.\n\\---\n<rem>Bonus actual: {value:bonus,percent,+}.\nBonus máximo: {value:max,percent,+}.</rem>",
     "de": "Wenn du {%GAUGE, plural:other} generierst:\\v {value:pc,percent,+} <b>SCHADEN</b> durch deine {%WATER}-Zauber pro generierter {%GAUGE}.\n\\---\n<rem>Aktueller Bonus: {value:bonus,percent,+}.\nMax. Bonus: {value:max,percent,+}.</rem>",
-    "pt": "Quando você gera {%GAUGE, plural:other}:\\v {value:pc,percent,+} aos <b>DANOS</b> do seus feitiços de {%WATER} por {%GAUGE} gerada.\n\\---\n<rem>Bônus atual: {value:bonus,percent,+}.\nBônus máximo: {value:max,percent,+}.</rem>"
+    "pt": "Quando você gera {%GAUGE, plural:other}:\\v {value:pc,percent,+} aos <b>DANOS</b> dos seus feitiços de {%WATER} por {%GAUGE} gerada.\n\\---\n<rem>Bônus atual: {value:bonus,percent,+}.\nBônus máximo: {value:max,percent,+}.</rem>"
   },
   "bgDescription": {
     "fr": "",

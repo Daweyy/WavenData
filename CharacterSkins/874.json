@@ -43,6 +43,9 @@
   "slotIllustrationReference": {
     "assetGuid": ""
   },
+  "localizedBadgeIllustrationReference": {
+    "assetGuid": "83e1df030db27ad45939ad5f9f01455b"
+  },
   "npcTalkFightVictoryAssetReference": {
     "assetGuid": ""
   },
@@ -67,8 +70,14 @@
     "type": "CharacterSkinDefinition",
     "id": 874,
     "rarity": 0,
-    "merchantCosts": [],
-    "premiumItem": true,
+    "merchantCosts": [
+      {
+        "type": "ResourceCost",
+        "amount": 1500,
+        "resourceId": 922
+      }
+    ],
+    "premiumItem": false,
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
@@ -83,7 +92,21 @@
       1520,
       1748
     ],
-    "faction": null
+    "faction": null,
+    "purchaseConditionalAvailability": {
+      "type": "BattlePassRelatedAvailability",
+      "from": 76,
+      "to": 76,
+      "before": {
+        "type": "Hidden"
+      },
+      "during": {
+        "type": "Hidden"
+      },
+      "after": {
+        "type": "Available"
+      }
+    }
   },
   "name": {
     "fr": "Pic Astramantis",

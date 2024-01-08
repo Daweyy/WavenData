@@ -46,7 +46,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "a",
-          "value": 25
+          "value": 15
         },
         {
           "type": "ConstIntegerValue",
@@ -62,13 +62,14 @@
             "value": 5
           },
           "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0.03
+            }
           },
           "buffs": [
-            25,
-            88,
-            51
+            88
           ],
           "skillBuffs": [],
           "from": {

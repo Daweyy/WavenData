@@ -12,7 +12,7 @@
   "m_id": 776,
   "m_displayName": "ALBUERA - 01 - ECHAPPATOIRE",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_illustration": {
     "assetGuid": "2d0a90c38642a5d4d8fbc7800b6a1321"
   },
@@ -44,40 +44,47 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "value",
-          "value": 1
-        },
-        {
           "type": "SumValue",
           "referenceId": "pm",
           "valuesToSum": [
             {
               "type": "ConstIntegerValue",
-              "referenceId": "",
+              "referenceId": null,
               "value": 3
             },
             {
-              "type": "NegativeValue",
+              "type": "MultValue",
               "referenceId": "",
-              "valueToNeg": {
-                "type": "EntityCountValue",
-                "referenceId": "",
-                "from": {
-                  "type": "AllBoardPresencesSelector"
+              "valuesToMult": [
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": "",
+                  "from": {
+                    "type": "AllBoardPresencesSelector"
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "EntityTypeFilter",
+                      "condition": 1,
+                      "entityTypes": [
+                        1
+                      ]
+                    }
+                  ]
                 },
-                "entityFilters": [
-                  {
-                    "type": "EntityTypeFilter",
-                    "condition": 1,
-                    "entityTypes": [
-                      1
-                    ]
-                  }
-                ]
-              }
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": -1
+                }
+              ]
             }
           ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "value",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],

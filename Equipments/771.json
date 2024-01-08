@@ -12,7 +12,7 @@
   "m_id": 771,
   "m_displayName": "RING - KROSMIQUE - Anneau Lele",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1681470977,
     "b": 1621253748,
@@ -64,43 +64,21 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "SumValue",
-          "referenceId": "pow",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 5
-            },
-            {
-              "type": "ConditionalValue",
-              "referenceId": "",
-              "condition": {
-                "type": "HolderHasSkillCondition",
-                "skill": 49
-              },
-              "ifTrue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "skill",
-                "value": 5
-              },
-              "ifFalse": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
-              }
-            }
-          ]
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 10
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "skill",
+          "referenceId": "limit",
           "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "QUINTESSENCE"
+      ]
     },
     "family": 0,
     "specificToGod": 0,
@@ -130,11 +108,11 @@
     "pt": "Anel Lelê"
   },
   "description": {
-    "fr": "{%FightStarted} {value:pow,percent} de vos bonus aux <b>DÉGÂTS</b> des <b>SORTS</b> deviennent également des bonus à l'{%AT} de votre héros",
-    "en": "{%FightStarted} {value:pow,percent} of your <b>SPELL</b> <b>DAMAGE</b> bonus also becomes a bonus to your hero's {%AT}.",
-    "es": "{%FightStarted} Un {value:pow,percent} de tus bonus a los <b>DAÑOS</b> de los <b>HECHIZOS</b> se convierten también en bonus al {%AT} de tu héroe.",
-    "de": "{%FightStarted} {value:pow,percent} deiner <b>ZAUBERSCHADEN</b>-Boni werden zu {%AT,plural:two}-Boni deines Helden.",
-    "pt": "{%FightStarted} {value:pow,percent} dos bônus de <b>DANOS</b> dos <b>FEITIÇOS</b> também passam a ser bônus de {%AT} do seu herói."
+    "fr": "Lorsque vous déclenchez un effet {#QUINTESSENCE} : {value:v,percent,+} aux <b>DÉGÂTS</b> de vos sorts élémentaire.\n\\---\n<rem>Limité à {value:limit} fois par combat.</rem>",
+    "en": "When you trigger a {#QUINTESSENCE} effect: {value:v,percent,+} to your elemental spell <b>DAMAGE</b>.\n\\---\n<rem>Limit: {value:limit} {limit, plural, one[time] other[times]} per fight.</rem>",
+    "es": "Cuando activas un efecto {#QUINTESSENCE}: {value:v,percent,+} a los <b>DAÑOS</b> de tus hechizos elementales.\n\\---\n<rem>Limitado a {value:limit} {limit, plural, one[vez] other[veces]} por combate.</rem>",
+    "de": "Wenn du einen {#QUINTESSENCE}-Effekt auslöst: {value:v,percent,+} <b>SCHADEN</b> für deine Elementarzauber.\n\\---\n<rem>Auf {value:limit}-mal pro Kampf begrenzt.</rem>",
+    "pt": "Quando você aciona um efeito {#QUINTESSENCE}: {value:v,percent,+} aos <b>DANOS</b> dos seus feitiços elementares.\n\\---\n<rem>Limite de {value:limit} {limit, plural, one[vez] other[vezes]} por combate.</rem>"
   },
   "bgDescription": {
     "fr": "« Oh lé lé, Oh la la, quand il faut y aller, on est toujours là ! »",

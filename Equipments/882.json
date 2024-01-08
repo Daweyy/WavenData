@@ -12,7 +12,7 @@
   "m_id": 882,
   "m_displayName": "RING - KROSMIQUE - Anneau Lyve",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1785546328,
     "b": 454497332,
@@ -64,38 +64,14 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "SumValue",
-          "referenceId": "pow",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 2
-            },
-            {
-              "type": "ConditionalValue",
-              "referenceId": "",
-              "condition": {
-                "type": "HolderHasSkillCondition",
-                "skill": 311
-              },
-              "ifTrue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "skill",
-                "value": 2
-              },
-              "ifFalse": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
-              }
-            }
-          ]
+          "type": "ConstIntegerValue",
+          "referenceId": "limit",
+          "value": 3
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "skill",
-          "value": 2
+          "referenceId": "v",
+          "value": 15
         }
       ],
       "externalDynamicValueReferences": [],
@@ -116,7 +92,7 @@
           "factor": 1
         },
         "caracIds": [
-          58
+          1
         ]
       }
     ],
@@ -130,11 +106,11 @@
     "pt": "Olivanel"
   },
   "description": {
-    "fr": "{%FightStarted} {value:pow,percent} de vos bonus à l'{%AT} de votre héros deviennent également des bonus aux <b>DÉGÂTS</b> des <b>SORTS</b>",
-    "en": "{%FightStarted} {value:pow,percent} of your bonus to your hero's {%AT} also becomes a <b>SPELL</b> <b>DAMAGE</b> bonus.",
-    "es": "{%FightStarted} Un {value:pow,percent} de tus bonus al {%AT} de tu héroe se convierten también en bonus a los <b>DAÑOS</b> de los <b>HECHIZOS</b>.",
-    "de": "{%FightStarted} {value:pow,percent} der {%AT,plural:two}-Boni deines Helden werden auch zu <b>ZAUBERSCHADEN</b>-Boni.",
-    "pt": "{%FightStarted} {value:pow,percent} dos bônus de {%AT} do seu herói também passam a ser bônus de <b>DANOS</b> dos <b>FEITIÇOS</b>."
+    "fr": "Lorsque vous lancez un {%spellcount} : votre héros gagne {value:v,percent} de son {%at} en {%ar}.\n\\---\n<rem>Limité à {value:limit} fois par tour.</rem>",
+    "en": "When you cast a {%spellcount}: Your hero gains {value:v,percent} of their {%at} as {%ar}.\n\\---\n<rem>Limit: {value:limit} {limit, plural, one[time] other[times]} per turn.</rem>",
+    "es": "Cuando lanzas un {%spellcount}: tu héroe gana un {value:v,percent} de su {%at} en {%ar}.\n\\---\n<rem>Limitado a {value:limit} {limit, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "Wenn du einen {%spellcount} wirkst: Dein Held erhält {value:v,percent} seines {%at,plural:two} als {%ar}.\n\\---\n<rem>Auf {value:limit}-mal pro Runde begrenzt.</rem>",
+    "pt": "Quando você lança um {%spellcount}: seu herói ganha {value:v,percent} de seu {%at} em {%ar}.\n\\---\n<rem>Limite de {value:limit} {limit, plural, one[vez] other[vezes]} por turno.</rem>"
   },
   "bgDescription": {
     "fr": "{%empty}",
