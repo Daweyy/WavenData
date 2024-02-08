@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 556,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -129,10 +131,10 @@
     "pt": "Maníaco"
   },
   "description": {
-    "fr": "Piochez {value:nb} {%SPELLCOUNT,value:nb} de {%KEYWORD.TRAP.NAME,plural:one}.",
-    "en": "Draw {value:nb} {%KEYWORD.TRAP.NAME,plural:one} {%SPELLCOUNT,value:nb}.",
-    "es": "Sacas {value:nb} {%SPELLCOUNT,value:nb} de {%KEYWORD.TRAP.NAME,plural:one}.",
-    "de": "Zieht {value:nb} {%SPELLCOUNT,value:nb} {%KEYWORD.TRAP.NAME,plural:one}.",
-    "pt": "Compre {value:nb} {%SPELLCOUNT,value:nb} de {%KEYWORD.TRAP.NAME,plural:one}."
+    "fr": "Piochez {SPELLCOUNTvalue:nb} de {%KEYWORD.TRAP.NAME,plural:one}.",
+    "en": "Draw your next {value:nb} {%KEYWORD.TRAP.NAME} {%SPELLCOUNT,plural:nb}.",
+    "es": "Sacas {SPELLCOUNTvalue:nb} de {%KEYWORD.TRAP.NAME,plural:one}.",
+    "de": "Zieht {%KEYWORD.TRAP.NAME}-{SPELLCOUNTvalue:nb,plural:one}.",
+    "pt": "Compre {SPELLCOUNTvalue:nb} de {%KEYWORD.TRAP.NAME,plural:one}."
   }
 }

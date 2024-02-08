@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 715,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -80,7 +82,33 @@
         }
       }
     ],
-    "castCondition": null,
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "FloatingCounterCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "counterFilter": {
+          "type": "CategoryFloatingCounterType",
+          "category": 1
+        },
+        "value": {
+          "type": "GreaterThan",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
@@ -102,25 +130,9 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
+          "type": "ConstIntegerValue",
           "referenceId": "dmg",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 12
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "value": 12
         },
         {
           "type": "ConstIntegerValue",
@@ -141,10 +153,10 @@
     "pt": "Artilharia"
   },
   "description": {
-    "fr": "<if pvm>Libère toutes vos {%AURA_SIGHT,plural:other} sur la cible.</if><if pvp>Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} pour le tour à votre héros par {%AURA_SIGHT} qu'il possède. \n\\---\nConsomme vos {%AURA_SIGHT, plural:other}.</if>",
-    "en": "<if pvm>Releases all your {%AURA_SIGHT,plural:other} on the target.</if><if pvp>Does {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} to your hero for the turn per {%AURA_SIGHT} that they have.\n\\---\nConsumes your {%AURA_SIGHT, plural:other}.</if>",
-    "es": "<if pvm>Libera todas tus {%AURA_SIGHT,plural:other} sobre el objetivo.</if><if pvp>Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} durante el turno a tu héroe por {%AURA_SIGHT} que tenga. \n\\---\nConsume tus {%AURA_SIGHT, plural:other}.</if>",
-    "de": "<if pvm>Löst alle deine {%AURA_SIGHT,plural:other} beim Ziel aus.</if><if pvp>Verursacht {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} für die Runde für deinen Helden pro {%AURA_SIGHT}, die er besitzt. \n\\---\nVerbraucht deine {%AURA_SIGHT, plural:other}.</if>",
-    "pt": "<if pvm>Libera todas as suas {%AURA_SIGHT,plural:other} no alvo.</if><if pvp>Inflige {magicalDamage:dmg}.\n\\---\n{PMvalue:pm,+} durante o turno ao seu herói por {%AURA_SIGHT} que ele possuir. \n\\---\nConsome suas {%AURA_SIGHT, plural:other}.</if>"
+    "fr": "<if pvm>Libère toutes vos {%AURA_SIGHT,plural:other} sur la cible.</if><if pvp>Inflige {magicalDamage:dmg} par {%AURA_SIGHT} que votre héros possède.\n\\---\n{PMvalue:pm,+} pour le tour à votre héros par {%AURA_SIGHT} qu'il possède. \n\\---\nConsomme vos {%AURA_SIGHT, plural:other}.</if>",
+    "en": "<if pvm>Releases all your {%AURA_SIGHT,plural:other} onto the target.</if><if pvp>Does {magicalDamage:dmg} per {%AURA_SIGHT} that your hero has.\n\\---\n{PMvalue:pm,+} to your hero for the turn per {%AURA_SIGHT} that they have.\n\\---\nConsumes your {%AURA_SIGHT, plural:other}.</if>",
+    "es": "<if pvm>Libera todas tus {%AURA_SIGHT,plural:other} sobre el objetivo.</if><if pvp>Inflige {magicalDamage:dmg} por {%AURA_SIGHT} que tenga tu héroe.\n\\---\n{PMvalue:pm,+} durante el turno a tu héroe por {%AURA_SIGHT} que tenga. \n\\---\nConsume tus {%AURA_SIGHT, plural:other}.</if>",
+    "de": "<if pvm>Löst all deine {%AURA_SIGHT,plural:other} beim Ziel aus.</if><if pvp>Verursacht {magicalDamage:dmg} pro {%AURA_SIGHT}, die dein Held besitzt.\n\\---\n{PMvalue:pm,+} für deinen Helden für die Runde pro {%AURA_SIGHT}, die er besitzt. \n\\---\nVerbraucht deine {%AURA_SIGHT, plural:other}.</if>",
+    "pt": "<if pvm>Libera todas as suas {%AURA_SIGHT,plural:other} no alvo.</if><if pvp>Inflige {magicalDamage:dmg} por {%AURA_SIGHT} que seu herói possuir.\n\\---\n{PMvalue:pm,+} ao seu herói durante o turno por {%AURA_SIGHT} que ele possuir. \n\\---\nConsome suas {%AURA_SIGHT, plural:other}.</if>"
   }
 }

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 135557,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       1821,
@@ -255,10 +257,10 @@
     "pt": "Protocolo: Aniquilação"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} au coût de ce {%SPELLCOUNT} si vous avez au moins {value:a} <b>SINISTROS</b> en jeu.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} to the cost of this {%SPELLCOUNT} if you have at least {value:a} <b>{a, plural, one[SINISTRO] other[SINISTROS]}</b> in play.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} al coste de este {%SPELLCOUNT} si tienes al menos {value:a} <b>SINISTROS</b> en juego.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} auf Kosten dieses {%SPELLCOUNT,plural:two}, wenn du mindestens {value:a}\\_<b>SINISTROS</b> im Spiel hast.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa} ao custo deste {%SPELLCOUNT} se você tiver {value:a} <b>SINISTROS</b> ou mais no jogo."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa,+} au coût de ce {%SPELLCOUNT} si vous avez au moins {%SINISTROvalue:a,value:a} en jeu.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PAvalue:pa,+} to the cost of this {%SPELLCOUNT} if you have at least {%SINISTROvalue:a,value:a} in play.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa,+} al coste de este {%SPELLCOUNT} si tienes al menos {%SINISTROvalue:a,value:a} en juego.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PAvalue:pa,+} auf die Kosten dieses {%SPELLCOUNT,plural:two}, wenn du mindestens {%SINISTROvalue:a,value:a} im Spiel hast.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PAvalue:pa,+} ao custo deste {%SPELLCOUNT} se você tiver {%SINISTROvalue:a,value:a} ou mais no jogo."
   }
 }

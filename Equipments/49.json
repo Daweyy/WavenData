@@ -46,7 +46,9 @@
     "type": "EquipmentDefinition",
     "id": 49,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       714,
@@ -101,11 +103,11 @@
     "pt": "Anel Abarbado"
   },
   "description": {
-    "fr": "{%fightStarted} {value:p,+,percent} aux <b>DÉGATS</b> de vos sorts.",
-    "en": "{%fightStarted} {value:p,+,percent} to your spell <b>DAMAGE</b>.",
-    "es": "{%fightStarted} {value:p,+,percent} a los <b>DAÑOS</b> de tus hechizos.",
-    "de": "{%fightStarted} {value:p,+,percent} auf den <b>SCHADEN</b> deiner Zauber.",
-    "pt": "{%fightStarted} {value:p,+,percent} aos <b>DANOS</b> dos seus feitiços."
+    "fr": "{%fightStarted} {value:p,+,percent} {%SPELL_POWER}",
+    "en": "{%fightStarted} {value:p,+,percent} {%SPELL_POWER}",
+    "es": "{%fightStarted} {value:p,+,percent} {%SPELL_POWER}",
+    "de": "{%fightStarted} {value:p,+,percent} {%SPELL_POWER}",
+    "pt": "{%fightStarted} {value:p,+,percent} {%SPELL_POWER}"
   },
   "bgDescription": {
     "fr": "{%empty}",

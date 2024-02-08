@@ -44,9 +44,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "pv",
-          "value": 10
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

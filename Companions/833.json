@@ -48,9 +48,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 10
+            "valueInPvM": 10,
+            "valueInPvP": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -79,7 +80,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 95,
-      "valueInPvP": 80
+      "valueInPvP": 77
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -90,7 +91,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 16,
-      "valueInPvP": 15
+      "valueInPvP": 13
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -112,7 +113,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       3486,
       3779,

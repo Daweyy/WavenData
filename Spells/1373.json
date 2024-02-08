@@ -49,7 +49,9 @@
     "type": "SpellDefinition",
     "id": 1373,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -128,9 +130,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -151,7 +166,7 @@
     "pt": "Domínio da Lança"
   },
   "description": {
-    "fr": "<if pvm>Votre héros échange de place avec une de vos <b>LANCES</b> puis inflige {value:v,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.</if><if pvp>Votre héros échange de place avec une de vos <b>LANCES</b> puis inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.</if>\n\\---\nS’il est aligné avec la <b>LANCE</b> ciblée, déclenche son effet.",
+    "fr": "<if pvm>Votre héros échange de place avec une de vos <b>LANCES</b> puis inflige {value:v,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.</if><if pvp>Votre héros échange de place avec une de vos <b>LANCES</b> puis inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.</if>\n\\---\nS'il est aligné avec la <b>LANCE</b> ciblée, déclenche son effet.",
     "en": "<if pvm>Your hero switches positions with one of your <b>LANCES</b> then inflicts {value:v,percent} of their {%AT} on adjacent\\_<sprite name=\"cell_cross\"> opponents.</if><if pvp>Your hero switches positions with one of your <b>LANCES</b> then does {magicalDamage:dmg} to adjacent\\_<sprite name=\"cell_cross\"> opponents.</if>\n\\---\nIf they are in line with the targeted <b>LANCE</b>, triggers its effect.",
     "es": "<if pvm>Tu héroe intercambia posición con una de tus <b>LANZAS</b> e inflige un {value:v,percent} de su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.</if><if pvp>Tu héroe intercambia posición con una de tus <b>LANZAS</b> e inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.</if>\n\\---\nSi está alineado con la <b>LANZA</b> objetivo, activa su efecto.",
     "de": "<if pvm>Dein Held tauscht die Position mit einer deiner <b>LANZEN</b> und verursacht dann bei angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {value:v,percent} seines {%AT,plural:two} als Schaden.</if><if pvp>Dein Held tauscht die Position mit einer deiner <b>LANZEN</b> und verursacht dann {magicalDamage:dmg} bei angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern.</if>\n\\---\nWenn sich dein Held in einer Reihe mit der ausgewählten <b>LANZE</b> befindet, wird sein Effekt angewendet.",

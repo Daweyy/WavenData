@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 235884,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -132,7 +134,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -146,10 +167,10 @@
     "pt": "Explosão Gurpapa"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> de vos <b>SINISTROS</b>.\n",
-    "en": "Inflicts your hero's {%AT} around\\_<sprite name=\"cell_around\"> your <b>SINISTROS</b>.\n",
-    "es": "Inflige el {%AT} de tu héroe alrededor\\_<sprite name=\"cell_around\"> de tus <b>SINISTROS</b>.\n",
-    "de": "Verursacht den {%AT,plural:one} deines Helden im Umkreis\\_<sprite name=\"cell_around\"> deiner <b>SINISTROS</b> als Schaden.\n",
-    "pt": "Inflige o {%AT} do seu herói em\\_volta\\_<sprite name=\"cell_around\"> de seus <b>SINISTROS</b>.\n"
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros aux adversaires autour\\_<sprite name=\"cell_around\"> de vos {%SINISTRO,plural:other}.\n",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT} on opponents around\\_<sprite name=\"cell_around\"> your {%SINISTRO,plural:other}.\n",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tus {%SINISTRO,plural:other}.\n",
+    "de": "Verursacht bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deiner {%SINISTRO,plural:other} {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dos seus {%SINISTRO,plural:other}.\n"
   }
 }

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 101,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -94,10 +96,15 @@
             "type": "CharacterActionTypeFilter",
             "condition": 1,
             "actionTypes": [
-              1,
-              2,
-              3
+              1
             ]
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFlagFilter",
+              "flag": 1
+            }
           }
         ]
       },

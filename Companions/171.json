@@ -46,6 +46,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "hPVP",
           "value": 10
@@ -96,7 +114,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       216,
       1203,
@@ -213,10 +233,10 @@
     "pt": "Shura"
   },
   "description": {
-    "fr": "{%attack} <if pvm>Soigne la cible de son {%AT} si c'est un allié.</if><if pvp>Soigne la cible de {PVvalue:hPVP} si c'est un allié.</if>",
-    "en": "{%attack} <if pvm>Heals the target with her {%AT} if the target is an ally.</if><if pvp>Heals the target {PVvalue:hPVP} if the target is an ally.</if>",
-    "es": "{%attack} <if pvm>Cura al objetivo su {%AT} si es un aliado.</if><if pvp>Cura al objetivo {PVvalue:hPVP} si es un aliado.</if>",
-    "de": "{%attack} <if pvm>Heilt das Ziel in Höhe seines {%AT,plural:two}, wenn es sich um einen Verbündeten handelt.</if><if pvp>Heilt das Ziel um {PVvalue:hPVP}, wenn es sich um einen Verbündeten handelt.</if>",
-    "pt": "{%attack} <if pvm>Cura o alvo do seu {%AT} se for um aliado.</if><if pvp>Cura {PVvalue:hPVP} do alvo se for um aliado.</if>"
+    "fr": "{%attack} <if pvm>Soigne la cible de {value:v,percent} de son {%AT} si c'est un allié.</if><if pvp>Soigne la cible de {PVvalue:hPVP} si c'est un allié.</if>\\v<family>Shushu</family>",
+    "en": "{%attack} <if pvm>Heals the target {value:v,percent} of her {%AT} if the target is an ally.</if><if pvp>Heals the target {PVvalue:hPVP} if the target is an ally.</if>\\v<family>Shushu</family>",
+    "es": "{%attack} <if pvm>Cura al objetivo un {value:v,percent} de su {%AT} si es un aliado.</if><if pvp>Cura al objetivo {PVvalue:hPVP} si es un aliado.</if>\\v<family>Fab'huritu</family>",
+    "de": "{%attack} <if pvm>Heilt das Ziel um {value:v,percent} seines {%AT,plural:two}, wenn es sich um einen Verbündeten handelt.</if><if pvp>Heilt das Ziel um {PVvalue:hPVP}, wenn es sich um einen Verbündeten handelt.</if>\\v<family>Shushu</family>",
+    "pt": "{%attack} <if pvm>Cura o alvo de {value:v,percent} do seu {%AT} se for um aliado.</if><if pvp>Cura {PVvalue:hPVP} do alvo se for um aliado.</if>\\v<family>Shushu</family>"
   }
 }

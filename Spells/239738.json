@@ -49,7 +49,9 @@
     "type": "SpellDefinition",
     "id": 239738,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -286,6 +288,24 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -319,10 +339,10 @@
     "pt": "Kenavo"
   },
   "description": {
-    "fr": "<if pvm>Votre héros <b>CHARGE</b> un adversaire aligné avec lui jusqu’à {cell:c} et lui inflige son {%AT}.</if><if pvp>Votre héros <b>CHARGE</b> un adversaire aligné avec lui jusqu’à {cell:c} et lui inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Il se téléporte ensuite sur le {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié le plus proche</if><if pvp>Il se téléporte ensuite sur le {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié ciblé</if>.",
-    "en": "<if pvm>Your hero <b>CHARGES</b> an in-line opponent up to {cell:c} away and inflicts their {%AT} on them.</if><if pvp>Your hero <b>CHARGES</b> an in-line opponent up to {cell:c} away and does {magicalDamage:dmg} to them.</if>\n\\---\n<if pvm>They then teleport to the nearest allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}</if><if pvp>They then teleport to the targeted allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}</if>.",
-    "es": "<if pvm>Tu héroe <b>CARGA</b> contra un adversario alineado con él hasta {cell:c} y le inflige su {%AT}.</if><if pvp>Tu héroe <b>CARGA</b> contra un adversario alineado con él hasta {cell:c} y le inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Este se teletransporta a continuación a la {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada más cercana</if><if pvp>Este se teletransporta a continuación a la {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada objetivo</if>.",
-    "de": "<if pvm>Dein Held <b>STÜRMT</b> auf einen Gegner in derselben Reihe bis zu {cell:c} zu und verursacht bei ihm seinen {%AT} als Schaden.</if><if pvp>Dein Held <b>STÜRMT</b> auf einen Gegner in der derselben Reihe bis zu {cell:c} zu und verursacht bei ihm {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Er teleportiert sich anschließend auf die nächste verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME}</if><if pvp>Er teleportiert sich anschließend uaf die anvisierte verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME}.</if>",
-    "pt": "<if pvm>Seu herói <b>INVESTE</b> contra um adversário alinhado com ele a até {cell:c} e inflige seu {%AT}.</if><if pvp>Seu herói <b>INVESTE</b> contra um adversário alinhado com ele a até {cell:c} e inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Depois, teletransporta-se para a {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada mais próxima</if><if pvp>Depois, teletransporta-se para a {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada visada</if>."
+    "fr": "<if pvm>Votre héros <b>CHARGE</b> un adversaire aligné avec lui jusqu'à {cell:c} et lui inflige {value:v,percent} de son {%AT}.</if><if pvp>Votre héros <b>CHARGE</b> un adversaire aligné avec lui jusqu'à {cell:c} et lui inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Il se téléporte ensuite sur le {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié le plus proche</if><if pvp>Il se téléporte ensuite sur le {%KEYWORD.TRAP.NAME} <b>SRAM</b> allié ciblé</if>.",
+    "en": "<if pvm>Your hero <b>CHARGES</b> an in-line opponent up to {cell:c} away and inflicts {value:v,percent} of their {%AT} on them.</if><if pvp>Your hero <b>CHARGES</b> an in-line opponent up to {cell:c} away and does {magicalDamage:dmg} to them.</if>\n\\---\n<if pvm>They then teleport to the nearest allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}</if><if pvp>They then teleport to the targeted allied <b>SRAM</b> {%KEYWORD.TRAP.NAME}</if>.",
+    "es": "<if pvm>Tu héroe <b>CARGA</b> contra un adversario alineado con él hasta {cell:c} y le inflige un {value:v,percent} de su {%AT}.</if><if pvp>Tu héroe <b>CARGA</b> contra un adversario alineado con él hasta {cell:c} y le inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Se teletransporta a continuación a la {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada más cercana</if><if pvp>Se teletransporta a continuación a la {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada objetivo</if>.",
+    "de": "<if pvm>Dein Held <b>STÜRMT</b> auf einen Gegner in derselben Reihe bis zu {cell:c} zu und verursacht bei ihm {value:v,percent} seines {%AT,plural:two} als Schaden.</if><if pvp>Dein Held <b>STÜRMT</b> auf einen Gegner in der derselben Reihe bis zu {cell:c} zu und verursacht bei ihm {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Er teleportiert sich anschließend auf die nächste verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME}</if><if pvp>Er teleportiert sich anschließend auf die anvisierte verbündete <b>SRAM</b>-{%KEYWORD.TRAP.NAME}.</if>",
+    "pt": "<if pvm>Seu herói <b>INVESTE</b> contra um adversário alinhado com ele a até {cell:c} e inflige {value:v,percent} de seu {%AT}.</if><if pvp>Seu herói <b>INVESTE</b> contra um adversário alinhado com ele a até {cell:c} e inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Depois, teletransporta-se para a {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada mais próxima</if><if pvp>Depois, teletransporta-se para a {%KEYWORD.TRAP.NAME} <b>SRAM</b> aliada visada</if>."
   }
 }

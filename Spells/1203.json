@@ -1,0 +1,161 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1203",
+  "m_id": 1203,
+  "m_displayName": "SEASON - EFRIM - Souffle",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1520099352,
+    "b": 1311848804,
+    "c": 107996827,
+    "d": -176628164,
+    "e": 1839779922
+  },
+  "m_i18nDescriptionId": {
+    "a": 1520099352,
+    "b": 1311848804,
+    "c": 107996827,
+    "d": -176628164,
+    "e": 184087748
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "c3823c022ffa4564baa9905f353747ec"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1203,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        },
+        "startPosition": {
+          "type": "TargetCoordSelector",
+          "targetSelector": {
+            "type": "CasterHeroSelector"
+          }
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "18b7801926f316548aa7241442ece790",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "adv",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Souffle",
+    "en": "Breath",
+    "es": "Soplido",
+    "de": "Hauch",
+    "pt": "Sopro"
+  },
+  "description": {
+    "fr": "Votre héros inflige {value:p,percent} de son {%AT} jusqu'à {cell:c} devant lui.\n\\---\nSi au moins {value:adv}\\_adversaires sont touchés\\_: Votre héros rejoue son tour.",
+    "en": "Your hero inflicts {value:p,percent} of their {%AT} up to {cell:c} in front of them.\n\\---\nIf at least {value:adv}\\_{adv, plural, one[opponent is] other[opponents are]} hit: Your hero replays their turn.",
+    "es": "Tu héroe inflige un {value:p,percent} de su {%AT} hasta {cell:c} delante de él.\n\\---\nSi al menos {value:adv}\\_adversarios son alcanzados: Tu héroe vuelve a jugar su turno.",
+    "de": "Dein Held verursacht {value:p,percent} seines {%AT,plural:two} bis zu {cell:c} vor ihm als Schaden.\n\\---\nWenn mindestens {value:adv}\\_Gegner getroffen werden: Dein Held spielt seine Runde erneut.",
+    "pt": "Seu herói inflige {value:p,percent} de seu {%AT} a até {cell:c} à frente dele.\n\\---\nSe {value:adv}\\_adversários ou mais forem atingidos: Seu herói joga um turno extra."
+  }
+}

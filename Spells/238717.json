@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 238717,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -99,6 +101,24 @@
             "reference": {
               "type": "CasterSelector"
             }
+          },
+          {
+            "type": "PropertiesFilter",
+            "comparison": 4,
+            "properties": [
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 88
+              },
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 41
+              },
+              {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 173
+              }
+            ]
           }
         ]
       }
@@ -119,7 +139,9 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "TRANSFORMATION"
+      ]
     }
   },
   "name": {
@@ -130,10 +152,10 @@
     "pt": "Transformação Noturna"
   },
   "description": {
-    "fr": "Transforme l’un de vos compagnons en {Summoning:773!}. ",
-    "en": "Turns one of your companions into a {Summoning:773!}.",
-    "es": "Transforma a uno de tus compañeros en {Summoning:773!}.",
-    "de": "Verwandelt einen deiner Begleiter in einen {Summoning:773!}.",
-    "pt": "Transforma um dos seus companheiros em {Summoning:773!}."
+    "fr": "{#TRANSFORMATION[Transforme]} l'un de vos compagnons en {Summoning:773!}. ",
+    "en": "{#TRANSFORMATION[Turns]} one of your companions into a {Summoning:773!}.",
+    "es": "{#TRANSFORMATION[Transforma]} a uno de tus compañeros en {Summoning:773!}. ",
+    "de": "{#TRANSFORMATION[Verwandelt]} einen deiner Begleiter in einen {Summoning:773!}.",
+    "pt": "{#TRANSFORMATION[Transforma]} um dos seus companheiros em {Summoning:773!}."
   }
 }

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 238079,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -155,6 +157,24 @@
           "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": -1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -175,10 +195,10 @@
     "pt": "Demonstração Brutal"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{NamedEffect:455}\\_: -1 PA au coût de ce sort.",
-    "en": "Inflicts your hero's {%AT}.\n\\---\n{NamedEffect:455}: -1 AP to the cost of this spell.",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\n{NamedEffect:455}: -1 PA al coste de este hechizo.",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{NamedEffect:455}: -1\\_AP auf die Kosten dieses Zaubers.",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\n{NamedEffect:455}: -1 PA ao custo deste feitiço."
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\n{NamedEffect:455}\\_: -1 PA au coût de ce sort.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\n{NamedEffect:455}: -1 AP to the cost of this spell.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\n{NamedEffect:455}: -1 PA al coste de este hechizo.",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{NamedEffect:455}: -1\\_AP auf die Kosten dieses Zaubers.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\n{NamedEffect:455}: -1 PA ao custo deste feitiço."
   }
 }

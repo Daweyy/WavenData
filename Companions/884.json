@@ -44,7 +44,26 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -90,7 +109,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       1076,
       2510,
@@ -207,10 +228,10 @@
     "pt": "Heroína Pérfida"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Se soigne de son {%AT} s'il y a au moins un allié autour\\_<sprite name=\"cell_around\">.",
-    "en": "{%FightTurnEnded} Heals herself with her {%AT} if there is at least one surrounding\\_<sprite name=\"cell_around\"> ally.",
-    "es": "{%FightTurnEnded} Se cura su {%AT} si hay al menos un aliado alrededor\\_<sprite name=\"cell_around\">.",
-    "de": "{%FightTurnEnded} Heilt sich um seinen {%AT,plural:one}, wenn sich mindestens ein Verbündeter im Umkreis\\_<sprite name=\"cell_around\"> befindet.",
-    "pt": "{%FightTurnEnded} Cura-se de seu {%AT} se houver ao menos um aliado em\\_volta\\_<sprite name=\"cell_around\">."
+    "fr": "{%FightTurnEnded} Se soigne de {value:v,percent} de son {%AT} s'il y a au moins un allié autour\\_<sprite name=\"cell_around\">.",
+    "en": "{%FightTurnEnded} Heals herself {value:v,percent} of her {%AT} if there is at least one surrounding\\_<sprite name=\"cell_around\"> ally.",
+    "es": "{%FightTurnEnded} Se cura un {value:v,percent} de su {%AT} si hay al menos un aliado alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "{%FightTurnEnded} Heilt sich um {value:v,percent} seines {%AT,plural:two}, wenn sich mindestens ein Verbündeter im Umkreis\\_<sprite name=\"cell_around\"> befindet.",
+    "pt": "{%FightTurnEnded} Cura-se de {value:v,percent} do seu {%AT} se houver ao menos um aliado em\\_volta\\_<sprite name=\"cell_around\">."
   }
 }

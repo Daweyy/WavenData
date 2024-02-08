@@ -83,9 +83,22 @@
           "value": 1
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "arGain",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -135,7 +148,9 @@
       "reference": 10
     },
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [],
     "difficultyHint": 1,
     "defaultSkinIdMale": 2582,

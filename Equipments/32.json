@@ -46,7 +46,9 @@
     "type": "EquipmentDefinition",
     "id": 32,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       419,
@@ -68,9 +70,22 @@
           "referenceId": "x",
           "valuesToSum": [
             {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 200
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": null,
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 200
+              },
+              "factor": null,
+              "buffs": [
+                48
+              ],
+              "skillBuffs": [],
+              "from": {
+                "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+              },
+              "addInsteadOfMultiply": false
             },
             {
               "type": "ConditionalValue",
@@ -80,9 +95,22 @@
                 "skill": 663
               },
               "ifTrue": {
-                "type": "ConstIntegerValue",
+                "type": "BuffedScalingDynamicValue",
                 "referenceId": "y",
-                "value": 50
+                "baseValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 50
+                },
+                "factor": null,
+                "buffs": [
+                  48
+                ],
+                "skillBuffs": [],
+                "from": {
+                  "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+                },
+                "addInsteadOfMultiply": false
               },
               "ifFalse": {
                 "type": "ConstIntegerValue",
@@ -93,9 +121,22 @@
           ]
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "y",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

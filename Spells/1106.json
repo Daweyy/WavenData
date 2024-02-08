@@ -1,0 +1,133 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1106",
+  "m_id": 1106,
+  "m_displayName": "SEASON - LOKUS - Poing de wakfu",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -372993586,
+    "b": 21464308,
+    "c": 1448051419,
+    "d": 49629320,
+    "e": -2050936286
+  },
+  "m_i18nDescriptionId": {
+    "a": -372993586,
+    "b": 21464308,
+    "c": 1448051419,
+    "d": 49629320,
+    "e": -1508477210
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "269307214cb17494ab33f5ec5b67ee4d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1106,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b62a7a8d808bdfa43a19fd5592223dff",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 6,
+          "id": 2
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Poing de wakfu",
+    "en": "Wakfu Fist",
+    "es": "Puño de Wakfu",
+    "de": "Wakfu-Faust",
+    "pt": "Punho de Wakfu"
+  },
+  "description": {
+    "fr": "Inflige {value:per,percent} de l'{%AT} de {Weapon:524!} par {FloorMechanism:2} autour\\_<sprite name=\"cell_around\"> de l'adversaire ciblé.\n\\---\nDétruit les {FloorMechanism:2,plural:other} autour\\_<sprite name=\"cell_around\"> de la cible.",
+    "en": "Inflicts {value:per,percent} of {Weapon:524!}'s {%AT} per {FloorMechanism:2} around\\_<sprite name=\"cell_around\"> the targeted opponent.\n\\---\nDestroys the {FloorMechanism:2,plural:other} around\\_<sprite name=\"cell_around\"> the target.",
+    "es": "Inflige un {value:per,percent} del {%AT} de {Weapon:524!} por {FloorMechanism:2} alrededor\\_<sprite name=\"cell_around\"> del adversario objetivo.\n\\---\nDestruye los {FloorMechanism:2,plural:other} de alrededor\\_<sprite name=\"cell_around\"> del objetivo.",
+    "de": "Verursacht {value:per,percent} des {%AT,plural:two} von {Weapon:524!} pro {FloorMechanism:2} im Umkreis\\_<sprite name=\"cell_around\"> des anvisierten Gegners als Schaden.\n\\---\nZerstört die {FloorMechanism:2,plural:other} im Umkreis\\_<sprite name=\"cell_around\"> des Ziels.",
+    "pt": "Inflige {value:per,percent} do {%AT} de {Weapon:524!} por {FloorMechanism:2} em\\_volta\\_<sprite name=\"cell_around\"> do adversário visado.\n\\---\nDestrói os {FloorMechanism:2,plural:other} em\\_volta\\_<sprite name=\"cell_around\"> do alvo."
+  }
+}

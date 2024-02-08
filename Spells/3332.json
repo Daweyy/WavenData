@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 3332,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       1260,
@@ -143,7 +145,7 @@
             "pvp": {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 11
+              "value": 14
             }
           },
           "factor": {
@@ -177,6 +179,11 @@
         },
         {
           "type": "ConstIntegerValue",
+          "referenceId": "dmg2",
+          "value": 6
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 1
         },
@@ -202,10 +209,10 @@
     "pt": "Ponta Repulsiva"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} et {#PUSH} de {cell:c}.\n\\---\n{#COMBO}\\_: Ce sort revient dans votre main.\n<rem>Limité à 1 fois par tour.</i></rem>",
-    "en": "Does {magicalDamage:dmg} and {#PUSH} {cell:c}.\n\\---\n{#COMBO}: This spell returns to your hand.\n<rem>Limit: 1 time per turn.</i></rem>",
-    "es": "Inflige {magicalDamage:dmg} y {#PUSH} {cell:c}.\n\\---\n{#COMBO}: Este hechizo vuelve a tu mano.\n<rem>Limitado a 1 vez por turno.</i></rem>",
-    "de": "Verursacht {magicalDamage:dmg} und einen {#PUSH,plural:one} um {cell:c}.\n\\---\n{#COMBO}: Dieser Zauber geht zurück auf deine Hand.\n<rem>Auf 1-mal pro Runde begrenzt.</i></rem>",
-    "pt": "Inflige {magicalDamage:dmg} e {#PUSH} por {cell:c}.\n\\---\n{#COMBO}: Este feitiço volta para sua mão.\n<rem>Limite de 1 vez por turno.</i></rem>"
+    "fr": "Inflige {magicalDamage:dmg} et {#PUSH} de {cell:c}.\n\\---\n{#COMBO}\\_: <if pvm>Ce sort revient dans votre main.</if><if pvp>{magicalDamage:dmg2,+}.</if><if pvm>\n<rem>Limité à 1 fois par tour.</i></rem></if>",
+    "en": "Does {magicalDamage:dmg} and {#PUSH} {cell:c}.\n\\---\n{#COMBO}: <if pvm>This spell returns to your hand.</if><if pvp>{magicalDamage:dmg2,+}.</if><if pvm>\n<rem>Limit: 1 time per turn.</i></rem></if>",
+    "es": "Inflige {magicalDamage:dmg} y {#PUSH} {cell:c}.\n\\---\n{#COMBO}: <if pvm>Este hechizo vuelve a tu mano.</if><if pvp>{magicalDamage:dmg2,+}.</if><if pvm>\n<rem>Limitado a 1 vez por turno.</i></rem></if>",
+    "de": "Verursacht {magicalDamage:dmg} und einen {#PUSH,plural:one} um {cell:c}.\n\\---\n{#COMBO}:<if pvm>Dieser Zauber geht zurück auf deine Hand.</if><if pvp>{magicalDamage:dmg2,+}.</if><if pvm>\n<rem>Auf 1-mal pro Runde begrenzt.</i></rem></if>",
+    "pt": "Inflige {magicalDamage:dmg} e {#PUSH} por {cell:c}.\n\\---\n{#COMBO}: <if pvm>Este feitiço volta para sua mão.</if><if pvp>{magicalDamage:dmg2,+}.</if><if pvm>\n<rem>Limite de 1 vez por turno.</i></rem></if>"
   }
 }

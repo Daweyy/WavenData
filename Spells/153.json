@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 153,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -181,7 +183,9 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "TRANSFORMATION"
+      ]
     }
   },
   "name": {
@@ -192,10 +196,10 @@
     "pt": "Evolução Gurpapa"
   },
   "description": {
-    "fr": "<if pvm>Transforme vos <b>SINISTROS</b> en jeu.</if><if pvp>Transforme le <b>SINISTRO</b> ciblé.</if>\n",
-    "en": "<if pvm>Transforms your <b>SINISTROS</b> in play.</if><if pvp>Transforms the targeted <b>SINISTRO</b>.</if>\n",
-    "es": "<if pvm>Transforma tus <b>SINISTROS</b> en juego.</if><if pvp>Transforma el <b>SINISTRO</b> objetivo.</if>\n",
-    "de": "<if pvm>Verwandelt deine <b>SINISTROS</b> im Spiel.</if><if pvp>Verwandelt den anvisierten <b>SINISTRO</b>.</if>\n",
-    "pt": "<if pvm>Transforma seus <b>SINISTROS</b> presentes no jogo.</if><if pvp>Transforma o <b>SINISTRO</b> visado.</if>\n"
+    "fr": "<if pvm>{#TRANSFORMATION[Transforme]} vos {%SINISTRO,plural:other} en jeu.</if><if pvp>{#TRANSFORMATION[Transforme]} le {%SINISTRO} ciblé.</if>\n",
+    "en": "<if pvm>{#TRANSFORMATION[Transforms]} your {%SINISTRO,plural:other} in play.</if><if pvp>{#TRANSFORMATION[Transforms]} the targeted {%SINISTRO}.</if>\n",
+    "es": "<if pvm>{#TRANSFORMATION[Transforma]} tus {%SINISTRO,plural:other} en juego.</if><if pvp>{#TRANSFORMATION[Transforma]} el {%SINISTRO} objetivo.</if>\n",
+    "de": "<if pvm>{#TRANSFORMATION[Verwandelt]} deine {%SINISTRO,plural:other} im Spiel.</if><if pvp>{#TRANSFORMATION[Verwandelt]} den anvisierten {%SINISTRO}.</if>\n",
+    "pt": "<if pvm>{#TRANSFORMATION[Transforma]} seus {%SINISTRO,plural:other} presentes no jogo.</if><if pvp>{#TRANSFORMATION[Transforma]} o {%SINISTRO} visado.</if>\n"
   }
 }

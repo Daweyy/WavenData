@@ -46,7 +46,9 @@
     "type": "EquipmentDefinition",
     "id": 882,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 2,
     "unlockableSkillIds": [
       1468,
@@ -69,9 +71,22 @@
           "value": 3
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
-          "value": 15
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 15
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

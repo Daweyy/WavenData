@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1479",
+  "m_id": 1479,
+  "m_displayName": "SEASON - LOKUS - Rayon de wakfu",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 395196508,
+    "b": -303271932,
+    "c": 1051226681,
+    "d": 1808898061,
+    "e": -2125435840
+  },
+  "m_i18nDescriptionId": {
+    "a": 395196508,
+    "b": -303271932,
+    "c": 1051226681,
+    "d": 1808898061,
+    "e": 1955883877
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "1661d9e6db951b744aa2246886e41d94"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1479,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FloorMechanismDefinitionFilter",
+            "condition": 1,
+            "floorMechanisms": [
+              2
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "c",
+          "axe": 0
+        },
+        "startPosition": {
+          "type": "FirstCastTargetSelector"
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e095a661f8ae7044792f660b13b86a0e",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "MapSizeValue",
+          "referenceId": "c",
+          "axe": 0
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "res",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 6,
+          "id": 2
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Rayon de wakfu",
+    "en": "Wakfu Ray",
+    "es": "Rayo de Wakfu",
+    "de": "Wakfu-Strahl",
+    "pt": "Raio de Wakfu"
+  },
+  "description": {
+    "fr": "Inflige l'{%AT} de {Weapon:524!} aux adversaires en ligne à un {FloorMechanism:2}.\n\\---\n{PA_RESvalue:res,+} par {FloorMechanism:2} sur cette ligne.",
+    "en": "Inflicts {Weapon:524!}'s {%AT} on opponents in line with an {FloorMechanism:2}.\n\\---\n{PA_RESvalue:res,+} per {FloorMechanism:2} in the line.",
+    "es": "Inflige el {%AT} de {Weapon:524!} a los adversarios en línea con un {FloorMechanism:2}.\n\\---\n{PA_RESvalue:res,+} por {FloorMechanism:2} en esta línea.",
+    "de": "Verursacht den {%AT} von {Weapon:524!} bei Gegnern, die sich in derselben Reihe wie ein {FloorMechanism:2} befinden, als Schaden.\n\\---\n{PA_RESvalue:res,+} pro {FloorMechanism:2} in dieser Reihe.",
+    "pt": "Inflige o {%AT} de {Weapon:524!} aos adversários alinhados com um {FloorMechanism:2}.\n\\---\n{PA_RESvalue:res,+} por {FloorMechanism:2} nessa linha."
+  }
+}

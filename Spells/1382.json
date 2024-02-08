@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1382",
+  "m_id": 1382,
+  "m_displayName": "SEASON - EFRIM - Repousse",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1850010470,
+    "b": 1210844532,
+    "c": 890424217,
+    "d": -1567420594,
+    "e": -61343531
+  },
+  "m_i18nDescriptionId": {
+    "a": -1850010470,
+    "b": 1210844532,
+    "c": 890424217,
+    "d": -1567420594,
+    "e": 1893331206
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "988c6f78f761861449983d37adb3a1a3"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1382,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a0af68af497521644bec3edd38c62340",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Repousse",
+    "en": "Push",
+    "es": "Empujón",
+    "de": "Rückstoß",
+    "pt": "Empurrão"
+  },
+  "description": {
+    "fr": "{#PUSH} un adversaire adjacent\\_<sprite name=\"cell_cross\"> de {cell:c}.\n\\---\nVotre héros <b>CHARGE</b> la cible et déclenche son {%AT}.",
+    "en": "{#PUSH} an adjacent\\_<sprite name=\"cell_cross\"> opponent {cell:c}.\n\\---\nYour hero <b>CHARGES</b> the target and triggers their {%AT}.",
+    "es": "{#PUSH} a un adversario adyacente\\_<sprite name=\"cell_cross\"> {cell:c}.\n\\---\nTu héroe <b>CARGA</b> contra el objetivo y activa su {%AT}.",
+    "de": "{#PUSH,plural:few} einen angrenzenden\\_<sprite name=\"cell_cross\"> Gegner um {cell:c} zurück.\n\\---\nDein Held <b>STÜRMT</b> auf das Ziel zu und löst seinen {%AT} aus.",
+    "pt": "{#PUSH} um adversário adjacente\\_<sprite name=\"cell_cross\"> por {cell:c}.\n\\---\nSeu herói <b>INVESTE</b> contra o alvo e aciona seu {%AT}."
+  }
+}

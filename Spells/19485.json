@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 19485,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -123,6 +125,24 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -156,10 +176,10 @@
     "pt": "Correada"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> d’un de vos {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d’un de vos {%KEYWORD.TRAP.NAME,plural:other}.</if>",
-    "en": "<if pvm>Inflicts your hero's {%AT} around\\_<sprite name=\"cell_around\"> one of your {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> one of your {%KEYWORD.TRAP.NAME,plural:other}.</if>",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe alrededor\\_<sprite name=\"cell_around\"> de una de tus {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de una de tus {%KEYWORD.TRAP.NAME,plural:other}.</if>",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden im Umkreis\\_<sprite name=\"cell_around\"> einer deiner {%KEYWORD.TRAP.NAME,plural:other} als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> einer deiner {%KEYWORD.TRAP.NAME,plural:other}.</if>",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói em\\_volta\\_<sprite name=\"cell_around\"> de uma das suas {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> de uma das suas {%KEYWORD.TRAP.NAME,plural:other}.</if>"
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> d'un de vos {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'un de vos {%KEYWORD.TRAP.NAME,plural:other}.</if>",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT} around\\_<sprite name=\"cell_around\"> one of your {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> one of your {%KEYWORD.TRAP.NAME,plural:other}.</if>",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe alrededor\\_<sprite name=\"cell_around\"> de una de tus {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de una de tus {%KEYWORD.TRAP.NAME,plural:other}.</if>",
+    "de": "<if pvm>Verursacht {value:v,percent} des {%AT,plural:two} deines Helden im Umkreis\\_<sprite name=\"cell_around\"> einer deiner {%KEYWORD.TRAP.NAME,plural:other} als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> einer deiner {%KEYWORD.TRAP.NAME,plural:other}.</if>",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói em\\_volta\\_<sprite name=\"cell_around\"> de uma das suas {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> de uma das suas {%KEYWORD.TRAP.NAME,plural:other}.</if>"
   }
 }

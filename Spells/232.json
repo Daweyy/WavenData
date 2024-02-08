@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 232,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -84,31 +86,54 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
-            }
+        "type": "AreaFromTargetsSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "targets": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllCharactersSelector"
           },
-          {
-            "type": "CombinedEntityFilter",
-            "filters": [
-              {
-                "type": "EntitiesWithHighestLowestCaracFilter",
-                "superlative": 1,
-                "carac": 1
-              },
-              {
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "UnionOfEntityFilter",
+              "firstFilter": {
                 "type": "EntitiesWithHighestLowestCaracFilter",
                 "superlative": 0,
                 "carac": 1
+              },
+              "secondFilter": {
+                "type": "EntitiesWithHighestLowestCaracFilter",
+                "superlative": 1,
+                "carac": 1
               }
-            ]
+            }
+          ]
+        },
+        "areaOfEffect": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "EngineDeterminedHolder"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
           }
-        ]
+        }
       }
     },
     "spellEffectData": [
@@ -149,6 +174,24 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -182,10 +225,10 @@
     "pt": "Bisturi Apostruker"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%AT} de votre héros à l'adversaire ayant le moins de {%PV} puis à celui en ayant le plus.</if><if pvp>Inflige {magicalDamage:v} à l'adversaire ayant le moins de {%PV} puis à celui en ayant le plus.</if>",
-    "en": "<if pvm>Inflicts your hero's {%AT} on the opponent with the least {%PV} then on the one with the most.</if><if pvp>Does {magicalDamage:v} to the opponent with the least {%PV} then to the one with the most.</if>",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe al adversario que tenga menos {%PV} y después, al que tenga más.</if><if pvp>Inflige {magicalDamage:v} al adversario que tenga menos {%PV} y después, al que tenga más.</if>",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden beim Gegner mit den wenigsten {%PV} als Schaden, dann bei dem mit den meisten.</if><if pvp>Verursacht {magicalDamage:v} beim Gegner mit den wenigsten {%PV}, dann bei dem mit den meisten.</if>",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói ao adversário que tiver menos {%PV} e, em seguida, ao que tiver mais.</if><if pvp>Inflige {magicalDamage:v} ao adversário que tiver menos {%PV} e, em seguida, ao que tiver mais.</if>"
+    "fr": "<if pvm>Inflige {value:dmg,percent} de l'{%AT} de votre héros à l'adversaire ayant le moins de {%PV} puis à celui en ayant le plus.</if><if pvp>Inflige {magicalDamage:v} à l'adversaire ayant le moins de {%PV} puis à celui en ayant le plus.</if>",
+    "en": "<if pvm>Inflicts {value:dmg,percent} of your hero's {%AT} on the opponent with the least {%PV} then on the one with the most.</if><if pvp>Does {magicalDamage:v} to the opponent with the least {%PV} then to the one with the most.</if>",
+    "es": "<if pvm>Inflige un {value:dmg,percent} del {%AT} de tu héroe al adversario que tenga menos {%PV} y después, al que tenga más.</if><if pvp>Inflige {magicalDamage:v} al adversario que tenga menos {%PV} y después, al que tenga más.</if>",
+    "de": "<if pvm>Verursacht {value:dmg,percent} des {%AT,plural:two} deines Helden beim Gegner mit den wenigsten {%PV} als Schaden, dann bei dem mit den meisten.</if><if pvp>Verursacht {magicalDamage:v} beim Gegner mit den wenigsten {%PV}, dann bei dem mit den meisten.</if>",
+    "pt": "<if pvm>Inflige {value:dmg,percent} do {%AT} do seu herói ao adversário que tiver menos {%PV} e, em seguida, ao que tiver mais.</if><if pvp>Inflige {magicalDamage:v} ao adversário que tiver menos {%PV} e, em seguida, ao que tiver mais.</if>"
   }
 }

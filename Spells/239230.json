@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 239230,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -101,9 +103,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "p",
-          "value": 10
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -119,7 +134,7 @@
     "pt": "Cura Rápida"
   },
   "description": {
-    "fr": "Soigne deux fois un allié de {value:p,percent} de l’{%AT} de votre héros. \n",
+    "fr": "Soigne deux fois un allié de {value:p,percent} de l'{%AT} de votre héros. \n",
     "en": "Heals an ally {value:p,percent} of your hero's {%AT} two times. \n",
     "es": "Cura dos veces a un aliado un {value:p,percent} del {%AT} de tu héroe. \n",
     "de": "Heilt zweimal einen Verbündeten um {value:p,percent} des {%AT,plural:two} deines Helden. \n",

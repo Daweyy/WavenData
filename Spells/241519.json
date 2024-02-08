@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 241519,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -50,7 +52,7 @@
       "type": "SpellDetails",
       "equipableByPlayers": true,
       "pvpAvailability": {
-        "type": "Hidden"
+        "type": "Available"
       },
       "element": 6,
       "specificToWeapon": 937,
@@ -125,6 +127,45 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -144,10 +185,10 @@
     "pt": "Empurrão Surokan"
   },
   "description": {
-    "fr": "{#Push} de {cell:c}.\n\\---\n{#TRAPPER}\\_: Inflige l'{%AT} de votre héros.",
-    "en": "{#Push} {cell:c}.\n\\---\n{#TRAPPER}: Inflicts your hero's {%AT}.",
-    "es": "{#Push} {cell:c}.\n\\---\n{#TRAPPER}: Inflige el {%AT} de tu héroe.",
-    "de": "{#Push,plural:one} um {cell:c}.\n\\---\n{#TRAPPER}: Verursacht den {%AT,plural:one} deines Helden als Schaden.",
-    "pt": "{#Push} por {cell:c}.\n\\---\n{#TRAPPER}: Inflige o {%AT} do seu herói."
+    "fr": "{#Push} de {cell:c}.\n\\---\n<if pvm>{#TRAPPER}\\_: Inflige {value:v,percent} de l'{%AT} de votre héros.</if><if pvp>{#TRAPPER}\\_: Inflige {magicalDamage:dmg}.</if>",
+    "en": "{#Push} {cell:c}.\n\\---\n<if pvm>{#TRAPPER}: Inflicts {value:v,percent} of your hero's {%AT}.</if><if pvp>{#TRAPPER}: Does {magicalDamage:dmg}.</if>",
+    "es": "{#Push} {cell:c}.\n\\---\n<if pvm>{#TRAPPER}: Inflige un {value:v,percent} del {%AT} de tu héroe.</if><if pvp>{#TRAPPER}: Inflige {magicalDamage:dmg}.</if>",
+    "de": "{#Push,plural:one} um {cell:c}.\n\\---\n<if pvm>{#TRAPPER}: Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>{#TRAPPER}: Verursacht {magicalDamage:dmg}.</if>",
+    "pt": "{#Push} por {cell:c}.\n\\---\n<if pvm>{#TRAPPER}: Inflige {value:v,percent} do {%AT} do seu herói.</if><if pvp>{#TRAPPER}: Inflige {magicalDamage:dmg}.</if>"
   }
 }

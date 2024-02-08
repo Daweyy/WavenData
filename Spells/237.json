@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 237,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -147,9 +149,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -173,7 +188,7 @@
     "pt": "Empurrão Orishi"
   },
   "description": {
-    "fr": "Inflige {value:dmg,percent} de l’{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_: Repousse de {cell:c} pour chacun de vos {%KEYWORD.TRAP.NAME,plural:other} <b>SRAM</b> en jeu.",
+    "fr": "Inflige {value:dmg,percent} de l'{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_: Repousse de {cell:c} pour chacun de vos {%KEYWORD.TRAP.NAME,plural:other} <b>SRAM</b> en jeu.",
     "en": "Inflicts {value:dmg,percent} of your hero's {%AT}.\n\\---\n{#TRAPPER}: Pushes {cell:c} for each of your </b>SRAM {%KEYWORD.TRAP.NAME,plural:other}<b> in play.",
     "es": "Inflige un {value:dmg,percent} del {%AT} de tu héroe.\n\\---\n{#TRAPPER}: Empuja {cell:c} por cada una de tus {%KEYWORD.TRAP.NAME,plural:other} <b>SRAM</b> en juego.",
     "de": "Verursacht {value:dmg,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{#TRAPPER}: Rückstoß um {cell:c} für jede deiner <b>SRAM</b>-{%KEYWORD.TRAP.NAME,plural:other} im Spiel.",

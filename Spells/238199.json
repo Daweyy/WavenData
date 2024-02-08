@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 238199,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -92,9 +94,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "p",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -110,7 +125,7 @@
     "pt": "Apoio Justificado"
   },
   "description": {
-    "fr": "Confère {value:p, percent} de l’{%AR} de votre héros à vos compagnons.",
+    "fr": "Confère {value:p, percent} de l'{%AR} de votre héros à vos compagnons.",
     "en": "Confers {value:p, percent} of your hero's {%AR} on your companions.",
     "es": "Confiere un {value:p, percent} de la {%AR} de tu héroe a tus compañeros.",
     "de": "Gewährt deinen Begleitern {value:p, percent} der {%AR} deines Helden.",

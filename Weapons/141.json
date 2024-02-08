@@ -101,6 +101,16 @@
             "type": "EffectHolderSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pmstart",
+          "value": -1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -123,7 +133,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 401,
-      "valueInPvP": 385
+      "valueInPvP": 390
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -155,7 +165,9 @@
       "reference": 10
     },
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       1032,
       1031,
@@ -183,14 +195,14 @@
     ],
     "presetSpellIndexForTutorialCompanionElementReference": 2,
     "presetSpellIds": [
-      218404,
-      217935,
+      105,
+      187,
       459,
-      609,
+      218404,
       989,
       666,
-      187,
-      152,
+      186194,
+      217935,
       460
     ]
   },
@@ -202,11 +214,11 @@
     "pt": "Gema Defasante"
   },
   "description": {
-    "fr": "{%fightstarted}\\v Confère {PropertyEffect:18} à votre héros.<ifpvm>\n\\---\nLorsque vous traversez un adversaire : Lui inflige {value:v} dégâts.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if>\n\\---\n<rem>{PropertyEffect:18} ne réduit pas l'{%AT} de votre héros.</rem>",
-    "en": "{%fightstarted}\\vConfers {PropertyEffect:18} on your hero.<ifpvm>\n\\---\nWhen you go through an opponent: Does {value:v} damage to them.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if>\n\\---\n<rem>{PropertyEffect:18} does not lower your hero's {%AT}.</rem>",
-    "es": "{%fightstarted}\\v Confiere {PropertyEffect:18} a tu héroe.<ifpvm>\n\\---\nCuando atraviesas a un adversario: Le inflige {value:v} de daño.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if>\n\\---\n<rem>{PropertyEffect:18} no reduce el {%AT} de tu héroe.</rem>",
-    "de": "{%fightstarted}\\vVerleiht deinem Helden {PropertyEffect:18}.<ifpvm>\n\\---\nWenn du einen Gegner überquerst: Verursacht bei ihm {value:v} Schaden.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if>\n\\---\n<rem>{PropertyEffect:18} verringert nicht den {%AT} deines Helden.</rem>",
-    "pt": "{%fightstarted}\\v Concede {PropertyEffect:18} ao seu herói.<ifpvm>\n\\---\nQuando você atravessa um adversário: Inflige a ele {value:v} danos.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if>\n\\---\n<rem>{PropertyEffect:18} não reduz o {%AT} do seu herói.</rem>"
+    "fr": "{%fightstarted} <if pvm>Gagne {PropertyEffect:18}.</if><if pvp>{PMvalue:pmstart} et gagne {PropertyEffect:18}.</if>\n\\---\n<ifpvm>Lorsque votre héros traverse un adversaire : Lui inflige {value:v} dégâts.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if><if pvp>Lorsqu'un de vos compagnons <b>ATTAQUE</b>\\_: {PMvalue:pm,+} à votre héros jusqu'à la fin du tour.</if>\n\\---\n<rem>{PropertyEffect:18} ne réduit pas l'{%AT} de votre héros.</rem>",
+    "en": "{%fightstarted} <if pvm>Gains {PropertyEffect:18}.</if><if pvp>{PMvalue:pmstart} and gains {PropertyEffect:18}.</if>\n\\---\n<ifpvm>When your hero goes through an opponent: Does {value:v} damage to them.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if><if pvp>When one of your companions <b>ATTACKS</b>: {PMvalue:pm,+} to your hero until the end of the turn.</if>\n\\---\n<rem>{PropertyEffect:18} does not reduce your hero's {%AT}.</rem>",
+    "es": "{%fightstarted} <if pvm>Gana {PropertyEffect:18}.</if><if pvp>{PMvalue:pmstart} y gana {PropertyEffect:18}.</if>\n\\---\n<ifpvm>Cuando tu héroe atraviesa a un adversario: Le inflige {value:v} de daño.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if><if pvp>Cuando uno de tus compañeros <b>ATACA</b>: {PMvalue:pm,+} a tu héroe hasta el final del turno.</if>\n\\---\n<rem>{PropertyEffect:18} no reduce el {%AT} de tu héroe.</rem>",
+    "de": "{%fightstarted} <if pvm>Verleiht {PropertyEffect:18}.</if><if pvp>{PMvalue:pmstart} und verleiht {PropertyEffect:18}.</if>\n\\---\n<ifpvm>Wenn dein Held einen Gegner überquert: Fügt ihm {value:v} Schaden zu.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if><if pvp>Wenn einer deiner Begleiter <b>ANGREIFT</b>: {PMvalue:pm,+} für deinen Helden bis zum Ende der Runde.</if>\n\\---\n<rem>{PropertyEffect:18} verringert den {%AT} deines Helden nicht.</rem>",
+    "pt": "{%fightstarted} <if pvm>Ganha {PropertyEffect:18}.</if><if pvp>{PMvalue:pmstart} e ganha {PropertyEffect:18}.</if>\n\\---\n<ifpvm>Quando seu herói atravessa um adversário: Inflige a ele {value:v} danos.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem></if><if pvp>Quando um dos seus companheiros <b>ATACA</b>: {PMvalue:pm,+} ao seu herói até o fim do turno.</if>\n\\---\n<rem>{PropertyEffect:18} não reduz o {%AT} do seu herói.</rem>"
   },
   "gameplayDescription": {
     "fr": "{PropertyEffect:18}\\_: Tel un passe-muraille, traversez vos ennemis pour leur infliger des dégâts basés sur votre {%at}.\n\\---\n<color=#7FD5E4>{%PM}</color>\\_: Votre mobilité. C'est un petit pas pour vous, un grand pas pour votre victoire\\_!",

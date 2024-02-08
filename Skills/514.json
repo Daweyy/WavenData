@@ -40,7 +40,26 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -54,10 +73,10 @@
     "pt": "Recuperação"
   },
   "description": {
-    "fr": "Lorsque {Companion:221!} se téléporte\\_: il se soigne de son {%AT}.",
-    "en": "When {Companion:221!} teleports: Heals himself with his {%AT}.",
-    "es": "Cuando {Companion:221!} se teletransporta: se cura su {%AT}.",
-    "de": "Wenn sich {Companion:221!} teleportiert: Heilt sich um seinen {%AT,plural:one}.",
-    "pt": "Quando {Companion:221!} se teletransporta: Cura-se de seu {%AT}."
+    "fr": "Lorsque {Companion:221!} se téléporte\\_: il se soigne {value:v,percent} de son {%AT}.",
+    "en": "When {Companion:221!} teleports: Heals himself {value:v,percent} of his {%AT}.",
+    "es": "Cuando {Companion:221!} se teletransporta: se cura un {value:v,percent} de su {%AT}.",
+    "de": "Wenn sich {Companion:221!} teleportiert: Heilt sich um {value:v,percent} seines {%AT,plural:two}.",
+    "pt": "Quando {Companion:221!} se teletransporta: Cura-se de {value:v,percent} de seu {%AT}."
   }
 }

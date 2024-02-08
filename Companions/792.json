@@ -50,21 +50,55 @@
           "referenceId": "ar1",
           "valuesToSum": [
             {
-              "type": "ConstIntegerValue",
+              "type": "BuffedScalingDynamicValue",
               "referenceId": null,
-              "value": 50
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 50
+              },
+              "factor": null,
+              "buffs": [
+                48
+              ],
+              "skillBuffs": [],
+              "from": {
+                "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+              },
+              "addInsteadOfMultiply": false
             },
             {
               "type": "ConditionalValue",
               "referenceId": "",
               "condition": {
-                "type": "HolderHasSkillCondition",
-                "skill": 476
+                "type": "AndCondition",
+                "conditions": [
+                  {
+                    "type": "HolderHasSkillCondition",
+                    "skill": 476
+                  },
+                  {
+                    "type": "ContextIsCriticalCondition"
+                  }
+                ]
               },
               "ifTrue": {
-                "type": "ConstIntegerValue",
+                "type": "BuffedScalingDynamicValue",
                 "referenceId": "ar2",
-                "value": 50
+                "baseValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 50
+                },
+                "factor": null,
+                "buffs": [
+                  48
+                ],
+                "skillBuffs": [],
+                "from": {
+                  "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+                },
+                "addInsteadOfMultiply": false
               },
               "ifFalse": {
                 "type": "ConstIntegerValue",
@@ -75,9 +109,22 @@
           ]
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "ar2",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -130,7 +177,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       1226,
       2709,

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 376,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -92,7 +94,7 @@
         "type": "SpellEffectInstantiationData",
         "spellEffect": "b75b112c6333d564790d90699a432ec8",
         "originTarget": {
-          "type": "FilteredCoordSelector",
+          "type": "FilteredCharacterSelector",
           "filters": [
             {
               "type": "AroundSquaredTargetFilter",
@@ -106,6 +108,13 @@
                   "referenceId": "",
                   "value": 1
                 }
+              }
+            },
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
               }
             }
           ]

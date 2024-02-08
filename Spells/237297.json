@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 237297,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -157,6 +159,24 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -172,10 +192,10 @@
     "pt": "Investida Motivante"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige son {%AT}.\n\\---\nVos compagnons adjacents\\_<sprite name=\"cell_cross\"> à la cible déclenchent leur {%AT}.",
-    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%AT} on them.\n\\---\nYour companions adjacent\\_<sprite name=\"cell_cross\"> to the target trigger their {%AT}.",
-    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige su {%AT}.\n\\---\nTus compañeros adyacentes\\_<sprite name=\"cell_cross\"> al objetivo activan su {%AT}.",
-    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis zu {cell:c} in derselben Reihe zu und fügt ihm seinen {%AT,plural:one} als Schaden zu.\n\\---\nDeine an das Ziel angrenzenden\\_<sprite name=\"cell_cross\"> Begleiter lösen ihren {%AT,plural:one} aus.",
-    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige seu {%AT}.\n\\---\nSeus companheiros adjacentes\\_<sprite name=\"cell_cross\"> ao alvo acionam seu {%AT}."
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {value:v,percent} de son {%AT}.\n\\---\nVos compagnons adjacents\\_<sprite name=\"cell_cross\"> à la cible déclenchent leur {%AT}.",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts {value:v,percent} of their {%AT} on them.\n\\---\nYour companions adjacent\\_<sprite name=\"cell_cross\"> to the target trigger their {%AT}.",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige un {value:v,percent} de su {%AT}.\n\\---\nTus compañeros adyacentes\\_<sprite name=\"cell_cross\"> al objetivo activan su {%AT}.",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis zu {cell:c} in derselben Reihe zu und verursacht bei ihm {value:v,percent} seines {%AT,plural:two} als Schaden.\n\\---\nDeine an das Ziel angrenzenden\\_<sprite name=\"cell_cross\"> Begleiter lösen ihren {%AT} aus.",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige {value:v,percent} de seu {%AT}.\n\\---\nSeus companheiros adjacentes\\_<sprite name=\"cell_cross\"> ao alvo acionam seu {%AT}."
   }
 }

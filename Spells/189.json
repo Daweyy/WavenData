@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 189,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -90,7 +92,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -104,7 +125,7 @@
     "pt": "Cicatrização"
   },
   "description": {
-    "fr": "Soigne votre héros de son {%AT}.",
+    "fr": "Soigne votre héros de {value:v,percent} de son {%AT}.",
     "en": "Heals your hero with their {%power}.",
     "es": "Cura a tu héroe su {%power}.",
     "de": "Heilt deinen Helden um seinen {%power}.",

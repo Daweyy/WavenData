@@ -46,9 +46,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "p",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -100,7 +113,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       2486,
       2487,
@@ -217,10 +232,10 @@
     "pt": "Serafim"
   },
   "description": {
-    "fr": "{%attack} Vole {PA_RESvalue:pa} à la cible.",
-    "en": "{%attack} Steals {PA_RESvalue:pa} from the target.",
-    "es": "{%attack} Roba {PA_RESvalue:pa} al objetivo.",
-    "de": "{%attack}: Entzieht dem Ziel {PA_RESvalue:pa}.",
-    "pt": "{%attack} Rouba {PA_RESvalue:pa} do alvo."
+    "fr": "{%attack} Vole {PA_RESvalue:pa} à la cible.\\v<family>Ecaflip</family>",
+    "en": "{%attack} Steals {PA_RESvalue:pa} from the target.\\v<family>Ecaflip</family>",
+    "es": "{%attack} Roba {PA_RESvalue:pa} al objetivo.\\v<family>Zurcarák</family>",
+    "de": "{%attack} Entzieht dem Ziel {PA_RESvalue:pa}.\\v<family>Ecaflip</family>",
+    "pt": "{%attack} Rouba {PA_RESvalue:pa} do alvo.\\v<family>Ecaflip</family>"
   }
 }

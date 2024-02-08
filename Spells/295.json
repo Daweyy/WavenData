@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 295,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       2218,
@@ -143,18 +145,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "bc",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 11
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 29
-            }
+            "valueInPvM": 13,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",

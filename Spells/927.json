@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 927,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       2116,
@@ -109,33 +111,77 @@
       }
     },
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
-            },
-            "distance": {
-              "type": "Between",
-              "minIncluded": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CrossAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "InLineTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "cellTp",
+                    "value": 3
+                  }
+                }
               },
-              "maxIncluded": {
-                "type": "ConstIntegerValue",
-                "referenceId": "cellCross",
-                "value": 3
+              {
+                "type": "CellValidForCharacterFilter"
               }
-            }
+            ]
           },
-          {
-            "type": "CellValidForCharacterFilter"
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
           }
-        ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "cellCross",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -156,6 +202,11 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "cellTp",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "cellCross",
           "value": 3
         },
@@ -163,18 +214,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 8
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 13
-            }
+            "value": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -206,6 +248,28 @@
           "value": 30
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgTp",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "nbd2",
           "value": 1
@@ -224,10 +288,10 @@
     "pt": "Travessia Congelante"
   },
   "description": {
-    "fr": "Votre héros traverse {cell:cellCross}.\n\\---\nInflige {magicalDamage:dmg} aux adversaires traversés.",
-    "en": "Your hero goes through {cell:cellCross}.\n\\---\nDoes {magicalDamage:dmg} to opponents gone through.",
-    "es": "Tu héroe atraviesa {cell:cellCross}.\n\\---\nInflige {magicalDamage:dmg} a los adversarios atravesados.",
-    "de": "Dein Held überquert {cell:cellCross}.\n\\---\nFügt den überquerten Gegnern {magicalDamage:dmg} zu.",
-    "pt": "Seu herói atravessa {cell:cellCross}.\n\\---\nInflige {magicalDamage:dmg} aos adversários atravessados."
+    "fr": "<if pvm>Votre héros traverse {cell:cellCross}.</if><if pvp>Téléporte votre héros jusqu'à {cell:cellTp} en ligne.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} aux adversaires traversés.</if><if pvp>Inflige {magicalDamage:dmgTp} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.</if>",
+    "en": "<if pvm>Your hero goes through {cell:cellCross}.</if><if pvp>Teleports your hero up to {cell:cellTp} in a line.</if>\n\\---\n<if pvm>Does {magicalDamage:dmg} to opponents gone through.</if><if pvp>Does {magicalDamage:dmgTp} to opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.</if>",
+    "es": "<if pvm>Tu héroe atraviesa {cell:cellCross}.</if><if pvp>Teletransporta a tu héroe hasta {cell:cellTp} en línea.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} a los adversarios atravesados.</if><if pvp>Inflige {magicalDamage:dmgTp} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.</if>",
+    "de": "<if pvm>Dein Held überquert {cell:cellCross}.</if><if pvp>Teleportiert deinen Helden bis zu {cell:cellTp} in gerader Linie.</if>\n\\---\n<if pvm>Verursacht bei überquerten Gegnern {magicalDamage:dmg}.</if><if pvp>Verursacht {magicalDamage:dmgTp} bei an sein Zielfeld angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern.</if>",
+    "pt": "<if pvm>Seu herói atravessa {cell:cellCross}.</if><if pvp>Teletransporta seu herói por até {cell:cellTp} em linha.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} aos adversários atravessados.</if><if pvp>Inflige {magicalDamage:dmgTp} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada.</if>"
   }
 }

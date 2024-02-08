@@ -42,9 +42,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -62,7 +75,7 @@
     "pt": "Suporte Murai"
   },
   "description": {
-    "fr": "Lorsqu’un de vos {#TRAP, plural:other} est déclenché\\_: Soigne les alliés autour\\_<sprite name=\"cell_around\"> de ce {#TRAP} de {value:h,percent} de l’{%AT} de votre héros.",
+    "fr": "Lorsqu'un de vos {#TRAP, plural:other} est déclenché\\_: Soigne les alliés autour\\_<sprite name=\"cell_around\"> de ce {#TRAP} de {value:h,percent} de l'{%AT} de votre héros.",
     "en": "When one of your {#TRAP, plural:other} is triggered: Heals allies around\\_<sprite name=\"cell_around\"> this {#TRAP} {value:h,percent} of your hero's {%AT}.",
     "es": "Cuando se activa una de tus {#TRAP, plural:other}: Cura a los aliados de alrededor\\_<sprite name=\"cell_around\"> de esta {#TRAP} un {value:h,percent} del {%AT} de tu héroe.",
     "de": "Wenn eine deiner {#TRAP, plural:other} ausgelöst wird: Heilt die Verbündeten im Umkreis\\_<sprite name=\"cell_around\"> der {#TRAP} um {value:h,percent} des {%AT,plural:two} deines Helden.",

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 107295,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       477,
@@ -220,7 +222,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -261,10 +263,10 @@
     "pt": "Protocolo: Explosão"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmgA} autour\\_<sprite name=\"cell_around\"> de votre héros ou d'un de vos <b>SINISTROS</b>.\n\\---\n{magicalDamage:dmgB,+} si vous avez au moins {value:nb}\\_<b>SINISTROS</b> en jeu.",
-    "en": "Does {magicalDamage:dmgA} around\\_<sprite name=\"cell_around\"> your hero or one of your <b>SINISTROS</b>.\n\\---\n{magicalDamage:dmgB,+} if you have at least {value:nb}\\_<b>SINISTROS</b> in play.",
-    "es": "Inflige {magicalDamage:dmgA} alrededor\\_<sprite name=\"cell_around\"> de tu héroe o de uno de tus <b>SINISTROS</b>.\n\\---\n{magicalDamage:dmgB,+} si tienes al menos {value:nb}\\_<b>SINISTROS</b> en juego.",
-    "de": "Verursacht {magicalDamage:dmgA} im Umkreis\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner <b>SINISTROS</b>.\n\\---\n{magicalDamage:dmgB,+}, wenn du mindestens {value:nb}\\_<b>SINISTROS</b> im Spiel hast.",
-    "pt": "Inflige {magicalDamage:dmgA} em\\_volta\\_<sprite name=\"cell_around\"> do seu herói ou de um dos seus <b>SINISTROS<b>.\n\\---\n{magicalDamage:dmgB,+} se você tiver {value:nb}\\_</b>SINISTROS</b> ou mais no jogo."
+    "fr": "Inflige {magicalDamage:dmgA} autour\\_<sprite name=\"cell_around\"> de votre héros ou d'un de vos {%SINISTRO,plural:other,value:nb}.\n\\---\n{magicalDamage:dmgB,+} à ce sort si vous avez au moins {value:nb}\\_{%SINISTRO,plural:other,value:nb} en jeu.",
+    "en": "Does {magicalDamage:dmgA} around\\_<sprite name=\"cell_around\"> your hero or one of your {%SINISTRO,plural:other}.\n\\---\n{magicalDamage:dmgB,+} to this spell if you have at least {value:nb}\\_{%SINISTRO,value:nb} in play.",
+    "es": "Inflige {magicalDamage:dmgA} alrededor\\_<sprite name=\"cell_around\"> de tu héroe o de uno de tus {%SINISTRO,plural:other,value:nb}.\n\\---\n{magicalDamage:dmgB,+} a este hechizo si tienes al menos {value:nb}\\_{%SINISTRO,plural:other,value:nb} en juego.",
+    "de": "Verursacht {magicalDamage:dmgA} im Umkreis\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner {%SINISTRO,plural:other,value:nb}.\n\\---\n{magicalDamage:dmgB,+} für diesen Zauber, wenn du mindestens {value:nb}\\_{%SINISTRO,plural:other,value:nb} im Spiel hast.",
+    "pt": "Inflige {magicalDamage:dmgA} em\\_volta\\_<sprite name=\"cell_around\"> do seu herói ou de um dos seus {%SINISTRO,plural:other,value:nb}.\n\\---\n{magicalDamage:dmgB,+} para este feitiço se você tiver {value:nb}\\_{%SINISTRO,plural:other,value:nb} ou mais no jogo."
   }
 }

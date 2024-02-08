@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 137498,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -98,6 +100,10 @@
         "type": "TwoCastTargetDefinition",
         "selector1": {
           "type": "FilteredCharacterSelector",
+          "filters": []
+        },
+        "selector2": {
+          "type": "FilteredCharacterSelector",
           "filters": [
             {
               "type": "SummoningDefinitionFilter",
@@ -105,12 +111,15 @@
               "summonings": [
                 773
               ]
+            },
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
             }
           ]
-        },
-        "selector2": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
         }
       }
     },
@@ -129,6 +138,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 3
@@ -139,7 +166,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 23
+            "value": 16
           },
           "factor": null,
           "buffs": [
@@ -170,10 +197,10 @@
     "pt": "Noturnancia"
   },
   "description": {
-    "fr": "<if pvm>Inflige l’{%AT} de votre héros.</if><if pvp>Inflige {value:v} <b>DÉGÂTS</b>.</if>\n\\---\n<if pvm>Téléporte vos {Summoning:773,plural:other!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible, déclenche leur {%AT} et les téléporte jusqu'à {cell:c}.</if><if pvp>Téléporte un {Summoning:773!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible, déclenche {value:count} fois son {%at} puis se téléporte sur sa case de début de tour.</if>",
-    "en": "<if pvm>Inflicts your hero's {%AT}.</if><if pvp>Does {value:v} <b>DAMAGE</b>.</if>\n\\---\n<if pvm>Teleports your {Summoning:773,plural:other!} to a cell adjacent\\_<sprite name=\"cell_cross\"> to the target, triggers their {%AT} and teleports them up to {cell:c}.</if><if pvp>Teleports one {Summoning:773!} to a cell adjacent\\_<sprite name=\"cell_cross\"> to the target, triggers their {%at} {value:count} {count, plural, one[time] other[times]} then teleports to their start-of-turn position.</if>",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe.</if><if pvp>Inflige {value:v} <b>DAÑOS</b>.</if>\n\\---\n<if pvm>Teletransporta a tus {Summoning:773,plural:other!} a una casilla adyacente\\_<sprite name=\"cell_cross\"> al objetivo, activa su {%AT} y los teletransporta hasta a {cell:c}.</if><if pvp>Teletransporta a un {Summoning:773!} a una casilla adyacente\\_<sprite name=\"cell_cross\"> al objetivo, activa {value:count} {count, plural, one[vez] other[veces]} su {%at} y se teletransporta a su casilla de inicio de turno.</if>",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden als Schaden.</if><if pvp>Verursacht {value:v} <b>SCHADEN</b>.</if>\n\\---\n<if pvm>Teleportiert deine {Summoning:773,plural:other!} auf ein an das Ziel angrenzendes\\_<sprite name=\"cell_cross\"> Feld, löst ihren {%AT} aus und teleportiert sie auf eine Entfernung von {cell:c}.</if><if pvp>Teleportiert einen {Summoning:773!} auf ein an das Ziel angrenzendes\\_<sprite name=\"cell_cross\"> Feld, löst {value:count}-mal seinen {%at} aus und teleportiert ihn bei Rundenbeginn auf sein Startfeld zurück.</if>",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói.</if><if pvp>Inflige {value:v} <b>DANOS</b>.</if>\n\\---\n<if pvm>Teletransporta seus {Summoning:773,plural:other!} para uma célula adjacente\\_<sprite name=\"cell_cross\"> ao alvo, aciona o {%AT} deles e os teletransporta por até {cell:c}.</if><if pvp>Teletransporta um {Summoning:773!} para uma célula adjacente\\_<sprite name=\"cell_cross\"> ao alvo, aciona {value:count} {count, plural, one[vez] other[vezes]} seu {%at}, depois se teletransporta para a célula em que estava no início do turno.</if>"
+    "fr": "<if pvm>Inflige {value:dmg,percent} de l'{%AT} de votre héros.</if><if pvp>Inflige {magicalDamage:v}.</if>\n\\---\n<if pvm>Téléporte vos {Summoning:773,plural:other!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible, déclenche leur {%AT} et les téléporte jusqu'à\\_{cell:c}.</if><if pvp>Téléporte un {Summoning:773!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible, déclenche {value:count} fois son {%at} puis se téléporte sur sa case de début\\_de\\_tour.</if>",
+    "en": "<if pvm>Inflicts {value:dmg,percent} of your hero's {%AT}.</if><if pvp>Does {magicalDamage:v}.</if>\n\\---\n<if pvm>Teleports your {Summoning:773,plural:other!} to a cell adjacent\\_<sprite name=\"cell_cross\"> to the target, triggers their {%AT} and teleports them up to {cell:c}.</if><if pvp>Teleports one {Summoning:773!} to a cell adjacent\\_<sprite name=\"cell_cross\"> to the target, triggers its {%at} {value:count} {count, plural, one[time] other[times]} then teleports it to its start-of-turn position.</if>",
+    "es": "<if pvm>Inflige un {value:dmg,percent} del {%AT} de tu héroe.</if><if pvp>Inflige {magicalDamage:v}.</if>\n\\---\n<if pvm>Teletransporta a tus {Summoning:773,plural:other!} a una casilla adyacente\\_<sprite name=\"cell_cross\"> al objetivo, activa su {%AT} y los teletransporta hasta\\_{cell:c}.</if><if pvp>Teletransporta a un {Summoning:773!} a una casilla adyacente\\_<sprite name=\"cell_cross\"> al objetivo, activa {value:count} {count, plural, one[vez] other[veces]} su {%at} y se teletransporta a su casilla de inicio\\_de\\_turno.</if>",
+    "de": "<if pvm>Verursacht {value:dmg,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht {magicalDamage:v}.</if>\n\\---\n<if pvm>Teleportiert deine {Summoning:773,plural:other!} auf ein an das Ziel angrenzendes\\_<sprite name=\"cell_cross\"> Feld, löst ihren {%AT} aus und teleportiert sie auf eine Entfernung von\\_{cell:c}.</if><if pvp>Teleportiert einen {Summoning:773!} auf ein an das Ziel angrenzendes\\_<sprite name=\"cell_cross\"> Feld, löst {value:count}-mal seinen {%at} aus und teleportiert ihn auf sein Startfeld zurück.</if>",
+    "pt": "<if pvm>Inflige {value:dmg,percent} do {%AT} do seu herói.</if><if pvp>Inflige {magicalDamage:v}.</if>\n\\---\n<if pvm>Teletransporta seus {Summoning:773,plural:other!} para uma célula adjacente\\_<sprite name=\"cell_cross\"> ao alvo, aciona o {%AT} deles e os teletransporta por até\\_{cell:c}.</if><if pvp>Teletransporta um {Summoning:773!} para uma célula adjacente\\_<sprite name=\"cell_cross\"> ao alvo, aciona {value:count} {count, plural, one[vez] other[vezes]} seu {%at}, depois se teletransporta para a célula em que estava no início\\_do\\_turno.</if>"
   }
 }

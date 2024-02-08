@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 840,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       958,
@@ -188,7 +190,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "value": 13
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -229,10 +231,10 @@
     "pt": "Protocolo: Regulação"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+} si vous avez au moins {value:nb}\\_<b>SINISTROS</b> en jeu.",
-    "en": "Does {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+} if you have at least {value:nb}\\_<b>{nb,plural, one[SINISTRO] other[SINISTROS]}</b> in play.",
-    "es": "Inflige {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+} si tienes al menos {value:nb}\\_<b>SINISTROS</b> en juego.",
-    "de": "Verursacht {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+}, wenn du mindestens {value:nb}\\_<b>SINISTROS</b> im Spiel hast.",
-    "pt": "Inflige {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+} se você tiver {value:nb}\\_<b>SINISTROS</b> ou mais no jogo."
+    "fr": "Inflige {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+} si vous avez au moins {%SINISTROvalue:nb,value:nb} en jeu.",
+    "en": "Does {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+} if you have at least {%SINISTROvalue:nb,value:nb} in play.",
+    "es": "Inflige {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+} si tienes al menos {%SINISTROvalue:nb,value:nb} en juego.",
+    "de": "Verursacht {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+}, wenn du mindestens {%SINISTROvalue:nb,value:nb} im Spiel hast.",
+    "pt": "Inflige {magicalDamage:dmgA}.\n\\---\n{magicalDamage:dmgB,+} se você tiver {%SINISTROvalue:nb,value:nb} ou mais no jogo."
   }
 }

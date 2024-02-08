@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 982,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -123,6 +125,24 @@
           "value": -1
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "arm",
           "value": 37
@@ -141,10 +161,10 @@
     "pt": "Virtude"
   },
   "description": {
-    "fr": "Consomme {value:a,abs}\\_{%AURA_SWORD,value:a} de votre héros.\n\\---\n<if pvm>Lui confère son {%AT} en {%AR}.</if><if pvp>Lui confère {value:arm,+} en {%AR}.</if>",
-    "en": "Consumes {value:a,abs}\\_of\\_your hero's {%AURA_SWORD,plural:other}.\n\\---\n<if pvm>Confers their {%AT} on them as {%AR}.</if><if pvp>Confers {value:arm,+} {%AR} on them.</if>",
-    "es": "Consume {value:a,abs}\\_{%AURA_SWORD,value:a} de tu héroe.\n\\---\n<if pvm>Le confiere su {%AT} en {%AR}.</if><if pvp>Le confiere {value:arm,+} de {%AR}.</if>",
-    "de": "Verbraucht {value:a,abs}\\_{%AURA_SWORD,value:a} deines Helden.\n\\---\n<if pvm>Verleiht ihm seinen {%AT} als {%AR}.</if><if pvp>Verleiht ihm {value:arm,+} als {%AR}.</if>",
-    "pt": "Consome {value:a,abs}\\_{%AURA_SWORD,value:a} do seu herói.\n\\---\n<if pvm>Concede seu {%AT} em {%AR}.</if><if pvp>Concede {value:arm,+} em {%AR}.</if>"
+    "fr": "Consomme {value:a,abs}\\_{%AURA_SWORD,value:a} de votre héros.\n\\---\n<if pvm>Lui confère {value:v,percent} de son {%AT} en {%AR}.</if><if pvp>Lui confère {value:arm,+} en {%AR}.</if>",
+    "en": "Consumes {value:a,abs}\\_of\\_your hero's {%AURA_SWORD,plural:other}.\n\\---\n<if pvm>Confers {value:v,percent} of their {%AT} on them as {%AR}.</if><if pvp>Confers {value:arm,+} {%AR} on them.</if>",
+    "es": "Consume {value:a,abs}\\_{%AURA_SWORD,value:a} de tu héroe.\n\\---\n<if pvm>Le confiere un {value:v,percent} de su {%AT} en {%AR}.</if><if pvp>Le confiere {value:arm,+} de {%AR}.</if>",
+    "de": "Verbraucht {value:a,abs}\\_{%AURA_SWORD,value:a} deines Helden.\n\\---\n<if pvm>Verleiht ihm {value:v,percent} seines {%AT,plural:two} als {%AR}.</if><if pvp>Verleiht ihm {value:arm,+} als {%AR}.</if>",
+    "pt": "Consome {value:a,abs}\\_{%AURA_SWORD,value:a} do seu herói.\n\\---\n<if pvm>Concede {value:v,percent} de seu {%AT} em {%AR}.</if><if pvp>Concede {value:arm,+} em {%AR}.</if>"
   }
 }

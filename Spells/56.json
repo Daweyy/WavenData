@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 56,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       1739,
@@ -202,18 +204,14 @@
           "value": 30
         },
         {
-          "type": "PvmOrPvpValue",
+          "type": "ConstIntegerValue",
           "referenceId": "at",
-          "pvm": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 50
-          },
-          "pvp": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 40
-          }
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dr",
+          "value": 40
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -221,7 +219,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 11
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -251,7 +249,12 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "keyword": "DRAIN"
+        }
+      ]
     }
   },
   "name": {
@@ -262,10 +265,10 @@
     "pt": "Cura Incandescente"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:at,percent,+} à un de vos compagnons pour le tour.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{ATvalue:at,percent,+} to one of your companions for the turn.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:at,percent,+} a uno de tus compañeros durante el turno.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{ATvalue:at,percent,+} für einen deiner Begleiter für die Runde.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{ATvalue:at,percent,+} a um de seus companheiros durante o turno."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} à un de vos compagnons pour le tour.</if><if pvp>{DRAINvalue:dr,percent,+} au compagnon ciblé pour le tour.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} to one of your companions for the turn.</if><if pvp>{DRAINvalue:dr,percent,+} to the targeted companion for the turn.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} a uno de tus compañeros durante el turno.</if><if pvp>{DRAINvalue:dr,percent,+} al compañero objetivo durante el turno.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} für einen deiner Begleiter für die Runde.</if><if pvp>{DRAINvalue:dr,percent,+} für den anvisierten Begleiter für die Runde.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} a um de seus companheiros durante o turno.</if><if pvp>{DRAINvalue:dr,percent,+} ao companheiro visado durante o turno.</if>"
   }
 }

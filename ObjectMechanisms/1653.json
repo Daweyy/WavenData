@@ -44,6 +44,11 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 3
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "exPVP",
           "baseValue": {
@@ -71,7 +76,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 11
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -86,17 +91,17 @@
             "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "blPVP",
-          "value": -12
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "EXPLOSION",
+        {
+          "conditions": "<6/>",
+          "type": 22,
+          "id": 213
+        },
         "OBJECTMECHANISM"
       ]
     },
@@ -115,7 +120,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 25,
-      "valueInPvP": 30
+      "valueInPvP": 20
     }
   },
   "name": {

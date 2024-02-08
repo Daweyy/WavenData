@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 3271,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -177,12 +179,52 @@
           "value": 1
         },
         {
-          "type": "CharacterActionValue",
+          "type": "PercentageOfValue",
           "referenceId": "dmg",
-          "entitySelector": {
-            "type": "CasterSpecificCompanionSelector",
-            "companion": 661
+          "percentage": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "v",
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 100
+            },
+            "factor": null,
+            "buffs": [
+              51
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
+          },
+          "from": {
+            "type": "CharacterActionValue",
+            "referenceId": null,
+            "entitySelector": {
+              "type": "CasterSpecificCompanionSelector",
+              "companion": 661
+            }
           }
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -198,10 +240,10 @@
     "pt": "Sopro de Grugaloragran"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de {Companion:661!} sur les {cell:c} devant lui.\n\\---\nPiochez {SPELLCOUNTvalue:draw} par cible touchée.",
-    "en": "Inflicts {Companion:661!}'s {%AT} on the {cell:c} in front of him.\n\\---\nDraw {SPELLCOUNTvalue:draw} per target hit.",
-    "es": "Inflige el {%AT} de {Companion:661!} en {cell:c} delante de él.\n\\---\nSacas {SPELLCOUNTvalue:draw} por objetivo alcanzado.",
-    "de": "Verursacht den {%AT,plural:one} von {Companion:661!} auf den {cell:c} vor sich als Schaden.\n\\---\nZieht {SPELLCOUNTvalue:draw} pro getroffenes Ziel.",
-    "pt": "Inflige o {%AT} de {Companion:661!} às {cell:c} diante dele.\n\\---\nCompre {SPELLCOUNTvalue:draw} por alvo atingido."
+    "fr": "Inflige {value:v,percent} de l'{%AT} de {Companion:661!} sur les {cell:c} devant lui.\n\\---\nPiochez {SPELLCOUNTvalue:draw} par cible touchée.",
+    "en": "Inflicts {value:v,percent} of {Companion:661!}'s {%AT} on the {cell:c} in front of him.\n\\---\nDraw {SPELLCOUNTvalue:draw} per target hit.",
+    "es": "Inflige un {value:v,percent} del {%AT} de {Companion:661!} en {cell:c} delante de él.\n\\---\nSacas {SPELLCOUNTvalue:draw} por objetivo alcanzado.",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} von {Companion:661!} auf den {cell:c} vor sich als Schaden.\n\\---\nZieht {SPELLCOUNTvalue:draw} pro getroffenem Ziel.",
+    "pt": "Inflige {value:v,percent} do {%AT} de {Companion:661!} às {cell:c} à sua frente.\n\\---\nCompre {SPELLCOUNTvalue:draw} por alvo atingido."
   }
 }

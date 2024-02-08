@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 1195,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       3458,
@@ -145,7 +147,7 @@
             "from": {
               "type": "ConstIntegerValue",
               "referenceId": null,
-              "value": 19
+              "value": 15
             }
           },
           "factor": {
@@ -227,9 +229,10 @@
               ]
             },
             "from": {
-              "type": "ConstIntegerValue",
+              "type": "PvmOrPvpConstIntegerValue",
               "referenceId": null,
-              "value": 11
+              "valueInPvM": 8,
+              "valueInPvP": 11
             }
           },
           "factor": {
@@ -276,7 +279,7 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}) : Déclenche {value:re} fois {peat:pt}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Jauges générées : {value:x}</rem>",
-    "en": "Does {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Triggers {peat:pt} {value:re} {re, plural, one[time] other[times]}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}</rem>",
+    "en": "Does {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Triggers {peat:pt} {value:re} {re, plural, one[time] other[times]}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}.</rem>",
     "es": "Inflige {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Activa {value:re} {re, plural, one[vez] other[veces]} {peat:pt}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Indicadores generados: {value:x}</rem>",
     "de": "Verursacht {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Löst {value:re}-mal {peat:pt} aus.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
     "pt": "Inflige {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Aciona {peat:pt} {value:re} {re, plural, one[vez] other[vezes]}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Cargas geradas: {value:x}</rem>"

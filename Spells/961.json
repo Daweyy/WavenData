@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 961,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -105,9 +107,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -134,7 +149,7 @@
     "pt": "Retorno das Chamas"
   },
   "description": {
-    "fr": "Inflige {value:d,percent} l’{%AT} de votre héros à tous les adversaires.\n\\---\nLorsque vous déclenchez {#CHRONO}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {#CHRONO} : {value:Lv}</rem>",
+    "fr": "Inflige {value:d,percent} l'{%AT} de votre héros à tous les adversaires.\n\\---\nLorsque vous déclenchez {#CHRONO}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {#CHRONO} : {value:Lv}</rem>",
     "en": "Inflicts {value:d,percent} of your hero's {%AT} on all opponents.\n\\---\nWhen you trigger {#CHRONO}: \\v{value:pc,percent,+} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{#CHRONO} Count: {value:Lv}.</rem>",
     "es": "Inflige un {value:d,percent} del {%AT} de tu héroe a todos los adversarios.\n\\---\nCuando activas {#CHRONO}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {#CHRONO}: {value:Lv}</rem>",
     "de": "Fügt allen Gegnern {value:d,percent} des {%AT,plural:two} deines Helden als Schaden zu.\n\\---\nWenn du {#CHRONO} auslöst:\\v {value:pc,percent,+} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem>{#CHRONO}-Zähler: {value:Lv}</rem>",

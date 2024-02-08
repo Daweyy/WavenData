@@ -46,6 +46,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 200
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "hPVP",
           "value": 20
@@ -95,7 +113,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       2336,
       2334,
@@ -221,10 +241,10 @@
     "pt": "Herói Mártir"
   },
   "description": {
-    "fr": "{%death} <if pvm>Soigne vos personnages du double de son\\_{%at}.</if><if pvp>Soigne vos personnages de {PVvalue:hPVP}</if>",
-    "en": "{%death} <if pvm>Heals your characters double his\\_{%at}.</if><if pvp>Heals your characters {PVvalue:hPVP}.</if>",
-    "es": "{%death} <if pvm>Cura a tus personajes el doble de su\\_{%at}.</if><if pvp>Cura a tus personajes {PVvalue:hPVP}</if>",
-    "de": "{%death} <if pvm>Heilt deine Charaktere um das Doppelte seines\\_{%at,plural:two}.</if><if pvp>Heilt deine Charaktere um {PVvalue:hPVP}.</if>",
-    "pt": "{%death} <if pvm>Cura seus personagens do dobro do seu\\_{%at}.</if><if pvp>Cura {PVvalue:hPVP} dos seus personagens.</if>"
+    "fr": "{%death} <if pvm>Soigne vos personnages de {value:v,percent} de son\\_{%at}.</if><if pvp>Soigne vos personnages de {PVvalue:hPVP}.</if>",
+    "en": "{%death} <if pvm>Heals your characters {value:v,percent} of his\\_{%at}.</if><if pvp>Heals your characters {PVvalue:hPVP}.</if>",
+    "es": "{%death} <if pvm>Cura a tus personajes un {value:v,percent} de su\\_{%at}.</if><if pvp>Cura a tus personajes {PVvalue:hPVP}.</if>",
+    "de": "{%death} <if pvm>Heilt deine Charaktere um {value:v,percent} seines\\_{%at,plural:two}.</if><if pvp>Heilt deine Charaktere um {PVvalue:hPVP}.</if>",
+    "pt": "{%death} <if pvm>Cura seus personagens de {value:v,percent} do seu\\_{%at}.</if><if pvp>Cura {PVvalue:hPVP} dos seus personagens.</if>"
   }
 }

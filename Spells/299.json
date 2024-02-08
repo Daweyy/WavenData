@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 299,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -112,6 +114,24 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -142,10 +162,10 @@
     "pt": "Cura Curativa"
   },
   "description": {
-    "fr": "<if pvm>Soigne un allié de l'{%AT} de votre héros.</if><if pvp>Soigne un allié de {PVvalue:v}.</if>",
-    "en": "<if pvm>Heals an ally with your hero's {%AT}.</if><if pvp>Heals an ally {PVvalue:v}.</if>",
-    "es": "<if pvm>Cura a un aliado el {%AT} de tu héroe.</if><if pvp>Cura a un aliado {PVvalue:v}.</if>",
-    "de": "<if pvm>Heilt einen Verbündeten in Höhe des {%AT,plural:two} deines Helden.</if><if pvp>Heilt einen Verbündeten um {PVvalue:v}.</if>",
-    "pt": "<if pvm>Cura um aliado do {%AT} de seu herói.</if><if pvp>Cura {PVvalue:v} de um aliado.</if>"
+    "fr": "<if pvm>Soigne un allié de {value:heal,percent} l'{%AT} de votre héros.</if><if pvp>Soigne un allié de {PVvalue:v}.</if>",
+    "en": "<if pvm>Heals an ally {value:heal,percent} of your hero's {%AT}.</if><if pvp>Heals an ally {PVvalue:v}.</if>",
+    "es": "<if pvm>Cura a un aliado un {value:heal,percent} del {%AT} de tu héroe.</if><if pvp>Cura a un aliado {PVvalue:v}.</if>",
+    "de": "<if pvm>Heilt einen Verbündeten um {value:heal,percent} des {%AT,plural:two} deines Helden.</if><if pvp>Heilt einen Verbündeten um {PVvalue:v}.</if>",
+    "pt": "<if pvm>Cura um aliado de {value:heal,percent} do {%AT} de seu herói.</if><if pvp>Cura {PVvalue:v} de um aliado.</if>"
   }
 }

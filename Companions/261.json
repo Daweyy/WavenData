@@ -42,7 +42,31 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "vPVP",
+          "value": 15
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -89,7 +113,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       2459,
       2461,
@@ -206,10 +232,10 @@
     "pt": "Kerubim"
   },
   "description": {
-    "fr": "{%attack} Gagne son {%AT} en {%AR}.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "en": "{%attack} Gains his {%AT} as {%AR}.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "es": "{%attack} Gana su {%AT} en {%AR}.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "de": "{%attack} Erhält seinen {%AT,plural:one} als {%AR}.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "pt": "{%attack} Ganha seu {%AT} em {%AR}.\\v<family>{%Family_JorisComrades_Name}</family>"
+    "fr": "{%attack} <if pvm>Gagne {value:v,percent} de son {%AT} en {%AR}.</if><if pvp>{ARvalue:vPVP,+}.</if>\\v<family>{%Family_JorisComrades_Name}</family>\\v<family>Ecaflip</family>",
+    "en": "{%attack} <if pvm>Gains {value:v,percent} of his {%AT} as {%AR}.</if><if pvp>{ARvalue:vPVP,+}.</if>\\v<family>{%Family_JorisComrades_Name}</family>\\v<family>Ecaflip</family>",
+    "es": "{%attack} <if pvm>Gana un {value:v,percent} de su {%AT} en {%AR}.</if><if pvp>{ARvalue:vPVP,+}.</if>\\v<family>{%Family_JorisComrades_Name}</family>\\v<family>Zurcarák</family>",
+    "de": "{%attack}<if pvm> Erhält {value:v,percent} seines {%AT,plural:two} als {%AR}.</if><if pvp>{ARvalue:vPVP,+}.</if>\\v<family>{%Family_JorisComrades_Name}</family>\\v<family>Ecaflip</family>",
+    "pt": "{%attack} <if pvm>Ganha {value:v,percent} de seu {%AT} em {%AR}.</if><if pvp>{ARvalue:vPVP,+}.</if>\\v<family>{%Family_JorisComrades_Name}</family>\\v<family>Ecaflip</family>"
   }
 }

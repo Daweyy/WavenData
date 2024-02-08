@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 240651,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -148,6 +150,24 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -190,10 +210,10 @@
     "pt": "Empurrão Shugen"
   },
   "description": {
-    "fr": "<if pvm>Inflige l’{%AT} de votre héros.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}\\_: {#PUSH} de {cell:c}.",
-    "en": "<if pvm>Inflicts your hero's {%AT}.</if><if pvp>Does {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}: {#PUSH} {cell:c}.",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}: {#PUSH} {cell:c}.",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}: {#PUSH} um {cell:c}.",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}: {#PUSH} por {cell:c}."
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}\\_: {#PUSH} de {cell:c}.",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT}.</if><if pvp>Does {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}: {#PUSH} {cell:c}.",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}: {#PUSH} {cell:c}.",
+    "de": "<if pvm>Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}: {#PUSH} um {cell:c}.",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n{#TRAPPER}: {#PUSH} por {cell:c}."
   }
 }

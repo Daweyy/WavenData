@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 834,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -172,30 +174,70 @@
           "value": 7
         },
         {
-          "type": "CharacterActionValue",
+          "type": "PercentageOfValue",
           "referenceId": "dmg",
-          "entitySelector": {
-            "type": "RandomFilteredEntitySelector",
-            "from": {
-              "type": "AllBoardPresencesSelector"
+          "percentage": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "v",
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 100
             },
-            "filters": [
-              {
-                "type": "CompanionDefinitionFilter",
-                "condition": 1,
-                "companions": [
-                  176
-                ]
+            "factor": null,
+            "buffs": [
+              51
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
+          },
+          "from": {
+            "type": "CharacterActionValue",
+            "referenceId": null,
+            "entitySelector": {
+              "type": "RandomFilteredEntitySelector",
+              "from": {
+                "type": "AllBoardPresencesSelector"
               },
-              {
-                "type": "OwnerFilter",
-                "isIdentical": true,
-                "reference": {
-                  "type": "CasterHeroSelector"
+              "filters": [
+                {
+                  "type": "CompanionDefinitionFilter",
+                  "condition": 1,
+                  "companions": [
+                    176
+                  ]
+                },
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterHeroSelector"
+                  }
                 }
-              }
-            ]
+              ]
+            }
           }
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -211,10 +253,10 @@
     "pt": "Sopro de Adamai"
   },
   "description": {
-    "fr": "Inflige l'{%AT} d'{Companion:176!} devant lui.\n\\---\nLui confère autant d'{%ar} que de dégâts infligés.",
-    "en": "Inflicts {Companion:176!}'s {%AT} in front of him.\n\\---\nConfers as much {%ar} on him as damage done.",
-    "es": "Inflige el {%AT} de {Companion:176!} delante de él.\n\\---\nLe confiere tanta {%ar} como daños infligidos.",
-    "de": "Verursacht den {%AT} von {Companion:176!} vor ihm.\n\\---\nVerleiht ihm {%ar} entsprechend des verursachten Schadens.",
-    "pt": "Inflige o {%AT} de {Companion:176!} à sua frente.\n\\---\nEle recebe o total de danos infligidos em {%ar}."
+    "fr": "Inflige {value:v,percent} de l'{%AT} d'{Companion:176!} devant lui.\n\\---\nIl gagne son {%AT} en {%ar} pour chaque adversaire touché.",
+    "en": "Inflicts {value:v,percent} of {Companion:176!}'s {%AT} in front of him.\n\\---\nHe gains his {%AT} as {%ar} for each opponent hit.",
+    "es": "Inflige un {value:v,percent} del {%AT} de {Companion:176!} delante de él.\n\\---\nGana su {%AT} en {%ar} por cada adversario alcanzado.",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} von {Companion:176!} vor ihm als Schaden.\n\\---\nEr erhält seinen {%AT} als {%ar} für jeden getroffenen Gegner.",
+    "pt": "Inflige {value:v,percent} do {%AT} de {Companion:176!} à sua frente.\n\\---\nEle ganha seu {%AT} em {%ar} por adversário atingido."
   }
 }

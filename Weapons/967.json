@@ -78,9 +78,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "s",
-          "value": 40
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 40
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -104,9 +117,22 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "a",
-          "value": 20
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 20
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -160,7 +186,9 @@
       "reference": 10
     },
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       82,
       1039,
@@ -188,14 +216,14 @@
     ],
     "presetSpellIndexForTutorialCompanionElementReference": 2,
     "presetSpellIds": [
-      218404,
-      217935,
+      105,
+      187,
       459,
-      609,
+      218404,
       989,
       666,
-      187,
-      152,
+      186194,
+      217935,
       460
     ]
   },

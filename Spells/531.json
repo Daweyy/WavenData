@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 531,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -150,6 +152,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "dmg",
           "value": 20
@@ -175,10 +195,10 @@
     "pt": "Empurrão Kasai"
   },
   "description": {
-    "fr": "<if pvm>Inflige l’{%AT} de votre héros et {#PUSH} de {cell:c} pour chaque {%AURA_SWORD} qu’il possède.</if><if pvp>Inflige {magicalDamage:dmg} et {#PUSH} de {cell:c} pour chaque {%AURA_SWORD} que votre héros possède.</if> ",
-    "en": "<if pvm>Inflicts your hero's {%AT} and {#PUSH} {cell:c} for each {%AURA_SWORD} that they have.</if><if pvp>Does {magicalDamage:dmg} and {#PUSH} {cell:c} for each {%AURA_SWORD} that your hero has.</if> ",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe y {#PUSH} {cell:c} por cada {%AURA_SWORD} que tenga.</if><if pvp>Inflige {magicalDamage:dmg} y {#PUSH} {cell:c} por cada {%AURA_SWORD} que tenga tu héroe.</if> ",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden als Schaden und {#PUSH} um {cell:c} für jede {%AURA_SWORD}, die er besitzt, zurück.</if><if pvp>Verursacht {magicalDamage:dmg} und {#PUSH} um {cell:c} für jede {%AURA_SWORD}, die dein Held besitzt.</if> ",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói e {#PUSH} por {cell:c} por cada {%AURA_SWORD} que ele possuir.</if><if pvp>Inflige {magicalDamage:dmg} e {#PUSH} por {cell:c} por cada {%AURA_SWORD} que seu herói possuir.</if>"
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros et {#PUSH} de {cell:c} pour chaque {%AURA_SWORD} qu'il possède.</if><if pvp>Inflige {magicalDamage:dmg} et {#PUSH} de {cell:c} pour chaque {%AURA_SWORD} que votre héros possède.</if> ",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT} and {#PUSH} {cell:c} for each {%AURA_SWORD} that they have.</if><if pvp>Does {magicalDamage:dmg} and {#PUSH} {cell:c} for each {%AURA_SWORD} that your hero has.</if> ",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe y {#PUSH} {cell:c} por cada {%AURA_SWORD} que tenga.</if><if pvp>Inflige {magicalDamage:dmg} y {#PUSH} {cell:c} por cada {%AURA_SWORD} que tenga tu héroe.</if> ",
+    "de": "<if pvm>Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden und {#PUSH} um {cell:c} für jede {%AURA_SWORD}, die er besitzt.</if><if pvp>Verursacht {magicalDamage:dmg} und {#PUSH} um {cell:c} für jede {%AURA_SWORD}, die dein Held besitzt.</if> ",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói e {#PUSH} por {cell:c} por {%AURA_SWORD} que ele possuir.</if><if pvp>Inflige {magicalDamage:dmg} e {#PUSH} por {cell:c} por {%AURA_SWORD} que seu herói possuir.</if>"
   }
 }

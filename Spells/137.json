@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 137,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       1237,
@@ -155,50 +157,59 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "SumValue",
-            "referenceId": "",
-            "valuesToSum": [
-              {
-                "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpValue",
+            "referenceId": null,
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 14
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 13
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
                 "referenceId": "",
-                "pvm": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": null,
-                  "value": 14
-                },
-                "pvp": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 13
-                }
-              },
-              {
-                "type": "ConditionalValue",
-                "referenceId": "",
-                "condition": {
-                  "type": "SupportCondition"
-                },
-                "ifTrue": {
-                  "type": "PvmOrPvpValue",
-                  "referenceId": "Supp",
-                  "pvm": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": null,
-                    "value": 6
-                  },
-                  "pvp": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "",
-                    "value": 9
-                  }
-                },
-                "ifFalse": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 0
-                }
+                "value": 30
               }
-            ]
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "Supp",
+          "baseValue": {
+            "type": "PvmOrPvpValue",
+            "referenceId": "",
+            "pvm": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 6
+            },
+            "pvp": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 9
+            }
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -223,20 +234,6 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
-        },
-        {
-          "type": "PvmOrPvpValue",
-          "referenceId": "Supp",
-          "pvm": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 6
-          },
-          "pvp": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 9
-          }
         },
         {
           "type": "ConstIntegerValue",

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 761,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       3347,
@@ -106,70 +108,70 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "PercentageOfValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
-          "percentage": {
-            "type": "SumValue",
-            "referenceId": "",
-            "valuesToSum": [
-              {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 100
-              },
-              {
-                "type": "MultValue",
-                "referenceId": "",
-                "valuesToMult": [
-                  {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "p",
-                    "value": 5
-                  },
-                  {
-                    "type": "EntityCaracValue",
-                    "referenceId": "x",
-                    "entitySelector": {
-                      "type": "CasterSelector"
-                    },
-                    "carac": 20
-                  }
-                ]
-              }
-            ]
-          },
-          "from": {
-            "type": "BuffedScalingDynamicValue",
+          "baseValue": {
+            "type": "PercentageOfValue",
             "referenceId": null,
-            "baseValue": {
-              "type": "ConstIntegerValue",
+            "percentage": {
+              "type": "SumValue",
               "referenceId": "",
-              "value": 10
-            },
-            "factor": {
-              "type": "ReferenceScalingFactor",
-              "reference": 12
-            },
-            "buffs": [
-              22,
-              51
-            ],
-            "skillBuffs": [
-              {
-                "type": "SkillBuff",
-                "skillId": 118841,
-                "percentBuff": {
+              "valuesToSum": [
+                {
                   "type": "ConstIntegerValue",
                   "referenceId": "",
-                  "value": 30
+                  "value": 100
+                },
+                {
+                  "type": "MultValue",
+                  "referenceId": "",
+                  "valuesToMult": [
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "p",
+                      "value": 5
+                    },
+                    {
+                      "type": "EntityCaracValue",
+                      "referenceId": "x",
+                      "entitySelector": {
+                        "type": "CasterSelector"
+                      },
+                      "carac": 20
+                    }
+                  ]
                 }
-              }
-            ],
-            "from": {
-              "type": "CasterSelector"
+              ]
             },
-            "addInsteadOfMultiply": false
-          }
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 8
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -212,7 +214,7 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}) : {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Jauges générées : {value:x}</rem>",
-    "en": "Does {magicalDamage:dmg} damage.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}</rem>",
+    "en": "Does {magicalDamage:dmg} damage.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}.</rem>",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Indicadores generados: {value:x}</rem>",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
     "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Cargas geradas: {value:x}</rem>"

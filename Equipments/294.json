@@ -46,7 +46,9 @@
     "type": "EquipmentDefinition",
     "id": 294,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 1,
     "unlockableSkillIds": [
       1410,
@@ -85,6 +87,24 @@
           "type": "ConstIntegerValue",
           "referenceId": "boost",
           "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -121,11 +141,11 @@
     "pt": "Anel Pinel"
   },
   "description": {
-    "fr": "{#COLLISION}\\_: Soigne votre héros d'autant de {%PV} que de dégâts infligés.\n\\---\n<rem>Limité à {value:t} fois par tour.</rem>",
-    "en": "{#COLLISION}: Heals your hero as many {%PV} as damage done.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]} per turn.</rem>",
-    "es": "{#COLLISION}: Cura a tu héroe tantos {%PV} como daños infligidos.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</rem>",
-    "de": "{#COLLISION}: Heilt deinen Helden um {%PV} in Höhe des zugefügten Schadens.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</rem>",
-    "pt": "{#COLLISION}: Cura seu herói de uma quantidade de {%PV} equivalente aos danos infligidos.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</rem>"
+    "fr": "{#COLLISION}\\_: Soigne votre héros de {value:v,percent} des dégâts infligés.\n\\---\n<rem>Limité à {value:t} fois par tour.</rem>",
+    "en": "{#COLLISION}: Heals your hero {value:v,percent} of damage done.\n\\---\n<rem>Limit: {value:t} {t, plural, one[time] other[times]}per turn.</rem>",
+    "es": "{#COLLISION}: Cura a tu héroe un {value:v,percent} de los daños infligidos.\n\\---\n<rem>Limitado a {value:t} {t, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "{#COLLISION}: Heilt deinen Helden um {value:v,percent} des zugefügten Schadens.\n\\---\n<rem>Auf {value:t}-mal pro Runde begrenzt.</rem>",
+    "pt": "{#COLLISION}: Cura seu herói de {value:v,percent} dos danos infligidos.\n\\---\n<rem>Limite de {value:t} {t, plural, one[vez] other[vezes]} por turno.</rem>"
   },
   "bgDescription": {
     "fr": "Cet anneau a déjà coupé de nombreux doigts. Prenez garde aux vôtres.",

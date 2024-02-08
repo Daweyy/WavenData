@@ -49,7 +49,9 @@
     "type": "SpellDefinition",
     "id": 200,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -136,9 +138,22 @@
           "type": "PercentageOfValue",
           "referenceId": "heal",
           "percentage": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 100
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "v",
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 100
+            },
+            "factor": null,
+            "buffs": [
+              48
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
           },
           "from": {
             "type": "CharacterActionValue",
@@ -147,6 +162,24 @@
               "type": "CasterHeroSelector"
             }
           }
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -164,10 +197,10 @@
     "pt": "Emergência"
   },
   "description": {
-    "fr": "Téléporte un allié jusqu'à {cell:c}.\n{#SUPPORT} : lui confère l'{%AT} de votre héros en {%AR}.",
-    "en": "Teleports an ally up to {cell:c}.\n{#SUPPORT}: Confers your hero's {%AT} on them as {%AR}.",
-    "es": "Teletransporta a un aliado hasta {cell:c}.\n{#SUPPORT}: le confiere el {%AT} de tu héroe en {%AR}.",
-    "de": "Teleportiert einen Verbündeten bis zu {cell:c}.\n{#SUPPORT}: Gewährt ihm den {%AT,plural:one} deines Helden als {%AR}.",
-    "pt": "Teletransporta um aliado por até {cell:c}.\n{#SUPPORT}: concede a ele o {%AT} do seu herói em {%AR}."
+    "fr": "Téléporte un allié jusqu'à {cell:c}.\n{#SUPPORT} : lui confère {value:v,percent} de l'{%AT} de votre héros en {%AR}.",
+    "en": "Teleports an ally up to {cell:c}.\n{#SUPPORT}: Confers {value:v,percent} of your hero's {%AT} on them as {%AR}.",
+    "es": "Teletransporta a un aliado hasta {cell:c}.\n{#SUPPORT}: le confiere un {value:v,percent} del {%AT} de tu héroe en {%AR}.",
+    "de": "Teleportiert einen Verbündeten bis zu {cell:c}.\n{#SUPPORT}: Verleiht ihm {value:v,percent} des {%AT,plural:two} deines Helden als {%AR}.",
+    "pt": "Teletransporta um aliado por até {cell:c}.\n{#SUPPORT}: concede a ele {value:v,percent} do {%AT} do seu herói em {%AR}."
   }
 }

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 230,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -72,35 +74,29 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "TwoCastTargetDefinition",
-      "selector1": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "CellValidForCharacterFilter"
-          }
-        ]
-      },
-      "selector2": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "CellValidForCharacterFilter"
-          },
-          {
-            "type": "NotAPreviousCastTargetFilter",
-            "castTargetIndex": 0
-          }
-        ]
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CenterMapCoordSelector"
       }
     },
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "deux",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 467
+        }
+      ]
     }
   },
   "name": {
@@ -111,10 +107,10 @@
     "pt": "{Spell:170173}"
   },
   "description": {
-    "fr": "Invoque 2 {Summoning:467, plural:other!}.",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "fr": "Invoque {value:deux}\\_{Summoning:467,value:deux,plural:other!}.",
+    "en": "Summons {value:deux}\\_{Summoning:467,value:deux,plural:other!}.",
+    "es": "Invoca {value:deux}\\_{Summoning:467,value:deux,plural:other!}.",
+    "de": "Beschwört {value:deux}\\_{Summoning:467,value:deux,plural:other!}.",
+    "pt": "Invoca {value:deux}\\_{Summoning:467,value:deux,plural:other!}."
   }
 }

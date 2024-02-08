@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 234742,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -101,6 +103,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
           "value": 40
@@ -125,10 +145,10 @@
     "pt": "Tiro Paciente"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à la cible.\n\\---\nLorsque vous déclenchez {#COMBO}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {#COMBO}\\_: {value:Lv}</rem>",
-    "en": "Inflicts your hero's {%AT} on the target.\n\\---\nWhen you trigger {#COMBO}: \\v{value:pc,percent,+} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{#COMBO} Count: {value:Lv}.</rem>",
-    "es": "Inflige el {%AT} de tu héroe al objetivo.\n\\---\nCuando activas {#COMBO}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {#COMBO}: {value:Lv}</rem>",
-    "de": "Fügt dem Ziel den {%AT,plural:one} deines Helden als Schaden zu.\n\\---\nWenn du eine {#COMBO} auslöst:\\v {value:pc,percent,+} auf den <b>SCHADEN</b> dieses Zaubers.\n\\---\n<rem>{#COMBO}-Zähler: {value:Lv}</rem>",
-    "pt": "Inflige o {%AT} do seu herói ao alvo.\n\\---\nQuando você aciona {#COMBO}:\\v {value:pc,percent,+} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {#COMBO}: {value:Lv}</rem>"
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros à la cible.\n\\---\nLorsque vous déclenchez {#COMBO}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {#COMBO}\\_: {value:Lv}</rem>",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT} on the target.\n\\---\nWhen you trigger {#COMBO}: \\v{value:pc,percent,+} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{#COMBO} Count: {value:Lv}.</rem>",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe al objetivo.\n\\---\nCuando activas {#COMBO}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {#COMBO}: {value:Lv}</rem>",
+    "de": "Verursacht beim Ziel {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\nWenn du eine {#COMBO} auslöst:\\v {value:pc,percent,+} <b>SCHADEN</b> dieses Zaubers.\n\\---\n<rem>{#COMBO}-Zähler: {value:Lv}</rem>",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói ao alvo.\n\\---\nQuando você aciona {#COMBO}:\\v {value:pc,percent,+} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {#COMBO}: {value:Lv}</rem>"
   }
 }

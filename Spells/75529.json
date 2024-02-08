@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 75529,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -101,6 +103,13 @@
               }
             },
             "maxRange": null
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFlagFilter",
+              "flag": 1
+            }
           }
         ]
       },

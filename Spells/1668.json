@@ -1,0 +1,133 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1668",
+  "m_id": 1668,
+  "m_displayName": "SEASON - LOKUS - Portail Eliatrope",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 2020082812,
+    "b": 53322916,
+    "c": -1782815575,
+    "d": -1056370840,
+    "e": 39810897
+  },
+  "m_i18nDescriptionId": {
+    "a": 2020082812,
+    "b": 53322916,
+    "c": -1782815575,
+    "d": -1056370840,
+    "e": 1959472825
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9742dc3869f874c43bcae839ff43f76d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1668,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 5
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 6,
+          "id": 2
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Portail Eliatrope",
+    "en": "Eliatrope Portal",
+    "es": "Portal Selatrop",
+    "de": "Eliatrop-Portal",
+    "pt": "Portal Eliatrope"
+  },
+  "description": {
+    "fr": "Pose un {FloorMechanism:2} jusqu'à {cell:c} de votre héros.\n\\---\nCe sort revient dans votre main.",
+    "en": "Places one {FloorMechanism:2} up to {cell:c} from your hero.\n\\---\nThis spell returns to your hand.",
+    "es": "Pone un {FloorMechanism:2} hasta a {cell:c} de tu héroe.\n\\---\nEste hechizo vuelve a tu mano.",
+    "de": "Platziert ein\\_{FloorMechanism:2} bis zu {cell:c} von deinem Helden entfernt.\n\\---\nDieser Zauber geht zurück auf deine Hand.",
+    "pt": "Coloca um {FloorMechanism:2} a até {cell:c} do seu herói.\n\\---\nEsse feitiço volta para a sua mão."
+  }
+}

@@ -46,7 +46,9 @@
     "type": "EquipmentDefinition",
     "id": 157,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 2,
     "unlockableSkillIds": [
       730,
@@ -68,9 +70,22 @@
           "referenceId": "arA",
           "valuesToSum": [
             {
-              "type": "ConstIntegerValue",
+              "type": "BuffedScalingDynamicValue",
               "referenceId": null,
-              "value": 25
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 25
+              },
+              "factor": null,
+              "buffs": [
+                48
+              ],
+              "skillBuffs": [],
+              "from": {
+                "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+              },
+              "addInsteadOfMultiply": false
             },
             {
               "type": "ConditionalValue",

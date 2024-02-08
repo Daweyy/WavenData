@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 394,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -103,6 +105,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "EntityCaracValue",
           "referenceId": "g",
           "entitySelector": {
@@ -124,6 +144,7 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        "RESURRECTABLE",
         "JAUGE"
       ]
     }
@@ -136,10 +157,10 @@
     "pt": "Convocação do Lanceiro"
   },
   "description": {
-    "fr": "Inflige l’ATTAQUE de votre héros.\n\\---\n{#Jauge}\\_({value:v})\\_: Confère Réinvocable à un compagnon mort aléatoire.\\v\n{#Jauge}\\_({value:b})\\_: Confère Réinvocable à un compagnon mort aléatoire supplémentaire.\n\\---\n<rem>Jauges générées\\_: {value:g}</rem>",
-    "en": "Inflicts your hero's ATTACK.\n\\---\n{#Jauge}\\_({value:v}): Confers Resummonable on a dead companion at random.\\v\n{#Jauge}\\_({value:b}): Confers Resummonable on an additional dead companion at random.\n\\---\n<rem>Gauges generated: {value:g}</rem>",
-    "es": "Inflige el ATAQUE de tu héroe.\n\\---\n{#Jauge}\\_({value:v}): Confiere Reinvocable a un compañero muerto aleatorio.\\v\n{#Jauge}\\_({value:b}): Confiere Reinvocable a un compañero muerto aleatorio adicional.\n\\---\n<rem>Indicadores generados: {value:g}</rem>",
-    "de": "Verursacht den ANGRIFF deines Helden als Schaden.\n\\---\n{#Jauge}\\_({value:v}): Gewährt einem zufälligen toten Begleiter „Erneut einsetzbar“.\\v\n{#Jauge}\\_({value:b}): Gewährt einem weiteren zufälligen toten Begleiter „Erneut einsetzbar“.\n\\---\n<rem>Generierte Elementarpunkte: {value:g}</rem>",
-    "pt": "Inflige o ATAQUE do seu herói.\n\\---\n{#Jauge}\\_({value:v}): Concede Reinvocável a um companheiro morto aleatório.\\v\n{#Jauge}\\_({value:b}): Concede Reinvocável a um companheiro morto aleatório adicional.\n\\---\n<rem>Cargas geradas: {value:g}</rem>"
+    "fr": "Inflige {value:dmg,percent} de l'ATTAQUE de votre héros.\n\\---\n{#Jauge}\\_({value:v})\\_: Confère {#RESURRECTABLE} à un compagnon mort aléatoire.\\v\n{#Jauge}\\_({value:b})\\_: Confère {#RESURRECTABLE} à un compagnon mort aléatoire supplémentaire.\n\\---\n<rem>Jauges générées\\_: {value:g}</rem>",
+    "en": "Inflicts {value:dmg,percent} of your hero's ATTACK.\n\\---\n{#Jauge}\\_({value:v}): Confers {#RESURRECTABLE} on a dead companion at random.\\v\n{#Jauge}\\_({value:b}): Confers {#RESURRECTABLE} on an additional dead companion at random.\n\\---\n<rem>Gauges generated: {value:g}.</rem>",
+    "es": "Inflige un {value:dmg,percent} del ATAQUE de tu héroe.\n\\---\n{#Jauge}\\_({value:v}): Confiere {#RESURRECTABLE} a un compañero muerto aleatorio.\\v\n{#Jauge}\\_({value:b}): Confiere {#RESURRECTABLE} a un compañero muerto aleatorio adicional.\n\\---\n<rem>Indicadores generados: {value:g}</rem>",
+    "de": "Verursacht {value:dmg,percent} des ANGRIFFS deines Helden als Schaden.\n\\---\n{#Jauge}\\_({value:v}): Verleiht einem zufälligen toten Begleiter {#RESURRECTABLE}.\\v\n{#Jauge}\\_({value:b}): Verleiht einem weiteren zufälligen toten Begleiter {#RESURRECTABLE}.\n\\---\n<rem>Generierte Elementarpunkte: {value:g}</rem>",
+    "pt": "Inflige {value:dmg,percent} do ATAQUE do seu herói.\n\\---\n{#Jauge}\\_({value:v}): Concede {#RESURRECTABLE} a um companheiro morto aleatório.\\v\n{#Jauge}\\_({value:b}): Concede {#RESURRECTABLE} a um companheiro morto aleatório adicional.\n\\---\n<rem>Cargas geradas: {value:g}</rem>"
   }
 }

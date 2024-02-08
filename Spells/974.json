@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 974,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       2429,
@@ -121,9 +123,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 29
+            "valueInPvM": 29,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",

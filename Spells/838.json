@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 838,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -159,9 +161,22 @@
           "value": 5
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "per",
-          "value": 80
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 80
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -183,7 +198,7 @@
     "pt": "Dupla Investida Orok"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige {value:per, percent} de son {%AT}.\n\\---\nAjoute le sort {Spell:238213} à votre main.\n",
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {value:per, percent} de son {%AT}.\n\\---\nAjoute le sort {Spell:238213} à votre main.\n",
     "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts {value:per, percent} of their {%AT} on them.\n\\---\nAdds the {Spell:238213} spell to your hand.\n",
     "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige un {value:per, percent} de su {%AT}.\n\\---\nAñade el hechizo {Spell:238213} a tu mano.\n",
     "de": "Dein Held <b>STÜRMT</b> auf einen Charakter auf bis zu {cell:c} in derselben Reihe zu und verursacht bei ihm {value:per, percent} seines {%AT,plural:two} als Schaden.\n\\---\nFügt deiner Hand den Zauber „{Spell:238213}“ hinzu.\n",

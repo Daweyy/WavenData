@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 1519,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       3800,
@@ -106,75 +108,75 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "PercentageOfValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
-          "percentage": {
-            "type": "SumValue",
-            "referenceId": "",
-            "valuesToSum": [
-              {
+          "baseValue": {
+            "type": "PercentageOfValue",
+            "referenceId": null,
+            "percentage": {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "p",
+                  "value": 100
+                },
+                {
+                  "type": "MultValue",
+                  "referenceId": null,
+                  "valuesToMult": [
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 5
+                    },
+                    {
+                      "type": "EntityCaracValue",
+                      "referenceId": "x",
+                      "entitySelector": {
+                        "type": "CasterSelector"
+                      },
+                      "carac": 20
+                    }
+                  ]
+                }
+              ]
+            },
+            "from": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 5
+            }
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
                 "type": "ConstIntegerValue",
                 "referenceId": "",
-                "value": 100
-              },
-              {
-                "type": "MultValue",
-                "referenceId": "",
-                "valuesToMult": [
-                  {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "p",
-                    "value": 5
-                  },
-                  {
-                    "type": "EntityCaracValue",
-                    "referenceId": "x",
-                    "entitySelector": {
-                      "type": "CasterSelector"
-                    },
-                    "carac": 20
-                  }
-                ]
+                "value": 30
               }
-            ]
-          },
+            }
+          ],
           "from": {
-            "type": "BuffedScalingDynamicValue",
-            "referenceId": null,
-            "baseValue": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 6
-            },
-            "factor": {
-              "type": "ReferenceScalingFactor",
-              "reference": 12
-            },
-            "buffs": [
-              51,
-              23
-            ],
-            "skillBuffs": [
-              {
-                "type": "SkillBuff",
-                "skillId": 118841,
-                "percentBuff": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 30
-                }
-              }
-            ],
-            "from": {
-              "type": "CasterSelector"
-            },
-            "addInsteadOfMultiply": false
-          }
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "p",
-          "value": 5
+          "value": 100
         },
         {
           "type": "EntityCaracValue",
@@ -211,7 +213,7 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}) : Confère {PropertyEffect:8} à votre héros.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Jauges générées : {value:x}</rem>",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Confers {PropertyEffect:8} on your hero.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Confers {PropertyEffect:8} on your hero.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}.</rem>",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Confiere {PropertyEffect:8} a tu héroe.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Indicadores generados: {value:x}</rem>",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Verleiht deinem Helden {PropertyEffect:8}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
     "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Concede {PropertyEffect:8} ao seu herói.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Cargas geradas: {value:x}</rem>"

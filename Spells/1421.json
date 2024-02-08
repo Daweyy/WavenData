@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1421",
+  "m_id": 1421,
+  "m_displayName": "SEASON - EFRIM - Griffe",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1335672699,
+    "b": -1585656348,
+    "c": 15861034,
+    "d": 1247480388,
+    "e": 439816421
+  },
+  "m_i18nDescriptionId": {
+    "a": -1335672699,
+    "b": -1585656348,
+    "c": 15861034,
+    "d": 1247480388,
+    "e": -391659200
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "36a40be4e870c7e42a3352210e04b91c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1421,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundSquaredTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "43abd5c56f4f67b40a7f8389a33b1bf3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Griffe",
+    "en": "Claw",
+    "es": "Garra",
+    "de": "Kralle",
+    "pt": "Garra"
+  },
+  "description": {
+    "fr": "Votre héros inflige {value:p,percent} de son {%AT} à un adversaire autour\\_<sprite name=\"cell_around\"> de lui.\n\\---\nSi la cible est achevée\\_: Votre héros rejoue son tour.",
+    "en": "Your hero inflicts {value:p,percent} of their {%AT} on a surrounding\\_<sprite name=\"cell_around\"> opponent.\n\\---\nIf the target is finished off: Your hero replays their turn.",
+    "es": "Tu héroe inflige un {value:p,percent} de su {%AT} a un adversario a su alrededor\\_<sprite name=\"cell_around\">.\n\\---\nSi el objetivo es rematado: Tu héroe vuelve a jugar su turno.",
+    "de": "Dein Held verursacht {value:p,percent} seines {%AT,plural:two} bei einem Gegner im Umkreis\\_<sprite name=\"cell_around\"> als Schaden.\n\\---\nWenn das Ziel erledigt wird: Dein Held spielt seine Runde erneut.",
+    "pt": "Seu herói inflige {value:p,percent} de seu {%AT} a um adversário em\\_volta\\_<sprite name=\"cell_around\"> dele.\n\\---\nSe o alvo for derrotado: Seu herói joga um turno extra."
+  }
+}

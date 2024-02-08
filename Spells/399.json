@@ -39,13 +39,17 @@
     "type": "SpellDefinition",
     "id": 399,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
     "canCrit": false,
     "isEphemeral": false,
-    "tags": [],
+    "tags": [
+      2
+    ],
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": true,
@@ -114,6 +118,10 @@
           },
           {
             "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
           }
         ]
       }
@@ -155,10 +163,10 @@
     "pt": "Ascensão Defasada"
   },
   "description": {
-    "fr": "Construit 2 {FloorMechanism:282} jusqu’à 4 cases de votre héros.",
+    "fr": "Construit 2 {FloorMechanism:282,plural:other} jusqu'à 4 cases de votre héros.",
     "en": "Builds 2 {FloorMechanism:282,plural:other} up to 4 cells from your hero.",
-    "es": "Construye 2 {FloorMechanism:282} hasta a 4 casillas de tu héroe.",
-    "de": "Errichtet 2-mal {FloorMechanism:282} bis auf 4 Felder von deinem Helden entfernt.",
-    "pt": "Constrói 2 {FloorMechanism:282} a até 4 células do seu herói."
+    "es": "Construye 2 {FloorMechanism:282,plural:other} hasta a 4 casillas de tu héroe.",
+    "de": "Errichtet 2 {FloorMechanism:282,plural:other} bis zu 4 Felder von deinem Helden entfernt.",
+    "pt": "Constrói 2 {FloorMechanism:282,plural:other} a até 4 células do seu herói."
   }
 }

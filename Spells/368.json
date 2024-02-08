@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 368,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -104,6 +106,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "dmg",
           "value": 20
@@ -133,10 +153,10 @@
     "pt": "Discernimento"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%at} de votre héros à la cible.</if><if pvp>Inflige {magicalDamage:dmg} à la cible.</if>\n\\---\nAjoute le sort {Spell:552} à votre main si vous avez {SPELLCOUNTvalue:s} ou moins en main.",
-    "en": "<if pvm>Inflicts your hero's {%at} on the target.</if><if pvp>Does {magicalDamage:dmg} to the target.</if>\n\\---\nAdds the {Spell:552} spell to your hand if you have {SPELLCOUNTvalue:s} or less in hand.",
-    "es": "<if pvm>Inflige el {%at} de tu héroe al objetivo.</if><if pvp>Inflige {magicalDamage:dmg} al objetivo.</if>\n\\---\nAñade el hechizo {Spell:552} a tu mano si tienes {SPELLCOUNTvalue:s} o menos en mano.",
-    "de": "<if pvm>Verursacht beim Ziel den {%at} deines Helden als Schaden.</if><if pvp>Verursacht beim Ziel {magicalDamage:dmg}.</if>\n\\---\nFügt deiner Hand den Zauber „{Spell:552}“ hinzu, wenn du nicht mehr als {SPELLCOUNTvalue:s} auf der Hand hast.",
-    "pt": "<if pvm>Inflige o {%at} do seu herói ao alvo.</if><if pvp>Inflige {magicalDamage:dmg} ao alvo.</if>\n\\---\nAdiciona o feitiço {Spell:552} à sua mão se você tiver {SPELLCOUNTvalue:s} ou menos na mão."
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%at} de votre héros à la cible.</if><if pvp>Inflige {magicalDamage:dmg} à la cible.</if>\n\\---\nAjoute le sort {Spell:552} à votre main si vous avez {SPELLCOUNTvalue:s} ou moins en main.",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%at} on the target.</if><if pvp>Does {magicalDamage:dmg} to the target.</if>\n\\---\nAdds the {Spell:552} spell to your hand if you have {SPELLCOUNTvalue:s} or less in hand.",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%at} de tu héroe al objetivo.</if><if pvp>Inflige {magicalDamage:dmg} al objetivo.</if>\n\\---\nAñade el hechizo {Spell:552} a tu mano si tienes {SPELLCOUNTvalue:s} o menos en mano.",
+    "de": "<if pvm>Verursacht beim Ziel {value:v,percent} des {%at,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht beim Ziel {magicalDamage:dmg}.</if>\n\\---\nFügt deiner Hand den Zauber „{Spell:552}“ hinzu, wenn du nicht mehr als {SPELLCOUNTvalue:s} auf der Hand hast.",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%at} do seu herói ao alvo.</if><if pvp>Inflige {magicalDamage:dmg} ao alvo.</if>\n\\---\nAdiciona o feitiço {Spell:552} à sua mão se você tiver {SPELLCOUNTvalue:s} ou menos na mão."
   }
 }

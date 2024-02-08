@@ -42,9 +42,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "fois",
-          "value": 2
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 200
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -62,10 +75,10 @@
     "pt": "{%CRITICAL_SKILL}"
   },
   "description": {
-    "fr": "{#CRITICAL}\\_: Soigne vos personnages du double de son {%AT}.",
-    "en": "{#CRITICAL}: Heals your characters double the companion's\\_{%AT}.",
-    "es": "{#CRITICAL}: Cura a tus personajes del doble de su\\_{%AT}.",
-    "de": "{#CRITICAL}: Heilt deine Charaktere um das Doppelte seines {%AT,plural:two}.",
-    "pt": "{#CRITICAL}: Cura seus personagens do dobro do seu {%AT}."
+    "fr": "{#CRITICAL}\\_: Soigne vos personnages de {value:v,percent} de son {%AT}.",
+    "en": "{#CRITICAL}: Heals all your characters {value:v,percent} of {%AT}.",
+    "es": "{#CRITICAL}: Cura a tus personajes un {value:v,percent} de su {%AT}.",
+    "de": "{#CRITICAL}: Heilt deine Charaktere um {value:v,percent} seines/ihres {%AT,plural:two}.",
+    "pt": "{#CRITICAL}: Cura seus personagens de {value:v,percent} de seu {%AT}."
   }
 }

@@ -52,9 +52,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 11
+            "valueInPvM": 14,
+            "valueInPvP": 11
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -119,7 +120,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       2494,
       2495,

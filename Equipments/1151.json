@@ -46,7 +46,9 @@
     "type": "EquipmentDefinition",
     "id": 1151,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 2,
     "unlockableSkillIds": [
       3220,
@@ -62,7 +64,26 @@
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -95,11 +116,11 @@
     "pt": "Anel Salvador"
   },
   "description": {
-    "fr": "{%Companion_Appearance}\\v Lui confère son {%At} en {%AR}.",
-    "en": "{%Companion_Appearance} \\vConfers {%At} as {%AR} on them.",
-    "es": "{%Companion_Appearance}\\v Le confiere su {%At} en {%AR}.",
-    "de": "{%Companion_Appearance}\\v Wandelt den {%At} in {%AR} um.",
-    "pt": "{%Companion_Appearance}\\v Concede a ele seu {%At} em {%AR}."
+    "fr": "{%Companion_Appearance}\\v Confère à ce compagnon {value:v,percent} de son {%At} en {%AR}.",
+    "en": "{%Companion_Appearance}\\v Confers {value:v,percent} of the companion's {%At} as {%AR} them.",
+    "es": "{%Companion_Appearance}\\v Confiere a este compañero un {value:v,percent} de su {%At} en {%AR}.",
+    "de": "{%Companion_Appearance}\\v Überträgt diesem Begleiter {value:v,percent} seines {%At,plural:two} als {%AR}.",
+    "pt": "{%Companion_Appearance}\\v Concede a este companheiro {value:v,percent} de seu {%At} em {%AR}."
   },
   "bgDescription": {
     "fr": "{%empty}",

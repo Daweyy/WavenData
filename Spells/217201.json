@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 217201,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -82,18 +84,47 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": true,
-            "reference": {
-              "type": "CasterSelector"
-            }
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CrossAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCharacterSelector",
+            "filters": [
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              }
+            ]
+          },
+          "size": {
+            "type": "MapSizeValue",
+            "referenceId": null,
+            "axe": 0
           }
-        ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -114,18 +145,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 10
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 9
-            }
+            "value": 10
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -135,6 +157,28 @@
             51,
             48,
             23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
           ],
           "skillBuffs": [],
           "from": {
@@ -166,10 +210,10 @@
     "pt": "Elixir de Pedra"
   },
   "description": {
-    "fr": "{ARvalue:ar,+} à un allié.\n\\---\n{value:a,+}\\_{aura:117,value:a} à votre héros.\n\\---\n<rem>Ce sort est détruit lorsqu'il est joué.</rem>",
-    "en": "{ARvalue:ar,+} to an ally.\n\\---\n{value:a,+}\\_{aura:117,value:a} to your hero.\n\\---\n<rem>This spell is destroyed when played.</rem>",
-    "es": "{ARvalue:ar,+} a un aliado.\n\\---\n{value:a,+}\\_{aura:117,value:a} a tu héroe.\n\\---\n<rem>Este hechizo se destruye cuando se usa.</rem>",
-    "de": "{ARvalue:ar,+} für einen Verbündeten.\n\\---\n{value:a,+}\\_{aura:117,value:a} für deinen Helden.\n\\---\n<rem>Dieser Zauber wird zerstört, wenn er ausgespielt wird.</rem>",
-    "pt": "{ARvalue:ar,+} a um aliado.\n\\---\n{value:a,+}\\_{aura:117,value:a} ao seu herói.\n\\---\n<rem>Este feitiço é destruído depois de lançado.</rem>"
+    "fr": "<if pvm>{ARvalue:ar,+} à un allié.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires alignés à l'allié ciblé.</if>\n\\---\n{value:a,+}\\_{aura:117,value:a} à votre héros.\n\\---\n<rem>Ce sort est détruit lorsqu'il est joué.</rem>",
+    "en": "<if pvm>{ARvalue:ar,+} to an ally.</if><if pvp>Does {magicalDamage:dmg} to opponents in line with the targeted ally.</if>\n\\---\n{value:a,+}\\_{aura:117,value:a} to your hero.\n\\---\n<rem>This spell is destroyed when played.</rem>",
+    "es": "<if pvm>{ARvalue:ar,+} a un aliado.</if><if pvp>Inflige {magicalDamage:dmg} a los adversarios alineados con el aliado objetivo.</if>\n\\---\n{value:a,+}\\_{aura:117,value:a} a tu héroe.\n\\---\n<rem>Este hechizo se destruye cuando se usa.</rem>",
+    "de": "<if pvm>{ARvalue:ar,+} für einen Verbündeten.</if><if pvp>Verursacht bei Gegnern, die sich in derselben Reihe wie der anvisierte Verbündete befinden, {magicalDamage:dmg}.</if>\n\\---\n{value:a,+}\\_{aura:117,value:a} für deinen Helden.\n\\---\n<rem>Dieser Zauber wird beim Ausspielen zerstört.</rem>",
+    "pt": "<if pvm>{ARvalue:ar,+} a um aliado.</if><if pvp>Inflige {magicalDamage:dmg} aos adversários alinhados com o aliado visado.</if>\n\\---\n{value:a,+}\\_{aura:117,value:a} ao seu herói.\n\\---\n<rem>Este feitiço é destruído depois de lançado.</rem>"
   }
 }

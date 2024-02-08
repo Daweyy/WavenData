@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 846,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -104,6 +106,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "dmg",
           "value": 4
@@ -122,10 +142,10 @@
     "pt": "Encadeamento"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%AT} de votre héros</if><if pvp>Inflige {magicalDamage:dmg}</if>.\n\\---\nPiochez votre prochain sort de <b>LANCE</b>.",
-    "en": "<if pvm>Inflicts your hero's {%AT}.</if><if pvp>Does {magicalDamage:dmg}.</if>\n\\---\nDraw your next <b>LANCE</b> spell.",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe</if><if pvp>Inflige {magicalDamage:dmg}</if>.\n\\---\nSacas tu próximo hechizo de <b>LANZA</b>.",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg}</if>.\n\\---\nZieht deinen nächsten <b>LANZEN</b>-Zauber.",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói</if><if pvp>Inflige {magicalDamage:dmg}</if>.\n\\---\nCompre seu próximo feitiço de <b>LANÇA</b>."
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros</if><if pvp>Inflige {magicalDamage:dmg}</if>.\n\\---\nPiochez votre prochain sort de <b>LANCE</b>.",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT}</if><if pvp>Does {magicalDamage:dmg}</if>.\n\\---\nDraw your next <b>LANCE</b> spell.",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe.</if><if pvp>Inflige {magicalDamage:dmg}</if>.\n\\---\nSacas tu próximo hechizo de <b>LANZA</b>.",
+    "de": "<if pvm>Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg}</if>.\n\\---\nZieht deinen nächsten <b>LANZEN</b>-Zauber.",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói</if><if pvp>Inflige {magicalDamage:dmg}</if>.\n\\---\nCompre seu próximo feitiço de <b>LANÇA</b>."
   }
 }

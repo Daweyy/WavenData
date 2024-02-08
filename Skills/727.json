@@ -42,9 +42,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "fois",
-          "value": 2
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 200
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -62,10 +75,10 @@
     "pt": "{%CRITICAL_SKILL}"
   },
   "description": {
-    "fr": "{#critical}\\_: Se soigne de {value:fois} fois son {%AT}.",
-    "en": "{#critical}: Heals self {value:fois} {fois, plural, one[time] other[times]} {%AT}.",
-    "es": "{#critical}: Se cura {value:fois} {fois, plural, one[vez] other[veces]} su {%AT}.",
-    "de": "{#critical}: Heilt sich um das {value:fois}-fache seines {%AT,plural:two}.",
-    "pt": "{#critical}: Cura-se {value:fois} {fois, plural, one[vez] other[vezes]} seu {%AT}."
+    "fr": "{#critical}\\_: Se soigne de {value:fois,percent} de son {%AT}.",
+    "en": "{#critical}: Heals self {value:fois,percent} of {%AT}.",
+    "es": "{#critical}: Se cura un {value:fois,percent} de su {%AT}.",
+    "de": "{#critical}: Heilt sich um {value:fois,percent} seines {%AT,plural:two}.",
+    "pt": "{#critical}: Cura-se de {value:fois,percent} de seu {%AT}."
   }
 }

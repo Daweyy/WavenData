@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 163867,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -127,6 +129,24 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -181,10 +201,10 @@
     "pt": "Devoção"
   },
   "description": {
-    "fr": "<if pvm>Consomme une {%AURA_HEART} pour infliger l'{%AT} de votre héros aux adversaires adjacents\\_<sprite name=\"cell_cross\"></if><if pvp>Consomme une {%AURA_HEART} pour infliger {magicalDamage:v} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros</if>.<if pvp>\n\\---\nSoigne votre héros de {PVvalue:h}</if>",
-    "en": "<if pvm>Consumes one {%AURA_HEART} to inflict your hero's {%AT} on adjacent\\_<sprite name=\"cell_cross\"> opponents.</if><if pvp>Consumes one {%AURA_HEART} to do {magicalDamage:v} to opponents adjacent\\_<sprite name=\"cell_cross\"> to your hero.</if><if pvp>\n\\---\nHeals your hero {PVvalue:h}.</if>",
-    "es": "<if pvm>Consume un {%AURA_HEART} para infligir el {%AT} de tu héroe a los adversarios adyacentes\\_<sprite name=\"cell_cross\"></if><if pvp>Consume un {%AURA_HEART} para infligir {magicalDamage:v} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a tu héroe</if>.<if pvp>\n\\---\nCura a tu héroe {PVvalue:h}.</if>",
-    "de": "<if pvm>Verbraucht eine {%AURA_HEART}, um angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern den {%AT} deines Helden als Schaden zuzufügen.</if><if pvp>Verbraucht eine {%AURA_HEART}, um an deinen Helden angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalDamage:v} zuzufügen</if>.<if pvp>\n\\---\nHeilt deinen Helden um {PVvalue:h}.</if>",
-    "pt": "<if pvm>Consome uma {%AURA_HEART} para infligir o {%AT} do seu herói aos adversários adjacentes\\_<sprite name=\"cell_cross\"></if><if pvp>Consome uma {%AURA_HEART} para infligir {magicalDamage:v} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> ao seu herói</if>.<if pvp>\n\\---\nCura {PVvalue:h} do seu herói.</if>"
+    "fr": "<if pvm>Consomme une {%AURA_HEART} pour infliger {value:dmg,percent} de l'{%AT} de votre héros aux adversaires qui lui sont adjacents\\_<sprite name=\"cell_cross\"></if><if pvp>Consomme une {%AURA_HEART} pour infliger {magicalDamage:v} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros</if>.<if pvp>\n\\---\nSoigne votre héros de {PVvalue:h}.</if>",
+    "en": "<if pvm>Consumes one {%AURA_HEART} to inflict {value:dmg,percent} of your hero's {%AT} on adjacent\\_<sprite name=\"cell_cross\"> opponents.</if><if pvp>Consumes one {%AURA_HEART} to do {magicalDamage:v} to opponents adjacent\\_<sprite name=\"cell_cross\"> to your hero.</if><if pvp>\n\\---\nHeals your hero {PVvalue:h}.</if>",
+    "es": "<if pvm>Consume un {%AURA_HEART} para infligir un {value:dmg,percent} del {%AT} de tu héroe a los adversarios que este tenga adyacentes\\_<sprite name=\"cell_cross\"></if><if pvp>Consume un {%AURA_HEART} para infligir {magicalDamage:v} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a tu héroe</if>.<if pvp>\n\\---\nCura a tu héroe {PVvalue:h}.</if>",
+    "de": "<if pvm>Verbraucht eine {%AURA_HEART}, um bei Gegnern, die an deinen Helden angrenzen\\_<sprite name=\"cell_cross\">, {value:dmg,percent} seines {%AT,plural:two} als Schaden zu verursachen.</if><if pvp>Verbraucht eine {%AURA_HEART}, um bei Gegnern, die an deinen Helden angrenzen\\_<sprite name=\"cell_cross\">, {magicalDamage:v} zu verursachen</if>.<if pvp>\n\\---\nHeilt deinen Helden um {PVvalue:h}.</if>",
+    "pt": "<if pvm>Consome uma {%AURA_HEART} para infligir {value:dmg,percent} do {%AT} do seu herói aos adversários adjacentes\\_<sprite name=\"cell_cross\"> a ele</if><if pvp>Consome uma {%AURA_HEART} para infligir {magicalDamage:v} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> ao seu herói</if>.<if pvp>\n\\---\nCura {PVvalue:h} do seu herói.</if>"
   }
 }

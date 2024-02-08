@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 727,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -93,6 +95,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "g",
           "value": 10
@@ -115,10 +135,10 @@
     "pt": "Sentença"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\nLorsque votre héros gagne une {%AURA_SWORD}\\_:\\v {value:g, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {%AURA_SWORD}\\_: {value:Lv}</rem>",
-    "en": "Inflicts your hero's {%AT}.\n\\---\nWhen your hero gains one {%AURA_SWORD}: \\v{value:g, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{%AURA_SWORD} Count: {value:Lv}.</rem>",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\nCuando tu héroe gana un {%AURA_SWORD}:\\v {value:g, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {%AURA_SWORD}: {value:Lv}</rem>",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\nWenn dein Held 1\\_{%AURA_SWORD} auslöst:\\v {value:g, +, percent} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem>{%AURA_SWORD}-Zähler: {value:Lv}</rem>",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\nQuando seu herói ganha uma {%AURA_SWORD}:\\v {value:g, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {%AURA_SWORD}: {value:Lv}</rem>"
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\nLorsque votre héros gagne une {%AURA_SWORD}\\_:\\v {value:g, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {%AURA_SWORD}\\_: {value:Lv}</rem>",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\nWhen your hero gains one {%AURA_SWORD}: \\v{value:g, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{%AURA_SWORD} Count: {value:Lv}.</rem>",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\nCuando tu héroe gana un {%AURA_SWORD}:\\v {value:g, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {%AURA_SWORD}: {value:Lv}</rem>",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\nWenn dein Held eine {%AURA_SWORD} erhält:\\v {value:g, +, percent} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem>{%AURA_SWORD}-Zähler: {value:Lv}</rem>",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\nQuando seu herói ganha uma {%AURA_SWORD}:\\v {value:g, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {%AURA_SWORD}: {value:Lv}</rem>"
   }
 }

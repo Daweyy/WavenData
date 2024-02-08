@@ -63,6 +63,11 @@
             "type": "EffectHolderSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 100
         }
       ],
       "externalDynamicValueReferences": [],
@@ -108,7 +113,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [],
     "rarity": 0,
     "equipableByPlayers": false,
@@ -208,10 +215,10 @@
     "pt": "Tio Sérgio"
   },
   "description": {
-    "fr": "{%Attack} Touche les adversaires autour\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} si la cible est un {%KEYWORD.OBJECTMECHANISM.NAME}.",
-    "en": "{%Attack} Hits surrounding\\_<sprite name=\"cell_around\"> opponents.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} if the target is a {%KEYWORD.OBJECTMECHANISM.NAME}.",
-    "es": "{%Attack} Alcanza a los adversarios de alrededor\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} si el objetivo es un {%KEYWORD.OBJECTMECHANISM.NAME}.",
-    "de": "{%Attack} Trifft die Gegner im Umkreis\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+}, wenn das Ziel ein\\_{%KEYWORD.OBJECTMECHANISM.NAME} ist.",
-    "pt": "{%Attack} Atinge os adversários em\\_volta\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} se o alvo for um {%KEYWORD.OBJECTMECHANISM.NAME}."
+    "fr": "{%Attack} Inflige {value:p,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} si la cible est un {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "en": "{%Attack} Inflicts {value:p,percent} of his {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} if the target is a {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "es": "{%Attack} Inflige un {value:p,percent} de su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} si el objetivo es un {%KEYWORD.OBJECTMECHANISM.NAME}.",
+    "de": "{%Attack} Verursacht bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> {value:p,percent} seines {%AT,plural:two} als Schaden.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+}, falls das Ziel ein {%KEYWORD.OBJECTMECHANISM.NAME} ist.",
+    "pt": "{%Attack} Inflige {value:p,percent} do seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\">.\n\\---\n{%DEATHBLOW} {ARvalue:ar,+} se o alvo for um {%KEYWORD.OBJECTMECHANISM.NAME}."
   }
 }

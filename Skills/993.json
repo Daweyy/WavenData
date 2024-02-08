@@ -40,7 +40,26 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -54,10 +73,10 @@
     "pt": "{%NEW_SKILL}"
   },
   "description": {
-    "fr": "Soigne les alliés qu'elle traverse de son {%AT}.",
-    "en": "Heals allies she goes through with her {%AT}.",
-    "es": "Cura a los aliados que atraviesa su {%AT}.",
-    "de": "Heilt die Verbündeten, die sie überquert, um ihren {%AT,plural:one}.",
-    "pt": "Cura de seu {%AT} os aliados atravessados."
+    "fr": "Soigne les alliés qu'elle traverse de {value:v,percent} de son {%AT}.",
+    "en": "Heals allies she goes through {value:v,percent} of her {%AT}.",
+    "es": "Cura a los aliados que atraviesa un {value:v,percent} de su {%AT}.",
+    "de": "Heilt die Verbündeten, die sie überquert, um {value:v,percent} ihres {%AT,plural:two}.",
+    "pt": "Cura os aliados atravessados de {value:v,percent} de seu {%AT}."
   }
 }

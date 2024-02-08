@@ -40,7 +40,26 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -56,10 +75,10 @@
     "pt": "{%CRITICAL_SKILL}"
   },
   "description": {
-    "fr": "{#CRITICAL}\\_: Confère son {%AT} en {%AR} à vos personnages.",
-    "en": "{#CRITICAL}: Confers {%AT} on your characters as {%AR}.",
-    "es": "{#CRITICAL}: Confiere su {%AT} en {%AR} a tus personajes.",
-    "de": "{#CRITICAL}: Verleiht deinen Charakteren seinen {%AT,plural:one} als {%AR}.",
-    "pt": "{#CRITICAL}: Concede seu {%AT} em {%AR} aos seus personagens."
+    "fr": "{#CRITICAL}\\_: Confère {value:v,percent} de son {%AT} en {%AR} à vos personnages.",
+    "en": "{#CRITICAL}: Confers {value:v,percent} of {%AT} as {%AR} on all your characters.",
+    "es": "{#CRITICAL}: Confiere un {value:v,percent} de su {%AT} en {%AR} a tus personajes.",
+    "de": "{#CRITICAL}: Verleiht deinen Charakteren {value:v,percent} seines {%AT,plural:two} als {%AR}.",
+    "pt": "{#CRITICAL}: Concede {value:v,percent} de seu {%AT} em {%AR} aos seus personagens."
   }
 }

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 112854,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -111,6 +113,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "dmg",
           "value": 19
@@ -139,10 +159,10 @@
     "pt": "Mestre Defasado"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire.</if>\n\\---\nConfère {PropertyEffect:18} pour le tour à votre héros ou {PMvalue:PMBuff,+} pour le tour s'il est déjà {PropertyEffect:18[DÉPHASÉ]}.",
-    "en": "<if pvm>Inflicts your hero's {%AT} on an opponent.</if><if pvp>Does {magicalDamage:dmg} to an opponent.</if>\n\\---\nConfers {PropertyEffect:18} on your hero for the turn or {PMvalue:PMBuff,+} for the turn if they are already {PropertyEffect:18[DEPHASED]}.",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe a un adversario.</if><if pvp>Inflige {magicalDamage:dmg} a un adversario.</if>\n\\---\nConfiere {PropertyEffect:18} durante el turno a tu héroe o {PMvalue:PMBuff,+} durante el turno si está ya {PropertyEffect:18[DESFASADO]}.",
-    "de": "<if pvm>Verursacht bei einem Gegner den {%AT} deines Helden als Schaden.</if><if pvp>Verursacht bei einem Gegner {magicalDamage:dmg}.</if>\n\\---\nVerleiht deinem Helden für eine Runde {PropertyEffect:18} oder {PMvalue:PMBuff,+} für die Runde, wenn er schon {PropertyEffect:18[PHASENVERSCHOBEN]} ist.",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói a um adversário.</if><if pvp>Inflige {magicalDamage:dmg} a um adversário.</if>\n\\---\nConcede {PropertyEffect:18} durante o turno ao seu herói ou {PMvalue:PMBuff,+} durante o turno se ele já estiver {PropertyEffect:18[DEFASADO]}."
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire.</if>\n\\---\nConfère {PropertyEffect:18} pour le tour à votre héros ou {PMvalue:PMBuff,+} pour le tour s'il est déjà {PropertyEffect:18[DÉPHASÉ]}.",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT} on an opponent.</if><if pvp>Does {magicalDamage:dmg} to an opponent.</if>\n\\---\nConfers {PropertyEffect:18} on your hero for the turn or {PMvalue:PMBuff,+} for the turn if they are already {PropertyEffect:18[DEPHASED]}.",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe a un adversario.</if><if pvp>Inflige {magicalDamage:dmg} a un adversario.</if>\n\\---\nConfiere {PropertyEffect:18} durante el turno a tu héroe o {PMvalue:PMBuff,+} durante el turno si está ya {PropertyEffect:18[DESFASADO]}.",
+    "de": "<if pvm>Verursacht bei einem Gegner {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht bei einem Gegner {magicalDamage:dmg}.</if>\n\\---\nVerleiht deinem Helden für eine Runde {PropertyEffect:18} oder {PMvalue:PMBuff,+} für die Runde, wenn er schon {PropertyEffect:18[PHASENVERSCHOBEN]} ist.",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói a um adversário.</if><if pvp>Inflige {magicalDamage:dmg} a um adversário.</if>\n\\---\nConcede {PropertyEffect:18} durante o turno ao seu herói ou {PMvalue:PMBuff,+} durante o turno se ele já estiver {PropertyEffect:18[DEFASADO]}."
   }
 }

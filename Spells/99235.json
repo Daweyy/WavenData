@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 99235,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       320,
@@ -175,6 +177,11 @@
         },
         {
           "type": "ConstIntegerValue",
+          "referenceId": "pared",
+          "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": 1
         },
@@ -228,10 +235,10 @@
     "pt": "Punho Agitado"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire aligné.\n\\---\n{#COMBO}\\_: {PA_RESvalue:pa,+}.",
-    "en": "Does {magicalDamage:dmg} to an in-line opponent.\n\\---\n{#COMBO}: {PA_RESvalue:pa,+}.",
-    "es": "Inflige {magicalDamage:dmg} a un adversario alineado.\n\\---\n{#COMBO}: {PA_RESvalue:pa,+}.",
-    "de": "Verursacht {magicalDamage:dmg} bei einem Gegner in derselben Reihe.\n\\---\n{#COMBO}: {PA_RESvalue:pa,+}.",
-    "pt": "Inflige {magicalDamage:dmg} a um adversário alinhado.\n\\---\n{#COMBO}: {PA_RESvalue:pa,+}."
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire aligné.\n\\---\n{#COMBO}\\_: <if pvm>{PA_RESvalue:pa,+}.</if><if pvp>{PAvalue:pared} au coût du prochain sort que vous jouez.</if>",
+    "en": "Does {magicalDamage:dmg} to an in-line opponent.\n\\---\n{#COMBO}: <if pvm>{PA_RESvalue:pa,+}.</if><if pvp>{PAvalue:pared} to the cost of the next spell you play.</if>",
+    "es": "Inflige {magicalDamage:dmg} a un adversario alineado.\n\\---\n{#COMBO}: <if pvm>{PA_RESvalue:pa,+}.</if><if pvp>{PAvalue:pared} al coste del próximo hechizo que lances.</if>",
+    "de": "Verursacht bei einem Gegner in derselben Reihe {magicalDamage:dmg}.\n\\---\n{#COMBO}: <if pvm>{PA_RESvalue:pa,+}.</if><if pvp>{PAvalue:pared} auf die Kosten des nächsten Zaubers, den du wirkst.</if>",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário alinhado.\n\\---\n{#COMBO}: <if pvm>{PA_RESvalue:pa,+}.</if><if pvp>{PAvalue:pared} ao custo do próximo feitiço que você lançar.</if>"
   }
 }

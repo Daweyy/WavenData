@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 271,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -131,6 +133,24 @@
           "value": 13
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "percentMelee",
           "value": 50
@@ -154,10 +174,10 @@
     "pt": "Ira de Iop"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire.</if>\n\\---\n{NamedEffect:455}\\_: <if pvm>{value:percentMelee,percent,+} aux <b>DÉGÂTS</b> de ce sort.</if><if pvp>{magicalDamage:dmgBoost,+}</if>",
-    "en": "<if pvm>Inflicts your hero's {%AT} on an opponent.</if><if pvp>Does {magicalDamage:dmg} to an opponent.</if>\n\\---\n{NamedEffect:455}: <if pvm>{value:percentMelee,percent,+} to this spell's <b>DAMAGE</b>.</if><if pvp>{magicalDamage:dmgBoost,+}.</if>",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe a un adversario.</if><if pvp>Inflige {magicalDamage:dmg} a un adversario.</if>\n\\---\n{NamedEffect:455}: <if pvm>{value:percentMelee,percent,+} a los <b>DAÑOS</b> de este hechizo.</if><if pvp>{magicalDamage:dmgBoost,+}.</if>",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden bei einem Gegner als Schaden.</if><if pvp>Verursacht bei einem Gegner {magicalDamage:dmg}.</if>\n\\---\n{NamedEffect:455}: <if pvm>{value:percentMelee,percent,+} <b>SCHADEN</b> für diesen Zauber.</if><if pvp>{magicalDamage:dmgBoost,+}</if>",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói a um adversário.</if><if pvp>Inflige {magicalDamage:dmg} a um adversário.</if>\n\\---\n{NamedEffect:455}: <if pvm>{value:percentMelee,percent,+} aos <b>DANOS</b> deste feitiço.</if><if pvp>{magicalDamage:dmgBoost,+}</if>"
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire.</if>\n\\---\n{NamedEffect:455}\\_: <if pvm>{value:percentMelee,percent,+} aux <b>DÉGÂTS</b> de ce sort.</if><if pvp>{magicalDamage:dmgBoost,+}</if>",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT} on an opponent.</if><if pvp>Does {magicalDamage:dmg} to an opponent.</if>\n\\---\n{NamedEffect:455}: <if pvm>{value:percentMelee,percent,+} to this spell's <b>DAMAGE</b>.</if><if pvp>{magicalDamage:dmgBoost,+}.</if>",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe a un adversario.</if><if pvp>Inflige {magicalDamage:dmg} a un adversario.</if>\n\\---\n{NamedEffect:455}: <if pvm>{value:percentMelee,percent,+} a los <b>DAÑOS</b> de este hechizo.</if><if pvp>{magicalDamage:dmgBoost,+}.</if>",
+    "de": "<if pvm>Verursacht {value:v,percent} des {%AT,plural:two} deines Helden bei einem Gegner als Schaden.</if><if pvp>Verursacht bei einem Gegner {magicalDamage:dmg}.</if>\n\\---\n{NamedEffect:455}: <if pvm>{value:percentMelee,percent,+} <b>SCHADEN</b> für diesen Zauber.</if><if pvp>{magicalDamage:dmgBoost,+}</if>",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói a um adversário.</if><if pvp>Inflige {magicalDamage:dmg} a um adversário.</if>\n\\---\n{NamedEffect:455}: <if pvm>{value:percentMelee,percent,+} aos <b>DANOS</b> deste feitiço.</if><if pvp>{magicalDamage:dmgBoost,+}.</if>"
   }
 }

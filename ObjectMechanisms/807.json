@@ -44,12 +44,17 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 3
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "pt",
           "baseValue": {
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "valueInPvM": 11,
+            "valueInPvM": 8,
             "valueInPvP": 7
           },
           "factor": {
@@ -66,17 +71,17 @@
             "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "blPVP",
-          "value": -12
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         "PEAT",
+        {
+          "conditions": "<6/>",
+          "type": 22,
+          "id": 213
+        },
         "OBJECTMECHANISM"
       ]
     },
@@ -95,7 +100,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 25,
-      "valueInPvP": 30
+      "valueInPvP": 20
     }
   },
   "name": {

@@ -49,7 +49,9 @@
     "type": "SpellDefinition",
     "id": 240506,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -114,7 +116,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -131,10 +152,10 @@
     "pt": "Troca Orishi"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_: Échange la place de votre héros avec la cible.",
-    "en": "Inflicts your hero's {%AT}.\n\\---\n{#TRAPPER}: Switches your hero's position with that of the target.",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\n{#TRAPPER}: Intercambia el lugar de tu héroe con el del objetivo.",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{#TRAPPER}: Tauscht die Position deines Helden mit der des Ziels.",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\n{#TRAPPER}: Troca seu herói de posição com o alvo."
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_: Échange la place de votre héros avec la cible.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\n{#TRAPPER}: Switches your hero's position with that of the target.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\n{#TRAPPER}: Intercambia el lugar de tu héroe con el del objetivo.",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{#TRAPPER}: Tauscht die Position deines Helden mit der des Ziels.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\n{#TRAPPER}: Troca seu herói de posição com o alvo."
   }
 }

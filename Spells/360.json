@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 360,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -102,6 +104,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dgts",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "dmg",
           "value": 22
@@ -125,10 +145,10 @@
     "pt": "Tiro com Arco"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%AT} de votre héros à la cible.</if><if pvp>Inflige {magicalDamage:dmg} à la cible.</if>\n\\---\nPiochez {SPELLCOUNTvalue:v}.",
-    "en": "<if pvm>Inflicts your hero's {%AT} on the target.</if><if pvp>Does {magicalDamage:dmg} to the target.</if>\n\\---\nDraw {SPELLCOUNTvalue:v}.",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe al objetivo.</if><if pvp>Inflige {magicalDamage:dmg} al objetivo.</if>\n\\---\nSacas {SPELLCOUNTvalue:v}.",
-    "de": "<if pvm>Verursacht beim Ziel den {%AT} deines Helden als Schaden.</if><if pvp>Verursacht beim Ziel {magicalDamage:dmg}.</if>\n\\---\nZieht {SPELLCOUNTvalue:v}.",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói ao alvo.</if><if pvp>Inflige {magicalDamage:dmg} ao alvo.</if>\n\\---\nCompre {SPELLCOUNTvalue:v}."
+    "fr": "<if pvm>Inflige {value:dgts,percent} de l'{%AT} de votre héros à la cible.</if><if pvp>Inflige {magicalDamage:dmg} à la cible.</if>\n\\---\nPiochez {SPELLCOUNTvalue:v}.",
+    "en": "<if pvm>Inflicts {value:dgts,percent} of your hero's {%AT} on the target.</if><if pvp>Does {magicalDamage:dmg} to the target.</if>\n\\---\nDraw {SPELLCOUNTvalue:v}.",
+    "es": "<if pvm>Inflige un {value:dgts,percent} del {%AT} de tu héroe al objetivo.</if><if pvp>Inflige {magicalDamage:dmg} al objetivo.</if>\n\\---\nSacas {SPELLCOUNTvalue:v}.",
+    "de": "<if pvm>Verursacht beim Ziel {value:dgts,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht beim Ziel {magicalDamage:dmg}.</if>\n\\---\nZieht {SPELLCOUNTvalue:v}.",
+    "pt": "<if pvm>Inflige {value:dgts,percent} do {%AT} do seu herói ao alvo.</if><if pvp>Inflige {magicalDamage:dmg} ao alvo.</if>\n\\---\nCompre {SPELLCOUNTvalue:v}."
   }
 }

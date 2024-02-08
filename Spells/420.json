@@ -49,7 +49,9 @@
     "type": "SpellDefinition",
     "id": 420,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -170,6 +172,24 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -200,10 +220,10 @@
     "pt": "Decolagem"
   },
   "description": {
-    "fr": "Téléporte votre héros sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\n<if pvm>Soigne votre héros de son {%AT}.</if><if pvp>Soigne votre héros de {PVvalue:v}.</if>",
-    "en": "Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.\n\\---\n<if pvm>Heals your hero with their {%AT}.</if><if pvp>Heals your hero {PVvalue:v}.</if>",
-    "es": "Teletransporta a tu héroe a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.\n\\---\n<if pvm>Cura a tu héroe su {%AT}.</if><if pvp>Cura a tu héroe {PVvalue:v}.</if>",
-    "de": "Teleportiert deinen Helden auf ein an einen Verbündeten angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\n<if pvm>Heilt deinen Helden um seinen {%AT}.</if><if pvp>Heilt deinen Helden um {PVvalue:v}.</if>",
-    "pt": "Teletransporta seu herói para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\n<if pvm>Cura seu herói de seu {%AT}.</if><if pvp>Cura {PVvalue:v} de seu herói.</if>"
+    "fr": "Téléporte votre héros sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié.\n\\---\n<if pvm>Soigne votre héros de {value:heal,percent} de son {%AT}.</if><if pvp>Soigne votre héros de {PVvalue:v}.</if>",
+    "en": "Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally.\n\\---\n<if pvm>Heals your hero {value:heal,percent} of their {%AT}.</if><if pvp>Heals your hero {PVvalue:v}.</if>",
+    "es": "Teletransporta a tu héroe a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado.\n\\---\n<if pvm>Cura a tu héroe un {value:heal,percent} de su {%AT}.</if><if pvp>Cura a tu héroe {PVvalue:v}.</if>",
+    "de": "Teleportiert deinen Helden auf ein an einen Verbündeten angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\n<if pvm>Heilt deinen Helden um {value:heal,percent} seines {%AT,plural:two}.</if><if pvp>Heilt deinen Helden um {PVvalue:v}.</if>",
+    "pt": "Teletransporta seu herói para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado.\n\\---\n<if pvm>Cura seu herói de {value:heal,percent} de seu {%AT}.</if><if pvp>Cura {PVvalue:v} do seu herói.</if>"
   }
 }

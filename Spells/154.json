@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 154,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -103,6 +105,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "pc",
           "value": 50
@@ -121,10 +141,10 @@
     "pt": "Desencadeamento Bumelâmina"
   },
   "description": {
-    "fr": "Défausse tous les {%SPELLCOUNT,plural:other} de votre main et inflige l'{%AT} de votre héros à la cible.\n\\---\n{value:pc,percent,+} de <b>DÉGÂTS</b> par {%SPELLCOUNT} défaussé.",
-    "en": "Discards all the {%SPELLCOUNT,plural:other} from your hand and inflicts your hero's {%AT} on the target.\n\\---\n{value:pc,percent,+} per <b>DAMAGE</b> per discarded {%SPELLCOUNT}.",
-    "es": "Descarta todos los {%SPELLCOUNT,plural:other} de tu mano e inflige el {%AT} de tu héroe al objetivo.\n\\---\n{value:pc,percent,+} de <b>DAÑOS</b> por {%SPELLCOUNT} descartado.",
-    "de": "Wirft alle {%SPELLCOUNT,plural:other} auf deiner Hand ab und fügt dem Ziel den {%AT,plural:one} deines Helden als Schaden zu.\n\\---\n{value:pc,percent,+} <b>SCHADEN</b> pro abgeworfenem {%SPELLCOUNT}.",
-    "pt": "Descarta todos os {%SPELLCOUNT,plural:other} da sua mão e inflige o {%AT} do seu herói ao alvo.\n\\---\n{value:pc,percent,+} de <b>DANOS</b> por {%SPELLCOUNT} descartado."
+    "fr": "Défausse tous les {%SPELLCOUNT,plural:other} de votre main et inflige {value:v,percent} de l'{%AT} de votre héros à la cible.\n\\---\n{value:pc,percent,+} de <b>DÉGÂTS</b> par {%SPELLCOUNT} défaussé.",
+    "en": "Discards all the {%SPELLCOUNT,plural:other} from your hand and inflicts {value:v,percent} of your hero's {%AT} on the target.\n\\---\n{value:pc,percent,+} <b>DAMAGE</b> per discarded {%SPELLCOUNT}.",
+    "es": "Descarta todos los {%SPELLCOUNT,plural:other} de tu mano e inflige un {value:v,percent} del {%AT} de tu héroe al objetivo.\n\\---\n{value:pc,percent,+} de <b>DAÑOS</b> por {%SPELLCOUNT} descartado.",
+    "de": "Wirft alle {%SPELLCOUNT,plural:other} auf deiner Hand ab und verursacht beim Ziel {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{value:pc,percent,+} <b>SCHADEN</b> pro abgeworfenem {%SPELLCOUNT}.",
+    "pt": "Descarta todos os {%SPELLCOUNT,plural:other} da sua mão e inflige {value:v,percent} do {%AT} do seu herói ao alvo.\n\\---\n{value:pc,percent,+} de <b>DANOS</b> por {%SPELLCOUNT} descartado."
   }
 }

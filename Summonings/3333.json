@@ -49,7 +49,13 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 100
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -118,11 +124,11 @@
     "pt": "Billy Kruger"
   },
   "description": {
-    "fr": "Lorsqu'une {#BOMB} autour\\_<sprite name=\"cell_around\"> subit une attaque\\_: Inflige son <b>AT</b> aux adversaires autour\\_<sprite name=\"cell_around\">.",
-    "en": "When a surrounding\\_<sprite name=\"cell_around\"> {#BOMB} endures an attack: Inflicts <b>AT</b> on surrounding\\_<sprite name=\"cell_around\"> opponents.",
-    "es": "Cuando una {#BOMB} de alrededor\\_<sprite name=\"cell_around\"> recibe un ataque: Inflige su <b>AT</b> a los adversarios de alrededor\\_<sprite name=\"cell_around\">.",
-    "de": "Wenn eine {#BOMB} im Umkreis\\_<sprite name=\"cell_around\"> angegriffen wird: Fügt den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> seinen <b>AT</b> als Schaden zu.",
-    "pt": "Quando uma {#BOMB} em\\_volta\\_<sprite name=\"cell_around\"> sofre um ataque: Inflige seu <b>AT</b> aos adversários em\\_volta\\_<sprite name=\"cell_around\">."
+    "fr": "Lorsqu'un personnage autour\\_<sprite name=\"cell_around\"> de {Summoning:3333!} attaque une {#BOMB}\\_: Inflige {value:p,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.",
+    "en": "When a character around\\_<sprite name=\"cell_around\"> {Summoning:3333!} attacks a {#BOMB}: Inflicts {value:p,percent} of {%AT} on surrounding\\_<sprite name=\"cell_around\"> opponents.",
+    "es": "Cuando un personaje de alrededor\\_<sprite name=\"cell_around\"> de {Summoning:3333!} ataca a una {#BOMB}: Inflige un {value:p,percent} de su {%AT} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Wenn ein Charakter im Umkreis von\\_<sprite name=\"cell_around\"> {Summoning:3333!} eine {#BOMB} angreift: Verursacht {value:p,percent} seines {%AT,plural:two} bei Gegnern in seinem Umkreis\\_<sprite name=\"cell_around\"> als Schaden.",
+    "pt": "Quando um personagem em\\_volta\\_<sprite name=\"cell_around\"> de {Summoning:3333!} ataca uma {#BOMB}: Inflige {value:p,percent} de seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele."
   },
   "championName": {
     "fr": "Ali Cramponne",

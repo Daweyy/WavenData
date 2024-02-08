@@ -49,7 +49,26 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -95,11 +114,11 @@
     "pt": "{0,plural,one[Sombra Traiçoeira] other[Sombras Traiçoeiras]}"
   },
   "description": {
-    "fr": "<if pvm>{%APPEARANCE} Gagne l'{%AT} de votre héros en {%AR,plural:other}.\\--- </if>{%ATTACK} Téléporte la cible dans son dos.",
-    "en": "<if pvm>{%APPEARANCE} Gains your hero's {%AT} as {%AR,plural:other}.\\--- </if>{%ATTACK} Teleports the target behind him.",
-    "es": "<if pvm>{%APPEARANCE} Gana el {%AT} de tu héroe en {%AR,plural:other}.\\--- </if>{%ATTACK} Teletransporta al objetivo a su espalda.",
-    "de": "<if pvm>{%APPEARANCE} Erhält den {%AT} deines Helden als {%AR}.\\---</if>{%ATTACK} Teleportiert das Ziel hinter sich.",
-    "pt": "<if pvm>{%APPEARANCE} Ganha o {%AT} do seu herói em {%AR,plural:other}.\\--- </if>{%ATTACK} Teletransporta o alvo para as suas costas."
+    "fr": "<if pvm>{%APPEARANCE} Gagne {value:v,percent} de l'{%AT} de votre héros en {%AR,plural:other}.\\--- </if>{%ATTACK} Téléporte la cible dans son dos.",
+    "en": "<if pvm>{%APPEARANCE} Gains {value:v,percent} of your hero's {%AT} as {%AR,plural:other}.\\--- </if>{%ATTACK} Teleports the target behind him.",
+    "es": "<if pvm>{%APPEARANCE} Gana un {value:v,percent} del {%AT} de tu héroe en {%AR,plural:other}.\\--- </if>{%ATTACK} Teletransporta al objetivo a su espalda.",
+    "de": "<if pvm>{%APPEARANCE} Erhält {value:v,percent} des {%AT,plural:two} deines Helden als {%AR,plural:other}.\\---</if>{%ATTACK} Teleportiert das Ziel hinter sich.",
+    "pt": "<if pvm>{%APPEARANCE} Ganha {value:v,percent} do {%AT} do seu herói em {%AR,plural:other}.\\--- </if>{%ATTACK} Teletransporta o alvo para as suas costas."
   },
   "championName": {
     "fr": "Ombre Sournoise",

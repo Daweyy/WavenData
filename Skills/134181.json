@@ -40,7 +40,26 @@
     "nonFightSkillEffects": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -56,10 +75,10 @@
     "pt": "{%CRITICAL_SKILL}"
   },
   "description": {
-    "fr": "{#critical}\\_: Soigne tous vos personnages de son {%AT}.",
-    "en": "{#critical}: Heals all your characters with {%AT}.",
-    "es": "{#critical}: Cura a todos los personajes de su {%AT}.",
-    "de": "{#critical}: Heilt alle deine Charaktere um seinen {%AT,plural:one}.",
-    "pt": "{#critical}: Cura todos os personagens de seu {%AT}."
+    "fr": "{#critical}\\_: Soigne tous vos personnages de {value:v,percent} de son {%AT}.",
+    "en": "{#critical}: Heals all your characters {value:v,percent} of her {%AT}.",
+    "es": "{#critical}: Cura a todos tus personajes un {value:v,percent} de su {%AT}.",
+    "de": "{#critical}: Heilt all deine Charaktere um {value:v,percent} ihres {%AT,plural:two}.",
+    "pt": "{#critical}: Cura todos os personagens de {value:v,percent} de seu {%AT}."
   }
 }

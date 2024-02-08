@@ -46,7 +46,9 @@
     "type": "EquipmentDefinition",
     "id": 805,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       1336,
@@ -108,11 +110,11 @@
     "pt": "Anel Joinha"
   },
   "description": {
-    "fr": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Piochez {value:x}\\_{ x, plural, one[sort] other[sorts]} supplémentaire.",
-    "en": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Draw {value:x}\\_additional { x, plural, one[spell] other[spells]}.",
-    "es": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Sacas {value:x}\\_{ x, plural, one[hechizo] other[hechizos]} más.",
-    "de": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Zieht {value:x}\\_{ x, plural, one[zusätzlichen Zauber] other[zusätzliche Zauber]}.",
-    "pt": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Compre {value:x}\\_{ x, plural, one[feitiço adicional] other[feitiços adicionais]}."
+    "fr": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Piochez {SPELLCOUNTvalue:x} supplémentaire.",
+    "en": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Draw {SPELLCOUNTvalue:x} extra.",
+    "es": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Sacas {SPELLCOUNTvalue:x} más.",
+    "de": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Zieht zusätzliche {SPELLCOUNTvalue:x}.",
+    "pt": "{#TOME} ({value:g})\n\\---\n{%FightTurnEnded} Compre {SPELLCOUNTvalue:x} {x, plural, one[adicional] other[adicionais]}."
   },
   "bgDescription": {
     "fr": "Cet anneau vous permettra de tout réussir, même si vous échouez !",

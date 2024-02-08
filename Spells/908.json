@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 908,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -92,52 +94,6 @@
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
-        {
-          "type": "RandomRangeValue",
-          "referenceId": "dmg",
-          "max": {
-            "type": "BuffedScalingDynamicValue",
-            "referenceId": "max",
-            "baseValue": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 19
-            },
-            "factor": {
-              "type": "ReferenceScalingFactor",
-              "reference": 11
-            },
-            "buffs": [
-              51
-            ],
-            "skillBuffs": [],
-            "from": {
-              "type": "CasterSelector"
-            },
-            "addInsteadOfMultiply": false
-          },
-          "min": {
-            "type": "BuffedScalingDynamicValue",
-            "referenceId": "min",
-            "baseValue": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 14
-            },
-            "factor": {
-              "type": "ReferenceScalingFactor",
-              "reference": 11
-            },
-            "buffs": [
-              51
-            ],
-            "skillBuffs": [],
-            "from": {
-              "type": "CasterSelector"
-            },
-            "addInsteadOfMultiply": false
-          }
-        },
         {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "min",

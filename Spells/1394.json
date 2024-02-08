@@ -1,0 +1,165 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1394",
+  "m_id": 1394,
+  "m_displayName": "SEASON - LOKUS - Deplacement de Portail",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1567349094,
+    "b": -512593308,
+    "c": -2005217192,
+    "d": -101127673,
+    "e": -166589744
+  },
+  "m_i18nDescriptionId": {
+    "a": -1567349094,
+    "b": -512593308,
+    "c": -2005217192,
+    "d": -101127673,
+    "e": 705398114
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d52d4cae46390824796dc35de2049e36"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d40b1ca7309afc34da980263dccde72f"
+      },
+      {
+        "assetGuid": "7f611aebb52072b4f9c5048f21adc11e"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1394,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "FloorMechanismDefinitionFilter",
+            "condition": 1,
+            "floorMechanisms": [
+              2
+            ]
+          },
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 6,
+          "id": 2
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Déplacement de Portail",
+    "en": "Portal Displacement",
+    "es": "Desplazamiento de Portal",
+    "de": "Portalverschiebung",
+    "pt": "Deslocamento de Portal"
+  },
+  "description": {
+    "fr": "Téléporte un {FloorMechanism:2} jusqu'à {cell:c}.",
+    "en": "Teleports an {FloorMechanism:2} up to {cell:c}.",
+    "es": "Teletransporta a un {FloorMechanism:2} hasta {cell:c}.",
+    "de": "Teleportiert ein {FloorMechanism:2} bis zu {cell:c} weit.",
+    "pt": "Teletransporta um {FloorMechanism:2} por até {cell:c}."
+  }
+}

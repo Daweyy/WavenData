@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 990,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -101,6 +103,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ThisSpellEvolutionValue",
           "referenceId": "Lv"
         },
@@ -123,10 +143,10 @@
     "pt": "Recurvo"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\nLorsque vous jouez le sort {Spell:552!}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {Spell:552!}\\_: {value:Lv}</rem>",
-    "en": "Inflicts your hero's {%AT}.\n\\---\nWhen you play the {Spell:552!} spell: \\v{value:pc,percent,+} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{Spell:552!} Count: {value:Lv}.</rem>",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\nCuando lanzas el hechizo {Spell:552!}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {Spell:552!}: {value:Lv}</rem>",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\nWenn du {Spell:552!} ausspielst:\\v {value:pc,percent,+} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem>{Spell:552!}-Zähler: {value:Lv}</rem>",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\nQuando você lança o feitiço {Spell:552!}:\\v {value:pc,percent,+} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {Spell:552!}: {value:Lv}</rem>"
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\nLorsque vous jouez le sort {Spell:552!}\\_:\\v {value:pc,percent,+} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {Spell:552!}\\_: {value:Lv}</rem>",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\nWhen you play the {Spell:552!} spell: \\v{value:pc,percent,+} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{Spell:552!} Count: {value:Lv}.</rem>",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\nCuando lanzas el hechizo {Spell:552!}:\\v {value:pc,percent,+} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {Spell:552!}: {value:Lv}</rem>",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\nWenn du den Zauber „{Spell:552!}“ ausspielst:\\v {value:pc,percent,+} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem>„{Spell:552!}“-Zähler: {value:Lv}</rem>",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\nQuando você lança o feitiço {Spell:552!}:\\v {value:pc,percent,+} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {Spell:552!}: {value:Lv}</rem>"
   }
 }

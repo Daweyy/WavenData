@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 82,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -104,6 +106,24 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "p",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -139,10 +159,10 @@
     "pt": "Voracidade"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%AT} de votre héros.</if><ifpvp>Inflige {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
-    "en": "<if pvm>Inflicts your hero's {%AT}.</if><ifpvp>Does {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe.</if><ifpvp>Inflige {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden als Schaden.</if><ifpvp>Verursacht {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói.</if><ifpvp>Inflige {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}"
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros.</if><ifpvp>Inflige {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT}.</if><ifpvp>Does {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe.</if><ifpvp>Inflige {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
+    "de": "<if pvm>Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.</if><ifpvp>Verursacht {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói.</if><ifpvp>Inflige {magicalDamage:p}.</if>\n\\---\n{#LIFESTEAL}"
   }
 }

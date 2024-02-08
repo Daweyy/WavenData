@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 235256,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -101,7 +103,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -117,10 +138,10 @@
     "pt": "Fulguro Punho Voldorak"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à la cible.\n\\---\n{#COMBO}\\_: Ce {%SPELLCOUNT} revient dans votre main.",
-    "en": "Inflicts your hero's {%AT} on the target.\n\\---\n{#COMBO}: This {%SPELLCOUNT} returns to your hand.",
-    "es": "Inflige el {%AT} de tu héroe al objetivo.\n\\---\n{#COMBO}: Este {%SPELLCOUNT} vuelve a tu mano.",
-    "de": "Verursacht beim Ziel den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{#COMBO}: Dieser {%SPELLCOUNT} geht zurück auf deine Hand.",
-    "pt": "Inflige o {%AT} do seu herói ao alvo.\n\\---\n{#COMBO}: Este {%SPELLCOUNT} volta para a sua mão."
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros à la cible.\n\\---\n{#COMBO}\\_: Ce {%SPELLCOUNT} revient dans votre main.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT} on the target.\n\\---\n{#COMBO}: This {%SPELLCOUNT} returns to your hand.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe al objetivo.\n\\---\n{#COMBO}: Este {%SPELLCOUNT} vuelve a tu mano.",
+    "de": "Verursacht beim Ziel {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{#COMBO}: Dieser {%SPELLCOUNT} geht zurück auf deine Hand.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói ao alvo.\n\\---\n{#COMBO}: Este {%SPELLCOUNT} volta para a sua mão."
   }
 }

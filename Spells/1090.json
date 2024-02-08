@@ -1,0 +1,197 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1090",
+  "m_id": 1090,
+  "m_displayName": "SEASON - EFRIM - Laser",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1667242045,
+    "b": -385100188,
+    "c": -1686114775,
+    "d": -791422114,
+    "e": 1764572112
+  },
+  "m_i18nDescriptionId": {
+    "a": -1667242045,
+    "b": -385100188,
+    "c": -1686114775,
+    "d": -791422114,
+    "e": -1709094058
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bc87c69354219644281e286789e09a38"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1090,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "c",
+          "axe": 0
+        },
+        "startPosition": {
+          "type": "CasterHeroSelector"
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "fd87c7cf3f2b672429250117a3c2946d",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "MapSizeValue",
+          "referenceId": "c",
+          "axe": 0
+        },
+        {
+          "type": "MultValue",
+          "referenceId": "dmg",
+          "valuesToMult": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 100
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "FloatingCounterValue",
+                  "referenceId": null,
+                  "entitySelector": {
+                    "type": "CasterHeroSelector"
+                  },
+                  "counter": {
+                    "type": "SpecificFloatingCounterType",
+                    "counterId": 214
+                  }
+                },
+                {
+                  "type": "FloatingCounterValue",
+                  "referenceId": null,
+                  "entitySelector": {
+                    "type": "CasterHeroSelector"
+                  },
+                  "counter": {
+                    "type": "SpecificFloatingCounterType",
+                    "counterId": 214
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pv",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 214
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Laser",
+    "en": "Laser",
+    "es": "Láser",
+    "de": "Laser",
+    "pt": "Laser"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires devant votre héros.\n\\---\nVotre héros perd {PVvalue:pv}.\n\\---\n<rem>Les dégats augmentent pour chaque {aura:214} que possède votre héros.</rem>",
+    "en": "Does {magicalDamage:dmg} to opponents in front of your hero.\n\\---\nYour hero loses {PVvalue:pv}.\n\\---\n<rem>The damage increases for each {aura:214} that your hero has.</rem>",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios de delante de tu héroe.\n\\---\nTu héroe pierde {PVvalue:pv}.\n\\---\n<rem>Los daños aumentan por cada {aura:214} que tenga tu héroe.</rem>",
+    "de": "Verursacht bei Gegnern vor deinem Helden {magicalDamage:dmg}.\n\\---\nDein Held verliert {PVvalue:pv}.\n\\---\n<rem>Der Schaden steigt mit jeder {aura:214}, die dein Held besitzt.</rem>",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em frente ao seu herói.\n\\---\nSeu herói perde {PVvalue:pv}.\n\\---\n<rem>Os danos aumentam por cada {aura:214} que seu herói possuir.</rem>"
+  }
+}

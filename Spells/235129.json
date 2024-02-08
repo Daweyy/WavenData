@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 235129,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -147,6 +149,24 @@
             "referenceId": null,
             "value": 1
           }
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -162,10 +182,10 @@
     "pt": "Alvo Voldorak"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à la cible.\n\\---\n{PAvalue:pa} au coût de ce {%SPELLCOUNT} par {%AURA_SIGHT} que possède votre héros.",
-    "en": "Inflicts your hero's {%AT} on the target.\n\\---\n{PAvalue:pa} to the cost of this {%SPELLCOUNT} per {%AURA_SIGHT} that your hero has.",
-    "es": "Inflige el {%AT} de héroe al objetivo.\n\\---\n{PAvalue:pa} al coste de este {%SPELLCOUNT} por {%AURA_SIGHT} que tenga tu héroe.",
-    "de": "Verursacht beim Ziel den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{PAvalue:pa} auf die Kosten dieses {%SPELLCOUNT,plural:two} pro {%AURA_SIGHT}, die dein Held besitzt.",
-    "pt": "Inflige o {%AT} do seu herói ao alvo.\n\\---\n{PAvalue:pa} ao custo do {%SPELLCOUNT} por {%AURA_SIGHT} que seu herói possuir."
+    "fr": "Inflige {value:v,percent} l'{%AT} de votre héros à la cible.\n\\---\n{PAvalue:pa} au coût de ce {%SPELLCOUNT} par {%AURA_SIGHT} que possède votre héros.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT} on the target.\n\\---\n{PAvalue:pa} to the cost of this {%SPELLCOUNT} per {%AURA_SIGHT} that your hero has.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe al objetivo.\n\\---\n{PAvalue:pa} al coste de este {%SPELLCOUNT} por {%AURA_SIGHT} que tenga tu héroe.",
+    "de": "Verursacht beim Ziel {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{PAvalue:pa} auf die Kosten dieses {%SPELLCOUNT,plural:two} pro {%AURA_SIGHT}, die dein Held besitzt.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói ao alvo.\n\\---\n{PAvalue:pa} ao custo deste {%SPELLCOUNT} por {%AURA_SIGHT} que seu herói possuir."
   }
 }

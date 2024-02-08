@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 238557,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -93,6 +95,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "d",
           "value": 35
@@ -115,10 +135,10 @@
     "pt": "Golpe Eniripsa"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros.\n\\---\nLorsque l'un de vos personnages libère une {%AURA_HEART}\\_:\\v {value:d, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur <b>AURAS LIBÉRÉES</b>\\_: {value:Lv}</rem>",
-    "en": "Inflicts your hero's {%AT}.\n\\---\nWhen one of your characters releases a {%AURA_HEART}: \\v{value:d, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem><b>RELEASED AURA</b> Count: {value:Lv}.</rem>",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\nCuando uno de tus personajes libera un {%AURA_HEART}:\\v {value:d, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador <b>AURAS LIBERADAS</b>: {value:Lv}</rem>",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\nWenn dein Held 1\\_{%AURA_HEART} auslöst:\\v {value:d, +, percent} auf den <b>SCHADEN</b> dieses Zaubers.\n\\---\n<rem>Zähler für <b>AUSGELÖSTE AUREN</b>: {value:Lv}</rem>",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\nQuando um dos seus personagens libera uma {%AURA_HEART}:\\v {value:d, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de <b>AURAS LIBERADAS</b>: {value:Lv}</rem>"
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\nLorsque l'un de vos personnages libère une {%AURA_HEART}\\_:\\v {value:d, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur <b>AURAS LIBÉRÉES</b>\\_: {value:Lv}</rem>",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\nWhen one of your characters releases a {%AURA_HEART}: \\v{value:d, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem><b>RELEASED AURA</b> Count: {value:Lv}.</rem>",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\nCuando uno de tus personajes libera un {%AURA_HEART}:\\v {value:d, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador <b>AURAS LIBERADAS</b>: {value:Lv}</rem>",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\nWenn dein Held eine\\_{%AURA_HEART} auslöst:\\v {value:d, +, percent} <b>SCHADEN</b> dieses Zaubers.\n\\---\n<rem>Zähler für <b>AUSGELÖSTE AUREN</b>: {value:Lv}</rem>",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\nQuando um dos seus personagens libera uma {%AURA_HEART}:\\v {value:d, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de <b>AURAS LIBERADAS</b>: {value:Lv}</rem>"
   }
 }

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 241024,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -126,9 +128,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "p",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -144,7 +159,7 @@
     "pt": "Liberação Shugen"
   },
   "description": {
-    "fr": "Libère vos {%AURA_TRAP,plural:other}.\n\\---\nInflige {value:p, percent} de l’{%AT} de votre héros par {%AURA_TRAP} libérée.",
+    "fr": "Libère vos {%AURA_TRAP,plural:other}.\n\\---\nInflige {value:p, percent} de l'{%AT} de votre héros par {%AURA_TRAP} libérée.",
     "en": "Releases your {%AURA_TRAP,plural:other}.\n\\---\nInflicts {value:p, percent} of your hero's {%AT} per {%AURA_TRAP} released.",
     "es": "Libera tus {%AURA_TRAP,plural:other}.\n\\---\nInflige un {value:p, percent} del {%AT} de tu héroe por {%AURA_TRAP} liberada.",
     "de": "Löst deine {%AURA_TRAP,plural:other} aus.\n\\---\nVerursacht pro ausgelöster {%AURA_TRAP} {value:p, percent} des {%AT,plural:two} deines Helden als Schaden.",

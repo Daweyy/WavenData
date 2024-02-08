@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 221,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -112,6 +114,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "percentAdd",
           "value": 50
@@ -135,7 +155,7 @@
     "pt": "Demência"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> de lui.\n\\---\n{PropertyEffect:99}\\_: {value:percentAdd,percent,+} aux <b>DÉGÂTS</b> de ce sort.",
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros autour\\_<sprite name=\"cell_around\"> de lui.\n\\---\n{PropertyEffect:99}\\_: {value:percentAdd,percent,+} aux <b>DÉGÂTS</b> de ce sort.",
     "en": "Inflicts your hero's {%power} around\\_<sprite name=\"cell_around\"> them.\n\\---\n{PropertyEffect:99}: {value:percentAdd,percent,+} to this spell's <b>DAMAGE</b>.",
     "es": "Inflige el {%power} de tu héroe a su alrededor.\n\\---\n{PropertyEffect:99}: {value:percentAdd,percent,+} a los <b>DAÑOS</b> de este hechizo.",
     "de": "Verursacht die {%power} deines Helden im Umkreis<sprite name=\"cell_around\">.\n\\---\n{PropertyEffect:99}: {value:percentAdd,percent,+} auf den <b>SCHADEN</b> dieses Zaubers.",

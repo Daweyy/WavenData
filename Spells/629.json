@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 629,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -162,6 +164,24 @@
           "valueInPvP": 5
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "dmg",
           "value": 37
@@ -180,10 +200,10 @@
     "pt": "Investida Temporal"
   },
   "description": {
-    "fr": "<if pvm>Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige son {%AT}</if><if pvp>Votre héros <b>CHARGE</b> un personnage aligné jusqu’à {cell:c} et lui inflige {magicalDamage:dmg}</if>.\n\\---\nIl revient ensuite sur sa case de début de tour.",
-    "en": "<if pvm>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts their {%AT} on them</if><if pvp>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmg} to them</if>.\n\\---\nThey then return to their start-of-turn position.",
-    "es": "<if pvm>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige su {%AT}</if><if pvp>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige {magicalDamage:dmg}</if>.\n\\---\nLuego vuelve a su casilla de inicio de turno.",
-    "de": "<if pvm>Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe bis auf {cell:c} zu und verursacht bei ihm seinen {%AT} als Schaden.</if><if pvp>Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe bis auf {cell:c} zu und verursacht bei ihm {magicalDamage:dmg}</if>.\n\\---\nAnschließend kehrt er auf sein Ausgangsfeld zu Rundenbeginn zurück.",
-    "pt": "<if pvm>Seu herói <b>INVESTE</b> contra um personagem aliado a até {cell:c} e lhe inflige seu {%AT}</if><if pvp>Seu herói <b>INVESTE</b> contra um personagem aliado a até {cell:c} e lhe inflige {magicalDamage:dmg}</if>.\n\\---\nDepois, volta para a célula em que estava no início do turno."
+    "fr": "<if pvm>Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {value:v,percent} de son {%AT}</if><if pvp>Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {magicalDamage:dmg}</if>.\n\\---\nIl revient ensuite sur sa case de début de tour.",
+    "en": "<if pvm>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and inflicts {value:v,percent} of their {%AT} on them</if><if pvp>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmg} to them</if>.\n\\---\nThey then return to their start-of-turn position.",
+    "es": "<if pvm>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige un {value:v,percent} de su {%AT}</if><if pvp>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige {magicalDamage:dmg}</if>.\n\\---\nLuego vuelve a su casilla de inicio de turno.",
+    "de": "<if pvm>Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe bis auf {cell:c} zu und verursacht bei ihm {value:v,percent} seines {%AT,plural:two} als Schaden.</if><if pvp>Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe bis auf {cell:c} zu und verursacht bei ihm {magicalDamage:dmg}</if>.\n\\---\nAnschließend kehrt er auf sein Ausgangsfeld zu Rundenbeginn zurück.",
+    "pt": "<if pvm>Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige {value:v,percent} de seu {%AT}</if><if pvp>Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige {magicalDamage:dmg}</if>.\n\\---\nDepois, volta para a célula em que estava no início do turno."
   }
 }

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 7410,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -118,7 +120,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -137,7 +158,7 @@
     "pt": "Entrave"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros à un adversaire adjacent<sprite name=\"cell_cross\"> à lui et l'{PropertyEffect:4}.",
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros à un adversaire adjacent<sprite name=\"cell_cross\"> à lui et l'{PropertyEffect:4}.",
     "en": "Inflicts your hero's {%power} on an adjacent<sprite name=\"cell_cross\"> opponent and {PropertyEffect:4} them.",
     "es": "Inflige el {%power} de tu héroe a un adversario adyacente<sprite name=\"cell_cross\"> y lo {PropertyEffect:4}.",
     "de": "Verursacht {%power} deines Helden bei einem angrenzenden <sprite name=\"cell_cross\"> Gegner und {PropertyEffect:4}.",

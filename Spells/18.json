@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 18,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -99,7 +101,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -113,10 +134,10 @@
     "pt": "Retorno da Lança"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros.\n\\---\nPiochez votre prochain sort de lance.",
-    "en": "Inflicts your hero's {%AT}.\n\\---\nDraw your next lance spell.",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\nSacas tu próximo hechizo de lanza.",
-    "de": "Verursacht den {%AT} deines Helden als Schaden.\n\\---\nZieht deinen nächsten Lanzen-Zauber.",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\nCompre seu próximo feitiço de Lança."
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\nPiochez votre prochain sort de lance.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\nDraw your next lance spell.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\nSacas tu próximo hechizo de lanza.",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\nZieht deinen nächsten Lanzen-Zauber.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\nCompre seu próximo feitiço de lança."
   }
 }

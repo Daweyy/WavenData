@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 917,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -105,9 +107,40 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "pc",
-          "value": 200
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 200
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -126,10 +159,10 @@
     "pt": "Golpe Surokan"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{#Trapper} : Inflige {value:pc,percent} de l’{%AT} de votre héros.",
-    "en": "Inflicts your hero's {%AT}.\n\\---\n{#Trapper}: Inflicts {value:pc,percent} of your hero's {%AT}.",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\n{#Trapper}: Inflige un {value:pc,percent} del {%AT} de tu héroe.",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{#Trapper}: Verursacht {value:pc,percent} des {%AT,plural:two} deines Helden als Schaden.",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\n{#Trapper}: Inflige {value:pc,percent} do {%AT} do seu herói."
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\n{#Trapper} : Inflige {value:pc,percent} de l'{%AT} de votre héros.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\n{#Trapper}: Inflicts {value:pc,percent} of your hero's {%AT}.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\n{#Trapper}: Inflige un {value:pc,percent} del {%AT} de tu héroe.",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{#Trapper}: Verursacht {value:pc,percent} des {%AT,plural:two} deines Helden als Schaden.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\n{#Trapper}: Inflige {value:pc,percent} do {%AT} do seu herói."
   }
 }

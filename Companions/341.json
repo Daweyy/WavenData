@@ -44,11 +44,6 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "c",
-          "value": 2
-        },
-        {
           "type": "LinearScaleLevelOnlyBasedDynamicValue",
           "referenceId": "dmg",
           "baseValue": 20,
@@ -56,6 +51,11 @@
             "type": "ReferenceScalingFactor",
             "reference": 11
           }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
@@ -109,7 +109,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [],
     "rarity": 0,
     "equipableByPlayers": false,

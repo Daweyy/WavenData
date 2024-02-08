@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 500,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -149,7 +151,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -163,10 +184,10 @@
     "pt": "Sacrifício Vergonhoso"
   },
   "description": {
-    "fr": "Sacrifie un personnage allié et inflige son {%at} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.",
-    "en": "Sacrifices an allied character and inflicts their {%at} on opponents around\\_<sprite name=\"cell_around\"> them.",
-    "es": "Sacrifica a un personaje aliado e inflige su {%at} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.",
-    "de": "Opfert einen verbündeten Charakter und verursacht seinen {%at,plural:one} bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> als Schaden.",
-    "pt": "Sacrifica um personagem aliado e inflige seu {%at} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele."
+    "fr": "Sacrifie un personnage allié et inflige {value:v,percent} de son {%at} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui.",
+    "en": "Sacrifices an allied character and inflicts {value:v,percent} of their {%at} on opponents around\\_<sprite name=\"cell_around\"> them.",
+    "es": "Sacrifica a un personaje aliado e inflige un {value:v,percent} de su {%at} a los adversarios a su alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Opfert einen verbündeten Charakter und verursacht {value:v,percent} seines {%at,plural:two} bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> als Schaden.",
+    "pt": "Sacrifica um personagem aliado e inflige {value:v,percent} de seu {%at} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele."
   }
 }

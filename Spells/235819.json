@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 235819,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -122,6 +124,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": 1
@@ -140,10 +160,10 @@
     "pt": "Alvo Jikan"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros aux adversaires ayant un état élémentaire.\n\\---\n{PA_RESvalue:pa,+} par état retiré.",
-    "en": "Inflicts your hero's {%AT} on opponents that have an elemental state.\n\\---\n{PA_RESvalue:pa,+} per state removed.",
-    "es": "Inflige el {%AT} de tu héroe a los adversarios que tengan un estado elemental.\n\\---\n{PA_RESvalue:pa,+} por estado retirado.",
-    "de": "Fügt den Gegnern mit einem Elementarzustand den {%AT,plural:one} deines Helden als Schaden zu.\n\\---\n{PA_RESvalue:pa,+} pro entferntem Zustand.",
-    "pt": "Inflige o {%AT} do seu herói aos adversários que tiverem um estado elementar.\n\\---\n{PA_RESvalue:pa,+} por estado retirado."
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros aux adversaires ayant un état élémentaire.\n\\---\n{PA_RESvalue:pa,+} par état retiré.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT} on opponents that have an elemental state.\n\\---\n{PA_RESvalue:pa,+} per state removed.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe a los adversarios que tengan un estado elemental.\n\\---\n{PA_RESvalue:pa,+} por estado retirado.",
+    "de": "Verursacht bei den Gegnern mit einem Elementarzustand {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{PA_RESvalue:pa,+} pro entferntem Zustand.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói aos adversários que tiverem um estado elementar.\n\\---\n{PA_RESvalue:pa,+} por estado retirado."
   }
 }

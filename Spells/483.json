@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 483,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -93,6 +95,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "f",
           "value": 5
@@ -120,10 +140,10 @@
     "pt": "Punição Eniripsa"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros et soigne vos personnages d'autant\n\\---\nLorsque vous déclenchez un <b>SOIN</b> : \\v{value:p, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur <b>SOINS</b> : {value:Lv}</rem>",
-    "en": "Inflicts your hero's {%AT} and heals your characters the same amount.\n\\---\nWhen you trigger a <b>HEAL</b>: \\v{value:p, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem><b>HEAL</b> Count: {value:Lv}.</rem>",
-    "es": "Inflige el {%AT} de tu héroe y cura a tus personajes otro tanto\n\\---\nCuando activas una <b>CURA</b>: \\v{value:p, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador <b>CURAS</b>: {value:Lv}</rem>",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden und heilt deine Charaktere um dieselbe Menge.\n\\---\nWenn du eine <b>HEILUNG</b> auslöst:\\v {value:p, +, percent} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem><b>HEILUNGS</b>-Zähler: {value:Lv}</rem>",
-    "pt": "Inflige o {%AT} do seu herói e cura seus personagens na mesma quantidade.\n\\---\nAo acionar uma <b>CURA</b>: \\v{value:p, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de <b>CURAS</b>: {value:Lv}</rem>"
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros et soigne vos personnages d'autant\n\\---\nLorsque vous déclenchez un <b>SOIN</b>: \\v{value:p, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur <b>SOINS</b> : {value:Lv}</rem>",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT} and heals your characters the same amount.\n\\---\nWhen you trigger a <b>HEAL</b>: \\v{value:p, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem><b>HEAL</b> Count: {value:Lv}.</rem>",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe y cura a tus personajes otro tanto.\n\\---\nCuando activas una <b>CURA</b>: \\v{value:p, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador <b>CURAS</b>: {value:Lv}</rem>",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden und heilt deine Charaktere um dieselbe Menge.\n\\---\nWenn du eine <b>HEILUNG</b> auslöst:\\v {value:p, +, percent} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem><b>HEILUNGS</b>-Zähler: {value:Lv}</rem>",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói e cura seus personagens na mesma proporção.\n\\---\nAo acionar uma <b>CURA</b>: \\v{value:p, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de <b>CURAS</b>: {value:Lv}</rem>"
   }
 }

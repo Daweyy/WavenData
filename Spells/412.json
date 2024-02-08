@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 412,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -123,6 +125,24 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -160,10 +180,10 @@
     "pt": "Roubo de Vida Murai"
   },
   "description": {
-    "fr": "<if pvm>Inflige l’{%AT} de votre héros à un adversaire adjacent\\_<sprite name=\"cell_cross\">.</if><if pvp>Inflige {magicalDamage:dmg}  à un adversaire adjacent\\_<sprite name=\"cell_cross\">.</if>\n\\---\n{#Trapper} : {#Lifesteal}",
-    "en": "<if pvm>Inflicts your hero's {%AT} on an adjacent\\_<sprite name=\"cell_cross\"> opponent.</if><if pvp>Does {magicalDamage:dmg} to an adjacent\\_<sprite name=\"cell_cross\"> opponent.</if>\n\\---\n{#Trapper}: {#Lifesteal}.",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe a un adversario adyacente\\_<sprite name=\"cell_cross\">.</if><if pvp>Inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\">.</if>\n\\---\n{#Trapper}: {#Lifesteal}",
-    "de": "<if pvm>Verursacht den {%AT} deines Helden bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg} bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner.</if>\n\\---\n{#Trapper}: {#Lifesteal}",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói a um adversário adjacente\\_<sprite name=\"cell_cross\">.</if><if pvp>Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\">.</if>\n\\---\n{#Trapper}: {#Lifesteal}"
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros à un adversaire adjacent\\_<sprite name=\"cell_cross\">.</if><if pvp>Inflige {magicalDamage:dmg}  à un adversaire adjacent\\_<sprite name=\"cell_cross\">.</if>\n\\---\n{#Trapper} : {#Lifesteal}",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT} on an adjacent\\_<sprite name=\"cell_cross\"> opponent.</if><if pvp>Does {magicalDamage:dmg} to an adjacent\\_<sprite name=\"cell_cross\"> ally.</if>\n\\---\n{#Trapper}: {#Lifesteal}.",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe a un adversario adyacente\\_<sprite name=\"cell_cross\">.</if><if pvp>Inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\">.</if>\n\\---\n{#Trapper}: {#Lifesteal}",
+    "de": "<if pvm>Verursacht {value:v,percent} des {%AT,plural:two} deines Helden bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg} bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Gegner.</if>\n\\---\n{#Trapper}: {#Lifesteal}",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói a um adversário adjacente\\_<sprite name=\"cell_cross\">.</if><if pvp>Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\">.</if>\n\\---\n{#Trapper}: {#Lifesteal}"
   }
 }

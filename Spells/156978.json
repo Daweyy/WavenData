@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 156978,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": null,
@@ -91,7 +93,13 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -110,10 +118,10 @@
     "pt": "Tempo Morto"
   },
   "description": {
-    "fr": "Piochez un {%SPELLCOUNT} pour chaque {aura:113,plural:one} que la cible possède.\n\\---\nConsomme toutes ses {%KEYWORD.AURA.NAME,plural:other}.",
-    "en": "Draw one {%SPELLCOUNT} for each\\_{aura:113,plural:one} that the target has.\n\\---\nConsumes all their {%KEYWORD.AURA.NAME,plural:other}.",
-    "es": "Sacas un {%SPELLCOUNT} por cada {aura:113,plural:one} que tenga el objetivo.\n\\---\nConsume todas sus {%KEYWORD.AURA.NAME,plural:other}.",
-    "de": "Zieht einen {%SPELLCOUNT} für jede {aura:113,plural:one}, die das Ziel besitzt.\n\\---\nVerbraucht alle seine {%KEYWORD.AURA.NAME,plural:other}.",
-    "pt": "Compre um {%SPELLCOUNT} por cada {aura:113,plural:one} que o alvo possuir.\n\\---\nConsome todas as {%KEYWORD.AURA.NAME,plural:other}."
+    "fr": "Piochez {SPELLCOUNTvalue:v} pour chaque {aura:113,plural:one} que la cible possède.\n\\---\nConsomme toutes ses {%KEYWORD.AURA.NAME,plural:other}.",
+    "en": "Draw {SPELLCOUNTvalue:v} for each\\_{aura:113,plural:one} that the target has.\n\\---\nConsumes all the target's {%KEYWORD.AURA.NAME,plural:other}.",
+    "es": "Sacas {SPELLCOUNTvalue:v} por cada {aura:113,plural:one} que tenga el objetivo.\n\\---\nConsume todas sus {%KEYWORD.AURA.NAME,plural:other}.",
+    "de": "Zieht {SPELLCOUNTvalue:v} für jede {aura:113,plural:one}, die das Ziel besitzt.\n\\---\nVerbraucht all seine {%KEYWORD.AURA.NAME,plural:other}.",
+    "pt": "Compre {SPELLCOUNTvalue:v} por cada {aura:113,plural:one} que o alvo possuir.\n\\---\nConsome todas as suas {%KEYWORD.AURA.NAME,plural:other}."
   }
 }

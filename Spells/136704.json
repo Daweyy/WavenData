@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 136704,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -78,9 +80,10 @@
           "referenceId": "",
           "valuesToSum": [
             {
-              "type": "ConstIntegerValue",
+              "type": "PvmOrPvpConstIntegerValue",
               "referenceId": null,
-              "value": 5
+              "valueInPvM": 5,
+              "valueInPvP": 6
             },
             {
               "type": "ConditionalValue",
@@ -179,6 +182,24 @@
           "value": -3
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "dmg",
           "value": 20
@@ -199,10 +220,10 @@
     "pt": "Equinócio"
   },
   "description": {
-    "fr": "<if pvm>Inflige l'{%AT} de votre héros aux adversaires autour\\_<sprite name=\"cell_around\"> de lui  ou d'un vos <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de lui  ou d'un vos <b>SINISTROS</b>.</if>\n\\---\n{#CHRONO}\\_: {PAvalue:r} au coût de ce {%SPELLCOUNT}.",
-    "en": "<if pvm>Inflicts your hero's {%AT} on opponents around\\_<sprite name=\"cell_around\"> them or one of your <b>SINISTROS</b>.</if><if pvp>Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> them or one of your <b>SINISTROS</b>.</if>\n\\---\n{#CHRONO}: {PAvalue:r} to the cost of this {%SPELLCOUNT}.",
-    "es": "<if pvm>Inflige el {%AT} de tu héroe a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de él o de uno de tus <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de él o de uno de tus <b>SINISTROS</b>.</if>\n\\---\n{#CHRONO}: {PAvalue:r} al coste de este {%SPELLCOUNT}.",
-    "de": "<if pvm>Verursacht bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner <b>SINISTROS</b> den {%AT} deines Helden als Schaden.</if><if pvp>Verursacht bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner <b>SINISTROS</b> {magicalDamage:dmg}.</if>\n\\---\n{#CHRONO}: {PAvalue:r} auf die Kosten dieses {%SPELLCOUNT,plural:two}.",
-    "pt": "<if pvm>Inflige o {%AT} do seu herói aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele ou de um dos seus <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele ou de um dos seus <b>SINISTROS</b>.</if>\n\\---\n{#CHRONO}: {PAvalue:r} ao custo deste {%SPELLCOUNT}."
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros aux adversaires autour\\_<sprite name=\"cell_around\"> de lui ou d'un vos {%SINISTRO,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros ou d'un vos {%SINISTRO,plural:other}.</if>\n\\---\n{#CHRONO}\\_: {PAvalue:r} au coût de ce {%SPELLCOUNT}.",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT} on opponents around\\_<sprite name=\"cell_around\"> them or one of your {%SINISTRO,plural:other}.</if><if pvp>Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero or one of your {%SINISTRO,plural:other}.</if>\n\\---\n{#CHRONO}: {PAvalue:r} to the cost of this {%SPELLCOUNT}.",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de él o de uno de tus {%SINISTRO,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe o de uno de tus {%SINISTRO,plural:other}.</if>\n\\---\n{#CHRONO}: {PAvalue:r} al coste de este {%SPELLCOUNT}.",
+    "de": "<if pvm>Verursacht bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner {%SINISTRO,plural:other} {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner {%SINISTRO,plural:other} {magicalDamage:dmg}.</if>\n\\---\n{#CHRONO}: {PAvalue:r} auf die Kosten dieses {%SPELLCOUNT,plural:two}.",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele ou de um dos seus {%SINISTRO,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói ou de um dos seus {%SINISTRO,plural:other}.</if>\n\\---\n{#CHRONO}: {PAvalue:r} ao custo deste {%SPELLCOUNT}."
   }
 }

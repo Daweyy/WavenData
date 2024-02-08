@@ -46,6 +46,24 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "arPVP",
           "value": 5
@@ -101,7 +119,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       1272,
       2471,
@@ -218,10 +238,10 @@
     "pt": "Ashmal"
   },
   "description": {
-    "fr": "<if pvm>{%appearance} Confère l'{%AT} de ce compagnon en {%AR} à votre héros.</if><if pvp>{%AT}: {ARvalue:arPVP,+} et soigne votre héros de {PVvalue:healPVP}</if>",
-    "en": "<if pvm>{%appearance} Confers this companion's {%AT} as {%AR} on your hero.</if><if pvp>{%AT}: {ARvalue:arPVP,+} and heals your hero {PVvalue:healPVP}.</if>",
-    "es": "<if pvm>{%appearance} Confiere el {%AT} de este compañero en {%AR} a tu héroe.</if><if pvp>{%AT}: {ARvalue:arPVP,+} y cura a tu héroe {PVvalue:healPVP}</if>",
-    "de": "<if pvm>{%appearance} Gewährt deinem Helden den {%AT} dieses Begleiters als {%AR}.</if><if pvp>{%AT}: {ARvalue:arPVP,+} und heilt deinen Helden um {PVvalue:healPVP}.</if>",
-    "pt": "<if pvm>{%appearance} Concede o {%AT} deste companheiro em {%AR} ao seu herói.</if><if pvp>{%AT}: {ARvalue:arPVP,+} e cura {PVvalue:healPVP} do seu herói.</if>"
+    "fr": "<if pvm>{%appearance} Confère {value:v,percent} de l'{%AT} de ce compagnon en {%AR} à votre héros.</if><if pvp>{%Attack} {ARvalue:arPVP,+} et {PVvalue:healPVP,+} à votre héros.</if>",
+    "en": "<if pvm>{%appearance} Confers {value:v,percent} of this companion's {%AT} as {%AR} on your hero.</if><if pvp>{%Attack} {ARvalue:arPVP,+} and {PVvalue:healPVP,+} to your hero.</if>",
+    "es": "<if pvm>{%appearance} Confiere un {value:v,percent} del {%AT} de este compañero en {%AR} a tu héroe.</if><if pvp>{%Attack} {ARvalue:arPVP,+} y {PVvalue:healPVP,+} a tu héroe.</if>",
+    "de": "<if pvm>{%appearance} Verleiht deinem Helden {value:v,percent} des {%AT,plural:two} dieses Begleiters als {%AR}.</if><if pvp>{%Attack} {ARvalue:arPVP,+} und {PVvalue:healPVP,+} für deinen Helden.</if>",
+    "pt": "<if pvm>{%appearance} Concede {value:v,percent} do {%AT} deste companheiro em {%AR} ao seu herói.</if><if pvp>{%Attack} {ARvalue:arPVP,+} e {PVvalue:healPVP,+} ao seu herói.</if>"
   }
 }

@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 657,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -104,7 +106,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -121,10 +142,10 @@
     "pt": "Esfolamento Astral"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_ : Applique <b>ASTRAL</b>\\_<sprite name=\"astral\">.",
-    "en": "Inflicts your hero's {%AT}.\n\\---\n{#TRAPPER}: Applies <b>ASTRAL</b>\\_<sprite name=\"astral\">.",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\n{#TRAPPER}: Aplica <b>ASTRAL</b>\\_<sprite name=\"astral\">.",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\n{#TRAPPER}: Wendet <b>ASTRAL</b>\\_<sprite name=\"astral\"> an.",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\n{#TRAPPER}: Aplica <b>ASTRAL</b>\\_<sprite name=\"astral\">."
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\n{#TRAPPER}\\_ : Applique <b>ASTRAL</b>\\_<sprite name=\"astral\">.",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\n{#TRAPPER}: Applies <b>ASTRAL</b>\\_<sprite name=\"astral\">.",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\n{#TRAPPER}: Aplica <b>ASTRAL</b>\\_<sprite name=\"astral\">.",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\n{#TRAPPER}: Wendet <b>ASTRAL</b>\\_<sprite name=\"astral\"> an.",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\n{#TRAPPER}: Aplica <b>ASTRAL</b>\\_<sprite name=\"astral\">."
   }
 }

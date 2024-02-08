@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 236868,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -93,8 +95,26 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "ConstIntegerValue",
-          "referenceId": "p",
+          "referenceId": "g",
           "value": 25
         },
         {
@@ -120,10 +140,10 @@
     "pt": "Acumulação"
   },
   "description": {
-    "fr": "Inflige l’{%AT} de votre héros.\n\\---\nLorsque vous déclenchez {NamedEffect:455}\\_:\\v {value:p, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {NamedEffect:455} : {value:Lv}</rem>",
-    "en": "Inflicts your hero's {%AT}.\n\\---\nWhen you trigger {NamedEffect:455}: \\v{value:p, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{NamedEffect:455} Count: {value:Lv}.</rem>",
-    "es": "Inflige el {%AT} de tu héroe.\n\\---\nCuando activas {NamedEffect:455}:\\v {value:p, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {NamedEffect:455}: {value:Lv}</rem>",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden.\n\\---\nWenn du {NamedEffect:455} auslöst:\\v {value:p, +, percent} auf den <b>SCHADEN</b> dieses Zaubers.\n\\---\n<rem>{NamedEffect:455}-Zähler: {value:Lv}</rem>",
-    "pt": "Inflige o {%AT} do seu herói.\n\\---\nQuando você aciona {NamedEffect:455}:\\v {value:p, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {NamedEffect:455}: {value:Lv}</rem>"
+    "fr": "Inflige {value:v,percent} de l'{%AT} de votre héros.\n\\---\nLorsque vous déclenchez {NamedEffect:455}\\_:\\v {value:g, +, percent} aux <b>DÉGÂTS</b> de ce sort.\n\\---\n<rem>Compteur {NamedEffect:455} : {value:Lv}</rem>",
+    "en": "Inflicts {value:v,percent} of your hero's {%AT}.\n\\---\nWhen you trigger {NamedEffect:455}: \\v{value:g, +, percent} to this spell's <b>DAMAGE</b>.\n\\---\n<rem>{NamedEffect:455} Count: {value:Lv}.</rem>",
+    "es": "Inflige un {value:v,percent} del {%AT} de tu héroe.\n\\---\nCuando activas {NamedEffect:455}:\\v {value:g, +, percent} a los <b>DAÑOS</b> de este hechizo.\n\\---\n<rem>Contador {NamedEffect:455}: {value:Lv}</rem>",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} deines Helden als Schaden.\n\\---\nWenn du {NamedEffect:455} auslöst:\\v {value:g, +, percent} <b>SCHADEN</b> für diesen Zauber.\n\\---\n<rem>{NamedEffect:455}-Zähler: {value:Lv}</rem>",
+    "pt": "Inflige {value:v,percent} do {%AT} do seu herói.\n\\---\nQuando você aciona {NamedEffect:455}:\\v {value:g, +, percent} aos <b>DANOS</b> deste feitiço.\n\\---\n<rem>Contador de {NamedEffect:455}: {value:Lv}</rem>"
   }
 }

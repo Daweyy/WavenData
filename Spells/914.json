@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 914,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [],
     "upgradeRuleId": 247,
@@ -123,7 +125,26 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -137,10 +158,10 @@
     "pt": "Voluntário Escolhido"
   },
   "description": {
-    "fr": "Sacrifie un allié.\n\\---\nVotre héros gagne l'{%AT} de la cible en {%AR}.",
-    "en": "Sacrifices an ally.\n\\---\nYour hero gains the target's {%AT} as {%AR}.",
-    "es": "Sacrifica a un aliado.\n\\---\nTu héroe gana el {%AT} del objetivo en {%AR}.",
-    "de": "Opfert einen Verbündeten.\n\\---\nDein Held erhält den {%AT} des Ziels als {%AR}.",
-    "pt": "Sacrifica um aliado.\n\\---\nSeu herói ganho o {%AT} do alvo em {%AR}."
+    "fr": "Sacrifie un allié.\n\\---\nVotre héros gagne {value:v,percent} de l'{%AT} de la cible en {%AR}.",
+    "en": "Sacrifices an ally.\n\\---\nYour hero gains {value:v,percent} of the target's {%AT} as {%AR}.",
+    "es": "Sacrifica a un aliado.\n\\---\nTu héroe gana un {value:v,percent} del {%AT} del objetivo en {%AR}.",
+    "de": "Opfert einen Verbündeten.\n\\---\nDein Held erhält {value:v,percent} des {%AT,plural:two} des Ziels als {%AR}.",
+    "pt": "Sacrifica um aliado.\n\\---\nSeu herói ganha {value:v,percent} do {%AT} do alvo em {%AR}."
   }
 }

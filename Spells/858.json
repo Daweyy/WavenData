@@ -39,7 +39,9 @@
     "type": "SpellDefinition",
     "id": 858,
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "rarity": 0,
     "unlockableSkillIds": [
       2105,
@@ -222,7 +224,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 11
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -265,10 +267,10 @@
     "pt": "Cronofagia"
   },
   "description": {
-    "fr": "<if pvm>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'un de vos <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> de votre héros ou d'un de vos <b>SINISTROS</b>.</if>\n\\---\n{#REWIND}",
-    "en": "<if pvm>Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> one of your <b>SINISTROS</b>.</if><if pvp> Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> your hero or one of your <b>SINISTROS</b>.</if>\n\\---\n{#REWIND}",
-    "es": "<if pvm>Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de uno de tus <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de tu héroe o de uno de tus <b>SINISTROS</b>.</if>\n\\---\n{#REWIND}",
-    "de": "<if pvm>Verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> eines deiner <b>SINISTROS</b>.</if><if pvp>Verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner <b>SINISTROS</b>.</if>\n\\---\n{#REWIND}",
-    "pt": "<if pvm>Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> de um dos seus <b>SINISTROS</b>.</if><if pvp>Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> do seu herói ou de um dos seus <b>SINISTROS</b>.</if>\n\\---\n{#REWIND}"
+    "fr": "<if pvm>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> d'un de vos {%SINISTRO,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"> de votre héros ou d'un de vos {%SINISTRO,plural:other}.</if>\n\\---\n{#REWIND}",
+    "en": "<if pvm>Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> one of your {%SINISTRO,plural:other}.</if><if pvp> Does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"> your hero or one of your {%SINISTRO,plural:other}.</if>\n\\---\n{#REWIND}",
+    "es": "<if pvm>Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de uno de tus {%SINISTRO,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"> de tu héroe o de uno de tus {%SINISTRO,plural:other}.</if>\n\\---\n{#REWIND}",
+    "de": "<if pvm>Verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> eines deiner {%SINISTRO,plural:other}.</if><if pvp>Verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> deines Helden oder eines deiner {%SINISTRO,plural:other}.</if>\n\\---\n{#REWIND}",
+    "pt": "<if pvm>Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> de um dos seus {%SINISTRO,plural:other}.</if><if pvp>Inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> do seu herói ou de um dos seus {%SINISTRO,plural:other}.</if>\n\\---\n{#REWIND}"
   }
 }

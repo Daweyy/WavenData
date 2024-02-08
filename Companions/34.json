@@ -44,9 +44,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "x",
-          "value": 5
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "factor": null,
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "ConstIntegerValue",
@@ -66,7 +79,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 110,
-      "valueInPvP": 98
+      "valueInPvP": 92
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -77,7 +90,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 25,
-      "valueInPvP": 28
+      "valueInPvP": 26
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -99,7 +112,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       711,
       2317,

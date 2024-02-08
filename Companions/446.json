@@ -45,15 +45,29 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "PvmOrPvpConstIntegerValue",
+          "type": "ConstIntegerValue",
           "referenceId": "v",
-          "valueInPvM": 10,
-          "valueInPvP": 14
+          "value": 10
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "vPVP",
+          "value": 50
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "g",
+          "value": 9
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "keyword": "JAUGE"
+        }
+      ]
     },
     "families": [
       104
@@ -63,7 +77,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 102,
-      "valueInPvP": 103
+      "valueInPvP": 98
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -74,7 +88,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 20,
-      "valueInPvP": 22
+      "valueInPvP": 24
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -96,7 +110,9 @@
     },
     "spells": [],
     "merchantCosts": [],
-    "premiumItem": false,
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
     "unlockableSkillIds": [
       3588,
       3152,
@@ -222,10 +238,10 @@
     "pt": "Biste"
   },
   "description": {
-    "fr": "Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v {ATvalue:v,percent,+} par {%GAUGE} générée.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "en": "When you generate {%GAUGE, plural:other}: \\v{ATvalue:v,percent,+} per {%GAUGE} generated.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "es": "Cuando generas {%GAUGE, plural:other}:\\v {ATvalue:v,percent,+} por {%GAUGE} generado.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "de": "Wenn du {%GAUGE, plural:other} generierst:\\v {ATvalue:v,percent,+} pro generiertem {%GAUGE}.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "pt": "Quando você gera {%GAUGE, plural:other}:\\v {ATvalue:v,percent,+} por {%GAUGE} gerada.\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+    "fr": "<if pvm>Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v {ATvalue:v,percent,+} par {%GAUGE} générée.</if><if pvp>{#Jauge}\\_({value:g}) et {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "<if pvm>When you generate {%GAUGE, plural:other}:\\v{ATvalue:v,percent,+} per {%GAUGE} generated.</if><if pvp>{#Jauge}\\_({value:g})\\_and {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "<if pvm>Cuando generas {%GAUGE, plural:other}:\\v {ATvalue:v,percent,+} por {%GAUGE} generado.</if><if pvp>{#Jauge}\\_({value:g}) y {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "<if pvm>Wenn du {%GAUGE, plural:other} generierst:\\v {ATvalue:v,percent,+} pro generiertem {%GAUGE}.</if><if pvp>{#Jauge}\\_({value:g}) und {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "<if pvm>Quando você gera {%GAUGE, plural:other}:\\v {ATvalue:v,percent,+} por {%GAUGE} gerada.</if><if pvp>{#Jauge}\\_({value:g}) e {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>"
   }
 }

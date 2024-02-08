@@ -1,0 +1,133 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "374",
+  "m_id": 374,
+  "m_displayName": "SEASON - LOKUS - Embuscade de Portail",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 87258767,
+    "b": -1094335548,
+    "c": -983388824,
+    "d": 1154420239,
+    "e": -533637997
+  },
+  "m_i18nDescriptionId": {
+    "a": 87258767,
+    "b": -1094335548,
+    "c": -983388824,
+    "d": 1154420239,
+    "e": 2084137626
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2da13a47d2450da4a94e0eba58bbb49e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 374,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c53107f74b1b931438a5bcec83c30a74",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 6,
+          "id": 2
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Embuscade de Portail",
+    "en": "Portal Ambush",
+    "es": "Emboscada de Portal",
+    "de": "Portal-Hinterhalt",
+    "pt": "Emboscada de Portal"
+  },
+  "description": {
+    "fr": "{PMvalue:pm} pour le tour à la cible par {FloorMechanism:2} aligné à elle.",
+    "en": "{PMvalue:pm} to the target for the turn per {FloorMechanism:2} in-line with the target.",
+    "es": "{PMvalue:pm} durante el turno al objetivo por {FloorMechanism:2} alineado con él.",
+    "de": "{PMvalue:pm} für das Ziel für die Runde pro {FloorMechanism:2} in derselben Reihe.",
+    "pt": "{PMvalue:pm} ao alvo durante o turno por {FloorMechanism:2} alinhado com ele."
+  }
+}
