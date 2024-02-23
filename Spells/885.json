@@ -107,31 +107,34 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
-            },
-            "distance": {
-              "type": "Between",
-              "minIncluded": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
               },
-              "maxIncluded": {
-                "type": "MapSizeValue",
-                "referenceId": null,
-                "axe": 0
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
               }
             }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
-          }
-        ]
+          ]
+        },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": "",
+          "axe": 0
+        },
+        "startPosition": {
+          "type": "CasterHeroSelector"
+        }
       }
     },
     "spellEffectData": [

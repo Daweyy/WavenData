@@ -104,13 +104,25 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "baseValue": 40,
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 40
+          },
           "factor": {
             "type": "ReferenceScalingFactor",
             "reference": 12
-          }
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

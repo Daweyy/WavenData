@@ -135,6 +135,58 @@
           "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 3
+        },
+        {
+          "type": "PercentageOfValue",
+          "referenceId": "dmg",
+          "percentage": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": "v",
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 100
+            },
+            "factor": null,
+            "buffs": [
+              51
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
+          },
+          "from": {
+            "type": "CharacterActionValue",
+            "referenceId": null,
+            "entitySelector": {
+              "type": "EffectHolderSelector"
+            }
+          }
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "h",
+          "value": 50
         }
       ],
       "externalDynamicValueReferences": [],

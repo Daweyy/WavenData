@@ -58,22 +58,20 @@
           "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
-            "referenceId": "",
+            "referenceId": null,
             "value": 5
           },
           "factor": {
-            "type": "CustomScalingFactor",
-            "computer": {
-              "type": "LinearScalingFactorComputer",
-              "scale": 0.03
-            }
+            "type": "ReferenceScalingFactor",
+            "reference": 0
           },
           "buffs": [
-            88
+            88,
+            25
           ],
           "skillBuffs": [],
           "from": {
-            "type": "CasterSelector"
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
         }

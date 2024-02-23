@@ -126,9 +126,22 @@
             "addInsteadOfMultiply": false
           },
           "pvp": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 100
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": null,
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 100
+            },
+            "factor": null,
+            "buffs": [
+              51
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "CasterSelector"
+            },
+            "addInsteadOfMultiply": false
           }
         }
       ],

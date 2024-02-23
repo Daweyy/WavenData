@@ -40,6 +40,36 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "PercentageOfValue",
+          "referenceId": "d",
+          "percentage": {
+            "type": "BuffedScalingDynamicValue",
+            "referenceId": null,
+            "baseValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 100
+            },
+            "factor": null,
+            "buffs": [
+              51,
+              40
+            ],
+            "skillBuffs": [],
+            "from": {
+              "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+            },
+            "addInsteadOfMultiply": false
+          },
+          "from": {
+            "type": "CharacterActionValue",
+            "referenceId": null,
+            "entitySelector": {
+              "type": "EffectHolderSelector"
+            }
+          }
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "v",
           "value": 2

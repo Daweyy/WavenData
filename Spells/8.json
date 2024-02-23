@@ -72,9 +72,41 @@
         "type": "GaugeValue",
         "element": 11,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "SumValue",
           "referenceId": "",
-          "value": 2
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 2
+            },
+            {
+              "type": "ConditionalValue",
+              "referenceId": "",
+              "condition": {
+                "type": "AndCondition",
+                "conditions": [
+                  {
+                    "type": "ThisSpellHasSkillCondition",
+                    "skillId": 649
+                  },
+                  {
+                    "type": "ContextIsCriticalCondition"
+                  }
+                ]
+              },
+              "ifTrue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "d2",
+                "value": 1
+              },
+              "ifFalse": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          ]
         }
       }
     ],
@@ -110,6 +142,11 @@
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 1
+        },
         {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
@@ -155,11 +192,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "d1",
           "value": 30
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "d2",
-          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],

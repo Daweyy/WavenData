@@ -44,13 +44,29 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "LinearScaleLevelOnlyBasedDynamicValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
-          "baseValue": 20,
+          "baseValue": {
+            "type": "LinearScaleLevelOnlyBasedDynamicValue",
+            "referenceId": null,
+            "baseValue": 20,
+            "factor": {
+              "type": "ReferenceScalingFactor",
+              "reference": 18
+            }
+          },
           "factor": {
             "type": "ReferenceScalingFactor",
-            "reference": 18
-          }
+            "reference": 12
+          },
+          "buffs": [
+            49
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "BuffedScalingDynamicValue",
