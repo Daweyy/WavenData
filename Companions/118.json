@@ -44,17 +44,76 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ClampValue",
+          "referenceId": "bonus",
+          "valueToClamp": {
+            "type": "MultValue",
+            "referenceId": null,
+            "valuesToMult": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "pc",
+                "value": 20
+              },
+              {
+                "type": "DivideValue",
+                "referenceId": null,
+                "numerator": {
+                  "type": "EntityCaracValue",
+                  "referenceId": null,
+                  "entitySelector": {
+                    "type": "OwnerOfSelector",
+                    "selector": {
+                      "type": "EffectHolderSelector"
+                    }
+                  },
+                  "carac": 21
+                },
+                "denominator": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "f",
+                  "value": 4
+                },
+                "defaultValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                },
+                "roundMethod": 2
+              }
+            ]
+          },
+          "min": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          },
+          "max": {
+            "type": "ConstIntegerValue",
+            "referenceId": "max",
+            "value": 100
+          }
+        },
+        {
           "type": "ConstIntegerValue",
-          "referenceId": "x",
-          "value": -1
+          "referenceId": "pc",
+          "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "f",
+          "value": 4
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "max",
+          "value": 100
         }
       ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": [
-        "DEUIL",
-        "STREAMOFSOULS",
-        "NECROMIQUE_HEROS"
+        "FESTIN"
       ]
     },
     "families": [
@@ -64,7 +123,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "value": 130
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -74,10 +133,14 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 20
+      "value": 30
     },
     "riposte": null,
-    "actionCriticalChance": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
@@ -104,11 +167,11 @@
       160
     ],
     "rarity": 4,
-    "equipableByPlayers": false,
+    "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "Available"
+      "type": "Hidden"
     },
-    "upgradeRuleId": null,
+    "upgradeRuleId": 36,
     "castCondition": {
       "type": "CanCastCompanionCondition",
       "specificEntity": {
@@ -194,40 +257,9 @@
         "type": "ElementPointsCost",
         "element": 57,
         "value": {
-          "type": "SumValue",
+          "type": "ConstIntegerValue",
           "referenceId": "",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 7
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "x",
-                  "value": -1
-                },
-                {
-                  "type": "CompanionsInReserveValue",
-                  "referenceId": "",
-                  "playerSelector": {
-                    "type": "OwnerOfSelector",
-                    "selector": {
-                      "type": "EffectHolderSelector"
-                    }
-                  },
-                  "companionState": [
-                    2,
-                    3
-                  ]
-                }
-              ]
-            }
-          ]
+          "value": 6
         }
       }
     ],
@@ -235,17 +267,17 @@
     "gatheringAbilities": []
   },
   "name": {
-    "fr": "Toross, Roi des Necromes",
-    "en": "Toross, Necro King",
-    "es": "Toross, Rey de los Nécromos",
-    "de": "Toross, König der Nekromen",
-    "pt": "Toross, Rei dos Necromos"
+    "fr": "Toross Mordal",
+    "en": "Toross Mordal",
+    "es": "Toross Mordal",
+    "de": "Toross Mordal",
+    "pt": "Toross Mordal"
   },
   "description": {
-    "fr": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%attack} Déclenche {#STREAMOFSOULS}.\n\\---\n{#DEUIL}\\_: {NEUTRALGAUGEvalue:x,+} au coût de ce compagnon.",
-    "en": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%attack} Triggers {#STREAMOFSOULS}.\n\\---\n{#DEUIL}: {NEUTRALGAUGEvalue:x,+} to the cost of this companion.",
-    "es": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%attack} Activa {#STREAMOFSOULS}.\n\\---\n{#DEUIL}: {NEUTRALGAUGEvalue:x,+} al coste de este compañero.",
-    "de": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%attack} Löst {#STREAMOFSOULS} aus.\n\\---\n{#DEUIL}: {NEUTRALGAUGEvalue:x,+} auf die Kosten dieses Begleiters.",
-    "pt": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%attack} Aciona {#STREAMOFSOULS}.\n\\---\n{#DEUIL}: {NEUTRALGAUGEvalue:x,+} ao custo deste companheiro."
+    "fr": "{#FESTIN}\\_({value:f})\\_: {value:bonus,percent,+}\\_({value:pc,percent,+}) d'{%AT} à vos personnages tant qu'il est en jeu.\n\\---\n<rem>Bonus maximum\\_: {value:max,percent,+}.</rem>",
+    "en": "{#FESTIN}\\_({value:f}): {value:bonus,percent,+}__({value:pc,percent,+}) {%AT} to your characters while in play.\n\\---\n<rem>Maximum Bonus: {value:max,percent,+}.</rem>",
+    "es": "{#FESTIN}\\_({value:f}): {value:bonus,percent,+}\\_({value:pc,percent,+}) de {%AT} a tus personajes mientras esté en juego.\n\\---\n<rem>Bonus máximo: {value:max,percent,+}.</rem>",
+    "de": "{#FESTIN}\\_({value:f}): {value:bonus,percent,+}\\_({value:pc,percent,+}) {%AT} für deine Charaktere, solange sie im Spiel sind.\n\\---\n<rem>Maximaler Bonus: {value:max,percent,+}.</rem>",
+    "pt": "{#FESTIN}\\_({value:f}): {value:bonus,percent,+}\\_({value:pc,percent,+}) de {%AT} aos seus personagens enquanto estiver em jogo.\n\\---\n<rem>Bônus máximo: {value:max,percent,+}.</rem>"
   }
 }

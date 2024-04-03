@@ -24,6 +24,7 @@
     "type": "QuestDefinition",
     "id": 645,
     "questType": 10,
+    "onlyOneRunByDay": false,
     "hideLevel": false,
     "chaptersVisualId": 930,
     "minPlayers": 1,
@@ -48,7 +49,7 @@
         "type": "ArenaChapterDefinition",
         "chapterIndex": 0,
         "visualIndex": 0,
-        "monsterLevel": 2,
+        "monsterLevel": 1,
         "rewards": null,
         "oneTimeRewards": {
           "type": "SerializedDropTableDefinitionProvider",
@@ -60,8 +61,58 @@
                 "source": {
                   "type": "FixedItemDropTableEntrySource",
                   "itemId": {
+                    "typeEnum": 33,
+                    "value": 329
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "MinMaxLinearDoubleProvider",
+                      "minValue": 500,
+                      "maxValue": 500
+                    },
+                    "maxQuantity": {
+                      "type": "MinMaxLinearDoubleProvider",
+                      "minValue": 500,
+                      "maxValue": 500
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 65
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "MinMaxLinearDoubleProvider",
+                      "minValue": 100,
+                      "maxValue": 100
+                    },
+                    "maxQuantity": {
+                      "type": "MinMaxLinearDoubleProvider",
+                      "minValue": 100,
+                      "maxValue": 100
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
                     "typeEnum": 58,
-                    "value": 611
+                    "value": 224
                   }
                 },
                 "rollEntries": [
@@ -69,11 +120,11 @@
                     "type": "DropTableRollEntry",
                     "minQuantity": {
                       "type": "ConstDoubleProvider",
-                      "value": 1
+                      "value": 2
                     },
                     "maxQuantity": {
                       "type": "ConstDoubleProvider",
-                      "value": 1
+                      "value": 2
                     }
                   }
                 ]

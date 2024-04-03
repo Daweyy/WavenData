@@ -1,0 +1,193 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1129",
+  "m_id": 1129,
+  "m_displayName": "IOP - ARME - PALADIR - ETHER - Puissante Charge Hioplite",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1821796053,
+    "b": -1549793692,
+    "c": 1953333370,
+    "d": 1157206596,
+    "e": 2109196976
+  },
+  "m_i18nDescriptionId": {
+    "a": -1821796053,
+    "b": -1549793692,
+    "c": 1953333370,
+    "d": 1157206596,
+    "e": -1448917912
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e863be639934c0c47af1b3e7c0321582"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1129,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": 481,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToMoveToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "e210f454cf3672d468ea1395e01210bf",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51,
+            43
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "ether",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Puissante charge Hioplite",
+    "en": "Powerful Hipolite Charge",
+    "es": "Carga Poderosa Yoplita",
+    "de": "Mächtiger Hioplit-Sturmangriff",
+    "pt": "Investida Hioplita Potente"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un adversaire aligné jusqu'à {cell:c} et lui inflige {value:v,percent} de son {%AT}.\n\\---\n{NEUTRALGAUGEvalue:ether,+} si la cible est sous l'état {#ASTRAL}.",
+    "en": "Your hero <b>CHARGES</b> an in-line opponent up to {cell:c} away and inflicts {value:v,percent} of their {%AT} on them.\n\\---\n{NEUTRALGAUGEvalue:ether,+} if the target is in the {#ASTRAL} state.",
+    "es": "Tu héroe <b>CARGA</b> contra un adversario alineado hasta {cell:c} y le inflige un {value:v,percent} de su {%AT}.\n\\---\n{NEUTRALGAUGEvalue:ether,+} si el objetivo tiene el estado {#ASTRAL}.",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Gegner in derselben Reihe bis auf {cell:c} zu und verursacht {value:v,percent} seines {%AT,plural:two} als Schaden.\n\\---\n{NEUTRALGAUGEvalue:ether,+}, wenn sich das Ziel im Zustand {#ASTRAL} befindet.",
+    "pt": "Seu herói <b>INVESTE</b> contra um adversário alinhado a até {cell:c} e inflige {value:v,percent} de seu {%AT}.\n\\---\n{NEUTRALGAUGEvalue:ether,+} se o alvo estiver no estado {#ASTRAL}."
+  }
+}

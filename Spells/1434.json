@@ -1,0 +1,129 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1434",
+  "m_id": 1434,
+  "m_displayName": "NECROMONDE - AIR - ENIGME - 02 - Piege Repoussant",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -935441493,
+    "b": -1898672844,
+    "c": 713931065,
+    "d": -501846268,
+    "e": 2040756293
+  },
+  "m_i18nDescriptionId": {
+    "a": -935441493,
+    "b": -1898672844,
+    "c": 713931065,
+    "d": -501846268,
+    "e": -972514205
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e8b789ff1cd78874581b649e00dccdcf"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1434,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.806.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH",
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 806
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège Repoussant",
+    "en": "Repelling Trap",
+    "es": "Trampa Repelente",
+    "de": "Rückstoß-Falle",
+    "pt": "Armadilha Repulsiva"
+  },
+  "description": {
+    "fr": "Construit une {FloorMechanism:806} ({value:FloorMechanism.806.dmg}).",
+    "en": "Builds one {value:FloorMechanism.806.dmg} ({FloorMechanism:806}).",
+    "es": "Construye una {FloorMechanism:806} ({value:FloorMechanism.806.dmg}).",
+    "de": "Errichtet 1_{value:FloorMechanism.806.dmg} ({FloorMechanism:806}).",
+    "pt": "Constrói uma {FloorMechanism:806} ({value:FloorMechanism.806.dmg})."
+  }
+}

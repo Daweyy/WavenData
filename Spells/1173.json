@@ -1,0 +1,237 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1173",
+  "m_id": 1173,
+  "m_displayName": "SRAM - ARME - PALADIR - EAU - Piège de la vague",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 372213099,
+    "b": 604060900,
+    "c": 1806608873,
+    "d": -474133978,
+    "e": -388520433
+  },
+  "m_i18nDescriptionId": {
+    "a": 372213099,
+    "b": 604060900,
+    "c": 1806608873,
+    "d": -474133978,
+    "e": -114974752
+  },
+  "m_elementaryStates": 5,
+  "m_illustrationReference": {
+    "assetGuid": "7c5cea46e7468db49bc892c1ac6f486f"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1173,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3999,
+      3095,
+      3303
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2,
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 2,
+      "specificToWeapon": 576,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 0
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 6,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": "c",
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 68669
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConditionalValue",
+                "referenceId": null,
+                "condition": {
+                  "type": "ThisSpellHasSkillCondition",
+                  "skillId": 68669
+                },
+                "ifTrue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 5
+                },
+                "ifFalse": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 3
+                }
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "NotAPreviousCastTargetFilter",
+            "castTargetIndex": 0
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "ThisSpellHasSkillCondition",
+            "skillId": 68669
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.673.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        "WET",
+        {
+          "type": 6,
+          "id": 673
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège de la vague",
+    "en": "Wave Trap",
+    "es": "Trampa de Ola",
+    "de": "Wellenfalle",
+    "pt": "Armadilha da Onda"
+  },
+  "description": {
+    "fr": "Construit deux {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\nApplique {#wet} aux adversaires situés entre ces pièges.",
+    "en": "Builds two {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) up to {cell:c} from your hero.\n\\---\nApplies {#wet} on opponents located between these traps.",
+    "es": "Construye dos {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) hasta a {cell:c} de tu héroe.\n\\---\nAplica {#wet} a los adversarios situados entre estas trampas.",
+    "de": "Errichtet zwei {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) in einer Entfernung von bis zu {cell:c} von deinem Helden.\n\\---\nWendet {#wet} auf Gegner an, die sich zwischen diesen Fallen befinden.",
+    "pt": "Constrói duas {FloorMechanism:673,plural:other} ({value:FloorMechanism.673.dmg}) a até {cell:c} do seu herói.\n\\---\nAplica {#wet} aos adversários situados entre essas armadilhas."
+  }
+}

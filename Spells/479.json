@@ -172,23 +172,37 @@
                   "value": 100
                 },
                 {
-                  "type": "MultValue",
+                  "type": "ClampValue",
                   "referenceId": "",
-                  "valuesToMult": [
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "p",
-                      "value": 5
-                    },
-                    {
-                      "type": "EntityCaracValue",
-                      "referenceId": "x",
-                      "entitySelector": {
-                        "type": "CasterSelector"
+                  "valueToClamp": {
+                    "type": "MultValue",
+                    "referenceId": null,
+                    "valuesToMult": [
+                      {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "p",
+                        "value": 5
                       },
-                      "carac": 20
-                    }
-                  ]
+                      {
+                        "type": "EntityCaracValue",
+                        "referenceId": "x",
+                        "entitySelector": {
+                          "type": "CasterSelector"
+                        },
+                        "carac": 20
+                      }
+                    ]
+                  },
+                  "min": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "max": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 100
+                  }
                 }
               ]
             },
@@ -264,7 +278,7 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}) : {#PUSH} la cible de {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Jauges générées : {value:x}</rem>",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {#PUSH} the target {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}.</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {#PUSH} the target {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges Generated: {value:x}.</rem>",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {#PUSH} al objetivo {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Indicadores generados: {value:x}</rem>",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): {#PUSH,plural:few} das Ziel um {cell:c2} zurück.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
     "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {#PUSH} o alvo por {cell:c2}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Cargas geradas: {value:x}</rem>"

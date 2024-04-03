@@ -1,0 +1,174 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "218",
+  "m_id": 218,
+  "m_displayName": "XELOR - ARME - PALADIR - Brèche Astrale",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1028803721,
+    "b": -1032435068,
+    "c": 1689954555,
+    "d": 239865188,
+    "e": 2094739739
+  },
+  "m_i18nDescriptionId": {
+    "a": -1028803721,
+    "b": -1032435068,
+    "c": 1689954555,
+    "d": 239865188,
+    "e": -1772340084
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e8738fba56faaf846bf736885457a131"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "995410cb10a92454a8968ce2ac1c50c0"
+      },
+      {
+        "assetGuid": "ac75e8b2c1a486445877e68a9c831a2b"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 218,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": 643,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpValue",
+          "referenceId": "",
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "AllCharactersSelector"
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgPVP",
+          "value": 10
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Brèche Astrale",
+    "en": "Astral Breach",
+    "es": "Brecha Astral",
+    "de": "Astrale Bresche",
+    "pt": "Brecha Astral"
+  },
+  "description": {
+    "fr": "{#EPHEMERAL}<if pvp>\n\\---\nInflige {magicalDamage:dmgPVP}.</if>\n\\---\nTéléporte la cible jusqu'à {cell:c}.\n\\---\nPiochez {SPELLCOUNTvalue:s}.",
+    "en": "{#EPHEMERAL}<if pvp>\n\\---\nDoes {magicalDamage:dmgPVP}.</if>\n\\---\nTeleports the target up to {cell:c}.\n\\---\nDraw {SPELLCOUNTvalue:s}.",
+    "es": "{#EPHEMERAL}<if pvp>\n\\---\nInflige {magicalDamage:dmgPVP}.</if>\n\\---\nTeletransporta el objetivo hasta {cell:c}.\n\\---\nSacas {SPELLCOUNTvalue:s}.",
+    "de": "{#EPHEMERAL}<if pvp>\n\\---\nVerursacht {magicalDamage:dmgPVP}.</if>\n\\---\nTeleportiert das Ziel bis zu {cell:c}.\n\\---\nZiehe {SPELLCOUNTvalue:s}.",
+    "pt": "{#EPHEMERAL}<if pvp>\n\\---\nInflige {magicalDamage:dmgPVP}.</if>\n\\---\nTeletransporta o alvo por até {cell:c}.\n\\---\nCompre {SPELLCOUNTvalue:s}."
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "491",
+  "m_id": 491,
+  "m_displayName": "IOP - ARME - PALADIR - ETHER - Touche Astrale",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1467917851,
+    "b": -1759788316,
+    "c": -89187109,
+    "d": -1751181567,
+    "e": 1257640004
+  },
+  "m_i18nDescriptionId": {
+    "a": 1467917851,
+    "b": -1759788316,
+    "c": -89187109,
+    "d": -1751181567,
+    "e": 1245753522
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9ac0fa87e457d07479171d52ffec6870"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 491,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": 481,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 3,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a2c78399c3c531a41b6a3fe12d17d6a9",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v2",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "vpvp",
+          "value": 26
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v2pvp",
+          "value": 20
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Touche Astrale",
+    "en": "Astral Touch",
+    "es": "Toque Astral",
+    "de": "Astrale Berührung",
+    "pt": "Toque Astral"
+  },
+  "description": {
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros.</if><if pvp>Inflige {magicalDamage:vpvp}.</if>\n\\---\n<if pvm>Votre héros gagne {value:v2,percent} de son {%AT} en {%AR} si la cible est sous l'état {#ASTRAL}.</if><if pvp>Votre héros gagne {ARvalue:v2pvp} si la cible est sous l'état {#ASTRAL}.</if>",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT}.</if><if pvp>Does {magicalDamage:vpvp}.</if>\n\\---\n<if pvm>Your hero gains {value:v2,percent} of their {%AT} as {%AR} if the target is in the {#ASTRAL} state.</if><if pvp>Your hero gains {ARvalue:v2pvp} if the target is in the {#ASTRAL} state.</if>",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe.</if><if pvp>Inflige {magicalDamage:vpvp}.</if>\n\\---\n<if pvm>Tu héroe gana un {value:v2,percent} de su {%AT} en {%AR} si el objetivo tiene el estado {#ASTRAL}.</if><if pvp>Tu héroe gana {ARvalue:v2pvp} si el objetivo tiene el estado {#ASTRAL}.</if>",
+    "de": "<if pvm>Fügt {value:v,percent} des {%AT,plural:two} deines Helden als Schaden zu.</if><if pvp>Verursacht {magicalDamage:vpvp}.</if>\n\\---\n<if pvm>Dein Held erhält {value:v2,percent} seines {%AT,plural:two} als {%AR}, wenn das Ziel den Zustand {#ASTRAL} hat.</if><if pvp>Dein Held erhält {ARvalue:v2pvp}, wenn das Ziel den Zustand {#ASTRAL} hat.</if>",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói.</if><if pvp>Inflige {magicalDamage:vpvp}.</if>\n\\---\n<if pvm>Seu herói ganha {value:v2,percent} do seu {%AT} em {%AR} se o alvo estiver no estado {#ASTRAL}.</if><if pvp>Seu herói ganha {ARvalue:v2pvp} se o alvo estiver no estado {#ASTRAL}.</if>"
+  }
+}

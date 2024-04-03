@@ -174,6 +174,25 @@
           "value": 7
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            48,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
           "type": "PercentageOfValue",
           "referenceId": "dmg",
           "percentage": {
@@ -253,10 +272,10 @@
     "pt": "Sopro de Adamai"
   },
   "description": {
-    "fr": "Inflige {value:v,percent} de l'{%AT} d'{Companion:176!} devant lui.\n\\---\nIl gagne son {%AT} en {%ar} pour chaque adversaire touché.",
-    "en": "Inflicts {value:v,percent} of {Companion:176!}'s {%AT} in front of him.\n\\---\nHe gains his {%AT} as {%ar} for each opponent hit.",
-    "es": "Inflige un {value:v,percent} del {%AT} de {Companion:176!} delante de él.\n\\---\nGana su {%AT} en {%ar} por cada adversario alcanzado.",
-    "de": "Verursacht {value:v,percent} des {%AT,plural:two} von {Companion:176!} vor ihm als Schaden.\n\\---\nEr erhält seinen {%AT} als {%ar} für jeden getroffenen Gegner.",
-    "pt": "Inflige {value:v,percent} do {%AT} de {Companion:176!} à sua frente.\n\\---\nEle ganha seu {%AT} em {%ar} por adversário atingido."
+    "fr": "Inflige {value:v,percent} de l'{%AT} d'{Companion:176!} devant lui.\n\\---\n{value:ar,percent,+} son {%AT} en {%ar} pour chaque adversaire touché.",
+    "en": "Inflicts {value:v,percent} of {Companion:176!}'s {%AT} in front of him.\n\\---\n{value:ar,percent,+} of his {%AT} as {%ar} for each opponent hit.",
+    "es": "Inflige un {value:v,percent} del {%AT} de {Companion:176!} delante de él.\n\\---\n{value:ar,percent,+} su {%AT} en {%ar} por cada adversario alcanzado.",
+    "de": "Verursacht {value:v,percent} des {%AT,plural:two} von {Companion:176!} vor ihm als Schaden.\n\\---\n{value:ar,percent,+} seines {%AT,plural:two} als {%ar} für jeden getroffenen Gegner.",
+    "pt": "Inflige {value:v,percent} do {%AT} de {Companion:176!} à sua frente.\n\\---\n{value:ar,percent,+} de seu {%AT} em {%ar} por adversário atingido."
   }
 }

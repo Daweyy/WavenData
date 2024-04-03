@@ -1,0 +1,180 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1291",
+  "m_id": 1291,
+  "m_displayName": "CRA - ARME - PALADIR - TERRE - Spicu Graveleux",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 548615973,
+    "b": -1800506924,
+    "c": 1421160520,
+    "d": 370540060,
+    "e": -2086429673
+  },
+  "m_i18nDescriptionId": {
+    "a": 548615973,
+    "b": -1800506924,
+    "c": 1421160520,
+    "d": 370540060,
+    "e": 164104016
+  },
+  "m_elementaryStates": 2,
+  "m_illustrationReference": {
+    "assetGuid": "dada2da68f9879e458bc1b0e6b09f16b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1291,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      2911,
+      3974,
+      3669
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 3,
+      "specificToWeapon": 134,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 3,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "6d04082b45578854dbc95061be2f5ae6",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 14,
+            "valueInPvP": 28
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "MUDDY",
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Spicu Graveleux",
+    "en": "Gravelly Spicu",
+    "es": "Espicu Pedregoso",
+    "de": "Kiesiger Spicu",
+    "pt": "Spicus Pedregoso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_: Applique {#muddy}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: Applies {#muddy}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: Aplica {#muddy}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}: Wendet {#muddy} an.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: Aplica {#muddy}."
+  }
+}

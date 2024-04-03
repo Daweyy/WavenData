@@ -51,22 +51,18 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "PvmOrPvpValue",
-          "referenceId": "p",
-          "pvm": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 25
-          },
-          "pvp": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 21
-          }
+          "type": "ConstIntegerValue",
+          "referenceId": "pvp",
+          "value": 21
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pvm",
+          "value": 25
         }
       ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": []
     },
     "families": [
@@ -121,11 +117,11 @@
     "pt": "{0, plural, one[Noturniano] other[Noturnianos]}"
   },
   "description": {
-    "fr": "{%AT} : {ATvalue:p, +, percent} à votre héros jusqu'à ce que ce nocturien meurt.",
-    "en": "{%AT}: {ATvalue:p, +, percent} to your hero until this Nocturian dies.",
-    "es": "{%AT}: {ATvalue:p, +, percent} a tu héroe hasta que este nocturiano muere.",
-    "de": "{%AT}: {ATvalue:p, +, percent} für deinen Helden, bis dieser Nokturianer stirbt.",
-    "pt": "{%AT}: {ATvalue:p, +, percent} ao seu herói até que este Noturniano morra."
+    "fr": "<if  pvm>{%AT} : {ATvalue:pvm, +, percent} à votre héros jusqu'à ce que ce nocturien meurt.</if> <if pvp>Tant qu'il est en jeu\\_: {ATvalue:pvp, +, percent} à votre héros.</if>",
+    "en": "<if  pvm>{%AT}: {ATvalue:pvm, +, percent} to your hero until this Nocturian dies.</if><if pvp>While in play: {ATvalue:pvp, +, percent} to your hero.</if>",
+    "es": "<if  pvm>{%AT}: {ATvalue:pvm, +, percent} a tu héroe hasta que este nocturiano muere.</if> <if pvp>Mientras esté en juego: {ATvalue:pvp, +, percent} a tu héroe.</if>",
+    "de": "<if  pvm>{%AT}: {ATvalue:pvm, +, percent} für deinen Helden, bis dieser Nokturianer stirbt.</if> <if pvp>Solange er im Spiel ist: {ATvalue:pvp, +, percent} für deinen Helden.</if>",
+    "pt": "<if  pvm>{%AT}: {ATvalue:pvm, +, percent} ao seu herói até que este Noturniano morra.</if> <if pvp>Enquanto estiver em jogo: {ATvalue:pvp, +, percent} ao seu herói.</if>"
   },
   "championName": {
     "fr": "Nocturien",

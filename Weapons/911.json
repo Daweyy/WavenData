@@ -154,6 +154,7 @@
       "value": 6
     },
     "resurrectAs": null,
+    "hasPresentationVideo": false,
     "unlockableSpells": [
       605,
       112854,
@@ -181,11 +182,11 @@
     "pt": "Gládio Stalaktoss"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Confère {PropertyEffect:18} à votre héros jusqu'à la fin de son prochain tour s'il a au moins {value:adv}\\_{adv,plural,one[adversaire] other[adversaires]} autour\\_<sprite name=\"cell_around\"> de lui.",
-    "en": "{%FightTurnEnded} Confers {PropertyEffect:18} on your hero until the end of their next turn if they have at least {value:adv}\\_{adv,plural,one[opponent] other[opponents]} around\\_<sprite name=\"cell_around\"> them.",
-    "es": "{%FightTurnEnded} Confiere {PropertyEffect:18} a tu héroe hasta el final de su próximo turno si tiene al menos {value:adv}\\_{adv,plural,one[adversario] other[adversarios]} a su alrededor\\_<sprite name=\"cell_around\">.",
-    "de": "{%FightTurnEnded} Verleiht deinem Helden bis zum Ende seiner nächsten Runde {PropertyEffect:18}, wenn es mindestens {value:adv}\\_{adv,plural,one[Gegner] other[Gegner]} im Umkreis\\_<sprite name=\"cell_around\"> gibt.",
-    "pt": "{%FightTurnEnded} Concede {PropertyEffect:18} ao seu herói até o fim de seu próximo turno se ele tiver pelo menos {value:adv}\\_{adv,plural,one[adversário] other[adversários]} em\\_volta\\_<sprite name=\"cell_around\"> dele."
+    "fr": "{%FightTurnEnded} Confère {PropertyEffect:18} à votre héros jusqu'à la fin de son prochain tour s'il a au moins {value:adv}\\_{adv,plural,one[adversaire] other[adversaires]} autour\\_<sprite name=\"cell_around\"> de lui.<if pvm>\n\\---\n<rem>{PropertyEffect:18} ne réduit pas l'{%AT} de votre héros.</rem></if>",
+    "en": "{%FightTurnEnded} Confers {PropertyEffect:18} on your hero until the end of their next turn if they have at least {value:adv}\\_{adv,plural,one[opponent] other[opponents]} around\\_<sprite name=\"cell_around\"> them.<if pvm>\n\\---\n<rem>{PropertyEffect:18} does not reduce your hero's {%AT}.</rem></if>",
+    "es": "{%FightTurnEnded} Confiere {PropertyEffect:18} a tu héroe hasta el final de su próximo turno si tiene al menos {value:adv}\\_{adv,plural,one[adversario] other[adversarios]} a su alrededor\\_<sprite name=\"cell_around\">.<if pvm>\n\\---\n<rem>{PropertyEffect:18} no reduce el {%AT} de tu héroe.</rem></if>",
+    "de": "{%FightTurnEnded} Verleiht deinem Helden bis zum Ende seiner nächsten Runde {PropertyEffect:18}, wenn es mindestens {value:adv}\\_{adv,plural,one[Gegner] other[Gegner]} im Umkreis\\_<sprite name=\"cell_around\"> gibt.<if pvm>\n\\---\n<rem>{PropertyEffect:18} verringert den {%AT} deines Helden nicht.</rem></if>",
+    "pt": "{%FightTurnEnded} Concede {PropertyEffect:18} ao seu herói até o fim de seu próximo turno se ele tiver pelo menos {value:adv}\\_{adv,plural,one[adversário] other[adversários]} em\\_volta\\_<sprite name=\"cell_around\"> dele.<if pvm>\n\\---\n<rem>{PropertyEffect:18} não reduz o {%AT} do seu herói.</rem></if>"
   },
   "gameplayDescription": {
     "fr": "{PropertyEffect:18}\\_: Tel un passe-muraille, traversez vos ennemis pour leur infliger des dégâts basés sur votre {%at}.\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",

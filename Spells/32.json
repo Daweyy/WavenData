@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "b22e2e7788bf7c34db013f2c362d4144"
+    "assetGuid": "d4dfd1daa3d4cc543a0bf943619403ac"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -141,15 +141,110 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "MultValue",
+          "referenceId": "ar",
+          "valuesToMult": [
+            {
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": "e",
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 3
+              },
+              "factor": {
+                "type": "ReferenceScalingFactor",
+                "reference": 12
+              },
+              "buffs": [
+                23,
+                51,
+                6
+              ],
+              "skillBuffs": [
+                {
+                  "type": "SkillBuff",
+                  "skillId": 118841,
+                  "percentBuff": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 30
+                  }
+                }
+              ],
+              "from": {
+                "type": "CasterSelector"
+              },
+              "addInsteadOfMultiply": false
+            },
+            {
+              "type": "DivideValue",
+              "referenceId": "",
+              "numerator": {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "CasterSelector"
+                },
+                "carac": 21
+              },
+              "denominator": {
+                "type": "ConstIntegerValue",
+                "referenceId": "f",
+                "value": 2
+              },
+              "defaultValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "roundMethod": 2
+            }
+          ]
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "e",
-          "value": 4
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51,
+            6
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "f",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DEUIL"
+        "FESTIN"
       ]
     }
   },
@@ -161,10 +256,10 @@
     "pt": "Rocha Necrômica"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}\\_: {ARvalue:e,+} à votre héros.",
-    "en": "Does {magicalDamage:d}.\n\\---\n{#DEUIL}: {ARvalue:e,+} to your hero.",
-    "es": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}: {ARvalue:e,+} a tu héroe.",
-    "de": "Verursacht {magicalDamage:d}.\n\\---\n{#DEUIL}: {ARvalue:e,+} für deinen Helden.",
-    "pt": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}: {ARvalue:e,+} ao seu herói."
+    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f})\\_: {ARvalue:ar,+}\\_({value:e,+}) à votre héros.",
+    "en": "Does {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): {ARvalue:ar,+}\\_({value:e,+}) to your hero.",
+    "es": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): {ARvalue:ar,+}\\_({value:e,+}) a tu héroe.",
+    "de": "Verursacht {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): {ARvalue:ar,+}\\_({value:e,+}) für deinen Helden.",
+    "pt": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): {ARvalue:ar,+}\\_({value:e,+}) ao seu herói."
   }
 }

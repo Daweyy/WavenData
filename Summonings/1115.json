@@ -1,0 +1,158 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442430
+  },
+  "m_Name": "1115",
+  "m_id": 1115,
+  "m_displayName": "NECROMONDE - NECROME - Championne Perimee",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1024462807,
+    "b": 566704964,
+    "c": -670335815,
+    "d": 1667262359,
+    "e": 327268610
+  },
+  "m_i18nChampionNameId": {
+    "a": -1024462807,
+    "b": 566704964,
+    "c": -670335815,
+    "d": 1667262359,
+    "e": -571099967
+  },
+  "m_i18nDescriptionId": {
+    "a": -1024462807,
+    "b": 566704964,
+    "c": -670335815,
+    "d": 1667262359,
+    "e": -105087032
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 1115,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1775,
+      "skinIds": [
+        1775
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "heal",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 11
+          },
+          "buffs": [
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 19
+        }
+      ]
+    },
+    "families": [
+      68
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 120
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 20
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 2
+      }
+    },
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 1,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0,plural,one[Championne Périmée] other[Championnes Périmées]}",
+    "en": "{0,plural,one[Outdated Champion] other[Outdated Champions]}",
+    "es": "{0,plural,one[Campeona Caduca] other[Campeonas Caducas]}",
+    "de": "{0,plural,one[Betagte Heldin] other[Betagte Heldinnen]}",
+    "pt": "{0,plural,one[Campeã Obsoleta] other[Campeãs Obsoletas]}"
+  },
+  "description": {
+    "fr": "<rem>{range}</rem>\n\\---\n{%Attack} Soigne les alliés de {PVvalue:heal}.\n\\---\nLorsqu'un allié meurt\\_:\\vConfère {PropertyEffect:19} à un allié pour le reste du combat.",
+    "en": "<rem>{range}</rem>\n\\---\n{%Attack} Heals allies {PVvalue:heal}.\n\\---\nWhen an ally dies:\\vConfers {PropertyEffect:19} on an ally for the rest of the fight.",
+    "es": "<rem>{range}</rem>\n\\---\n{%Attack} Cura a los aliados {PVvalue:heal}.\n\\---\nCuando un aliado muere:\\vConfiere {PropertyEffect:19} a un aliado para el resto del combate.",
+    "de": "<rem>{range}</rem>\n\\---\n{%Attack} Heilt Verbündete um {PVvalue:heal}.\n\\---\nWenn ein Verbündeter stirbt:\\vVerleiht einem Verbündeten für den Rest des Kampfes {PropertyEffect:19}.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%Attack} Cura {PVvalue:heal} dos aliados.\n\\---\nQuando um aliado morre:\\vConcede {PropertyEffect:19} a um aliado até o fim do combate."
+  },
+  "championName": {
+    "fr": "Championne Périmée",
+    "en": "Outdated Champion",
+    "es": "Campeona Caduca",
+    "de": "Alte Heldin",
+    "pt": "Campeã Obsoleta"
+  }
+}

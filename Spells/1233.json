@@ -1,0 +1,216 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1233",
+  "m_id": 1233,
+  "m_displayName": "SRAM - ARME - PALADIR - TERRE - Piège du rocher",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1813198863,
+    "b": -1039199980,
+    "c": 2075208664,
+    "d": 479156114,
+    "e": -652332606
+  },
+  "m_i18nDescriptionId": {
+    "a": 1813198863,
+    "b": -1039199980,
+    "c": 2075208664,
+    "d": 479156114,
+    "e": 1515978133
+  },
+  "m_elementaryStates": 2,
+  "m_illustrationReference": {
+    "assetGuid": "e3848a04033db4b42a1a51d86153b8ee"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1233,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3944,
+      3787,
+      3703
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2,
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 3,
+      "specificToWeapon": 576,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 0
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 5,
+          "valueInPvP": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConditionalValue",
+                  "referenceId": "c",
+                  "condition": {
+                    "type": "AndCondition",
+                    "conditions": [
+                      {
+                        "type": "ThisSpellHasSkillCondition",
+                        "skillId": 68669
+                      }
+                    ]
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 5
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 3
+                  }
+                }
+              }
+            },
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 68669
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.1483.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        "MUDDY",
+        {
+          "type": 6,
+          "id": 1483
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège du rocher",
+    "en": "Rock Trap",
+    "es": "Trampa de Roca",
+    "de": "Felsenfalle",
+    "pt": "Armadilha da Rocha"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\nApplique {#muddy} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à ce piège.",
+    "en": "Builds one {FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) up to {cell:c} from your hero.\n\\---\nApplies {#muddy} on opponents adjacent\\_<sprite name=\"cell_cross\"> to this trap.",
+    "es": "Construye una {FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) hasta a {cell:c} de tu héroe.\n\\---\nAplica {#muddy} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a esta trampa.",
+    "de": "Errichtet 1\\_{FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) bis zu {cell:c} von deinem Helden entfernt.\n\\---\nWendet {#muddy} bei an diese Falle angrenzenden_<sprite name=\"cell_cross\"> Gegnern an.",
+    "pt": "Constrói uma {FloorMechanism:1483} ({value:FloorMechanism.1483.dmg}) a até {cell:c} do seu herói.\n\\---\nAplica {#muddy} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à armadilha."
+  }
+}

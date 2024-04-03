@@ -49,9 +49,15 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nt",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": []
     },
     "families": [
@@ -61,7 +67,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 30
+      "value": 15
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -103,11 +109,11 @@
     "pt": "Livro Violeta"
   },
   "description": {
-    "fr": "{%noeffect}",
-    "en": "{%noeffect}",
-    "es": "{%noeffect}",
-    "de": "{%noeffect}",
-    "pt": "{%noeffect}"
+    "fr": "{%Death} {NEUTRALGAUGEvalue:nt,+} à l'adversaire qui l'achève.",
+    "en": "{%Death} {NEUTRALGAUGEvalue:nt,+} to the opponent that finishes it off.",
+    "es": "{%Death} {NEUTRALGAUGEvalue:nt,+} al adversario que le da muerte.",
+    "de": "{%Death} {NEUTRALGAUGEvalue:nt,+ } für den Gegner, der es erledigt.",
+    "pt": "{%Death} {NEUTRALGAUGEvalue:nt,+} ao adversário que o elimina."
   },
   "championName": {
     "fr": "Livre Violet",

@@ -1,0 +1,202 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "585",
+  "m_id": 585,
+  "m_displayName": "XELOR - ARME - PALADIR - FEU - Immolation Zinetritos",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1600391137,
+    "b": 1611092308,
+    "c": -1591800023,
+    "d": 277618741,
+    "e": -1564135361
+  },
+  "m_i18nDescriptionId": {
+    "a": 1600391137,
+    "b": 1611092308,
+    "c": -1591800023,
+    "d": 277618741,
+    "e": 1435669448
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "928b0fafffb226d4cbb39a0a0772fb43"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 585,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3912,
+      3590,
+      3070
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": 643,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 3,
+          "valueInPvP": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ca54f62360af9dc42813d30b66099296",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": "",
+            "valueInPvM": 9,
+            "valueInPvP": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgB",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 18,
+            "valueInPvP": 23
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Immolation Zinetritos",
+    "en": "Zinetritos Immolation",
+    "es": "Inmolación Zinetritos",
+    "de": "Zinetritos-Flammenschlag",
+    "pt": "Imolação Zinetritos"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmgB,+} si la cible est sous l'état {#astral}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmgB,+} if the target is in the {#astral} state.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmgB,+} si el objetivo tiene el estado {#astral}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmgB,+}, wenn das Ziel im Zustand {#astral} ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{magicalDamage:dmgB,+} se o alvo estiver no estado {#astral}."
+  }
+}

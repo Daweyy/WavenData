@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "480",
+  "m_id": 480,
+  "m_displayName": "NECROMONDE - EAU - ENIGME - 02 - Nage de l'hippocampe",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1945602799,
+    "b": 1644255684,
+    "c": -923551749,
+    "d": 158342013,
+    "e": 1053570851
+  },
+  "m_i18nDescriptionId": {
+    "a": -1945602799,
+    "b": 1644255684,
+    "c": -923551749,
+    "d": 158342013,
+    "e": -429001434
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2324254c731c07c4f8fa22301e256002"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 480,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "NotCoordFilter",
+            "filter": {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": null
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Nage de l'hippocampe",
+    "en": "Seahorse Swim",
+    "es": "Nado de Hipocampo",
+    "de": "Schwimmen des Seepferdchens",
+    "pt": "Nado do Hipocampo"
+  },
+  "description": {
+    "fr": "Téléporte votre héros à {cell:c} non alignées.",
+    "en": "Teleports your hero {cell:c} not in a line.",
+    "es": "Teletransporta a tu héroe hasta {cell:c} no alineadas.",
+    "de": "Teleportiert deinen Helden beliebig auf {cell:c}.",
+    "pt": "Teletransporta seu herói por {cell:c} não alinhadas."
+  }
+}

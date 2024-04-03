@@ -51,24 +51,28 @@
     },
     "rarity": 2,
     "unlockableSkillIds": [
-      278,
-      265,
       261,
-      249,
-      239
+      3254,
+      265,
+      278,
+      239,
+      249
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 636,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 40
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": [
-        "DEUIL",
-        "STREAMOFSOULS"
-      ]
+      "keywordReferences": []
     },
     "family": 68,
     "specificToGod": 0,
@@ -76,19 +80,7 @@
     "passiveModifiers": [
       {
         "type": "CaracBuffModifier",
-        "holder": 8,
-        "value": {
-          "type": "LinearLevelOnlyBasedDynamicValue",
-          "referenceId": "",
-          "baseValue": 0,
-          "factor": 1
-        },
-        "caracIds": [
-          58
-        ]
-      },
-      {
-        "type": "CaracBuffModifier",
+        "useAsMainDescription": false,
         "holder": 8,
         "value": {
           "type": "LinearLevelOnlyBasedDynamicValue",
@@ -111,17 +103,17 @@
     "pt": "Sopro de Toross"
   },
   "description": {
-    "fr": "Vos {#STREAMOFSOULS} ont un déclenchement supplémentaire.",
-    "en": "Your {#STREAMOFSOULS,plural:other} are triggered an extra time.",
-    "es": "Tus {#STREAMOFSOULS,plural:other} tienen una activación extra.",
-    "de": "Dein {#STREAMOFSOULS} kann erneut ausgelöst werden.",
-    "pt": "Seus {#STREAMOFSOULS} podem ser acionados uma vez mais."
+    "fr": "{%FightTurnEnded}\\vVos compagnons infligent {value:v,percent} de leur {%AT} aux adversaires autour <sprite name=\"cell_around\"> d'eux.",
+    "en": "{%FightTurnEnded}\\vYour companions inflict {value:v,percent} of their {%AT} on opponents around <sprite name=\"cell_around\"> them.",
+    "es": "{%FightTurnEnded}\\vTus compañeros infligen un {value:v,percent} de su {%AT} a los adversarios a su alrededor <sprite name=\"cell_around\">.",
+    "de": "{%FightTurnEnded}\\vDeine Begleiter verursachen {value:v,percent} ihres {%AT,plural:two} in ihrem Umkreis\\_<sprite name=\"cell_around\"> als Schaden.",
+    "pt": "{%FightTurnEnded}\\vSeus companheiros infligem {value:v,percent} do {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> deles."
   },
   "bgDescription": {
     "fr": "{%empty}",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "en": "{%empty}",
+    "es": "{%empty}",
+    "de": "{%empty}",
+    "pt": "{%empty}"
   }
 }

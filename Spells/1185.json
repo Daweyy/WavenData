@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1185",
+  "m_id": 1185,
+  "m_displayName": "XELOR - ARME - PALADIR - ETHER - Perturbation Zinetritos",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -873747866,
+    "b": 1596568516,
+    "c": 1485105833,
+    "d": -995574614,
+    "e": 1233228744
+  },
+  "m_i18nDescriptionId": {
+    "a": -873747866,
+    "b": 1596568516,
+    "c": 1485105833,
+    "d": -995574614,
+    "e": 660424687
+  },
+  "m_elementaryStates": 6,
+  "m_illustrationReference": {
+    "assetGuid": "78d1ba26090e2d145a2712cee437204c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1185,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      1
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": 643,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 3,
+          "valueInPvP": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "bf204582b90c5cc4f9d3bcd5f6c2f612",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgpvp",
+          "value": 32
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "keyword": "ASTRAL"
+        },
+        {
+          "conditions": "<7/>",
+          "keyword": "REWIND"
+        },
+        {
+          "conditions": "<7/>",
+          "keyword": "ASTRAL"
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Perturbation Zinetritos",
+    "en": "Zinetritos Perturbation",
+    "es": "Perturbación Zinetritos",
+    "de": "Zinetritos-Kontinuumsstörung",
+    "pt": "Perturbação Zinetritos"
+  },
+  "description": {
+    "fr": "<if pvm>Applique {#ASTRAL}.</if><if pvp>Inflige {magicalDamage:dmgpvp}.</if>\n\\---\n<if pvm>{#REWIND}</if><if pvp>Ce sort revient dans votre main si la cible est est sous l'état {#ASTRAL}.</if>",
+    "en": "<if pvm>Applies {#ASTRAL}.</if><if pvp>Does {magicalDamage:dmgpvp}.</if>\n\\---\n<if pvm>{#REWIND}</if><if pvp>This spell returns to your hand if the target is in the {#ASTRAL} state.</if>",
+    "es": "<if pvm>Aplica {#ASTRAL}.</if><if pvp>Inflige {magicalDamage:dmgpvp}.</if>\n\\---\n<if pvm>{#REWIND}</if><if pvp>Este hechizo vuelve a tu mano si el objetivo tiene el estado {#ASTRAL}.</if>",
+    "de": "<if pvm>Wende {#ASTRAL} an.</if><if pvp>Verursacht {magicalDamage:dmgpvp}.</if>\n\\---\n<if pvm>{#REWIND}</if><if pvp>Dieser Zauber geht wieder in deine Hand zurück, wenn das Ziel im Zustand {#ASTRAL} ist.</if>",
+    "pt": "<if pvm>Aplica {#ASTRAL}.</if><if pvp>Inflige {magicalDamage:dmgpvp}.</if>\n\\---\n<if pvm>{#REWIND}</if><if pvp>Este feitiço volta para a sua mão se o alvo estiver no estado {#ASTRAL}.</if>"
+  }
+}

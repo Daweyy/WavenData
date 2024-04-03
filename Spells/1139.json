@@ -1,0 +1,178 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1139",
+  "m_id": 1139,
+  "m_displayName": "CRA - ARME - PALADIR - ETHER - Verdict Arcarius",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 150741594,
+    "b": -1547418540,
+    "c": -6946518,
+    "d": -354265423,
+    "e": -473419029
+  },
+  "m_i18nDescriptionId": {
+    "a": 150741594,
+    "b": -1547418540,
+    "c": -6946518,
+    "d": -354265423,
+    "e": 1599377633
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9fcc29698b0144a4cb970160e05ba3e5"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1139,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      16,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": 134,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f3c964d264744434fa4289c409d6dc6c",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "at",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bonus",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgPVP",
+          "value": 24
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgBonus",
+          "value": 10
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Verdict Arcarius",
+    "en": "Arcarius Verdict",
+    "es": "Veredicto Arcarius",
+    "de": "Arcarius-Erlass",
+    "pt": "Veredito Arcarius"
+  },
+  "description": {
+    "fr": "<if pvm>Inflige {value:at,percent} de l'{%AT} de votre héros.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>{#COMBO}\\_: {value:bonus,+,percent} aux <b>DÉGÂTS</b> de ce sort.</if><if pvp>{#COMBO}\\_: {magicalDamage:dmgBonus,+}.</if>",
+    "en": "<if pvm>Inflicts {value:at,percent} of your hero's {%AT}.</if><if pvp>Does {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>{#COMBO}: {value:bonus,+,percent} to this spell's <b>DAMAGE</b>.</if><if pvp>{#COMBO}: {magicalDamage:dmgBonus,+}.</if>",
+    "es": "<if pvm>Inflige un {value:at,percent} del {%AT} de tu héroe.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>{#COMBO}: {value:bonus,+,percent} a los <b>DAÑOS</b> de este hechizo.</if><if pvp>{#COMBO}: {magicalDamage:dmgBonus,+}.</if>",
+    "de": "<if pvm>Verursacht {value:at,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>{#COMBO}: {value:bonus,+,percent} <b>SCHADEN</b> für diesen Zauber.</if><if pvp>{#COMBO}: {magicalDamage:dmgBonus,+}.</if>",
+    "pt": "<if pvm>Inflige {value:at,percent} do {%AT} do seu herói.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>{#COMBO}: {value:bonus,+,percent} aos <b>DANOS</b> deste feitiço.</if><if pvp>{#COMBO}: {magicalDamage:dmgBonus,+}.</if>"
+  }
+}

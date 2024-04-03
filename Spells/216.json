@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "216",
+  "m_id": 216,
+  "m_displayName": "XELOR - ARME - PALADIR - ETHER - Dérèglement Zinetritos",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1509267752,
+    "b": 894433284,
+    "c": -1831198712,
+    "d": 93652347,
+    "e": 1184932581
+  },
+  "m_i18nDescriptionId": {
+    "a": 1509267752,
+    "b": 894433284,
+    "c": -1831198712,
+    "d": 93652347,
+    "e": -715505465
+  },
+  "m_elementaryStates": 6,
+  "m_illustrationReference": {
+    "assetGuid": "dc53954a692839341a16cb33cc3f581d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 216,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      17,
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": 643,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 3,
+          "valueInPvP": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "2b9f8400cdd8bd843ab373a4bf2e723f",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgpvp",
+          "value": 16
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Dérèglement Zinetritos",
+    "en": "Zinetritos Disturbance",
+    "es": "Desajuste Zinetritos",
+    "de": "Zinetritos-Umstellung",
+    "pt": "Desregulação Zinetritos"
+  },
+  "description": {
+    "fr": "<if pvm>Piochez {SPELLCOUNTvalue:s}.</if><if pvp>Inflige {magicalDamage:dmgpvp}.</if>\n\\---\nApplique {#ASTRAL} si la cible a un état élémentaire.",
+    "en": "<if pvm>Draw {SPELLCOUNTvalue:s}.</if><if pvp>Does {magicalDamage:dmgpvp}.</if>\n\\---\nApplies {#ASTRAL} if the target has an elemental state.",
+    "es": "<if pvm>Sacas {SPELLCOUNTvalue:s}.</if><if pvp>Inflige {magicalDamage:dmgpvp}.</if>\n\\---\nAplica {#ASTRAL} si el objetivo tiene un estado elemental.",
+    "de": "<if pvm>Ziehe {SPELLCOUNTvalue:s}.</if><if pvp>Verursacht {magicalDamage:dmgpvp}.</if>\n\\---\nWendet {#ASTRAL} an, wenn das Ziel einen Elementarzustand hat.",
+    "pt": "<if pvm>Compre {SPELLCOUNTvalue:s}.</if><if pvp>Inflige {magicalDamage:dmgpvp}.</if>\n\\---\nAplica {#ASTRAL} se o alvo tiver um estado elementar."
+  }
+}

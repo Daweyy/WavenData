@@ -84,9 +84,30 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CasterHeroSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "OwnerFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -137,10 +158,10 @@
     "pt": "Gládio Defasado"
   },
   "description": {
-    "fr": "<if pvm>Confère {PropertyEffect:18} et {ATvalue:p, +, percent} à votre héros pour le tour.</if><if pvp>{ATvalue:pPVP2, +, percent} à votre héros pour le tour s'il est déjà {PropertyEffect:18[DÉPHASÉ]}.\n\\---\nSinon, confère {PropertyEffect:18} et {ATvalue:pPVP, +, percent} à votre héros pour le tour.</if>",
-    "en": "<if pvm>Confers {PropertyEffect:18} and {ATvalue:p, +, percent} on your hero for the turn.</if><if pvp>{ATvalue:pPVP2, +, percent} to your hero for the turn if they are already {PropertyEffect:18[DEPHASED]}.\n\\---\nOtherwise, confers {PropertyEffect:18} and {ATvalue:pPVP, +, percent} on your hero for the turn.</if>",
-    "es": "<if pvm>Confiere {PropertyEffect:18} y {ATvalue:p, +, percent} a tu héroe durante el turno.</if><if pvp>{ATvalue:pPVP2, +, percent} a tu héroe durante el turno si ya está {PropertyEffect:18[DESFASADO]}.\n\\---\nSi no, confiere {PropertyEffect:18} y {ATvalue:pPVP, +, percent} a tu héroe durante el turno.</if>",
-    "de": "<if pvm>Verleiht {PropertyEffect:18} und {ATvalue:p, +, percent} für deinen Helden für die Runde.</if><if pvp>{ATvalue:pPVP2, +, percent} für deinen Helden für die Runde, wenn er bereits {PropertyEffect:18[PHASENVERSCHOBEN]} ist.\n\\---\nVerleiht andernfalls {PropertyEffect:18} und {ATvalue:pPVP, +, percent} für deinen Helden für die Runde.</if>",
-    "pt": "<if pvm>Concede {PropertyEffect:18} e {ATvalue:p, +, percent} ao seu herói durante o turno.</if><if pvp>{ATvalue:pPVP2, +, percent} ao seu herói durante o turno se ele já estiver {PropertyEffect:18[DEFASADO]}.\n\\---\nCaso contrário, concede {PropertyEffect:18} e {ATvalue:pPVP, +, percent} ao seu herói durante o turno.</if>"
+    "fr": "<if pvm>Confère {PropertyEffect:18} et {ATvalue:p, +, percent} à un de vos personnages pour le tour.</if><if pvp>{ATvalue:pPVP2, +, percent} à votre héros pour le tour s'il est déjà {PropertyEffect:18[DÉPHASÉ]}.\n\\---\nSinon, confère {PropertyEffect:18} et {ATvalue:pPVP, +, percent} à votre héros pour le tour.</if>",
+    "en": "<if pvm>Confers {PropertyEffect:18} and {ATvalue:p, +, percent} on one of your characters for the turn.</if><if pvp>{ATvalue:pPVP2, +, percent} to your hero for the turn if they are already {PropertyEffect:18[DEPHASED]}.\n\\---\nOtherwise, confers {PropertyEffect:18} and {ATvalue:pPVP, +, percent} on your hero for the turn.</if>",
+    "es": "<if pvm>Confiere {PropertyEffect:18} y {ATvalue:p, +, percent} a uno de tus personajes durante el turno.</if><if pvp>{ATvalue:pPVP2, +, percent} a tu héroe durante el turno si ya está {PropertyEffect:18[DESFASADO]}.\n\\---\nSi no, confiere {PropertyEffect:18} y {ATvalue:pPVP, +, percent} a tu héroe durante el turno.</if>",
+    "de": "<if pvm>Verleiht einem deiner Charaktere für die Runde {PropertyEffect:18} und {ATvalue:p, +, percent}.</if><if pvp>{ATvalue:pPVP2, +, percent} für deinen Helden für die Runde, wenn er bereits {PropertyEffect:18[PHASENVERSCHOBEN]} ist.\n\\---\nVerleiht deinem Helden andernfalls {PropertyEffect:18} und {ATvalue:pPVP, +, percent} für die Runde.</if>",
+    "pt": "<if pvm>Concede {PropertyEffect:18} e {ATvalue:p, +, percent} a um dos seus personagens durante o turno.</if><if pvp>{ATvalue:pPVP2, +, percent} ao seu herói durante o turno se ele já estiver {PropertyEffect:18[DEFASADO]}.\n\\---\nCaso contrário, concede {PropertyEffect:18} e {ATvalue:pPVP, +, percent} ao seu herói durante o turno.</if>"
   }
 }

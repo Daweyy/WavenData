@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "6e2700bac4669b446a8b94e532bd9372"
+    "assetGuid": "55a0cfaec4cd1a6468904a3cf5c177bd"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -86,34 +86,45 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 9
+              "value": 8
             },
             {
-              "type": "NegativeValue",
-              "referenceId": "",
-              "valueToNeg": {
-                "type": "CompanionsInReserveValue",
-                "referenceId": "",
-                "playerSelector": {
-                  "type": "CasterSelector"
+              "type": "MultValue",
+              "referenceId": "pa",
+              "valuesToMult": [
+                {
+                  "type": "NegativeValue",
+                  "referenceId": "p",
+                  "valueToNeg": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 1
+                  }
                 },
-                "companionState": [
-                  2,
-                  3
-                ]
-              }
-            },
-            {
-              "type": "NegativeValue",
-              "referenceId": "",
-              "valueToNeg": {
-                "type": "NumberOfEquippedCompanionsWithFamilyValue",
-                "referenceId": "",
-                "player": {
-                  "type": "CasterSelector"
-                },
-                "family": 68
-              }
+                {
+                  "type": "DivideValue",
+                  "referenceId": null,
+                  "numerator": {
+                    "type": "EntityCaracValue",
+                    "referenceId": null,
+                    "entitySelector": {
+                      "type": "CasterSelector"
+                    },
+                    "carac": 21
+                  },
+                  "denominator": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "f",
+                    "value": 3
+                  },
+                  "defaultValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "roundMethod": 2
+                }
+              ]
             }
           ]
         }
@@ -123,22 +134,8 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "CircleAreaOfEffectSelector",
+        "type": "OrientedLineAreaOfEffectSelector",
         "originSelector": {
-          "type": "CasterHeroSelector"
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
-        }
-      }
-    },
-    "spellEffectData": [
-      {
-        "type": "SpellEffectInstantiationData",
-        "spellEffect": "ff630699b6093d64d9984a334b55264c",
-        "originTarget": {
           "type": "FilteredCoordSelector",
           "filters": [
             {
@@ -150,35 +147,132 @@
                 "type": "EqualsTo",
                 "dynamicValue": {
                   "type": "ConstIntegerValue",
-                  "referenceId": "",
+                  "referenceId": null,
                   "value": 1
                 }
               }
             }
           ]
         },
+        "size": {
+          "type": "MapSizeValue",
+          "referenceId": null,
+          "axe": 0
+        },
+        "startPosition": {
+          "type": "CasterHeroSelector"
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ff630699b6093d64d9984a334b55264c",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "InLineInOneDirectionTargetFilter",
+              "refDirectionTargetA": {
+                "type": "CasterHeroSelector"
+              },
+              "refDirectionTargetB": {
+                "type": "FirstCastTargetSelector"
+              },
+              "applyStartTargets": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "GreaterThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                }
+              }
+            }
+          ]
+        },
         "orientation": null,
-        "delay": null
+        "delay": {
+          "type": "DelayOverDistance",
+          "origin": {
+            "type": "FirstCastTargetSelector"
+          },
+          "delay": 0.1
+        }
       }
     ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "MultValue",
+          "referenceId": "pa",
+          "valuesToMult": [
+            {
+              "type": "NegativeValue",
+              "referenceId": "p",
+              "valueToNeg": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              }
+            },
+            {
+              "type": "DivideValue",
+              "referenceId": null,
+              "numerator": {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "CasterSelector"
+                },
+                "carac": 21
+              },
+              "denominator": {
+                "type": "ConstIntegerValue",
+                "referenceId": "f",
+                "value": 3
+              },
+              "defaultValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "roundMethod": 2
+            }
+          ]
+        },
+        {
+          "type": "NegativeValue",
+          "referenceId": "p",
+          "valueToNeg": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "f",
+          "value": 3
+        },
+        {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "d",
+          "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 23
+            "value": 34
           },
           "factor": {
             "type": "ReferenceScalingFactor",
             "reference": 12
           },
           "buffs": [
-            23,
-            51
+            51,
+            23
           ],
           "skillBuffs": [
             {
@@ -200,24 +294,22 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DEUIL",
-        "NECROMAGE",
-        "STREAMOFSOULS"
+        "FESTIN"
       ]
     }
   },
   "name": {
     "fr": "Éboulement Nécromique",
     "en": "Necromic Landslide",
-    "es": "Desprendimiento Necronómico",
+    "es": "Desprendimiento Necrómico",
     "de": "Nekrom-Felshagel",
     "pt": "Desmoronamento Necrômico"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:d} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros. Déclenche un {#STREAMOFSOULS} par adversaire touché.\n\\---\n{#NECROMAGE}",
-    "en": "Does {magicalDamage:d} to opponents adjacent\\_<sprite name=\"cell_cross\"> to your hero. Triggers one {#STREAMOFSOULS} per opponent hit.\n\\---\n{#NECROMAGE}",
-    "es": "Inflige {magicalDamage:d} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a tu héroe. Activa un {#STREAMOFSOULS} por adversario alcanzado.\n\\---\n{#NECROMAGE}",
-    "de": "Fügt Gegnern in der Nähe\\_<sprite name=\"cell_cross\"> deines Helden {magicalDamage:d} zu. Löst einen {#STREAMOFSOULS} pro getroffenem Gegner aus.\n\\---\n{#NECROMAGE}",
-    "pt": "Inflige {magicalDamage:d} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> ao seu herói. Aciona um {#STREAMOFSOULS} por adversário atingido.\n\\---\n{#NECROMAGE}"
+    "fr": "Inflige {magicalDamage:dmg} aux adversaires en ligne devant votre héros.\n\\---\n{#FESTIN}\\_({value:f})\\_: {PAvalue:pa,+}\\_({value:p,+}) au coût de ce sort.",
+    "en": "Does {magicalDamage:dmg} to in-line opponents in front of your hero.\n\\---\n{#FESTIN}\\_({value:f}): {PAvalue:pa,+}\\_({value:p,+}) to the cost of this spell.",
+    "es": "Inflige {magicalDamage:dmg} a los adversarios en línea delante de tu héroe.\n\\---\n{#FESTIN}\\_({value:f}): {PAvalue:pa,+}\\_({value:p,+}) al coste de este hechizo.",
+    "de": "Verursacht bei Gegnern in derselben Reihe vor deinem Helden {magicalDamage:dmg}.\n\\---\n{#FESTIN}\\_({value:f}): {PAvalue:pa,+}\\_({value:p,+}) auf Kosten dieses Zaubers.",
+    "pt": "Inflige {magicalDamage:dmg} aos adversários em linha à frente do seu herói.\n\\---\n{#FESTIN}\\_({value:f}): {PAvalue:pa,+}\\_({value:p,+}) ao custo desse feitiço."
   }
 }

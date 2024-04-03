@@ -1,0 +1,117 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "759",
+  "m_id": 759,
+  "m_displayName": "NECROMONDE - AIR - ENIGME - 01 - Deplacement stategique",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1427412488,
+    "b": -586281708,
+    "c": 959467448,
+    "d": -1138520399,
+    "e": 1006361692
+  },
+  "m_i18nDescriptionId": {
+    "a": -1427412488,
+    "b": -586281708,
+    "c": 959467448,
+    "d": -1138520399,
+    "e": -1120559937
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "25859bdd7fb57d343bb938090eb41890"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 759,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "CasterHeroSelector"
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "HasEmptyPathInLineToMoveToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Déplacement Stratégique",
+    "en": "Strategic Move",
+    "es": "Desplazamiento Estratégico",
+    "de": "Strategische Bewegung",
+    "pt": "Deslocamento Estratégico"
+  },
+  "description": {
+    "fr": "Déplace votre héros sur une case alignée.",
+    "en": "Moves your hero to an in-line cell.",
+    "es": "Desplaza a tu héroe a una casilla alineada.",
+    "de": "Versetzt deinen Helden um ein Feld in derselben Reihe.",
+    "pt": "Move seu herói para uma célula alinhada."
+  }
+}

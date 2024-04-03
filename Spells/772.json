@@ -1,0 +1,134 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "772",
+  "m_id": 772,
+  "m_displayName": "NECROMONDE - FEU - ENIGME - 02 - Pioche douloureuse",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1597484660,
+    "b": -1107713932,
+    "c": 705649099,
+    "d": 753020457,
+    "e": 1958732128
+  },
+  "m_i18nDescriptionId": {
+    "a": 1597484660,
+    "b": -1107713932,
+    "c": 705649099,
+    "d": 753020457,
+    "e": 1195834658
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5ca59a8aa6c0b1d4f83d9713567ecb92"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 772,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "CharacterEntityFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "abda0bb7e13e5b8408c30f9cc188cd92",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 99
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pioche douloureuse",
+    "en": "Painful Draw",
+    "es": "Robo Doloroso",
+    "de": "Schmerzhaftes Deck",
+    "pt": "Compra Dolorosa"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:99}\\_: Piochez {SPELLCOUNTvalue:s}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{PropertyEffect:99}: Draw {SPELLCOUNTvalue:s}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:99}: Sacas {SPELLCOUNTvalue:s}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{PropertyEffect:99}: Zieht {SPELLCOUNTvalue:s}.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:99}: Compre {SPELLCOUNTvalue:s}."
+  }
+}

@@ -55,23 +55,41 @@
       220,
       213,
       210,
-      641
+      641,
+      3036
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 636,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "dr",
+          "entitySelector": {
+            "type": "HeroSelector",
+            "sameOwnerAs": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "carac": 26
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "drain",
+          "value": 10
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "limit",
+          "value": 5
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
-        "DEUIL",
-        {
-          "type": 20,
-          "id": 8
-        },
-        "STREAMOFSOULS"
+        "DRAIN"
       ]
     },
     "family": 68,
@@ -80,6 +98,7 @@
     "passiveModifiers": [
       {
         "type": "CaracBuffModifier",
+        "useAsMainDescription": false,
         "holder": 8,
         "value": {
           "type": "LinearLevelOnlyBasedDynamicValue",
@@ -89,19 +108,6 @@
         },
         "caracIds": [
           58
-        ]
-      },
-      {
-        "type": "CaracBuffModifier",
-        "holder": 8,
-        "value": {
-          "type": "LinearLevelOnlyBasedDynamicValue",
-          "referenceId": "",
-          "baseValue": 0,
-          "factor": 1
-        },
-        "caracIds": [
-          1
         ]
       }
     ],
@@ -115,11 +121,11 @@
     "pt": "Manto de Toross"
   },
   "description": {
-    "fr": "Lorsque vous déclenchez {#STREAMOFSOULS}\\_:\\v Confère {PropertyEffect:8} à votre héros.",
-    "en": "When you trigger {#STREAMOFSOULS}: \\vConfers {PropertyEffect:8} on your hero.",
-    "es": "Cuando activas {#STREAMOFSOULS}:\\v Confiere {PropertyEffect:8} a tu héroe.",
-    "de": "Wenn du {#STREAMOFSOULS} auslöst:\\v Gewährt deinem Helden {PropertyEffect:8}.",
-    "pt": "Quando você aciona {#STREAMOFSOULS}:\\v Concede {PropertyEffect:8} ao seu herói."
+    "fr": "Lorsque vous appliquez un état élémentaire\\_:\\v{value:drain,percent,+} de {#DRAIN} à votre héros.\n\\---\n<rem>Limité à {value:limit} fois par combat.</rem>\\v<rem>Drain actuel de votre héros\\_: {value:dr,percent}.</rem>",
+    "en": "When you apply an elemental state:\\v{value:drain,percent,+} {#DRAIN} to your hero.\n\\---\n<rem>Limit: {value:limit} {limit, plural, one[time] other[times]} per fight.</rem>\\v<rem>Your hero's current drain: {value:dr,percent}.</rem>",
+    "es": "Cuando aplicas un estado elemental:\\v{value:drain,percent,+} de {#DRAIN} a tu héroe.\n\\---\n<rem>Limitado a {value:limit} {limit, plural, one[vez] other[veces]} por combate.</rem>\\v<rem>Drenaje actual de tu héroe: {value:dr,percent}.</rem>",
+    "de": "Wenn du einen Elementarzustand anwendest:\\v{value:drain,percent,+} {#DRAIN} für deinen Helden.\n\\---\n<rem>Auf {value:limit}-mal pro Kampf begrenzt.</rem>\\v<rem>Aktueller Raub deines Helden: {value:dr,percent}.</rem>",
+    "pt": "Quando você aplica um estado elementar:\\v{value:drain,percent,+} de {#DRAIN} ao seu herói.\n\\---\n<rem>Limite de {value:limit} {limit, plural, one[vez] other[vezes]} por combate.</rem>\\v<rem>Dreno atual do seu herói: {value:dr,percent}.</rem>"
   },
   "bgDescription": {
     "fr": "{%empty}",

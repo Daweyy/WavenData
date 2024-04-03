@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1211",
+  "m_id": 1211,
+  "m_displayName": "SEASON - TOROSS - Puissance des dofus necromiques",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1306908663,
+    "b": -1188035244,
+    "c": -2071023942,
+    "d": 1379195291,
+    "e": 415609913
+  },
+  "m_i18nDescriptionId": {
+    "a": 1306908663,
+    "b": -1188035244,
+    "c": -2071023942,
+    "d": 1379195291,
+    "e": -1279261763
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "4c0e5d2ef33e66e4c8acfbc9f052686c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1211,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 10
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 1,
+            "summonings": [
+              1284
+            ]
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "db01281fddcbde94da189f9a7f6fb9f8",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Puissance des Dofus Nécromiques",
+    "en": "Necromic Dofus Power",
+    "es": "Poder de los Dofus Necrómicos",
+    "de": "Macht der Nekrom-Dofus",
+    "pt": "Potência dos Dofus Necrômicos"
+  },
+  "description": {
+    "fr": "{ATvalue:pow,percent,+} à {Summoning:1284!}.\n\\---\n{%destroyOnplayed}",
+    "en": "{ATvalue:pow,percent,+} to {Summoning:1284!}.\n\\---\n{%destroyOnplayed}",
+    "es": "{ATvalue:pow,percent,+} a {Summoning:1284!}.\n\\---\n{%destroyOnplayed}",
+    "de": "{ATvalue:pow,percent,+} für {Summoning:1284!}.\n\\---\n{%destroyOnplayed}",
+    "pt": "{ATvalue:pow,percent,+} para {Summoning:1284!}.\n\\---\n{%destroyOnplayed}"
+  }
+}

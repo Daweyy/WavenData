@@ -49,10 +49,18 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "rip",
+          "value": 100
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "RESPONSE"
+      ]
     },
     "families": [
       70
@@ -61,7 +69,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 30
+      "value": 50
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -73,7 +81,11 @@
       "referenceId": "",
       "value": 10
     },
-    "riposte": null,
+    "riposte": {
+      "type": "ConstIntegerValue",
+      "referenceId": "rip",
+      "value": 100
+    },
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
@@ -99,11 +111,11 @@
     "pt": "Karanpique"
   },
   "description": {
-    "fr": "{%noeffect}",
-    "en": "{%noeffect}",
-    "es": "{%noeffect}",
-    "de": "{%noeffect}",
-    "pt": "{%noeffect}"
+    "fr": "{%APPEARANCE} {LUCKSELFvalue:rip,percent} de {#response}.",
+    "en": "{%APPEARANCE} {LUCKSELFvalue:rip,percent} of {#response}.",
+    "es": "{%APPEARANCE} {LUCKSELFvalue:rip,percent} de {#response}.",
+    "de": "{%APPEARANCE} {LUCKSELFvalue:rip,percent} auf {#response}.",
+    "pt": "{%APPEARANCE} {LUCKSELFvalue:rip,percent} de {#response}."
   },
   "championName": {
     "fr": "Krabapic",

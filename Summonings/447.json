@@ -71,14 +71,26 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 14
+      "value": 10
     },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
-    "actionRange": null,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 2
+      }
+    },
     "lifeScale": {
       "type": "ReferenceScalingFactor",
       "reference": 16
@@ -99,11 +111,11 @@
     "pt": "Arbusto Fujão"
   },
   "description": {
-    "fr": "{%noeffect}",
-    "en": "{%noeffect}",
-    "es": "{%noeffect}",
-    "de": "{%noeffect}",
-    "pt": "{%noeffect}"
+    "fr": "<rem>{range}</rem>\n\\---\n<i>Aucun effet.</i>",
+    "en": "<rem>{range}</rem>\n\\---\n<i>No effect.</i>",
+    "es": "<rem>{range}</rem>\n\\---\n<i>Ningún efecto.</i>",
+    "de": "<rem>{range}</rem>\n\\---\n<i>Keine Wirkung.</i>",
+    "pt": "<rem>{range}</rem>\n\\---\n<i>Sem efeito.</i>"
   },
   "championName": {
     "fr": "Buisson Fuyard",

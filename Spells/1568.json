@@ -1,0 +1,207 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1568",
+  "m_id": 1568,
+  "m_displayName": "SEASON - OROPO - Evolution",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1318150126,
+    "b": 567837412,
+    "c": -1745045877,
+    "d": -1000222860,
+    "e": 1130153664
+  },
+  "m_i18nDescriptionId": {
+    "a": -1318150126,
+    "b": 567837412,
+    "c": -1745045877,
+    "d": -1000222860,
+    "e": -948269692
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f72bf5b69172d9149be86260887e71b1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1568,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "37aa34c5aede0994bb273bd6e271d1b2",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 2
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "conc",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            },
+            {
+              "type": "EntityCaracValue",
+              "referenceId": null,
+              "entitySelector": {
+                "type": "CasterSelector"
+              },
+              "carac": 25
+            }
+          ]
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "evol",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            },
+            {
+              "type": "EntityCaracValue",
+              "referenceId": null,
+              "entitySelector": {
+                "type": "CasterSelector"
+              },
+              "carac": 23
+            }
+          ]
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "agit",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            },
+            {
+              "type": "EntityCaracValue",
+              "referenceId": null,
+              "entitySelector": {
+                "type": "CasterSelector"
+              },
+              "carac": 24
+            }
+          ]
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "pert",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            },
+            {
+              "type": "EntityCaracValue",
+              "referenceId": null,
+              "entitySelector": {
+                "type": "CasterSelector"
+              },
+              "carac": 22
+            }
+          ]
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Évolution",
+    "en": "Evolution",
+    "es": "Evolución",
+    "de": "Evolution",
+    "pt": "Evolução"
+  },
+  "description": {
+    "fr": "{value:v, +} à la <b>PUISSANCE</b> du <b>PORTAIL</b> ciblé.",
+    "en": "{value:v, +} of the targeted <b>PORTAL</b>'s <b>POWER</b>.",
+    "es": "{value:v, +} a la <b>POTENCIA</b> del <b>PORTAL</b> objetivo.",
+    "de": "{value:v, +} <b>MACHT</b> für das anvisierte <b>PORTAL</b>.",
+    "pt": "{value:v, +} à <b>POTÊNCIA</b> do <b>PORTAL</b> visado."
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1019",
+  "m_id": 1019,
+  "m_displayName": "ENIRIPSA - ARME - PALADIR - ETHER - Acharnement Piktus",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1871948575,
+    "b": 2010632548,
+    "c": 370343448,
+    "d": 1627624213,
+    "e": 1625003250
+  },
+  "m_i18nDescriptionId": {
+    "a": -1871948575,
+    "b": 2010632548,
+    "c": 370343448,
+    "d": 1627624213,
+    "e": 1321655527
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "db5bffb7753218541863ad861dfac705"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1019,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": 37,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "ElementaryStateFilter",
+            "elementaryState": 6
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a3d5260253c553442b1659e3b8edff27",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Acharnement Piktus",
+    "en": "Piktus Harassment",
+    "es": "Ensañamiento Piktus",
+    "de": "Piktus-Verbissenheit",
+    "pt": "Obstinação Piktus"
+  },
+  "description": {
+    "fr": "Vos personnages adjacents à un adversaire sous l'état {#ASTRAL} ciblé déclenchent leur <b>ATTAQUE</b>.",
+    "en": "Your characters adjacent to a targeted opponent in the {#ASTRAL} state trigger their <b>ATTACKS</b>.",
+    "es": "Tus personajes adyacentes a un adversario con el estado {#ASTRAL} objetivo activan su <b>ATAQUE</b>.",
+    "de": "Deine Charaktere, die an einen anvisierten Gegner im Zustand {#ASTRAL} angrenzen, lösen ihren <b>ANGRIFF</b> aus.",
+    "pt": "Seus personagens adjacentes a um adversário no estado {#ASTRAL} visado acionam seu <b>ATAQUE</b>."
+  }
+}

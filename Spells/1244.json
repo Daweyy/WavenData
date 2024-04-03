@@ -1,0 +1,215 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1244",
+  "m_id": 1244,
+  "m_displayName": "IOP - ARME - PALADIR - FEU - Traversée Hioplite",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1050143310,
+    "b": -1763565772,
+    "c": -728885640,
+    "d": 849713968,
+    "e": 354863537
+  },
+  "m_i18nDescriptionId": {
+    "a": -1050143310,
+    "b": -1763565772,
+    "c": -728885640,
+    "d": 849713968,
+    "e": -767972434
+  },
+  "m_elementaryStates": 3,
+  "m_illustrationReference": {
+    "assetGuid": "bba48f59042299740bc839bc56bd3ab8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1244,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3327,
+      2932,
+      4010
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": 481,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 4,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c0d08f81a7931f04194c01a0f4179c04",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": "",
+            "valueInPvM": 13,
+            "valueInPvP": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "percentSkill",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "percentSkill",
+          "value": 30
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OILED"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Traversée Hioplite",
+    "en": "Hioplite Crossing",
+    "es": "Travesía Yoplita",
+    "de": "Hioplit-Überquerung",
+    "pt": "Travessia Hioplita"
+  },
+  "description": {
+    "fr": "Votre héros traverse jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:dmg} et applique {#oiled} aux adversaires traversés.",
+    "en": "Your hero goes through up to {cell:c}.\n\\---\nDoes {magicalDamage:dmg} and applies {#oiled} on opponents gone through.",
+    "es": "Tu héroe atraviesa hasta {cell:c}.\n\\---\nInflige {magicalDamage:dmg} y aplica {#oiled} a los adversarios atravesados.",
+    "de": "Dein Held überquert bis zu {cell:c}.\n\\---\nVerursacht {magicalDamage:dmg} und wendet {#oiled} bei überquerten Gegnern an.",
+    "pt": "Seu herói atravessa até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} e aplica {#oiled} aos adversários atravessados."
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1441",
+  "m_id": 1441,
+  "m_displayName": "XELOR - ARME - PALADIR - ETHER - Espacement Zinetritos",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 464592830,
+    "b": 471433428,
+    "c": -1544740440,
+    "d": -32932440,
+    "e": 813364165
+  },
+  "m_i18nDescriptionId": {
+    "a": 464592830,
+    "b": 471433428,
+    "c": -1544740440,
+    "d": -32932440,
+    "e": 1417950835
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "021599d794459374fbbdc1aadfe20831"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "995410cb10a92454a8968ce2ac1c50c0"
+      },
+      {
+        "assetGuid": "ac75e8b2c1a486445877e68a9c831a2b"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1441,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": 643,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "CasterHeroSelector"
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "p",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Espacement Zinetritos",
+    "en": "Zinetritos Spacing",
+    "es": "Separación Zinetritos",
+    "de": "Zinetritos-Abstand",
+    "pt": "Espaçamento Zinetritos"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:c} et inflige {value:p,percent} de son {%AT} à l'adversaire ayant le plus de {%PV,plural:other}.\n\\---\nPiochez {SPELLCOUNTvalue:s}.",
+    "en": "Teleports your hero up to {cell:c} and inflicts {value:p,percent} of their {%AT} on the opponent with the most {%PV,plural:other}.\n\\---\nDraw {SPELLCOUNTvalue:s}.",
+    "es": "Teletransporta a tu héroe hasta {cell:c} e inflige un {value:p,percent} de su {%AT} al adversario que tenga más de {%PV,plural:other}.\n\\---\nSacas {SPELLCOUNTvalue:s}.",
+    "de": "Teleportiert deinen Helden bis zu {cell:c} und fügt dem Gegner mit den meisten {%PV,plural:other} {value:p,percent} seines {%AT,plural:two} als Schaden zu.\n\\---\nZiehe {SPELLCOUNTvalue:s}.",
+    "pt": "Teletransporta seu herói por até {cell:c} e inflige {value:p,percent} de seu {%AT} ao adversário que tiver mais {%PV,plural:other}.\n\\---\nCompre {SPELLCOUNTvalue:s}."
+  }
+}

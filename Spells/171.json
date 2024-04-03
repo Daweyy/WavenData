@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "75d6b662e0140d64ab9a5403475ff151"
+    "assetGuid": "165b27af9b19170439ed06041be0e193"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -82,7 +82,7 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "value": 3
         }
       }
     ],
@@ -109,20 +109,87 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "d",
-          "value": 18
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 14
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            25,
+            51
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "MultValue",
+          "referenceId": "dr",
+          "valuesToMult": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "drain",
+              "value": 10
+            },
+            {
+              "type": "DivideValue",
+              "referenceId": "",
+              "numerator": {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "CasterSelector"
+                },
+                "carac": 21
+              },
+              "denominator": {
+                "type": "ConstIntegerValue",
+                "referenceId": "f",
+                "value": 2
+              },
+              "defaultValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "roundMethod": 2
+            }
+          ]
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "e",
-          "value": 5
+          "referenceId": "drain",
+          "value": 10
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "f",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DEUIL"
+        "DRAIN",
+        "FESTIN"
       ]
     }
   },
@@ -134,10 +201,10 @@
     "pt": "Fogo Necrômico"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}\\_: {magicalDamage:e,+}.",
-    "en": "Does {magicalDamage:d}.\n\\---\n{#DEUIL}: {magicalDamage:e,+}.",
-    "es": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}: {magicalDamage:e,+}.",
-    "de": "Verursacht {magicalDamage:d}.\n\\---\n{#DEUIL}: {magicalDamage:e,+}.",
-    "pt": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}: {magicalDamage:e,+}."
+    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f})\\_: {DRAINvalue:dr,+,percent}\\_({value:drain,percent,+}) à votre héros pour le tour.",
+    "en": "Does {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): {DRAINvalue:dr,+,percent}\\_({value:drain,percent,+}) to your hero for the turn.",
+    "es": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): {DRAINvalue:dr,+,percent}\\_({value:drain,percent,+}) a tu héroe durante el turno.",
+    "de": "Verursacht {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): {DRAINvalue:dr,+,percent}\\_({value:drain,percent,+}) für deinen Helden für die Runde.",
+    "pt": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): {DRAINvalue:dr,+,percent}\\_({value:drain,percent,+}) ao seu herói durante o turno."
   }
 }

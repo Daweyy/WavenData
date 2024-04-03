@@ -169,23 +169,37 @@
                   "value": 100
                 },
                 {
-                  "type": "MultValue",
+                  "type": "ClampValue",
                   "referenceId": null,
-                  "valuesToMult": [
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": null,
-                      "value": 5
-                    },
-                    {
-                      "type": "EntityCaracValue",
-                      "referenceId": "x",
-                      "entitySelector": {
-                        "type": "CasterSelector"
+                  "valueToClamp": {
+                    "type": "MultValue",
+                    "referenceId": null,
+                    "valuesToMult": [
+                      {
+                        "type": "ConstIntegerValue",
+                        "referenceId": null,
+                        "value": 5
                       },
-                      "carac": 20
-                    }
-                  ]
+                      {
+                        "type": "EntityCaracValue",
+                        "referenceId": "x",
+                        "entitySelector": {
+                          "type": "CasterSelector"
+                        },
+                        "carac": 20
+                      }
+                    ]
+                  },
+                  "min": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "max": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 100
+                  }
                 }
               ]
             },
@@ -255,7 +269,7 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}) : Inflige les dégâts de ce sort aux adversaires alignés à votre héros.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Jauges générées : {value:x}</rem>",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Does this spell's damage to opponents in line with your hero.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}.</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Does this spell's damage to opponents in line with your hero.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges Generated: {value:x}.</rem>",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Inflige los daños de este hechizo a los adversarios alineados con tu héroe.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Indicadores generados: {value:x}</rem>",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Verursacht den Schaden dieses Zaubers bei den Gegnern, die sich in derselben Reihe wie dein Held befinden.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
     "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Inflige os danos deste feitiço aos adversários alinhados com o seu herói.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Cargas geradas: {value:x}</rem>"

@@ -1,0 +1,177 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1786",
+  "m_id": 1786,
+  "m_displayName": "NECROMONDE - NECROME - Mur de Stasis",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 353977174,
+    "b": 432969204,
+    "c": -306307269,
+    "d": 919341120,
+    "e": -34442092
+  },
+  "m_i18nDescriptionId": {
+    "a": 353977174,
+    "b": 432969204,
+    "c": -306307269,
+    "d": 919341120,
+    "e": 405898430
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "396071ab0dd146c4986e6c0f10a4fa8e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1786,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": null,
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 5
+            },
+            {
+              "type": "MultValue",
+              "referenceId": null,
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "co",
+                  "value": 1
+                },
+                {
+                  "type": "EntityCountValue",
+                  "referenceId": "",
+                  "from": {
+                    "type": "AllEntitiesWithLifeSelector"
+                  },
+                  "entityFilters": [
+                    {
+                      "type": "ObjectMechanismDefinitionFilter",
+                      "condition": 1,
+                      "objectMechanisms": [
+                        336
+                      ]
+                    },
+                    {
+                      "type": "TeamFilter",
+                      "isIdentical": true,
+                      "reference": {
+                        "type": "CasterSelector"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": false,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "co",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Mur de Stasis",
+    "en": "Stasis Wall",
+    "es": "Muro de Stasis",
+    "de": "Stasis-Mauer",
+    "pt": "Parede de Stasis"
+  },
+  "description": {
+    "fr": "Pose un {ObjectMechanism:336!} sur une case adjacente\\_<sprite name=\"cell_cross\"> à un adversaire.\n\\---\n{PAvalue:co,+} au coût de ce sort par {ObjectMechanism:336!} en jeu.",
+    "en": "Places one {ObjectMechanism:336!} on a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent.\n\\---\n{PAvalue:co,+} to the cost of this spell per {ObjectMechanism:336!} in play.",
+    "es": "Pone un {ObjectMechanism:336!} en una casilla adyacente\\_<sprite name=\"cell_cross\"> a un adversario.\n\\---\n{PAvalue:co,+} al coste de este hechizo por {ObjectMechanism:336!} en juego.",
+    "de": "Platziert 1\\_{ObjectMechanism:336!} auf einem an einen Gegner angrenzenden\\_<sprite name=\"cell_cross\"> Feld.\n\\---\n{PAvalue:co,+} auf die Kosten dieses Zaubers je {ObjectMechanism:336!} im Spiel.",
+    "pt": "Coloca uma {ObjectMechanism:336!} em uma célula adjacente\\_<sprite name=\"cell_cross\"> a um adversário.\n\\---\n{PAvalue:co,+} ao custo desse feitiço por {ObjectMechanism:336!} no jogo."
+  }
+}

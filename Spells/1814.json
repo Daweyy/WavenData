@@ -1,0 +1,216 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1814",
+  "m_id": 1814,
+  "m_displayName": "SEASON - TOROSS - Colère de Goultard",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1437499490,
+    "b": -1858586588,
+    "c": 1077053595,
+    "d": 1942121908,
+    "e": -925290797
+  },
+  "m_i18nDescriptionId": {
+    "a": -1437499490,
+    "b": -1858586588,
+    "c": 1077053595,
+    "d": 1942121908,
+    "e": 1891991557
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "82487fe25639ea949b5505bd1a3422ea"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1814,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "SummoningDefinitionFilter",
+            "condition": 1,
+            "summonings": [
+              958
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "CircleAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "SummoningDefinitionFilter",
+              "condition": 1,
+              "summonings": [
+                1284
+              ]
+            },
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "12d07babd529ac04a9d1b199068369ff",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      },
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "f3a9e22e20637d14f9c03f788ff4eead",
+        "originTarget": {
+          "type": "SecondCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      },
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b65a77644959b594aa8f5c42ca9727e5",
+        "originTarget": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "SecondCastTargetSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 3
+                }
+              }
+            }
+          ]
+        },
+        "orientation": null,
+        "delay": {
+          "type": "DelayOverDistance",
+          "origin": {
+            "type": "FirstCastTargetSelector"
+          },
+          "delay": 0.05
+        }
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 500
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Colère de Goultard",
+    "en": "Goultard's Wrath",
+    "es": "Ira de Gúltar",
+    "de": "Goultards Wut",
+    "pt": "Ira de Gultar"
+  },
+  "description": {
+    "fr": "Ciblez un adversaire sur une case adjacente\\_<sprite name=\"cell_cross\"> à {Summoning:958!}. \n\\---\nInflige {value:per,percent} de l'<b>ATTAQUE</b> de {Summoning:958!} en zone\\_<sprite name=\"cell_circle2\">.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Target an opponent on a cell adjacent\\_<sprite name=\"cell_cross\"> to {Summoning:958!}.\n\\---\nInflicts {value:per,percent} of {Summoning:958!}'s <b>ATTACK</b> in a <sprite name=\"cell_circle2\">\\_zone.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Seleccionas a un adversario de una casilla adyacente\\_<sprite name=\"cell_cross\"> a {Summoning:958!}. \n\\---\nInflige un {value:per,percent} del <b>ATAQUE</b> de {Summoning:958!} en zona\\_<sprite name=\"cell_circle2\">.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Visiert einen Gegner auf einem an {Summoning:958!} angrenzenden \\_<sprite name=\"cell_cross\"> Feld an. \n\\---\nVerursacht {value:per,percent} des <b>ANGRIFFS</b> von {Summoning:958!} im Wirkungsbereich\\_<sprite name=\"cell_circle2\"> als Schaden.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Mire em um adversário em uma célula adjacente\\_<sprite name=\"cell_cross\"> a {Summoning:958!}. \n\\---\nInflige {value:per,percent} do <b>ATAQUE</b> de {Summoning:958!} em zona\\_<sprite name=\"cell_circle2\">.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

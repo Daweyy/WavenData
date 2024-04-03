@@ -1,0 +1,164 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1307",
+  "m_id": 1307,
+  "m_displayName": "IOP - ARME - PALADIR - ETHER - Frappe Hioplite",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -2003884080,
+    "b": 1258182372,
+    "c": -1479957655,
+    "d": -1760223735,
+    "e": 1309150110
+  },
+  "m_i18nDescriptionId": {
+    "a": -2003884080,
+    "b": 1258182372,
+    "c": -1479957655,
+    "d": -1760223735,
+    "e": -146562740
+  },
+  "m_elementaryStates": 6,
+  "m_illustrationReference": {
+    "assetGuid": "b47c10749ed123e459fd252f81701324"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1307,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": 481,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 5,
+          "valueInPvP": 7
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "db9e6d7e6269ce14aa6ab55472099f70",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "vpvp",
+          "value": 47
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Frappe Hioplite",
+    "en": "Hioplite Strike",
+    "es": "Golpe Yoplita",
+    "de": "Hioplit-Hieb",
+    "pt": "Golpe Hioplita"
+  },
+  "description": {
+    "fr": "<if pvm>Inflige {value:v,percent} de l'{%AT} de votre héros.</if><if pvp>Inflige {magicalDamage:vpvp}.</if>\n\\---\nApplique {#ASTRAL} à la cible.",
+    "en": "<if pvm>Inflicts {value:v,percent} of your hero's {%AT}.</if><if pvp>Does {magicalDamage:vpvp}.</if>\n\\---\nApplies {#ASTRAL} on the target.",
+    "es": "<if pvm>Inflige un {value:v,percent} del {%AT} de tu héroe.</if><if pvp>Inflige {magicalDamage:vpvp}.</if>\n\\---\nAplica {#ASTRAL} al objetivo.",
+    "de": "<if pvm>Fügt {value:v,percent} des {%AT,plural:two} deines Helden als Schaden zu.</if><if pvp>Verursacht {magicalDamage:vpvp}.</if>\n\\---\nWendet beim Ziel {#ASTRAL} an.",
+    "pt": "<if pvm>Inflige {value:v,percent} do {%AT} do seu herói.</if><if pvp>Inflige {magicalDamage:vpvp}.</if>\n\\---\nAplica {#ASTRAL} ao alvo."
+  }
+}

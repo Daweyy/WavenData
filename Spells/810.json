@@ -1,0 +1,166 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "810",
+  "m_id": 810,
+  "m_displayName": "SEASON - TOROSS - Traversee de Goultard",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -809107775,
+    "b": 1417449236,
+    "c": 1041603162,
+    "d": 114474608,
+    "e": 1177229597
+  },
+  "m_i18nDescriptionId": {
+    "a": -809107775,
+    "b": 1417449236,
+    "c": 1041603162,
+    "d": 114474608,
+    "e": 1882707438
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e729c892cffb19142aa5e5f0ab321fc8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 810,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": null,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 6
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d92318da4c80c0c44a2428cac4e4724a",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 6
+        },
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "EffectHolderSelector"
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Traversée de Goultard",
+    "en": "Goultard's Crossing",
+    "es": "Travesía de Gúltar",
+    "de": "Goultards Überquerung",
+    "pt": "Travessia de Gultar"
+  },
+  "description": {
+    "fr": "Un allié traverse jusqu'à {cell:c} et inflige son <b>ATTAQUE</b> aux personnages et <b>{%KEYWORD.OBJECTMECHANISM.NAME, plural:other}</b> adverses traversés.",
+    "en": "An ally goes through up to {cell:c} and inflicts their <b>ATTACK</b> on opposing characters and <b>{%KEYWORD.OBJECTMECHANISM.NAME, plural:other}</b> gone through.",
+    "es": "Un aliado atraviesa hasta {cell:c} e inflige su <b>ATAQUE</b> a los personajes y <b>{%KEYWORD.OBJECTMECHANISM.NAME, plural:other}</b> enemigos atravesados.",
+    "de": "Ein Verbündeter überquert bis zu {cell:c} und verursacht seinen <b>ANGRIFF</b> bei überquerten gegnerischen Charakteren und <b>{%KEYWORD.OBJECTMECHANISM.NAME, plural:other}</b> als Schaden.",
+    "pt": "Um aliado atravessa até {cell:c} e inflige seu <b>ATAQUE</b> aos personagens e <b>{%KEYWORD.OBJECTMECHANISM.NAME, plural:other}</b> adversários atravessados."
+  }
+}

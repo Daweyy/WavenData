@@ -1,0 +1,171 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1276",
+  "m_id": 1276,
+  "m_displayName": "ENIRIPSA - ARME - PALADIR - TERRE - Suburex",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1690735199,
+    "b": 474838948,
+    "c": -1552076615,
+    "d": -145396359,
+    "e": -955514372
+  },
+  "m_i18nDescriptionId": {
+    "a": -1690735199,
+    "b": 474838948,
+    "c": -1552076615,
+    "d": -145396359,
+    "e": 1080400506
+  },
+  "m_elementaryStates": 2,
+  "m_illustrationReference": {
+    "assetGuid": "aeb4501610b063a448dc348f3f0df5f9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1276,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3290,
+      3508,
+      3333
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16,
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 3,
+      "specificToWeapon": 37,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 13,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 3,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AllCharactersSelector"
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ab61711f3a4c087428eff0be882d52c3",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 12,
+            "valueInPvP": 22
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL",
+        "MUDDY"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Suburex",
+    "en": "Suburex",
+    "es": "Suburex",
+    "de": "Suburex",
+    "pt": "Suburex"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nApplique {#muddy} ou {#astral} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\nApplies {#muddy} or {#astral} if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\nAplica {#muddy} o {#astral} si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nWendet {#muddy} oder {#astral} an, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAplica {#muddy} ou {#astral} se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1154",
+  "m_id": 1154,
+  "m_displayName": "SRAM - ARME - PALADIR - AIR - Piège de la brise",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1200236273,
+    "b": -1755357196,
+    "c": -551556215,
+    "d": -1515127724,
+    "e": -94291192
+  },
+  "m_i18nDescriptionId": {
+    "a": 1200236273,
+    "b": -1755357196,
+    "c": -551556215,
+    "d": -1515127724,
+    "e": -1670670361
+  },
+  "m_elementaryStates": 4,
+  "m_illustrationReference": {
+    "assetGuid": "1b62b4cd61f32fa4480053f0b5327ef8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1154,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3044,
+      2921,
+      3013
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2,
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 4,
+      "specificToWeapon": 576,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 4,
+          "valueInPvP": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AreaFromTargetsSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConditionalValue",
+                  "referenceId": "c",
+                  "condition": {
+                    "type": "AndCondition",
+                    "conditions": [
+                      {
+                        "type": "ThisSpellHasSkillCondition",
+                        "skillId": 68669
+                      }
+                    ]
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 5
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 3
+                  }
+                }
+              }
+            },
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "targets": {
+          "type": "CasterHeroSelector"
+        },
+        "areaOfEffect": {
+          "type": "CrossAreaOfEffectSelector",
+          "originSelector": {
+            "type": "EngineDeterminedHolder"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 68669
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.748.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        "VENTILATED",
+        {
+          "type": 6,
+          "id": 748
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège de la brise",
+    "en": "Breezy Trap",
+    "es": "Trampa de Brisa",
+    "de": "Brisenfalle",
+    "pt": "Armadilha da Brisa"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:748} ({value:FloorMechanism.748.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\nApplique {#ventilated} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à votre héros.",
+    "en": "Builds one {FloorMechanism:748} ({value:FloorMechanism.748.dmg}) up to {cell:c} from your hero.\n\\---\nApplies {#ventilated} on opponents adjacent\\_<sprite name=\"cell_cross\"> to your hero.",
+    "es": "Construye una {FloorMechanism:748} ({value:FloorMechanism.748.dmg}) hasta a {cell:c} de tu héroe.\n\\---\nAplica {#ventilated} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a tu héroe.",
+    "de": "Errichtet eine\\_{FloorMechanism:748} ({value:FloorMechanism.748.dmg}) bis zu {cell:c} von deinem Helden entfernt.\n\\---\nWendet {#ventilated} bei an deinen Helden angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern an.",
+    "pt": "Constrói uma {FloorMechanism:748} ({value:FloorMechanism.748.dmg}) a até {cell:c} do seu herói.\n\\---\nAplica {#ventilated} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> ao seu herói."
+  }
+}

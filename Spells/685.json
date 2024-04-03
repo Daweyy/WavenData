@@ -1,0 +1,172 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "685",
+  "m_id": 685,
+  "m_displayName": "CRA - ARME - PALADIR - FEU - Spicu Ardent",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 954955026,
+    "b": -978182940,
+    "c": 460202907,
+    "d": 827787173,
+    "e": -1302368863
+  },
+  "m_i18nDescriptionId": {
+    "a": 954955026,
+    "b": -978182940,
+    "c": 460202907,
+    "d": 827787173,
+    "e": 2067666595
+  },
+  "m_elementaryStates": 3,
+  "m_illustrationReference": {
+    "assetGuid": "3710fe4a9fb6c6640b845c82bf91b167"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 685,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      4037,
+      3655,
+      3790
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": 134,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 5,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "110fcacc93506a4408f9cddc3df677d6",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 26,
+            "valueInPvP": 28
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "OILED",
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Spicu Ardent",
+    "en": "Ardent Spicu",
+    "es": "Espicu Ardiente",
+    "de": "Glühender Spicu",
+    "pt": "Spicus Ardente"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_: Applique {#oiled}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: Applies {#oiled}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: Aplica {#oiled}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}: Wendet {#oiled} an.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: Aplica {#oiled}."
+  }
+}

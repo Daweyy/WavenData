@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "809",
+  "m_id": 809,
+  "m_displayName": "NECROMONDE - AIR - ENIGME - 01 - Saut de l aigle",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1400219701,
+    "b": -1095325756,
+    "c": 1311530361,
+    "d": -1352448335,
+    "e": -1105866259
+  },
+  "m_i18nDescriptionId": {
+    "a": 1400219701,
+    "b": -1095325756,
+    "c": 1311530361,
+    "d": -1352448335,
+    "e": 1598766406
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "0970a8666cac6914d9f160c690005fad"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "ca64ca652fa4cfa4bb515f6e769a5b3c"
+      },
+      {
+        "assetGuid": "528671e0b64964148828a9a3d36a1075"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 809,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Saut de l'aigle",
+    "en": "Eagle Leap",
+    "es": "Salto de Águila",
+    "de": "Adlersprung",
+    "pt": "Pulo da Águia"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:c}.",
+    "en": "Teleports your hero up to {cell:c}.",
+    "es": "Teletransporta a tu héroe hasta {cell:c}.",
+    "de": "Teleportiert deinen Helden bis {cell:c}.",
+    "pt": "Teletransporta seu herói por até {cell:c}."
+  }
+}

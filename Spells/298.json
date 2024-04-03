@@ -1,0 +1,179 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "298",
+  "m_id": 298,
+  "m_displayName": "NECROMONDE - NECROME - Aura Nécromique ",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1382437610,
+    "b": 1635273268,
+    "c": 714411370,
+    "d": -2073762727,
+    "e": 2075093419
+  },
+  "m_i18nDescriptionId": {
+    "a": -1382437610,
+    "b": 1635273268,
+    "c": 714411370,
+    "d": -2073762727,
+    "e": -1984328802
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "459dfb00d71ef6a4db57ac47bfb719f5"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 298,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [
+        68
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 5
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              68
+            ]
+          },
+          {
+            "type": "FloatingCounterValueFilter",
+            "counterFilter": {
+              "type": "SpecificFloatingCounterType",
+              "counterId": 197
+            },
+            "valueFilter": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "a",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 4
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "d",
+                  "value": -1
+                },
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "d",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "AURA",
+        {
+          "type": 4,
+          "id": 1091
+        },
+        "DEUILNECROM",
+        {
+          "type": 22,
+          "id": 197
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Aura Nécromique",
+    "en": "Necromic Aura",
+    "es": "Aura Necrómica",
+    "de": "Nekrom-Aura",
+    "pt": "Aura Necrômica"
+  },
+  "description": {
+    "fr": "{value:a,+}\\_{aura:197,value:a} à un {Family:68} allié qui n'en a pas.\n\\---\n{#DEUILNECROM}\\_: {value:d}\\_{aura:197,value:d}.",
+    "en": "{value:a,+}\\_{aura:197,value:a} to an allied {Family:68} that doesn't have any.\n\\---\n{#DEUILNECROM}: {value:d}\\_{aura:197,value:d}.",
+    "es": "{value:a,+}\\_{aura:197,value:a} a un {Family:68} aliado que no tenga.\n\\---\n{#DEUILNECROM}: {value:d}\\_{aura:197,value:d}.",
+    "de": "{value:a,+}\\_{aura:197,value:a} für einen verbündeten {Family:68}, der keine hat.\n\\---\n{#DEUILNECROM}: {value:d}\\_{aura:197,value:d}.",
+    "pt": "{value:a,+}\\_{aura:197,value:a} a um {Family:68} aliado que não possui uma.\n\\---\n{#DEUILNECROM}: {value:d}\\_{aura:197,value:d}."
+  }
+}

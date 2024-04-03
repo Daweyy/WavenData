@@ -22,7 +22,10 @@
     "pvpWorld": 98,
     "playerInitializationConstant": {
       "type": "PlayerInitializationConstants",
-      "unlockedCharacterSlots": 5
+      "unlockedCharacterSlots": 5,
+      "achievementsToRecreditOnNewVariants": [
+        902
+      ]
     },
     "tutorialConstants": {
       "type": "TutorialConstants",
@@ -100,10 +103,7 @@
         71
       ],
       "defaultHavenIslandPowers": [
-        874,
-        288,
-        481,
-        34
+        874
       ]
     },
     "groupConstants": {
@@ -178,7 +178,7 @@
               "costs": [
                 {
                   "type": "ResourceCost",
-                  "amount": 1200,
+                  "amount": 1500,
                   "resourceId": 922
                 }
               ]
@@ -205,6 +205,63 @@
                 {
                   "type": "ResourceCost",
                   "amount": 1200,
+                  "resourceId": 922
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "characterSkinChromaCost": {
+        "type": "MerchantCostWithRarity",
+        "costs": [
+          {
+            "k": 0,
+            "v": {
+              "type": "MerchantCost",
+              "costs": [
+                {
+                  "type": "ResourceCost",
+                  "amount": 400,
+                  "resourceId": 922
+                }
+              ]
+            }
+          },
+          {
+            "k": 1,
+            "v": {
+              "type": "MerchantCost",
+              "costs": [
+                {
+                  "type": "ResourceCost",
+                  "amount": 400,
+                  "resourceId": 922
+                }
+              ]
+            }
+          },
+          {
+            "k": 2,
+            "v": {
+              "type": "MerchantCost",
+              "costs": [
+                {
+                  "type": "ResourceCost",
+                  "amount": 400,
+                  "resourceId": 922
+                }
+              ]
+            }
+          },
+          {
+            "k": 4,
+            "v": {
+              "type": "MerchantCost",
+              "costs": [
+                {
+                  "type": "ResourceCost",
+                  "amount": 400,
                   "resourceId": 922
                 }
               ]
@@ -1932,6 +1989,7 @@
             1732,
             2106,
             2127,
+            3475,
             267,
             1730,
             2755,
@@ -2295,6 +2353,10 @@
         "type": "BackofficeShopCategory",
         "key": "com.ankama.waven.hardcurrencyarticles"
       },
+      "hardCurrencyServerVariantShopCategory": {
+        "type": "BackofficeShopCategory",
+        "key": "com.ankama.waven.hardcurrencyarticles.servervariant"
+      },
       "goldPassArticleKey": {
         "type": "BackofficeShopArticle",
         "key": "com.ankama.waven.goldpass",
@@ -2470,6 +2532,18 @@
         637,
         36,
         366
+      ],
+      "weaponsForVariants": [
+        {
+          "k": 2,
+          "v": [
+            134,
+            37,
+            481,
+            576,
+            643
+          ]
+        }
       ]
     },
     "demos": {
@@ -2501,6 +2575,10 @@
     "application": {
       "type": "ApplicationConstants",
       "mapIdForBenchmark": 1588
+    },
+    "tracking": {
+      "type": "TrackingConstants",
+      "starterIslandsAchievementId": 1769
     }
   }
 }

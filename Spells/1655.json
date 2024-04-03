@@ -1,0 +1,131 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1655",
+  "m_id": 1655,
+  "m_displayName": "SEASON - OROPO - Perturbation",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 484419510,
+    "b": -1054356812,
+    "c": 891616121,
+    "d": -1950975647,
+    "e": -186364849
+  },
+  "m_i18nDescriptionId": {
+    "a": 484419510,
+    "b": -1054356812,
+    "c": 891616121,
+    "d": -1950975647,
+    "e": -1529407694
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "76d6db1a273dc32438f823319ee9c2f9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1655,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllFloorMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "OwnerFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "d98f0f1963758b84dbfb175b2e2d0d53",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "res",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Perturbation",
+    "en": "Perturbation",
+    "es": "Perturbación",
+    "de": "Kontinuumsstörung",
+    "pt": "Perturbação"
+  },
+  "description": {
+    "fr": "{PA_RESvalue:res, +}<sprite name=\"reserve\"> par <b>PUISSANCE</b> du <b>PORTAIL</b> ciblé et remet sa <b>PUISSANCE</b> à 1.",
+    "en": "{PA_RESvalue:res, +}<sprite name=\"reserve\"> times the <b>POWER</b> of the targeted <b>PORTAL</b> and resets its <b>POWER</b> to 1.",
+    "es": "{PA_RESvalue:res, +}<sprite name=\"reserve\"> por <b>POTENCIA</b> del <b>PORTAL</b> objetivo y devuelve su <b>POTENCIA</b> a 1.",
+    "de": "{PA_RESvalue:res, +}<sprite name=\"reserve\"> nach <b>SCHLAGKRAFT</b> des anvisierten <b>PORTALS</b> und setzt seine <b>SCHLAGKRAFT</b> auf 1 zurück.",
+    "pt": "{PA_RESvalue:res, +}<sprite name=\"reserve\"> por <b>POTÊNCIA</b> do <b>PORTAL</b> visado e redefine sua <b>POTÊNCIA</b> para 1."
+  }
+}

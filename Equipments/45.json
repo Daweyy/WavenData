@@ -55,22 +55,24 @@
       472,
       282,
       773,
-      281
+      281,
+      3001
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 636,
     "useCharges": false,
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "ParameterizedEffectExecution.894.Deuil"
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "draw",
+          "value": 1
+        }
       ],
+      "externalDynamicValueReferences": [],
       "hasEffects": false,
-      "keywordReferences": [
-        "DEUIL",
-        "STREAMOFSOULS"
-      ]
+      "keywordReferences": []
     },
     "family": 68,
     "specificToGod": 0,
@@ -78,7 +80,8 @@
     "passiveModifiers": [
       {
         "type": "CaracBuffModifier",
-        "holder": 8,
+        "useAsMainDescription": false,
+        "holder": 9,
         "value": {
           "type": "LinearLevelOnlyBasedDynamicValue",
           "referenceId": "",
@@ -86,20 +89,7 @@
           "factor": 1
         },
         "caracIds": [
-          58
-        ]
-      },
-      {
-        "type": "CaracBuffModifier",
-        "holder": 8,
-        "value": {
-          "type": "LinearLevelOnlyBasedDynamicValue",
-          "referenceId": "",
-          "baseValue": 0,
-          "factor": 1
-        },
-        "caracIds": [
-          1
+          28
         ]
       }
     ],
@@ -113,11 +103,11 @@
     "pt": "Luto de Toross"
   },
   "description": {
-    "fr": "{value:ParameterizedEffectExecution.894.Deuil,+,percent} de <b>DÉGÂTS</b> à vos {#STREAMOFSOULS}.",
-    "en": "{value:ParameterizedEffectExecution.894.Deuil,+,percent} <b>DAMAGE</b> to your {#STREAMOFSOULS,plural:other}.",
-    "es": "{value:ParameterizedEffectExecution.894.Deuil,+,percent} de <b>DAÑOS</b> a tus {#STREAMOFSOULS,plural:other}.",
-    "de": "{value:ParameterizedEffectExecution.894.Deuil,+,percent} <b>SCHADEN</b> für deinen {#STREAMOFSOULS}.",
-    "pt": "{value:ParameterizedEffectExecution.894.Deuil,+,percent} de <b>DANOS</b> aos seus {#STREAMOFSOULS}."
+    "fr": "Lorsque que vous consommez un état élémentaire\\_:\\vPiochez votre prochain sort d'application d'état élémentaire.\n\\---\n<rem>Limité à {value:draw} fois par tour.</rem>",
+    "en": "When you consume an elemental state:\\vDraw your next spell applying an elemental state.\n\\---\n<rem>Limit: {value:draw} {draw, plural, one[time] other[times]} per turn.</rem>",
+    "es": "Cuando consumes un estado elemental:\\vSacas tu próximo hechizo de aplicación de estado elemental.\n\\---\n<rem>Limitado a {value:draw} {draw, plural, one[vez] other[veces]} por turno.</rem>",
+    "de": "Wenn du einen Elementarzustand verbrauchst:\\vZiehe deinen nächsten Zauber zum Anwenden eines Elementarzustands.\n\\---\n<rem>Auf {value:draw}-mal pro Runde begrenzt.</rem>",
+    "pt": "Quando você consome um estado elementar:\\vCompre seu próximo feitiço de aplicação de estado elementar.\n\\---\n<rem>Limite de {value:draw} {draw, plural, one[vez] other[vezes]} por turno.</rem>"
   },
   "bgDescription": {
     "fr": "{%empty}",

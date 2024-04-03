@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "51039daab221f3440b7973658933b80f"
+    "assetGuid": "5c0f328aac60b684da0fd748b337982d"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -86,34 +86,45 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 9
+              "value": 8
             },
             {
-              "type": "NegativeValue",
-              "referenceId": "",
-              "valueToNeg": {
-                "type": "CompanionsInReserveValue",
-                "referenceId": "",
-                "playerSelector": {
-                  "type": "CasterSelector"
+              "type": "MultValue",
+              "referenceId": "pa",
+              "valuesToMult": [
+                {
+                  "type": "NegativeValue",
+                  "referenceId": "p",
+                  "valueToNeg": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 1
+                  }
                 },
-                "companionState": [
-                  2,
-                  3
-                ]
-              }
-            },
-            {
-              "type": "NegativeValue",
-              "referenceId": "",
-              "valueToNeg": {
-                "type": "NumberOfEquippedCompanionsWithFamilyValue",
-                "referenceId": "",
-                "player": {
-                  "type": "CasterSelector"
-                },
-                "family": 68
-              }
+                {
+                  "type": "DivideValue",
+                  "referenceId": null,
+                  "numerator": {
+                    "type": "EntityCaracValue",
+                    "referenceId": null,
+                    "entitySelector": {
+                      "type": "CasterSelector"
+                    },
+                    "carac": 21
+                  },
+                  "denominator": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "f",
+                    "value": 3
+                  },
+                  "defaultValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "roundMethod": 2
+                }
+              ]
             }
           ]
         }
@@ -142,20 +153,72 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "MultValue",
+          "referenceId": "pa",
+          "valuesToMult": [
+            {
+              "type": "NegativeValue",
+              "referenceId": "p",
+              "valueToNeg": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 1
+              }
+            },
+            {
+              "type": "DivideValue",
+              "referenceId": null,
+              "numerator": {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "CasterSelector"
+                },
+                "carac": 21
+              },
+              "denominator": {
+                "type": "ConstIntegerValue",
+                "referenceId": "f",
+                "value": 3
+              },
+              "defaultValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "roundMethod": 2
+            }
+          ]
+        },
+        {
+          "type": "NegativeValue",
+          "referenceId": "p",
+          "valueToNeg": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "f",
+          "value": 3
+        },
+        {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "d",
+          "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 15
+            "value": 41
           },
           "factor": {
             "type": "ReferenceScalingFactor",
             "reference": 12
           },
           "buffs": [
-            22,
-            51
+            51,
+            22
           ],
           "skillBuffs": [
             {
@@ -177,25 +240,22 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DEUIL",
-        "NECROMAGE",
-        "AURA",
-        "STREAMOFSOULS"
+        "FESTIN"
       ]
     }
   },
   "name": {
     "fr": "Tempête Nécromique",
     "en": "Necromic Storm",
-    "es": "Tormenta Necronómica",
+    "es": "Tormenta Necrómica",
     "de": "Nekrom-Sturm",
     "pt": "Tempestade Necrômica"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:d}. \nDéclenche un {#STREAMOFSOULS} par {#AURA} que possède votre héros.\n\\---\n{#NECROMAGE}",
-    "en": "Does {magicalDamage:d}. \nTriggers one {#STREAMOFSOULS} per {#AURA} that your hero has.\n\\---\n{#NECROMAGE}",
-    "es": "Inflige {magicalDamage:d}. \nActiva un {#STREAMOFSOULS} por {#AURA} que tenga tu héroe.\n\\---\n{#NECROMAGE}",
-    "de": "Verursacht {magicalDamage:d}. \n Löst 1\\_{#STREAMOFSOULS} pro {#AURA} aus, die dein Held besitzt.\n\\---\n{#NECROMAGE}",
-    "pt": "Inflige {magicalDamage:d}. \nAciona um {#STREAMOFSOULS} por {#AURA} que seu herói possuir.\n\\---\n{#NECROMAGE}"
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#FESTIN}\\_({value:f})\\_: {PAvalue:pa,+}\\_({value:p,+}) au coût de ce sort.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#FESTIN}\\_({value:f}): {PAvalue:pa,+}\\_({value:p,+}) to the cost of this spell.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#FESTIN}\\_({value:f}): {PAvalue:pa,+}\\_({value:p,+}) al coste de este hechizo.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#FESTIN}\\_({value:f}): {PAvalue:pa,+}\\_({value:p,+}) auf Kosten dieses Zaubers.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#FESTIN}\\_({value:f}): {PAvalue:pa,+}\\_({value:p,+}) ao custo desse feitiço."
   }
 }

@@ -124,23 +124,37 @@
                   "value": 100
                 },
                 {
-                  "type": "MultValue",
+                  "type": "ClampValue",
                   "referenceId": "",
-                  "valuesToMult": [
-                    {
-                      "type": "EntityCaracValue",
-                      "referenceId": "x",
-                      "entitySelector": {
-                        "type": "CasterSelector"
+                  "valueToClamp": {
+                    "type": "MultValue",
+                    "referenceId": null,
+                    "valuesToMult": [
+                      {
+                        "type": "EntityCaracValue",
+                        "referenceId": "x",
+                        "entitySelector": {
+                          "type": "CasterSelector"
+                        },
+                        "carac": 20
                       },
-                      "carac": 20
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": 5
-                    }
-                  ]
+                      {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 5
+                      }
+                    ]
+                  },
+                  "min": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "max": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 100
+                  }
                 }
               ]
             },
@@ -208,23 +222,37 @@
                   "value": 100
                 },
                 {
-                  "type": "MultValue",
+                  "type": "ClampValue",
                   "referenceId": "",
-                  "valuesToMult": [
-                    {
-                      "type": "EntityCaracValue",
-                      "referenceId": null,
-                      "entitySelector": {
-                        "type": "CasterSelector"
+                  "valueToClamp": {
+                    "type": "MultValue",
+                    "referenceId": null,
+                    "valuesToMult": [
+                      {
+                        "type": "EntityCaracValue",
+                        "referenceId": null,
+                        "entitySelector": {
+                          "type": "CasterSelector"
+                        },
+                        "carac": 20
                       },
-                      "carac": 20
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": 5
-                    }
-                  ]
+                      {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 5
+                      }
+                    ]
+                  },
+                  "min": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "max": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 100
+                  }
                 }
               ]
             },
@@ -278,7 +306,7 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}) : Déclenche {value:ex} fois {hail:hl}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Jauges générées : {value:x}</rem>",
-    "en": "Does {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Triggers {hail:hl} {value:ex} {ex, plural, one[time] other[times]}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}.</rem>",
+    "en": "Does {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Triggers {hail:hl} {value:ex} {ex, plural, one[time] other[times]}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges Generated: {value:x}.</rem>",
     "es": "Inflige {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Activa {value:ex} {ex, plural, one[vez] other[veces]} {hail:hl}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Indicadores generados: {value:x}</rem>",
     "de": "Verursacht {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Löst {value:ex}-mal {hail:hl} aus.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
     "pt": "Inflige {magicalDamage:v}.\n\\---\n{#Jauge} ({value:j}): Aciona {hail:hl} {value:ex} {ex, plural, one[vez] other[vezes]}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Cargas geradas: {value:x}</rem>"

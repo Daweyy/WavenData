@@ -1,0 +1,230 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "146",
+  "m_id": 146,
+  "m_displayName": "SRAM - ARME - PALADIR - FEU - Piège de la flamme",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -218211887,
+    "b": -589284044,
+    "c": -886779703,
+    "d": -84344044,
+    "e": 161096565
+  },
+  "m_i18nDescriptionId": {
+    "a": -218211887,
+    "b": -589284044,
+    "c": -886779703,
+    "d": -84344044,
+    "e": 1875765660
+  },
+  "m_elementaryStates": 3,
+  "m_illustrationReference": {
+    "assetGuid": "9c76371a89f753445bb79d95484cdea5"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 146,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3160,
+      3034,
+      3631
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      2,
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 1,
+      "specificToWeapon": 576,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 11,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 6,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AreaFromTargetsSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConditionalValue",
+                  "referenceId": "c",
+                  "condition": {
+                    "type": "AndCondition",
+                    "conditions": [
+                      {
+                        "type": "ThisSpellHasSkillCondition",
+                        "skillId": 68669
+                      }
+                    ]
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 5
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 3
+                  }
+                }
+              }
+            },
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "targets": {
+          "type": "CasterHeroSelector"
+        },
+        "areaOfEffect": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "EngineDeterminedHolder"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConditionalValue",
+          "referenceId": "c",
+          "condition": {
+            "type": "AndCondition",
+            "conditions": [
+              {
+                "type": "ThisSpellHasSkillCondition",
+                "skillId": 68669
+              }
+            ]
+          },
+          "ifTrue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 5
+          },
+          "ifFalse": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.495.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        "OILED",
+        {
+          "type": 6,
+          "id": 495
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège de la flamme",
+    "en": "Flame Trap",
+    "es": "Trampa de Llama",
+    "de": "Flammenfalle",
+    "pt": "Armadilha da Chama"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:495} ({value:FloorMechanism.495.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\nApplique {#oiled} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.",
+    "en": "Builds one {FloorMechanism:495} ({value:FloorMechanism.495.dmg}) up to {cell:c} from your hero.\n\\---\nApplies {#oiled} on opponents around\\_<sprite name=\"cell_around\"> your hero.",
+    "es": "Construye una {FloorMechanism:495} ({value:FloorMechanism.495.dmg}) hasta a {cell:c} de tu héroe.\n\\---\nAplica {#oiled} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe.",
+    "de": "Errichtet eine\\_{FloorMechanism:495} ({value:FloorMechanism.495.dmg}) bis zu {cell:c} von deinem Helden entfernt.\n\\---\nWendet {#oiled} im Umkreis\\_<sprite name=\"cell_around\"> deines Helden an.",
+    "pt": "Constrói uma {FloorMechanism:495} ({value:FloorMechanism.495.dmg}) a até {cell:c} do seu herói.\n\\---\nAplica {#oiled} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói."
+  }
+}

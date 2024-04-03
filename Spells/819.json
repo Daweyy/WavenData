@@ -66,9 +66,10 @@
         "type": "GaugeValue",
         "element": 57,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": null,
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
         }
       }
     ],
@@ -76,9 +77,48 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": null,
-          "value": 7
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 7
+          },
+          "pvp": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 8
+              },
+              {
+                "type": "MultValue",
+                "referenceId": "",
+                "valuesToMult": [
+                  {
+                    "type": "NegativeValue",
+                    "referenceId": "pared",
+                    "valueToNeg": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 1
+                    }
+                  },
+                  {
+                    "type": "SpellsCountValue",
+                    "referenceId": null,
+                    "area": 0,
+                    "filter": null,
+                    "playerSelector": {
+                      "type": "CasterSelector"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     ],
@@ -104,8 +144,22 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "NegativeValue",
+          "referenceId": "pared",
+          "valueToNeg": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 1
+          }
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "pa",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
           "value": 1
         }
       ],
@@ -127,10 +181,10 @@
     "pt": "Exatidão"
   },
   "description": {
-    "fr": "{PA_RESvalue:pa,+} par {%SPELLCOUNT} dans votre main.\n\\---\nConfère {PropertyEffect:8} à votre héros.",
-    "en": "{PA_RESvalue:pa,+} per {%SPELLCOUNT} in your hand.\n\\---\nConfers {PropertyEffect:8} on your hero.",
-    "es": "{PA_RESvalue:pa,+} por {%SPELLCOUNT} de tu mano.\n\\---\nConfiere {PropertyEffect:8} a tu héroe.",
-    "de": "{PA_RESvalue:pa,+} pro {%SPELLCOUNT} in deiner Hand.\n\\---\nVerleiht deinem Helden {PropertyEffect:8}.",
-    "pt": "{PA_RESvalue:pa,+} por {%SPELLCOUNT} na sua mão.\n\\---\nConcede {PropertyEffect:8} ao seu herói."
+    "fr": "<if pvm>{PA_RESvalue:pa,+} par {%SPELLCOUNT} dans votre main.</if><if pvp>{PAvalue:pared,+} au coût de ce {%SPELLCOUNT} par {%SPELLCOUNT} dans votre main.</if>\n\\---\n<if pvm>Confère {PropertyEffect:8} à votre héros.</if><if pvp>Confère {PropertyEffect:8} à votre héros et {PA_RESvalue:paPVP,+}.</if>",
+    "en": "<if pvm>{PA_RESvalue:pa,+} per {%SPELLCOUNT} in your hand.</if><if pvp>{PAvalue:pared,+} to the cost of this {%SPELLCOUNT} per {%SPELLCOUNT} in your hand.</if>\n\\---\n<if pvm>Confers {PropertyEffect:8} on your hero.</if><if pvp>Confers {PropertyEffect:8} on your hero and {PA_RESvalue:paPVP,+}.</if>",
+    "es": "<if pvm>{PA_RESvalue:pa,+} por {%SPELLCOUNT} en tu mano.</if><if pvp>{PAvalue:pared,+} al coste de este {%SPELLCOUNT} por {%SPELLCOUNT} en tu mano.</if>\n\\---\n<if pvm>Confiere {PropertyEffect:8} a tu héroe.</if><if pvp>Confiere {PropertyEffect:8} a tu héroe y {PA_RESvalue:paPVP,+}.</if>",
+    "de": "<if pvm>{PA_RESvalue:pa,+} je {%SPELLCOUNT} auf deiner Hand.</if><if pvp>{PAvalue:pared,+} auf die Kosten dieses {%SPELLCOUNT} je {%SPELLCOUNT} auf deiner Hand.</if>\n\\---\n<if pvm>Gewährt deinem Helden {PropertyEffect:8}.</if><if pvp>Gewährt deinem Helden {PropertyEffect:8} und {PA_RESvalue:paPVP,+}.</if>",
+    "pt": "<if pvm>{PA_RESvalue:pa,+} por {%SPELLCOUNT} na sua mão.</if><if pvp>{PAvalue:pared,+} ao custo desse {%SPELLCOUNT} por {%SPELLCOUNT} na sua mão.</if>\n\\---\n<if pvm>Concede {PropertyEffect:8} ao seu herói.</if><if pvp>Concede {PropertyEffect:8} ao seu herói e {PA_RESvalue:paPVP,+}.</if>"
   }
 }

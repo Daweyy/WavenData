@@ -54,10 +54,10 @@
       1567,
       1565,
       355,
-      1564,
       1563,
-      1562,
-      180
+      1564,
+      180,
+      1562
     ],
     "equipableByPlayers": true,
     "upgradeRuleId": 525,
@@ -68,8 +68,10 @@
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
-        "DEUIL",
-        "STREAMOFSOULS"
+        {
+          "type": 25,
+          "id": 805
+        }
       ]
     },
     "family": 68,
@@ -78,6 +80,7 @@
     "passiveModifiers": [
       {
         "type": "CaracBuffModifier",
+        "useAsMainDescription": false,
         "holder": 8,
         "value": {
           "type": "LinearLevelOnlyBasedDynamicValue",
@@ -91,6 +94,7 @@
       },
       {
         "type": "CaracBuffModifier",
+        "useAsMainDescription": false,
         "holder": 8,
         "value": {
           "type": "LinearLevelOnlyBasedDynamicValue",
@@ -113,17 +117,17 @@
     "pt": "Vergonha de Toross"
   },
   "description": {
-    "fr": "{%ATTACK} Déclenche {#STREAMOFSOULS}.",
-    "en": "{%ATTACK} Triggers {#STREAMOFSOULS}.",
-    "es": "{%ATTACK} Activa {#STREAMOFSOULS}.",
-    "de": "{%ATTACK} Löst {#STREAMOFSOULS} aus.",
-    "pt": "{%ATTACK} Aciona {#STREAMOFSOULS}."
+    "fr": "{%Attack} Ajoute le sort {Spell:805} à votre main.",
+    "en": "{%Attack} Adds the {Spell:805} spell to your hand.",
+    "es": "{%Attack} Añade el hechizo {Spell:805} a tu mano.",
+    "de": "{%Attack} Fügt deiner Hand den Zauber „{Spell:805}“ hinzu.",
+    "pt": "{%Attack} Adiciona o feitiço {Spell:805} à sua mão."
   },
   "bgDescription": {
     "fr": "{%empty}",
-    "en": "",
-    "es": "",
-    "de": "",
-    "pt": ""
+    "en": "{%empty}",
+    "es": "{%empty}",
+    "de": "{%empty}",
+    "pt": "{%empty}"
   }
 }

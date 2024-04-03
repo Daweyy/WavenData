@@ -1,0 +1,207 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1007",
+  "m_id": 1007,
+  "m_displayName": "XELOR - ARME - PALADIR - AIR - Repousse Zinetritos",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -718592826,
+    "b": 1080513172,
+    "c": 1764863562,
+    "d": 1880920072,
+    "e": -984499313
+  },
+  "m_i18nDescriptionId": {
+    "a": -718592826,
+    "b": 1080513172,
+    "c": 1764863562,
+    "d": 1880920072,
+    "e": -1410528994
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "cc9ff7fc0f401924abbabeed85908c93"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1007,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      4072,
+      3485,
+      3235
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 4,
+      "specificToWeapon": 643,
+      "families": [
+        7
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 4,
+          "valueInPvP": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "AllCharactersSelector"
+      },
+      "selector2": {
+        "type": "ConditionalSelector",
+        "condition": {
+          "type": "ElementaryStateCondition",
+          "selector": {
+            "type": "FirstCastTargetSelector"
+          },
+          "elementaryStates": [
+            6
+          ]
+        },
+        "selectorIfTrue": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "selectorIfFalse": null
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "ff63ae518446c9a488a6c81adb2496bb",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 17,
+            "valueInPvP": 18
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL",
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Repousse Zinetritos",
+    "en": "Zinetritos Push",
+    "es": "Empujón Zinetritos",
+    "de": "Zinetritos-Rückstoß",
+    "pt": "Empurrão Zinetritos"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#PUSH} la cible de {cell:c} si elle est sous l'état {#astral}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#PUSH} the target {cell:c} if it is in the {#astral} state.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#PUSH} al objetivo {cell:c} si tiene el estado {#astral}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#PUSH} das Ziel um {cell:c} zurück, wenn es im Zustand {#astral} ist.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#PUSH} o alvo por {cell:c} se ele estiver no estado {#astral}."
+  }
+}

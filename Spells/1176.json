@@ -1,0 +1,163 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1176",
+  "m_id": 1176,
+  "m_displayName": "SRAM - ARME - PALADIR - ETHER - Piège brutal du sicare",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -2103671917,
+    "b": -1336268652,
+    "c": 1906899963,
+    "d": -1166950504,
+    "e": 1077706696
+  },
+  "m_i18nDescriptionId": {
+    "a": -2103671917,
+    "b": -1336268652,
+    "c": 1906899963,
+    "d": -1166950504,
+    "e": 1643746244
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "890055807def55549969cffcb84a7525"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1176,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": 576,
+      "families": [
+        6
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 4,
+          "valueInPvP": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "AreaFromTargetsSelector",
+        "originSelector": {
+          "type": "CasterHeroSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "targets": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "ElementaryStateFilter",
+              "elementaryState": 6
+            }
+          ]
+        },
+        "areaOfEffect": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "EngineDeterminedHolder"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          }
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        "ASTRAL",
+        {
+          "type": 6,
+          "id": 442
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège brutal du sicare",
+    "en": "Brutal Sicar Trap",
+    "es": "Trampa Brutal de Sicar",
+    "de": "Brutale Sicare-Falle",
+    "pt": "Armadilha Brutal do Sicário"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:442} sous les adversaires ayant l'état {#ASTRAL}.",
+    "en": "Builds one {FloorMechanism:442} under opponents that have the {#ASTRAL} state.",
+    "es": "Construye una {FloorMechanism:442} bajo los adversarios con el estado {#ASTRAL}.",
+    "de": "Errichtet 1\\_{FloorMechanism:442} unter den Gegnern im Zustand {#ASTRAL}.",
+    "pt": "Constrói uma {FloorMechanism:442} sob os adversários no estado {#ASTRAL}."
+  }
+}

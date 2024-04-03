@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "ec58ab8664dccbb498dce8dbb9c603c2"
+    "assetGuid": "e851da41ff8362c4e8748955ed1f62b2"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -82,81 +82,35 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "value": 3
         }
       }
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "ConditionalCastTargetDefinition",
-      "condition": {
-        "type": "DynamicValueEvaluatorCondition",
-        "value": {
-          "type": "SumValue",
-          "referenceId": null,
-          "valuesToSum": [
-            {
-              "type": "CompanionsInReserveValue",
-              "referenceId": null,
-              "playerSelector": {
-                "type": "CasterSelector"
-              },
-              "companionState": [
-                2,
-                3
-              ]
-            },
-            {
-              "type": "NumberOfEquippedCompanionsWithFamilyValue",
-              "referenceId": "",
-              "player": {
-                "type": "CasterSelector"
-              },
-              "family": 68
-            }
-          ]
-        },
-        "evaluator": {
-          "type": "GreaterThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 0
-          }
-        }
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
       },
-      "selectorIfTrue": {
-        "type": "TwoCastTargetDefinition",
-        "selector1": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
-        },
-        "selector2": {
-          "type": "FilteredCoordSelector",
-          "filters": [
-            {
-              "type": "AroundTargetFilter",
-              "targetsToCompare": {
-                "type": "FirstCastTargetSelector"
-              },
-              "distance": {
-                "type": "EqualsTo",
-                "dynamicValue": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                }
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
               }
             }
-          ]
-        }
-      },
-      "selectorIfFalse": {
-        "type": "OneCastTargetDefinition",
-        "selector": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
-        }
+          }
+        ]
       }
     },
     "spellEffectData": [
@@ -174,12 +128,78 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 1
+        },
+        {
+          "type": "MultValue",
           "referenceId": "d",
+          "valuesToMult": [
+            {
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": "dmg",
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 4
+              },
+              "factor": {
+                "type": "ReferenceScalingFactor",
+                "reference": 12
+              },
+              "buffs": [
+                24,
+                51
+              ],
+              "skillBuffs": [
+                {
+                  "type": "SkillBuff",
+                  "skillId": 118841,
+                  "percentBuff": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 30
+                  }
+                }
+              ],
+              "from": {
+                "type": "CasterSelector"
+              },
+              "addInsteadOfMultiply": false
+            },
+            {
+              "type": "DivideValue",
+              "referenceId": "",
+              "numerator": {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "CasterSelector"
+                },
+                "carac": 21
+              },
+              "denominator": {
+                "type": "ConstIntegerValue",
+                "referenceId": "f",
+                "value": 2
+              },
+              "defaultValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "roundMethod": 2
+            }
+          ]
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 12
+            "value": 4
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -207,15 +227,15 @@
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "v",
-          "value": 1
+          "referenceId": "f",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "PUSH",
-        "DEUIL"
+        "FESTIN",
+        "PUSH"
       ]
     }
   },
@@ -227,10 +247,10 @@
     "pt": "Sopro Necrômico"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}\\_: {#PUSH} la cible de {cell:v}.",
-    "en": "Does {magicalDamage:d}.\n\\---\n{#DEUIL}: {#PUSH} the target {cell:v}.",
-    "es": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}: {#PUSH} al objetivo {cell:v}.",
-    "de": "Verursacht {magicalDamage:d}.\n\\---\n{#DEUIL}: {#PUSH,plural:few} das Ziel um {cell:v} zurück.",
-    "pt": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}: {#PUSH} o alvo por {cell:v}."
+    "fr": "{#PUSH} la cible de {cell:v}.\n\\---\n{#FESTIN}\\_({value:f})\\_: Inflige {magicalDamage:d}\\_({value:dmg,+}).",
+    "en": "{#PUSH} the target {cell:v}.\n\\---\n{#FESTIN}\\_({value:f}): Does {magicalDamage:d}\\_({value:dmg,+}).",
+    "es": "{#PUSH} al objetivo {cell:v}.\n\\---\n{#FESTIN}\\_({value:f}): Inflige {magicalDamage:d}\\_({value:dmg,+}).",
+    "de": "{#PUSH,plural:few} das Ziel um {cell:v} zurück.\n\\---\n{#FESTIN}\\_({value:f}): Verursacht {magicalDamage:d}\\_({value:dmg,+}).",
+    "pt": "{#PUSH} o alvo por {cell:v}.\n\\---\n{#FESTIN}\\_({value:f}): Inflige {magicalDamage:d}\\_({value:dmg,+})."
   }
 }

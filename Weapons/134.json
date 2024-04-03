@@ -1,0 +1,228 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 8609957311646607000
+  },
+  "m_Name": "134",
+  "m_id": 134,
+  "m_displayName": "CRA - Paladir Arcarius",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -474051504,
+    "b": -1048382908,
+    "c": -60460904,
+    "d": 2120268951,
+    "e": 1752109092
+  },
+  "m_i18nDescriptionId": {
+    "a": -474051504,
+    "b": -1048382908,
+    "c": -60460904,
+    "d": 2120268951,
+    "e": -1866643314
+  },
+  "m_i18nGameplayDescriptionId": {
+    "a": -474051504,
+    "b": -1048382908,
+    "c": -60460904,
+    "d": 2120268951,
+    "e": 2047622256
+  },
+  "m_i18nSimpleNameId": {
+    "a": -474051504,
+    "b": -1048382908,
+    "c": -60460904,
+    "d": 2120268951,
+    "e": -1445442156
+  },
+  "m_i18nSimpleDescriptionId": {
+    "a": -474051504,
+    "b": -1048382908,
+    "c": -60460904,
+    "d": 2120268951,
+    "e": -1913918154
+  },
+  "m_weaponIllustrationReference": {
+    "assetGuid": "df904b89f3e4eca4c9f92d1d70f8586b"
+  },
+  "m_weaponUnlockedIllustrationReference": {
+    "assetGuid": ""
+  },
+  "values": {
+    "type": "WeaponDefinition",
+    "id": 134,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1228,
+      "skinIds": [
+        1341,
+        1228,
+        1242,
+        275,
+        100,
+        351
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "s",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pared",
+          "value": -2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pares",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "keyword": "COMBO"
+        },
+        {
+          "conditions": "<6/>",
+          "keyword": "ASTRAL"
+        },
+        {
+          "conditions": "<7/>",
+          "keyword": "COMBO"
+        },
+        {
+          "conditions": "<7/>",
+          "keyword": "ASTRAL"
+        }
+      ]
+    },
+    "families": [
+      2
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "PvmOrPvpConstIntegerValue",
+      "referenceId": "",
+      "valueInPvM": 385,
+      "valueInPvP": 385
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "PvmOrPvpConstIntegerValue",
+      "referenceId": "",
+      "valueInPvM": 25,
+      "valueInPvP": 28
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "unlockableSkillIds": [
+      3757,
+      3651,
+      3293,
+      3914
+    ],
+    "difficultyHint": 1,
+    "defaultSkinIdMale": 1341,
+    "defaultSkinIdFemale": 1228,
+    "god": 2,
+    "conditionalAvailability": {
+      "type": "VariantPreviewAvailability",
+      "serverVariant": 2,
+      "hiddenIfInvalid": false
+    },
+    "playerActionPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 6
+    },
+    "resurrectAs": null,
+    "hasPresentationVideo": false,
+    "unlockableSpells": [
+      1546,
+      1695,
+      1741,
+      1139
+    ],
+    "presetSpellIndexForTutorialCompanionElementReference": 2,
+    "presetSpellIds": [
+      335,
+      852,
+      621,
+      207193,
+      349,
+      254,
+      137708,
+      830,
+      545
+    ]
+  },
+  "name": {
+    "fr": "Paladir Arcarius",
+    "en": "Arcarius Paladir",
+    "es": "Paladir Arcarius",
+    "de": "Arcarius-Paladir",
+    "pt": "Paladigno Arcarius"
+  },
+  "description": {
+    "fr": "<if pvm>Lorsque vous appliquez l'état {#astral}:\\vPiochez votre prochain {%SPELLCOUNT} {#COMBO}, il coûte {PAvalue:pared}.</if><if pvp>Lorsque vous appliquez l'état {#astral}:\\vPiochez votre prochain {%SPELLCOUNT} {#COMBO} et {PA_RESvalue:pares,+}.</if>",
+    "en": "<if pvm>When you apply the {#astral} state:\\vDraw your next {#COMBO} {%SPELLCOUNT}; it costs {PAvalue:pared}.</if><if pvp>When you apply the {#astral} state:\\vDraw your next {#COMBO} {%SPELLCOUNT} and {PA_RESvalue:pares,+}.</if>",
+    "es": "<if pvm>Cuando aplicas el estado {#astral}:\\vSacas tu próximo {%SPELLCOUNT} {#COMBO}, cuesta {PAvalue:pared}.</if><if pvp>Cuando aplicas el estado {#astral}:\\vSacas tu próximo {%SPELLCOUNT} {#COMBO} y {PA_RESvalue:pares,+}.</if>",
+    "de": "<if pvm>Wenn du den Zustand {#astral} anwendest:\\vZiehe deinen nächsten {%SPELLCOUNT} vom Typ {#COMBO}. Er kostet {PAvalue:pared}.</if><if pvp>Wenn du den Zustand {#astral} anwendest:\\vZiehe deinen nächsten {%SPELLCOUNT} vom Typ {#COMBO} und {PA_RESvalue:pares,+}.</if>",
+    "pt": "<if pvm>Quando você aplica o estado {#astral}:\\vCompre seu próximo {%SPELLCOUNT} de {#COMBO}. Ele custa {PAvalue:pared}.</if><if pvp>Quando você aplica o estado {#astral}:\\vCompre seu próximo {%SPELLCOUNT} de {#COMBO} e {PA_RESvalue:pares,+}.</if>"
+  },
+  "gameplayDescription": {
+    "fr": "<color=#7FD5E4>ASTRAL</color>\\_: Altérez vos adversaires avec des combinaisons d'états élémentaires.\n\\---\n{#COMBO}\\_: Jouez plusieurs sorts à la suite pour déclencher des effets supplémentaires\\_!",
+    "en": "<color=#7FD5E4>ASTRAL</color>: Alter your opponents with elemental state combos.\n\\---\n{#COMBO}: Play several spells in a row to trigger extra effects!",
+    "es": "<color=#7FD5E4>ASTRAL</color>: Altera a tus adversarios con combinaciones de estados elementales.\n\\---\n{#COMBO}: ¡Utiliza varios hechizos seguidos para activar efectos adicionales!",
+    "de": "<color=#7FD5E4>ASTRAL</color>: Beeinträchtige deine Gegner mit Kombinationen von Elementarzuständen.\n\\---\n{#COMBO}: Spiele mehrere Zauber hintereinander aus, um zusätzliche Effekte auszulösen!",
+    "pt": "<color=#7FD5E4>ASTRAL</color>: Altere seus adversários com combinações de estados elementares.\n\\---\n{#COMBO}: Lance diversos feitiços seguidos para acionar efeitos adicionais!"
+  },
+  "simpleName": {
+    "fr": "{%OnboardingSimpleNameCra}",
+    "en": "{%OnboardingSimpleNameCra}",
+    "es": "{%OnboardingSimpleNameCra}",
+    "de": "{%OnboardingSimpleNameCra}",
+    "pt": "{%OnboardingSimpleNameCra}"
+  },
+  "simpleDescription": {
+    "fr": "{%OnboardingSimpleDescriptionCra}",
+    "en": "{%OnboardingSimpleDescriptionCra}",
+    "es": "{%OnboardingSimpleDescriptionCra}",
+    "de": "{%OnboardingSimpleDescriptionCra}",
+    "pt": "{%OnboardingSimpleDescriptionCra}"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1741",
+  "m_id": 1741,
+  "m_displayName": "CRA - ARME - PALADIR - ETHER - Récupération Arcarius",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1535899048,
+    "b": -1409751036,
+    "c": -156313191,
+    "d": -781578396,
+    "e": 2101899209
+  },
+  "m_i18nDescriptionId": {
+    "a": 1535899048,
+    "b": -1409751036,
+    "c": -156313191,
+    "d": -781578396,
+    "e": 241668273
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d3c1eca3edd74954482c9d56c1907cc7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1741,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      16
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": 134,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "aa651c9a8840e254e828a34cb6f061f6",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "at",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "ParameterizedEffectExecution.903.bc"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL",
+        "SHADOW"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Récupération Arcarius",
+    "en": "Arcarius Recovery",
+    "es": "Recuperación Arcarius",
+    "de": "Arcarius-Wiedererlangung",
+    "pt": "Recuperação Arcarius"
+  },
+  "description": {
+    "fr": "Inflige {value:at,percent} de l'{%AT} de votre héros.\n\\---\nDéclenche {shadow:ParameterizedEffectExecution.903.bc} si la cible est sous l'état {#ASTRAL}.",
+    "en": "Inflicts {value:at,percent} of your hero's {%AT}.\n\\---\nTriggers {shadow:ParameterizedEffectExecution.903.bc} if the target is in the {#ASTRAL} state.",
+    "es": "Inflige un {value:at,percent} del {%AT} de tu héroe.\n\\---\nActiva {shadow:ParameterizedEffectExecution.903.bc} si el objetivo tiene el estado {#ASTRAL}.",
+    "de": "Verursacht {value:at,percent} des {%AT}s deines Helden als Schaden.\n\\---\nLöst {shadow:ParameterizedEffectExecution.903.bc}, wenn das Ziel im Zustand {#ASTRAL} ist.",
+    "pt": "Inflige {value:at,percent} do {%AT} do seu herói.\n\\---\nAciona {shadow:ParameterizedEffectExecution.903.bc} se o alvo estiver no estado {#ASTRAL}."
+  }
+}

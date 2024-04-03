@@ -123,23 +123,37 @@
                   "value": 100
                 },
                 {
-                  "type": "MultValue",
+                  "type": "ClampValue",
                   "referenceId": "",
-                  "valuesToMult": [
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "p",
-                      "value": 5
-                    },
-                    {
-                      "type": "EntityCaracValue",
-                      "referenceId": "x",
-                      "entitySelector": {
-                        "type": "CasterSelector"
+                  "valueToClamp": {
+                    "type": "MultValue",
+                    "referenceId": null,
+                    "valuesToMult": [
+                      {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "p",
+                        "value": 5
                       },
-                      "carac": 20
-                    }
-                  ]
+                      {
+                        "type": "EntityCaracValue",
+                        "referenceId": "x",
+                        "entitySelector": {
+                          "type": "CasterSelector"
+                        },
+                        "carac": 20
+                      }
+                    ]
+                  },
+                  "min": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "max": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 100
+                  }
                 }
               ]
             },
@@ -214,7 +228,7 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}) : {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Jauges générées : {value:x}</rem>",
-    "en": "Does {magicalDamage:dmg} damage.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}.</rem>",
+    "en": "Does {magicalDamage:dmg} damage.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges Generated: {value:x}.</rem>",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Indicadores generados: {value:x}</rem>",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
     "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): {PA_RESvalue:pa_res,+}.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Cargas geradas: {value:x}</rem>"

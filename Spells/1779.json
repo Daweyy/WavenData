@@ -1,0 +1,239 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1779",
+  "m_id": 1779,
+  "m_displayName": "IOP - ARME - PALADIR - AIR - Bond Hioplite",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1228716375,
+    "b": 1294304564,
+    "c": -1342262136,
+    "d": -1753708095,
+    "e": 1282869435
+  },
+  "m_i18nDescriptionId": {
+    "a": -1228716375,
+    "b": 1294304564,
+    "c": -1342262136,
+    "d": -1753708095,
+    "e": -1889177200
+  },
+  "m_elementaryStates": 4,
+  "m_illustrationReference": {
+    "assetGuid": "0bf10bfdf4332a94a96b19037972dbf4"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "b42124c1ad102474dbbdb089f629ec8f"
+      },
+      {
+        "assetGuid": "7cd8254e3c50de4438a8788cb8cbc448"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1779,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      4014,
+      3089,
+      3848
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 4,
+      "specificToWeapon": 481,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 4,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a265d727be4a48e439eb9c82e79bef59",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 11,
+            "valueInPvP": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "VENTILATED"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bond Hioplite",
+    "en": "Hioplite Jump",
+    "es": "Salto Yoplita",
+    "de": "Hioplit-Sprung",
+    "pt": "Salto Hioplita"
+  },
+  "description": {
+    "fr": "Téléporte votre héros sur une case adjacente\\_<sprite name=\"cell_cross\"> à un adversaire jusqu'à {cell:c} et lui inflige {magicalDamage:dmg}.\n\\---\nApplique {#ventilated} à la cible.",
+    "en": "Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to an opponent up to {cell:c} away and does {magicalDamage:dmg} to them.\n\\---\nApplies {#ventilated} on the target.",
+    "es": "Teletransporta a tu héroe a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un adversario hasta a {cell:c} y le inflige {magicalDamage:dmg}.\n\\---\nAplica {#ventilated} al objetivo.",
+    "de": "Teleportiert deinen Helden bis zu {cell:c} auf ein an einen Gegner angrenzendes Feld\\_<sprite name=\"cell_cross\"> und fügt ihm {magicalDamage:dmg} zu.\n\\---\nWendet beim Ziel {#ventilated} an.",
+    "pt": "Teletransporta seu herói para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um adversário por até {cell:c} e lhe inflige {magicalDamage:dmg}.\n\\---\nAplica {#ventilated} ao alvo."
+  }
+}

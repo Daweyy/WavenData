@@ -184,9 +184,23 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
-          "value": 50
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 50
+          },
+          "factor": null,
+          "buffs": [
+            51,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -202,10 +216,10 @@
     "pt": "Loucura de Qilby"
   },
   "description": {
-    "fr": "Téléporte {Companion:590!} jusqu'à {cell:c}.\n\\---\nInflige son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée et se soigne de la moitié de son {%AT} pour chaque personnage touché.",
-    "en": "Teleports {Companion:590!} up to {cell:c}.\n\\---\nInflicts his {%AT} on opponents around\\_<sprite name=\"cell_around\"> the destination cell and heals himself half his {%AT} for each character hit.",
-    "es": "Teletransporta a {Companion:590!} hasta {cell:c}.\n\\---\nInflige su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada y se cura la mitad de su {%AT} por cada personaje alcanzado.",
-    "de": "Teleportiert {Companion:590!} bis zu {cell:c}.\n\\---\nFügt den Gegnern im Umkreis\\_<sprite name=\"cell_around\"> seines Zielfelds seinen {%AT,plural:one} als Schaden zu und heilt sich um die Hälfte seines {%AT,plural:two} für jeden getroffenen Charakter.",
-    "pt": "Teletransporta {Companion:590!} por até {cell:c}.\n\\---\nInflige seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de sua célula de chegada e se cura da metade do seu {%AT} por cada personagem atingido."
+    "fr": "Téléporte {Companion:590!} jusqu'à {cell:c}.\n\\---\nInflige {value:v,percent} de son {%AT} aux adversaires autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée et se soigne de {value:h,percent} de son {%AT} pour chaque personnage touché.",
+    "en": "Teleports {Companion:590!} up to {cell:c}.\n\\---\nInflicts {value:v,percent} of his {%AT} on opponents around\\_<sprite name=\"cell_around\"> the destination cell and heals himself {value:h,percent} of his {%AT} for each character hit.",
+    "es": "Teletransporta a {Companion:590!} hasta {cell:c}.\n\\---\nInflige un {value:v,percent} de su {%AT} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada y se cura un {value:h,percent} de su {%AT} por cada personaje alcanzado.",
+    "de": "Teleportiert {Companion:590!} bis zu {cell:c}.\n\\---\nVerursacht {value:v,percent} seines {%AT,plural:two} bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> seines Zielfelds als Schaden und heilt sich um {value:h,percent} seines {%AT,plural:two} für jeden getroffenen Charakter.",
+    "pt": "Teletransporta {Companion:590!} por até {cell:c}.\n\\---\nInflige {value:v,percent} do seu {%AT} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> de sua célula de chegada e se cura de {value:h,percent} do seu {%AT} por cada personagem atingido."
   }
 }

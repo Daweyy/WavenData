@@ -1,0 +1,169 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1425",
+  "m_id": 1425,
+  "m_displayName": "ENIRIPSA - ARME - PALADIR - ETHER - Legendarus",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 193923562,
+    "b": -1461803452,
+    "c": 677357160,
+    "d": 1223610693,
+    "e": 1071209739
+  },
+  "m_i18nDescriptionId": {
+    "a": 193923562,
+    "b": -1461803452,
+    "c": 677357160,
+    "d": 1223610693,
+    "e": -1471454407
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "87a62cc4788f953439809ec137bf9548"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1425,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": 247,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": 37,
+      "families": [
+        3
+      ],
+      "heroSkillPointsCost": 10
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 0
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "SumValue",
+          "referenceId": "",
+          "valuesToSum": [
+            {
+              "type": "PvmOrPvpConstIntegerValue",
+              "referenceId": "",
+              "valueInPvM": 15,
+              "valueInPvP": 13
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": ""
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "v",
+                  "value": -1
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": -1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "ASTRAL",
+        {
+          "type": 4,
+          "id": 1023
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Legendarus",
+    "en": "Legendarus",
+    "es": "Legendarus",
+    "de": "Legendarus",
+    "pt": "Lendarus"
+  },
+  "description": {
+    "fr": "Invoque {Summoning:1023} jusqu'à 2 cases de votre héros.\n\\---\n{PAvalue:v} lorsqu'un de vos personnages <b>ATTAQUE</b>.",
+    "en": "Summons {Summoning:1023} up to 2 cells from your hero.\n\\---\n{PAvalue:v} when one of your characters <b>ATTACKS</b>.",
+    "es": "Invoca a {Summoning:1023} hasta a 2 casillas de tu héroe.\n\\---\n{PAvalue:v} cuando uno de tus personajes <b>ATACA</b>.",
+    "de": "Beschwört {Summoning:1023} bis zu 2\\_Feldern zu deinem Helden.\n\\---\n{PAvalue:v}, wenn einer deiner Charaktere einen <b>ANGRIFF</b> ausführt.",
+    "pt": "Invoca {Summoning:1023} a até 2 células do seu herói.\n\\---\n{PAvalue:v} quando um dos seus personagens <b>ATACA</b>."
+  }
+}

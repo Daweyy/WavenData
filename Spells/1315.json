@@ -1,0 +1,234 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1315",
+  "m_id": 1315,
+  "m_displayName": "IOP - ARME - PALADIR - EAU - Charge Hioplite",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1746003266,
+    "b": 220379780,
+    "c": 884181736,
+    "d": -64592514,
+    "e": 282806912
+  },
+  "m_i18nDescriptionId": {
+    "a": 1746003266,
+    "b": 220379780,
+    "c": 884181736,
+    "d": -64592514,
+    "e": -2110430755
+  },
+  "m_elementaryStates": 5,
+  "m_illustrationReference": {
+    "assetGuid": "2c7fc6e6db5345646a38ea8cf4571c35"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1315,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3642,
+      3544,
+      3638
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 2,
+      "specificToWeapon": 481,
+      "families": [
+        1
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 4,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 4,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 20
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "HasEmptyPathInLineToMoveToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          },
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "a9d7cd9bad5dd214a9ed134c63d44ca5",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 17,
+            "valueInPvP": 19
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "WET"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Charge Hioplite",
+    "en": "Hioplite Charge",
+    "es": "Carga Yoplita",
+    "de": "Hioplit-Sturmangriff",
+    "pt": "Investida Hioplita"
+  },
+  "description": {
+    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {magicalDamage:dmg}.\n\\---\nApplique {#wet} à la cible.",
+    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmg} to them.\n\\---\nApplies {#wet} on the target.",
+    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige {magicalDamage:dmg}.\n\\---\nAplica {#wet} al objetivo.",
+    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter in derselben Reihe bis zu {cell:c} zu und verursacht {magicalDamage:dmg}.\n\\---\nWendet beim Ziel {#wet} an.",
+    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige {magicalDamage:dmg}.\n\\---\nAplica {#wet} ao alvo."
+  }
+}

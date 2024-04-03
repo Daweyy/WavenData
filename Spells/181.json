@@ -52,7 +52,8 @@
     "canCrit": true,
     "isEphemeral": false,
     "tags": [
-      17
+      17,
+      25
     ],
     "details": {
       "type": "SpellDetails",
@@ -82,24 +83,6 @@
           "pvp": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 0
-          }
-        }
-      },
-      {
-        "type": "GaugeValue",
-        "element": 19,
-        "value": {
-          "type": "PvmOrPvpValue",
-          "referenceId": "",
-          "pvm": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 0
-          },
-          "pvp": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
             "value": 1
           }
         }
@@ -109,9 +92,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 2
         }
       }
     ],
@@ -151,7 +135,7 @@
             "pvp": {
               "type": "ConstIntegerValue",
               "referenceId": "",
-              "value": 19
+              "value": 4
             }
           },
           "factor": {

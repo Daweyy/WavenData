@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "42524560f0fe7dc4ba61c439967c8891"
+    "assetGuid": "b41b22385332dea44a81d36c94c2599e"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -114,7 +114,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 9
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -141,15 +141,110 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "MultValue",
+          "referenceId": "h",
+          "valuesToMult": [
+            {
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": "e",
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 4
+              },
+              "factor": {
+                "type": "ReferenceScalingFactor",
+                "reference": 12
+              },
+              "buffs": [
+                22,
+                51,
+                50
+              ],
+              "skillBuffs": [
+                {
+                  "type": "SkillBuff",
+                  "skillId": 118841,
+                  "percentBuff": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 30
+                  }
+                }
+              ],
+              "from": {
+                "type": "CasterSelector"
+              },
+              "addInsteadOfMultiply": false
+            },
+            {
+              "type": "DivideValue",
+              "referenceId": "",
+              "numerator": {
+                "type": "EntityCaracValue",
+                "referenceId": null,
+                "entitySelector": {
+                  "type": "CasterSelector"
+                },
+                "carac": 21
+              },
+              "denominator": {
+                "type": "ConstIntegerValue",
+                "referenceId": "f",
+                "value": 2
+              },
+              "defaultValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 0
+              },
+              "roundMethod": 2
+            }
+          ]
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "e",
-          "value": 10
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 4
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            22,
+            51,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "f",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "DEUIL"
+        "FESTIN"
       ]
     }
   },
@@ -161,10 +256,10 @@
     "pt": "Onda Necrômica"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}\\_: Soigne votre héros de {PVvalue:e}.",
-    "en": "Does {magicalDamage:d}.\n\\---\n{#DEUIL}: Heals your hero {PVvalue:e}.",
-    "es": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}: Cura a tu héroe {PVvalue:e}.",
-    "de": "Verursacht {magicalDamage:d}.\n\\---\n{#DEUIL}: Heilt deinen Helden um {PVvalue:e}.",
-    "pt": "Inflige {magicalDamage:d}.\n\\---\n{#DEUIL}: Cura {PVvalue:e} do seu herói."
+    "fr": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f})\\_: Soigne votre héros de {PVvalue:h}\\_({value:e,+}).",
+    "en": "Does {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): Heals your hero {PVvalue:h}\\_({value:e,+}).",
+    "es": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): Cura a tu héroe {PVvalue:h}\\_({value:e,+}).",
+    "de": "Verursacht {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): Heilt deinen Helden um {PVvalue:h}\\_({value:e,+}).",
+    "pt": "Inflige {magicalDamage:d}.\n\\---\n{#FESTIN}\\_({value:f}): Cura {PVvalue:h}\\_({value:e,+}) do seu herói."
   }
 }

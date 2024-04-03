@@ -1,0 +1,172 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738000
+  },
+  "m_Name": "1538",
+  "m_id": 1538,
+  "m_displayName": "CRA - ARME - PALADIR - AIR - Spicu Nébuleux",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1080863179,
+    "b": -1271143388,
+    "c": 1678121307,
+    "d": -500892539,
+    "e": -468542042
+  },
+  "m_i18nDescriptionId": {
+    "a": -1080863179,
+    "b": -1271143388,
+    "c": 1678121307,
+    "d": -500892539,
+    "e": -1306083405
+  },
+  "m_elementaryStates": 4,
+  "m_illustrationReference": {
+    "assetGuid": "db9c05d7481f84f43b6da9f281648df7"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1538,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [
+      3218,
+      4107,
+      3412
+    ],
+    "upgradeRuleId": 247,
+    "canCrit": true,
+    "isEphemeral": false,
+    "tags": [
+      17,
+      21
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": true,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 4,
+      "specificToWeapon": 134,
+      "families": [
+        2
+      ],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 14,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 4,
+          "valueInPvP": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3cbe7b07591dd8d43b18dff58c25f86d",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": null,
+            "valueInPvM": 20,
+            "valueInPvP": 28
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "VENTILATED",
+        "COMBO"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Spicu Nébuleux",
+    "en": "Nebulous Spicu",
+    "es": "Espicu Nebuloso",
+    "de": "Nebulöser Spicu",
+    "pt": "Spicus Nebuloso"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_: Applique {#ventilated}.",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: Applies {#ventilated}.",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: Aplica {#ventilated}.",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}: Wendet {#ventilated} an.",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: Aplica {#ventilated}."
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "808",
+  "m_id": 808,
+  "m_displayName": "SEASON - TOROSS - Teleportation",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 514694164,
+    "b": -1852238668,
+    "c": -1440394822,
+    "d": -1540780980,
+    "e": 1946159809
+  },
+  "m_i18nDescriptionId": {
+    "a": 514694164,
+    "b": -1852238668,
+    "c": -1440394822,
+    "d": -1540780980,
+    "e": -2142974514
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "08e8cae977b9b654fa3e28e681f99936"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d40b1ca7309afc34da980263dccde72f"
+      },
+      {
+        "assetGuid": "7f611aebb52072b4f9c5048f21adc11e"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 808,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "AllBoardPresencesSelector"
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 4
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 4
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Téléportation",
+    "en": "Teleportation",
+    "es": "Teletransportación",
+    "de": "Teleportation",
+    "pt": "Teletransporte"
+  },
+  "description": {
+    "fr": "Téléporte un personnage ou <b>{%KEYWORD.OBJECTMECHANISM.NAME}</b> jusqu'à {cell:c}.",
+    "en": "Teleports a character or <b>{%KEYWORD.OBJECTMECHANISM.NAME}</b> up to {cell:c}.",
+    "es": "Teletransporta a un personaje o <b>{%KEYWORD.OBJECTMECHANISM.NAME}</b> hasta {cell:c}.",
+    "de": "Teleportiert einen Charakter oder <b>{%KEYWORD.OBJECTMECHANISM.NAME}</b> bis zu {cell:c}.",
+    "pt": "Teletransporta um personagem ou <b>{%KEYWORD.OBJECTMECHANISM.NAME}</b> por até {cell:c}."
+  }
+}

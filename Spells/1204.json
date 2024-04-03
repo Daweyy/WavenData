@@ -1,0 +1,142 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1204",
+  "m_id": 1204,
+  "m_displayName": "SEASON - OROPO - Agitation",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1675210703,
+    "b": -468451772,
+    "c": 2078478441,
+    "d": -1162052312,
+    "e": 91031299
+  },
+  "m_i18nDescriptionId": {
+    "a": 1675210703,
+    "b": -468451772,
+    "c": 2078478441,
+    "d": -1162052312,
+    "e": 202493991
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ac3c448dee8efc14c96fde113c5d746e"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "d40b1ca7309afc34da980263dccde72f"
+      },
+      {
+        "assetGuid": "7f611aebb52072b4f9c5048f21adc11e"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1204,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Agitation",
+    "en": "Agitation",
+    "es": "Agitación",
+    "de": "Rastlosigkeit",
+    "pt": "Agitação"
+  },
+  "description": {
+    "fr": "Téléporte le personnage ciblé de {cell:c}.",
+    "en": "Teleports the targeted character {cell:c}.",
+    "es": "Teletransporta al personaje objetivo {cell:c}.",
+    "de": "Teleportiert den anvisierten Gegner um {cell:c}.",
+    "pt": "Teletransporta o personagem alvo por {cell:c}."
+  }
+}

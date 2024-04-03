@@ -42,13 +42,78 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ClampValue",
+          "referenceId": "bonus",
+          "valueToClamp": {
+            "type": "MultValue",
+            "referenceId": null,
+            "valuesToMult": [
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "pc",
+                "value": 5
+              },
+              {
+                "type": "DivideValue",
+                "referenceId": null,
+                "numerator": {
+                  "type": "EntityCaracValue",
+                  "referenceId": null,
+                  "entitySelector": {
+                    "type": "OwnerOfSelector",
+                    "selector": {
+                      "type": "EffectHolderSelector"
+                    }
+                  },
+                  "carac": 21
+                },
+                "denominator": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "f",
+                  "value": 1
+                },
+                "defaultValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                },
+                "roundMethod": 2
+              }
+            ]
+          },
+          "min": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
+          },
+          "max": {
+            "type": "ConstIntegerValue",
+            "referenceId": "max",
+            "value": 100
+          }
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pc",
+          "value": 5
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "f",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "max",
+          "value": 100
+        }
+      ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": [
-        "DEUIL",
-        "STREAMOFSOULS",
-        "NECROMIQUE_HEROS"
+        "FESTIN"
       ]
     },
     "families": [
@@ -58,7 +123,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 160
+      "value": 88
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -68,10 +133,14 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 35
+      "value": 15
     },
     "riposte": null,
-    "actionCriticalChance": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
@@ -98,11 +167,11 @@
       124
     ],
     "rarity": 2,
-    "equipableByPlayers": false,
+    "equipableByPlayers": true,
     "pvpAvailability": {
-      "type": "Available"
+      "type": "Hidden"
     },
-    "upgradeRuleId": null,
+    "upgradeRuleId": 407,
     "castCondition": {
       "type": "CanCastCompanionCondition",
       "specificEntity": {
@@ -186,11 +255,11 @@
     "cost": [
       {
         "type": "ElementPointsCost",
-        "element": 14,
+        "element": 13,
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 6
+          "value": 4
         }
       }
     ],
@@ -205,10 +274,10 @@
     "pt": "Faminto, o Esfomeado"
   },
   "description": {
-    "fr": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%Attack} Déclenche {#STREAMOFSOULS} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.\n\\---\nVos {#STREAMOFSOULS} repoussent d'une case dans une direction aléatoire.",
-    "en": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%Attack} Triggers {#STREAMOFSOULS} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.\n\\---\nYour {#STREAMOFSOULS,plural:other} push one cell in a random direction.",
-    "es": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%Attack} Activa {#STREAMOFSOULS} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.\n\\---\nTus {#STREAMOFSOULS,plural:other} repelen una casilla en una dirección aleatoria.",
-    "de": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%Attack} Löst {#STREAMOFSOULS,plural:other} aus, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.\n\\---\nDeine {#STREAMOFSOULS,plural:other} stoßen um 1\\_Feld in eine zufällige Richtung zurück.",
-    "pt": "<rem>{#NECROMIQUE_HEROS}</rem>\n\\---\n{%Attack} Aciona {#STREAMOFSOULS} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">.\n\\---\nSeus {#STREAMOFSOULS} empurram por uma célula em uma direção aleatória."
+    "fr": "{#FESTIN}\\_({value:f})\\_: {value:bonus,percent,+}\\_({value:pc,percent,+}) aux <b>DÉGÂTS</b> de vos {%spellcount,plural:other} {%EARTH} tant qu'il est en jeu.\n\\---\n<rem>Bonus maximum\\_: {value:max,percent,+}.</rem>",
+    "en": "{#FESTIN}\\_({value:f}): {value:bonus,percent,+}\\_({value:pc,percent,+}) to your {%EARTH} {%spellcount,plural:one} <b>DAMAGE</b> while in play.\n\\---\n<rem>Maximum Bonus: {value:max,percent,+}.</rem>",
+    "es": "{#FESTIN}\\_({value:f}): {value:bonus,percent,+}\\_({value:pc,percent,+}) a los <b>DAÑOS</b> de tus {%spellcount,plural:other} de {%EARTH} mientras esté en juego.\n\\---\n<rem>Bonus máximo: {value:max,percent,+}.</rem>",
+    "de": "{#FESTIN}\\_({value:f}): {value:bonus,percent,+}\\_({value:pc,percent,+}) <b>SCHADEN</b> für deine {%EARTH}-{%spellcount,plural:other}, solange sie im Spiel sind.\n\\---\n<rem>Maximaler Bonus: {value:max,percent,+}.</rem>",
+    "pt": "{#FESTIN}\\_({value:f}): {value:bonus,percent,+}\\_({value:pc,percent,+}) aos <b>DANOS</b> dos seus {%spellcount,plural:other} de {%EARTH} enquanto estiver em jogo.\n\\---\n<rem>Bônus máximo: {value:max,percent,+}.</rem>"
   }
 }

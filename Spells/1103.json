@@ -1,0 +1,138 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1103",
+  "m_id": 1103,
+  "m_displayName": "NECROMONDE - TERRE - ENIGME - 02 - Bond",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1948462673,
+    "b": -233306364,
+    "c": -1340269047,
+    "d": 275834260,
+    "e": -1551964145
+  },
+  "m_i18nDescriptionId": {
+    "a": 1948462673,
+    "b": -233306364,
+    "c": -1340269047,
+    "d": 275834260,
+    "e": -595379904
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "651fe388de390644bad521bbdc5e121d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "ca64ca652fa4cfa4bb515f6e769a5b3c"
+      },
+      {
+        "assetGuid": "85f66957daf63c145b0f7cd85ffb3032"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1103,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bond",
+    "en": "Jump",
+    "es": "Salto",
+    "de": "Sprung",
+    "pt": "Salto"
+  },
+  "description": {
+    "fr": "Téléporte votre héros jusqu'à {cell:c} et détruit les {ObjectMechanism:235, plural:other!} adjacents\\_<sprite name=\"cell_cross\">.",
+    "en": "Teleports your hero up to {cell:c} and destroys the adjacent\\_<sprite name=\"cell_cross\"> {ObjectMechanism:235, plural:other!}.",
+    "es": "Teletransporta a tu héroe hasta {cell:c} y destruye las {ObjectMechanism:235, plural:other!} adyacentes\\_<sprite name=\"cell_cross\">.",
+    "de": "Teleportiert deinen Helden bis zu {cell:c} und zerstört die angrenzenden\\_<sprite name=\"cell_cross\"> {ObjectMechanism:235, plural:other!}.",
+    "pt": "Teletransporta seu herói por até {cell:c} e destrói as {ObjectMechanism:235, plural:other!} adjacentes\\_<sprite name=\"cell_cross\">."
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1311",
+  "m_id": 1311,
+  "m_displayName": "DECK - COMMON - FIRE - Bond du felin",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 760069293,
+    "b": 398857796,
+    "c": 714080137,
+    "d": 1774991440,
+    "e": 28782461
+  },
+  "m_i18nDescriptionId": {
+    "a": 760069293,
+    "b": 398857796,
+    "c": 714080137,
+    "d": 1774991440,
+    "e": -1055212858
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1311,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 6
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 2
+              }
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToMoveToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bond du félin",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  },
+  "description": {
+    "fr": "Votre héros se déplace de {cell:c}.\n\\---\n{%destroyOnPlayed}",
+    "en": "",
+    "es": "",
+    "de": "",
+    "pt": ""
+  }
+}

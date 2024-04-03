@@ -24,6 +24,7 @@
     "type": "QuestDefinition",
     "id": 140,
     "questType": 5,
+    "onlyOneRunByDay": false,
     "hideLevel": false,
     "chaptersVisualId": 930,
     "minPlayers": 1,
@@ -58,6 +59,29 @@
                   "itemId": {
                     "typeEnum": 58,
                     "value": 611
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 1
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 1
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 58,
+                    "value": 224
                   }
                 },
                 "rollEntries": [

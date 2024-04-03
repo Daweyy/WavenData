@@ -169,23 +169,37 @@
                   "value": 100
                 },
                 {
-                  "type": "MultValue",
+                  "type": "ClampValue",
                   "referenceId": "",
-                  "valuesToMult": [
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "p",
-                      "value": 5
-                    },
-                    {
-                      "type": "EntityCaracValue",
-                      "referenceId": "x",
-                      "entitySelector": {
-                        "type": "CasterSelector"
+                  "valueToClamp": {
+                    "type": "MultValue",
+                    "referenceId": null,
+                    "valuesToMult": [
+                      {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "p",
+                        "value": 5
                       },
-                      "carac": 20
-                    }
-                  ]
+                      {
+                        "type": "EntityCaracValue",
+                        "referenceId": "x",
+                        "entitySelector": {
+                          "type": "CasterSelector"
+                        },
+                        "carac": 20
+                      }
+                    ]
+                  },
+                  "min": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "max": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 100
+                  }
                 }
               ]
             },
@@ -255,7 +269,7 @@
   },
   "description": {
     "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}) : Inflige les dégâts de ce sort autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Jauges générées : {value:x}</rem>",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Does this spell's damage around\\_<sprite name=\"cell_around\"> your hero.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges generated: {value:x}.</rem>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Does this spell's damage around\\_<sprite name=\"cell_around\"> your hero.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Gauges Generated: {value:x}.</rem>",
     "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Inflige los daños de este hechizo alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Indicadores generados: {value:x}</rem>",
     "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#Jauge}\\_({value:j}): Verursacht den Schaden dieses Zaubers im Umkreis\\_<sprite name=\"cell_around\"> deines Helden.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Generierte Elementarpunkte: {value:x}</rem>",
     "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#Jauge} ({value:j}): Inflige os danos deste feitiço em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.\n\\---\n{#MAGIE_D_ALBUERA}\n<rem>Cargas geradas: {value:x}</rem>"

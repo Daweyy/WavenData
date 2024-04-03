@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1775",
+  "m_id": 1775,
+  "m_displayName": "NECROMONDE - AIR - ENIGME - 02 - Piege Attirant",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 779312139,
+    "b": -990413676,
+    "c": 817629339,
+    "d": 14493215,
+    "e": 1086201424
+  },
+  "m_i18nDescriptionId": {
+    "a": 779312139,
+    "b": -990413676,
+    "c": 817629339,
+    "d": 14493215,
+    "e": -1502186220
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "099ba3f75d8362742a395666a0ee26b0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1775,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 4,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": null,
+                  "value": 9
+                }
+              }
+            },
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "pull",
+          "value": 3
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pull",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.748.dmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 19,
+          "id": 2
+        },
+        "TRAP",
+        {
+          "type": 6,
+          "id": 748
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Piège Attirant",
+    "en": "Attracting Trap",
+    "es": "Trampa Atrayente",
+    "de": "Anziehende Falle",
+    "pt": "Armadilha Atraente"
+  },
+  "description": {
+    "fr": "Construit un {FloorMechanism:748} ({value:FloorMechanism.748.dmg}).\n\\---\nAttire vers lui les premiers {%KEYWORD.TRAP.NAME,plural:other} alliés alignés jusqu'à {cell:pull}.",
+    "en": "Builds one {FloorMechanism:748} ({value:FloorMechanism.748.dmg}).\n\\---\nAttracts the first in-line allied {%KEYWORD.TRAP.NAME,plural:other} up to {cell:pull}.",
+    "es": "Construye una {FloorMechanism:748} ({value:FloorMechanism.748.dmg}).\n\\---\nAtrae hacia ella a las primeras {%KEYWORD.TRAP.NAME,plural:other} aliadas alineadas hasta a {cell:pull}.",
+    "de": "Errichtet 1\\_{FloorMechanism:748} ({value:FloorMechanism.748.dmg}).\n\\---\nZieht die ersten verbündeten {%KEYWORD.TRAP.NAME,plural:other} in derselben Reihe bis auf {cell:pull} an ihn heran.",
+    "pt": "Constrói uma {FloorMechanism:748} ({value:FloorMechanism.748.dmg}).\n\\---\nAtrai na direção dela as primeiras {%KEYWORD.TRAP.NAME,plural:other} aliadas alinhadas a até {cell:pull}."
+  }
+}

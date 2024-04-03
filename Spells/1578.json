@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202500
+  },
+  "m_Name": "1578",
+  "m_id": 1578,
+  "m_displayName": "NECROMONDE - FEU - ENIGME - 02 - Attirance sanglante",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1110188669,
+    "b": -1615030892,
+    "c": -1763948632,
+    "d": 804457435,
+    "e": 54981224
+  },
+  "m_i18nDescriptionId": {
+    "a": 1110188669,
+    "b": -1615030892,
+    "c": -1763948632,
+    "d": 804457435,
+    "e": 1306260748
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "9124c123649120649ba4ad7015aec6b9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1578,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "HasEmptyPathInLineToMoveToTargetFilter",
+            "startCoords": {
+              "type": "CasterHeroSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "9a7e25fe95d94d246b11c4fe2ad44ab9",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "CasterHeroSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 99
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Attirance sanglante",
+    "en": "Bloody Attraction",
+    "es": "Atracción Sangrienta",
+    "de": "Blutige Anziehung",
+    "pt": "Atração Sangrenta"
+  },
+  "description": {
+    "fr": "Attire un adversaire aligné à votre héros sur une case adjacente\\_<sprite name=\"cell_cross\">.\n\\---\n{PropertyEffect:99}\\_: Votre héros déclenche son {%AT}.",
+    "en": "Attracts an opponent in line with your hero to an adjacent\\_<sprite name=\"cell_cross\"> cell.\n\\---\n{PropertyEffect:99}: Your hero triggers their {%AT}.",
+    "es": "Atrae a un adversario alineado a tu héroe hasta una casilla adyacente\\_<sprite name=\"cell_cross\">.\n\\---\n{PropertyEffect:99}: Tu héroe activa su {%AT}.",
+    "de": "Zieht einen Gegner, der in derselben Reihe wie dein Held steht, auf ein angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\n{PropertyEffect:99}: Dein Held löst seinen {%AT} aus.",
+    "pt": "Atrai um adversário alinhado para uma célula adjacente\\_<sprite name=\"cell_cross\">.\n\\---\n{PropertyEffect:99}: Seu herói aciona seu {%AT}."
+  }
+}

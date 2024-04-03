@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "63e25fe52676de54cb1e026b42201f51"
+    "assetGuid": "28674ea297be6994f9a5d1fb794e92cd"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -61,24 +61,14 @@
       ],
       "heroSkillPointsCost": null
     },
-    "gaugeToModifyOnSpellPlay": [
-      {
-        "type": "GaugeValue",
-        "element": 57,
-        "value": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
-        }
-      }
-    ],
+    "gaugeToModifyOnSpellPlay": [],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 5
+          "value": 2
         }
       }
     ],
@@ -103,13 +93,29 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "per",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        "DEUIL",
-        "STREAMOFSOULS"
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
@@ -120,10 +126,10 @@
     "pt": "Fluxo de Toross"
   },
   "description": {
-    "fr": "Inflige l'{%AT} de votre héros et déclenche {#STREAMOFSOULS}.",
-    "en": "Inflicts your hero's {%AT} and triggers {#STREAMOFSOULS}.",
-    "es": "Inflige el {%AT} de tu héroe y activa {#STREAMOFSOULS}.",
-    "de": "Verursacht den {%AT,plural:one} deines Helden als Schaden und löst {#STREAMOFSOULS} aus.",
-    "pt": "Inflige o {%AT} do seu herói e aciona {#STREAMOFSOULS}."
+    "fr": "Inflige {value:per,percent} de l'{%AT} de vos personnages.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Inflicts {value:per,percent} of your characters' {%AT}.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Inflige un {value:per,percent} del {%AT} de tus personajes.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Fügt {value:per,percent} des {%AT,plural:two} deiner Charaktere als Schaden zu.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Inflige {value:per,percent} do {%AT} dos seus personagens.\n\\---\n{%DestroyOnPlayed}"
   }
 }
