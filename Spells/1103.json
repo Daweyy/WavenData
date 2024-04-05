@@ -84,26 +84,34 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
-            },
-            "distance": {
-              "type": "LowerEqualThan",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "c",
-                "value": 3
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
               }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
             }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
-          }
-        ]
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
       }
     },
     "spellEffectData": [],
