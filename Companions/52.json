@@ -42,7 +42,13 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "lim",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
@@ -208,10 +214,10 @@
     "pt": "Joris"
   },
   "description": {
-    "fr": "Joue 2 fois par tour.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "en": "Plays 2 times per turn.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "es": "Juega 2 veces por turno.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "de": "Spielt 2-mal pro Runde.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "pt": "Joga 2 vezes por turno.\\v<family>{%Family_JorisComrades_Name}</family>"
+    "fr": "{%ATTACK} Rejoue son tour.\\v<rem>Limité à {value:lim} fois par tour.</rem>\n\\---\n<family>{%Family_JorisComrades_Name}</family>",
+    "en": "{%ATTACK} Replays turn.\\v<rem>Limit: {value:lim} {lim, plural, one[time] other[times]} per turn.</rem>\n\\---\n<family>{%Family_JorisComrades_Name}</family>",
+    "es": "{%ATTACK} Vuelve a jugar su turno.\\v<rem>Limitado a {value:lim} {lim, plural, one[vez] other[veces]} por turno.</rem>\n\\---\n<family>{%Family_JorisComrades_Name}</family>",
+    "de": "{%ATTACK} Spielt seine Runde erneut.\\v<rem>Auf {value:lim}-mal pro Runde begrenzt.</rem>\n\\---\n<family>{%Family_JorisComrades_Name}</family>",
+    "pt": "{%ATTACK} Joga um turno extra.\\v<rem>Limite de {value:lim} {lim, plural, one[vez] other[vezes]} por turno.</rem>\n\\---\n<family>{%Family_JorisComrades_Name}</family>"
   }
 }

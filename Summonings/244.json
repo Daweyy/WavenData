@@ -49,15 +49,16 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": -1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 20,
-          "id": 4
-        }
-      ]
+      "keywordReferences": []
     },
     "families": [
       0
@@ -66,7 +67,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 69
+      "value": 55
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -76,7 +77,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 15
+      "value": 11
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -115,10 +116,10 @@
     "pt": "Lembrança"
   },
   "description": {
-    "fr": "{%FightTurnStarted} {PropertyEffect:4} {Companion:894!} pour le tour s'il est autour\\_<sprite name=\"cell_around\">.",
-    "en": "{%FightTurnStarted} {PropertyEffect:4} {Companion:894!} for the turn if he is on a surrounding\\_<sprite name=\"cell_around\"> cell.",
-    "es": "{%FightTurnStarted} {PropertyEffect:4} a {Companion:894!} durante el turno si está alrededor\\_<sprite name=\"cell_around\">.",
-    "de": "{%FightTurnStarted}{PropertyEffect:4} {Companion:894!} für die Runde, wenn er im Umkreis\\_<sprite name=\"cell_around\"> ist.",
-    "pt": "{%FightTurnStarted} {PropertyEffect:4} {Companion:894!} durante o turno se ele estiver em\\_volta\\_<sprite name=\"cell_around\">."
+    "fr": "{%FightTurnStarted} {PMvalue:pm} à {Companion:894!} pour le tour s'il est autour\\_<sprite name=\"cell_around\">.",
+    "en": "{%FightTurnStarted} {PMvalue:pm} to {Companion:894!} for the turn if he is on a surrounding\\_<sprite name=\"cell_around\"> cell.",
+    "es": "{%FightTurnStarted} {PMvalue:pm} a {Companion:894!} durante el turno si está alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "{%FightTurnStarted} {PMvalue:pm} für {Companion:894!} für die Runde, wenn er im Umkreis\\_<sprite name=\"cell_around\"> ist.",
+    "pt": "{%FightTurnStarted} {PMvalue:pm} para {Companion:894!} durante o turno se ele estiver em\\_volta\\_<sprite name=\"cell_around\">."
   }
 }
