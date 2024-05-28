@@ -44,14 +44,10 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "r",
-          "value": 1
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "cost",
-          "value": -2
+          "valueInPvM": 1,
+          "valueInPvP": 2
         }
       ],
       "externalDynamicValueReferences": [],
@@ -66,7 +62,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 185,
-      "valueInPvP": 164
+      "valueInPvP": 161
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -218,10 +214,10 @@
     "pt": "Faeris"
   },
   "description": {
-    "fr": "{%attack} <if pvm>{PA_RESvalue:r,+}</if><if pvp>{PAvalue:cost} au coût du prochain sort</if>.",
-    "en": "{%attack} <if pvm>{PA_RESvalue:r,+}</if><if pvp>{PAvalue:cost} to the cost of the next spell</if>.",
-    "es": "{%attack} <if pvm>{PA_RESvalue:r,+}</if><if pvp>{PAvalue:cost} al coste del próximo hechizo</if>.",
-    "de": "{%attack} <if pvm>{PA_RESvalue:r,+}.</if><if pvp>{PAvalue:cost} auf die Kosten des nächsten Zaubers.</if>",
-    "pt": "{%attack} <if pvm>{PA_RESvalue:r,+}</if><if pvp>{PAvalue:cost} ao custo do seu próximo feitiço</if>."
+    "fr": "{%attack} {PA_RESvalue:r,+}.",
+    "en": "{%attack} {PA_RESvalue:r,+}.",
+    "es": "{%attack} {PA_RESvalue:r,+}.",
+    "de": "{%attack} {PA_RESvalue:r,+}.",
+    "pt": "{%attack} {PA_RESvalue:r,+}."
   }
 }

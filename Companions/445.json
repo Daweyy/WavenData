@@ -113,10 +113,9 @@
               ]
             },
             "from": {
-              "type": "PvmOrPvpConstIntegerValue",
+              "type": "ConstIntegerValue",
               "referenceId": null,
-              "valueInPvM": 8,
-              "valueInPvP": 11
+              "value": 8
             }
           },
           "factor": {
@@ -146,12 +145,36 @@
           "type": "ConstIntegerValue",
           "referenceId": "Pper2",
           "value": 150
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "arPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 22
+          },
+          "buffs": [
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
-        "PEAT"
+        {
+          "conditions": "<7/>",
+          "keyword": "PEAT"
+        }
       ]
     },
     "families": [
@@ -162,7 +185,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 84,
-      "valueInPvP": 75
+      "valueInPvP": 79
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -173,7 +196,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 16,
-      "valueInPvP": 18
+      "valueInPvP": 20
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -314,10 +337,10 @@
     "pt": "Marcus"
   },
   "description": {
-    "fr": "{%attack} Déclenche {peat:pt} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.",
-    "en": "{%attack} Triggers {peat:pt} if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.",
-    "es": "{%attack} Activa {peat:pt} si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.",
-    "de": "{%attack} Löst {peat:pt} aus, falls das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.",
-    "pt": "{%attack} Aciona {peat:pt} se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">."
+    "fr": "{%attack}<if pvm> Déclenche {peat:pt} si la cible est <b>BOUEUSE</b>\\_<sprite name=\"muddy\">.</if><if pvp> {ARvalue:arPVP,+} à votre héros.</if>",
+    "en": "{%attack} <if pvm>Triggers {peat:pt} if the target is <b>MUDDY</b>\\_<sprite name=\"muddy\">.</if><if pvp>{ARvalue:arPVP,+} to your hero.</if>",
+    "es": "{%attack}<if pvm> Activa {peat:pt} si el objetivo está <b>FANGOSO</b>\\_<sprite name=\"muddy\">.</if><if pvp> {ARvalue:arPVP,+} a tu héroe.</if>",
+    "de": "{%attack}<if pvm> Löst {peat:pt} aus, wenn das Ziel <b>SCHLAMMIG</b>\\_<sprite name=\"muddy\"> ist.</if><if pvp>{ARvalue:arPVP,+} für deinen Helden.</if>",
+    "pt": "{%attack}<if pvm> Aciona {peat:pt} se o alvo estiver <b>ENLAMEADO</b>\\_<sprite name=\"muddy\">.</if><if pvp> {ARvalue:arPVP,+} ao seu herói.</if>"
   }
 }

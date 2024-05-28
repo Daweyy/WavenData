@@ -47,10 +47,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "v",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": null,
-            "valueInPvM": 8,
-            "valueInPvP": 9
+            "value": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -65,12 +64,20 @@
             "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "EXPLOSION",
+        {
+          "conditions": "<7/>",
+          "keyword": "EXPLOSION"
+        },
         {
           "conditions": "<6/>",
           "type": 22,

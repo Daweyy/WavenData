@@ -95,7 +95,7 @@
           "pvp": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 3
+            "value": 5
           }
         }
       }
@@ -122,32 +122,21 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "heal",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 11
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            50,
-            51
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "type": "ConstIntegerValue",
+          "referenceId": "pmPVP",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
+          "conditions": "<7/>",
           "type": 20,
           "id": 18
         }
@@ -162,10 +151,10 @@
     "pt": "Atravessa Muros"
   },
   "description": {
-    "fr": "<if pvm>Confère {PropertyEffect:18} à votre héros pour le tour.</if><if pvp>Confère {PropertyEffect:18} à votre héros pour le tour et le soigne de {PVvalue:heal}.</if>",
-    "en": "<if pvm>Confers {PropertyEffect:18} on your hero for the turn.</if><if pvp>Confers {PropertyEffect:18} on your hero for the turn and heals them {PVvalue:heal}.</if>",
-    "es": "<if pvm>Confiere {PropertyEffect:18} a tu héroe durante el turno.</if><if pvp>Confiere {PropertyEffect:18} a tu héroe durante el turno y lo cura {PVvalue:heal}.</if>",
-    "de": "<if pvm>Verleiht deinem Helden für die Runde {PropertyEffect:18}.</if><if pvp>Verleiht deinem Helden für die Runde {PropertyEffect:18} und heilt ihn um {PVvalue:heal}.</if>",
-    "pt": "<if pvm>Concede {PropertyEffect:18} ao seu herói durante o turno.</if><if pvp>Concede {PropertyEffect:18} ao seu herói durante o turno e cura {PVvalue:heal} dele.</if>"
+    "fr": "<if pvm>Confère {PropertyEffect:18} à votre héros pour le tour.</if><if pvp>{PMvalue:pmPVP,+} à votre héros pour le tour.\n\\---\nPiochez {SPELLCOUNTvalue:v}.</if>",
+    "en": "<if pvm>Confers {PropertyEffect:18} on your hero for the turn.</if><if pvp>{PMvalue:pmPVP,+} to your hero for the turn.\n\\---\nDraw {SPELLCOUNTvalue:v}.</if>",
+    "es": "<if pvm>Confiere {PropertyEffect:18} a tu héroe durante el turno.</if><if pvp>{PMvalue:pmPVP,+} a tu héroe durante el turno.\n\\---\nSacas {SPELLCOUNTvalue:v}.</if>",
+    "de": "<if pvm>Verleiht deinem Helden für die Runde {PropertyEffect:18}.</if><if pvp>{PMvalue:pmPVP,+} für deinen Helden für die Runde.\n\\---\nZieht {SPELLCOUNTvalue:v}.</if>",
+    "pt": "<if pvm>Concede {PropertyEffect:18} ao seu herói durante o turno.</if><if pvp>{PMvalue:pmPVP,+} ao seu herói durante o turno.\n\\---\nCompre {SPELLCOUNTvalue:v}.</if>"
   }
 }

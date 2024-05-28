@@ -10,7 +10,7 @@
   },
   "m_Name": "239142",
   "m_id": 239142,
-  "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - ETHER - Alignement Apostruker",
+  "m_displayName": "ENIRIPSA - ARME - SCALPEL APOSTRUKER - ETHER - Decoupe Apostruker",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -61,14 +61,24 @@
       ],
       "heroSkillPointsCost": 10
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "value": 4
         }
       }
     ],
@@ -76,16 +86,24 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
             }
-          }
-        ]
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
       }
     },
     "spellEffectData": [
@@ -103,41 +121,35 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "p",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 20
-          },
-          "factor": null,
-          "buffs": [
-            50
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 40
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "SUPPORT"
+      ]
     }
   },
   "name": {
-    "fr": "Alignement Apostruker",
-    "en": "Apostruker Alignment",
-    "es": "Alineamiento Aspotruker",
-    "de": "Apostruker-Anpassung",
-    "pt": "Alinhamento Apostruker"
+    "fr": "Découpe Apostruker",
+    "en": "Apostruker Slicing",
+    "es": "Recorte Aspotruker",
+    "de": "Apostruker-Schnitt",
+    "pt": "Talho Apostruker"
   },
   "description": {
-    "fr": "Fixe la vie de l'adversaire ciblé sur l'adversaire ayant le plus de {%PV}. \n\\---\nPuis soigne votre héros de {value:p,percent} de son {%AT}.",
-    "en": "Sets the targeted opponent's health to that of the opponent with the most {%PV}. \n\\---\nThen heals your hero {value:p,percent} of their {%AT}.",
-    "es": "Aplica la vida del adversario objetivo en el adversario que tenga más {%PV}. \n\\---\nLuego cura a tu héroe un {value:p,percent} de su {%AT}.",
-    "de": "Überträgt die Lebenspunkte des anvisierten Gegners auf den Gegner mit den meisten {%PV}. \n\\---\nHeilt deinen Helden anschließend um {value:p,percent} seines {%AT,plural:two}.",
-    "pt": "Fixa a vida do adversário visado com a do adversário que tiver mais {%PV}. \n\\---\nDepois cura seu herói em {value:p,percent} do seu {%AT}."
+    "fr": "L'allié ciblé inflige {value:at,percent} de son {%AT} aux adversaires adjacents <sprite name=\"cell_cross\">.\n\\---\n{#SUPPORT}\\_: {PA_RESvalue:pa,+}.",
+    "en": "The targeted ally inflicts {value:at,percent} of their {%AT} on adjacent\\_<sprite name=\"cell_cross\"> opponents.\n\\---\n{#SUPPORT}: {PA_RESvalue:pa,+}.",
+    "es": "El aliado objetivo inflige un {value:at,percent} de su {%AT} a los adversarios adyacentes <sprite name=\"cell_cross\">.\n\\---\n{#SUPPORT}: {PA_RESvalue:pa,+}.",
+    "de": "Der anvisierte Verbündete fügt angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {value:at,percent} seines {%AT,plural:two} als Schaden zu.\n\\---\n{#SUPPORT}: {PA_RESvalue:pa,+}.",
+    "pt": "O aliado alvo inflige {value:at,percent} de seu {%AT} aos adversários adjacentes <sprite name=\"cell_cross\">.\n\\---\n{#SUPPORT}: {PA_RESvalue:pa,+}."
   }
 }

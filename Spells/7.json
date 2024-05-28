@@ -82,9 +82,20 @@
         "type": "GaugeValue",
         "element": 13,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -382,7 +393,7 @@
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 29
+            "value": 20
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -392,17 +403,7 @@
             51,
             23
           ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 118841,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": null,
-                "value": 30
-              }
-            }
-          ],
+          "skillBuffs": [],
           "from": {
             "type": "CasterSelector"
           },

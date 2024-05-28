@@ -84,16 +84,24 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "CompanionDefinitionFilter",
-            "condition": 1,
-            "companions": [
-              734
-            ]
-          }
-        ]
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "CompanionDefinitionFilter",
+              "condition": 1,
+              "companions": [
+                734
+              ]
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
       }
     },
     "spellEffectData": [

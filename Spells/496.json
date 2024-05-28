@@ -124,18 +124,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 18
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 28
-            }
+            "valueInPvM": 18,
+            "valueInPvP": 25
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -170,18 +162,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "heal",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 29
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 15
-            }
+            "value": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -211,7 +194,13 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "type": 20,
+          "id": 8
+        }
+      ]
     }
   },
   "name": {
@@ -222,10 +211,10 @@
     "pt": "Rastreamento Fanático"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nSoigne votre héros de {PVvalue:heal} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\nHeals your hero {PVvalue:heal} if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\nCura a tu héroe {PVvalue:heal} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nHeilt deinen Helden um {PVvalue:heal}, falls das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nCura {PVvalue:heal} do seu herói se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Soigne votre héros de {PVvalue:heal} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if><if pvp>Confère {PropertyEffect:8} à votre héros si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>Heals your hero {PVvalue:heal} if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if><if pvp>Confers {PropertyEffect:8} on your hero if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Cura a tu héroe {PVvalue:heal} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if><if pvp>Confiere {PropertyEffect:8} a tu héroe si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>Heilt deinen Helden um {PVvalue:heal}, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if><if pvp>Verleiht deinem Helden einen {PropertyEffect:8}, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Cura {PVvalue:heal} do seu herói se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if><if pvp>Concede {PropertyEffect:8} ao seu herói se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if>"
   }
 }

@@ -1,0 +1,156 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158508
+  },
+  "m_Name": "1200",
+  "m_id": 1200,
+  "m_displayName": "SEASON - TAURE - Gladiataure Accro",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -146183518,
+    "b": 942988820,
+    "c": 920823945,
+    "d": 35870243,
+    "e": -825971382
+  },
+  "m_i18nChampionNameId": {
+    "a": -146183518,
+    "b": 942988820,
+    "c": 920823945,
+    "d": 35870243,
+    "e": -1629445836
+  },
+  "m_i18nDescriptionId": {
+    "a": -146183518,
+    "b": 942988820,
+    "c": 920823945,
+    "d": 35870243,
+    "e": -1138823509
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 1200,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 903,
+      "skinIds": [
+        903
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "Const.collisionDmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 6,
+          "id": 219
+        },
+        "PUSH"
+      ]
+    },
+    "families": [
+      56
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10000
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 200
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 0
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "UnionOfEntitiesSelector",
+      "first": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              206
+            ]
+          }
+        ]
+      },
+      "second": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "EffectHolderSelector"
+            }
+          }
+        ]
+      }
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "grade": 1,
+    "growInto": null
+  },
+  "name": {
+    "fr": "Gladiataure Malade",
+    "en": "Sick Gladiataur",
+    "es": "Gladiatoro Enfermo",
+    "de": "Kranker Gladiotaurus",
+    "pt": "Gladiatauro Doente"
+  },
+  "championName": {
+    "fr": "Gladiataure Malade",
+    "en": "Sick Gladiataur",
+    "es": "Gladiatoro Enfermo",
+    "de": "Kranker Gladiotaurus",
+    "pt": "Gladiatauro Doente"
+  },
+  "description": {
+    "fr": "{%Attack} {#PUSH} les mécanismes de {cell:c}.\n\\---\nLorsqu'un adversaire aligné déclenche un {FloorMechanism:219}\\_: Le <b>CHARGE</b> et lui inflige son\\_{%at}.",
+    "en": "{%Attack} {#PUSH} mechanisms {cell:c}.\n\\---\nWhen an in-line opponents triggers a {FloorMechanism:219}: <b>CHARGES</b> them and inflicts {%at} on them.",
+    "es": "{%Attack} {#PUSH} a los mecanismos {cell:c}.\n\\---\nCuando un adversario alineado activa una {FloorMechanism:219}: <b>CARGA</b> contra él y le inflige su\\_{%at}.",
+    "de": "{%Attack} {#PUSH,plural:few} Mechanismen um {cell:c} zurück.\n\\---\nLöst ein Gegner in derselben Reihe ein {FloorMechanism:219} aus: <b>GREIFT</b> es an und verursacht seinen\\_{%at} als Schaden.",
+    "pt": "{%Attack} {#PUSH} os mecanismos por {cell:c}.\n\\---\nQuando um adversário alinhado aciona um {FloorMechanism:219}: <b>INVESTE</b> contra ele e inflige seu\\_{%at}."
+  }
+}

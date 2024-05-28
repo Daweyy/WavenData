@@ -1,0 +1,134 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442440
+  },
+  "m_Name": "1406",
+  "m_id": 1406,
+  "m_displayName": "SEASON - CRAQUELEUR - ADVERSAIRE - Mineur Bontarien (rapide)",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -388014564,
+    "b": -964221388,
+    "c": 1047148666,
+    "d": -1459915733,
+    "e": -1814963389
+  },
+  "m_i18nChampionNameId": {
+    "a": -388014564,
+    "b": -964221388,
+    "c": 1047148666,
+    "d": -1459915733,
+    "e": -1152162392
+  },
+  "m_i18nDescriptionId": {
+    "a": -388014564,
+    "b": -964221388,
+    "c": 1047148666,
+    "d": -1459915733,
+    "e": 975713464
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 1406,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7033,
+      "skinIds": [
+        7033
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "CustomRule.975.p2"
+      ],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      75
+    ],
+    "baseProperties": [
+      223
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 300
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "TeamFilter",
+          "isIdentical": false,
+          "reference": {
+            "type": "EffectHolderSelector"
+          }
+        },
+        {
+          "type": "NotEntityFilter",
+          "filter": {
+            "type": "PropertyFilter",
+            "property": {
+              "type": "SpecificPropertyIdResolvable",
+              "propertyId": 90
+            }
+          }
+        }
+      ]
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "grade": 0,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Mineur Bontarien] other[Mineurs Bontariens]}",
+    "en": "{0, plural, one[Bontarian Miner] other[Bontarian Miners]}",
+    "es": "{0, plural, one[Minero Bontariano] other[Mineros Bontarianos]}",
+    "de": "{0, plural, one[Bonta-Minenarbeiter] other[Bonta-Minenarbeiter]}",
+    "pt": "{0, plural, one[Mineiro Bontariano] other[Mineiros Bontarianos]}"
+  },
+  "championName": {
+    "fr": "{0, plural, one[Mineur Bontarien] other[Mineurs Bontariens]}",
+    "en": "{0, plural, one[Bontarian Miner] other[Bontarian Miners]}",
+    "es": "{0, plural, one[Minero Bontariano] other[Mineros Bontarianos]}",
+    "de": "{0, plural, one[Bonta-Minenarbeiter] other[Bonta-Minenarbeiter]}",
+    "pt": "{0, plural, one[Mineiro Bontariano] other[Mineiros Bontarianos]}"
+  },
+  "description": {
+    "fr": "{%death}\\_{value:CustomRule.975.p2,+} points.",
+    "en": "{%death}\\_{value:CustomRule.975.p2,+} points.",
+    "es": "{%death}\\_{value:CustomRule.975.p2,+} puntos.",
+    "de": "{%death}\\_{value:CustomRule.975.p2,+}\\_Punkte.",
+    "pt": "{%death}\\_{value:CustomRule.975.p2,+} pontos."
+  }
+}

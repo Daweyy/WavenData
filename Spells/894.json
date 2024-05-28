@@ -158,18 +158,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 21
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 25
-            }
+            "valueInPvM": 21,
+            "valueInPvP": 26
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -209,66 +201,22 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "bc",
           "baseValue": {
-            "type": "PercentageOfValue",
+            "type": "ConstIntegerValue",
             "referenceId": null,
-            "percentage": {
-              "type": "SumValue",
-              "referenceId": null,
-              "valuesToSum": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 100
-                },
-                {
-                  "type": "MultValue",
-                  "referenceId": "",
-                  "valuesToMult": [
-                    {
-                      "type": "EntityCaracValue",
-                      "referenceId": null,
-                      "entitySelector": {
-                        "type": "CasterSelector"
-                      },
-                      "carac": 20
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": 5
-                    }
-                  ]
-                }
-              ]
-            },
-            "from": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 25
-            }
+            "value": 26
           },
           "factor": {
             "type": "ReferenceScalingFactor",
             "reference": 12
           },
           "buffs": [
-            51,
+            24,
             89,
-            24
+            51
           ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 118841,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 30
-              }
-            }
-          ],
+          "skillBuffs": [],
           "from": {
-            "type": "CasterSelector"
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
         }

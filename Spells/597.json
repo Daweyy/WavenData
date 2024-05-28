@@ -111,10 +111,13 @@
       }
     },
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "SquareAreaOfEffectSelector",
-        "originSelector": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
           "type": "FilteredCharacterSelector",
           "filters": [
             {
@@ -131,7 +134,7 @@
                 },
                 "maxIncluded": {
                   "type": "ConstIntegerValue",
-                  "referenceId": "c",
+                  "referenceId": null,
                   "value": 3
                 }
               }
@@ -143,11 +146,47 @@
               }
             }
           ]
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCharacterSelector",
+            "filters": [
+              {
+                "type": "InLineTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "c",
+                    "value": 3
+                  }
+                }
+              },
+              {
+                "type": "HasEmptyPathInLineToMoveToTargetFilter",
+                "startCoords": {
+                  "type": "CasterHeroSelector"
+                }
+              }
+            ]
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       }
     },
@@ -176,18 +215,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 19
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 26
-            }
+            "valueInPvM": 19,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -220,21 +251,17 @@
           "value": 30
         },
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -1
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmgB",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 15
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 26
-            }
+            "value": 15
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -280,10 +307,10 @@
     "pt": "Investida Detonante"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c}.\n\\---\nInflige {magicalDamage:dmg} à la cible et {magicalDamage:dmgB} aux adversaires autour<sprite name=\"cell_around\"/> d'elle.",
-    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away.\n\\---\nInflicts {magicalDamage:dmg} on the target and {magicalDamage:dmgB} on opponents around<sprite name=\"cell_around\"/> the target.",
-    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c}.\n\\---\nInflige {magicalDamage:dmg} al objetivo y {magicalDamage:dmgB} a los adversarios a su alrededor\\_<sprite name=\"cell_around\"/>.",
-    "de": "Dein Held <b>STÜRMT</b> auf einen Charakter bis zu {cell:c} in derselben Reihe zu.\n\\---\nVerursacht beim Ziel {magicalDamage:dmg} und bei den Gegnern im Umkreis\\_<sprite name=\"cell_around\"/> {magicalDamage:dmgB}.",
-    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c}.\n\\---\nInflige {magicalDamage:dmg} ao alvo e {magicalDamage:dmgB} aos adversários em\\_volta\\_<sprite name=\"cell_around\"/> dele."
+    "fr": "<if pvm>Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c}.</if><if pvp>Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} à la cible et {magicalDamage:dmgB} aux adversaires autour<sprite name=\"cell_around\"/> d'elle.</if><if pvp>{PAvalue:paPVP} au coût de votre prochain {%SPELLCOUNT}.</if>",
+    "en": "<if pvm>Your hero <b>CHARGES</b> an in-line character up to {cell:c}.</if><if pvp>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmg} to them.</if>\n\\---\n<if pvm>Does {magicalDamage:dmg} to the target and {magicalDamage:dmgB} to opponents around<sprite name=\"cell_around\"/> the target.</if><if pvp>{PAvalue:paPVP} to the cost of your next {%SPELLCOUNT}.</if>",
+    "es": "<if pvm>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c}.</if><if pvp>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} al objetivo y {magicalDamage:dmgB} a los adversarios de alrededor<sprite name=\"cell_around\"/> de él.</if><if pvp>{PAvalue:paPVP} al coste de tu próximo {%SPELLCOUNT}.</if>",
+    "de": "<if pvm>Dein Held <b>STÜRMT</b> auf einen Charakter zu, der bis zu {cell:c} entfernt in derselben Reihe steht.</if><if pvp>Dein Held <b>STÜRMT</b> auf einen Charakter zu, der bis zu {cell:c} entfernt in derselben Reihe steht, und verursacht bei ihm {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Verursacht {magicalDamage:dmg} beim Ziel und {magicalDamage:dmgB} bei Gegnern in seinem Umkreis\\_<sprite name=\"cell_around\"/>.</if><if pvp>{PAvalue:paPVP} auf die Kosten deines nächsten {%SPELLCOUNT,plural:two}.</if>",
+    "pt": "<if pvm>Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c}.</if><if pvp>Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} ao alvo e {magicalDamage:dmgB} aos adversários em\\_volta\\_<sprite name=\"cell_around\"/> dele.</if><if pvp>{PAvalue:paPVP} ao custo do seu próximo {%SPELLCOUNT}.</if>"
   }
 }

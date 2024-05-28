@@ -47,12 +47,38 @@
           "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": -1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "HAIL",
+        {
+          "conditions": "<7/>",
+          "keyword": "HAIL"
+        },
         {
           "conditions": "<6/>",
           "type": 22,

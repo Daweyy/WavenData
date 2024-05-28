@@ -153,7 +153,7 @@
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
             "valueInPvM": 14,
-            "valueInPvP": 23
+            "valueInPvP": 21
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -183,6 +183,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cPVP",
+          "value": 1
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -218,9 +223,16 @@
           "addInsteadOfMultiply": false
         }
       ],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "Const.collisionDmg"
+      ],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "keyword": "PUSH"
+        }
+      ]
     }
   },
   "name": {
@@ -231,10 +243,10 @@
     "pt": "Teletransporte Ofensivo"
   },
   "description": {
-    "fr": "Téléporte votre héros jusqu'à {cell:c} et inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
-    "en": "Teleports your hero up to {cell:c} and does {magicalDamage:dmg} to adjacent\\_<sprite name=\"cell_cross\"> opponents.",
-    "es": "Teletransporta a tu héroe hasta {cell:c} e inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
-    "de": "Teleportiert deinen Helden bis zu {cell:c} und verursacht bei angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {magicalDamage:dmg}.",
-    "pt": "Teletransporta seu herói por até {cell:c} e inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\">."
+    "fr": "<if pvm>Téléporte votre héros jusqu'à {cell:c} et inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.</if><if pvp>Téléporte votre héros jusqu'à {cell:c}.\\vInflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée puis les {#PUSH} de {cell:cPVP}.</if>",
+    "en": "<if pvm>Teleports your hero up to {cell:c} and does {magicalDamage:dmg} to adjacent\\_<sprite name=\"cell_cross\"> opponents.</if><if pvp> Teleports your hero up to {cell:c}.\\vDoes {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell then {#PUSH} them {cell:cPVP}.</if>",
+    "es": "<if pvm>Teletransporta a tu héroe hasta {cell:c} e inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.</if><if pvp>Teletransporta a tu héroe hasta {cell:c}.\\vInflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada y los {#PUSH} {cell:cPVP}.</if>",
+    "de": "<if pvm>Teleportiert deinen Helden bis zu {cell:c} und verursacht {magicalDamage:dmg} bei angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern.</if><if pvp>Teleportiert deinen Helden bis zu {cell:c}.\\vVerursacht {magicalDamage:dmg} bei an sein Zielfeld angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern und {#PUSH,plural:few} sie dann um {cell:cPVP} zurück.</if>",
+    "pt": "<if pvm>Teletransporta seu herói por até {cell:c} e inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\">.</if><if pvp>Teletransporta seu herói por até {cell:c}.\\vInflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada e {#PUSH} por {cell:cPVP}.</if>"
   }
 }

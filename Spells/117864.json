@@ -72,9 +72,20 @@
         "type": "GaugeValue",
         "element": 11,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -82,9 +93,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 7
         }
       }
     ],
@@ -150,20 +162,19 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "ex",
+          "referenceId": "dmgMelee",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
-            "value": 14
+            "value": 5
           },
           "factor": {
             "type": "ReferenceScalingFactor",
             "reference": 12
           },
           "buffs": [
-            51,
-            88,
-            25
+            25,
+            51
           ],
           "skillBuffs": [
             {
@@ -182,21 +193,26 @@
           "addInsteadOfMultiply": false
         },
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -1
+        },
+        {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmgMelee",
+          "referenceId": "ex",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 5,
-            "valueInPvP": 4
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
             "reference": 12
           },
           "buffs": [
-            25,
-            51
+            51,
+            88,
+            25
           ],
           "skillBuffs": [
             {
@@ -233,10 +249,10 @@
     "pt": "Toque Flamejante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: Inflige {magicalDamage:dmgMelee} aux adversaires autour<sprite name=\"cell_around\"> de votre héros.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Does {magicalDamage:dmgMelee} to opponents around<sprite name=\"cell_around\"> your hero.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} a los adversarios de alrededor<sprite name=\"cell_around\"> de tu héroe.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Fügt Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden {magicalDamage:dmgMelee} zu.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{NamedEffect:455}\\_: Inflige {magicalDamage:dmgMelee} aux adversaires autour<sprite name=\"cell_around\"> de votre héros.</if><if pvp>{NamedEffect:455}\\_: {PAvalue:paPVP} au coût de votre prochain {%SPELLCOUNT}.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{NamedEffect:455}: Does {magicalDamage:dmgMelee} to opponents around<sprite name=\"cell_around\"> your hero.</if><if pvp>{NamedEffect:455}: {PAvalue:paPVP} to the cost of your next {%SPELLCOUNT}.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} a los adversarios de alrededor<sprite name=\"cell_around\"> de tu héroe.</if><if pvp>{NamedEffect:455}: {PAvalue:paPVP} al coste de tu próximo {%SPELLCOUNT}.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{NamedEffect:455}: Verursacht {magicalDamage:dmgMelee} bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden.</if><if pvp>{NamedEffect:455}: {PAvalue:paPVP} auf die Kosten deines nächsten {%SPELLCOUNT,plural:two}.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{NamedEffect:455}: Inflige {magicalDamage:dmgMelee} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.</if><if pvp>{NamedEffect:455}: {PAvalue:paPVP} ao custo do seu próximo {%SPELLCOUNT}.</if>"
   }
 }

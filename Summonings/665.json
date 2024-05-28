@@ -10,7 +10,7 @@
   },
   "m_Name": "665",
   "m_id": 665,
-  "m_displayName": "NECROMONDE - NECROME - Prophete de lombre",
+  "m_displayName": "NECROMONDE - NECROME - Championne Embrocheuse",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -42,9 +42,9 @@
     },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 8715,
+      "defaultSkinId": 3416,
       "skinIds": [
-        8715
+        3416
       ]
     },
     "precomputedData": {
@@ -52,14 +52,7 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        "COLLISION",
-        "PUSH",
-        {
-          "type": 7,
-          "id": 557
-        }
-      ]
+      "keywordReferences": []
     },
     "families": [
       68
@@ -68,7 +61,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 120
+      "value": 125
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -89,7 +82,19 @@
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
-    "actionRange": null,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 3
+      }
+    },
     "lifeScale": {
       "type": "ReferenceScalingFactor",
       "reference": 16
@@ -103,11 +108,11 @@
     "growInto": null
   },
   "name": {
-    "fr": "{0,plural,one[Prophète de l'ombre] other[Prophètes de l'ombre]}",
-    "en": "{0,plural,one[Shadow Prophet] other[Shadow Prophets]}",
-    "es": "{0,plural,one[Profeta de las Sombras] other[Profetas de las Sombras]}",
-    "de": "{0,plural,one[Schattenprophet] other[Schattenpropheten]}",
-    "pt": "{0,plural,one[Profeta da Sombra] other[Profetas da Sombra]}"
+    "fr": "{0,plural,one[Championne Embrocheuse] other[Championnes Embrocheuses]}",
+    "en": "{0,plural,one[Champion Skewerer] other[Champion Skewerers]}",
+    "es": "{0,plural,one[Campeona Ensartadora] other[Campeonas Ensartadoras]}",
+    "de": "{0,plural,one[Aufspießende Heldin] other[Aufspießende Heldinnen]}",
+    "pt": "{0,plural,one[Campeã Perfuradora] other[Campeãs Perfuradoras]}"
   },
   "championName": {
     "fr": "Prophète de l'ombre",
@@ -117,10 +122,10 @@
     "pt": "Profeta da Sombra"
   },
   "description": {
-    "fr": "Lorsqu'un allié meurt\\_:\\v Invoque un {ObjectMechanism:557} sur une case aléatoire.",
-    "en": "When an ally dies:\\v Summons one {ObjectMechanism:557} on a random cell.",
-    "es": "Cuando un aliado muere:\\v Invoca a un {ObjectMechanism:557} en una casilla aleatoria.",
-    "de": "Wenn ein Verbündeter stirbt:\\v Beschwört ein\\_{ObjectMechanism:557} auf einem zufälligen Feld.",
-    "pt": "Quando um aliado morre:\\v Invoca um {ObjectMechanism:557} em uma célula aleatória."
+    "fr": "<rem>{range}</rem>\n\\---\n{%ATTACK}\\_Se téléporte sur une case adjacente\\_<sprite name=\"cell_cross\"> à la cible.\n\\---\nLorsqu'un allié meurt\\_:\\vDéclenche son <b>ATTAQUE</b> sur les adversaires à portée.",
+    "en": "<rem>{range}</rem>\n\\---\n{%ATTACK}\\_Teleports to a cell adjacent\\_<sprite name=\"cell_cross\"> to the target.\n\\---\nWhen an ally dies:\\vTriggers <b>ATTACK</b> on opponents within range.",
+    "es": "<rem>{range}</rem>\n\\---\n{%ATTACK}\\_Se teletransporta a una casilla adyacente\\_<sprite name=\"cell_cross\"> al objetivo.\n\\---\nCuando un aliado muere:\\vActiva su <b>ATAQUE</b> en los adversarios al alcance.",
+    "de": "<rem>{range}</rem>\n\\---\n{%ATTACK}\\_Teleportiert sich auf ein an das Ziel angrenzendes\\_<sprite name=\"cell_cross\"> Feld.\n\\---\nWenn ein Verbündeter stirbt:\\vLöst ihren <b>ANGRIFF</b> bei Gegnern in Reichweite aus.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%ATTACK}\\_Teletransporta-se para uma célula adjacente\\_<sprite name=\"cell_cross\"> ao alvo.\n\\---\nQuando um aliado morre:\\vAciona seu <b>ATAQUE</b> nos adversários ao alcance."
   }
 }

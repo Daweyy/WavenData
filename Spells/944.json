@@ -149,18 +149,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 18
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 34
-            }
+            "valueInPvM": 18,
+            "valueInPvP": 32
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -225,40 +217,18 @@
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "d2",
-          "value": 5
+          "referenceId": "paPVP",
+          "value": -1
         },
         {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "ex",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 11
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51,
-            88,
-            25
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "type": "ConstIntegerValue",
+          "referenceId": "d2",
+          "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        {
-          "conditions": "<6/>",
-          "keyword": "EXPLOSION"
-        },
         "COMBO"
       ]
     }
@@ -271,10 +241,10 @@
     "pt": "Flecha Detonante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{#COMBO}\\_: Inflige {magicalDamage:dmg2} aux adversaires autour\\_<sprite name=\"cell_around\"> de la cible.</if><if pvp>{#COMBO}\\_: Déclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"> de la cible.</if>",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{#COMBO}: Does {magicalDamage:dmg2} to opponents around\\_<sprite name=\"cell_around\"> the target.</if><if pvp>{#COMBO}: Triggers {explosion:ex} around\\_<sprite name=\"cell_around\"> the target.</if>",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{#COMBO}: Inflige {magicalDamage:dmg2} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> del objetivo.</if><if pvp>{#COMBO}: Activa {explosion:ex} alrededor\\_<sprite name=\"cell_around\"> del objetivo.</if>",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{#COMBO}: Verursacht {magicalDamage:dmg2} bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> des Ziels.</if><if pvp>{#COMBO}: Löst {explosion:ex} im Umkreis\\_<sprite name=\"cell_around\"> des Ziels aus.</if>",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{#COMBO}: Inflige {magicalDamage:dmg2} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do alvo.</if><if pvp>{#COMBO}: Aciona {explosion:ex} em\\_volta\\_<sprite name=\"cell_around\"> do alvo.</if>"
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}\\_: <if pvm>Inflige {magicalDamage:dmg2} aux adversaires autour\\_<sprite name=\"cell_around\"> de la cible.</if><if pvp>{PAvalue:paPVP} au coût de votre prochain {%spellcount}.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#COMBO}: <if pvm>Does {magicalDamage:dmg2} to opponents around\\_<sprite name=\"cell_around\"> the target.</if><if pvp>{PAvalue:paPVP} to the cost of your next {%spellcount}.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: <if pvm>Inflige {magicalDamage:dmg2} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> del objetivo.</if><if pvp>{PAvalue:paPVP} al coste de tu próximo {%spellcount}.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#COMBO}: <if pvm>Verursacht {magicalDamage:dmg2} bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> des Ziels.</if><if pvp>{PAvalue:paPVP} auf die Kosten deines nächsten {%spellcount,plural:two}.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#COMBO}: <if pvm>Inflige {magicalDamage:dmg2} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do alvo.</if><if pvp>{PAvalue:paPVP} ao custo do seu próximo {%spellcount}.</if>"
   }
 }

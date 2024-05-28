@@ -52,10 +52,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "pt",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": null,
-            "valueInPvM": 8,
-            "valueInPvP": 7
+            "value": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -71,12 +70,37 @@
             "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "PEAT",
+        {
+          "conditions": "<7/>",
+          "keyword": "PEAT"
+        },
         {
           "conditions": "<6/>",
           "type": 22,

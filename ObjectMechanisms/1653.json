@@ -50,28 +50,6 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "exPVP",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 10
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            88,
-            25
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
-          },
-          "addInsteadOfMultiply": false
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
           "referenceId": "ex",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -91,12 +69,20 @@
             "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "EXPLOSION",
+        {
+          "conditions": "<7/>",
+          "keyword": "EXPLOSION"
+        },
         {
           "conditions": "<6/>",
           "type": 22,

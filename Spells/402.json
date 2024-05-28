@@ -76,6 +76,16 @@
           "referenceId": "",
           "value": 1
         }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
       }
     ],
     "costs": [
@@ -121,18 +131,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 8
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 9
-            }
+            "valueInPvM": 8,
+            "valueInPvP": 12
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -167,18 +169,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "heal",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 4
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 6
-            }
+            "valueInPvM": 4,
+            "valueInPvP": 6
           },
           "factor": {
             "type": "ReferenceScalingFactor",

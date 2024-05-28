@@ -50,28 +50,6 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "bcPVP",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 9
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            89,
-            24
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "EffectHolderSelector"
-          },
-          "addInsteadOfMultiply": false
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
           "referenceId": "bc",
           "baseValue": {
             "type": "ConstIntegerValue",
@@ -88,7 +66,34 @@
           ],
           "skillBuffs": [],
           "from": {
-            "type": "EffectHolderSelector"
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cPVP",
+          "value": 2
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
         }
@@ -96,7 +101,10 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "BOUNCE",
+        {
+          "conditions": "<7/>",
+          "keyword": "BOUNCE"
+        },
         {
           "conditions": "<6/>",
           "type": 22,

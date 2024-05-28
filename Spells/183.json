@@ -148,7 +148,7 @@
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
             "valueInPvM": 23,
-            "valueInPvP": 27
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -183,10 +183,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "aoe",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 8,
-            "valueInPvP": 10
+            "value": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -211,6 +210,11 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -228,10 +232,10 @@
     "pt": "Estilo Chama"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}\\_: Inflige {magicalDamage:aoe} autour\\_<sprite name=\"cell_around\"> de\\_la\\_cible.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Does {magicalDamage:aoe} around\\_<sprite name=\"cell_around\"> the\\_target.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Inflige {magicalDamage:aoe} alrededor\\_<sprite name=\"cell_around\"> del\\_objetivo.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Verursacht {magicalDamage:aoe} im Umkreis\\_<sprite name=\"cell_around\"> des Ziels.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: Inflige {magicalDamage:aoe} em\\_volta\\_<sprite name=\"cell_around\"> do\\_alvo."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}\\_: <if pvm>Inflige {magicalDamage:aoe} autour\\_<sprite name=\"cell_around\"> de\\_la\\_cible.</if><if pvp>{PAvalue:paPVP} au coût de votre prochain {%spellcount}.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{#CHRONO}: <if pvm>Does {magicalDamage:aoe} around\\_<sprite name=\"cell_around\"> the target.</if><if pvp>{PAvalue:paPVP} to the cost of your next {%spellcount}.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: <if pvm>Inflige {magicalDamage:aoe} alrededor\\_<sprite name=\"cell_around\"> del\\_objetivo.</if><if pvp>{PAvalue:paPVP} al coste de tu próximo {%spellcount}.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#CHRONO}: <if pvm>Verursacht {magicalDamage:aoe} im Umkreis\\_<sprite name=\"cell_around\"> des\\_Ziels.</if><if pvp>{PAvalue:paPVP} auf die Kosten deines nächsten {%spellcount,plural:two}.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#CHRONO}: <if pvm>Inflige {magicalDamage:aoe} em\\_volta\\_<sprite name=\"cell_around\"> do\\_alvo.</if><if pvp>{PAvalue:paPVP} ao custo do seu próximo {%spellcount}.</if>"
   }
 }

@@ -165,21 +165,18 @@
           "value": 2
         },
         {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "dmgPVP",
+          "valueInPvM": 0,
+          "valueInPvP": 24
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 14
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 17
-            }
+            "value": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -230,10 +227,10 @@
     "pt": "Investida Curta"
   },
   "description": {
-    "fr": "Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"/> de sa case d'arrivée.",
-    "en": "Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"/> the destination cell.",
-    "es": "Tu héroe <b>CARGA</b> contra un personaje alineado hasta {cell:c} e inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"/> de su casilla de llegada.",
-    "de": "Dein Held <b>STÜRMT</b> bis zu {cell:c} auf einen Charakter in derselben Reihe zu und verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"/> seines Zielfelds.",
-    "pt": "Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"/> de sua célula de chegada."
+    "fr": "<if pvm>Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et inflige {magicalDamage:dmg} autour\\_<sprite name=\"cell_around\"/> de sa case d'arrivée.</if><if pvp>Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {magicalDamage:dmgPVP}.</if>",
+    "en": "<if pvm>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmg} around\\_<sprite name=\"cell_around\"/> the destination cell.</if><if pvp>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmgPVP} to them.</if>",
+    "es": "<if pvm>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} e inflige {magicalDamage:dmg} alrededor\\_<sprite name=\"cell_around\"/> de su casilla de llegada.</if><if pvp>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige {magicalDamage:dmgPVP}.</if>",
+    "de": "<if pvm>Dein Held <b>STÜRMT</b> auf einen Charakter zu, der bis zu {cell:c} entfernt in derselben Reihe steht, und verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"/> seines Zielfelds.</if><if pvp>Dein Held <b>STÜRMT</b> auf einen Charakter zu, der bis zu {cell:c} entfernt in derselben Reihe steht, und verursacht {magicalDamage:dmgPVP}.</if>",
+    "pt": "<if pvm>Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"/> de sua célula de chegada.</if><if pvp>Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige {magicalDamage:dmgPVP}.</if>"
   }
 }

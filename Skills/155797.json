@@ -10,7 +10,7 @@
   },
   "m_Name": "155797",
   "m_id": 155797,
-  "m_displayName": "WEAPON - ENIRIPSA - SCALPEL DE L APOSTRUKER - Apostrocius",
+  "m_displayName": "WEAPON - ENIRIPSA - SCALPEL DE L APOSTRUKER - Soin Apostruker",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -28,7 +28,7 @@
     "e": -628722340
   },
   "m_skillIconReference": {
-    "assetGuid": "a3b537afea9a8c54487fd409db4aced2"
+    "assetGuid": "f1b5c86a22129d54a91a3c103d3c9f05"
   },
   "values": {
     "type": "SkillDefinition",
@@ -43,14 +43,22 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "v",
+          "referenceId": "heal",
           "baseValue": {
             "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 50
+            "referenceId": "",
+            "value": 17
           },
-          "factor": null,
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
           "buffs": [
+            24,
+            22,
+            23,
+            25,
+            51,
             50
           ],
           "skillBuffs": [],
@@ -62,21 +70,23 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        "SUPPORT"
+      ]
     }
   },
   "name": {
-    "fr": "Apostrocius",
-    "en": "Apostrocious",
-    "es": "Apostrocius",
-    "de": "Apostrocius",
-    "pt": "Apostrocius"
+    "fr": "Soin Apostruker",
+    "en": "Apostruker Healing",
+    "es": "Cura Aspotruker",
+    "de": "Apostruker-Heilung",
+    "pt": "Cura Apostruker"
   },
   "description": {
-    "fr": "Lorsqu'un de vos compagnons <b>ATTAQUE</b>\\_:\\v Soigne votre héros de {value:v,percent} de son {%AT}.",
-    "en": "When one of your companions <b>ATTACKS</b>:\\vHeals your hero {value:v,percent} of their {%AT}.",
-    "es": "Cuando uno de tus compañeros <b>ATACA</b>:\\v Cura a tu héroe un {value:v,percent} de su {%AT}.",
-    "de": "Beim <b>ANGRIFF</b> eines deiner Begleiter:\\v Heilt deinen Helden um {value:v,percent} seines {%AT,plural:two}.",
-    "pt": "Quando um de seus companheiros <b>ATACA</b>:\\v Cura seu herói em {value:v,percent} de seu {%AT}."
+    "fr": "Lorsqu'un allié est soigné : Votre héros déclenche son passif.\n\\---\nLorsque vous déclenchez {#SUPPORT}\\_: Soigne la cible de {#SUPPORT} de {PVvalue:heal}.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem>",
+    "en": "When an ally is healed: Your hero triggers their passive.\n\\---\nWhen you trigger {#SUPPORT}: Heals the target of the {#SUPPORT} {PVvalue:heal}.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem>",
+    "es": "Cuando un aliado es curado: Tu héroe activa su pasivo.\n\\---\nCuando activas {#SUPPORT}: Cura al objetivo de {#SUPPORT} {PVvalue:heal}.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem>",
+    "de": "Wenn ein Verbündeter geheilt wird: Dein Held löst seine passive Fähigkeit aus.\n\\---\nWenn du {#SUPPORT} auslöst: Heilt das Ziel der {#SUPPORT} um {PVvalue:heal}.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem>",
+    "pt": "Quando um aliado é curado: Seu herói aciona seu passivo.\n\\---\nQuando você aciona {#SUPPORT}: Cura {PVvalue:heal} do alvo do {#SUPPORT}.\n\\---\n<rem>{%DAMAGE_BASED_ON_ELEMENTARY}</rem>"
   }
 }

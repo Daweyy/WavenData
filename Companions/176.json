@@ -43,7 +43,13 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "sPVP",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": []
@@ -56,7 +62,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 128,
-      "valueInPvP": 145
+      "valueInPvP": 116
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -67,7 +73,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 22,
-      "valueInPvP": 35
+      "valueInPvP": 26
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -191,9 +197,10 @@
         "type": "ElementPointsCost",
         "element": 11,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 7
+          "valueInPvM": 7,
+          "valueInPvP": 6
         }
       }
     ],
@@ -208,10 +215,10 @@
     "pt": "Adamai"
   },
   "description": {
-    "fr": "{%attack} Touche les adversaires dans la ligne devant lui.\\v<family>{%Family_BrotherHood_Name}</family>",
-    "en": "{%attack} Hits in-line opponents in front of him.\\v<family>{%Family_BrotherHood_Name}</family>",
-    "es": "{%attack} Alcanza a los adversarios en línea delante de él.\\v<family>{%Family_BrotherHood_Name}</family>",
-    "de": "{%attack} Trifft die Gegner in der Reihe vor ihm.\\v<family>{%Family_BrotherHood_Name}</family>",
-    "pt": "{%attack} Atinge os adversários na linha à frente dele.\\v<family>{%Family_BrotherHood_Name}</family>"
+    "fr": "{%attack} <if pvm>Touche les adversaires dans la ligne devant lui.</if><if pvp>Piochez {SPELLCOUNTvalue:sPVP}.</if>\\v<family>{%Family_BrotherHood_Name}</family>",
+    "en": "{%attack} <if pvm>Hits in-line opponents in front of him.</if><if pvp>Draw {SPELLCOUNTvalue:sPVP}.</if>\\v<family>{%Family_BrotherHood_Name}</family>",
+    "es": "{%attack} <if pvm>Alcanza a los adversarios en línea delante de él.</if><if pvp>Sacas {SPELLCOUNTvalue:sPVP}.</if>\\v<family>{%Family_BrotherHood_Name}</family>",
+    "de": "{%attack} <if pvm>Trifft die Gegner in der Reihe vor ihm.</if><if pvp>Zieht {SPELLCOUNTvalue:sPVP}.</if>\\v<family>{%Family_BrotherHood_Name}</family>",
+    "pt": "{%attack} <if pvm>Atinge os adversários na linha à sua frente.</if><if pvp>Compre {SPELLCOUNTvalue:sPVP}.</if>\\v<family>{%Family_BrotherHood_Name}</family>"
   }
 }

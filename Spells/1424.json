@@ -1,0 +1,164 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202553
+  },
+  "m_Name": "1424",
+  "m_id": 1424,
+  "m_displayName": "SEASON - TAURE - Renversement",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1045834403,
+    "b": -650111228,
+    "c": -1424220471,
+    "d": 721918163,
+    "e": -2004484971
+  },
+  "m_i18nDescriptionId": {
+    "a": -1045834403,
+    "b": -650111228,
+    "c": -1424220471,
+    "d": 721918163,
+    "e": -153747416
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "32b4121096f6f4e4f92513d7a927160a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1424,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              206
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "c6ff8e0b8a260a64a8bd4676fafee000",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "Const.collisionDmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Renversement",
+    "en": "Reversal",
+    "es": "Vuelco",
+    "de": "Umkehrung",
+    "pt": "Reversão"
+  },
+  "description": {
+    "fr": "{#PUSH} un {ObjectMechanism:206!} jusqu'a {cell:c} et construit des {ObjectMechanism:480,plural:other!} sur les cases traversées.",
+    "en": "{#PUSH} one {ObjectMechanism:206!} up to {cell:c} and builds {ObjectMechanism:480,plural:other!} on the cells gone through.",
+    "es": "{#PUSH} a un {ObjectMechanism:206!} hasta a {cell:c} y construye {ObjectMechanism:480,plural:other!} en las casillas atravesadas.",
+    "de": "{#PUSH,plural:few} einen {ObjectMechanism:206!} um {cell:c} zurück und errichtet {ObjectMechanism:480,plural:other!} auf den überquerten Feldern.",
+    "pt": "{#PUSH} uma {ObjectMechanism:206!} por até {cell:c} e constrói {ObjectMechanism:480,plural:other!} sobre as células atravessadas."
+  }
+}

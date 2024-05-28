@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442440
+  },
+  "m_Name": "1054",
+  "m_id": 1054,
+  "m_displayName": "SEASON - CRAQUELEUR - ADVERSAIRE - BOSS - Chevalier Noir Monté",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1874211278,
+    "b": -489751004,
+    "c": 882332073,
+    "d": 1966673886,
+    "e": 128158941
+  },
+  "m_i18nChampionNameId": {
+    "a": 1874211278,
+    "b": -489751004,
+    "c": 882332073,
+    "d": 1966673886,
+    "e": 371472661
+  },
+  "m_i18nDescriptionId": {
+    "a": 1874211278,
+    "b": -489751004,
+    "c": 882332073,
+    "d": 1966673886,
+    "e": -2089188882
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 1054,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 785,
+      "skinIds": [
+        785
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "CustomRule.975.p6"
+      ],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      52,
+      92
+    ],
+    "baseProperties": [
+      223
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 1200
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 500
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "TeamFilter",
+          "isIdentical": false,
+          "reference": {
+            "type": "EffectHolderSelector"
+          }
+        },
+        {
+          "type": "NotEntityFilter",
+          "filter": {
+            "type": "PropertyFilter",
+            "property": {
+              "type": "SpecificPropertyIdResolvable",
+              "propertyId": 90
+            }
+          }
+        }
+      ]
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "grade": 2,
+    "growInto": null
+  },
+  "name": {
+    "fr": "Chevalier Noir",
+    "en": "Black Knight",
+    "es": "Caballero Negro",
+    "de": "Schwarzer Ritter",
+    "pt": "Cavaleiro Negro"
+  },
+  "championName": {
+    "fr": "Chevalier Noir",
+    "en": "Black Knight",
+    "es": "Caballero Negro",
+    "de": "Schwarzer Ritter",
+    "pt": "Cavaleiro Negro"
+  },
+  "description": {
+    "fr": "{%fightTurnStarted}\\vDétruit les {%FAMILY_CRAQUELEUR_NAME,plural:other} qui lui sont adjacents\\_<sprite name=\"cell_cross\">.\n\\---\n{%death}\\_{value:CustomRule.975.p6,+} points.",
+    "en": "{%fightTurnStarted}\\vDestroys the adjacent\\_<sprite name=\"cell_cross\"> {%FAMILY_CRAQUELEUR_NAME,plural:other}.\n\\---\n{%death}\\_{value:CustomRule.975.p6,+} points.",
+    "es": "{%fightTurnStarted}\\vDestruye a los {%FAMILY_CRAQUELEUR_NAME,plural:other} que tiene adyacentes\\_<sprite name=\"cell_cross\">.\n\\---\n{%death}\\_{value:CustomRule.975.p6,+} puntos.",
+    "de": "{%fightTurnStarted}\\vZerstört die {%FAMILY_CRAQUELEUR_NAME,plural:other}, die an ihn angrenzen\\_<sprite name=\"cell_cross\">.\n\\---\n{%death}\\_{value:CustomRule.975.p6,+}\\_Punkte.",
+    "pt": "{%fightTurnStarted}\\vDestrói os {%FAMILY_CRAQUELEUR_NAME,plural:other} adjacentes\\_<sprite name=\"cell_cross\"> a ele.\n\\---\n{%death}\\_{value:CustomRule.975.p6,+} pontos."
+  }
+}

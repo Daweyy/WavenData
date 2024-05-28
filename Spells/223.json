@@ -114,18 +114,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 11
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 18
-            }
+            "valueInPvM": 11,
+            "valueInPvP": 14
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -163,6 +155,11 @@
         },
         {
           "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "d2",
           "value": 1
         }
@@ -183,10 +180,10 @@
     "pt": "Punho Tsunami"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{#trapper}\\_: Vole {PAvalue:pa}\\_à la réserve de la cible.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{#trapper}: Steals {PAvalue:pa} from the target's reserve.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{#trapper}: Roba {PAvalue:pa}\\_a la reserva del objetivo.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{#trapper}: Entzieht {PAvalue:pa} aus der Reserve des Ziels.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{#trapper}: Rouba {PAvalue:pa}\\_da reserva do alvo."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{#trapper}\\_: Vole {PAvalue:pa}\\_à la réserve de la cible.</if><if pvp>{#trapper}\\_: {PA_RESvalue:paPVP,+}.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{#trapper}: Steals {PAvalue:pa} from the target's reserve.</if><if pvp>{#trapper}: {PA_RESvalue:paPVP,+}.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{#trapper}: Roba {PAvalue:pa}\\_a la reserva del objetivo.</if><if pvp>{#trapper}\\_: {PA_RESvalue:paPVP,+}.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{#trapper}: Entzieht {PAvalue:pa} aus der Reserve des Ziels.</if><if pvp>{#trapper}\\_: {PA_RESvalue:paPVP,+}.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{#trapper}: Rouba {PAvalue:pa}\\_da reserva do alvo.</if><if pvp>{#trapper}: {PA_RESvalue:paPVP,+}.</if>"
   }
 }

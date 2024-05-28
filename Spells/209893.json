@@ -86,6 +86,16 @@
           "referenceId": null,
           "value": 1
         }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
       }
     ],
     "costs": [
@@ -164,9 +174,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": null,
-            "value": 22
+            "valueInPvM": 22,
+            "valueInPvP": 13
           },
           "factor": {
             "type": "ReferenceScalingFactor",

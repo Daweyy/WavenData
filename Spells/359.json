@@ -80,9 +80,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 5
+          "valueInPvM": 5,
+          "valueInPvP": 6
         }
       }
     ],
@@ -117,46 +118,12 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "hl",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 11
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51,
-            90,
-            22,
-            50
-          ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 118841,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 30
-              }
-            }
-          ],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
             "valueInPvM": 12,
-            "valueInPvP": 20
+            "valueInPvP": 23
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -224,6 +191,40 @@
           "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hl",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            90,
+            22,
+            50
+          ],
+          "skillBuffs": [
+            {
+              "type": "SkillBuff",
+              "skillId": 118841,
+              "percentBuff": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 30
+              }
+            }
+          ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

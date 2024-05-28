@@ -1,0 +1,162 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202553
+  },
+  "m_Name": "1820",
+  "m_id": 1820,
+  "m_displayName": "SEASON - CRAQUELEUR - Invocation de Craquelourd",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 194355470,
+    "b": 1023309668,
+    "c": -126738581,
+    "d": 1572813033,
+    "e": -1524191752
+  },
+  "m_i18nDescriptionId": {
+    "a": 194355470,
+    "b": 1023309668,
+    "c": -126738581,
+    "d": 1572813033,
+    "e": -1724798872
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "40ff796d3674a6a42bfadcdc91761e53"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1820,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForMechanismFilter"
+          },
+          {
+            "type": "NotCoordFilter",
+            "filter": {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "SpecificCoordsSelector",
+                "cells": [
+                  {
+                    "type": "Coordinates",
+                    "x": 0,
+                    "y": 5
+                  },
+                  {
+                    "type": "Coordinates",
+                    "x": 4,
+                    "y": 8
+                  },
+                  {
+                    "type": "Coordinates",
+                    "x": 8,
+                    "y": 0
+                  },
+                  {
+                    "type": "Coordinates",
+                    "x": 8,
+                    "y": 5
+                  }
+                ]
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 0
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0db36304571b8a6439feeb6f4a043b39",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 504
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Invocation de Craquelourd",
+    "en": "Cracklerge Summoning",
+    "es": "Invocación de Crujidolmen",
+    "de": "Heftiger-Krachler-Beschwörung",
+    "pt": "Invocação de Smagalalau"
+  },
+  "description": {
+    "fr": "Invoque un {Summoning:504} sur une case libre du terrain.",
+    "en": "Summons one {Summoning:504} to a free cell on the field.",
+    "es": "Invoca un {Summoning:504} en una casilla libre del terreno.",
+    "de": "Beschwört die Kreatur „{Summoning:504}“ auf einem freien Feld.",
+    "pt": "Invoca um {Summoning:504} em uma célula livre do campo de batalha."
+  }
+}

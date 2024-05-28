@@ -150,7 +150,15 @@
       "externalDynamicValueReferences": [],
       "hasEffects": false,
       "keywordReferences": [
-        "HAIL"
+        {
+          "conditions": "<6/>",
+          "type": 20,
+          "id": 8
+        },
+        {
+          "conditions": "<7/>",
+          "keyword": "HAIL"
+        }
       ]
     },
     "families": [
@@ -161,7 +169,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 85,
-      "valueInPvP": 88
+      "valueInPvP": 80
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -313,10 +321,10 @@
     "pt": "Remus"
   },
   "description": {
-    "fr": "{%attack} Déclenche {hail:hl} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.\\v<family>Ecaflip</family>",
-    "en": "{%attack} Triggers {hail:hl} if the target is <b>WET</b>\\_<sprite name=\"wet\">.\\v<family>Ecaflip</family>",
-    "es": "{%attack} Activa {hail:hl} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.\\v<family>Zurcarák</family>",
-    "de": "{%attack} Löst {hail:hl} aus, falls das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.\\v<family>Ecaflip</family>",
-    "pt": "{%attack} Aciona {hail:hl} se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.\\v<family>Ecaflip</family>"
+    "fr": "{%attack}<if pvm> Déclenche {hail:hl} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if><if pvp> Gagne {PropertyEffect:8}.</if>\\v<family>Ecaflip</family>",
+    "en": "{%attack}<if pvm> Triggers {hail:hl} if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if><if pvp> Gains {PropertyEffect:8}.</if>\\v<family>Ecaflip</family>",
+    "es": "{%attack}<if pvm> Activa {hail:hl} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if><if pvp> Gana {PropertyEffect:8}.</if>\\v<family>Zurcarák</family>",
+    "de": "{%attack}<if pvm> Löst {hail:hl} aus, falls das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if><if pvp> Erhält einen {PropertyEffect:8}.</if>\\v<family>Ecaflip</family>",
+    "pt": "{%attack}<if pvm> Aciona {hail:hl} se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if><if pvp> Ganha {PropertyEffect:8}.</if>\\v<family>Ecaflip</family>"
   }
 }

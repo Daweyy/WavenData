@@ -66,18 +66,10 @@
         "type": "GaugeValue",
         "element": 57,
         "value": {
-          "type": "PvmOrPvpValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "pvm": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 1
-          },
-          "pvp": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 0
-          }
+          "valueInPvM": 1,
+          "valueInPvP": 1
         }
       }
     ],
@@ -85,9 +77,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 5
+          "valueInPvM": 5,
+          "valueInPvP": 3
         }
       }
     ],
@@ -122,8 +115,35 @@
       "hasEffects": true,
       "keywordReferences": [
         {
+          "conditions": "<6/>",
+          "keyword": "PUSH"
+        },
+        {
+          "conditions": "<6/>",
+          "keyword": "EPHEMERAL"
+        },
+        {
+          "conditions": "<6/>",
+          "keyword": "TRAP"
+        },
+        {
+          "conditions": "<6/>",
+          "type": 25,
+          "id": 393
+        },
+        {
+          "conditions": "<6/>",
+          "keyword": "TRAPPER"
+        },
+        {
+          "conditions": "<7/>",
           "type": 20,
           "id": 19
+        },
+        {
+          "conditions": "<6/>",
+          "type": 20,
+          "id": 8
         }
       ]
     }
@@ -136,10 +156,10 @@
     "pt": "Pele de Sombra"
   },
   "description": {
-    "fr": "Piochez {value:draw} sorts.\n\\---\nConfère {PropertyEffect:19} à votre héros jusqu'au prochain tour.",
-    "en": "Draw {value:draw} {draw, plural, one[spell] other[spells]}.\n\\---\nConfers {PropertyEffect:19} on your hero until the next turn.",
-    "es": "Sacas {value:draw} hechizos.\n\\---\nConfiere {PropertyEffect:19} a tu héroe hasta el próximo turno.",
-    "de": "Zieht {value:draw} Zauber.\n\\---\nMacht deinen Helden bis zur nächsten Runde {PropertyEffect:19}.",
-    "pt": "Compre {value:draw} feitiços.\n\\---\nConcede {PropertyEffect:19} ao seu herói até o próximo turno."
+    "fr": "<if pvm>Piochez {value:draw} sorts.</if><if pvp>Confère {PropertyEffect:8} à votre héros.</if>\n\\---\n<if pvm>Confère {PropertyEffect:19} à votre héros jusqu'au prochain tour.</if><if pvp>{#TRAPPER}\\_: Ajoute une {Spell:393} à votre main.</if>",
+    "en": "<if pvm>Draw {value:draw} {draw, plural, one[spell] other[spells]}.</if><if pvp>Confers {PropertyEffect:8} on your hero.</if>\n\\---\n<if pvm>Confers {PropertyEffect:19} on your hero until the next turn.</if><if pvp>{#TRAPPER}: Adds one {Spell:393} spell to your hand.</if>",
+    "es": "<if pvm>Sacas {value:draw} hechizos.</if><if pvp>Confiere {PropertyEffect:8} a tu héroe.</if>\n\\---\n<if pvm>Confiere {PropertyEffect:19} a tu héroe hasta el próximo turno.</if><if pvp>{#TRAPPER}: Añade {Spell:393} a tu mano.</if>",
+    "de": "<if pvm>Zieht {value:draw} Zauber.</if><if pvp>Verleiht deinem Helden einen {PropertyEffect:8}.</if>\n\\---\n<if pvm>Macht deinen Helden bis zum Beginn der nächsten Runde {PropertyEffect:19}.</if><if pvp>{#TRAPPER}: Fügt deiner Hand den Zauber „{Spell:393}“ hinzu.</if>",
+    "pt": "<if pvm>Compre {value:draw} feitiços.</if><if pvp>Concede {PropertyEffect:8} ao seu herói.</if>\n\\---\n<if pvm>Concede {PropertyEffect:19} ao seu herói até o próximo turno.</if><if pvp>{#TRAPPER}: Adiciona um {Spell:393} à sua mão.</if>"
   }
 }

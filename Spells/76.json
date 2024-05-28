@@ -68,9 +68,10 @@
         "type": "GaugeValue",
         "element": 57,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -78,9 +79,18 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpValue",
           "referenceId": "",
-          "value": 5
+          "pvm": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 3
+          },
+          "pvp": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 5
+          }
         }
       }
     ],

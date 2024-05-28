@@ -1,0 +1,134 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442440
+  },
+  "m_Name": "1675",
+  "m_id": 1675,
+  "m_displayName": "SEASON - CRAQUELEUR - ADVERSAIRE - Pelleteur Bontarien (Lent)",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1943407972,
+    "b": 1715711348,
+    "c": 521524808,
+    "d": 1017908234,
+    "e": -47204270
+  },
+  "m_i18nChampionNameId": {
+    "a": -1943407972,
+    "b": 1715711348,
+    "c": 521524808,
+    "d": 1017908234,
+    "e": -778116768
+  },
+  "m_i18nDescriptionId": {
+    "a": -1943407972,
+    "b": 1715711348,
+    "c": 521524808,
+    "d": 1017908234,
+    "e": 1362029664
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 1675,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7398,
+      "skinIds": [
+        7398
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "CustomRule.975.p1"
+      ],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      75
+    ],
+    "baseProperties": [
+      223
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 300
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 2
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "TeamFilter",
+          "isIdentical": false,
+          "reference": {
+            "type": "EffectHolderSelector"
+          }
+        },
+        {
+          "type": "NotEntityFilter",
+          "filter": {
+            "type": "PropertyFilter",
+            "property": {
+              "type": "SpecificPropertyIdResolvable",
+              "propertyId": 90
+            }
+          }
+        }
+      ]
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "grade": 3,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Pelleteur Bontarien] other[Pelleteurs Bontariens]}",
+    "en": "{0, plural, one[Bontarian Shoveler] other[Bontarian Shovelers]}",
+    "es": "{0, plural, one[Paleador Bontariano] other[Paleadores Bontarianos]}",
+    "de": "{0, plural, one[Bonta-Gräber] other[Bonta-Gräber]}",
+    "pt": "{0, plural, one[Escavador Bontariano] other[Escavadores Bontarianos]}"
+  },
+  "championName": {
+    "fr": "{0, plural, one[Pelleteur Bontarien] other[Pelleteurs Bontariens]}",
+    "en": "{0, plural, one[Bontarian Shoveler] other[Bontarian Shovelers]}",
+    "es": "{0, plural, one[Paleador Bontariano] other[Paleadores Bontarianos]}",
+    "de": "{0, plural, one[Bonta-Gräber] other[Bonta-Gräber]}",
+    "pt": "{0, plural, one[Escavador Bontariano] other[Escavadores Bontarianos]}"
+  },
+  "description": {
+    "fr": "{%death}\\_{value:CustomRule.975.p1,+} points.",
+    "en": "{%death}\\_{value:CustomRule.975.p1,+} points.",
+    "es": "{%death}\\_{value:CustomRule.975.p1,+} puntos.",
+    "de": "{%death}\\_{value:CustomRule.975.p1,+}\\_Punkte.",
+    "pt": "{%death}\\_{value:CustomRule.975.p1,+} pontos."
+  }
+}

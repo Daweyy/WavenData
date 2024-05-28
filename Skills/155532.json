@@ -10,7 +10,7 @@
   },
   "m_Name": "155532",
   "m_id": 155532,
-  "m_displayName": "WEAPON - ENIRIPSA - SCALPEL DE L APOSTRUKER - Armure Apostruker",
+  "m_displayName": "WEAPON - ENIRIPSA - SCALPEL DE L APOSTRUKER - Puissance Apostruker",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -28,7 +28,7 @@
     "e": 820972050
   },
   "m_skillIconReference": {
-    "assetGuid": "f1b5c86a22129d54a91a3c103d3c9f05"
+    "assetGuid": "56e24c41145c5ad4c8019b39171a0a6c"
   },
   "values": {
     "type": "SkillDefinition",
@@ -42,16 +42,21 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 10
+        },
+        {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "v",
+          "referenceId": "heal",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 2
+            "value": 10
           },
           "factor": null,
           "buffs": [
-            48
+            50
           ],
           "skillBuffs": [],
           "from": {
@@ -66,17 +71,17 @@
     }
   },
   "name": {
-    "fr": "Soin Apostruker",
-    "en": "Apostruker Healing",
-    "es": "Cura Aspotruker",
-    "de": "Apostruker-Heilung",
-    "pt": "Cura Apostruker"
+    "fr": "Puissance Apostruker",
+    "en": "Apostruker Power",
+    "es": "Potencia Aspotruker",
+    "de": "Apostruker-Schlagkraft",
+    "pt": "Potência Apostruker"
   },
   "description": {
-    "fr": "Lorsqu'il gagne de l'{%AR}\\_: Votre héros déclenche son passif.\n\\---\nLorsqu'il est soigné\\_: Votre héros gagne {value:v,percent} de sa {%PVMAX} en {%AR}.",
-    "en": "When they gain {%AR}: Your hero triggers their passive.\n\\---\nWhen they are healed: Your hero gains {value:v,percent} of their {%PVMAX} as {%AR}.",
-    "es": "Cuando gana {%AR}: Tu héroe activa su pasivo.\n\\---\nCuando es curado: Tu héroe gana un {value:v,percent} de su {%PVMAX} en {%AR}.",
-    "de": "Wenn er {%AR} dazugewinnt: Dein Held löst seine passive Fähigkeit aus.\n\\---\nWenn er geheilt wird: Dein Held erhält {value:v,percent} seiner {%PVMAX} als {%AR}.",
-    "pt": "Quando ele ganha {%AR}: Seu herói aciona o passivo dele.\n\\---\nQuando ele é curado: Seu herói ganha {value:v,percent} de sua {%PVMAX} em {%AR}."
+    "fr": "Lorsqu'un de vos personnages {%Attack} Il inflige {value:dmg,percent} de sa {%PV} aux adversaires autour <sprite name=\"cell_around\"> de lui et soigne de {value:heal,percent} de sa {%PV} les alliés autour <sprite name=\"cell_around\"> de lui.",
+    "en": "When one of your characters {%Attack} They inflict {value:dmg,percent} of their {%PV} on surrounding <sprite name=\"cell_around\"> opponents and heals surrounding <sprite name=\"cell_around\"> allies {value:heal,percent} of their {%PV}.",
+    "es": "Cuando uno de tus personajes inflige un {%Attack} Inflige un {value:dmg,percent} de su {%PV} a los adversarios a su alrededor <sprite name=\"cell_around\"> y cura un {value:heal,percent} de su {%PV} a los aliados a su alrededor <sprite name=\"cell_around\">.",
+    "de": "Wenn einer deiner Charaktere Ziel eines {%Attack,plural:many} wird: Er verursacht bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> {value:dmg,percent} seiner {%PV} als Schaden und heilt Verbündete im Umkreis\\_<sprite name=\"cell_around\"> um {value:heal,percent} seiner {%PV}.",
+    "pt": "Quando um dos seus personagens efetua um {%Attack} Ele inflige {value:dmg,percent} de sua {%PV} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> dele e cura em {value:heal,percent} de sua {%PV} os aliados em\\_volta\\_<sprite name=\"cell_around\"> dele."
   }
 }

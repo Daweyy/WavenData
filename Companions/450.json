@@ -42,13 +42,42 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "vPVP",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "gPVP",
+          "value": 5
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "jPVP",
+          "entitySelector": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "carac": 20
+        }
+      ],
       "externalDynamicValueReferences": [
         "Const.collisionDmg"
       ],
       "hasEffects": true,
       "keywordReferences": [
-        "PUSH"
+        {
+          "conditions": "<6/>",
+          "keyword": "JAUGE"
+        },
+        {
+          "conditions": "<7/>",
+          "keyword": "PUSH"
+        }
       ]
     },
     "families": [
@@ -59,7 +88,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 69,
-      "valueInPvP": 66
+      "valueInPvP": 57
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -70,7 +99,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 12,
-      "valueInPvP": 12
+      "valueInPvP": 10
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -211,10 +240,10 @@
     "pt": "Agard"
   },
   "description": {
-    "fr": "Lorsque vous générez des {%GAUGE, plural:other}\\_: {#PUSH} les adversaires alignés de 1\\_case par {%GAUGE} générée.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "en": "When you generate {%GAUGE, plural:other}: {#PUSH} in-line opponents 1\\_cell per {%GAUGE} generated.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "es": "Cuando generas {%GAUGE, plural:other}: {#PUSH} a los adversarios alineados 1\\_casilla por {%GAUGE} generado.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "de": "Wenn du {%GAUGE, plural:other} generierst: {#PUSH,plural:one} der Gegner in derselben Reihe um ein\\_Feld pro generiertem {%GAUGE}.\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "pt": "Quando você gera {%GAUGE, plural:other}: {#PUSH} os adversários alinhados por 1\\_célula por {%GAUGE} gerada.\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+    "fr": "<if pvm>Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v{#PUSH} les adversaires alignés de 1\\_case par {%GAUGE} générée.</if><if pvp>{#Jauge}\\_({value:gPVP}) et {%APPEARANCE}\\vPiochez {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Jauges générées\\_: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "<if pvm>When you generate {%GAUGE, plural:other}:\\v{#PUSH} in-line opponents 1\\_cell per {%GAUGE} generated.</if><if pvp>{#Jauge}\\_({value:gPVP}) and {%APPEARANCE}\\vDraw {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Gauges Generated: {value:jPVP}.</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "<if pvm>Cuando generas {%GAUGE, plural:other}:\\v{#PUSH} a los adversarios alineados 1\\_casilla por {%GAUGE} generado.</if><if pvp>{#Jauge}\\_({value:gPVP}) y {%APPEARANCE}\\vSacas {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Indicadores generados: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "<if pvm>Wenn du {%GAUGE, plural:other} generierst: \\v{#PUSH} der Gegner in derselben Reihe um 1\\_Feld pro generiertem {%GAUGE}.</if><if pvp>{#Jauge}\\_({value:gPVP}) und {%APPEARANCE}\\vZieht {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Generierte Elementarpunkte: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "<if pvm>Quando você gera {%GAUGE, plural:other}:\\v{#PUSH} os adversários alinhados por 1\\_célula por {%GAUGE} gerada.</if><if pvp>{#Jauge}\\_({value:gPVP}) e {%APPEARANCE}\\vCompre {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Cargas geradas: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>"
   }
 }

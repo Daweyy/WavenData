@@ -150,18 +150,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 11
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 10
-            }
+            "valueInPvM": 11,
+            "valueInPvP": 10
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -182,18 +174,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 24
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 20
-            }
+            "valueInPvM": 24,
+            "valueInPvP": 26
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -226,12 +210,34 @@
         },
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "arPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            48,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "pt",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 8,
-            "valueInPvP": 11
+            "value": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -263,7 +269,10 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "PEAT",
+        {
+          "conditions": "<7/>",
+          "keyword": "PEAT"
+        },
         "SUPPORT"
       ]
     }
@@ -276,10 +285,10 @@
     "pt": "Bálsamo Turfoso"
   },
   "description": {
-    "fr": "Soigne un allié de {PVvalue:ar} et inflige {magicalDamage:dmg} à un adversaire aligné à lui.\n\\---\n{#SUPPORT}\\_: Déclenche {peat:pt}.",
-    "en": "Heals an ally {PVvalue:ar} and does {magicalDamage:dmg} to an opponent in line with them.\n\\---\n{#SUPPORT}: Triggers {peat:pt}.",
-    "es": "Cura a un aliado {PVvalue:ar} e inflige {magicalDamage:dmg} a un adversario alineado con él.\n\\---\n{#SUPPORT}: Activa {peat:pt}.",
-    "de": "Heilt einen Verbündeten um {PVvalue:ar} und fügt einem Gegner in derselben Reihe {magicalDamage:dmg} zu.\n\\---\n{#SUPPORT}: Löst {peat:pt} aus.",
-    "pt": "Cura {PVvalue:ar} de um aliado e inflige {magicalDamage:dmg} a um adversário alinhado com ele.\n\\---\n{#SUPPORT}: Aciona {peat:pt}."
+    "fr": "Soigne un allié de {PVvalue:ar} et inflige {magicalDamage:dmg} à un adversaire aligné à lui.\n\\---\n{#SUPPORT}\\_: <if pvm>Déclenche {peat:pt}.</if><if pvp>{ARvalue:arPVP,+} à votre héros.</if>",
+    "en": "Heals an ally {PVvalue:ar} and does {magicalDamage:dmg} to an opponent in line with them.\n\\---\n{#SUPPORT}: <if pvm>Triggers {peat:pt}.</if><if pvp>{ARvalue:arPVP,+} to your hero.</if>",
+    "es": "Cura a un aliado {PVvalue:ar} e inflige {magicalDamage:dmg} a un adversario alineado con él.\n\\---\n{#SUPPORT}: <if pvm>Activa {peat:pt}.</if><if pvp>{ARvalue:arPVP,+} a tu héroe.</if>",
+    "de": "Heilt einen Verbündeten um {PVvalue:ar} und verursacht bei einem Gegner in derselben Reihe {magicalDamage:dmg}.\n\\---\n{#SUPPORT}: <if pvm>Löst {peat:pt} aus.</if><if pvp>{ARvalue:arPVP,+} für deinen Helden.</if>",
+    "pt": "Cura {PVvalue:ar} de um aliado e inflige {magicalDamage:dmg} a um adversário alinhado com ele.\n\\---\n{#SUPPORT}: <if pvm>Aciona {peat:pt}.</if><if pvp>{ARvalue:arPVP,+} ao seu herói.</if>"
   }
 }

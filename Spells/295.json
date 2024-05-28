@@ -114,18 +114,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 12
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 29
-            }
+            "valueInPvM": 12,
+            "valueInPvP": 29
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -145,10 +137,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "bc",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 13,
-            "valueInPvP": 29
+            "value": 13
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -184,7 +175,15 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "BOUNCE"
+        {
+          "conditions": "<6/>",
+          "type": 20,
+          "id": 5
+        },
+        {
+          "conditions": "<7/>",
+          "keyword": "BOUNCE"
+        }
       ]
     }
   },
@@ -196,10 +195,10 @@
     "pt": "Ponta Saltitante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nDéclenche {bounce:bc} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\"/>.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\nTriggers {bounce:bc} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\"/>.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\nActiva {bounce:bc} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\"/>.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nLöst {bounce:bc} aus, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"/> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nAciona {bounce:bc} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\"/>."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Déclenche {bounce:bc} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\"/>.</if><if pvp>{PropertyEffect:5} la cible si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\"/>.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>Triggers {bounce:bc} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\"/>.</if><if pvp>{PropertyEffect:5} the target if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\"/>.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Activa {bounce:bc} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\"/>.</if><if pvp>{PropertyEffect:5} al objetivo si está <b>AIREADO</b>\\_<sprite name=\"ventilated\"/>.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>Löst {bounce:bc} aus, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"/> ist.</if><if pvp>{PropertyEffect:5}, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"/> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Aciona {bounce:bc} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\"/>.</if><if pvp>{PropertyEffect:5} o alvo se ele estiver <b>AERADO</b>\\_<sprite name=\"ventilated\"/>.</if>"
   }
 }

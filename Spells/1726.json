@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202553
+  },
+  "m_Name": "1726",
+  "m_id": 1726,
+  "m_displayName": "SEASON - TAURE - Bond sauvage",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 665021471,
+    "b": -82782924,
+    "c": -1353186247,
+    "d": -2053887611,
+    "e": 840297384
+  },
+  "m_i18nDescriptionId": {
+    "a": 665021471,
+    "b": -82782924,
+    "c": -1353186247,
+    "d": -2053887611,
+    "e": -1788315022
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "e0ee7f8b691129a4e894bb0b9b1b3e96"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "2f755f16bb6c5b64eb5a8c29266600fd"
+      },
+      {
+        "assetGuid": "23b7e4d49a2edfb468fc17a0ca79b6d3"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1726,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bond sauvage",
+    "en": "Wild Jump",
+    "es": "Salto Salvaje",
+    "de": "Wilder Sprung",
+    "pt": "Salto Selvagem"
+  },
+  "description": {
+    "fr": "Téléporte {Weapon:618!} jusqu'a {cell:c} et inflige son {%AT} aux entités autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée.",
+    "en": "Teleports {Weapon:618!} up to {cell:c} and inflicts his {%AT} on entities around\\_<sprite name=\"cell_around\"> the destination cell.",
+    "es": "Teletransporta a {Weapon:618!} hasta {cell:c} e inflige su {%AT} a las entidades de alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada.",
+    "de": "Teleportiert {Weapon:618!} bis zu {cell:c} und verursacht seinen {%AT} bei an sein Zielfeld angrenzenden\\_<sprite name=\"cell_around\"> Einheiten als Schaden.",
+    "pt": "Teletransporta {Weapon:618!} por até {cell:c} e inflige seu {%AT} às entidades em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada."
+  }
+}

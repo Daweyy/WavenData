@@ -99,7 +99,7 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "SquareAreaOfEffectSelector",
+        "type": "MultipleAreaOfEffectSelector",
         "originSelector": {
           "type": "FilteredEntitySelector",
           "from": {
@@ -117,9 +117,71 @@
         },
         "size": {
           "type": "ConstIntegerValue",
-          "referenceId": null,
+          "referenceId": "",
           "value": 1
-        }
+        },
+        "areaOfEffects": [
+          {
+            "type": "SquareAreaOfEffectSelector",
+            "originSelector": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllFloorMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          },
+          {
+            "type": "AreaFromTargetsSelector",
+            "originSelector": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllFloorMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "OwnerFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "size": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 0
+            },
+            "targets": {
+              "type": "CasterHeroSelector"
+            },
+            "areaOfEffect": {
+              "type": "SquareAreaOfEffectSelector",
+              "originSelector": {
+                "type": "EngineDeterminedHolder"
+              },
+              "size": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [
@@ -140,18 +202,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 35
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 22
-            }
+            "valueInPvM": 35,
+            "valueInPvP": 24
           },
           "factor": {
             "type": "ReferenceScalingFactor",

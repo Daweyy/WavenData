@@ -113,10 +113,9 @@
               ]
             },
             "from": {
-              "type": "PvmOrPvpConstIntegerValue",
+              "type": "ConstIntegerValue",
               "referenceId": null,
-              "valueInPvM": 13,
-              "valueInPvP": 26
+              "value": 13
             }
           },
           "factor": {
@@ -145,6 +144,31 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper2",
           "value": 150
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bcPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 21
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 22
+          },
+          "buffs": [
+            89,
+            24
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -161,7 +185,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 85,
-      "valueInPvP": 89
+      "valueInPvP": 84
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -313,10 +337,10 @@
     "pt": "Duelista Espectral"
   },
   "description": {
-    "fr": "{%attack} Déclenche {bounce:bc} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
-    "en": "{%attack} Triggers {bounce:bc} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
-    "es": "{%attack} Activa {bounce:bc} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
-    "de": "{%attack} Löst {bounce:bc} aus, falls das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
-    "pt": "{%attack} Aciona {bounce:bc} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
+    "fr": "<if pvm>{%attack} Déclenche {bounce:bc} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{%attack} Déclenche {bounce:bcPVP}.</if>",
+    "en": "<if pvm>{%attack} Triggers {bounce:bc} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{%attack} Triggers {bounce:bcPVP}.</if>",
+    "es": "<if pvm>{%attack} Activa {bounce:bc} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{%attack} Activa {bounce:bcPVP}.</if>",
+    "de": "<if pvm>{%attack} Löst {bounce:bc} aus, falls das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.</if><if pvp>{%attack} Löst {bounce:bcPVP} aus.</if>",
+    "pt": "<if pvm>{%attack} Aciona {bounce:bc} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{%attack} Aciona {bounce:bcPVP}.</if>"
   }
 }

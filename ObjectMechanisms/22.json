@@ -52,10 +52,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "hl",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 11,
-            "valueInPvP": 8
+            "value": 11
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -71,12 +70,38 @@
             "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pvPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 8
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            22,
+            50
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "HAIL",
+        {
+          "conditions": "<7/>",
+          "keyword": "HAIL"
+        },
         {
           "conditions": "<6/>",
           "type": 22,

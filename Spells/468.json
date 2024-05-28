@@ -107,40 +107,84 @@
       }
     },
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CrossAreaOfEffectSelector",
-        "originSelector": {
-          "type": "FilteredCoordSelector",
-          "filters": [
-            {
-              "type": "AroundTargetFilter",
-              "targetsToCompare": {
-                "type": "CasterHeroSelector"
-              },
-              "distance": {
-                "type": "Between",
-                "minIncluded": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
                 },
-                "maxIncluded": {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "nb",
-                  "value": 3
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 3
+                  }
                 }
+              },
+              {
+                "type": "CellValidForCharacterFilter"
               }
-            },
-            {
-              "type": "CellValidForCharacterFilter"
-            }
-          ]
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
+            ]
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CrossAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "Between",
+                  "minIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  },
+                  "maxIncluded": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "nb",
+                    "value": 3
+                  }
+                }
+              },
+              {
+                "type": "CellValidForCharacterFilter"
+              }
+            ]
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       }
     },
@@ -172,9 +216,25 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
-          "value": 10
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
@@ -190,10 +250,10 @@
     "pt": "Salto"
   },
   "description": {
-    "fr": "Téléporte votre héros jusqu'à {cell:nb}.\n\\---\n<if pvm>Inflige {value:purcent,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.</if>",
-    "en": "Teleports your hero up to {cell:nb}.\n\\---\n<if pvm>Inflicts {value:purcent,percent} of their {%AT} on opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.</if><if pvp>Does {magicalDamage:dmg} to opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.</if>",
-    "es": "Teletransporta a tu héroe hasta {cell:nb}.\n\\---\n<if pvm>Inflige un {value:purcent,percent} de su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.</if><if pvp>Inflige {magicalDamage:dmg} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.</if>",
-    "de": "Teleportiert deinen Helden bis zu {cell:nb}.\n\\---\n<if pvm>Verursacht bei Gegnern, die an sein Ankunftsfeld angrenzen\\_<sprite name=\"cell_cross\">, {value:purcent,percent} seines {%AT,plural:two} als Schaden.</if><if pvp>Verursacht bei Gegnern, die an sein Ankunftsfeld angrenzen\\_<sprite name=\"cell_cross\">, {magicalDamage:dmg}.</if>",
-    "pt": "Teletransporta seu herói por até {cell:nb}.\n\\---\n<if pvm>Inflige {value:purcent,percent} do seu {%AT} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada.</if><if pvp>Inflige {magicalDamage:dmg} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada.</if>"
+    "fr": "Téléporte votre héros jusqu'à {cell:nb}.\n\\---\n<if pvm>Inflige {value:purcent,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\"> à sa case d'arrivée.</if><if pvp>Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de sa case d'arrivée.</if>",
+    "en": "Teleports your hero up to {cell:nb}.\n\\---\n<if pvm>Inflicts {value:purcent,percent} of their {%AT} on opponents adjacent\\_<sprite name=\"cell_cross\"> to the destination cell.</if><if pvp>Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> the destination cell.</if>",
+    "es": "Teletransporta a tu héroe hasta a {cell:nb}.\n\\---\n<if pvm>Inflige un {value:purcent,percent} de su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\"> a su casilla de llegada.</if><if pvp>Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de su casilla de llegada.</if>",
+    "de": "Teleportiert deinen Helden bis zu {cell:nb}.\n\\---\n<if pvm>Verursacht bei Gegnern, die an sein Zielfeld angrenzen\\_<sprite name=\"cell_cross\">, {value:purcent,percent} seines {%AT,plural:two} als Schaden.</if><if pvp>Verursacht bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> seines Zielfelds {magicalDamage:dmg}.</if>",
+    "pt": "Teletransporta seu herói por até {cell:nb}.\n\\---\n<if pvm>Inflige {value:purcent,percent} do seu {%AT} aos adversários adjacentes\\_<sprite name=\"cell_cross\"> à sua célula de chegada.</if><if pvp>Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada.</if>"
   }
 }

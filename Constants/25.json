@@ -25,7 +25,8 @@
       "unlockedCharacterSlots": 5,
       "achievementsToRecreditOnNewVariants": [
         902
-      ]
+      ],
+      "defaultCompanions": []
     },
     "tutorialConstants": {
       "type": "TutorialConstants",
@@ -941,7 +942,9 @@
       ],
       "levelRequiredForCreation": 1,
       "welcomeMessageMaxSize": 200,
+      "candidacyMessageMaxSize": 100,
       "maxCandidaciesPerPlayer": 4,
+      "islandZoneId": 1,
       "guildNameConstants": {
         "type": "NamingConstants",
         "restrictedCharactersPattern": "'a-zA-ZÀ-ÖÙ-öù-ÿ œŒ    ",
@@ -1002,9 +1005,14 @@
         {
           "k": 5,
           "v": 5
+        },
+        {
+          "k": 6,
+          "v": 1
         }
       ],
-      "minimalGradeToReceiveOwnerShip": 4
+      "minimalGradeToReceiveOwnerShip": 4,
+      "sakaPatataureFight": 1211
     },
     "fightDefinitionConstants": {
       "type": "FightDefinitionConstants",
@@ -1026,9 +1034,10 @@
         "type": "BuffedScalingDynamicValue",
         "referenceId": "",
         "baseValue": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 4,
+          "valueInPvP": 3
         },
         "factor": {
           "type": "ReferenceScalingFactor",
@@ -1888,6 +1897,21 @@
         "maxRewardedIndex": 99
       }
     },
+    "sakaPatataureConstants": {
+      "type": "SakaPatataureConstants",
+      "costPerFight": [],
+      "dailyFreeResource": null,
+      "actionAtEndOfSeason": {
+        "type": "LeaveTickets"
+      },
+      "losesUntilRunIsLost": 3,
+      "costToRerun": [],
+      "dropsPerVictory": [],
+      "ladderRewards": {
+        "type": "LadderRewards",
+        "maxRewardedIndex": -1
+      }
+    },
     "passiveModifiers": {
       "type": "PassiveModifiersConstants",
       "passiveModifiersOrder": [
@@ -2579,6 +2603,44 @@
     "tracking": {
       "type": "TrackingConstants",
       "starterIslandsAchievementId": 1769
+    },
+    "dailyOffersDefaultConfig": {
+      "type": "DailyOffersConfig",
+      "weaponSlot1": {
+        "type": "DailyOfferConfig",
+        "favoriteItemWeight": 20,
+        "usedItemWeight": 20,
+        "ownedItemWeight": 60,
+        "notOwnedItemWeight": 0
+      },
+      "weaponSlot2": {
+        "type": "DailyOfferConfig",
+        "favoriteItemWeight": 10,
+        "usedItemWeight": 10,
+        "ownedItemWeight": 80,
+        "notOwnedItemWeight": 0
+      },
+      "companionSlot": {
+        "type": "DailyOfferConfig",
+        "favoriteItemWeight": 15,
+        "usedItemWeight": 15,
+        "ownedItemWeight": 60,
+        "notOwnedItemWeight": 10
+      }
+    },
+    "serverVariants": {
+      "type": "ServerVariantConstants",
+      "daysBeforeWarningVariantEnds": 7,
+      "retrievalCost": {
+        "type": "MerchantCost",
+        "costs": [
+          {
+            "type": "ResourceCost",
+            "amount": 450,
+            "resourceId": 922
+          }
+        ]
+      }
     }
   }
 }

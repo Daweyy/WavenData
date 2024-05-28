@@ -46,6 +46,11 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": -2
+        },
+        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "p",
           "baseValue": {
@@ -70,7 +75,7 @@
         }
       ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": []
     },
     "families": [
@@ -81,7 +86,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 85,
-      "valueInPvP": 80
+      "valueInPvP": 75
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -89,9 +94,10 @@
       "value": 3
     },
     "actionValue": {
-      "type": "ConstIntegerValue",
+      "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
-      "value": 16
+      "valueInPvM": 16,
+      "valueInPvP": 16
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -232,10 +238,10 @@
     "pt": "Serafim"
   },
   "description": {
-    "fr": "{%attack} Vole {PA_RESvalue:pa} à la cible.\\v<family>Ecaflip</family>",
-    "en": "{%attack} Steals {PA_RESvalue:pa} from the target.\\v<family>Ecaflip</family>",
-    "es": "{%attack} Roba {PA_RESvalue:pa} al objetivo.\\v<family>Zurcarák</family>",
-    "de": "{%attack} Entzieht dem Ziel {PA_RESvalue:pa}.\\v<family>Ecaflip</family>",
-    "pt": "{%attack} Rouba {PA_RESvalue:pa} do alvo.\\v<family>Ecaflip</family>"
+    "fr": "<if pvm>{%attack} Vole {PA_RESvalue:pa} à la cible.</if><if pvp>{%appearance} {PAvalue:paPVP} au coût de votre prochain {%spellcount}.</if>\\v<family>Ecaflip</family>",
+    "en": "<if pvm>{%attack} Steals {PA_RESvalue:pa} from the target.</if><if pvp>{%appearance} {PAvalue:paPVP} to the cost of your next {%spellcount}.</if>\\v<family>Ecaflip</family>",
+    "es": "<if pvm>{%attack} Roba {PA_RESvalue:pa} al objetivo.</if><if pvp>{%appearance} {PAvalue:paPVP} al coste de tu próximo {%spellcount}.</if>\\v<family>Zurcarák</family>",
+    "de": "<if pvm>{%attack} Stiehlt dem Ziel {PA_RESvalue:pa}.</if><if pvp>{%appearance} {PAvalue:paPVP} auf die Kosten des nächsten {%spellcount,plural:two}.</if>\\v<family>Ecaflip</family>",
+    "pt": "<if pvm>{%attack} Rouba {PA_RESvalue:pa} do alvo.</if><if pvp>{%appearance} {PAvalue:paPVP} ao custo do seu próximo {%spellcount}.</if>\\v<family>Ecaflip</family>"
   }
 }

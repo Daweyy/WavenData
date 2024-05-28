@@ -72,18 +72,20 @@
         "type": "GaugeValue",
         "element": 13,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 2
         }
       },
       {
         "type": "GaugeValue",
         "element": 19,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
         }
       }
     ],
@@ -121,36 +123,12 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "ar",
-          "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
-            "referenceId": "",
-            "valueInPvM": 8,
-            "valueInPvP": 5
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            23,
-            51,
-            48
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
             "valueInPvM": 26,
-            "valueInPvP": 22
+            "valueInPvP": 23
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -180,6 +158,30 @@
           "type": "ConstIntegerValue",
           "referenceId": "percentSkill",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "ar",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": "",
+            "valueInPvM": 8,
+            "valueInPvP": 5
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            23,
+            51,
+            48
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "BuffedScalingDynamicValue",

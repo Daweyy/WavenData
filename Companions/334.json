@@ -45,6 +45,11 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
+          "referenceId": "vPVP",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "c",
           "value": 3
         }
@@ -52,8 +57,12 @@
       "externalDynamicValueReferences": [
         "Const.collisionDmg"
       ],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "keyword": "COLLISION"
+        },
         "PUSH"
       ]
     },
@@ -66,7 +75,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 95,
-      "valueInPvP": 100
+      "valueInPvP": 93
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -77,7 +86,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 16,
-      "valueInPvP": 25
+      "valueInPvP": 20
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -218,10 +227,10 @@
     "pt": "Lilota"
   },
   "description": {
-    "fr": "{%attack} {#push} de {cell:c}, puis avance d'autant.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "en": "{%attack} {#push} {cell:c}, then moves forward the same amount.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "es": "{%attack} {#push} {cell:c}, luego, avanza lo mismo.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "de": "{%attack} {#push,plural:one} um {cell:c}, bewegt sich entsprechend nach vorne.\\v<family>{%Family_JorisComrades_Name}</family>",
-    "pt": "{%attack} {#push} por {cell:c}, depois avança o mesmo tanto.\\v<family>{%Family_JorisComrades_Name}</family>"
+    "fr": "{%attack} {#push} de {cell:c}, puis avance d'autant.<if pvp>\\_Piochez {SPELLCOUNTvalue:vPVP} en cas de {#COLLISION}.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
+    "en": "{%attack} {#push} {cell:c}, then moves forward the same amount.<if pvp>\\_Draw {SPELLCOUNTvalue:vPVP} in the event of a {#COLLISION}.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
+    "es": "{%attack} {#push} {cell:c}, luego, avanza lo mismo.<if pvp>\\_Sacas {SPELLCOUNTvalue:vPVP} en caso de {#COLLISION}.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
+    "de": "{%attack} {#push} um {cell:c}, bewegt sich entsprechend nach vorne.<if pvp>\\_Zieht {SPELLCOUNTvalue:vPVP} im Falle von einem {#COLLISION}.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
+    "pt": "{%attack} {#push} por {cell:c}, depois avança o mesmo tanto.<if pvp>\\_Compre {SPELLCOUNTvalue:vPVP} em caso de {#COLLISION}.</if>\\v<family>{%Family_JorisComrades_Name}</family>"
   }
 }

@@ -97,23 +97,63 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "NotEntityFilter",
-            "filter": {
-              "type": "CasterHeroFilter"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CasterHeroFilter"
+              }
+            },
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "cPVP",
+                  "value": 3
+                }
+              }
             }
-          }
-        ]
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CasterHeroFilter"
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cPVP",
+          "value": 3
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -133,10 +173,10 @@
     "pt": "Agora Você Me Vê"
   },
   "description": {
-    "fr": "Échange la place de votre héros avec celle d'un autre personnage.\n\\---\nAjoute le sort {Spell:1716} à votre main.",
-    "en": "Switches your hero's position with that of another character.\n\\---\nAdds the {Spell:1716} spell to your hand.",
-    "es": "Intercambia la posición de tu héroe con la de otro personaje.\n\\---\nAñade el hechizo {Spell:1716} a tu mano.",
-    "de": "Tauscht die Position deines Helden mit der eines anderen Charakters.\n\\---\nFügt deiner Hand den Zauber „{Spell:1716}“ hinzu.",
-    "pt": "Troca seu herói de lugar com outro personagem.\n\\---\nAdiciona o feitiço {Spell:1716} à sua mão."
+    "fr": "<if pvm>Échange la place de votre héros avec celle d'un autre personnage.</if><if pvp>Échange la place de votre héros avec celle d'un autre personnage situé jusqu'à {cell:cPVP} de votre héros.</if>\n\\---\nAjoute le sort {Spell:1716} à votre main.",
+    "en": "<if pvm>Switches your hero's position with that of another character.</if><if pvp>Switches your hero's position with that of another character located up to {cell:cPVP} from your hero.</if>\n\\---\nAdds the {Spell:1716} to your hand.",
+    "es": "<if pvm>Intercambia la posición de tu héroe con la de otro personaje.</if><if pvp>Intercambia la posición de tu héroe con la de otro personaje situado hasta a {cell:cPVP} de tu héroe.</if>\n\\---\nAñade el hechizo {Spell:1716} a tu mano.",
+    "de": "<if pvm>Tauscht die Position deines Helden mit der eines anderen Charakters.</if><if pvp>Tauscht die Position deines Helden mit der eines anderen Charakters, der bis zu {cell:cPVP} von deinem Helden entfernt steht.</if>\n\\---\nFügt deiner Hand den Zauber „{Spell:1716}“ hinzu.",
+    "pt": "<if pvm>Troca seu herói de lugar com outro personagem.</if><if pvp>Troca seu herói de lugar com outro personagem situado a {cell:cPVP} dele.</if>\n\\---\nAdiciona o feitiço {Spell:1716} à sua mão."
   }
 }

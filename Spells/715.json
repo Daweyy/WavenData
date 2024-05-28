@@ -112,7 +112,15 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "AllCharactersSelector"
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "CasterHeroFilter"
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [

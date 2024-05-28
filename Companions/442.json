@@ -42,13 +42,31 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [],
-      "hasEffects": false,
-      "keywordReferences": [
-        "EXPLOSION",
-        "OBJECTMECHANISM",
+      "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "aPVP",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "conditions": "<7/>",
+          "keyword": "EXPLOSION"
+        },
+        {
+          "conditions": "<7/>",
+          "keyword": "OBJECTMECHANISM"
+        },
+        {
+          "conditions": "<6/>",
+          "type": 22,
+          "id": 40
+        },
+        {
+          "conditions": "<7/>",
           "type": 7,
           "id": 1486
         }
@@ -63,7 +81,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 108,
-      "valueInPvP": 101
+      "valueInPvP": 98
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -74,7 +92,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 18,
-      "valueInPvP": 25
+      "valueInPvP": 18
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -215,10 +233,10 @@
     "pt": "Remington Smif"
   },
   "description": {
-    "fr": "{%attack} Construit une {ObjectMechanism:1486} derrière la cible.\\v<family>{%Family_GreatVilain_Name}</family>",
-    "en": "{%attack} Builds one {ObjectMechanism:1486} behind the target.\\v<family>{%Family_GreatVilain_Name}</family>",
-    "es": "{%attack} Construye una {ObjectMechanism:1486} detrás del objetivo.\\v<family>{%Family_GreatVilain_Name}</family>",
-    "de": "{%attack} Errichtet eine {ObjectMechanism:1486} hinter dem Ziel.\\v<family>{%Family_GreatVilain_Name}</family>",
-    "pt": "{%attack} Constrói uma {ObjectMechanism:1486} atrás do alvo.\\v<family>{%Family_GreatVilain_Name}</family>"
+    "fr": "<if pvm>{%attack} Construit une {ObjectMechanism:1486} derrière la cible.</if><if pvp>{%appearanceAndFightTurnStarted}\\v{value:aPVP,+}\\_{aura:40,value:aPVP}.</if>\\v<family>{%Family_GreatVilain_Name}</family>",
+    "en": "<if pvm>{%attack} Builds one {ObjectMechanism:1486} behind the target.</if><if pvp>{%appearanceAndFightTurnStarted}\\v{value:aPVP,+}\\_{aura:40,value:aPVP}.</if>\\v<family>{%Family_GreatVilain_Name}</family>",
+    "es": "<if pvm>{%attack} Construye una {ObjectMechanism:1486} detrás del objetivo.</if><if pvp>{%appearanceAndFightTurnStarted}\\v{value:aPVP,+}\\_{aura:40,value:aPVP}.</if>\\v<family>{%Family_GreatVilain_Name}</family>",
+    "de": "<if pvm>{%attack} Errichtet eine {ObjectMechanism:1486} hinter dem Ziel.</if><if pvp>{%appearanceAndFightTurnStarted}\\v{value:aPVP,+}\\_{aura:40,value:aPVP}.</if>\\v<family>{%Family_GreatVilain_Name}</family>",
+    "pt": "<if pvm>{%attack} Constrói uma {ObjectMechanism:1486} atrás do alvo.</if><if pvp>{%appearanceAndFightTurnStarted}\\v{value:aPVP,+}\\_{aura:40,value:aPVP}.</if>\\v<family>{%Family_GreatVilain_Name}</family>"
   }
 }

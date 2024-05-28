@@ -66,9 +66,10 @@
         "type": "GaugeValue",
         "element": 57,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
         }
       }
     ],
@@ -79,7 +80,7 @@
           "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
           "valueInPvM": 4,
-          "valueInPvP": 3
+          "valueInPvP": 2
         }
       }
     ],
@@ -124,9 +125,25 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "ConstIntegerValue",
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
-          "value": 4
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 9
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

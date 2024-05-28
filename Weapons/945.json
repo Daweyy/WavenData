@@ -71,12 +71,20 @@
         1255,
         687,
         9619,
-        99
+        99,
+        894,
+        724
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [
         "ParameterizedEffectExecution.321.dmgPVP",
         "ParameterizedEffectExecution.321.s"
@@ -103,7 +111,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 28,
-      "valueInPvP": 26
+      "valueInPvP": 28
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -174,11 +182,11 @@
     "pt": "Ponteiro Pikuxala"
   },
   "description": {
-    "fr": "Lorsque votre héros se téléporte\\_: <if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} à l'adversaire ayant le plus de {%PV}.</if><if pvm>Inflige {value:ParameterizedEffectExecution.321.s,percent} de son {%AT} à l'adversaire ayant le plus de {%PV}.</if>",
-    "en": "When your hero teleports: <if pvp>Does {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} to the opponent with the most {%PV}.</if><if pvm>Inflicts {value:ParameterizedEffectExecution.321.s,percent} of their {%AT} on the opponent with the most {%PV}.</if>",
-    "es": "Cuando tu héroe se teletransporta: <if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} al adversario que tenga más {%PV}.</if><if pvm>Inflige un {value:ParameterizedEffectExecution.321.s,percent} de su {%AT} al adversario que tenga más {%PV}.</if>",
-    "de": "Wenn sich dein Held teleportiert: <if pvp>Verursacht beim Gegner mit den meisten {%PV} {magicalDamage:ParameterizedEffectExecution.321.dmgPVP}.</if><if pvm>Verursacht beim Gegner mit den meisten {%PV} {value:ParameterizedEffectExecution.321.s,percent} seines {%AT,plural:two} als Schaden.</if>",
-    "pt": "Quando seu herói se teletransporta: <if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} ao adversário que tiver mais {%PV}.</if><if pvm>Inflige {value:ParameterizedEffectExecution.321.s,percent} de seu {%AT} ao adversário que tiver mais {%PV}.</if>"
+    "fr": "Lorsque votre héros se téléporte\\_:\\v<if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} aux adversaires alignés à votre héros jusqu'à {cell:c} <sprite name=\"cell_cross2\">.</if><if pvm>Inflige {value:ParameterizedEffectExecution.321.s,percent} de son {%AT} aux adversaires alignés à votre héros jusqu'à {cell:c} <sprite name=\"cell_cross2\">.</if>",
+    "en": "When your hero teleports:\\v<if pvp>Does {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} to opponents in line with your hero up to {cell:c} away <sprite name=\"cell_cross2\">.</if><if pvm>Inflicts {value:ParameterizedEffectExecution.321.s,percent} of their {%AT} on opponents in line with your hero up to {cell:c} away <sprite name=\"cell_cross2\">.</if>",
+    "es": "Cuando tu héroe se teletransporta:\\v<if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} a los adversarios alineados con tu héroe hasta a {cell:c} <sprite name=\"cell_cross2\">.</if><if pvm>Inflige un {value:ParameterizedEffectExecution.321.s,percent} de su {%AT} a los adversarios alineados con tu héroe hasta a {cell:c} <sprite name=\"cell_cross2\">.</if>",
+    "de": "Wenn dein Held sich teleportiert:\\v<if pvp>Verursacht {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} bei Gegnern, die sich in derselben Reihe und bis zu {cell:c}\\_<sprite name=\"cell_cross2\"> entfernt befinden.</if><if pvm>Verursacht {value:ParameterizedEffectExecution.321.s,percent} seines {%AT,plural:two} bei Gegnern als Schaden, die sich in derselben Reihe und bis zu {cell:c}\\_<sprite name=\"cell_cross2\"> entfernt befinden.</if>",
+    "pt": "Quando seu herói se teletransporta:\\v<if pvp>Inflige {magicalDamage:ParameterizedEffectExecution.321.dmgPVP} aos adversários alinhados com seu herói a até {cell:c} <sprite name=\"cell_cross2\">.</if><if pvm>Inflige {value:ParameterizedEffectExecution.321.s,percent} de seu {%AT} aos adversários alinhados com seu herói a até {cell:c} <sprite name=\"cell_cross2\">.</if>"
   },
   "gameplayDescription": {
     "fr": "<color=#7FD5E4>TÉLÉPORTATION</color>\\_: Vos acrobaties vous sortiront de situations dangereuses ou vous feront gagner du terrain.\n\\---\n<color=#7FD5E4>{%AT}</color>\\_: Votre force brute\\_! Plus vous l'améliorerez, plus vous taperez fort\\_!",

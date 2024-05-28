@@ -1,0 +1,150 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202553
+  },
+  "m_Name": "1284",
+  "m_id": 1284,
+  "m_displayName": "XELOR - ARME - PIKUXALA - Cadran Pikuxala",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1547201832,
+    "b": -506967628,
+    "c": 1211887592,
+    "d": -608446220,
+    "e": 943872585
+  },
+  "m_i18nDescriptionId": {
+    "a": -1547201832,
+    "b": -506967628,
+    "c": 1211887592,
+    "d": -608446220,
+    "e": -1691176369
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "f16ff7592a6e59b48b9419ce9e6130f8"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1284,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": true,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Hidden"
+      },
+      "element": 6,
+      "specificToWeapon": 945,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CircleAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 3
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DALLE",
+        {
+          "type": 6,
+          "id": 16
+        },
+        "EPHEMERAL"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Cadran Pikuxala",
+    "en": "Pikuxala Dial",
+    "es": "Esfera Pikuxala",
+    "de": "Pikuxala-Zifferblatt",
+    "pt": "Quadrante Pikuxala"
+  },
+  "description": {
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nConstruit des {FloorMechanism:16, plural:other} à {cell:c} de la cible.",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nBuilds {FloorMechanism:16, plural:other} {cell:c} from the target.",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nConstruye {FloorMechanism:16, plural:other} a {cell:c} del objetivo.",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nErrichtet {FloorMechanism:16, plural:other} {cell:c} vom Ziel entfernt.",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nConstrói {FloorMechanism:16, plural:other} a {cell:c} do alvo."
+  }
+}

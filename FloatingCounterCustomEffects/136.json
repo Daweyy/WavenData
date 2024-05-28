@@ -41,12 +41,34 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "vPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 25
+          },
+          "buffs": [
+            40,
+            23,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelectorEvenIfRemoved"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 23,
-            "valueInPvP": 10
+            "value": 23
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -68,10 +90,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "bl",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 9,
-            "valueInPvP": 6
+            "value": 9
           },
           "factor": {
             "type": "ReferenceScalingFactor",

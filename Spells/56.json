@@ -74,15 +74,26 @@
           "referenceId": "",
           "value": 1
         }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
+        }
       }
     ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 4
         }
       }
     ],
@@ -161,18 +172,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 11
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 14
-            }
+            "valueInPvM": 11,
+            "valueInPvP": 16
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -210,8 +213,8 @@
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "dr",
-          "value": 40
+          "referenceId": "ripPVP",
+          "value": 100
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -252,7 +255,7 @@
       "keywordReferences": [
         {
           "conditions": "<6/>",
-          "keyword": "DRAIN"
+          "keyword": "RESPONSE"
         }
       ]
     }
@@ -265,10 +268,10 @@
     "pt": "Cura Incandescente"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} à un de vos compagnons pour le tour.</if><if pvp>{DRAINvalue:dr,percent,+} au compagnon ciblé pour le tour.</if>",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} to one of your companions for the turn.</if><if pvp>{DRAINvalue:dr,percent,+} to the targeted companion for the turn.</if>",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} a uno de tus compañeros durante el turno.</if><if pvp>{DRAINvalue:dr,percent,+} al compañero objetivo durante el turno.</if>",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} für einen deiner Begleiter für die Runde.</if><if pvp>{DRAINvalue:dr,percent,+} für den anvisierten Begleiter für die Runde.</if>",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} a um de seus companheiros durante o turno.</if><if pvp>{DRAINvalue:dr,percent,+} ao companheiro visado durante o turno.</if>"
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} à un de vos compagnons pour le tour.</if><if pvp>{RIPOSTEvalue:ripPVP,percent,+} au compagnon ciblé jusqu'au prochain tour.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} to one of your companions for the turn.</if><if pvp>{RIPOSTEvalue:ripPVP,percent,+} to the targeted companion until the next turn.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} a uno de tus compañeros durante el turno.</if><if pvp>{RIPOSTEvalue:ripPVP,percent,+} al compañero objetivo hasta el próximo turno.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} für einen deiner Begleiter für die Runde.</if><if pvp>{RIPOSTEvalue:ripPVP,percent,+} für den anvisierten Begleiter bis zur nächsten Runde.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:at,percent,+} a um de seus companheiros durante o turno.</if><if pvp>{RIPOSTEvalue:ripPVP,percent,+} ao companheiro visado até o próximo turno.</if>"
   }
 }

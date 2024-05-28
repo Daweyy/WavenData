@@ -72,9 +72,10 @@
         "type": "GaugeValue",
         "element": 14,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 1,
+          "valueInPvP": 2
         }
       }
     ],
@@ -82,40 +83,54 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 6
+          "valueInPvM": 3,
+          "valueInPvP": 6
         }
       }
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "CasterHeroSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
             },
-            "distance": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
               }
             }
-          },
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
-            }
-          }
-        ]
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
       }
     },
     "spellEffectData": [
@@ -140,7 +155,7 @@
           "baseValue": {
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 40,
+            "valueInPvM": 14,
             "valueInPvP": 42
           },
           "factor": {
@@ -192,7 +207,10 @@
       ],
       "hasEffects": true,
       "keywordReferences": [
-        "PUSH"
+        {
+          "conditions": "<6/>",
+          "keyword": "PUSH"
+        }
       ]
     }
   },
@@ -204,10 +222,10 @@
     "pt": "Aguilhão Turbulento"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à votre héros.\n\\---\n{#PUSH} la cible de {cell:c} si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.",
-    "en": "Does {magicalDamage:dmg} to an opponent adjacent\\_<sprite name=\"cell_cross\"> to your hero.\n\\---\n{#PUSH} the target {cell:c} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.",
-    "es": "Inflige {magicalDamage:dmg} a un adversario adyacente\\_<sprite name=\"cell_cross\"> a tu héroe.\n\\---\n{#PUSH} al objetivo {cell:c} si está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.",
-    "de": "Fügt einem an deinen Helden angrenzenden\\_<sprite name=\"cell_cross\"> Gegner {magicalDamage:dmg} zu.\n\\---\n{#PUSH,plural:few} das Ziel {cell:c} zurück, wenn es <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg} a um adversário adjacente\\_<sprite name=\"cell_cross\"> ao seu herói.\n\\---\n{#PUSH} o alvo por {cell:c} se ele estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">."
+    "fr": "Inflige {magicalDamage:dmg}<if pvm>.</if><if pvp> à un adversaire adjacent\\_<sprite name=\"cell_cross\"> à votre héros.</if>\n\\---\n<if pvm>Attire la cible vers votre héros si elle est alignée à lui.</if><if pvp>{#PUSH} la cible de {cell:c} si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if>",
+    "en": "Does {magicalDamage:dmg}<if pvm>.</if><if pvp> to an opponent adjacent\\_<sprite name=\"cell_cross\"> to your hero.</if>\n\\---\n<if pvm>Attracts the target toward your hero if the target is in line with them.</if><if pvp>{#PUSH} the target {cell:c} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.</if>",
+    "es": "Inflige {magicalDamage:dmg}<if pvm>.</if><if pvp> a un adversario adyacente\\_<sprite name=\"cell_cross\"> a tu héroe.</if>\n\\---\n<if pvm>Atrae al objetivo hacia tu héroe si está alineado con él.</if><if pvp>{#PUSH} al objetivo {cell:c} si está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.</if>",
+    "de": "Verursacht {magicalDamage:dmg}<if pvm>.</if><if pvp> bei einem an deinen Helden angrenzenden\\_<sprite name=\"cell_cross\"> Gegner.</if>\n\\---\n<if pvm>Zieht das Ziel zu deinem Helden heran, wenn es sich in derselben Reihe befindet.</if><if pvp>{#PUSH} um {cell:c}, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}<if pvm>.</if><if pvp> a um adversário adjacente\\_<sprite name=\"cell_cross\"> ao seu herói.</if>\n\\---\n<if pvm>Atrai o alvo para o seu herói se eles estiverem alinhados.</if><if pvp>{#PUSH} o alvo por {cell:c} se ele estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">.</if>"
   }
 }

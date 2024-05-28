@@ -102,39 +102,31 @@
           "type": "CombinedTargetSelector",
           "selectors": [
             {
-              "type": "SquareAreaOfEffectSelector",
-              "originSelector": {
-                "type": "FilteredCoordSelector",
-                "filters": [
-                  {
-                    "type": "AroundTargetFilter",
-                    "targetsToCompare": {
-                      "type": "CasterHeroSelector"
-                    },
-                    "distance": {
-                      "type": "Between",
-                      "minIncluded": {
-                        "type": "ConstIntegerValue",
-                        "referenceId": null,
-                        "value": 1
-                      },
-                      "maxIncluded": {
-                        "type": "ConstIntegerValue",
-                        "referenceId": null,
-                        "value": 3
-                      }
-                    }
+              "type": "FilteredCoordSelector",
+              "filters": [
+                {
+                  "type": "AroundTargetFilter",
+                  "targetsToCompare": {
+                    "type": "CasterHeroSelector"
                   },
-                  {
-                    "type": "CellValidForMechanismFilter"
+                  "distance": {
+                    "type": "Between",
+                    "minIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 1
+                    },
+                    "maxIncluded": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 3
+                    }
                   }
-                ]
-              },
-              "size": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
-              }
+                },
+                {
+                  "type": "CellValidForMechanismFilter"
+                }
+              ]
             },
             {
               "type": "FilteredEntitySelector",
@@ -257,7 +249,10 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "EXPLOSION",
+        {
+          "conditions": "<7/>",
+          "keyword": "EXPLOSION"
+        },
         {
           "conditions": "<6/>",
           "type": 22,

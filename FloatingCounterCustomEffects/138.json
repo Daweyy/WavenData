@@ -40,13 +40,17 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "cPVP",
+          "value": 2
+        },
+        {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "v",
+          "referenceId": "vPVP",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": null,
-            "valueInPvM": 19,
-            "valueInPvP": 14
+            "value": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -62,6 +66,34 @@
             "type": "EffectHolderSelectorEvenIfRemoved"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 19
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 25
+          },
+          "buffs": [
+            40,
+            24,
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "EffectHolderSelectorEvenIfRemoved"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cPVM",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],

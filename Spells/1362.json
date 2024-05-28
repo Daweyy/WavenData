@@ -1,0 +1,139 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202553
+  },
+  "m_Name": "1362",
+  "m_id": 1362,
+  "m_displayName": "SEASON - CRAQUELEUR - Retraite",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1211601917,
+    "b": 716934724,
+    "c": -1841376872,
+    "d": 1180743200,
+    "e": -758786695
+  },
+  "m_i18nDescriptionId": {
+    "a": -1211601917,
+    "b": 716934724,
+    "c": -1841376872,
+    "d": 1180743200,
+    "e": -1750620876
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "5ac43c514dcbf8644a31a87d9e6261a6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1362,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "EntityTypeFilter",
+            "condition": 2,
+            "entityTypes": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "749e73ef6f7f78842b54f35277a70626",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Retraite",
+    "en": "Retreat",
+    "es": "Retirada",
+    "de": "Rückzug",
+    "pt": "Retirada"
+  },
+  "description": {
+    "fr": "Retire le {%FAMILY_CRAQUELEUR_NAME} ciblé du terrain.",
+    "en": "Removes the targeted {%FAMILY_CRAQUELEUR_NAME} from the field.",
+    "es": "Retira el {%FAMILY_CRAQUELEUR_NAME} objetivo del terreno.",
+    "de": "Nimmt den anvisierten {%FAMILY_CRAQUELEUR_NAME} vom Spielfeld.",
+    "pt": "Retira o {%FAMILY_CRAQUELEUR_NAME} alvo do campo de batalha."
+  }
+}

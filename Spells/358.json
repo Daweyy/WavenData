@@ -114,18 +114,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 27
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 24
-            }
+            "valueInPvM": 27,
+            "valueInPvP": 23
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -155,43 +147,16 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "buff",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 15
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51,
-            24
-          ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 118841,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": null,
-                "value": 30
-              }
-            }
-          ],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "type": 20,
+          "id": 5
+        },
         {
           "conditions": "<7/>",
           "type": 20,
@@ -208,10 +173,10 @@
     "pt": "Cutucando a Ferida"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}\n\\---\n<if pvm>Confère {PropertyEffect:18} à votre héros pour le tour si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{magicalDamage:buff,+} si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if>",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>Confers {PropertyEffect:18} on your hero for the turn if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{magicalDamage:buff,+} if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.</if>",
-    "es": "Inflige {magicalDamage:dmg}\n\\---\n<if pvm>Confiere {PropertyEffect:18} a tu héroe durante el turno si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{magicalDamage:buff,+} si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.</if>",
-    "de": "Verursacht {magicalDamage:dmg}\n\\---\n<if pvm>Verleiht deinem Helden {PropertyEffect:18} für die Runde, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.</if><if pvp>{magicalDamage:buff,+}, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.</if>",
-    "pt": "Inflige {magicalDamage:dmg}\n\\---\n<if pvm>Concede {PropertyEffect:18} ao seu herói durante o turno se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{magicalDamage:buff,+} se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">.</if>"
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Confère {PropertyEffect:18} à votre héros pour le tour si la cible est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{PropertyEffect:5} la cible si elle est <b>ÉVENTÉE</b>\\_<sprite name=\"ventilated\">.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>Confers {PropertyEffect:18} on your hero for the turn if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{PropertyEffect:5} the target if the target is <b>VENTILATED</b>\\_<sprite name=\"ventilated\">.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Confiere {PropertyEffect:18} a tu héroe durante el turno si el objetivo está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{PropertyEffect:5} al objetivo si está <b>AIREADO</b>\\_<sprite name=\"ventilated\">.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>Verleiht deinem Helden {PropertyEffect:18} für die Runde, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.</if><if pvp>{PropertyEffect:5}, wenn das Ziel <b>WINDIG</b>\\_<sprite name=\"ventilated\"> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Concede {PropertyEffect:18} ao seu herói durante o turno se o alvo estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">.</if><if pvp>{PropertyEffect:5} o alvo se ele estiver <b>AERADO</b>\\_<sprite name=\"ventilated\">.</if>"
   }
 }

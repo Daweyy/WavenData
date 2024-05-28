@@ -114,18 +114,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 18
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 21
-            }
+            "value": 18
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -142,37 +133,14 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "exPVP",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 11
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            25,
-            51,
-            88
-          ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 59060,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": null,
-                "value": 25
-              }
-            }
-          ],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "type": "ConstIntegerValue",
+          "referenceId": "dmgPVP",
+          "value": 21
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "bonusPVP",
+          "value": 15
         },
         {
           "type": "BuffedScalingDynamicValue",
@@ -216,7 +184,10 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "EXPLOSION"
+        {
+          "conditions": "<7/>",
+          "keyword": "EXPLOSION"
+        }
       ]
     }
   },
@@ -228,10 +199,10 @@
     "pt": "Inspiração"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Déclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"/> de la cible\\v si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if><if pvp>Déclenche {explosion:exPVP} autour\\_<sprite name=\"cell_around\"/> de votre héros\\v si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if>",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>Triggers {explosion:ex} around\\_<sprite name=\"cell_around\"/> the target \\vif the target is <b>OILED</b>\\_<sprite name=\"oiled\">.</if><if pvp>Triggers {explosion:exPVP} around\\_<sprite name=\"cell_around\"/> your hero \\vif the target is <b>OILED</b>\\_<sprite name=\"oiled\">.</if>",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Activa {explosion:ex} alrededor\\_<sprite name=\"cell_around\"/> del objetivo\\v si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.</if><if pvp>Activa {explosion:exPVP} alrededor\\_<sprite name=\"cell_around\"/> de tu héroe\\v si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.</if>",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>Löst {explosion:ex} im Umkreis\\_<sprite name=\"cell_around\"/> des Ziels aus,\\vwenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.</if><if pvp>Löst {explosion:exPVP} im Umkreis\\_<sprite name=\"cell_around\"/> deines Helden aus,\\vwenn das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.</if>",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Aciona {explosion:ex} em\\_volta\\_<sprite name=\"cell_around\"/> do alvo\\v se ele estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">.</if><if pvp>Aciona {explosion:exPVP} em\\_volta\\_<sprite name=\"cell_around\"/> do seu herói\\v se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">.</if>"
+    "fr": "<if pvm>Inflige {magicalDamage:dmg}.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>Déclenche {explosion:ex} autour\\_<sprite name=\"cell_around\"/> de la cible si elle est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if><if pvp>{magicalDamage:bonusPVP,+} si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if>",
+    "en": "<if pvm>Does {magicalDamage:dmg}.</if><if pvp>Does {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>Triggers {explosion:ex} around\\_<sprite name=\"cell_around\"/> the target if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.</if><if pvp>{magicalDamage:bonusPVP,+} if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.</if>",
+    "es": "<if pvm>Inflige {magicalDamage:dmg}.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>Activa {explosion:ex} alrededor\\_<sprite name=\"cell_around\"/> del objetivo si está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.</if><if pvp>{magicalDamage:bonusPVP,+} si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.</if>",
+    "de": "<if pvm>Verursacht {magicalDamage:dmg}.</if><if pvp>Verursacht {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>Löst {explosion:ex} im Umkreis\\_<sprite name=\"cell_around\"/> des Ziels aus, wenn es <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.</if><if pvp>{magicalDamage:bonusPVP,+}, wenn das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.</if>",
+    "pt": "<if pvm>Inflige {magicalDamage:dmg}.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n<if pvm>Aciona {explosion:ex} em\\_volta\\_<sprite name=\"cell_around\"/> do alvo se ele estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">.</if><if pvp>{magicalDamage:bonusPVP,+} se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">.</if>"
   }
 }

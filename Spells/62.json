@@ -72,9 +72,20 @@
         "type": "GaugeValue",
         "element": 14,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 2
+          "valueInPvM": 2,
+          "valueInPvP": 1
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -147,9 +158,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 27
+            "valueInPvM": 27,
+            "valueInPvP": 26
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -187,7 +199,7 @@
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
             "valueInPvM": 11,
-            "valueInPvP": 12
+            "valueInPvP": 10
           },
           "factor": {
             "type": "ReferenceScalingFactor",

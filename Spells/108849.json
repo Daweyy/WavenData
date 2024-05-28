@@ -125,7 +125,7 @@
           "baseValue": {
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 28,
+            "valueInPvM": 22,
             "valueInPvP": 22
           },
           "factor": {
@@ -156,14 +156,25 @@
           "type": "ConstIntegerValue",
           "referenceId": "d1",
           "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c1",
+          "value": 2
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
+          "conditions": "<6/>",
           "type": 20,
           "id": 26
+        },
+        {
+          "conditions": "<7/>",
+          "type": 20,
+          "id": 5
         }
       ]
     }
@@ -176,10 +187,10 @@
     "pt": "Aguilhão Trêmulo"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:26} la cible si elle est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{PropertyEffect:26} the target if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:26} al objetivo si está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
-    "de": "Verursacht {magicalDamage:dmg}.Wirkt\n\\---\n{PropertyEffect:26} beim Ziel, wenn es <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:26} o alvo se ele estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} la cible pour le tour si elle est à {cell:c1} ou moins.</if><if pvp>{PropertyEffect:26} la cible si elle est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} the target for the turn if the target is {cell:c1} or less away.</if><if pvp>{PropertyEffect:26} the target if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} al objetivo durante el turno si está a {cell:c1} o menos.</if><if pvp>{PropertyEffect:26} al objetivo si está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} das Ziel, wenn es {cell:c1} oder weniger entfernt ist.</if><if pvp>Wendet {PropertyEffect:26} auf das Ziel an, wenn es <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} o alvo durante o turno se ele estiver a {cell:c1} ou menos.</if><if pvp>{PropertyEffect:26} o alvo se ele estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if>"
   }
 }

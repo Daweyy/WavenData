@@ -46,10 +46,9 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "PvmOrPvpConstIntegerValue",
+          "type": "ConstIntegerValue",
           "referenceId": "pow",
-          "valueInPvM": -25,
-          "valueInPvP": -24
+          "value": -25
         },
         {
           "type": "ConstIntegerValue",
@@ -58,7 +57,7 @@
         }
       ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
+      "hasEffects": true,
       "keywordReferences": []
     },
     "families": [
@@ -80,7 +79,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 10,
-      "valueInPvP": 14
+      "valueInPvP": 11
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -221,10 +220,10 @@
     "pt": "Skhul"
   },
   "description": {
-    "fr": "{%attack} {ATvalue:pow,percent} à la cible pour le tour.",
-    "en": "{%attack} {ATvalue:pow,percent} to the target for the turn.",
-    "es": "{%attack} {ATvalue:pow,percent} al objetivo durante el turno.",
-    "de": "{%attack} {ATvalue:pow,percent} für das Ziel für die Runde.",
-    "pt": "{%attack} {ATvalue:pow,percent} ao alvo durante o turno."
+    "fr": "<if pvm>{%attack} {ATvalue:pow,percent} à la cible pour le tour.</if><if pvp>{%FightTurnEnded} Inflige son {%AT} à l'adversaire ayant le plus de {%PV}.</if>",
+    "en": "<if pvm>{%attack} {ATvalue:pow,percent} to the target for the turn.</if><if pvp>{%FightTurnEnded} Inflicts {%AT} on the opponent with the most {%PV}.</if>",
+    "es": "<if pvm>{%attack} {ATvalue:pow,percent} al objetivo durante el turno.</if><if pvp>{%FightTurnEnded} Inflige su {%AT} al adversario que tenga más {%PV}.</if>",
+    "de": "<if pvm>{%attack} {ATvalue:pow,percent} für das Ziel für die Runde.</if><if pvp>{%FightTurnEnded} Verursacht seinen {%AT} beim Gegner mit den meisten {%PV} als Schaden.</if>",
+    "pt": "<if pvm>{%attack} {ATvalue:pow,percent} ao alvo durante o turno.</if><if pvp>{%FightTurnEnded} Inflige seu {%AT} ao adversário que tiver mais {%PV}.</if>"
   }
 }

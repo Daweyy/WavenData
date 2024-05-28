@@ -114,18 +114,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 14
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 12
-            }
+            "valueInPvM": 14,
+            "valueInPvP": 12
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -160,9 +152,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg2",
           "baseValue": {
-            "type": "ConstIntegerValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "value": 4
+            "valueInPvM": 5,
+            "valueInPvP": 5
           },
           "factor": {
             "type": "ReferenceScalingFactor",

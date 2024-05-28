@@ -115,18 +115,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 26
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 25
-            }
+            "valueInPvM": 26,
+            "valueInPvP": 28
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -161,18 +153,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "h",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 37
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 20
-            }
+            "valueInPvM": 37,
+            "valueInPvP": 25
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -194,6 +178,29 @@
               }
             }
           ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "pvPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 10
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            50,
+            22
+          ],
+          "skillBuffs": [],
           "from": {
             "type": "CasterSelector"
           },
@@ -237,7 +244,10 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "HAIL",
+        {
+          "conditions": "<7/>",
+          "keyword": "HAIL"
+        },
         "SUPPORT"
       ]
     }
@@ -250,10 +260,10 @@
     "pt": "Palavra de Granizo"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} à un adversaire <b>OU</b> Soigne un allié de {PVvalue:h}.\n\\---\n{#SUPPORT}\\_: Déclenche {hail:hl}.",
-    "en": "Does {magicalDamage:dmg} to an opponent <b>OR</b> heals an ally {PVvalue:h}.\n\\---\n{#SUPPORT}: Triggers {hail:hl}.",
-    "es": "Inflige {magicalDamage:dmg} a un adversario <b>O</b> Cura a un aliado {PVvalue:h}.\n\\---\n{#SUPPORT}: Activa {hail:hl}.",
-    "de": "Fügt einem Gegner {magicalDamage:dmg} zu <b>ODER</b> heilt einen Verbündeten um {PVvalue:h}.\n\\---\n{#SUPPORT}: Löst {hail:hl} aus.",
-    "pt": "Inflige {magicalDamage:dmg} a um adversário <b>OU</b> Cura {PVvalue:h} de um aliado.\n\\---\n{#SUPPORT}: Aciona {hail:hl}."
+    "fr": "Inflige {magicalDamage:dmg} à un adversaire <b>OU</b> Soigne un allié de {PVvalue:h}.\n\\---\n{#SUPPORT}\\_: <if pvm>Déclenche {hail:hl}.</if><if pvp>Soigne votre héros de {PVvalue:pvPVP}.</if>",
+    "en": "Does {magicalDamage:dmg} to an opponent <b>OR</b> heals an ally {PVvalue:h}.\n\\---\n{#SUPPORT}: <if pvm>Triggers {hail:hl}.</if><if pvp>Heals your hero {PVvalue:pvPVP}.</if>",
+    "es": "Inflige {magicalDamage:dmg} a un adversario <b>O</b> Cura a un aliado {PVvalue:h}.\n\\---\n{#SUPPORT}: <if pvm>Activa {hail:hl}.</if><if pvp>Cura a tu héroe {PVvalue:pvPVP}.</if>",
+    "de": "Fügt einem Gegner {magicalDamage:dmg} zu <b>ODER</b> heilt einen Verbündeten um {PVvalue:h}.\n\\---\n{#SUPPORT}: <if pvm>Löst {hail:hl} aus.</if><if pvp>Heilt deinen Helden um {PVvalue:pvPVP}.</if>",
+    "pt": "Inflige {magicalDamage:dmg} a um adversário <b>OU</b> Cura {PVvalue:h} de um aliado.\n\\---\n{#SUPPORT}: <if pvm>Aciona {hail:hl}.</if><if pvp>Cura {PVvalue:pvPVP} do seu herói.</if>"
   }
 }

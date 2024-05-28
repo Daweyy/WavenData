@@ -1,0 +1,134 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442440
+  },
+  "m_Name": "707",
+  "m_id": 707,
+  "m_displayName": "SEASON - CRAQUELEUR - ADVERSAIRE - BOSS - John Tatane",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1806848975,
+    "b": -755748492,
+    "c": -897274391,
+    "d": -2142000289,
+    "e": 178073743
+  },
+  "m_i18nChampionNameId": {
+    "a": 1806848975,
+    "b": -755748492,
+    "c": -897274391,
+    "d": -2142000289,
+    "e": 993668981
+  },
+  "m_i18nDescriptionId": {
+    "a": 1806848975,
+    "b": -755748492,
+    "c": -897274391,
+    "d": -2142000289,
+    "e": -251743958
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 707,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7522,
+      "skinIds": [
+        7522
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "CustomRule.975.p5"
+      ],
+      "hasEffects": false,
+      "keywordReferences": []
+    },
+    "families": [
+      75
+    ],
+    "baseProperties": [
+      223
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 600
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 300
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "TeamFilter",
+          "isIdentical": false,
+          "reference": {
+            "type": "EffectHolderSelector"
+          }
+        },
+        {
+          "type": "NotEntityFilter",
+          "filter": {
+            "type": "PropertyFilter",
+            "property": {
+              "type": "SpecificPropertyIdResolvable",
+              "propertyId": 90
+            }
+          }
+        }
+      ]
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "grade": 4,
+    "growInto": null
+  },
+  "name": {
+    "fr": "John Tatane",
+    "en": "John Cloutem",
+    "es": "John Tatano",
+    "de": "Johnny Tarzan",
+    "pt": "John Golpea"
+  },
+  "championName": {
+    "fr": "John Tatane",
+    "en": "John Cloutem",
+    "es": "John Tatano",
+    "de": "Johnny Tarzan",
+    "pt": "John Golpea"
+  },
+  "description": {
+    "fr": "{%death}\\_{value:CustomRule.975.p5,+} points.",
+    "en": "{%death}\\_{value:CustomRule.975.p5,+} points.",
+    "es": "{%death}\\_{value:CustomRule.975.p5,+} puntos.",
+    "de": "{%death}\\_{value:CustomRule.975.p5,+}\\_Punkte.",
+    "pt": "{%death}\\_{value:CustomRule.975.p5,+} pontos."
+  }
+}

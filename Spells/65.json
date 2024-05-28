@@ -140,18 +140,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 32
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 27
-            }
+            "valueInPvM": 32,
+            "valueInPvP": 33
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -181,39 +173,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "bc",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 13
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51,
-            89,
-            24
-          ],
-          "skillBuffs": [
-            {
-              "type": "SkillBuff",
-              "skillId": 118841,
-              "percentBuff": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 30
-              }
-            }
-          ],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],

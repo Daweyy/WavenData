@@ -73,9 +73,20 @@
         "type": "GaugeValue",
         "element": 12,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 2
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -91,7 +102,7 @@
           "ifTrue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 7
+            "value": 8
           },
           "ifFalse": {
             "type": "SumValue",
@@ -176,26 +187,13 @@
           "value": -1
         },
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "paPVP",
-          "value": -1
-        },
-        {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 38
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 21
-            }
+            "valueInPvM": 38,
+            "valueInPvP": 41
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -225,6 +223,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "percentSkill",
           "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "paPVP",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -245,10 +248,10 @@
     "pt": "Onda de Choque"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: <if pvm>{PAvalue:pa} au coût de ce sort</if><if pvp>{PAvalue:paPVP} au coût du prochain sort que vous jouez</if>.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: <if pvm>{PAvalue:pa} to the cost of this spell</if><if pvp>{PAvalue:paPVP} to the cost of the next spell you play</if>.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: <if pvm>{PAvalue:pa} al coste de este hechizo</if><if pvp>{PAvalue:paPVP} al coste del próximo hechizo que lances</if>.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: <if pvm>{PAvalue:pa} auf die Kosten dieses Zaubers</if><if pvp>{PAvalue:paPVP} auf die Kosten des nächsten Zaubers, den du ausspielst</if>.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: <if pvm>{PAvalue:pa} ao custo deste feitiço</if><if pvp>{PAvalue:paPVP} ao custo do próximo feitiço que você lançar</if>."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}\\_: <if pvm>{PAvalue:pa} au coût de ce sort.</if><if pvp>{PA_RESvalue:paPVP,+}.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: <if pvm>{PAvalue:pa} to the cost of this spell.</if><if pvp>{PA_RESvalue:paPVP,+}.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: <if pvm>{PAvalue:pa} al coste de este hechizo.</if><if pvp>{PA_RESvalue:paPVP,+}.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: <if pvm>{PAvalue:pa} auf die Kosten dieses Zaubers.</if><if pvp>{PA_RESvalue:paPVP,+}.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{NamedEffect:455}: <if pvm>{PAvalue:pa} ao custo deste feitiço.</if><if pvp>{PA_RESvalue:paPVP,+}.</if>"
   }
 }

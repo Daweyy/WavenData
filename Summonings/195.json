@@ -1,0 +1,139 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 354010639100442440
+  },
+  "m_Name": "195",
+  "m_id": 195,
+  "m_displayName": "SEASON - CRAQUELEUR - ADVERSAIRE - Fantassins d'Argent",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -376281259,
+    "b": -1839744572,
+    "c": 1203560057,
+    "d": 790618216,
+    "e": 693144145
+  },
+  "m_i18nChampionNameId": {
+    "a": -376281259,
+    "b": -1839744572,
+    "c": 1203560057,
+    "d": 790618216,
+    "e": 147870726
+  },
+  "m_i18nDescriptionId": {
+    "a": -376281259,
+    "b": -1839744572,
+    "c": 1203560057,
+    "d": 790618216,
+    "e": 507619046
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 195,
+    "areaDefinition": {
+      "type": "PointAreaDefinition"
+    },
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7719,
+      "skinIds": [
+        7719
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "CustomRule.975.p3"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 8
+        }
+      ]
+    },
+    "families": [
+      52
+    ],
+    "baseProperties": [
+      223
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 200
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "FilteredCharacterSelector",
+      "filters": [
+        {
+          "type": "TeamFilter",
+          "isIdentical": false,
+          "reference": {
+            "type": "EffectHolderSelector"
+          }
+        },
+        {
+          "type": "NotEntityFilter",
+          "filter": {
+            "type": "PropertyFilter",
+            "property": {
+              "type": "SpecificPropertyIdResolvable",
+              "propertyId": 90
+            }
+          }
+        }
+      ]
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "grade": 1,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, other[Fantassins d'Argent] one[Fantassins d'Argent]}",
+    "en": "{0, plural, other[Silver Foot Soldiers] one[Silver Foot Soldiers]}",
+    "es": "{0, plural, other[Infantes de Plata] one[Infantes de Plata]}",
+    "de": "{0, plural, other[Silber-Infanteristen], one[Silber-Infanteristen]}",
+    "pt": "{0, plural, other[Infantarias de Prata] one[Infantarias de Prata]}"
+  },
+  "championName": {
+    "fr": "{0, plural, other[Fantassins d'Argent] one[Fantassins d'Argent]}",
+    "en": "{0, plural, other[Silver Foot Soldiers] one[Silver Foot Soldiers]}",
+    "es": "{0, plural, other[Infantes de Plata] one[Infantes de Plata]}",
+    "de": "{0, plural, other[Silber-Infanteristen], one[Silber-Infanteristen]}",
+    "pt": "{0, plural, other[Infantarias de Prata] one[Infantarias de Prata]}"
+  },
+  "description": {
+    "fr": "{%appearanceAndFightTurnStarted} Gagne {PropertyEffect:8}.\n\\---\n{%death}\\_{value:CustomRule.975.p3,+} points.",
+    "en": "{%appearanceAndFightTurnStarted} Gains {PropertyEffect:8}.\n\\---\n{%death}\\_{value:CustomRule.975.p3,+} points.",
+    "es": "{%appearanceAndFightTurnStarted} Gana {PropertyEffect:8}.\n\\---\n{%death}\\_{value:CustomRule.975.p3,+} puntos.",
+    "de": "{%appearanceAndFightTurnStarted} Erhält {PropertyEffect:8}.\n\\---\n{%death}\\_{value:CustomRule.975.p3,+} Punkte.",
+    "pt": "{%appearanceAndFightTurnStarted} Ganha {PropertyEffect:8}.\n\\---\n{%death}\\_{value:CustomRule.975.p3,+} pontos."
+  }
+}

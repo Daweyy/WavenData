@@ -78,9 +78,10 @@
         "type": "GaugeValue",
         "element": 57,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
         }
       }
     ],
@@ -88,134 +89,275 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 2
         }
       }
     ],
     "castCondition": {
       "type": "ConditionalCastCondition",
       "condition": {
-        "type": "NumberOfEntityCondition",
-        "selector": {
-          "type": "FilteredEntitySelector",
-          "from": {
-            "type": "AllBoardPresencesSelector"
+        "type": "PvpFightCondition"
+      },
+      "ifTrue": {
+        "type": "ConditionalCastCondition",
+        "condition": {
+          "type": "NumberOfEntityCondition",
+          "selector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllBoardPresencesSelector"
+            },
+            "filters": [
+              {
+                "type": "OrEntityFilter",
+                "filters": [
+                  {
+                    "type": "CombinedEntityFilter",
+                    "filters": [
+                      {
+                        "type": "TeamFilter",
+                        "isIdentical": true,
+                        "reference": {
+                          "type": "CasterSelector"
+                        }
+                      },
+                      {
+                        "type": "TeamFilter",
+                        "isIdentical": true,
+                        "reference": {
+                          "type": "CasterSelector"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CombinedEntityFilter",
+                    "filters": [
+                      {
+                        "type": "EntityTypeFilter",
+                        "condition": 1,
+                        "entityTypes": [
+                          6
+                        ]
+                      },
+                      {
+                        "type": "FamilyFilter",
+                        "condition": 1,
+                        "families": [
+                          6
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
+          "value": {
+            "type": "GreaterThan",
+            "dynamicValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          }
+        },
+        "ifTrue": {
+          "type": "SuccessCastCondition"
+        },
+        "ifFalse": {
+          "type": "FailureCastCondition"
+        }
+      },
+      "ifFalse": {
+        "type": "ConditionalCastCondition",
+        "condition": {
+          "type": "NumberOfEntityCondition",
+          "selector": {
+            "type": "FilteredEntitySelector",
+            "from": {
+              "type": "AllBoardPresencesSelector"
+            },
+            "filters": [
+              {
+                "type": "EntityTypeFilter",
+                "condition": 2,
+                "entityTypes": [
+                  7
+                ]
+              },
+              {
+                "type": "TeamFilter",
+                "isIdentical": true,
+                "reference": {
+                  "type": "CasterSelector"
+                }
+              }
+            ]
+          },
+          "value": {
+            "type": "GreaterThan",
+            "dynamicValue": {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          }
+        },
+        "ifTrue": {
+          "type": "SuccessCastCondition"
+        },
+        "ifFalse": {
+          "type": "FailureCastCondition"
+        }
+      }
+    },
+    "castTarget": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCoordSelector",
           "filters": [
             {
-              "type": "EntityTypeFilter",
-              "condition": 2,
-              "entityTypes": [
-                7
-              ]
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FilteredEntitySelector",
+                "from": {
+                  "type": "AllBoardPresencesSelector"
+                },
+                "filters": [
+                  {
+                    "type": "OrEntityFilter",
+                    "filters": [
+                      {
+                        "type": "CombinedEntityFilter",
+                        "filters": [
+                          {
+                            "type": "EntityTypeFilter",
+                            "condition": 2,
+                            "entityTypes": [
+                              7
+                            ]
+                          },
+                          {
+                            "type": "TeamFilter",
+                            "isIdentical": true,
+                            "reference": {
+                              "type": "CasterSelector"
+                            }
+                          },
+                          {
+                            "type": "NotEntityFilter",
+                            "filter": {
+                              "type": "CasterHeroFilter"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "CombinedEntityFilter",
+                        "filters": [
+                          {
+                            "type": "EntityTypeFilter",
+                            "condition": 1,
+                            "entityTypes": [
+                              6
+                            ]
+                          },
+                          {
+                            "type": "FamilyFilter",
+                            "condition": 1,
+                            "families": [
+                              6
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
             },
             {
-              "type": "TeamFilter",
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "OwnerFilter",
               "isIdentical": true,
               "reference": {
                 "type": "CasterSelector"
               }
-            },
+            }
+          ]
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
             {
-              "type": "NotEntityFilter",
-              "filter": {
-                "type": "CombinedEntityFilter",
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FilteredEntitySelector",
+                "from": {
+                  "type": "AllBoardPresencesSelector"
+                },
                 "filters": [
                   {
-                    "type": "OwnerFilter",
+                    "type": "EntityTypeFilter",
+                    "condition": 2,
+                    "entityTypes": [
+                      7
+                    ]
+                  },
+                  {
+                    "type": "TeamFilter",
                     "isIdentical": true,
                     "reference": {
                       "type": "CasterSelector"
                     }
                   },
                   {
-                    "type": "EntityTypeFilter",
-                    "condition": 1,
-                    "entityTypes": [
-                      1
-                    ]
+                    "type": "NotAPreviousCastTargetFilter",
+                    "castTargetIndex": 0
                   }
                 ]
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
               }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
             }
           ]
-        },
-        "value": {
-          "type": "GreaterThan",
-          "dynamicValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 0
-          }
         }
-      },
-      "ifTrue": {
-        "type": "SuccessCastCondition"
-      },
-      "ifFalse": {
-        "type": "FailureCastCondition"
-      }
-    },
-    "castTarget": {
-      "type": "TwoCastTargetDefinition",
-      "selector1": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "OwnerFilter",
-            "isIdentical": true,
-            "reference": {
-              "type": "CasterSelector"
-            }
-          }
-        ]
-      },
-      "selector2": {
-        "type": "FilteredCoordSelector",
-        "filters": [
-          {
-            "type": "AroundTargetFilter",
-            "targetsToCompare": {
-              "type": "FilteredEntitySelector",
-              "from": {
-                "type": "AllBoardPresencesSelector"
-              },
-              "filters": [
-                {
-                  "type": "EntityTypeFilter",
-                  "condition": 2,
-                  "entityTypes": [
-                    7
-                  ]
-                },
-                {
-                  "type": "TeamFilter",
-                  "isIdentical": true,
-                  "reference": {
-                    "type": "CasterSelector"
-                  }
-                },
-                {
-                  "type": "NotAPreviousCastTargetFilter",
-                  "castTargetIndex": 0
-                }
-              ]
-            },
-            "distance": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 1
-              }
-            }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
-          }
-        ]
       }
     },
     "spellEffectData": [],
@@ -235,10 +377,10 @@
     "pt": "Finta"
   },
   "description": {
-    "fr": "Téléporte l'un de vos personnages sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié ou {%KEYWORD.TRAP.NAME} allié.",
-    "en": "Teleports one of your characters to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally or allied {%KEYWORD.TRAP.NAME}.",
-    "es": "Teletransporta a uno de tus personajes a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado o {%KEYWORD.TRAP.NAME} aliada.",
-    "de": "Teleportiert einen deiner Charaktere auf ein an einen Verbündeten oder eine verbündete {%KEYWORD.TRAP.NAME} angrenzendes\\_<sprite name=\"cell_cross\"> Feld.",
-    "pt": "Teletransporta um de seus personagens para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado ou {%KEYWORD.TRAP.NAME} aliada."
+    "fr": "<if pvm>Téléporte l'un de vos personnages sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié ou {%KEYWORD.TRAP.NAME} allié.</if><if pvp>Téléporte votre héros sur une case adjacente\\_<sprite name=\"cell_cross\"> à un allié ou un {%KEYWORD.TRAP.NAME}.</if>",
+    "en": "<if pvm>Teleports one of your characters to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally or allied {%KEYWORD.TRAP.NAME}.</if><if pvp>Teleports your hero to a cell adjacent\\_<sprite name=\"cell_cross\"> to an ally or allied {%KEYWORD.TRAP.NAME}.</if>",
+    "es": "<if pvm>Teletransporta a uno de tus personajes a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado o {%KEYWORD.TRAP.NAME} aliada.</if><if pvp>Teletransporta a tu héroe a una casilla adyacente\\_<sprite name=\"cell_cross\"> a un aliado o a una {%KEYWORD.TRAP.NAME}.</if>",
+    "de": "<if pvm>Teleportiert einen deiner Charaktere auf ein an einen Verbündeten oder eine verbündete {%KEYWORD.TRAP.NAME} angrenzendes\\_<sprite name=\"cell_cross\"> Feld.</if><if pvp>Teleportiert deinen Helden auf ein an einen Verbündeten oder eine {%KEYWORD.TRAP.NAME} angrenzendes\\_<sprite name=\"cell_cross\"> Feld.</if>",
+    "pt": "<if pvm>Teletransporta um de seus personagens para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado ou {%KEYWORD.TRAP.NAME} aliada.</if><if pvp>Teletransporta seu herói para uma célula adjacente\\_<sprite name=\"cell_cross\"> a um aliado ou {%KEYWORD.TRAP.NAME}.</if>"
   }
 }

@@ -86,23 +86,63 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "NotEntityFilter",
-            "filter": {
-              "type": "CasterHeroFilter"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CasterHeroFilter"
+              }
+            },
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "cPVP",
+                  "value": 3
+                }
+              }
             }
-          }
-        ]
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "NotEntityFilter",
+              "filter": {
+                "type": "CasterHeroFilter"
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cPVP",
+          "value": 3
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -118,10 +158,10 @@
     "pt": "Agora Não Me Vê Mais"
   },
   "description": {
-    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\nÉchange la place de votre héros avec celle d'un autre personnage.",
-    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\nSwitches your hero's position with that of another character.",
-    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\nIntercambia la posición de tu héroe con la de otro personaje.",
-    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\nTauscht die Position deines Helden mit der eines anderen Charakters.",
-    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\nTroca seu herói de lugar com outro personagem."
+    "fr": "<rem>{#EPHEMERAL}</rem>\n\\---\n<if pvm>Échange la place de votre héros avec celle d'un autre personnage.</if><if pvp>Échange la place de votre héros avec celle d'un autre personnage situé jusqu'à {cell:cPVP} de votre héros.</if>",
+    "en": "<rem>{#EPHEMERAL}</rem>\n\\---\n<if pvm>Switches your hero's position with that of another character.</if><if pvp>Switches your hero's position with that of another character located up to {cell:cPVP} from your hero.</if>",
+    "es": "<rem>{#EPHEMERAL}</rem>\n\\---\n<if pvm>Intercambia la posición de tu héroe con la de otro personaje.</if><if pvp>Intercambia la posición de tu héroe con la de otro personaje situado hasta a {cell:cPVP} de tu héroe.</if>",
+    "de": "<rem>{#EPHEMERAL}</rem>\n\\---\n<if pvm>Tauscht die Position deines Helden mit der eines anderen Charakters.</if><if pvp>Tauscht die Position deines Helden mit der eines anderen Charakters, der bis zu {cell:cPVP} von deinem Helden entfernt steht.</if>",
+    "pt": "<rem>{#EPHEMERAL}</rem>\n\\---\n<if pvm>Troca seu herói de lugar com outro personagem.</if><if pvp>Troca seu herói de lugar com outro personagem situado a {cell:cPVP} dele.</if>"
   }
 }

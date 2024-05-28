@@ -91,27 +91,26 @@
       "selectorIfTrue": {
         "type": "OneCastTargetDefinition",
         "selector": {
-          "type": "SquareAreaOfEffectSelector",
-          "originSelector": {
-            "type": "FilteredEntitySelector",
-            "from": {
-              "type": "AllFloorMechanismsSelector"
-            },
-            "filters": [
-              {
-                "type": "OwnerFilter",
-                "isIdentical": true,
-                "reference": {
-                  "type": "CasterSelector"
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 3
                 }
               }
-            ]
-          },
-          "size": {
-            "type": "ConstIntegerValue",
-            "referenceId": "",
-            "value": 1
-          }
+            },
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
         }
       },
       "selectorIfFalse": {
@@ -138,30 +137,36 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmg",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 15
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "limit",
+          "value": 1
         }
       ],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "FloorMechanism.327.dmg"
+      ],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "type": 19,
+          "id": 2
+        },
+        {
+          "conditions": "<6/>",
+          "keyword": "TRAP"
+        },
+        {
+          "conditions": "<6/>",
+          "type": 6,
+          "id": 327
+        }
+      ]
     }
   },
   "name": {
@@ -172,10 +177,10 @@
     "pt": "Tocaia"
   },
   "description": {
-    "fr": "Échange la position de votre héros avec celle d'un de vos {%KEYWORD.TRAP.NAME,plural:other}.<if pvp>\n\\---\nVotre héros inflige {magicalDamage:dmg} autour <sprite name=\"cell_around\"> de sa case d'arrivée.</if>",
-    "en": "Switches your hero's position with that of one of your {%KEYWORD.TRAP.NAME,plural:other}.<if pvp>\n\\---\nYour hero does {magicalDamage:dmg} around <sprite name=\"cell_around\"> their destination cell.</if>",
-    "es": "Intercambia la posición de tu héroe con la de una de tus {%KEYWORD.TRAP.NAME,plural:other}.<if pvp>\n\\---\nTu héroe inflige {magicalDamage:dmg} alrededor <sprite name=\"cell_around\"> de su casilla de llegada.</if>",
-    "de": "Tauscht die Position deines Helden mit der einer deiner {%KEYWORD.TRAP.NAME,plural:other}.<if pvp>\n\\---\nDein Held verursacht {magicalDamage:dmg} im Umkreis\\_<sprite name=\"cell_around\"> seines Ankunftsfelds.</if>",
-    "pt": "Troca seu herói de posição com uma de suas {%KEYWORD.TRAP.NAME,plural:other}.<if pvp>\n\\---\nSeu herói inflige {magicalDamage:dmg} em\\_volta\\_<sprite name=\"cell_around\"> de sua célula de chegada.</if>"
+    "fr": "<if pvm>Échange la position de votre héros avec celle d'un de vos {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Construit un {FloorMechanism:327} ({value:FloorMechanism.327.dmg}) jusqu'à {cell:c} de votre héros.\n\\---\nCe {%spellcount} revient dans votre main.\\v<rem>Limité à {value:limit} fois par tour.</rem></if>",
+    "en": "<if pvm>Switches your hero's position with that of one of your {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Builds one {FloorMechanism:327} ({value:FloorMechanism.327.dmg}) up to {cell:c} from your hero.\n\\---\nThis {%spellcount} returns to your hand.\\v<rem>Limit: {value:limit} {limit, plural, one[time] other[times]} per turn.</rem></if>",
+    "es": "<if pvm>Intercambia la posición de tu héroe con la de una de tus {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Construye un {FloorMechanism:327} ({value:FloorMechanism.327.dmg}) hasta a {cell:c} de tu héroe.\n\\---\nEste {%spellcount} vuelve a tu mano.\\v<rem>Limitado a {value:limit} {limit, plural, one[vez] other[veces]} por turno.</rem></if>",
+    "de": "<if pvm>Tauscht die Position deines Helden mit der einer deiner {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Errichtet eine {FloorMechanism:327} ({value:FloorMechanism.327.dmg}) bis zu {cell:c} von deinem Helden entfernt.\n\\---\nDieser {%spellcount} geht zurück auf deine Hand.\\v<rem>Auf {value:limit}-mal pro Runde begrenzt.</rem></if>",
+    "pt": "<if pvm>Troca seu herói de posição com uma de suas {%KEYWORD.TRAP.NAME,plural:other}.</if><if pvp>Constrói uma {FloorMechanism:327} ({value:FloorMechanism.327.dmg}) a até {cell:c} do seu herói.\n\\---\nEste {%spellcount} volta para a sua mão.\\v<rem>Limite de {value:limit} {limit, plural, one[vez] other[vezes]} por turno.</rem></if>"
   }
 }

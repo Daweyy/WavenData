@@ -70,18 +70,20 @@
         "type": "GaugeValue",
         "element": 11,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 2
         }
       },
       {
         "type": "GaugeValue",
         "element": 19,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
         }
       }
     ],
@@ -97,16 +99,29 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "SquareAreaOfEffectSelector",
-        "originSelector": {
-          "type": "CasterHeroSelector"
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "CasterHeroSelector"
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       }
     },
@@ -128,10 +143,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 26,
-            "valueInPvP": 29
+            "value": 26
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -166,10 +180,9 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "d1",
           "baseValue": {
-            "type": "PvmOrPvpConstIntegerValue",
+            "type": "ConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 12,
-            "valueInPvP": 0
+            "value": 12
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -190,6 +203,51 @@
               }
             }
           ],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmgPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 24
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "exPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 12
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            25,
+            88
+          ],
+          "skillBuffs": [],
           "from": {
             "type": "CasterSelector"
           },
@@ -227,33 +285,15 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmgSin",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 8
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51,
-            25
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        {
+          "conditions": "<6/>",
+          "keyword": "EXPLOSION"
+        },
         "CHRONO"
       ]
     }
@@ -266,10 +306,10 @@
     "pt": "Queimadura Temporal"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.\n\\---\n{#CHRONO}\\_: <if pvm>{magicalDamage:d1,+}</if><if pvp>Vos {%SINISTRO,plural:other} infligent {magicalDamage:dmgSin} autour\\_<sprite name=\"cell_around\"> d'eux.</if>",
-    "en": "Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero.\n\\---\n{#CHRONO}: <if pvm>{magicalDamage:d1,+}.</if><if pvp>Your {%SINISTRO,plural:other} do {magicalDamage:dmgSin} around\\_<sprite name=\"cell_around\"> them.</if>",
-    "es": "Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe.\n\\---\n{#CHRONO}: <if pvm>{magicalDamage:d1,+}</if><if pvp>Tus {%SINISTRO,plural:other} infligen {magicalDamage:dmgSin} a su alrededor\\_<sprite name=\"cell_around\">.</if>",
-    "de": "Verursacht {magicalDamage:dmg} bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden.\n\\---\n{#CHRONO}: <if pvm>{magicalDamage:d1,+}.</if><if pvp>Deine {%SINISTRO,plural:other} verursachen {magicalDamage:dmgSin} in ihrem Umkreis\\_<sprite name=\"cell_around\">.</if>",
-    "pt": "Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.\n\\---\n{#CHRONO}: <if pvm>{magicalDamage:d1,+}.</if><if pvp>Seus {%SINISTRO,plural:other} infligem {magicalDamage:dmgSin} em\\_volta\\_<sprite name=\"cell_around\"> deles.</if>"
+    "fr": "<if pvm>Inflige {magicalDamage:dmg} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n{#CHRONO}\\_: <if pvm>{magicalDamage:d1,+}.</if><if pvp>Votre héros déclenche {explosion:exPVP}.</if>",
+    "en": "<if pvm>Does {magicalDamage:dmg} to opponents around\\_<sprite name=\"cell_around\"> your hero.</if><if pvp>Does {magicalDamage:dmgPVP}.</if>\n\\---\n{#CHRONO}: <if pvm>{magicalDamage:d1,+}.</if><if pvp>Your hero triggers {explosion:exPVP}.</if>",
+    "es": "<if pvm>Inflige {magicalDamage:dmg} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n{#CHRONO}: <if pvm>{magicalDamage:d1,+}.</if><if pvp>Tu héroe activa {explosion:exPVP}.</if>",
+    "de": "<if pvm>Verursacht {magicalDamage:dmg} bei Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden.</if><if pvp>Verursacht {magicalDamage:dmgPVP}.</if>\n\\---\n{#CHRONO}: <if pvm>{magicalDamage:d1,+}.</if><if pvp>Dein Held löst {explosion:exPVP} aus.</if>",
+    "pt": "<if pvm>Inflige {magicalDamage:dmg} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói.</if><if pvp>Inflige {magicalDamage:dmgPVP}.</if>\n\\---\n{#CHRONO}: <if pvm>{magicalDamage:d1,+}.</if><if pvp>Seu herói aciona {explosion:exPVP}.</if>"
   }
 }

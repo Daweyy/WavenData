@@ -47,18 +47,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 19
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 12
-            }
+            "valueInPvM": 19,
+            "valueInPvP": 10
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -77,10 +69,14 @@
           "addInsteadOfMultiply": false
         },
         {
-          "type": "PvmOrPvpConstIntegerValue",
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": -1
+        },
+        {
+          "type": "ConstIntegerValue",
           "referenceId": "v",
-          "valueInPvM": -25,
-          "valueInPvP": -18
+          "value": -25
         }
       ],
       "externalDynamicValueReferences": [],
@@ -102,18 +98,10 @@
       "type": "BuffedScalingDynamicValue",
       "referenceId": "dmg",
       "baseValue": {
-        "type": "PvmOrPvpValue",
+        "type": "PvmOrPvpConstIntegerValue",
         "referenceId": "",
-        "pvm": {
-          "type": "ConstIntegerValue",
-          "referenceId": null,
-          "value": 19
-        },
-        "pvp": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 12
-        }
+        "valueInPvM": 19,
+        "valueInPvP": 10
       },
       "factor": {
         "type": "ReferenceScalingFactor",

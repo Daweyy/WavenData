@@ -52,16 +52,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "pa",
           "value": -1
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "sortPVP",
-          "value": 2
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "paPVP",
-          "value": -1
         }
       ],
       "externalDynamicValueReferences": [],
@@ -77,7 +67,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 140,
-      "valueInPvP": 141
+      "valueInPvP": 134
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -88,7 +78,7 @@
       "type": "PvmOrPvpConstIntegerValue",
       "referenceId": "",
       "valueInPvM": 27,
-      "valueInPvP": 21
+      "valueInPvP": 24
     },
     "riposte": null,
     "actionCriticalChance": {
@@ -229,10 +219,10 @@
     "pt": "Julith"
   },
   "description": {
-    "fr": "Lorsqu'un adversaire meurt\\_: Piochez <if pvm>{SPELLCOUNTvalue:sort} et {PAvalue:pa} au coût de {sort,plural,one[ce] other[ces]} {%SPELLCOUNT,value:sort}.</if><if pvp>{SPELLCOUNTvalue:sortPVP} et {PAvalue:paPVP} au coût du prochain sort.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
-    "en": "When an opponent dies: Draw <if pvm>{SPELLCOUNTvalue:sort}; {PAvalue:pa} to the cost of {sort,plural,one[this] other[these]} {%SPELLCOUNT,value:sort}.</if><if pvp>{SPELLCOUNTvalue:sortPVP};{PAvalue:paPVP} to the cost of the next spell.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
-    "es": "Cuando un adversario muere: Sacas <if pvm>{SPELLCOUNTvalue:sort} y {PAvalue:pa} al coste de {sort,plural,one[este] other[estos]} {%SPELLCOUNT,value:sort}.</if><if pvp>{SPELLCOUNTvalue:sortPVP} y {PAvalue:paPVP} al coste del próximo hechizo.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
-    "de": "Wenn ein Gegner stirbt: Zieht <if pvm>{SPELLCOUNTvalue:sort} und {PAvalue:pa} auf die Kosten {sort,plural,one[von diesem] other[dieser]} {%SPELLCOUNT,value:sort}.</if><if pvp>{SPELLCOUNTvalue:sortPVP} und {PAvalue:paPVP} auf die Kosten des nächsten Zaubers.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
-    "pt": "Quando um adversário morre: Compre <if pvm>{SPELLCOUNTvalue:sort} e {PAvalue:pa} ao custo {sort,plural,one[desse] other[desses]} {%SPELLCOUNT,value:sort}.</if><if pvp>{SPELLCOUNTvalue:sortPVP} et {PAvalue:paPVP} ao custo do próximo feitiço.</if>\\v<family>{%Family_JorisComrades_Name}</family>"
+    "fr": "<if pvm>Lorsqu'un adversaire meurt\\_: Piochez {SPELLCOUNTvalue:sort} et {PAvalue:pa} au coût de {sort,plural,one[ce] other[ces]} {%SPELLCOUNT,value:sort}.</if><if pvp>{%ATTACK} Inflige son {%AT} à l'adversaire ayant le moins de {%PV}.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
+    "en": "<if pvm>When an opponent dies: Draw {SPELLCOUNTvalue:sort} and {PAvalue:pa} to the cost of {sort,plural,one[this] other[these]} {%SPELLCOUNT,value:sort}.</if><if pvp>{%ATTACK} Inflicts {%AT} on the opponent with the least {%PV}.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
+    "es": "<if pvm>Cuando un adversario muere: sacas {SPELLCOUNTvalue:sort} y {PAvalue:pa} al coste de {sort,plural,one[este] other[estos]} {%SPELLCOUNT,value:sort}.</if><if pvp>{%ATTACK} Inflige su {%AT} al adversario que tenga menos {%PV}.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
+    "de": "<if pvm>Wenn ein Gegner stirbt: Zieht {SPELLCOUNTvalue:sort} und {PAvalue:pa} auf die Kosten {sort,plural,one[von diesem] other[dieser]} {%SPELLCOUNT,value:sort}.</if><if pvp>{%ATTACK} Verursacht ihren {%AT} beim Gegner mit den wenigsten {%PV} als Schaden.</if>\\v<family>{%Family_JorisComrades_Name}</family>",
+    "pt": "<if pvm>Quando um adversário morre: Compre {SPELLCOUNTvalue:sort} e {PAvalue:pa} ao custo {sort,plural,one[desse] other[desses]} {%SPELLCOUNT,value:sort}.</if><if pvp>{%ATTACK} Inflige seu {%AT} ao adversário que tiver menos {%PV}.</if>\\v<family>{%Family_JorisComrades_Name}</family>"
   }
 }

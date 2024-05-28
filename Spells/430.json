@@ -114,18 +114,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 13
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 24
-            }
+            "valueInPvM": 13,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -166,6 +158,12 @@
       "hasEffects": true,
       "keywordReferences": [
         {
+          "conditions": "<6/>",
+          "type": 20,
+          "id": 8
+        },
+        {
+          "conditions": "<7/>",
           "type": 20,
           "id": 5
         }
@@ -180,10 +178,10 @@
     "pt": "Pico Glacial"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} la cible si elle est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} the target if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} al objetivo si está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nWirkt {PropertyEffect:5} beim Ziel, wenn es <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} o alvo se ele estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} la cible si elle est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if><if pvp>Confère {PropertyEffect:8} à votre héros si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} the target if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if><if pvp>Confers {PropertyEffect:8} on your hero if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} al objetivo si está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if><if pvp>Confiere {PropertyEffect:8} a tu héroe si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} das Ziel, wenn es <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if><if pvp>Verleiht deinem Helden einen {PropertyEffect:8}, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} o alvo se ele estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if><if pvp>Concede {PropertyEffect:8} ao seu herói se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if>"
   }
 }

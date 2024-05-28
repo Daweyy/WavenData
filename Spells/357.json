@@ -97,18 +97,53 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "TwoCastTargetDefinition",
+        "selector1": {
+          "type": "FilteredCharacterSelector",
+          "filters": []
+        },
+        "selector2": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "cPVP",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
             }
-          }
-        ]
+          ]
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": false,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            }
+          ]
+        }
       }
     },
     "spellEffectData": [
@@ -125,6 +160,11 @@
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cPVP",
+          "value": 3
+        },
         {
           "type": "BuffedScalingDynamicValue",
           "referenceId": "pc",
@@ -146,7 +186,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "dmg",
-          "value": 27
+          "value": 20
         }
       ],
       "externalDynamicValueReferences": [],
@@ -162,10 +202,10 @@
     "pt": "Fuga Pikuxala"
   },
   "description": {
-    "fr": "<if pvm>Inflige {value:pc,percent} de l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg} à un adversaire.</if>\n\\---\nTéléporte votre héros sur sa case de début de tour.",
-    "en": "<if pvm>Inflicts {value:pc,percent} of your hero's {%AT} on an opponent.</if><if pvp>Does {magicalDamage:dmg} to an opponent.</if>\n\\---\nTeleports your hero to their start-of-turn position.",
-    "es": "<if pvm>Inflige un {value:pc,percent} del {%AT} de tu héroe a un adversario.</if><if pvp>Inflige {magicalDamage:dmg} a un adversario.</if>\n\\---\nTeletransporta a tu héroe a su casilla de inicio de turno.",
-    "de": "<if pvm>Verursacht bei einem Gegner {value:pc,percent} des {%AT,plural:two} deines Helden als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg} bei einem Gegner.</if>\n\\---\nTeleportiert deinen Helden auf das Feld, auf dem er seine Runde begonnen hat.",
-    "pt": "<if pvm>Inflige {value:pc,percent} do {%AT} do seu herói a um adversário.</if><if pvp>Inflige {magicalDamage:dmg} a um adversário.</if>\n\\---\nTeletransporta seu herói para a célula em que estava no início do turno."
+    "fr": "<if pvm>Inflige {value:pc,percent} de l'{%AT} de votre héros à un adversaire.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Téléporte votre héros sur sa case de début de tour.</if><if pvp>Téléporte votre héros jusqu'à {cell:cPVP}.</if>",
+    "en": "<if pvm>Inflicts {value:pc,percent} of your hero's {%AT} on an opponent.</if><if pvp>Does {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Teleports your hero to their start-of-turn position.</if><if pvp>Teleports your hero up to {cell:cPVP}.</if>",
+    "es": "<if pvm>Inflige un {value:pc,percent} del {%AT} de tu héroe a un adversario.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Teletransporta a tu héroe a su casilla de inicio de turno.</if><if pvp>Teletransporta a tu héroe hasta {cell:cPVP}.</if>",
+    "de": "<if pvm>Verursacht {value:pc,percent} des {%AT,plural:two} deines Helden bei einem Gegner als Schaden.</if><if pvp>Verursacht {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Teleportiert deinen Helden auf sein Startfeld des Rundenbeginns.</if><if pvp>Teleportiert deinen Helden bis zu {cell:cPVP}.</if>",
+    "pt": "<if pvm>Inflige {value:pc,percent} do {%AT} do seu herói a um adversário.</if><if pvp>Inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Teletransporta seu herói para a célula em que estava no início do turno.</if><if pvp>Teletransporta seu herói por até {cell:cPVP}.</if>"
   }
 }

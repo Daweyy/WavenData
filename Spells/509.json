@@ -72,18 +72,20 @@
         "type": "GaugeValue",
         "element": 12,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 2
         }
       },
       {
         "type": "GaugeValue",
         "element": 19,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
         }
       }
     ],
@@ -123,18 +125,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 25
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 33
-            }
+            "valueInPvM": 25,
+            "valueInPvP": 28
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -164,12 +158,36 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "hPVP",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 15
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            50,
+            22
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
+          "conditions": "<7/>",
           "type": 20,
           "id": 5
         }
@@ -184,10 +202,10 @@
     "pt": "Dedos de Granizo"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} la cible si elle est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} the target if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} al objetivo si está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nWirkt {PropertyEffect:5} beim Ziel, wenn es <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{PropertyEffect:5} o alvo se ele estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} la cible si elle est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if><if pvp>Soigne votre héros de {PVvalue:hPVP} si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} the target if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if><if pvp>Heals your hero {PVvalue:hPVP} if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} al objetivo si está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if><if pvp>Cura a tu héroe {PVvalue:hPVP} si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} das Ziel, wenn es <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if><if pvp>Heilt deinen Helden um {PVvalue:hPVP}, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{PropertyEffect:5} o alvo se ele estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if><if pvp>Cura {PVvalue:hPVP} do seu herói se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if>"
   }
 }

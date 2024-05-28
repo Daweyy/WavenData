@@ -45,16 +45,16 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "nbc",
+          "referenceId": "cPVP",
           "value": 2
         },
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmg",
+          "referenceId": "dmgPVP",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 7
+            "value": 8
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -74,7 +74,10 @@
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        "BOUNCE",
+        {
+          "conditions": "<7/>",
+          "keyword": "BOUNCE"
+        },
         {
           "conditions": "<6/>",
           "type": 22,

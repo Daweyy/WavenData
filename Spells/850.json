@@ -72,9 +72,20 @@
         "type": "GaugeValue",
         "element": 19,
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "valueInPvM": 1,
+          "valueInPvP": 0
+        }
+      },
+      {
+        "type": "GaugeValue",
+        "element": 12,
+        "value": {
+          "type": "PvmOrPvpConstIntegerValue",
+          "referenceId": "",
+          "valueInPvM": 0,
+          "valueInPvP": 1
         }
       }
     ],
@@ -82,9 +93,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "valueInPvM": 3,
+          "valueInPvP": 4
         }
       }
     ],
@@ -114,18 +126,10 @@
           "type": "BuffedScalingDynamicValue",
           "referenceId": "dmg",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 17
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 13
-            }
+            "valueInPvM": 17,
+            "valueInPvP": 22
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -157,6 +161,30 @@
           "value": 30
         },
         {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "a",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 2
+          },
+          "factor": {
+            "type": "CustomScalingFactor",
+            "computer": {
+              "type": "LinearScalingFactorComputer",
+              "scale": 0.0
+            }
+          },
+          "buffs": [
+            39
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": true
+        },
+        {
           "type": "ConstIntegerValue",
           "referenceId": "d2",
           "value": 5
@@ -166,6 +194,12 @@
       "hasEffects": true,
       "keywordReferences": [
         {
+          "conditions": "<6/>",
+          "type": 22,
+          "id": 141
+        },
+        {
+          "conditions": "<7/>",
           "type": 20,
           "id": 19
         }
@@ -180,10 +214,10 @@
     "pt": "Disparo Termal"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\nConfère {PropertyEffect:19} à votre héros jusqu'au prochain tour si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\nConfers {PropertyEffect:19} on your hero until the next turn if the target is <b>WET</b>\\_<sprite name=\"wet\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\nConfiere {PropertyEffect:19} a tu héroe hasta el próximo turno si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\nGewährt deinem Helden {PropertyEffect:19} bis zur nächsten Runde, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\nConcede {PropertyEffect:19} ao seu herói até o próximo turno se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Confère {PropertyEffect:19} à votre héros jusqu'au prochain tour si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if><if pvp>{value:a,+}\\_{aura:141,value:a} à\\_votre\\_héros si la cible est <b>MOUILLÉE</b>\\_<sprite name=\"wet\">.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>Confers {PropertyEffect:19} on your hero until the next turn if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if><if pvp>{value:a,+}\\_{aura:141,value:a} to your hero if the target is <b>WET</b>\\_<sprite name=\"wet\">.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Confiere {PropertyEffect:19} a tu héroe hasta el próximo turno si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if><if pvp>{value:a,+}\\_{aura:141,value:a} a\\_tu\\_héroe si el objetivo está <b>MOJADO</b>\\_<sprite name=\"wet\">.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>Macht deinen Helden bis zur nächsten Runde {PropertyEffect:19}, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if><if pvp>{value:a,+}\\_{aura:141,value:a} für deinen Helden, wenn das Ziel <b>DURCHNÄSST</b>\\_<sprite name=\"wet\"> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>Concede {PropertyEffect:19} ao seu herói até o próximo turno se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if><if pvp>{value:a,+}\\_{aura:141,value:a} ao\\_seu\\_herói se o alvo estiver <b>MOLHADO</b>\\_<sprite name=\"wet\">.</if>"
   }
 }

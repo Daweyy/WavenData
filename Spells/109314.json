@@ -82,9 +82,10 @@
       {
         "type": "ActionPointsCost",
         "value": {
-          "type": "ConstIntegerValue",
+          "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "valueInPvM": 3,
+          "valueInPvP": 4
         }
       }
     ],
@@ -116,7 +117,7 @@
           "baseValue": {
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 18,
+            "valueInPvM": 12,
             "valueInPvP": 27
           },
           "factor": {
@@ -149,7 +150,7 @@
           "baseValue": {
             "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "valueInPvM": 7,
+            "valueInPvM": 0,
             "valueInPvP": 15
           },
           "factor": {
@@ -180,6 +181,11 @@
           "type": "ConstIntegerValue",
           "referenceId": "d",
           "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pow",
+          "value": 25
         }
       ],
       "externalDynamicValueReferences": [],
@@ -195,10 +201,10 @@
     "pt": "Aguilhão Perfurante"
   },
   "description": {
-    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n{magicalDamage:p,+} si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.",
-    "en": "Does {magicalDamage:dmg}.\n\\---\n{magicalDamage:p,+} if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.",
-    "es": "Inflige {magicalDamage:dmg}.\n\\---\n{magicalDamage:p,+} si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.",
-    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n{magicalDamage:p,+}, wenn das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.",
-    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n{magicalDamage:p,+} se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">."
+    "fr": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:pow,+,percent} à votre héros jusqu'à la fin du tour.</if><if pvp>{magicalDamage:p,+} si la cible est <b>HUILÉE</b>\\_<sprite name=\"oiled\">.</if>",
+    "en": "Does {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:pow,+,percent} to your hero until the end of the turn.</if><if pvp>{magicalDamage:p,+} if the target is <b>OILED</b>\\_<sprite name=\"oiled\">.</if>",
+    "es": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:pow,+,percent} a tu héroe hasta el final del turno.</if><if pvp>{magicalDamage:p,+} si el objetivo está <b>ENGRASADO</b>\\_<sprite name=\"oiled\">.</if>",
+    "de": "Verursacht {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:pow,+,percent} für deinen Helden bis zum Rundenende.</if><if pvp>{magicalDamage:p,+}, wenn das Ziel <b>GEÖLT</b>\\_<sprite name=\"oiled\"> ist.</if>",
+    "pt": "Inflige {magicalDamage:dmg}.\n\\---\n<if pvm>{ATvalue:pow,+,percent} ao seu herói até o fim do turno.</if><if pvp>{magicalDamage:p,+} se o alvo estiver <b>OLEOSO</b>\\_<sprite name=\"oiled\">.</if>"
   }
 }

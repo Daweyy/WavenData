@@ -113,20 +113,40 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
+          "referenceId": "dmg",
+          "baseValue": {
+            "type": "PvmOrPvpConstIntegerValue",
+            "referenceId": "",
+            "valueInPvM": 8,
+            "valueInPvP": 11
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 12
+          },
+          "buffs": [
+            51,
+            23
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "PMBuff",
+          "value": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
           "referenceId": "ar",
           "baseValue": {
-            "type": "PvmOrPvpValue",
+            "type": "PvmOrPvpConstIntegerValue",
             "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 3
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 4
-            }
+            "valueInPvM": 3,
+            "valueInPvP": 5
           },
           "factor": {
             "type": "ReferenceScalingFactor",
@@ -157,42 +177,6 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 30
-        },
-        {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "dmg",
-          "baseValue": {
-            "type": "PvmOrPvpValue",
-            "referenceId": "",
-            "pvm": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 8
-            },
-            "pvp": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 9
-            }
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 12
-          },
-          "buffs": [
-            51,
-            23
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "PMBuff",
-          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
