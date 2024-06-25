@@ -30,9 +30,6 @@
   "values": {
     "type": "CompanionDefinition",
     "id": 696,
-    "areaDefinition": {
-      "type": "PointAreaDefinition"
-    },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
       "defaultSkinId": 1069,
@@ -146,22 +143,13 @@
                   "type": "CasterHeroSelector"
                 },
                 "distance": {
-                  "type": "GreaterEqualThan",
-                  "dynamicValue": {
+                  "type": "Between",
+                  "minIncluded": {
                     "type": "ConstIntegerValue",
                     "referenceId": "",
                     "value": 1
-                  }
-                }
-              },
-              {
-                "type": "AroundTargetFilter",
-                "targetsToCompare": {
-                  "type": "CasterHeroSelector"
-                },
-                "distance": {
-                  "type": "LowerEqualThan",
-                  "dynamicValue": {
+                  },
+                  "maxIncluded": {
                     "type": "SumValue",
                     "referenceId": "",
                     "valuesToSum": [

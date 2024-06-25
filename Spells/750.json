@@ -100,8 +100,9 @@
         "type": "FilteredCoordSelector",
         "filters": [
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "CasterHeroSelector"
             },
             "distance": {
@@ -117,15 +118,6 @@
                 "value": 2
               }
             }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "CasterHeroSelector"
-            }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
           }
         ]
       }

@@ -149,8 +149,9 @@
             ]
           },
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -160,12 +161,6 @@
                 "referenceId": "",
                 "value": 2
               }
-            }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
             }
           }
         ]

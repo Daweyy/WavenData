@@ -121,8 +121,9 @@
           "type": "FilteredCharacterSelector",
           "filters": [
             {
-              "type": "InLineTargetFilter",
-              "targetsToCompare": {
+              "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+              "direction": 1,
+              "refTarget": {
                 "type": "CasterHeroSelector"
               },
               "distance": {
@@ -138,12 +139,6 @@
                   "value": 3
                 }
               }
-            },
-            {
-              "type": "HasEmptyPathInLineToMoveToTargetFilter",
-              "startCoords": {
-                "type": "CasterHeroSelector"
-              }
             }
           ]
         }
@@ -156,8 +151,9 @@
             "type": "FilteredCharacterSelector",
             "filters": [
               {
-                "type": "InLineTargetFilter",
-                "targetsToCompare": {
+                "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+                "direction": 1,
+                "refTarget": {
                   "type": "CasterHeroSelector"
                 },
                 "distance": {
@@ -173,12 +169,6 @@
                     "value": 3
                   }
                 }
-              },
-              {
-                "type": "HasEmptyPathInLineToMoveToTargetFilter",
-                "startCoords": {
-                  "type": "CasterHeroSelector"
-                }
               }
             ]
           },
@@ -186,7 +176,8 @@
             "type": "ConstIntegerValue",
             "referenceId": "",
             "value": 1
-          }
+          },
+          "minRadius": null
         }
       }
     },
@@ -308,7 +299,7 @@
   },
   "description": {
     "fr": "<if pvm>Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c}.</if><if pvp>Votre héros <b>CHARGE</b> un personnage aligné jusqu'à {cell:c} et lui inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} à la cible et {magicalDamage:dmgB} aux adversaires autour<sprite name=\"cell_around\"/> d'elle.</if><if pvp>{PAvalue:paPVP} au coût de votre prochain {%SPELLCOUNT}.</if>",
-    "en": "<if pvm>Your hero <b>CHARGES</b> an in-line character up to {cell:c}.</if><if pvp>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmg} to them.</if>\n\\---\n<if pvm>Does {magicalDamage:dmg} to the target and {magicalDamage:dmgB} to opponents around<sprite name=\"cell_around\"/> the target.</if><if pvp>{PAvalue:paPVP} to the cost of your next {%SPELLCOUNT}.</if>",
+    "en": "<if pvm>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away.</if><if pvp>Your hero <b>CHARGES</b> an in-line character up to {cell:c} away and does {magicalDamage:dmg} to them.</if>\n\\---\n<if pvm>Does {magicalDamage:dmg} to the target and {magicalDamage:dmgB} to opponents around<sprite name=\"cell_around\"/> the target.</if><if pvp>{PAvalue:paPVP} to the cost of your next {%SPELLCOUNT}.</if>",
     "es": "<if pvm>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c}.</if><if pvp>Tu héroe <b>CARGA</b> contra un personaje alineado hasta a {cell:c} y le inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} al objetivo y {magicalDamage:dmgB} a los adversarios de alrededor<sprite name=\"cell_around\"/> de él.</if><if pvp>{PAvalue:paPVP} al coste de tu próximo {%SPELLCOUNT}.</if>",
     "de": "<if pvm>Dein Held <b>STÜRMT</b> auf einen Charakter zu, der bis zu {cell:c} entfernt in derselben Reihe steht.</if><if pvp>Dein Held <b>STÜRMT</b> auf einen Charakter zu, der bis zu {cell:c} entfernt in derselben Reihe steht, und verursacht bei ihm {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Verursacht {magicalDamage:dmg} beim Ziel und {magicalDamage:dmgB} bei Gegnern in seinem Umkreis\\_<sprite name=\"cell_around\"/>.</if><if pvp>{PAvalue:paPVP} auf die Kosten deines nächsten {%SPELLCOUNT,plural:two}.</if>",
     "pt": "<if pvm>Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c}.</if><if pvp>Seu herói <b>INVESTE</b> contra um personagem alinhado a até {cell:c} e lhe inflige {magicalDamage:dmg}.</if>\n\\---\n<if pvm>Inflige {magicalDamage:dmg} ao alvo e {magicalDamage:dmgB} aos adversários em\\_volta\\_<sprite name=\"cell_around\"/> dele.</if><if pvp>{PAvalue:paPVP} ao custo do seu próximo {%SPELLCOUNT}.</if>"

@@ -80,13 +80,12 @@
         "type": "FilteredCoordSelector",
         "filters": [
           {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 0,
+            "refTarget": {
               "type": "CasterHeroSelector"
-            }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
+            },
+            "distance": null
           }
         ]
       }

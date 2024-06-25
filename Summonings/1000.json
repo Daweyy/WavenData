@@ -37,9 +37,6 @@
   "values": {
     "type": "SummoningDefinition",
     "id": 1000,
-    "areaDefinition": {
-      "type": "PointAreaDefinition"
-    },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
       "defaultSkinId": 6631,
@@ -49,13 +46,19 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
-          "type": 20,
-          "id": 18
+          "type": 25,
+          "id": 770
         }
       ]
     },
@@ -115,10 +118,10 @@
     "pt": "Destinada Obscura"
   },
   "description": {
-    "fr": "Lorsqu'un allié meurt\\_:\\vConfère {PropertyEffect:18} à un allié pour le reste du combat sans réduire son {%AT}.",
-    "en": "When an ally dies:\\vConfers {PropertyEffect:18} on an ally for the rest of the fight without reducing their {%AT}.",
-    "es": "Cuando un aliado muere:\\vConfiere {PropertyEffect:18} a un aliado para el resto del combate sin reducir su {%AT}.",
-    "de": "Wenn ein Verbündeter stirbt:\\vVerleiht einem Verbündeten für den Rest des Kampfes {PropertyEffect:18}, ohne seinen {%AT} zu verringern.",
-    "pt": "Quando um aliado morre:\\vConcede {PropertyEffect:18} a um aliado até o fim do combate, sem reduzir seu {%AT}."
+    "fr": "{%ATTACK} Ajoute le sort {Spell:770} à la main de la cible.\n\\---\nLorsqu'un allié meurt\\_:\\v{PAvalue:pa,+} au coût des sorts de la main de tous les adversaires.",
+    "en": "{%ATTACK} Adds the {Spell:770} spell to the target's hand.\n\\---\nWhen an ally dies:\\v{PAvalue:pa,+} to the cost of spells in all the opponents' hands.",
+    "es": "{%ATTACK} Añade el hechizo {Spell:770} a la mano del objetivo.\n\\---\nCuando un aliado muere:\\v{PAvalue:pa,+} al coste de la mano de todos los adversarios.",
+    "de": "{%ATTACK} Fügt der Hand des Ziels den Zauber „{Spell:770}“ hinzu.\n\\---\nWenn ein Verbündeter stirbt:\\v{PAvalue:pa,+} auf die Kosten der Zauber auf der Hand aller Gegner.",
+    "pt": "{%ATTACK} Adiciona o feitiço {Spell:770} à mão do alvo.\n\\---\nQuando um aliado morre:\\v{PAvalue:pa,+} ao custo dos feitiços da mão de todos os adversários."
   }
 }

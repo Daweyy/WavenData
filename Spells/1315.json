@@ -128,14 +128,9 @@
         "type": "FilteredCharacterSelector",
         "filters": [
           {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "CasterHeroSelector"
-            }
-          },
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "CasterHeroSelector"
             },
             "distance": {

@@ -146,8 +146,12 @@
             }
           },
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "EntityValidForMagicalDamageFilter"
+          },
+          {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -163,15 +167,6 @@
                 "value": 3
               }
             }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
-            }
-          },
-          {
-            "type": "EntityValidForMagicalDamageFilter"
           }
         ]
       }

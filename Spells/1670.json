@@ -105,17 +105,16 @@
       "selector2": {
         "type": "FilteredEntitySelector",
         "from": {
-          "type": "AllBoardPresencesSelector"
+          "type": "AllCharactersSelector"
         },
         "filters": [
           {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 0,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
-            }
-          },
-          {
-            "type": "CharacterEntityFilter"
+            },
+            "distance": null
           }
         ]
       }

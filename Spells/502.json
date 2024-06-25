@@ -116,8 +116,16 @@
         "type": "FilteredCharacterSelector",
         "filters": [
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 0,
+            "refTarget": {
               "type": "CasterSpecificCompanionSelector",
               "companion": 231
             },
@@ -133,20 +141,6 @@
                 "referenceId": "c",
                 "value": 5
               }
-            }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "CasterSpecificCompanionSelector",
-              "companion": 231
-            }
-          },
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
             }
           }
         ]

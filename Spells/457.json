@@ -121,17 +121,19 @@
           "type": "FilteredCharacterSelector",
           "filters": [
             {
-              "type": "HasEmptyPathInLineToMoveToTargetFilter",
-              "startCoords": {
-                "type": "FirstCastTargetSelector"
-              }
-            },
-            {
               "type": "TeamFilter",
               "isIdentical": false,
               "reference": {
                 "type": "CasterSelector"
               }
+            },
+            {
+              "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+              "direction": 1,
+              "refTarget": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": null
             }
           ]
         },
@@ -208,10 +210,10 @@
     "pt": "Vingança de Katar"
   },
   "description": {
-    "fr": "Attire les premiers adversaires alignés à {Companion:734!} de {cell:c}.\n\\---\nInflige {value:v,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
-    "en": "Attracts the first opponents in line with {Companion:734!} {cell:c}.\n\\---\nInflicts {value:v,percent} of his {%AT} on adjacent\\_<sprite name=\"cell_cross\"> opponents.",
-    "es": "Atrae a los primeros adversarios alineados con {Companion:734!} {cell:c}.\n\\---\nInflige un {value:v,percent} de su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
-    "de": "Zieht die ersten Gegner, die sich in derselben Reihe befinden wie {Companion:734!}, um {cell:c} heran.\n\\---\nVerursacht bei den angrenzenden \\_<sprite name=\"cell_cross\"> Gegnern {value:v,percent} seines {%AT,plural:two} als Schaden.",
-    "pt": "Atrai os primeiros adversários alinhados com {Companion:734!} por {cell:c}.\n\\---\nInflige {value:v,percent} de seu {%AT} aos adversários adjacentes\\_<sprite name=\"cell_cross\">."
+    "fr": "Attire les premiers adversaires alignés à {Companion:734!} jusqu'à {cell:c} sur les cases adjacentes\\_<sprite name=\"cell_cross\"> à lui.\n\\---\nInflige {value:v,percent} de son {%AT} aux adversaires adjacents\\_<sprite name=\"cell_cross\">.",
+    "en": "Attracts the first opponents in line with {Companion:734!} up to {cell:c} away to the cells adjacent\\_<sprite name=\"cell_cross\"> to him.\n\\---\nInflicts {value:v,percent} of his {%AT} on adjacent\\_<sprite name=\"cell_cross\"> opponents.",
+    "es": "Atrae a los primeros adversarios alineados con {Companion:734!} hasta a {cell:c} en las casillas adyacentes\\_<sprite name=\"cell_cross\"> a él.\n\\---\nInflige un {value:v,percent} de su {%AT} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.",
+    "de": "Zieht die ersten Gegner, die sich in derselben Reihe befinden wie {Companion:734!}, um bis zu {cell:c} auf an ihn angrenzende\\_<sprite name=\"cell_cross\"> Felder heran.\n\\---\nVerursacht bei den angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern {value:v,percent} seines {%AT,plural:two} als Schaden.",
+    "pt": "Atrai os primeiros adversários alinhados com {Companion:734!} a até {cell:c} nas células adjacentes\\_<sprite name=\"cell_cross\"> a ele.\n\\---\nInflige {value:v,percent} de seu {%AT} aos adversários adjacentes\\_<sprite name=\"cell_cross\">."
   }
 }

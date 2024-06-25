@@ -126,8 +126,16 @@
             }
           },
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              50
+            ]
+          },
+          {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -143,19 +151,6 @@
                 "value": 4
               }
             }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
-            }
-          },
-          {
-            "type": "FamilyFilter",
-            "condition": 1,
-            "families": [
-              50
-            ]
           }
         ]
       }

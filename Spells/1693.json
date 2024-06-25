@@ -1,0 +1,124 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4149792116076202553
+  },
+  "m_Name": "1693",
+  "m_id": 1693,
+  "m_displayName": "SEASON - FOIRE DU TROOL - Petit coup de marteau",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -1450520224,
+    "b": 1570908148,
+    "c": -62268376,
+    "d": 484358127,
+    "e": -532580904
+  },
+  "m_i18nDescriptionId": {
+    "a": -1450520224,
+    "b": 1570908148,
+    "c": -62268376,
+    "d": 484358127,
+    "e": -1081562533
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "64ad9d2346845d94caddbb9435c46bd1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1693,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllObjectMechanismsSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              2
+            ]
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "0058c7f0cf38f2144882d03a8f81e747",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Petit Coup de Marteau"
+  },
+  "description": {
+    "fr": "Détruit le {ObjectMechanism:2!} ciblé."
+  }
+}

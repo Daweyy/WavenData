@@ -129,8 +129,16 @@
             }
           },
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFlagFilter",
+              "flag": 2
+            }
+          },
+          {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -140,19 +148,6 @@
                 "referenceId": "",
                 "value": 1
               }
-            }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
-            }
-          },
-          {
-            "type": "NotEntityFilter",
-            "filter": {
-              "type": "PropertyFlagFilter",
-              "flag": 2
             }
           }
         ]

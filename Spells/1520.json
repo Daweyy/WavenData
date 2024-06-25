@@ -123,8 +123,12 @@
         },
         "filters": [
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "CharacterEntityFilter"
+          },
+          {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -134,15 +138,6 @@
                 "referenceId": "",
                 "value": 1
               }
-            }
-          },
-          {
-            "type": "CharacterEntityFilter"
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
             }
           }
         ]

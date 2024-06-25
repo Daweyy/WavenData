@@ -10,7 +10,7 @@
   },
   "m_Name": "1214",
   "m_id": 1214,
-  "m_displayName": "SEASON - TAURE - à delete",
+  "m_displayName": "SEASON - FOIRE DU TROOL - Costaure Impur",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -37,9 +37,6 @@
   "values": {
     "type": "SummoningDefinition",
     "id": 1214,
-    "areaDefinition": {
-      "type": "PointAreaDefinition"
-    },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
       "defaultSkinId": 9601,
@@ -51,13 +48,21 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
-      "keywordReferences": []
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 6,
+          "id": 426
+        }
+      ]
     },
     "families": [
       56
     ],
-    "baseProperties": [],
+    "baseProperties": [
+      90,
+      106
+    ],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -68,50 +73,23 @@
       "referenceId": "",
       "value": 3
     },
-    "actionValue": {
-      "type": "ConstIntegerValue",
-      "referenceId": "",
-      "value": 100
-    },
+    "actionValue": null,
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
-    "customActionTarget": {
-      "type": "UnionOfEntitiesSelector",
-      "first": {
-        "type": "FilteredCharacterSelector",
-        "filters": [
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "EffectHolderSelector"
-            }
-          }
-        ]
-      },
-      "second": {
-        "type": "FilteredEntitySelector",
-        "from": {
-          "type": "AllObjectMechanismsSelector"
-        },
-        "filters": [
-          {
-            "type": "ObjectMechanismDefinitionFilter",
-            "condition": 1,
-            "objectMechanisms": [
-              206
-            ]
-          }
-        ]
-      }
-    },
-    "actionType": 1,
+    "customActionTarget": null,
+    "actionType": null,
     "actionRange": null,
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
     "grade": 0,
     "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Costaure Impur] other[Costaures Impur]}"
+  },
+  "description": {
+    "fr": "<b>CHARGE</b>\\_: Détruit les {FloorMechanism:426,plural:other} sur son chemin."
   }
 }

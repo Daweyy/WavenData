@@ -93,7 +93,27 @@
         }
       }
     ],
-    "castCondition": null,
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "NotCondition",
+        "condition": {
+          "type": "PropertyFlagsCondition",
+          "selector": {
+            "type": "CasterHeroSelector"
+          },
+          "flags": [
+            1
+          ]
+        }
+      },
+      "ifTrue": {
+        "type": "SuccessCastCondition"
+      },
+      "ifFalse": {
+        "type": "FailureCastCondition"
+      }
+    },
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
@@ -118,6 +138,13 @@
                 "referenceId": "",
                 "value": 1
               }
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFlagFilter",
+              "flag": 2
             }
           }
         ]

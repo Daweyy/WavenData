@@ -93,8 +93,9 @@
         "type": "FilteredCharacterSelector",
         "filters": [
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -104,12 +105,6 @@
                 "referenceId": "",
                 "value": 1
               }
-            }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
             }
           }
         ]

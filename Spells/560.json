@@ -76,10 +76,13 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "CrossAreaOfEffectSelector",
-        "originSelector": {
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
           "type": "FilteredCoordSelector",
           "filters": [
             {
@@ -103,7 +106,7 @@
                     },
                     {
                       "type": "ConstIntegerValue",
-                      "referenceId": "c",
+                      "referenceId": null,
                       "value": 3
                     }
                   ]
@@ -114,11 +117,53 @@
               "type": "CellValidForMechanismFilter"
             }
           ]
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "CrossAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCoordSelector",
+            "filters": [
+              {
+                "type": "AroundTargetFilter",
+                "targetsToCompare": {
+                  "type": "CasterHeroSelector"
+                },
+                "distance": {
+                  "type": "LowerEqualThan",
+                  "dynamicValue": {
+                    "type": "SumValue",
+                    "referenceId": null,
+                    "valuesToSum": [
+                      {
+                        "type": "EntityCaracValue",
+                        "referenceId": null,
+                        "entitySelector": {
+                          "type": "CasterHeroSelector"
+                        },
+                        "carac": 65
+                      },
+                      {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "c",
+                        "value": 3
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "CellValidForMechanismFilter"
+              }
+            ]
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          }
         }
       }
     },

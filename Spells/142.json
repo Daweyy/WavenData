@@ -117,8 +117,9 @@
         "type": "FilteredCharacterSelector",
         "filters": [
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "CasterHeroSelector"
             },
             "distance": {
@@ -133,12 +134,6 @@
                 "referenceId": "c",
                 "value": 5
               }
-            }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "CasterHeroSelector"
             }
           }
         ]

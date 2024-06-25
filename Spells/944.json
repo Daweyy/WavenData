@@ -117,17 +117,30 @@
     ],
     "castCondition": null,
     "castTarget": {
-      "type": "OneCastTargetDefinition",
-      "selector": {
-        "type": "SquareAreaOfEffectSelector",
-        "originSelector": {
-          "type": "FilteredCharacterSelector",
-          "filters": []
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
+      "type": "ConditionalCastTargetDefinition",
+      "condition": {
+        "type": "PvpFightCondition"
+      },
+      "selectorIfTrue": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "AllCharactersSelector"
+        }
+      },
+      "selectorIfFalse": {
+        "type": "OneCastTargetDefinition",
+        "selector": {
+          "type": "SquareAreaOfEffectSelector",
+          "originSelector": {
+            "type": "FilteredCharacterSelector",
+            "filters": []
+          },
+          "size": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 1
+          },
+          "minRadius": null
         }
       }
     },

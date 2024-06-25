@@ -92,8 +92,12 @@
         "type": "FilteredCoordSelector",
         "filters": [
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -109,15 +113,6 @@
                 "value": 2
               }
             }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
-            }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
           }
         ]
       }

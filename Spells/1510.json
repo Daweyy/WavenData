@@ -88,11 +88,9 @@
         "type": "FilteredCoordSelector",
         "filters": [
           {
-            "type": "CellValidForCharacterFilter"
-          },
-          {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -107,12 +105,6 @@
                 "referenceId": "c",
                 "value": 4
               }
-            }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
             }
           }
         ]

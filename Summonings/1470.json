@@ -37,9 +37,6 @@
   "values": {
     "type": "SummoningDefinition",
     "id": 1470,
-    "areaDefinition": {
-      "type": "PointAreaDefinition"
-    },
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
       "defaultSkinId": 812,
@@ -49,25 +46,10 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "pm",
-          "value": 1
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "x",
-          "value": 1
-        }
-      ],
-      "externalDynamicValueReferences": [
-        "Const.collisionDmg"
-      ],
-      "hasEffects": true,
-      "keywordReferences": [
-        "PUSH"
-      ]
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": []
     },
     "families": [
       68
@@ -81,7 +63,7 @@
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 1
+      "value": 3
     },
     "actionValue": {
       "type": "ConstIntegerValue",
@@ -97,7 +79,19 @@
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
-    "actionRange": null,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 3
+      }
+    },
     "lifeScale": {
       "type": "ReferenceScalingFactor",
       "reference": 16
@@ -125,10 +119,10 @@
     "pt": "Iniciada Fúnebre"
   },
   "description": {
-    "fr": "{%FightTurnStarted} {PMvalue:pm,+} par adversaire aligné.\n\\---\n{%attack} {#PUSH} d'autant de case qu'il a de {%PM}.",
-    "en": "{%FightTurnStarted} {PMvalue:pm,+} per in-line opponent.\n\\---\n{%attack} {#PUSH} as many cells as he has {%PM}.",
-    "es": "{%FightTurnStarted} {PMvalue:pm,+} por adversario alineado.\n\\---\n{%attack} {#PUSH} tantas casillas como {%PM, plural:other} tenga.",
-    "de": "{%FightTurnStarted} {PMvalue:pm,+} pro Gegner in derselben Reihe.\n\\---\n{%attack} {#PUSH} um genauso viele Felder wie er {%PM} besitzt.",
-    "pt": "{%FightTurnStarted} {PMvalue:pm,+} por adversário alinhado.\n\\---\n{%attack} {#PUSH} por um número de células equivalente à quantidade de {%PM} que ele possui."
+    "fr": "<rem>{range}</rem>\n\\---\n{%ATTACK} Téléporte les {Family:68,plural:other} alliés sur les cases adjacentes\\_<sprite name=\"cell_cross\"> à la cible.",
+    "en": "<rem>{range}</rem>\n\\---\n{%ATTACK} Teleports the allied {Family:68,plural:other} to cells adjacent\\_<sprite name=\"cell_cross\"> to the target.",
+    "es": "<rem>{range}</rem>\n\\---\n{%ATTACK} Teletransporta a los {Family:68,plural:other} aliados a las casillas adyacentes\\_<sprite name=\"cell_cross\"> al objetivo.",
+    "de": "<rem>{range}</rem>\n\\---\n{%ATTACK} Teleportiert verbündete {Family:68,plural:other} auf an das Ziel angrenzende\\_<sprite name=\"cell_cross\"> Felder.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%ATTACK} Teletransporta os {Family:68,plural:other} aliados para as células adjacentes\\_<sprite name=\"cell_cross\"> ao alvo."
   }
 }

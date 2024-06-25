@@ -127,8 +127,16 @@
         "type": "FilteredCharacterSelector",
         "filters": [
           {
-            "type": "InLineTargetFilter",
-            "targetsToCompare": {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
               "type": "FirstCastTargetSelector"
             },
             "distance": {
@@ -138,19 +146,6 @@
                 "referenceId": "",
                 "value": 1
               }
-            }
-          },
-          {
-            "type": "HasEmptyPathInLineToMoveToTargetFilter",
-            "startCoords": {
-              "type": "FirstCastTargetSelector"
-            }
-          },
-          {
-            "type": "TeamFilter",
-            "isIdentical": false,
-            "reference": {
-              "type": "CasterSelector"
             }
           }
         ]

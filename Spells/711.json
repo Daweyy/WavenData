@@ -143,8 +143,9 @@
           "type": "FilteredCharacterSelector",
           "filters": [
             {
-              "type": "InLineTargetFilter",
-              "targetsToCompare": {
+              "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+              "direction": 0,
+              "refTarget": {
                 "type": "FirstCastTargetSelector"
               },
               "distance": {
@@ -159,12 +160,6 @@
                   "referenceId": "nbc",
                   "value": 4
                 }
-              }
-            },
-            {
-              "type": "HasEmptyPathInLineToMoveToTargetFilter",
-              "startCoords": {
-                "type": "FirstCastTargetSelector"
               }
             }
           ]
@@ -197,23 +192,18 @@
           "type": "FilteredCharacterSelector",
           "filters": [
             {
-              "type": "InLineTargetFilter",
-              "targetsToCompare": {
+              "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+              "direction": 0,
+              "refTarget": {
                 "type": "FirstCastTargetSelector"
               },
               "distance": {
-                "type": "GreaterThan",
+                "type": "GreaterEqualThan",
                 "dynamicValue": {
                   "type": "ConstIntegerValue",
                   "referenceId": "",
                   "value": 1
                 }
-              }
-            },
-            {
-              "type": "HasEmptyPathInLineToMoveToTargetFilter",
-              "startCoords": {
-                "type": "FirstCastTargetSelector"
               }
             }
           ]
