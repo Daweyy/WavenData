@@ -6,7 +6,7 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": -7636804426726794168
+    "m_PathID": 4623072324241944215
   },
   "m_Name": "450",
   "m_id": 450,
@@ -46,11 +46,6 @@
           "value": 1
         },
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "gPVP",
-          "value": 5
-        },
-        {
           "type": "EntityCaracValue",
           "referenceId": "jPVP",
           "entitySelector": {
@@ -60,6 +55,11 @@
             }
           },
           "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "gPVP",
+          "value": 5
         }
       ],
       "externalDynamicValueReferences": [
@@ -237,10 +237,10 @@
     "pt": "Agard"
   },
   "description": {
-    "fr": "<if pvm>Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v{#PUSH} les adversaires alignés de 1\\_case par {%GAUGE} générée.</if><if pvp>{#Jauge}\\_({value:gPVP}) et {%APPEARANCE}\\vPiochez {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Jauges générées\\_: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "en": "<if pvm>When you generate {%GAUGE, plural:other}:\\v{#PUSH} in-line opponents 1\\_cell per {%GAUGE} generated.</if><if pvp>{#Jauge}\\_({value:gPVP}) and {%APPEARANCE}\\vDraw {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Gauges Generated: {value:jPVP}.</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "es": "<if pvm>Cuando generas {%GAUGE, plural:other}:\\v{#PUSH} a los adversarios alineados 1\\_casilla por {%GAUGE} generado.</if><if pvp>{#Jauge}\\_({value:gPVP}) y {%APPEARANCE}\\vSacas {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Indicadores generados: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "de": "<if pvm>Wenn du {%GAUGE, plural:other} generierst: \\v{#PUSH} der Gegner in derselben Reihe um 1\\_Feld pro generiertem {%GAUGE}.</if><if pvp>{#Jauge}\\_({value:gPVP}) und {%APPEARANCE}\\vZieht {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Generierte Elementarpunkte: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "pt": "<if pvm>Quando você gera {%GAUGE, plural:other}:\\v{#PUSH} os adversários alinhados por 1\\_célula por {%GAUGE} gerada.</if><if pvp>{#Jauge}\\_({value:gPVP}) e {%APPEARANCE}\\vCompre {SPELLCOUNTvalue:vPVP}.\n\\---\n<rem>Cargas geradas: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+    "fr": "<if pvm>Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v{#PUSH} les adversaires alignés de 1\\_case par {%GAUGE} générée.</if>\n<if pvp>{#Jauge}\\_({value:gPVP}) et {%APPEARANCE}\\vPiochez {SPELLCOUNTvalue:vPVP}.\n<if fight>\\---<rem>Jauges générées\\_: {value:jPVP}</rem></if>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "<if pvm>When you generate {%GAUGE, plural:other}:\\v{#PUSH} in-line opponents 1\\_cell per {%GAUGE} generated.</if>\n<if pvp>{#Jauge}\\_({value:gPVP}) and {%APPEARANCE}\\vDraw {SPELLCOUNTvalue:vPVP}.\n<if fight>\\---<rem>Gauges Generated: {value:jPVP}.</rem></if>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "<if pvm>Cuando generas {%GAUGE, plural:other}:\\v{#PUSH} a los adversarios alineados 1\\_casilla por {%GAUGE} generado.</if>\n<if pvp>{#Jauge}\\_({value:gPVP}) y {%APPEARANCE}\\vsacas {SPELLCOUNTvalue:vPVP}.\n<if fight>\\---<rem>Indicadores generados: {value:jPVP}</rem></if>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "<if pvm>Wenn du {%GAUGE, plural:other} generierst: \\v{#PUSH} der Gegner in derselben Reihe um 1\\_Feld pro generiertem {%GAUGE}.</if>\n<if pvp>{#Jauge}\\_({value:gPVP}) und {%APPEARANCE}\\vZieht {SPELLCOUNTvalue:vPVP}.\n<if fight>\\---<rem>Generierte Elementarpunkte: {value:jPVP}</rem></if>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "<if pvm>Quando você gera {%GAUGE, plural:other}:\\v{#PUSH} os adversários alinhados por 1\\_célula por {%GAUGE} gerada.</if>\n<if pvp>{#Jauge}\\_({value:gPVP}) e {%APPEARANCE}\\vCompre {SPELLCOUNTvalue:vPVP}.\n<if fight>\\---<rem>Cargas geradas: {value:jPVP}</rem></if>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>"
   }
 }

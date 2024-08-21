@@ -1,0 +1,160 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "391",
+  "m_id": 391,
+  "m_displayName": "SEASON - VAMPYRE - Pieux",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1791522717,
+    "b": -536596940,
+    "c": -263325845,
+    "d": -901909044,
+    "e": 992354913
+  },
+  "m_i18nDescriptionId": {
+    "a": 1791522717,
+    "b": -536596940,
+    "c": -263325845,
+    "d": -901909044,
+    "e": -432858447
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "7ca6609378e00aa43857f5b24d9fa7b6"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 391,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "8d8f59a0c11cee74e8e5451504566bcb",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "Weapon.303.pa"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 14
+        },
+        "COLLISION"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Pieux",
+    "en": "Stake",
+    "es": "Estacas",
+    "de": "Pfähle",
+    "pt": "Estaca"
+  },
+  "description": {
+    "fr": "Repousse de {cell:c}.\n{#Collision}\\_: Élimine les cibles ou retire leur {PropertyEffect:14[invulnérabilité]}.\n\\---\n{PA_RESvalue:Weapon.303.pa,+} si ce sort tue 2 vampyres.\n<rem>Ce sort revient dans votre main.</rem>",
+    "en": "Pushes {cell:c}.\n{#Collision}: Eliminates the targets or removes their {PropertyEffect:14[invulnerability]}.\n\\---\n{PA_RESvalue:Weapon.303.pa,+} if this spell kills 2 vampyres.\n<rem>This spell returns to your hand.</rem>",
+    "es": "Empuja {cell:c}.\n{#Collision}: Elimina a los objetivos o les retira su {PropertyEffect:14[invulnerabilidad]}.\n\\---\n{PA_RESvalue:Weapon.303.pa,+} si este hechizo mata a 2 vampyros.\n<rem>Este hechizo vuelve a tu mano.</rem>",
+    "de": "Rückstoß um {cell:c}.\n{#Collision}: Erledigt die Ziele oder entzieht ihnen ihre {PropertyEffect:14[Unverwundbarkeit]}.\n\\---\n{PA_RESvalue:Weapon.303.pa,+}, wenn dieser Zauber 2\\_Vampyre erledigt.\n<rem>Dieser Zauber geht zurück auf deine Hand.</rem>",
+    "pt": "Empurra por {cell:c}.\n{#Collision}: Elimina os alvos ou retira sua {PropertyEffect:14[Invulnerabilidade]}.\n\\---\n{PA_RESvalue:Weapon.303.pa,+} se o feitiço matar 2 Vampyros.\n<rem>Este feitiço volta para a sua mão.</rem>"
+  }
+}

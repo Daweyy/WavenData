@@ -6,7 +6,7 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": -7636804426726794168
+    "m_PathID": 4623072324241944215
   },
   "m_Name": "909",
   "m_id": 909,
@@ -57,20 +57,17 @@
           "value": 100
         },
         {
-          "type": "ConstIntegerValue",
-          "referenceId": "gPVP",
-          "value": 5
-        },
-        {
           "type": "EntityCaracValue",
           "referenceId": "jPVP",
           "entitySelector": {
-            "type": "OwnerOfSelector",
-            "selector": {
-              "type": "EffectHolderSelector"
-            }
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
           },
           "carac": 20
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "gPVP",
+          "value": 5
         }
       ],
       "externalDynamicValueReferences": [],
@@ -246,7 +243,7 @@
     "pt": "Ciross"
   },
   "description": {
-    "fr": "<if pvm>Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v{ATvalue:v,percent,+} à vos personnages pour le tour par jauge générée.</if><if pvp>{#Jauge}\\_({value:gPVP}) et {%APPEARANCE}\\vPossède {RIPOSTEvalue:rPVP,percent}.</if>\n\\---\n<if pvm><rem>Limité à {value:limit} fois par tour.</rem></if><if pvp><rem>Jauges générées\\_: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "fr": "<if pvm>Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v{ATvalue:v,percent,+} à vos personnages pour le tour par jauge générée.\n\\---<rem>Limité à {value:limit} fois par tour.</rem>\n</if>\n<if pvp>{#Jauge}\\_({value:gPVP}) et {%APPEARANCE}\\vPossède {RIPOSTEvalue:rPVP,percent}.\n<if fight>\\---<rem>Jauges générées : {value:jPVP}</rem></if>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
     "en": "<if pvm>When you generate {%GAUGE, plural:other}:\\v{ATvalue:v,percent,+} to your characters for the turn per gauge generated.</if><if pvp>{#Jauge}\\_({value:gPVP}) and {%APPEARANCE}\\vHas {RIPOSTEvalue:rPVP,percent}.</if>\n\\---\n<if pvm><rem>Limit: {value:limit} {limit, plural, one[time] other[times]} per turn.</rem></if><if pvp><rem>Gauges Generated: {value:jPVP}.</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
     "es": "<if pvm>Cuando generas {%GAUGE, plural:other}:\\v{ATvalue:v,percent,+} a tus personajes durante el turno por indicador generado.</if><if pvp>{#Jauge}\\_({value:gPVP}) y {%APPEARANCE}\\vPosee un {RIPOSTEvalue:rPVP,percent}.</if>\n\\---\n<if pvm><rem>Limitado a {value:limit} {limit, plural, one[vez] other[veces]} por turno.</rem></if><if pvp><rem>Indicadores generados: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
     "de": "<if pvm>Wenn du {%GAUGE, plural:other} generierst:\\v{ATvalue:v,percent,+} pro generiertem Elementarpunkt für deine Charaktere für die Runde.</if><if pvp>{#Jauge}\\_({value:gPVP}) und {%APPEARANCE}\\vBesitzt {RIPOSTEvalue:rPVP,percent}.</if>\n\\---\n<if pvm><rem>Auf {value:limit}-mal pro Runde begrenzt.</rem></if><if pvp><rem>Generierte Elementarpunkte: {value:jPVP}</rem></if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",

@@ -6,13 +6,13 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": 4149792116076202553
+    "m_PathID": 4088305958716738208
   },
   "m_Name": "1162",
   "m_id": 1162,
   "m_displayName": "SEASON - FOIRE DU TROOL - Revelation Tofu",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 514929920,
     "b": 140115860,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "1b4562fc56fce0c49a5ddb6af3e4adc2"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -74,13 +74,64 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "AllCoordsSelector"
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "EntityPositionFilter",
+            "targetsToCompare": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllBoardPresencesSelector"
+              },
+              "filters": [
+                {
+                  "type": "SummoningDefinitionFilter",
+                  "condition": 1,
+                  "summonings": [
+                    1632
+                  ]
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p1",
+          "value": 400
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p2",
+          "value": 400
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p3",
+          "value": 700
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p4",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p5",
+          "value": 200
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p7",
+          "value": 100
+        }
+      ],
       "externalDynamicValueReferences": [
         "CustomRule.247.p2"
       ],
@@ -89,9 +140,17 @@
     }
   },
   "name": {
-    "fr": "Révélation Tofu"
+    "fr": "Révélation Tofu",
+    "en": "Tofu Reveal",
+    "es": "Revelación de Tofu",
+    "de": "Tofu-Offenbarung",
+    "pt": "Revelação de Tofu"
   },
   "description": {
-    "fr": "Révèle la {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p2,+} Points si la cage révélée est une {Summoning:1291!}."
+    "fr": "Révèle la {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p2,+} Points si la cage révélée est une {Summoning:1291!}.",
+    "en": "Reveals the {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p2,+} Points if the revealed cage is a {Summoning:1291!}.",
+    "es": "Revela la {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p2,+} Puntos si la jaula revelada es una {Summoning:1291!}.",
+    "de": "Enthüllt den {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p2,+} Punkte, wenn der enthüllte Käfig ein {Summoning:1291!} ist.",
+    "pt": "Revela a {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p2,+} pontos se a jaula revelada for uma {Summoning:1291!}."
   }
 }

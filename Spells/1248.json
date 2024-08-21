@@ -6,13 +6,13 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": 4149792116076202553
+    "m_PathID": 4088305958716738208
   },
   "m_Name": "1248",
   "m_id": 1248,
   "m_displayName": "SEASON - FOIRE DU TROOL - Gros coup de marteau",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 50802415,
     "b": -1117199932,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "64ad9d2346845d94caddbb9435c46bd1"
+    "assetGuid": "00e9800b02b65c44ea6c6305a1efa2c9"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -88,7 +88,7 @@
     "spellEffectData": [
       {
         "type": "SpellEffectInstantiationData",
-        "spellEffect": "0058c7f0cf38f2144882d03a8f81e747",
+        "spellEffect": "bbec3ca1073e28448b398936714f9311",
         "originTarget": {
           "type": "FirstCastTargetSelector"
         },
@@ -98,10 +98,25 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "spell",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 5
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
+        {
+          "type": 25,
+          "id": 1693
+        },
         {
           "type": 7,
           "id": 2
@@ -110,9 +125,17 @@
     }
   },
   "name": {
-    "fr": "Gros Coup de Marteau"
+    "fr": "{0,plural,one[Gros Coup de Marteau] other[Gros Coups de Marteau]}",
+    "en": "{0,plural,one[Huge Hammer Blow] other[Huge Hammer Blows]}",
+    "es": "{0,plural,one[Martillazo] other[Martillazos]}",
+    "de": "{0,plural,one[Großer Hammerschlag] other[Große Hammerschläge]}",
+    "pt": "{0,plural,one[Martelada] other[Marteladas]}"
   },
   "description": {
-    "fr": "Détruit les {ObjectMechanism:2,plural:other} dans la zone\\_<sprite name=\"cell_cross\"> ciblée."
+    "fr": "Détruit les {ObjectMechanism:2,plural:other} et {ObjectMechanism:165,plural:other!} dans la zone\\_<sprite name=\"cell_cross\"> ciblée.\n\\---\nSi {value:v} entités sont détruites\\_:\\vAjoute {value:spell}\\_{Spell:1693,plural:other} à votre main.",
+    "en": "Destroys the {ObjectMechanism:2,plural:other} and {ObjectMechanism:165,plural:other!} in the targeted <sprite name=\"cell_cross\">\\_zone.\n\\---\nIf {value:v} {v, plural, one[entity is] other[entities are]} destroyed:\\vAdds {value:spell}\\_{Spell:1693,value:spell} to your hand.",
+    "es": "Destruye los {ObjectMechanism:2,plural:other} y los {ObjectMechanism:165,plural:other!} en la zona\\_<sprite name=\"cell_cross\"> objetivo.\n\\---\nSi {value:v} entidades son destruidas:\\vAñade {value:spell}\\_{Spell:1693,plural:other} a tu mano.",
+    "de": "Zerstört {ObjectMechanism:2,plural:other} und {ObjectMechanism:165,plural:other!} im Zielbereich\\_<sprite name=\"cell_cross\">.\n\\---\nWenn {value:v} Einheiten zerstört werden:\\vFügt deiner Hand „{value:spell}\\_{Spell:1693,plural:other}“ hinzu.",
+    "pt": "Destrói os {ObjectMechanism:2,plural:other} e {ObjectMechanism:165,plural:other!} na zona\\_<sprite name=\"cell_cross\"> visada.\n\\---\nSe {value:v} entidades forem destruídas:\\vAdiciona {value:spell}\\_{Spell:1693,plural:other} à sua mão."
   }
 }

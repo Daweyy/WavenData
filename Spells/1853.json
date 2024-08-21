@@ -1,0 +1,150 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1853",
+  "m_id": 1853,
+  "m_displayName": "SEASON - CHAFER - Attaque chevaleresque",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -68526609,
+    "b": -1264253468,
+    "c": -303986328,
+    "d": 432339204,
+    "e": -1166683853
+  },
+  "m_i18nDescriptionId": {
+    "a": -68526609,
+    "b": -1264253468,
+    "c": -303986328,
+    "d": 432339204,
+    "e": 1216537601
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "a97649928b3a61945a28165cf3e74b7c"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1853,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCharacterSelector",
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
+              }
+            },
+            {
+              "type": "CompanionDefinitionFilter",
+              "condition": 2,
+              "companions": [
+                288
+              ]
+            },
+            {
+              "type": "WeaponDefinitionFilter",
+              "condition": 2,
+              "weapons": [
+                128
+              ]
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "90273fae46a97314b9275f7b8ad36afc",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Attaque Chevaleresque",
+    "en": "Knightly Attack",
+    "es": "Ataque Caballeresco",
+    "de": "Ritterlicher Angriff",
+    "pt": "Ataque Cavalheiresco"
+  },
+  "description": {
+    "fr": "{ATvalue:at,+,percent} au Chevalier et inflige son {%at} sur les adversaires adjacents\\_<sprite name=\"cell_cross\">.\n\\---\n{%DestroyOnPlayed}",
+    "en": "{ATvalue:at,+,percent} to the Knight and inflicts their {%at} on the adjacent\\_<sprite name=\"cell_cross\"> opponents.\n\\---\n{%DestroyOnPlayed}",
+    "es": "{ATvalue:at,+,percent} al caballero e inflige su {%at} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.\n\\---\n{%DestroyOnPlayed}",
+    "de": "{ATvalue:at,+,percent} für den Ritter. Verursacht seinen {%at} bei angrenzenden\\_<sprite name=\"cell_cross\"> Gegnern als Schaden.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "{ATvalue:at,+,percent} ao Cavaleiro e inflige seu {%at} aos adversários adjacentes\\_<sprite name=\"cell_cross\">.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

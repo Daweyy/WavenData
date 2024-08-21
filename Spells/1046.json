@@ -6,13 +6,13 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": 4149792116076202553
+    "m_PathID": 4088305958716738208
   },
   "m_Name": "1046",
   "m_id": 1046,
   "m_displayName": "SEASON - FOIRE DU TROOL - Cage Memoire",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1990969776,
     "b": -704631932,
@@ -29,11 +29,21 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "2254ed32e94698b499ceae9bce7916ee"
   },
   "m_spellEffectOverrideReferences": {
-    "m_keys": [],
-    "m_values": []
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "cf81fcd0be16921458032ad973d93167"
+      },
+      {
+        "assetGuid": "eb29d8c0ce291b14089ec2d2a9032487"
+      }
+    ]
   },
   "values": {
     "type": "SpellDefinition",
@@ -80,16 +90,34 @@
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ThisSpellEvolutionValue",
+          "referenceId": "ev"
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "maxEV",
+          "value": 8
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
     }
   },
   "name": {
-    "fr": "Cage Mémoire"
+    "fr": "{0,plural,one[Cage Mémoire] other[Cages Mémoire]}",
+    "en": "{0,plural,one[Memory Cage] other[Memory Cages]}",
+    "es": "{0,plural,one[Jaula Memoria] other[Jaulas Memoria]}",
+    "de": "{0,plural,one[Erinnerungskäfig] other[Erinnerungskäfige]}",
+    "pt": "{0,plural,one[Jaula de Memória] other[Jaulas de Memória]}"
   },
   "description": {
-    "fr": "Cache les Cages et et les mélanges"
+    "fr": "Cache et mélange les cages.\n\\---\n<rem>Termine le mini-jeu quand vous avez joué ce sort {value:maxEV}\\_fois.\nCompteur {Spell:1046!}\\_ : {value:ev}/{value:maxEV}.</rem>",
+    "en": "Hides and shuffles the cages.\n\\---\n<rem>The minigame ends when you've played this spell {value:maxEV}\\_{maxEV, plural, one[time] other[times]}.\n{Spell:1046!} Count: {value:ev}/{value:maxEV}.</rem>",
+    "es": "Oculta y mezcla las jaulas.\n\\---\n<rem>Termina el minijuego cuando has lanzado este hechizo {value:maxEV}\\_veces.\nContador {Spell:1046!}: {value:ev}/{value:maxEV}.</rem>",
+    "de": "Verbirgt und mischt die Käfige.\n\\---\n<rem>Beendet das Minispiel, wenn du diesen Zauber {value:maxEV}-mal ausgespielt hast.\n{Spell:1046!}-Zähler: {value:ev}/{value:maxEV}.</rem>",
+    "pt": "Esconde e mistura as jaulas.\n\\---\n<rem>Termina o minijogo quando você tiver lançado este feitiço {value:maxEV}\\_{maxEV, plural, one[vez] other[vezes]}.\nContador {Spell:1046!}: {value:ev}/{value:maxEV}.</rem>"
   }
 }

@@ -1,0 +1,175 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1438",
+  "m_id": 1438,
+  "m_displayName": "SEASON - CHAFER - Bond Chevaleresque",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1890948763,
+    "b": -2090002860,
+    "c": 196711786,
+    "d": -1305260491,
+    "e": -1501452584
+  },
+  "m_i18nDescriptionId": {
+    "a": -1890948763,
+    "b": -2090002860,
+    "c": 196711786,
+    "d": -1305260491,
+    "e": -1248019402
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3d1d8d1f011ebd84f8ac08b1b9621a3b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1438,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "CompanionDefinitionFilter",
+            "condition": 2,
+            "companions": [
+              288
+            ]
+          },
+          {
+            "type": "WeaponDefinitionFilter",
+            "condition": 2,
+            "weapons": [
+              128
+            ]
+          }
+        ]
+      },
+      "selector2": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "FirstCastTargetSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 9
+                }
+              }
+            },
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        },
+        "minRadius": null
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 9
+        },
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "x",
+          "entitySelector": {
+            "type": "EffectHolderSelector"
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Bond chevaleresque",
+    "en": "Knightly Jump",
+    "es": "Salto Caballeresco",
+    "de": "Ritterlicher Sprung",
+    "pt": "Salto Cavalheiresco"
+  },
+  "description": {
+    "fr": "Téléporte un Chevalier et inflige son {%at} autour<sprite name=\"cell_around\"> de sa case d'arrivée.\n\\---\n{%DestroyOnPlayed}",
+    "en": "Teleports one Knight and inflicts their {%at} around <sprite name=\"cell_around\"> the destination cell.\n\\---\n{%DestroyOnPlayed}",
+    "es": "Teletransporta a un caballero e inflige su {%at} alrededor<sprite name=\"cell_around\"> de su casilla de llegada.\n\\---\n{%DestroyOnPlayed}",
+    "de": "Teleportiert einen Ritter und verursacht seinen {%at} im Umkreis\\_<sprite name=\"cell_around\"> seines Zielfelds als Schaden.\n\\---\n{%DestroyOnPlayed}",
+    "pt": "Teletransporta um Cavaleiro e inflige seu {%at} em\\_volta\\_<sprite name=\"cell_around\"> da sua célula de chegada.\n\\---\n{%DestroyOnPlayed}"
+  }
+}

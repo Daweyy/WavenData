@@ -6,7 +6,7 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": -7636804426726794168
+    "m_PathID": 4623072324241944215
   },
   "m_Name": "446",
   "m_id": 446,
@@ -50,6 +50,17 @@
           "type": "ConstIntegerValue",
           "referenceId": "vPVP",
           "value": 50
+        },
+        {
+          "type": "EntityCaracValue",
+          "referenceId": "jPVP",
+          "entitySelector": {
+            "type": "OwnerOfSelector",
+            "selector": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          "carac": 20
         },
         {
           "type": "ConstIntegerValue",
@@ -235,7 +246,7 @@
     "pt": "Biste"
   },
   "description": {
-    "fr": "<if pvm>Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v{ATvalue:v,percent,+} par {%GAUGE} générée.</if><if pvp>{#Jauge}\\_({value:g}) et {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "fr": "<if pvm>Lorsque vous générez des {%GAUGE, plural:other}\\_:\\v{ATvalue:v,percent,+} par {%GAUGE} générée.</if>\n<if pvp>{#Jauge}\\_({value:g}) et {%APPEARANCE} {ATvalue:vPVP,percent,+}.\n<if fight>\\---<rem>Jauges générées\\_: {value:jPVP}</rem></if>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
     "en": "<if pvm>When you generate {%GAUGE, plural:other}:\\v{ATvalue:v,percent,+} per {%GAUGE} generated.</if><if pvp>{#Jauge}\\_({value:g})\\_and {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
     "es": "<if pvm>Cuando generas {%GAUGE, plural:other}:\\v{ATvalue:v,percent,+} por {%GAUGE} generado.</if><if pvp>{#Jauge}\\_({value:g}) y {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
     "de": "<if pvm>Wenn du {%GAUGE, plural:other} generierst:\\v{ATvalue:v,percent,+} pro generiertem {%GAUGE}.</if><if pvp>{#Jauge}\\_({value:g}) und {%APPEARANCE} {ATvalue:vPVP,percent,+}.</if>\n<family>{%FAMILY_ALBUERA_NAME}</family>",

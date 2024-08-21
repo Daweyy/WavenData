@@ -1,0 +1,156 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1219",
+  "m_id": 1219,
+  "m_displayName": "SEASON - VAMPYRE - serpillière",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 769547283,
+    "b": -232002652,
+    "c": 124551945,
+    "d": -2071432067,
+    "e": -1891401654
+  },
+  "m_i18nDescriptionId": {
+    "a": 769547283,
+    "b": -232002652,
+    "c": 124551945,
+    "d": -2071432067,
+    "e": -859874107
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "bc064593d539b414193747c24837e537"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1219,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "TwoCastTargetDefinition",
+      "selector1": {
+        "type": "AllFloorMechanismsSelector"
+      },
+      "selector2": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "FirstCastTargetSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 3
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "aab6a19300b7a1a47baebe25c7ef217b",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": {
+          "type": "SecondCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 3
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "DALLE",
+        {
+          "type": 6,
+          "id": 309
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "Coup de serpillière",
+    "en": "Mop It Up",
+    "es": "A pasar la fregona",
+    "de": "Reinemachen",
+    "pt": "Golpe de Esfregão"
+  },
+  "description": {
+    "fr": "Repousse une {FloorMechanism:309} jusqu'a {cell:c}.\n\\---\nAugmente son coût de {PAvalue:pa,+} pour chaque utilisation jusqu'à la fin du tour.\n<rem>Ce sort revient dans votre main.</rem>",
+    "en": "Pushes one {FloorMechanism:309} up to {cell:c}.\n\\---\nIncreases its cost by {PAvalue:pa,+} each time it is used until the end of the turn.\n<rem>This spell returns to your hand.</rem>",
+    "es": "Empuja un {FloorMechanism:309} hasta {cell:c}.\n\\---\nAumenta su coste de {PAvalue:pa,+} por cada utilización hasta el final del turno.\n<rem>Este hechizo vuelve a tu mano.</rem>",
+    "de": "Stößt eine\\_{FloorMechanism:309} bis zu {cell:c} zurück.\n\\---\nErhöht ihre Kosten bis zum Rundenende um\\_{PAvalue:pa,+} pro Verwendung.\n<rem>Dieser Zauber geht zurück auf deine Hand.</rem>",
+    "pt": "Empurra uma {FloorMechanism:309} por até {cell:c}.\n\\---\nAumenta seu custo em {PAvalue:pa,+} por cada utilização até o fim do turno.\n<rem>Este feitiço volta para a sua mão.</rem>"
+  }
+}

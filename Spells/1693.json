@@ -6,13 +6,13 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": 4149792116076202553
+    "m_PathID": 4088305958716738208
   },
   "m_Name": "1693",
   "m_id": 1693,
   "m_displayName": "SEASON - FOIRE DU TROOL - Petit coup de marteau",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1450520224,
     "b": 1570908148,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "64ad9d2346845d94caddbb9435c46bd1"
+    "assetGuid": "5a0b83f8cde9be44e8337d5d9f23ec27"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -90,7 +90,8 @@
             "type": "ObjectMechanismDefinitionFilter",
             "condition": 1,
             "objectMechanisms": [
-              2
+              2,
+              165
             ]
           }
         ]
@@ -109,16 +110,30 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 3
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
     }
   },
   "name": {
-    "fr": "Petit Coup de Marteau"
+    "fr": "{0,plural,one[Petit Coup de Marteau] other[Petits Coups de Marteau]}",
+    "en": "{0,plural,one[Little Hammer Blow] other[Little Hammer Blows]}",
+    "es": "{0,plural,one[Pequeño Martillazo] other[Pequeños Martillazos]}",
+    "de": "{0,plural,one[Kleiner Hammerschlag] other[Kleine Hammerschläge]}",
+    "pt": "{0,plural,one[Marteladinha] other[Marteladinhas]}"
   },
   "description": {
-    "fr": "Détruit le {ObjectMechanism:2!} ciblé."
+    "fr": "Détruit le {ObjectMechanism:2!} ou le {ObjectMechanism:165!} ciblé.\nRéinvoque la cible sur {cell:nb} adjacentes\\_<sprite name=\"cell_cross\">.",
+    "en": "Destroys the targeted {ObjectMechanism:2!} or {ObjectMechanism:165!}.\nSummons the target again on {value:nb}\\_adjacent\\_<sprite name=\"cell_cross\"> {nb, plural, one[cell] other[cells]}.",
+    "es": "Destruye el {ObjectMechanism:2!} o el {ObjectMechanism:165!} objetivo.\nVuelve a invocar al objetivo en {cell:nb} adyacentes\\_<sprite name=\"cell_cross\">.",
+    "de": "Zerstört den anvisierten {ObjectMechanism:2!} oder {ObjectMechanism:165!}.\nBeschwört das Ziel auf {value:nb} {nb, plural, one[angrenzenden] other[angrenzenden]}\\_<sprite name=\"cell_cross\"> {nb, plural, one[Feld] other[Feldern]}.",
+    "pt": "Destrói o {ObjectMechanism:2!} ou o {ObjectMechanism:165!} visado.\nReinvoca o alvo em {cell:nb} adjacentes\\_<sprite name=\"cell_cross\">."
   }
 }

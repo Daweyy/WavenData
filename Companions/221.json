@@ -85,7 +85,17 @@
       "type": "ReferenceScalingFactor",
       "reference": 0
     },
-    "spells": [],
+    "spells": [
+      {
+        "type": "SpellOnSpawnWithDestination",
+        "condition": {
+          "type": "HolderHasSkillCondition",
+          "skill": 113
+        },
+        "spell": 739,
+        "destination": 1
+      }
+    ],
     "merchantCosts": [],
     "purchaseConditionalAvailability": {
       "type": "Hidden"
@@ -107,75 +117,37 @@
     "castCondition": {
       "type": "ConditionalCastCondition",
       "condition": {
-        "type": "AndCondition",
-        "conditions": [
-          {
-            "type": "NumberOfEntityCondition",
-            "selector": {
-              "type": "FilteredEntitySelector",
-              "from": {
-                "type": "AllBoardPresencesSelector"
-              },
-              "filters": [
-                {
-                  "type": "TeamFilter",
-                  "isIdentical": true,
-                  "reference": {
-                    "type": "EffectHolderSelector"
-                  }
-                },
-                {
-                  "type": "CompanionDefinitionFilter",
-                  "condition": 1,
-                  "companions": [
-                    221
-                  ]
-                }
-              ]
-            },
-            "value": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
-              }
-            }
+        "type": "NumberOfEntityCondition",
+        "selector": {
+          "type": "FilteredEntitySelector",
+          "from": {
+            "type": "AllBoardPresencesSelector"
           },
-          {
-            "type": "NumberOfEntityCondition",
-            "selector": {
-              "type": "FilteredEntitySelector",
-              "from": {
-                "type": "AllBoardPresencesSelector"
-              },
-              "filters": [
-                {
-                  "type": "TeamFilter",
-                  "isIdentical": true,
-                  "reference": {
-                    "type": "EffectHolderSelector"
-                  }
-                },
-                {
-                  "type": "SummoningDefinitionFilter",
-                  "condition": 1,
-                  "summonings": [
-                    20879
-                  ]
-                }
-              ]
-            },
-            "value": {
-              "type": "EqualsTo",
-              "dynamicValue": {
-                "type": "ConstIntegerValue",
-                "referenceId": "",
-                "value": 0
+          "filters": [
+            {
+              "type": "TeamFilter",
+              "isIdentical": true,
+              "reference": {
+                "type": "CasterSelector"
               }
+            },
+            {
+              "type": "CompanionDefinitionFilter",
+              "condition": 1,
+              "companions": [
+                221
+              ]
             }
+          ]
+        },
+        "value": {
+          "type": "EqualsTo",
+          "dynamicValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 0
           }
-        ]
+        }
       },
       "ifTrue": {
         "type": "SuccessCastCondition"

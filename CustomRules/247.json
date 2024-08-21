@@ -6,15 +6,15 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": 641088705933543125
+    "m_PathID": 2065592925952603065
   },
   "m_Name": "247",
   "m_id": 247,
   "m_displayName": "SEASON - FOIRE DU TROOL - Portail",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_illustration": {
-    "assetGuid": "0ab8784096a3f184fa570e01a676fba3"
+    "assetGuid": "e8c39305081355b44b6b50e929e2f509"
   },
   "m_i18nNameId": {
     "a": -2124511818,
@@ -45,28 +45,38 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "t",
-          "value": 5
-        },
-        {
-          "type": "ConstIntegerValue",
           "referenceId": "p1",
-          "value": 10
+          "value": 400
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "p2",
-          "value": 20
+          "value": 400
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "p3",
-          "value": 50
+          "value": 700
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p4",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p5",
+          "value": 200
         },
         {
           "type": "ConstIntegerValue",
           "referenceId": "p7",
-          "value": 10
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "t",
+          "value": 3
         }
       ],
       "externalDynamicValueReferences": [],
@@ -75,12 +85,24 @@
     }
   },
   "name": {
-    "fr": "Portail Foire du Trool"
+    "fr": "Portail de la {BattlePassSeason:614}",
+    "en": "{BattlePassSeason:614} Portal",
+    "es": "Portal de la {BattlePassSeason:614}",
+    "de": "Portal von {BattlePassSeason:614}",
+    "pt": "Portal da {BattlePassSeason:614}"
   },
   "description": {
-    "fr": "<color=#EEBB44>Jouez à des mini-jeux pendant 5 tours.</color>\n\\---\n{%FightTurnStartedMonsters} Change de mini-jeu."
+    "fr": "<color=#EEBB44>Jouez à des mini-jeux pendant {value:t} tours.</color>\n\\---\n{%FightTurnEnded} Change de mini-jeu.",
+    "en": "<color=#EEBB44>Play minigames for {value:t} turns.</color>\n\\---\n{%FightTurnEnded} Change minigames.",
+    "es": "<color=#EEBB44>Juegas a minijuegos durante {value:t} turnos.</color>\n\\---\n{%FightTurnEnded} Cambia de minijuego.",
+    "de": "<color=#EEBB44>Spiele {value:t}\\_Runden lang Minispiele.</color>\n\\---\n{%FightTurnEnded} Wechsle das Minispiel.",
+    "pt": "<color=#EEBB44>Jogue minijogos durante {value:t} turnos.</color>\n\\---\n{%FightTurnEnded} Troca de minijogo."
   },
   "summary": {
-    "fr": "<color=#EEBB44>Jouez à des mini-jeux pendant 5 tours.</color>"
+    "fr": "<color=#EEBB44>Jouez à des mini-jeux pendant {value:t} tours.</color>",
+    "en": "<color=#EEBB44>Play minigames for {value:t} turns.</color>",
+    "es": "<color=#EEBB44>Juegas a minijuegos durante {value:t} turnos.</color>",
+    "de": "<color=#EEBB44>Spiele {value:t}\\_Runden lang Minispiele.</color>",
+    "pt": "<color=#EEBB44>Jogue minijogos durante {value:t} turnos.</color>"
   }
 }

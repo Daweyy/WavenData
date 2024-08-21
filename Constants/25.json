@@ -59,6 +59,7 @@
       "battlePassInstructionId": 425,
       "nudgeDeckEditButtonForSkillTreeInstructionId": 562,
       "pvpInstructionId": 442,
+      "skillTreeOnBoardingIllu": "9d09b606c9a144347b6ea607934169ed",
       "nudgeSkillTreeButtonInstructionId": 804,
       "skillTreeInstructionId": 818,
       "nudgeDeckEditButtonForSpellUpgradeInstructionId": 275,
@@ -1021,7 +1022,221 @@
         }
       ],
       "minimalGradeToReceiveOwnerShip": 4,
-      "sakaPatataureFight": 1211
+      "sakaPatataureFight": 1211,
+      "maxGuildMissionId": 8,
+      "guildMissions": [
+        {
+          "type": "GuildNotifyPresenceMission",
+          "id": 4,
+          "thresholds": [
+            {
+              "type": "GuildMissionThreshold",
+              "value": 1,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 2,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 3,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 4,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 5,
+              "experience": 10
+            }
+          ]
+        },
+        {
+          "type": "GuildDungeonMission",
+          "id": 5,
+          "thresholds": [
+            {
+              "type": "GuildMissionThreshold",
+              "value": 2,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 3000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 4500,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 6000,
+              "experience": 10
+            }
+          ],
+          "specificDungeonQuestId": null
+        },
+        {
+          "type": "GuildSakaPatataureMission",
+          "id": 6,
+          "thresholds": [
+            {
+              "type": "GuildMissionThreshold",
+              "value": 40,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 80,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 120,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 160,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 200,
+              "experience": 10
+            }
+          ]
+        },
+        {
+          "type": "GuildMemberCountMission",
+          "id": 7,
+          "thresholds": [
+            {
+              "type": "GuildMissionThreshold",
+              "value": 5,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 10,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 20,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 40,
+              "experience": 10
+            }
+          ]
+        }
+      ],
+      "levelBonuses": [
+        {
+          "type": "GuildMerchantSlot",
+          "level": 1
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 5
+        },
+        {
+          "type": "XpBonusInFight",
+          "level": 5,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 10
+        },
+        {
+          "type": "KamasBonusInFight",
+          "level": 10,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 15
+        },
+        {
+          "type": "XpBonusInFight",
+          "level": 15,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 20
+        },
+        {
+          "type": "KamasBonusInFight",
+          "level": 20,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 25
+        },
+        {
+          "type": "XpBonusInFight",
+          "level": 25,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 30
+        },
+        {
+          "type": "KamasBonusInFight",
+          "level": 30,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 35
+        },
+        {
+          "type": "XpBonusInFight",
+          "level": 35,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 40
+        },
+        {
+          "type": "KamasBonusInFight",
+          "level": 40,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 45
+        },
+        {
+          "type": "XpBonusInFight",
+          "level": 45,
+          "percent": 2
+        },
+        {
+          "type": "GuildMerchantSlot",
+          "level": 50
+        },
+        {
+          "type": "KamasBonusInFight",
+          "level": 50,
+          "percent": 2
+        }
+      ]
     },
     "fightDefinitionConstants": {
       "type": "FightDefinitionConstants",
@@ -1142,20 +1357,6 @@
           }
         },
         {
-          "k": 19,
-          "v": {
-            "type": "LinearScalingFactorComputer",
-            "scale": 0.05
-          }
-        },
-        {
-          "k": 9,
-          "v": {
-            "type": "LinearScalingFactorComputer",
-            "scale": 0.05
-          }
-        },
-        {
           "k": 12,
           "v": {
             "type": "LinearScalingFactorComputer",
@@ -1213,41 +1414,6 @@
                 "scale": 0.07
               }
             ]
-          }
-        },
-        {
-          "k": 20,
-          "v": {
-            "type": "LinearScalingFactorComputer",
-            "scale": 0.07
-          }
-        },
-        {
-          "k": 1,
-          "v": {
-            "type": "LinearScalingFactorComputer",
-            "scale": 0.04
-          }
-        },
-        {
-          "k": 2,
-          "v": {
-            "type": "LinearScalingFactorComputer",
-            "scale": 0.04
-          }
-        },
-        {
-          "k": 3,
-          "v": {
-            "type": "LinearScalingFactorComputer",
-            "scale": 0.06
-          }
-        },
-        {
-          "k": 4,
-          "v": {
-            "type": "LinearScalingFactorComputer",
-            "scale": 0.06
           }
         },
         {
@@ -1913,7 +2079,7 @@
       "actionAtEndOfSeason": {
         "type": "LeaveTickets"
       },
-      "losesUntilRunIsLost": 3,
+      "losesUntilRunIsLost": null,
       "costToRerun": [],
       "dropsPerVictory": [],
       "ladderRewards": {

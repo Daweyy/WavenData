@@ -6,7 +6,7 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": -7636804426726794168
+    "m_PathID": 4623072324241944215
   },
   "m_Name": "42",
   "m_id": 42,
@@ -43,96 +43,6 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
-          "referenceId": "bc",
-          "baseValue": {
-            "type": "PercentageOfValue",
-            "referenceId": null,
-            "percentage": {
-              "type": "SumValue",
-              "referenceId": "",
-              "valuesToSum": [
-                {
-                  "type": "SumValue",
-                  "referenceId": null,
-                  "valuesToSum": [
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": 100
-                    },
-                    {
-                      "type": "ConditionalValue",
-                      "referenceId": "",
-                      "condition": {
-                        "type": "HolderHasSkillCondition",
-                        "skill": 137241
-                      },
-                      "ifTrue": {
-                        "type": "ConstIntegerValue",
-                        "referenceId": "Bper",
-                        "value": 150
-                      },
-                      "ifFalse": {
-                        "type": "ConstIntegerValue",
-                        "referenceId": "",
-                        "value": 0
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "ConditionalValue",
-                  "referenceId": "",
-                  "condition": {
-                    "type": "AndCondition",
-                    "conditions": [
-                      {
-                        "type": "ContextIsCriticalCondition"
-                      },
-                      {
-                        "type": "HolderHasSkillCondition",
-                        "skill": 876
-                      }
-                    ]
-                  },
-                  "ifTrue": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "Bper2",
-                    "value": 150
-                  },
-                  "ifFalse": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "",
-                    "value": 0
-                  }
-                }
-              ]
-            },
-            "from": {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 13
-            }
-          },
-          "factor": {
-            "type": "ReferenceScalingFactor",
-            "reference": 22
-          },
-          "buffs": [
-            89,
-            24
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "OwnerOfSelector",
-            "selector": {
-              "type": "EffectHolderSelector"
-            }
-          },
-          "addInsteadOfMultiply": false
-        },
-        {
           "type": "ConstIntegerValue",
           "referenceId": "Bper",
           "value": 150
@@ -141,6 +51,28 @@
           "type": "ConstIntegerValue",
           "referenceId": "Bper2",
           "value": 150
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "bc",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 13
+          },
+          "factor": {
+            "type": "ReferenceScalingFactor",
+            "reference": 22
+          },
+          "buffs": [
+            89,
+            14
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
         },
         {
           "type": "BuffedScalingDynamicValue",

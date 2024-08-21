@@ -6,7 +6,7 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": -7636804426726794168
+    "m_PathID": 4623072324241944215
   },
   "m_Name": "360",
   "m_id": 360,
@@ -42,21 +42,18 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "EntityCaracValue",
+          "referenceId": "j",
+          "entitySelector": {
+            "type": "OwnerOfEffectHolderEvenIfRemovedSelector"
+          },
+          "carac": 20
+        },
+        {
           "type": "PvmOrPvpConstIntegerValue",
           "referenceId": "g",
           "valueInPvM": 5,
           "valueInPvP": 6
-        },
-        {
-          "type": "EntityCaracValue",
-          "referenceId": "j",
-          "entitySelector": {
-            "type": "OwnerOfSelector",
-            "selector": {
-              "type": "EffectHolderSelector"
-            }
-          },
-          "carac": 20
         },
         {
           "type": "ConstIntegerValue",
@@ -234,10 +231,10 @@
     "pt": "Mosca"
   },
   "description": {
-    "fr": "{#Jauge}\\_({value:g}) et {%APPEARANCE}\\vGagne {PropertyEffect:19}<if pvm> et piochez {SPELLCOUNTvalue:v}</if>.\n\\---\n<rem>Jauges générées\\_: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "en": "{#Jauge}\\_({value:g}) and {%APPEARANCE}\\vGains {PropertyEffect:19}<if pvm>. Draw {SPELLCOUNTvalue:v}</if>.\n\\---\n<rem>Gauges generated: {value:j}.</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "es": "{#Jauge}\\_({value:g}) y {%APPEARANCE}\\vGana {PropertyEffect:19}<if pvm> y sacas {SPELLCOUNTvalue:v}</if>.\n\\---\n<rem>Indicadores generados: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "de": "{#Jauge}\\_({value:g}) und {%APPEARANCE}\\vWird {PropertyEffect:19}<if pvm> und zieht {SPELLCOUNTvalue:v}</if>.\n\\---\n<rem>Generierte Elementarpunkte: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>",
-    "pt": "{#Jauge}\\_({value:g}) e {%APPEARANCE}\\vGanha {PropertyEffect:19}<if pvm>. Compre {SPELLCOUNTvalue:v}</if>.\n\\---\n<rem>Cargas geradas: {value:j}</rem>\n<family>{%FAMILY_ALBUERA_NAME}</family>"
+    "fr": "{#Jauge}\\_({value:g}) et {%APPEARANCE}\\vGagne {PropertyEffect:19}<if pvm> et piochez {SPELLCOUNTvalue:v}</if>.\n<if fight>\n\\---\n<rem>Jauges générées\\_: {value:j}</rem>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "en": "{#Jauge}\\_({value:g}) and {%APPEARANCE}\\vGains {PropertyEffect:19}<if pvm>. Draw {SPELLCOUNTvalue:v}</if>.\n<if fight>\n\\---\n<rem>Gauges generated: {value:j}.</rem>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "es": "{#Jauge}\\_({value:g}) y {%APPEARANCE}\\vGana {PropertyEffect:19}<if pvm> y sacas {SPELLCOUNTvalue:v}</if>.\n<if fight>\n\\---\n<rem>Indicadores generados: {value:j}</rem>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "de": "{#Jauge}\\_({value:g}) und {%APPEARANCE}\\vWird {PropertyEffect:19}<if pvm> und zieht {SPELLCOUNTvalue:v}</if>.\n<if fight>\n\\---\n<rem>Generierte Elementarpunkte: {value:j}</rem>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>",
+    "pt": "{#Jauge}\\_({value:g}) e {%APPEARANCE}\\vGanha {PropertyEffect:19}<if pvm> e compra {SPELLCOUNTvalue:v}</if>.\n<if fight>\n\\---\n<rem>Cargas geradas: {value:j}</rem>\n</if>\n\\---\n<family>{%FAMILY_ALBUERA_NAME}</family>"
   }
 }

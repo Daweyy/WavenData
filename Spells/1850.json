@@ -6,13 +6,13 @@
   "m_Enabled": 1,
   "m_Script": {
     "m_FileID": 0,
-    "m_PathID": 4149792116076202553
+    "m_PathID": 4088305958716738208
   },
   "m_Name": "1850",
   "m_id": 1850,
   "m_displayName": "SEASON - FOIRE DU TROOL - Revelation Prisonnier",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2051668220,
     "b": -282126204,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "3651623ad2edd014395d747a131165ca"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -74,13 +74,64 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "AllCoordsSelector"
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "EntityPositionFilter",
+            "targetsToCompare": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllBoardPresencesSelector"
+              },
+              "filters": [
+                {
+                  "type": "SummoningDefinitionFilter",
+                  "condition": 1,
+                  "summonings": [
+                    1632
+                  ]
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p1",
+          "value": 400
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p2",
+          "value": 400
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p3",
+          "value": 700
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p4",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p5",
+          "value": 200
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p7",
+          "value": 100
+        }
+      ],
       "externalDynamicValueReferences": [
         "CustomRule.247.p3"
       ],
@@ -89,9 +140,17 @@
     }
   },
   "name": {
-    "fr": "Révélation Prisonnier"
+    "fr": "Révélation Prisonnier",
+    "en": "Prisoner Reveal",
+    "es": "Revelación de Prisionero",
+    "de": "Gefangenen-Offenbarung",
+    "pt": "Revelação de Prisioneiro"
   },
   "description": {
-    "fr": "Révèle la {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p3,+} Points si la cible révélée est un {Summoning:1532!}.\n\\---\nRelance le mini-jeu et ajoute une <b>CAGE</b> si vous avez trouver tous les {Summoning:1532!} et {Summoning:1291!} disponibles."
+    "fr": "Révèle la {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p3,+} Points si la cage révélée est un {Summoning:1532!}.",
+    "en": "Reveals the {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p3,+} Points if the revealed cage is a {Summoning:1532!}.",
+    "es": "Revela la {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p3,+} Puntos si la jaula revelada es un {Summoning:1532!}.",
+    "de": "Enthüllt den {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p3,+} Punkte, wenn der enthüllte Käfig ein {Summoning:1532!} ist.",
+    "pt": "Revela a {Summoning:1632!}.\n\\---\n{value:CustomRule.247.p3,+} pontos se a jaula revelada for um {Summoning:1532!}."
   }
 }
