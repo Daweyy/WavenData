@@ -1,0 +1,126 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "619",
+  "m_id": 619,
+  "m_displayName": "SEASON - MOUETTE - IOP - Epee courte",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 1491937387,
+    "b": 1444105284,
+    "c": 1183875113,
+    "d": -1996029892,
+    "e": -1597772040
+  },
+  "m_i18nDescriptionId": {
+    "a": 1491937387,
+    "b": 1444105284,
+    "c": 1183875113,
+    "d": -1996029892,
+    "e": 1654737310
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "57c5aebe23ad2c548a3b5862f7a10021"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 619,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "EqualsTo",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Épée courte",
+    "en": "Short Sword",
+    "es": "Espada Corta",
+    "de": "Kurzschwert",
+    "pt": "Espada Curta"
+  },
+  "description": {
+    "fr": "Inflige l'{%at} de votre héros à une cible adjacente\\_<sprite name=\"cell_cross\">.",
+    "en": "Inflicts your hero's {%at} on an adjacent\\_<sprite name=\"cell_cross\"> target.",
+    "es": "Inflige el {%at} de tu héroe al objetivo adyacente\\_<sprite name=\"cell_cross\">.",
+    "de": "Verursacht den {%at} deines Helden bei einem angrenzenden\\_<sprite name=\"cell_cross\"> Ziel als Schaden.",
+    "pt": "Inflige o {%at} do seu herói a um alvo adjacente\\_<sprite name=\"cell_cross\">."
+  }
+}

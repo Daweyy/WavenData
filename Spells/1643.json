@@ -1,0 +1,132 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1643",
+  "m_id": 1643,
+  "m_displayName": "SEASON - MOUETTE - IOP - epee croisee",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 1181554345,
+    "b": -56325852,
+    "c": 1166402330,
+    "d": -1104917191,
+    "e": 501475824
+  },
+  "m_i18nDescriptionId": {
+    "a": 1181554345,
+    "b": -56325852,
+    "c": 1166402330,
+    "d": -1104917191,
+    "e": -222221335
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ab780a747127f7a4c816a503a85715fe"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1643,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Épée croisée",
+    "en": "Crossed Sword",
+    "es": "Espada Cruzada",
+    "de": "Gekreuztes Schwert",
+    "pt": "Espada Cruzada"
+  },
+  "description": {
+    "fr": "Inflige l'{%at} de votre héros aux adversaires dans la zone\\_<sprite name=\"cell_cross2\"> ciblée.",
+    "en": "Inflicts your hero's {%at} on opponents in the targeted <sprite name=\"cell_cross2\">\\_zone.",
+    "es": "Inflige el {%at} de tu héroe a los adversarios en la zona seleccionada\\_<sprite name=\"cell_cross2\">.",
+    "de": "Verursacht bei Gegnern im Wirkungsbereich\\_<sprite name=\"cell_cross2\"> den {%at} deines Helden als Schaden.",
+    "pt": "Inflige o {%at} do seu herói aos adversários na zona\\_<sprite name=\"cell_cross2\"> visada."
+  }
+}

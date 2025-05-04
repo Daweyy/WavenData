@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "226",
+  "m_id": 226,
+  "m_displayName": "SEASON - MOUETTE - CRA - Tir croise",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 1570844373,
+    "b": -1685248140,
+    "c": -721859622,
+    "d": -1488900684,
+    "e": 727375370
+  },
+  "m_i18nDescriptionId": {
+    "a": 1570844373,
+    "b": -1685248140,
+    "c": -721859622,
+    "d": -1488900684,
+    "e": 1324045148
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ab780a747127f7a4c816a503a85715fe"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 226,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "a",
+                  "value": 2
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 6
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Tir croisé",
+    "en": "Cross Fire",
+    "es": "Tiro Cruzado",
+    "de": "Kreuzschuss",
+    "pt": "Tiro Cruzado"
+  },
+  "description": {
+    "fr": "Inflige l'{%at} de votre héros aux adversaires dans la zone\\_<sprite name=\"cell_cross\"> entre {value:a} et {cell:c} de votre héros.",
+    "en": "Inflicts your hero's {%at} on opponents in the <sprite name=\"cell_cross\">\\_zone between {value:a} and {cell:c} from your hero.",
+    "es": "Inflige el {%at} de tu héroe a los adversarios en la zona\\_<sprite name=\"cell_cross\"> entre {value:a} y {cell:c} de tu héroe.",
+    "de": "Verursacht bei Gegnern im Wirkungsbereich\\_<sprite name=\"cell_cross\">, die {value:a} bis {cell:c} von deinem Helden entfernt sind, den {%at} deines Helden als Schaden.",
+    "pt": "Inflige o {%at} do seu herói aos adversários na zona\\_<sprite name=\"cell_cross\"> entre {value:a} e {cell:c} do seu herói."
+  }
+}

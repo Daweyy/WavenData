@@ -1,0 +1,148 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1214",
+  "m_id": 1214,
+  "m_displayName": "SEASON - SAVARA - ARME  LA FINESSE",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 900926535,
+    "b": -594270940,
+    "c": 1237111864,
+    "d": -2060380713,
+    "e": 248259091
+  },
+  "m_i18nDescriptionId": {
+    "a": 900926535,
+    "b": -594270940,
+    "c": 1237111864,
+    "d": -2060380713,
+    "e": -1187295170
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "8059f84dc6668fe4582dc15188d0a7a1"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1214,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      31
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "706f8b81c911dc345854f5f1228b9034",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "p",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Arme : La Finesse",
+    "en": "Weapon: Finesse",
+    "es": "Arma: La Sutileza",
+    "de": "Waffe: Elegante Keule",
+    "pt": "Arma: A Sutileza"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:p} à un adversaire.\n\\---\nChange vos {%SPELLCOUNT,plural:other} et {PAvalue:pa,+} au coût de ce sort pour le tour.",
+    "en": "Does {magicalDamage:p} to an opponent.\n\\---\nChanges your {%SPELLCOUNT,plural:other} and {PAvalue:pa,+} to the cost of this spell for the turn.",
+    "es": "Inflige {magicalDamage:p} a un adversario.\n\\---\nCambia tus {%SPELLCOUNT,plural:other} y {PAvalue:pa,+} al coste de este hechizo durante el turno.",
+    "de": "Verursacht {magicalDamage:p} bei einem Gegner.\n\\---\nVerändert deine {%SPELLCOUNT,plural:other} und {PAvalue:pa,+} auf Kosten dieses Zaubers für die Runde.",
+    "pt": "Inflige {magicalDamage:p} a um adversário.\n\\---\nTroca seus {%SPELLCOUNT,plural:other} e {PAvalue:pa,+} ao custo do feitiço durante o turno."
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1461",
+  "m_id": 1461,
+  "m_displayName": "SEASON - SAVARA - LA FINESSE - ATTAQUE LOURDE",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -501678878,
+    "b": 1436288516,
+    "c": -1620065511,
+    "d": 688566397,
+    "e": -991571147
+  },
+  "m_i18nDescriptionId": {
+    "a": -501678878,
+    "b": 1436288516,
+    "c": -1620065511,
+    "d": 688566397,
+    "e": -1850590306
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "b6539b666d7c8c0428706da40fa4767b"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1461,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      29
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CircleAreaOfEffectSelector",
+        "originSelector": {
+          "type": "AllCoordsSelector"
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        },
+        "minRadius": null
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "b839f3d729235994bb1ab127b3024d01",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "p",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 300
+          },
+          "factor": null,
+          "buffs": [
+            51
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "ATTAQUE LOURDE",
+    "en": "HEAVY ATTACK",
+    "es": "ATAQUE PESADO",
+    "de": "SCHWERER ANGRIFF",
+    "pt": "ATAQUE PESADO"
+  },
+  "description": {
+    "fr": "Inflige {magicalDamage:p} aux adversaires dans la zone<sprite name=\"cell_cross\"> ciblée.",
+    "en": "Does {magicalDamage:p} to opponents in the targeted <sprite name=\"cell_cross\">\\_zone.",
+    "es": "Inflige {magicalDamage:p} a los adversarios en la zona <sprite name=\"cell_cross\"> objetivo.",
+    "de": "Verursacht bei Gegnern im Zielbereich\\_<sprite name=\"cell_cross\"> {magicalDamage:p}.",
+    "pt": "Inflige {magicalDamage:p} aos adversários na zona\\_<sprite name=\"cell_cross\"> visada."
+  }
+}

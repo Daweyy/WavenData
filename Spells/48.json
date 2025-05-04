@@ -10,26 +10,26 @@
   },
   "m_Name": "48",
   "m_id": 48,
-  "m_displayName": "SEASON - NOX - NOX - Reserve Noxine",
+  "m_displayName": "SEASON - SAVARA - OPPORTUNITES - ULTIME",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
-    "a": -1233096837,
-    "b": -2019434972,
-    "c": 1030190939,
-    "d": -651105381,
-    "e": 762743316
+    "a": 1878925761,
+    "b": 1471235796,
+    "c": 847661224,
+    "d": -1174931106,
+    "e": -999102337
   },
   "m_i18nDescriptionId": {
-    "a": -1233096837,
-    "b": -2019434972,
-    "c": 1030190939,
-    "d": -651105381,
-    "e": 587223800
+    "a": 1878925761,
+    "b": 1471235796,
+    "c": 847661224,
+    "d": -1174931106,
+    "e": -80141791
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "a7abc865b0f17e543852857d48c1035f"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -47,7 +47,9 @@
     "upgradeRuleId": null,
     "canCrit": false,
     "isEphemeral": false,
-    "tags": [],
+    "tags": [
+      30
+    ],
     "details": {
       "type": "SpellDetails",
       "equipableByPlayers": false,
@@ -66,7 +68,7 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 1
+          "value": 10
         }
       }
     ],
@@ -77,28 +79,76 @@
         "type": "FilteredCharacterSelector",
         "filters": [
           {
-            "type": "CompanionDefinitionFilter",
-            "condition": 1,
-            "companions": [
-              702
-            ]
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
           }
         ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "3d1e485da773bdb49b42b76b97ede629",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 800
+          },
+          "factor": null,
+          "buffs": [
+            51,
+            43
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
     }
   },
   "name": {
-    "fr": "Réserve Noxine"
+    "fr": "ULTIME",
+    "en": "ULTIMATE",
+    "es": "DEFINITIVO",
+    "de": "ULTIMATIV",
+    "pt": "ESPECIAL"
   },
   "description": {
-    "fr": "Détruit une Noxine, +2 de Réserve."
+    "fr": "{Weapon:403!} se déplace en direction d'un adversaire aligné.\n\\---\nInflige {magicalDamage:v} à la cible.",
+    "en": "{Weapon:403!} moves toward an in-line opponent.\n\\---\nDoes {magicalDamage:v} to the target.",
+    "es": "{Weapon:403!} se desplaza en dirección de un adversario alineado.\n\\---\nInflige {magicalDamage:v} al objetivo.",
+    "de": "{Weapon:403!} bewegt sich in Richtung eines Gegners in derselben Reihe.\n\\---\nVerursacht {magicalDamage:v} beim Ziel.",
+    "pt": "{Weapon:403!} se desloca em direção a um adversário alinhado.\n\\---\nInflige {magicalDamage:v} ao alvo."
   }
 }

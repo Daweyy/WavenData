@@ -1,0 +1,159 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1817",
+  "m_id": 1817,
+  "m_displayName": "SEASON - SAVARA - ARME OPPORTUNITES",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1904993504,
+    "b": -888394748,
+    "c": 1189156824,
+    "d": 1751282576,
+    "e": -1091914403
+  },
+  "m_i18nDescriptionId": {
+    "a": -1904993504,
+    "b": -888394748,
+    "c": 1189156824,
+    "d": 1751282576,
+    "e": 1264097421
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "26643f55327cfee4d94cb20f7fcff77a"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1817,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      31
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "HasEmptyPathToMoveToAxisAlignedTargetFilter",
+            "direction": 1,
+            "refTarget": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "GreaterEqualThan",
+              "dynamicValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "932062232519e9244a990204eb7d4532",
+        "originTarget": {
+          "type": "CasterHeroSelector"
+        },
+        "orientation": {
+          "type": "FirstCastTargetSelector"
+        },
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pa",
+          "value": 1
+        },
+        {
+          "type": "BuffedScalingDynamicValue",
+          "referenceId": "v",
+          "baseValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": null,
+            "value": 100
+          },
+          "factor": null,
+          "buffs": [
+            51,
+            43
+          ],
+          "skillBuffs": [],
+          "from": {
+            "type": "CasterSelector"
+          },
+          "addInsteadOfMultiply": false
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Arme : Opportunités",
+    "en": "Weapon: Opportunities",
+    "es": "Arma: Oportunidades",
+    "de": "Waffe: Doppelklinge",
+    "pt": "Arma: Oportunidades"
+  },
+  "description": {
+    "fr": "{Weapon:403!} se déplace en direction d'un adversaire aligné.\n\\---\nInflige {magicalDamage:v} à la cible.\n\\---\nChange vos {%SPELLCOUNT,plural:other} et {PAvalue:pa,+} au coût de ce sort pour le tour.",
+    "en": "{Weapon:403!} moves toward an in-line opponent.\n\\---\nDoes {magicalDamage:v} to he target.\n\\---\nChanges your {%SPELLCOUNT,plural:other} and {PAvalue:pa,+} to the cost of this spell for the turn.",
+    "es": "{Weapon:403!} se desplaza en dirección de un adversario alineado.\n\\---\nInflige {magicalDamage:v} al adversario.\n\\---\nCambia tus {%SPELLCOUNT,plural:other} y {PAvalue:pa,+} al coste de este hechizo durante el turno.",
+    "de": "{Weapon:403!} bewegt sich in Richtung eines Gegners in derselben Reihe.\n\\---\nVerursacht {magicalDamage:v} beim Ziel.\n\\---\nVerändert deine {%SPELLCOUNT,plural:other} und {PAvalue:pa,+} auf Kosten dieses Zaubers für die Runde.",
+    "pt": "{Weapon:403!} se desloca em direção a um adversário alinhado.\n\\---\nInflige {magicalDamage:v} ao alvo.\n\\---\nTroca seus {%SPELLCOUNT,plural:other} e {PAvalue:pa,+} ao custo do feitiço durante o turno."
+  }
+}

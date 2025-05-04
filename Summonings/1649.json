@@ -87,7 +87,19 @@
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": {
-      "type": "AllCharactersSelector"
+      "type": "FilteredEntitySelector",
+      "from": {
+        "type": "AllCharactersSelector"
+      },
+      "filters": [
+        {
+          "type": "WeaponDefinitionFilter",
+          "condition": 1,
+          "weapons": [
+            334
+          ]
+        }
+      ]
     },
     "actionType": 1,
     "actionRange": null,

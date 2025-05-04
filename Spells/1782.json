@@ -1,0 +1,135 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1782",
+  "m_id": 1782,
+  "m_displayName": "SEASON - MOUETTE - CRA - Tir a distance",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -42821734,
+    "b": -1352199564,
+    "c": -1079009128,
+    "d": -953788366,
+    "e": 1123930112
+  },
+  "m_i18nDescriptionId": {
+    "a": -42821734,
+    "b": -1352199564,
+    "c": -1079009128,
+    "d": -953788366,
+    "e": -1160206785
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "138250eaf1f04d645b857c5469960762"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1782,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "a",
+                "value": 2
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 6
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 6
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Tir à Distance",
+    "en": "Long Shot",
+    "es": "Tiro a Distancia",
+    "de": "Fernschuss",
+    "pt": "Tiro a Distância"
+  },
+  "description": {
+    "fr": "Inflige l'{%at} de votre héros à un adversaire entre {value:a} et {cell:c} de votre héros.",
+    "en": "Inflicts your hero's {%at} on an opponent between {value:a} and {cell:c} from your hero.",
+    "es": "Inflige el {%at} de tu héroe a un adversario entre {value:a} y {cell:c} de tu héroe.",
+    "de": "Verursacht bei einem Gegner, der {value:a} bis {cell:c} entfernt steht, den {%at} deines Helden als Schaden.",
+    "pt": "Inflige o {%at} do seu herói a um adversário entre {value:a} e {cell:c} do seu herói."
+  }
+}

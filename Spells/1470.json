@@ -12,7 +12,7 @@
   "m_id": 1470,
   "m_displayName": "SEASON - KERUBIM - Fiole de Chichala",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2141852061,
     "b": -1120226060,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "6907787179984e749a92ac4d02e8d177"
+    "assetGuid": "5137ffbee865f99449e1539da95af9cd"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -92,11 +92,11 @@
       "dynamicValueReferences": [
         {
           "type": "BuffedScalingDynamicValue",
-          "referenceId": "per",
+          "referenceId": "hits",
           "baseValue": {
             "type": "ConstIntegerValue",
             "referenceId": null,
-            "value": 100
+            "value": 1
           },
           "factor": null,
           "buffs": [
@@ -107,6 +107,11 @@
             "type": "CasterSelector"
           },
           "addInsteadOfMultiply": false
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "per",
+          "value": 100
         }
       ],
       "externalDynamicValueReferences": [],
@@ -115,9 +120,17 @@
     }
   },
   "name": {
-    "fr": "Fiole de Chichala"
+    "fr": "Fiole de Chichala",
+    "en": "Chichala Flask",
+    "es": "Frasco de Shishalal",
+    "de": "Phiole mit Chichala",
+    "pt": "Frasco de Chichalá"
   },
   "description": {
-    "fr": "Inflige {value:per,percent} de l'{%AT} de {Weapon:1028!} à un adversaire."
+    "fr": "Inflige {value:hits} fois l'{%AT} de {Weapon:1028!} à un adversaire.",
+    "en": "Inflicts {value:hits} {hits, plural, one[time] other[times]} {Weapon:1028!}'s {%AT} on an opponent.",
+    "es": "Inflige {value:hits}{hits, plural, one[vez] other[veces]} el {%AT} de {Weapon:1028!} a un adversario.",
+    "de": "Verursacht bei einem Gegner {value:hits}-mal den {%AT} von {Weapon:1028!} als Schaden.",
+    "pt": "Inflige {value:hits} {hits, plural, one[vez] other[vezes]} o {%AT} de {Weapon:1028!} a um adversário."
   }
 }

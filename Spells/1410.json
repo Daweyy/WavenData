@@ -1,0 +1,140 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1410",
+  "m_id": 1410,
+  "m_displayName": "SEASON - MOUETTE - IOP - Traversee eclaire",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -919627464,
+    "b": -2144024268,
+    "c": 100826362,
+    "d": 283581299,
+    "e": 544245426
+  },
+  "m_i18nDescriptionId": {
+    "a": -919627464,
+    "b": -2144024268,
+    "c": 100826362,
+    "d": 283581299,
+    "e": -1662685020
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "d42cf069c000c2d4bb05fb170d5b6e91"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1410,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "InLineTargetFilter",
+            "targetsToCompare": {
+              "type": "CasterHeroSelector"
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "cellCross",
+                "value": 7
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "cellCross",
+          "value": 7
+        },
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "dmg",
+          "entitySelector": {
+            "type": "CasterHeroSelector"
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Traversée éclaire",
+    "en": "Rapid Crossing",
+    "es": "Travesía Relámpago",
+    "de": "Blitzartige Überquerung",
+    "pt": "Travessia Relâmpago"
+  },
+  "description": {
+    "fr": "Votre héros traverse jusqu'à {cell:cellCross}.\n\\---\nInflige son {%At} aux adversaires traversés.",
+    "en": "Your hero goes through up to {cell:cellCross}.\n\\---\nInflicts {%At} on opponents gone through.",
+    "es": "Tu héroe atraviesa hasta {cell:cellCross}.\n\\---\nInflige su {%At} a los adversarios atravesados.",
+    "de": "Dein Held überquert bis zu {cell:cellCross}.\n\\---\nVerusacht seinen {%At} bei überquerten Gegnern als Schaden.",
+    "pt": "Seu herói atravessa até {cell:cellCross}.\n\\---\nInflige seu {%At} aos adversários atravessados."
+  }
+}

@@ -30,18 +30,38 @@
     "minPlayers": 1,
     "maxPlayers": 3,
     "accessCondition": {
-      "type": "HasAchievementsCondition",
+      "type": "AndAccessCondition",
       "concernedPlayers": 0,
-      "achievements": [
-        3183,
-        2975,
-        2188,
-        2216
-      ],
-      "comparison": 1
+      "conditions": [
+        {
+          "type": "HasCompletedQuestChapterAccessCondition",
+          "concernedPlayers": 0,
+          "questId": 179,
+          "chapterOrdinal": 1
+        },
+        {
+          "type": "HasCompletedQuestChapterAccessCondition",
+          "concernedPlayers": 0,
+          "questId": 123,
+          "chapterOrdinal": 1
+        },
+        {
+          "type": "HasCompletedQuestChapterAccessCondition",
+          "concernedPlayers": 0,
+          "questId": 161,
+          "chapterOrdinal": 1
+        },
+        {
+          "type": "HasCompletedQuestChapterAccessCondition",
+          "concernedPlayers": 0,
+          "questId": 122,
+          "chapterOrdinal": 1
+        }
+      ]
     },
     "npcForChapters": null,
     "npcName": null,
+    "narrationInJournal": null,
     "ranks": [
       {
         "type": "QuestRank",

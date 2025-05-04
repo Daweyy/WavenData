@@ -1,0 +1,162 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "250",
+  "m_id": 250,
+  "m_displayName": "SEASON - MOUETTE - CRA - Tir étourdissant",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -354882250,
+    "b": 588646516,
+    "c": 1482131082,
+    "d": 1811356403,
+    "e": 2035429926
+  },
+  "m_i18nDescriptionId": {
+    "a": -354882250,
+    "b": 588646516,
+    "c": 1482131082,
+    "d": 1811356403,
+    "e": 2002332619
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "cf6310de2bce5c5408c099aaf508542d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 250,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "a",
+                  "value": 2
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "b",
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "512172169cec2e04fa8f2b758e566cc4",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "b",
+          "value": 6
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "push",
+          "value": 1
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "Const.collisionDmg"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Tir étourdissant",
+    "en": "Stun Shot",
+    "es": "Tiro Atontador",
+    "de": "Betäubender Schuss",
+    "pt": "Tiro Atordoante"
+  },
+  "description": {
+    "fr": "{#PUSH} de {cell:push} les personnages, entre {value:a} et {cell:b} de votre héros, depuis le centre de la zone\\_<sprite name=\"cell_cross\">.",
+    "en": "{#PUSH} characters that are {value:a} to {cell:b} from your hero {cell:push} from the center of the <sprite name=\"cell_cross\">\\_zone.",
+    "es": "{#PUSH} {cell:push} a los personajes, entre {value:a} y {cell:b} de tu héroe, desde el centro de la zona\\_<sprite name=\"cell_cross\">.",
+    "de": "{#PUSH,plural:few} Charaktere, die {value:a} bis {cell:b} von deinem Helden entfernt stehen, von der Mitte des Wirkungsbereichs\\_<sprite name=\"cell_cross\"> {cell:push} zurück.",
+    "pt": "{#PUSH} por {cell:push} os personagens entre {value:a} e {cell:b} do seu herói, a partir do centro da zona\\_<sprite name=\"cell_cross\">."
+  }
+}

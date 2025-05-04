@@ -109,37 +109,13 @@
               "distance": {
                 "type": "Between",
                 "minIncluded": {
-                  "type": "ConditionalValue",
-                  "referenceId": "",
-                  "condition": {
-                    "type": "DynamicValueEvaluatorCondition",
-                    "value": {
-                      "type": "ThisSpellEvolutionValue",
-                      "referenceId": ""
-                    },
-                    "evaluator": {
-                      "type": "GreaterEqualThan",
-                      "dynamicValue": {
-                        "type": "ConstIntegerValue",
-                        "referenceId": "",
-                        "value": 2
-                      }
-                    }
-                  },
-                  "ifTrue": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": null,
-                    "value": 2
-                  },
-                  "ifFalse": {
-                    "type": "ConstIntegerValue",
-                    "referenceId": "",
-                    "value": 3
-                  }
+                  "type": "ConstIntegerValue",
+                  "referenceId": "a",
+                  "value": 2
                 },
                 "maxIncluded": {
                   "type": "SumValue",
-                  "referenceId": "",
+                  "referenceId": "c",
                   "valuesToSum": [
                     {
                       "type": "ConstIntegerValue",
@@ -200,6 +176,48 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
+          "type": "ConstIntegerValue",
+          "referenceId": "a",
+          "value": 2
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "c",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 4
+            },
+            {
+              "type": "SumValue",
+              "referenceId": "",
+              "valuesToSum": [
+                {
+                  "type": "SumValue",
+                  "referenceId": "ev",
+                  "valuesToSum": [
+                    {
+                      "type": "ThisSpellEvolutionValue",
+                      "referenceId": null
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
           "type": "SumValue",
           "referenceId": "ev",
           "valuesToSum": [
@@ -228,10 +246,10 @@
     "pt": "Ação: Torpedo"
   },
   "description": {
-    "fr": "<rem>Niveau\\_: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\n<rem>Portée\\_: 3 - 4</rem>\n\\---\nInflige l'{%at} de votre héros aux adversaires dans la zone ciblée\\_<sprite name=\"cell_cross\">.",
-    "en": "<rem>Level: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\n<rem>Range: 3 - 4</rem>\n\\---\nInflicts your hero's {%at} on opponents in the targeted <sprite name=\"cell_cross\">\\_zone.",
-    "es": "<rem>Nivel: <if evolution=2>MÁX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\n<rem>Alcance: 3 - 4</rem>\n\\---\nInflige el {%at} de tu héroe a los adversarios en la zona seleccionada\\_<sprite name=\"cell_cross\">.",
-    "de": "<rem>Stufe: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\n<rem>Reichweite: 3\\_-\\_4</rem>\n\\---\nFügt Gegnern im Wirkungsbereich\\_<sprite name=\"cell_cross\"> den {%at} deines Helden als Schaden zu.",
-    "pt": "<rem>Nível: <if evolution=2>MÁX.</if><if not evolution=2>{value:ev}</if></rem>\n\\---\n<rem>Alcance: 3 - 4</rem>\n\\---\nInflige o {%at} do seu herói aos adversários na zona visada\\_<sprite name=\"cell_cross\">."
+    "fr": "<rem>Niveau\\_: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\nInflige l'{%at} de votre héros aux adversaires dans la zone ciblée\\_<sprite name=\"cell_cross\"> entre {value:a} et {cell:c} de votre héros.",
+    "en": "<rem>Level: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\nInflicts your hero's {%at} on opponents in the targeted <sprite name=\"cell_cross\">\\_zone between {value:a} and {cell:c} from your hero.",
+    "es": "<rem>Nivel: <if evolution=2>MÁX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\nInflige el {%at} de tu héroe a los adversarios en la zona seleccionada\\_<sprite name=\"cell_cross\"> entre {value:a} y {cell:c} de tu héroe.",
+    "de": "<rem>Stufe: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\nVerursacht bei Gegnern im Wirkungsbereich\\_<sprite name=\"cell_cross\">, die {value:a} bis {cell:c} von deinem Helden entfernt sind, den {%at} deines Helden als Schaden.",
+    "pt": "<rem>Nível: <if evolution=2>MÁX.</if><if not evolution=2>{value:ev}</if></rem>\n\\---\nInflige o {%at} do seu herói aos adversários na zona\\_<sprite name=\"cell_cross\"> visada entre {value:a} e {cell:c} do seu herói."
   }
 }

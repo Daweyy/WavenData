@@ -1,0 +1,141 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "942",
+  "m_id": 942,
+  "m_displayName": "SEASON - MOUETTE - CRA - Tir alonge",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 1353659292,
+    "b": -412349084,
+    "c": -92648582,
+    "d": -282496147,
+    "e": 986355269
+  },
+  "m_i18nDescriptionId": {
+    "a": 1353659292,
+    "b": -412349084,
+    "c": -92648582,
+    "d": -282496147,
+    "e": 212257043
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "14ee925a698a4d24da21322dfada1925"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 942,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "InLineTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "LowerEqualThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        },
+        "startPosition": {
+          "type": "EntityPositionSelector",
+          "entity": {
+            "type": "CasterHeroSelector"
+          }
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "m",
+          "entitySelector": {
+            "type": "CasterHeroSelector"
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Tir allongé",
+    "en": "Extended Shot",
+    "es": "Tiro Alargado",
+    "de": "Verlängerter Schuss",
+    "pt": "Tiro Prolongado"
+  },
+  "description": {
+    "fr": "Inflige l'{%at} de votre héros aux personnages alignés dans la zone ciblée.",
+    "en": "Inflicts your hero's {%at} on in-line characters in the targeted zone.",
+    "es": "Inflige el {%at} de tu héroe a los personajes alineados en la zona seleccionada.",
+    "de": "Verursacht den {%at} deines Helden bei den Charakteren in derselben Reihe im Wirkungsbereich als Schaden.",
+    "pt": "Inflige o {%at} do seu herói aos personagens alinhados na zona visada."
+  }
+}

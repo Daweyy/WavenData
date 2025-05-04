@@ -1,0 +1,146 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1087",
+  "m_id": 1087,
+  "m_displayName": "SEASON - MOUETTE - IOP - epee enchantee ",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 1888091480,
+    "b": 1378032228,
+    "c": 1736392971,
+    "d": -153698253,
+    "e": 1468392832
+  },
+  "m_i18nDescriptionId": {
+    "a": 1888091480,
+    "b": 1378032228,
+    "c": 1736392971,
+    "d": -153698253,
+    "e": -802140290
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "837fbd23d776ba943b1104ceabf61542"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1087,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "SquareAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                "maxIncluded": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "c",
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 0
+        },
+        "minRadius": null
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        },
+        {
+          "type": "CharacterActionValue",
+          "referenceId": "purcent",
+          "entitySelector": {
+            "type": "CasterHeroSelector"
+          }
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Épée enchantée",
+    "en": "Enchanted Sword",
+    "es": "Espada Encantada",
+    "de": "Verzaubertes Schwert",
+    "pt": "Espada Encantada"
+  },
+  "description": {
+    "fr": "Inflige l'{%at} de votre héros à un adversaire jusqu'à {cell:c}.",
+    "en": "Inflicts your hero's {%at} on an opponent up to {cell:c} away.",
+    "es": "Inflige el {%at} de tu héroe a un adversario hasta a {cell:c}.",
+    "de": "Verursacht den {%at} deines Helden bei einem Gegner bis zu {cell:c} entfernt als Schaden zu.",
+    "pt": "Inflige o {%at} do seu herói a um adversário a até {cell:c}."
+  }
+}
