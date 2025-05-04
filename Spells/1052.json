@@ -12,7 +12,7 @@
   "m_id": 1052,
   "m_displayName": "SEASON - RAT - Recrutement",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -382863431,
     "b": -1617753596,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "cc9ff7fc0f401924abbabeed85908c93"
+    "assetGuid": "4e539eb4c2e729749be160ec6cefef9c"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -81,7 +81,7 @@
           },
           "filters": [
             {
-              "type": "OwnerFilter",
+              "type": "TeamFilter",
               "isIdentical": true,
               "reference": {
                 "type": "CasterSelector"
@@ -90,7 +90,7 @@
           ]
         },
         "value": {
-          "type": "GreaterEqualThan",
+          "type": "LowerThan",
           "dynamicValue": {
             "type": "ConstIntegerValue",
             "referenceId": "",
@@ -99,10 +99,10 @@
         }
       },
       "ifTrue": {
-        "type": "FailureCastCondition"
+        "type": "SuccessCastCondition"
       },
       "ifFalse": {
-        "type": "SuccessCastCondition"
+        "type": "FailureCastCondition"
       }
     },
     "castTarget": {
@@ -125,6 +125,19 @@
               "summonings": [
                 1110
               ]
+            }
+          },
+          {
+            "type": "LifeFilter",
+            "valueFilter": {
+              "type": "LowerEqualThan",
+              "dynamicValue": {
+                "type": "FightCounterDynamicValue",
+                "referenceId": "",
+                "counterId": {
+                  "type": "ScoreCounter"
+                }
+              }
             }
           }
         ]
@@ -150,9 +163,17 @@
     }
   },
   "name": {
-    "fr": "Recrutement"
+    "fr": "Recrutement",
+    "en": "Recruitment",
+    "es": "Reclutamiento",
+    "de": "Rekrutierung",
+    "pt": "Recrutamento"
   },
   "description": {
-    "fr": "Dépensez autant de Points que de PV restants à la cible pour la recruter dans votre camp.\n\\---\nCe sort revient dans votre main.\n\\---\n<rem>Limité à 5 personnages dans votre équipe.</rem>"
+    "fr": "Dépensez autant de points que de {%PV} restante à la cible pour la recruter dans votre camp.\n\\---\nCe sort revient dans votre main.\n\\---\n<rem>Limité à 5 personnages dans votre équipe.</rem>",
+    "en": "Spend as many points as the target's remaining {%PV} to recruit the target to your camp.\n\\---\nThis spell returns to your hand.\n\\---\n<rem>Limit: 5 characters on your team.</rem>",
+    "es": "Gastas tantos puntos como {%PV} restante al objetivo para reclutarlo en tu bando.\n\\---\nEste hechizo vuelve a tu mano.\n\\---\n<rem>Limitado a 5 personajes en tu equipo.</rem>",
+    "de": "Gib so viele Punkte aus wie dem Ziel {%PV} verbleiben, um es für deine Zwecke zu rekrutieren.\n\\---\nDieser Zauber geht zurück auf deine Hand.\n\\---\n<rem>Auf 5\\_Charaktere in deinem Team begrenzt.</rem>",
+    "pt": "Gaste tantos pontos quanto o alvo tiver de {%PV} restante para recrutá-lo para o seu campo.\n\\---\nEste feitiço volta para a sua mão.\n\\---\n<rem>Limite de 5 personagens na sua equipe.</rem>"
   }
 }

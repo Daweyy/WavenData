@@ -12,7 +12,7 @@
   "m_id": 73,
   "m_displayName": "SEASON - RAT - Rat Intelligent",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 828367166,
     "b": -1888923244,
@@ -59,9 +59,9 @@
     "id": 73,
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 8889,
+      "defaultSkinId": 1263,
       "skinIds": [
-        8889
+        1263
       ]
     },
     "precomputedData": {
@@ -80,7 +80,12 @@
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 88
+        }
+      ]
     },
     "families": [
       0
@@ -117,8 +122,8 @@
     },
     "unlockableSkillIds": [],
     "difficultyHint": 1,
-    "defaultSkinIdMale": 8889,
-    "defaultSkinIdFemale": 8889,
+    "defaultSkinIdMale": 1263,
+    "defaultSkinIdFemale": 1263,
     "god": 0,
     "conditionalAvailability": {
       "type": "Hidden"
@@ -135,9 +140,17 @@
     "presetSpellIds": []
   },
   "name": {
-    "fr": "Rat Intelligent"
+    "fr": "Rat Intelligent",
+    "en": "Smart Rat",
+    "es": "Rata inteligente",
+    "de": "Intelligente Ratte",
+    "pt": "Rato Inteligente"
   },
   "description": {
-    "fr": "<b>Quand un Personnage arrive dans son Camp\\_:</b> Gagne {ATvalue:per,percent} ainsi que {PVvalue:per2,percent} et de {%PVMAX} que l'allié possède."
+    "fr": "<rem>{PropertyEffect:88}</rem>\n\\---\nLorsqu'un personnage arrive dans son camp\\_:</b>\\vGagne {value:per,percent} de l'{%AT} et {value:per2,percent} de la {%PVMAX} du personnage.",
+    "en": "<rem>{PropertyEffect:88}</rem>\n\\---\nWhen a character enters their camp</b>:\\vGains {value:per,percent} of the character's {%AT} and {value:per2,percent} of the character's {%PVMAX}.",
+    "es": "<rem>{PropertyEffect:88}</rem>\n\\---\nCuando un personaje llega a su bando:</b>\\vGana un {value:per,percent} del {%AT} y un {value:per2,percent} de la {%PVMAX} del personaje.",
+    "de": "<rem>{PropertyEffect:88}</rem>\n\\---\nWenn sich ein Charakter auf ihre Seite schlägt:</b>\\vGewinnt {value:per,percent} {%AT} hinzu sowie {value:per2,percent} der {%PVMAX} des Charakters.",
+    "pt": "<rem>{PropertyEffect:88}</rem>\n\\---\nQuando um personagem chega em seu campo:</b>\\vGanha {value:per,percent} do {%AT} e {value:per2,percent} da {%PVMAX} do personagem."
   }
 }

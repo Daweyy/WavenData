@@ -10,9 +10,9 @@
   },
   "m_Name": "1110",
   "m_id": 1110,
-  "m_displayName": "SEASON - RAT - marchand Rat",
+  "m_displayName": "SEASON - RAT - Rat Marchand",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 55659768,
     "b": 1292375476,
@@ -49,7 +49,16 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 41
+        },
+        {
+          "type": 20,
+          "id": 106
+        }
+      ]
     },
     "families": [
       0
@@ -82,9 +91,17 @@
     "growInto": null
   },
   "name": {
-    "fr": "Marchand Rat"
+    "fr": "{0, plural, one[Rat Marchand] other[Rats Marchands]}",
+    "en": "{0, plural, one[Merchant Rats] other[Merchant Rats]}",
+    "es": "{0, plural, one[Rata Comerciante] other[Ratas Comerciantes]}",
+    "de": "{0, plural, one[Rattenhändler] other[Rattenhändler]}",
+    "pt": "{0, plural, one[Rato Comerciante] other[Ratos Comerciantes]}"
   },
   "description": {
-    "fr": "{%FightTurnStarted} Change les Objets mis en vente.\n\\---\n<b>Lorsqu'il subit des dégâts\\_:</b> Devient Aggressif."
+    "fr": "<rem>{PropertyEffect:106}\\v{PropertyEffect:41}</rem>\n\\---\n{%FightTurnStarted} Change les objets mis en vente.\n\\---\nLorsqu'il subit des dégâts\\_: Devient agressif.",
+    "en": "<rem>{PropertyEffect:106}\\v{PropertyEffect:41}</rem>\n\\---\n{%FightTurnStarted} Changes items up for sale.\n\\---\nOn taking damage: Becomes aggressive.",
+    "es": "<rem>{PropertyEffect:106}\\v{PropertyEffect:41}</rem>\n\\---\n{%FightTurnStarted} Cambia los objetos puestos en venta.\n\\---\nCuando recibe daños: se vuelve agresiva.",
+    "de": "<rem>{PropertyEffect:106}\\v{PropertyEffect:41}</rem>\n\\---\n{%FightTurnStarted} Tauscht die zum Verkauf stehenden Gegenstände aus.\n\\---\nWenn er Schaden nimmt: Wird aggressiv.",
+    "pt": "<rem>{PropertyEffect:106}\\v{PropertyEffect:41}</rem>\n\\---\n{%FightTurnStarted} Troca os itens colocados à venda.\n\\---\nQuando ele sofre danos: Torna-se agressivo."
   }
 }

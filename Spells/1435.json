@@ -12,7 +12,7 @@
   "m_id": 1435,
   "m_displayName": "SEASON - RAT - Attaque Repoussante",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2038944938,
     "b": -1280486988,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "f88af601d54231241b177ad6b2b9a4fa"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -80,16 +80,30 @@
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
     }
   },
   "name": {
-    "fr": "PASSIF\\_: Attaque Repoussante"
+    "fr": "PASSIF\\_: Attaque Repoussante",
+    "en": "PASSIVE: Shove Attack",
+    "es": "PASIVO: Ataque Repelente",
+    "de": "PASSIVE FÄHIGKEIT: Zurückstoßender Angriff",
+    "pt": "PASSIVO: Ataque Empurrador"
   },
   "description": {
-    "fr": "<b>Tant que ce sort est dans votre main\\_:</b>\n\\---\n<b>ATTAQUE D'UN DE VOS PERSONNAGES\\_:</b>\\vRepousse la cible de 1 case."
+    "fr": "<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\nATTAQUE D'UN DE VOS PERSONNAGES\\_:\\vRepousse la cible de {cell:c}.",
+    "en": "<b><color=#EEBB44>While this spell is in your hand.</color></b>\n\\---\nATTACK BY ONE OF YOUR CHARACTERS:\\vPushes the target {cell:c}.",
+    "es": "<b><color=#EEBB44>Mientras este hechizo esté en tu mano</color></b>\n\\---\nATAQUE DE UNO DE TUS PERSONAJES:\\vEmpuja al objetivo {cell:c}.",
+    "de": "<b><color=#EEBB44>Solange dieser Zauber auf deiner Hand ist</color></b>\n\\---\nANGRIFF EINER DEINER CHARAKTERE:\\vStößt das Ziel um {cell:c} zurück.",
+    "pt": "<b><color=#EEBB44>Enquanto o feitiço estiver na sua mão</color></b>\n\\---\nATAQUE DE UM DOS SEUS PERSONAGENS:\\vEmpurra o alvo por {cell:c}."
   }
 }

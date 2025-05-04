@@ -1,0 +1,261 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1952",
+  "m_id": 1952,
+  "m_displayName": "SEASON - ECAILLEUX - PASSIF xx",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 303160054,
+    "b": 807033348,
+    "c": -460993047,
+    "d": -837683506,
+    "e": 1139853451
+  },
+  "m_i18nDescriptionId": {
+    "a": 303160054,
+    "b": 807033348,
+    "c": -460993047,
+    "d": -837683506,
+    "e": 491479544
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1952,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 9
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCharacterSelector",
+        "filters": []
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "p",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 20
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 20
+                },
+                {
+                  "type": "SumValue",
+                  "referenceId": "",
+                  "valuesToSum": [
+                    {
+                      "type": "SumValue",
+                      "referenceId": "ev",
+                      "valuesToSum": [
+                        {
+                          "type": "ThisSpellEvolutionValue",
+                          "referenceId": null
+                        },
+                        {
+                          "type": "ConstIntegerValue",
+                          "referenceId": "",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": -1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "ev",
+          "valuesToSum": [
+            {
+              "type": "ThisSpellEvolutionValue",
+              "referenceId": null
+            },
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "score",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 100
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 100
+                },
+                {
+                  "type": "SumValue",
+                  "referenceId": "",
+                  "valuesToSum": [
+                    {
+                      "type": "SumValue",
+                      "referenceId": null,
+                      "valuesToSum": [
+                        {
+                          "type": "ThisSpellEvolutionValue",
+                          "referenceId": null
+                        },
+                        {
+                          "type": "ConstIntegerValue",
+                          "referenceId": null,
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": -1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "invo",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 1
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                },
+                {
+                  "type": "SumValue",
+                  "referenceId": "",
+                  "valuesToSum": [
+                    {
+                      "type": "SumValue",
+                      "referenceId": null,
+                      "valuesToSum": [
+                        {
+                          "type": "ThisSpellEvolutionValue",
+                          "referenceId": null
+                        },
+                        {
+                          "type": "ConstIntegerValue",
+                          "referenceId": "",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": -1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 4,
+          "id": 1574
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "PASSIF\\_: 07"
+  },
+  "description": {
+    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b><color=#71ff33>BONUS</color></b>\n{%attack} {ARvalue:p,+} à votre héros.\n\\---\n{%attack} {value:score,+} points.\n\\---\n<b><color=#FF0000>MALUS</color></b>\n<b>DÉBUT DE VAGUE</b>\\_: \\v invoque {value:invo}\\_{Summoning:1574,value:invo}."
+  }
+}

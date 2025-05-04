@@ -1,0 +1,121 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1499",
+  "m_id": 1499,
+  "m_displayName": "SEASON - NUISIBLE - SUMMON - Pissenlit Diabolique",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 2067225874,
+    "b": -919263276,
+    "c": -1408753733,
+    "d": 845082887,
+    "e": -734465986
+  },
+  "m_i18nDescriptionId": {
+    "a": 2067225874,
+    "b": -919263276,
+    "c": -1408753733,
+    "d": 845082887,
+    "e": -2023830942
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1499,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 4
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "UnionOfCoordsSelector",
+        "first": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "CellValidForCharacterFilter"
+            }
+          ]
+        },
+        "second": {
+          "type": "EntityPositionSelector",
+          "entity": {
+            "type": "TeamOfSelector",
+            "targetWithTeam": {
+              "type": "CasterSelector"
+            }
+          }
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 106
+        },
+        {
+          "type": 5,
+          "id": 1086
+        }
+      ]
+    }
+  },
+  "name": {
+    "fr": "{Companion:1086}"
+  },
+  "description": {
+    "fr": "Invoque 1 {Companion:1086}\n\\---\n<rem>Ce sort revient dans votre main.</rem>"
+  }
+}

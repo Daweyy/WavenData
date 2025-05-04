@@ -10,9 +10,9 @@
   },
   "m_Name": "1639",
   "m_id": 1639,
-  "m_displayName": "SEASON - RAT - Achat",
+  "m_displayName": "SEASON - RAT - Troc",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -90907754,
     "b": 2066428340,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "9c5fa0ba04d28724b8003f8a7ad8349f"
+    "assetGuid": "860f2a083754d4445afe8a307073d77d"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -94,6 +94,90 @@
               112,
               113
             ]
+          },
+          {
+            "type": "ConditionalEntityFilter",
+            "condition": {
+              "type": "DynamicValueEvaluatorCondition",
+              "value": {
+                "type": "FightCounterDynamicValue",
+                "referenceId": "",
+                "counterId": {
+                  "type": "ScoreCounter"
+                }
+              },
+              "evaluator": {
+                "type": "LowerThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 200
+                }
+              }
+            },
+            "filter": {
+              "type": "FamilyFilter",
+              "condition": 2,
+              "families": [
+                113
+              ]
+            }
+          },
+          {
+            "type": "ConditionalEntityFilter",
+            "condition": {
+              "type": "DynamicValueEvaluatorCondition",
+              "value": {
+                "type": "FightCounterDynamicValue",
+                "referenceId": "",
+                "counterId": {
+                  "type": "ScoreCounter"
+                }
+              },
+              "evaluator": {
+                "type": "LowerThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 100
+                }
+              }
+            },
+            "filter": {
+              "type": "FamilyFilter",
+              "condition": 2,
+              "families": [
+                112
+              ]
+            }
+          },
+          {
+            "type": "ConditionalEntityFilter",
+            "condition": {
+              "type": "DynamicValueEvaluatorCondition",
+              "value": {
+                "type": "FightCounterDynamicValue",
+                "referenceId": "",
+                "counterId": {
+                  "type": "ScoreCounter"
+                }
+              },
+              "evaluator": {
+                "type": "LowerThan",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 50
+                }
+              }
+            },
+            "filter": {
+              "type": "FamilyFilter",
+              "condition": 2,
+              "families": [
+                111
+              ]
+            }
           }
         ]
       }
@@ -143,9 +227,17 @@
     }
   },
   "name": {
-    "fr": "Troc"
+    "fr": "Troc",
+    "en": "Barter",
+    "es": "Trueque",
+    "de": "Tauschhandel",
+    "pt": "Troca"
   },
   "description": {
-    "fr": "Dépensez des Points pour Obtenir un objet chez le marchand pour le déclencher et le détruire.\n\\---\nLes objets à gauche coûtent {value:CPrice} points.\nLes objets au milieu coûtent {value:RPrice} points.\nLes objets à droite coûtent {value:KPrice} points.\n\\---\nCe sort revient dans votre main."
+    "fr": "Dépensez des points pour déclencher puis détruire un objet chez le marchand.\n\\---\nLes objets blancs coûtent {value:CPrice} points.\nLes objets bleus coûtent {value:RPrice} points.\nLes objets violets coûtent {value:KPrice} points.\n\\---\nCe sort revient dans votre main.",
+    "en": "Spend points to trigger and then destroy an item at the merchant's.\n\\---\nWhite items cost {value:CPrice} points.\nBlue items cost {value:RPrice} points.\nPurple items cost {value:KPrice} points.\n\\---\nThis spell returns to your hand.",
+    "es": "Gasta puntos parar activar y destruir un objeto del comerciante.\n\\---\nLos objetos blancos cuestan {value:CPrice} puntos.\nLos objetos azules cuestan {value:RPrice} puntos.\nLos objetos morados cuestan {value:KPrice} puntos.\n\\---\nEste hechizo vuelve a tu mano.",
+    "de": "Gib Punkte aus, um einen Gegenstand beim Händler auszulösen und anschließend zu vernichten.\n\\---\nWeiße Gegenstände kosten {value:CPrice}\\_Punkte.\nBlaue Gegenstände kosten {value:RPrice}\\_Punkte.\nViolette Gegenstände kosten {value:KPrice}\\_Punkte.\n\\---\nDieser Zauber geht zurück auf deine Hand.",
+    "pt": "Gaste pontos para acionar e destruir um item do comerciante.\n\\---\nOs itens brancos custam {value:CPrice} pontos.\nOs itens azuis custam {value:RPrice} pontos.\nOs itens roxos custam {value:KPrice} pontos.\n\\---\nEste feitiço volta para a sua mão."
   }
 }
