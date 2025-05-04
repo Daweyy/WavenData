@@ -1,0 +1,113 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1789",
+  "m_id": 1789,
+  "m_displayName": "STORY MODE - ACTE II - 14 - Action - Coups de pedale",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -1188298128,
+    "b": 1221062548,
+    "c": 14371833,
+    "d": -349111948,
+    "e": 798562209
+  },
+  "m_i18nDescriptionId": {
+    "a": -1188298128,
+    "b": 1221062548,
+    "c": 14371833,
+    "d": -349111948,
+    "e": 1104858642
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "2f3e2c674d68bce42b1951f0e22bb2f2"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1789,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      27
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "p",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 1
+            },
+            {
+              "type": "ThisSpellEvolutionValue",
+              "referenceId": null
+            }
+          ]
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Action\\_: Coups de pédale"
+  },
+  "description": {
+    "fr": "<rem>Niveau\\_: <if evolution=2>MAX</if><if not evolution=2>{value:p}</if></rem>\n\\---\n{PMvalue:p, +} pour le tour."
+  }
+}

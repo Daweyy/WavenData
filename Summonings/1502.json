@@ -1,0 +1,152 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1184744391705158508
+  },
+  "m_Name": "1502",
+  "m_id": 1502,
+  "m_displayName": "STORY MODE - ACTE II - 06 - Garde Brakmarien",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1208860373,
+    "b": 1907946772,
+    "c": 929832123,
+    "d": 702988979,
+    "e": -688657923
+  },
+  "m_i18nChampionNameId": {
+    "a": -1208860373,
+    "b": 1907946772,
+    "c": 929832123,
+    "d": 702988979,
+    "e": -1002950255
+  },
+  "m_i18nDescriptionId": {
+    "a": -1208860373,
+    "b": 1907946772,
+    "c": 929832123,
+    "d": 702988979,
+    "e": 1881969192
+  },
+  "values": {
+    "type": "SummoningDefinition",
+    "id": 1502,
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 2723,
+      "skinIds": [
+        2723
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [
+        "Const.collisionDmg"
+      ],
+      "hasEffects": false,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 2
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 27
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": {
+      "type": "UnionOfEntitiesSelector",
+      "first": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllEntitiesWithLifeSelector"
+        },
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": false,
+            "reference": {
+              "type": "EffectHolderSelector"
+            }
+          },
+          {
+            "type": "NotEntityFilter",
+            "filter": {
+              "type": "PropertyFilter",
+              "property": {
+                "type": "SpecificPropertyIdResolvable",
+                "propertyId": 232
+              }
+            }
+          }
+        ]
+      },
+      "second": {
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllBoardPresencesSelector"
+        },
+        "filters": [
+          {
+            "type": "ObjectMechanismDefinitionFilter",
+            "condition": 1,
+            "objectMechanisms": [
+              420
+            ]
+          }
+        ]
+      }
+    },
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 16
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 7
+    },
+    "spells": [],
+    "grade": 0,
+    "growInto": null
+  },
+  "name": {
+    "fr": "{0, plural, one[Garde Brakmarien] other[Gardes Brakmariens]}"
+  },
+  "championName": {
+    "fr": "Garde Brakmarien"
+  },
+  "description": {
+    "fr": "{%Attack} {#PUSH} la cible de {cell:c}."
+  }
+}

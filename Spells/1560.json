@@ -1,0 +1,157 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1560",
+  "m_id": 1560,
+  "m_displayName": "STORY MODE - ACTE II - 15 - Météore ",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1609613213,
+    "b": -353314028,
+    "c": -2040944151,
+    "d": 1193428982,
+    "e": -766274069
+  },
+  "m_i18nDescriptionId": {
+    "a": -1609613213,
+    "b": -353314028,
+    "c": -2040944151,
+    "d": 1193428982,
+    "e": 1846811918
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "799c89f0e1ed7e4479393c3ab58d7b72"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [
+      2050,
+      2051
+    ],
+    "m_values": [
+      {
+        "assetGuid": "7dbac05e1d0fb054b8093d1abc38cb22"
+      },
+      {
+        "assetGuid": "c2eeb80b2baf20f43a7099b94a64aaf6"
+      }
+    ]
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1560,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredCharacterSelector",
+              "filters": [
+                {
+                  "type": "EntityTypeFilter",
+                  "condition": 1,
+                  "entityTypes": [
+                    1,
+                    3
+                  ]
+                },
+                {
+                  "type": "TeamFilter",
+                  "isIdentical": true,
+                  "reference": {
+                    "type": "CasterSelector"
+                  }
+                }
+              ]
+            },
+            "distance": {
+              "type": "Between",
+              "minIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 1
+              },
+              "maxIncluded": {
+                "type": "ConstIntegerValue",
+                "referenceId": "c",
+                "value": 9
+              }
+            }
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 9
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 50
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Météore"
+  },
+  "description": {
+    "fr": "Téléporte {Weapon:334!} jusqu'a {cell:c} et inflige {value:dmg,percent} de son {%AT} à tous les adversaires autour\\_<sprite name=\"cell_around\"> de\\_sa\\_case\\_d'arrivée."
+  }
+}

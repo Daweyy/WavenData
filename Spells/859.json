@@ -1,0 +1,161 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "859",
+  "m_id": 859,
+  "m_displayName": "STORY MODE - ACTE II - 14 - Action - Calibrage",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -1787417537,
+    "b": 2115817556,
+    "c": -1818407272,
+    "d": 588126370,
+    "e": -1078224787
+  },
+  "m_i18nDescriptionId": {
+    "a": -1787417537,
+    "b": 2115817556,
+    "c": -1818407272,
+    "d": 588126370,
+    "e": 1718364092
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "80b0a4c57284efb429f4b14688d279e0"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 859,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      27
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "p",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 50
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 25
+                },
+                {
+                  "type": "SumValue",
+                  "referenceId": "",
+                  "valuesToSum": [
+                    {
+                      "type": "SumValue",
+                      "referenceId": "ev",
+                      "valuesToSum": [
+                        {
+                          "type": "ThisSpellEvolutionValue",
+                          "referenceId": null
+                        },
+                        {
+                          "type": "ConstIntegerValue",
+                          "referenceId": "",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": -1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "ev",
+          "valuesToSum": [
+            {
+              "type": "ThisSpellEvolutionValue",
+              "referenceId": null
+            },
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Action\\_: Calibrage"
+  },
+  "description": {
+    "fr": "<rem>Niveau\\_: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\n{ATvalue:p,percent,+} à votre héros."
+  }
+}

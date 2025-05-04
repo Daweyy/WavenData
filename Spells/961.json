@@ -107,22 +107,71 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
+          "type": "SumValue",
           "referenceId": "d",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 50
-          },
-          "factor": null,
-          "buffs": [
-            51
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "valuesToSum": [
+            {
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": "",
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 50
+              },
+              "factor": null,
+              "buffs": [
+                51
+              ],
+              "skillBuffs": [],
+              "from": {
+                "type": "CasterSelector"
+              },
+              "addInsteadOfMultiply": false
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "DivideValue",
+                  "referenceId": "",
+                  "numerator": {
+                    "type": "BuffedScalingDynamicValue",
+                    "referenceId": null,
+                    "baseValue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "pc",
+                      "value": 100
+                    },
+                    "factor": null,
+                    "buffs": [
+                      51
+                    ],
+                    "skillBuffs": [],
+                    "from": {
+                      "type": "CasterSelector"
+                    },
+                    "addInsteadOfMultiply": false
+                  },
+                  "denominator": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 2
+                  },
+                  "defaultValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 0
+                  },
+                  "roundMethod": 0
+                },
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": "Lv"
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "ConstIntegerValue",

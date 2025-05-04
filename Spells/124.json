@@ -1,0 +1,122 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "124",
+  "m_id": 124,
+  "m_displayName": "SEASON - ROUBLARD - Bombado",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -492916950,
+    "b": -892313948,
+    "c": -1521813445,
+    "d": 1185297628,
+    "e": -1436625981
+  },
+  "m_i18nDescriptionId": {
+    "a": -492916950,
+    "b": -892313948,
+    "c": -1521813445,
+    "d": 1185297628,
+    "e": 334642207
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "3e3cc47722972364c857ccafe716b1c9"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 124,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "CellValidForMechanismFilter"
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 3
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "CustomRule.664.max",
+        "Const.collisionDmg",
+        "CustomRule.664.c"
+      ],
+      "hasEffects": true,
+      "keywordReferences": [
+        "PUSH"
+      ]
+    }
+  },
+  "name": {
+    "fr": "Bombado",
+    "en": "Bombado",
+    "es": "Bombado",
+    "de": "Bombado",
+    "pt": "Bombado"
+  },
+  "description": {
+    "fr": "Inflige {physicalDamage:CustomRule.664.max} aux adversaires et {#PUSH} de {cell:CustomRule.664.c} les premiers personnages alignés.\n\\---\nCe {%spellcount} revient dans votre main.",
+    "en": "Does {physicalDamage:CustomRule.664.max} to opponents and {#PUSH} the first in-line characters {cell:CustomRule.664.c}.\n\\---\nThis {%spellcount} returns to your hand.",
+    "es": "Inflige {physicalDamage:CustomRule.664.max} a los adversarios y {#PUSH} {cell:CustomRule.664.c} a los primeros personajes alineados.\n\\---\nEste {%spellcount} vuelve a tu mano.",
+    "de": "Verursacht {physicalDamage:CustomRule.664.max} bei Gegnern und {#PUSH,plural:few} die ersten Charaktere in derselben Reihe um {cell:CustomRule.664.c} zurück.\n\\---\nDieser {%spellcount} geht zurück auf deine Hand.",
+    "pt": "Inflige {physicalDamage:CustomRule.664.max} aos adversários e {#PUSH} por {cell:CustomRule.664.c} os primeiros personagens alinhados.\n\\---\nEste {%spellcount} volta para a sua mão."
+  }
+}

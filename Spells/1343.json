@@ -1,0 +1,294 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1343",
+  "m_id": 1343,
+  "m_displayName": "STORY MODE - ACTE II - 14 - Action - Tir de Sulfateuse",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -1704393456,
+    "b": -1717802540,
+    "c": 1669352392,
+    "d": -2098049719,
+    "e": 874088447
+  },
+  "m_i18nDescriptionId": {
+    "a": -1704393456,
+    "b": -1717802540,
+    "c": 1669352392,
+    "d": -2098049719,
+    "e": -215439218
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "39100b9fa4446cb4ab0235695909baf5"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1343,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      27
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 1,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 5
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "FailureCastCondition"
+      },
+      "ifFalse": {
+        "type": "SuccessCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "OrientedLineAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "DynamicValueSwitchDynamicValue",
+          "referenceId": "c",
+          "switchValue": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "SumValue",
+                "referenceId": "ev",
+                "valuesToSum": [
+                  {
+                    "type": "ThisSpellEvolutionValue",
+                    "referenceId": null
+                  },
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": -1
+              }
+            ]
+          },
+          "values": [
+            {
+              "type": "SwitchValue",
+              "filter": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              },
+              "value": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 5
+              }
+            },
+            {
+              "type": "SwitchValue",
+              "filter": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 2
+                }
+              },
+              "value": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 9
+              }
+            }
+          ],
+          "defaultValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 3
+          }
+        },
+        "startPosition": {
+          "type": "CasterHeroSelector"
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "DynamicValueSwitchDynamicValue",
+          "referenceId": "c",
+          "switchValue": {
+            "type": "SumValue",
+            "referenceId": "",
+            "valuesToSum": [
+              {
+                "type": "SumValue",
+                "referenceId": "ev",
+                "valuesToSum": [
+                  {
+                    "type": "ThisSpellEvolutionValue",
+                    "referenceId": null
+                  },
+                  {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": -1
+              }
+            ]
+          },
+          "values": [
+            {
+              "type": "SwitchValue",
+              "filter": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 1
+                }
+              },
+              "value": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 5
+              }
+            },
+            {
+              "type": "SwitchValue",
+              "filter": {
+                "type": "EqualsTo",
+                "dynamicValue": {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 2
+                }
+              },
+              "value": {
+                "type": "ConstIntegerValue",
+                "referenceId": "",
+                "value": 9
+              }
+            }
+          ],
+          "defaultValue": {
+            "type": "ConstIntegerValue",
+            "referenceId": "",
+            "value": 3
+          }
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "ev",
+          "valuesToSum": [
+            {
+              "type": "ThisSpellEvolutionValue",
+              "referenceId": null
+            },
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Action\\_: Tir de Sulfateuse"
+  },
+  "description": {
+    "fr": "<rem>Niveau\\_: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\nInflige l'{%at} de votre héros aux adversaires alignés<if not evolution=2> jusqu'à {cell:c}</if>."
+  }
+}

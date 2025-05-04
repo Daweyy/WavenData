@@ -1,0 +1,209 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241944215
+  },
+  "m_Name": "650",
+  "m_id": 650,
+  "m_displayName": "SEASON - ROUBLARD - BILLY KROUGER",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 731679188,
+    "b": 472336452,
+    "c": -1598711944,
+    "d": -552962066,
+    "e": 99402234
+  },
+  "m_i18nDescriptionId": {
+    "a": 731679188,
+    "b": 472336452,
+    "c": -1598711944,
+    "d": -552962066,
+    "e": 1125901312
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 650,
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 109,
+      "skinIds": [
+        109
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 233
+        },
+        {
+          "type": 4,
+          "id": 1431
+        },
+        {
+          "type": 6,
+          "id": 246
+        }
+      ]
+    },
+    "families": [
+      13
+    ],
+    "baseProperties": [
+      34
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 250
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "pvpAvailability": {
+      "type": "Hidden"
+    },
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          650
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 3
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Billy Krouger",
+    "en": "Billy Kruger",
+    "es": "Billy Kruger",
+    "de": "Billy Krüger",
+    "pt": "Billy Kruger"
+  },
+  "description": {
+    "fr": "Invoque 2 {FloorMechanism:246} lorsqu'il achève un {Summoning:1431}.",
+    "en": "Summons 2 {FloorMechanism:246,plural:other} when he finishes off a {Summoning:1431}.",
+    "es": "Invoca 2 {FloorMechanism:246} cuando acaba con un {Summoning:1431}.",
+    "de": "Beschwört 2\\_{FloorMechanism:246}, wenn er eine {Summoning:1431} erledigt.",
+    "pt": "Invoca 2 {FloorMechanism:246} quando derrota um {Summoning:1431}."
+  }
+}

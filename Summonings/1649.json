@@ -10,9 +10,9 @@
   },
   "m_Name": "1649",
   "m_id": 1649,
-  "m_displayName": "STORY MODE - ACTE II - Shushu Parasite",
+  "m_displayName": "STORY MODE - ACTE II - 15 - Shushu Parasite",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -174783820,
     "b": -1139310892,
@@ -28,11 +28,11 @@
     "e": 0
   },
   "m_i18nDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -174783820,
+    "b": -1139310892,
+    "c": 1086645914,
+    "d": -1313555966,
+    "e": -1471130998
   },
   "values": {
     "type": "SummoningDefinition",
@@ -46,10 +46,23 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p1",
+          "value": 30
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "at",
+          "value": 10
+        }
+      ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
-      "keywordReferences": []
+      "hasEffects": true,
+      "keywordReferences": [
+        "LIFESTEAL"
+      ]
     },
     "families": [
       0
@@ -58,24 +71,30 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 10
+      "value": 100000
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 3
+      "value": 5
     },
-    "actionValue": null,
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3000
+    },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
-    "customActionTarget": null,
-    "actionType": null,
+    "customActionTarget": {
+      "type": "AllCharactersSelector"
+    },
+    "actionType": 1,
     "actionRange": null,
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
-    "grade": 0,
+    "grade": 2,
     "growInto": null
   },
   "name": {
@@ -84,5 +103,8 @@
     "es": "Fab'huritu Parásito",
     "de": "Shushu-Parasit",
     "pt": "Shushu Parasita"
+  },
+  "description": {
+    "fr": "Renvoie {value:p1,percent} des dégâts subis à {Weapon:334!} par {ObjectMechanism:453!} sur le terrain.\n\\---\n{value:at,+,percent}\\_d'{%AT} par {Summoning:1058!} sur le terrain.\n\\---\n{#LIFESTEAL}"
   }
 }

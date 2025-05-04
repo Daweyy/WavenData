@@ -1,0 +1,219 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1857",
+  "m_id": 1857,
+  "m_displayName": "STORY MODE - ACTE II - 14 - Action - Torpille",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": 1646416379,
+    "b": -1896234124,
+    "c": -1255063847,
+    "d": -1725673671,
+    "e": -540472217
+  },
+  "m_i18nDescriptionId": {
+    "a": 1646416379,
+    "b": -1896234124,
+    "c": -1255063847,
+    "d": -1725673671,
+    "e": -2046890804
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "621a7abceedd95e4ab9b6a8f767cbc8d"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1857,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      27
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": {
+      "type": "ConditionalCastCondition",
+      "condition": {
+        "type": "PropertyCondition",
+        "selector": {
+          "type": "CasterHeroSelector"
+        },
+        "comparison": 1,
+        "properties": [
+          {
+            "type": "SpecificPropertyIdResolvable",
+            "propertyId": 5
+          }
+        ]
+      },
+      "ifTrue": {
+        "type": "FailureCastCondition"
+      },
+      "ifFalse": {
+        "type": "SuccessCastCondition"
+      }
+    },
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CrossAreaOfEffectSelector",
+        "originSelector": {
+          "type": "FilteredCoordSelector",
+          "filters": [
+            {
+              "type": "AroundTargetFilter",
+              "targetsToCompare": {
+                "type": "CasterHeroSelector"
+              },
+              "distance": {
+                "type": "Between",
+                "minIncluded": {
+                  "type": "ConditionalValue",
+                  "referenceId": "",
+                  "condition": {
+                    "type": "DynamicValueEvaluatorCondition",
+                    "value": {
+                      "type": "ThisSpellEvolutionValue",
+                      "referenceId": ""
+                    },
+                    "evaluator": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 2
+                      }
+                    }
+                  },
+                  "ifTrue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": null,
+                    "value": 2
+                  },
+                  "ifFalse": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "",
+                    "value": 3
+                  }
+                },
+                "maxIncluded": {
+                  "type": "SumValue",
+                  "referenceId": "",
+                  "valuesToSum": [
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": null,
+                      "value": 4
+                    },
+                    {
+                      "type": "SumValue",
+                      "referenceId": "",
+                      "valuesToSum": [
+                        {
+                          "type": "SumValue",
+                          "referenceId": "ev",
+                          "valuesToSum": [
+                            {
+                              "type": "ThisSpellEvolutionValue",
+                              "referenceId": null
+                            },
+                            {
+                              "type": "ConstIntegerValue",
+                              "referenceId": "",
+                              "value": 1
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ConstIntegerValue",
+                          "referenceId": "",
+                          "value": -1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "type": "ConstIntegerValue",
+          "referenceId": null,
+          "value": 1
+        }
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "ev",
+          "valuesToSum": [
+            {
+              "type": "ThisSpellEvolutionValue",
+              "referenceId": null
+            },
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Action\\_: Torpille"
+  },
+  "description": {
+    "fr": "<rem>Niveau\\_: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\n<rem>Portée\\_: 3 - 4</rem>\n\\---\nInflige l'{%at} de votre héros aux adversaires dans la zone ciblée\\_<sprite name=\"cell_cross\">."
+  }
+}

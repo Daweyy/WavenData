@@ -683,6 +683,63 @@
             }
           }
         ]
+      },
+      "guildIslandSkinCost": {
+        "type": "MerchantCostWithRarity",
+        "costs": [
+          {
+            "k": 0,
+            "v": {
+              "type": "MerchantCost",
+              "costs": [
+                {
+                  "type": "ResourceCost",
+                  "amount": 500,
+                  "resourceId": 922
+                }
+              ]
+            }
+          },
+          {
+            "k": 1,
+            "v": {
+              "type": "MerchantCost",
+              "costs": [
+                {
+                  "type": "ResourceCost",
+                  "amount": 800,
+                  "resourceId": 922
+                }
+              ]
+            }
+          },
+          {
+            "k": 2,
+            "v": {
+              "type": "MerchantCost",
+              "costs": [
+                {
+                  "type": "ResourceCost",
+                  "amount": 1000,
+                  "resourceId": 922
+                }
+              ]
+            }
+          },
+          {
+            "k": 4,
+            "v": {
+              "type": "MerchantCost",
+              "costs": [
+                {
+                  "type": "ResourceCost",
+                  "amount": 1200,
+                  "resourceId": 922
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     "minMaxBuildSlots": {
@@ -942,11 +999,14 @@
           "resourceId": 65
         }
       ],
+      "changeGuildLogoCosts": [],
+      "changeGuildNameCosts": [],
       "levelRequiredForCreation": 1,
       "welcomeMessageMaxSize": 200,
       "candidacyMessageMaxSize": 100,
       "maxCandidaciesPerPlayer": 4,
       "islandZoneId": 1,
+      "defaultSkin": 9,
       "guildNameConstants": {
         "type": "NamingConstants",
         "restrictedCharactersPattern": "'a-zA-ZÀ-ÖÙ-öù-ÿ œŒ    ",
@@ -986,7 +1046,7 @@
       "minimalGradeForPermission": [
         {
           "k": 0,
-          "v": 5
+          "v": 4
         },
         {
           "k": 1,
@@ -998,7 +1058,7 @@
         },
         {
           "k": 4,
-          "v": 5
+          "v": 4
         },
         {
           "k": 3,
@@ -1019,6 +1079,14 @@
         {
           "k": 8,
           "v": 1
+        },
+        {
+          "k": 9,
+          "v": 4
+        },
+        {
+          "k": 10,
+          "v": 5
         }
       ],
       "minimalGradeToReceiveOwnerShip": 4,
@@ -1036,22 +1104,72 @@
             },
             {
               "type": "GuildMissionThreshold",
-              "value": 2,
-              "experience": 10
-            },
-            {
-              "type": "GuildMissionThreshold",
-              "value": 3,
-              "experience": 10
-            },
-            {
-              "type": "GuildMissionThreshold",
-              "value": 4,
-              "experience": 10
-            },
-            {
-              "type": "GuildMissionThreshold",
               "value": 5,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 10,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 25,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 50,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 100,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 250,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 500,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 1000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 1500,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 2000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 2500,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 3000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 3700,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 4500,
               "experience": 10
             }
           ]
@@ -1062,22 +1180,77 @@
           "thresholds": [
             {
               "type": "GuildMissionThreshold",
-              "value": 2,
+              "value": 1,
               "experience": 10
             },
             {
               "type": "GuildMissionThreshold",
-              "value": 3000,
+              "value": 10,
               "experience": 10
             },
             {
               "type": "GuildMissionThreshold",
-              "value": 4500,
+              "value": 50,
               "experience": 10
             },
             {
               "type": "GuildMissionThreshold",
-              "value": 6000,
+              "value": 200,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 500,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 1000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 2250,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 3500,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 5000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 7000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 9000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 12000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 15000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 18000,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 22500,
               "experience": 10
             }
           ],
@@ -1089,27 +1262,77 @@
           "thresholds": [
             {
               "type": "GuildMissionThreshold",
-              "value": 40,
+              "value": 1,
               "experience": 10
             },
             {
               "type": "GuildMissionThreshold",
-              "value": 80,
+              "value": 5,
               "experience": 10
             },
             {
               "type": "GuildMissionThreshold",
-              "value": 120,
+              "value": 10,
               "experience": 10
             },
             {
               "type": "GuildMissionThreshold",
-              "value": 160,
+              "value": 20,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 30,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 45,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 90,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 150,
               "experience": 10
             },
             {
               "type": "GuildMissionThreshold",
               "value": 200,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 250,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 300,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 350,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 400,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 450,
+              "experience": 10
+            },
+            {
+              "type": "GuildMissionThreshold",
+              "value": 600,
               "experience": 10
             }
           ]
@@ -1143,98 +1366,84 @@
       ],
       "levelBonuses": [
         {
-          "type": "GuildMerchantSlot",
-          "level": 1
+          "k": 2,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 5
+          "k": 4,
+          "v": 2
         },
         {
-          "type": "XpBonusInFight",
-          "level": 5,
-          "percent": 2
+          "k": 6,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 10
+          "k": 8,
+          "v": 3
         },
         {
-          "type": "KamasBonusInFight",
-          "level": 10,
-          "percent": 2
+          "k": 10,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 15
+          "k": 12,
+          "v": 2
         },
         {
-          "type": "XpBonusInFight",
-          "level": 15,
-          "percent": 2
+          "k": 14,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 20
+          "k": 16,
+          "v": 3
         },
         {
-          "type": "KamasBonusInFight",
-          "level": 20,
-          "percent": 2
+          "k": 18,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 25
+          "k": 20,
+          "v": 2
         },
         {
-          "type": "XpBonusInFight",
-          "level": 25,
-          "percent": 2
+          "k": 23,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 30
+          "k": 26,
+          "v": 3
         },
         {
-          "type": "KamasBonusInFight",
-          "level": 30,
-          "percent": 2
+          "k": 29,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 35
+          "k": 32,
+          "v": 2
         },
         {
-          "type": "XpBonusInFight",
-          "level": 35,
-          "percent": 2
+          "k": 35,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 40
+          "k": 38,
+          "v": 3
         },
         {
-          "type": "KamasBonusInFight",
-          "level": 40,
-          "percent": 2
+          "k": 41,
+          "v": 1
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 45
+          "k": 44,
+          "v": 2
         },
         {
-          "type": "XpBonusInFight",
-          "level": 45,
-          "percent": 2
+          "k": 47,
+          "v": 4
         },
         {
-          "type": "GuildMerchantSlot",
-          "level": 50
-        },
-        {
-          "type": "KamasBonusInFight",
-          "level": 50,
-          "percent": 2
+          "k": 50,
+          "v": 3
         }
       ]
     },
@@ -2767,9 +2976,6 @@
           "timeSpanInSec": 60
         }
       ]
-    },
-    "riftConstants": {
-      "type": "RiftConstants"
     },
     "application": {
       "type": "ApplicationConstants",

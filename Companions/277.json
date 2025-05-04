@@ -46,21 +46,9 @@
           "value": 1
         },
         {
-          "type": "PercentageOfValue",
+          "type": "ConstIntegerValue",
           "referenceId": "heal",
-          "percentage": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 50
-          },
-          "from": {
-            "type": "EntityBaseCaracValue",
-            "referenceId": null,
-            "entitySelector": {
-              "type": "EffectHolderSelector"
-            },
-            "carac": 32
-          }
+          "value": 50
         }
       ],
       "externalDynamicValueReferences": [],
@@ -220,10 +208,10 @@
     "pt": "Caveiro Cavarento"
   },
   "description": {
-    "fr": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} et se soigne de {PVvalue:heal} si la cible est un {%Family_Chafer_Name} <B>doré</B>.",
-    "en": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} and heals self {PVvalue:heal} if the target is a <B>Golden</B> {%Family_Chafer_Name}.",
-    "es": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} y se cura {PVvalue:heal} si el objetivo es un {%Family_Chafer_Name} <B>dorado</B>.",
-    "de": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} und heilt sich um {PVvalue:heal}, wenn das Ziel ein <B>goldener</B> {%Family_Chafer_Name} ist.",
-    "pt": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} e cura-se de {PVvalue:heal} se o alvo for um {%Family_Chafer_Name} <B>Dourado</B>."
+    "fr": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} et se soigne de {value:heal,percent} de sa {%PVMAX} si la cible est un {%Family_Chafer_Name} <B>doré</B>.",
+    "en": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} and heals self {value:heal,percent} of {%PVMAX} if the target is a <B>Golden</B> {%Family_Chafer_Name}.",
+    "es": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} y se cura un {value:heal,percent} de su {%PVMAX} si el objetivo es un {%Family_Chafer_Name} <B>dorado</B>.",
+    "de": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} und heilt sich um {value:heal,percent} seiner {%PVMAX}, wenn das Ziel ein <B>goldener</B> {%Family_Chafer_Name} ist.",
+    "pt": "{%APPEARANCE} {PropertyEffect:19}.\n\\---\n{%DEATHBLOW} {value:v,+}\\_{aura:81,value:v} e cura-se de {value:heal,percent} da sua {%PVMAX} se o alvo for um {%Family_Chafer_Name} <B>Dourado</B>."
   }
 }

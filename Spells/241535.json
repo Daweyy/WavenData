@@ -95,22 +95,56 @@
       "type": "PrecomputedData",
       "dynamicValueReferences": [
         {
-          "type": "BuffedScalingDynamicValue",
+          "type": "SumValue",
           "referenceId": "v",
-          "baseValue": {
-            "type": "ConstIntegerValue",
-            "referenceId": null,
-            "value": 100
-          },
-          "factor": null,
-          "buffs": [
-            51
-          ],
-          "skillBuffs": [],
-          "from": {
-            "type": "CasterSelector"
-          },
-          "addInsteadOfMultiply": false
+          "valuesToSum": [
+            {
+              "type": "BuffedScalingDynamicValue",
+              "referenceId": "",
+              "baseValue": {
+                "type": "ConstIntegerValue",
+                "referenceId": null,
+                "value": 100
+              },
+              "factor": null,
+              "buffs": [
+                51
+              ],
+              "skillBuffs": [],
+              "from": {
+                "type": "CasterSelector"
+              },
+              "addInsteadOfMultiply": false
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ThisSpellEvolutionValue",
+                  "referenceId": "Lv"
+                },
+                {
+                  "type": "BuffedScalingDynamicValue",
+                  "referenceId": null,
+                  "baseValue": {
+                    "type": "ConstIntegerValue",
+                    "referenceId": "p",
+                    "value": 75
+                  },
+                  "factor": null,
+                  "buffs": [
+                    51
+                  ],
+                  "skillBuffs": [],
+                  "from": {
+                    "type": "CasterSelector"
+                  },
+                  "addInsteadOfMultiply": false
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "ThisSpellEvolutionValue",

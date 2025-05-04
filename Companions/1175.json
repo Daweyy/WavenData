@@ -1,0 +1,196 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241944215
+  },
+  "m_Name": "1175",
+  "m_id": 1175,
+  "m_displayName": "SEASON - ROUBLARD - BILLY KID",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": -1280689707,
+    "b": 1109226804,
+    "c": 1094331482,
+    "d": -162053979,
+    "e": -2003192090
+  },
+  "m_i18nDescriptionId": {
+    "a": -1280689707,
+    "b": 1109226804,
+    "c": 1094331482,
+    "d": -162053979,
+    "e": 1968283010
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 1175,
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 291,
+      "skinIds": [
+        291
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      13
+    ],
+    "baseProperties": [
+      34
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
+    "riposte": null,
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "pvpAvailability": {
+      "type": "Hidden"
+    },
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          1175
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 3
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Billy Kid",
+    "en": "Billy Kid",
+    "es": "Billy Kid",
+    "de": "Billy Kid",
+    "pt": "Billy Kid"
+  },
+  "description": {
+    "fr": "<b>FIN DE DEPLACEMENT</b> et {%Appearance}\n\\---\n{Companion:1175!} récupère les {aura:233,plural:other!} des alliés adjacents\\_<sprite name=\"cell_cross\"> et ils rejouent leur tour.",
+    "en": "<b>END OF MOVE</b> and {%Appearance}\n\\---\n{Companion:1175!} gets the {aura:233,plural:other!} from adjacent\\_<sprite name=\"cell_cross\">allies and they replay their turns.",
+    "es": "<b>FIN DE DESPLAZAMIENTO</b> Y {%Appearance}\n\\---\n{Companion:1175!}recupera las {aura:233,plural:other!} de los aliados adyacentes\\_<sprite name=\"cell_cross\"> y vuelven a jugar su turno.",
+    "de": "<b>ENDE DER BEWEGUNG</b> und {%Appearance}\n\\---\n{Companion:1175!} erhält die {aura:233,plural:other!} von angrenzenden\\_<sprite name=\"cell_cross\"> Verbündeten und sie spielen ihre Runde erneut.",
+    "pt": "<b>FIM DO DESLOCAMENTO</b> e {%Appearance}\n\\---\n{Companion:1175!} recupera as {aura:233,plural:other!} dos aliados adjacentes\\_<sprite name=\"cell_cross\"> e eles jogam um turno extra."
+  }
+}

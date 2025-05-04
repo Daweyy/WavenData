@@ -1,0 +1,166 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4088305958716738208
+  },
+  "m_Name": "1733",
+  "m_id": 1733,
+  "m_displayName": "STORY MODE - ACTE II - 14 - Action - Reparation",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -1225640536,
+    "b": 1942566772,
+    "c": 625859272,
+    "d": 955760390,
+    "e": -836376547
+  },
+  "m_i18nDescriptionId": {
+    "a": -1225640536,
+    "b": 1942566772,
+    "c": 625859272,
+    "d": 955760390,
+    "e": 1218151654
+  },
+  "m_elementaryStates": 1,
+  "m_illustrationReference": {
+    "assetGuid": "ba01b08e4855e8949a8107b7a829b837"
+  },
+  "m_spellEffectOverrideReferences": {
+    "m_keys": [],
+    "m_values": []
+  },
+  "values": {
+    "type": "SpellDefinition",
+    "id": 1733,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "rarity": 0,
+    "unlockableSkillIds": [],
+    "upgradeRuleId": null,
+    "canCrit": false,
+    "isEphemeral": false,
+    "tags": [
+      27
+    ],
+    "details": {
+      "type": "SpellDetails",
+      "equipableByPlayers": false,
+      "pvpAvailability": {
+        "type": "Available"
+      },
+      "element": 6,
+      "specificToWeapon": null,
+      "families": [],
+      "heroSkillPointsCost": null
+    },
+    "gaugeToModifyOnSpellPlay": [],
+    "costs": [
+      {
+        "type": "ActionPointsCost",
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
+    "castCondition": null,
+    "castTarget": {
+      "type": "OneCastTargetDefinition",
+      "selector": {
+        "type": "CasterHeroSelector"
+      }
+    },
+    "spellEffectData": [],
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "SumValue",
+          "referenceId": "h",
+          "valuesToSum": [
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": null,
+              "value": 5
+            },
+            {
+              "type": "MultValue",
+              "referenceId": "",
+              "valuesToMult": [
+                {
+                  "type": "ConstIntegerValue",
+                  "referenceId": "",
+                  "value": 5
+                },
+                {
+                  "type": "SumValue",
+                  "referenceId": "",
+                  "valuesToSum": [
+                    {
+                      "type": "SumValue",
+                      "referenceId": "ev",
+                      "valuesToSum": [
+                        {
+                          "type": "ThisSpellEvolutionValue",
+                          "referenceId": null
+                        },
+                        {
+                          "type": "ConstIntegerValue",
+                          "referenceId": "",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": -1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SumValue",
+          "referenceId": "ev",
+          "valuesToSum": [
+            {
+              "type": "ThisSpellEvolutionValue",
+              "referenceId": null
+            },
+            {
+              "type": "ConstIntegerValue",
+              "referenceId": "",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "r",
+          "value": 5
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    }
+  },
+  "name": {
+    "fr": "Action\\_: Réparation"
+  },
+  "description": {
+    "fr": "<rem>Niveau\\_: <if evolution=2>MAX</if><if not evolution=2>{value:ev}</if></rem>\n\\---\nRetire les effets négatifs.\n\\---\nSoigne votre héros de {PVvalue:h}.\n<if evolution=2>{ARvalue:r,+}</if>"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241944215
+  },
+  "m_Name": "1283",
+  "m_id": 1283,
+  "m_displayName": "STORY MODE - ACTE II - 13 - Phorzerker",
+  "m_availability": 3,
+  "m_wip": 1,
+  "m_i18nNameId": {
+    "a": -534710581,
+    "b": -465130060,
+    "c": -1817840965,
+    "d": 1819907912,
+    "e": 1734604067
+  },
+  "m_i18nDescriptionId": {
+    "a": -534710581,
+    "b": -465130060,
+    "c": -1817840965,
+    "d": 1819907912,
+    "e": -381037116
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 1283,
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 1,
+      "skinIds": [
+        1
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": false,
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 90
+        }
+      ]
+    },
+    "families": [
+      0
+    ],
+    "baseProperties": [
+      90
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 300
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 4
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 8
+    },
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 4,
+    "equipableByPlayers": false,
+    "pvpAvailability": {
+      "type": "Available"
+    },
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          1283
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          }
+        ]
+      },
+      "casterHeroRange": null,
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Phorzerker"
+  },
+  "description": {
+    "fr": "<rem>{PropertyEffect:90}</rem>\n\\---\n{%attack} Touche et repousse de {cell:c} les adversaires adjacents\\_<sprite name=\"cell_cross\">.\n<rem> Peut repousser les {ObjectMechanism:195, plural:other!}.</rem>"
+  }
+}

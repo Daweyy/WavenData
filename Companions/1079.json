@@ -1,0 +1,208 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241944215
+  },
+  "m_Name": "1079",
+  "m_id": 1079,
+  "m_displayName": "SEASON - ROUBLARD - GROS BILL",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 808769102,
+    "b": 1709633460,
+    "c": 1336465130,
+    "d": -268195698,
+    "e": -1643492509
+  },
+  "m_i18nDescriptionId": {
+    "a": 808769102,
+    "b": 1709633460,
+    "c": 1336465130,
+    "d": -268195698,
+    "e": 1061704929
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 1079,
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 705,
+      "skinIds": [
+        705
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "rip",
+          "value": 100
+        }
+      ],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": [
+        "RESPONSE"
+      ]
+    },
+    "families": [
+      13
+    ],
+    "baseProperties": [
+      34
+    ],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 500
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 250
+    },
+    "riposte": {
+      "type": "ConstIntegerValue",
+      "referenceId": "rip",
+      "value": 100
+    },
+    "actionCriticalChance": null,
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": null,
+    "spells": [],
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "equipableByPlayers": false,
+    "pvpAvailability": {
+      "type": "Hidden"
+    },
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          1079
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 3
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": [
+      {
+        "type": "ElementPointsCost",
+        "element": 57,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 1
+        }
+      }
+    ],
+    "gatheringIntervalInSecs": 3600,
+    "gatheringAbilities": []
+  },
+  "name": {
+    "fr": "Gros Bill",
+    "en": "Big Bill",
+    "es": "Gran Bill",
+    "de": "Dicker Bill",
+    "pt": "Grande Bill"
+  },
+  "description": {
+    "fr": "{%Attack} Détruit les mécanismes.\n\\---\n{LUCKSELFvalue:rip,percent} de {#response}.",
+    "en": "{%Attack} Destroys mechanisms.\n\\---\n{LUCKSELFvalue:rip,percent} of {#response}.",
+    "es": "{%Attack} Destruye los mecanismos.\n\\---\n{LUCKSELFvalue:rip,percent} de {#response}.",
+    "de": "{%Attack} Zerstört die Mechanismen.\n\\---\n{LUCKSELFvalue:rip,percent} auf {#response}.",
+    "pt": "{%Attack} Destrói os mecanismos.\n\\---\n{LUCKSELFvalue:rip,percent} de {#response}."
+  }
+}

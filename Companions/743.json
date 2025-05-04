@@ -12,7 +12,7 @@
   "m_id": 743,
   "m_displayName": "STORY MODE - ACTE II - Minutrof",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 146578306,
     "b": -106163436,
@@ -21,49 +21,65 @@
     "e": -1681566453
   },
   "m_i18nDescriptionId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 146578306,
+    "b": -106163436,
+    "c": -185491557,
+    "d": 1015436508,
+    "e": 920062067
   },
   "values": {
     "type": "CompanionDefinition",
     "id": 743,
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 1421,
       "skinIds": [
-        1
+        1421
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
-      "keywordReferences": []
+      "hasEffects": true,
+      "keywordReferences": [
+        "EPHEMERAL",
+        {
+          "type": 25,
+          "id": 1646
+        },
+        {
+          "type": 25,
+          "id": 1076
+        }
+      ]
     },
     "families": [
       0
     ],
-    "baseProperties": [],
+    "baseProperties": [
+      88
+    ],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 10
+      "value": 1000
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 3
+      "value": 1
     },
-    "actionValue": null,
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 150
+    },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
-    "actionType": null,
+    "actionType": 1,
     "actionRange": null,
     "lifeScale": null,
     "attackScale": null,
@@ -76,7 +92,7 @@
     "rarity": 0,
     "equipableByPlayers": false,
     "pvpAvailability": {
-      "type": "Available"
+      "type": "Hidden"
     },
     "upgradeRuleId": null,
     "castCondition": {
@@ -113,5 +129,8 @@
     "es": "Minutrof",
     "de": "Minutrof",
     "pt": "Minutrof"
+  },
+  "description": {
+    "fr": "{%FightTurnStarted} Vole 1 PM aux personnages à 2 cases ou moins pour le tour.\n\\---\nAjoute les sorts {Spell:1076} et {Spell:1646} à votre main."
   }
 }
