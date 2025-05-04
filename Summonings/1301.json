@@ -12,7 +12,7 @@
   "m_id": 1301,
   "m_displayName": "SEASON - ECAILLEUX - RAIE NOIRE",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -335480062,
     "b": -1207743740,
@@ -21,11 +21,11 @@
     "e": 959395750
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -335480062,
+    "b": -1207743740,
+    "c": 932539658,
+    "d": 1603930735,
+    "e": -1213388339
   },
   "m_i18nDescriptionId": {
     "a": -335480062,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 500
+          "value": 1400
         }
       ],
       "externalDynamicValueReferences": [],
@@ -64,7 +64,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 500
+      "value": 700
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -74,7 +74,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 50
+      "value": 70
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -97,13 +97,37 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Raie Noire] other[Raies Noires]}"
+    "fr": "{0, plural, one[Raie Noire] other[Raies Noires]}",
+    "en": "{0, plural, one[Black Ray] other[Black Rays]}",
+    "es": "{0, plural, one[Raya negra] other[Rayas negras]}",
+    "de": "{0, plural, one[Schwarzer Rochen] other[Schwarze Rochen]}",
+    "pt": "{0, plural, one[Arraia Negra] other[Arraias Negras]}"
+  },
+  "championName": {
+    "fr": "Raie Noire",
+    "en": "Black Ray",
+    "es": "Raya negra",
+    "de": "Dämonanta",
+    "pt": "Arraia Negra"
   },
   "description": {
-    "fr": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} points."
+    "fr": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} points.",
+    "en": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "<rem>{range}</rem>\n\\---\n{%death}{value:score,+} puntos.",
+    "de": "<rem>{range}</rem>\n\\---\n{%death}{value:score,+}\\_Punkte.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} pontos."
   }
 }

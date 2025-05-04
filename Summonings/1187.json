@@ -12,7 +12,7 @@
   "m_id": 1187,
   "m_displayName": "SEASON - ECAILLEUX - Pichascass",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1824205100,
     "b": 705316900,
@@ -21,11 +21,11 @@
     "e": 478541127
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -1824205100,
+    "b": 705316900,
+    "c": 1285761096,
+    "d": -1188453680,
+    "e": 581395988
   },
   "m_i18nDescriptionId": {
     "a": -1824205100,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 200
+          "value": 600
         }
       ],
       "externalDynamicValueReferences": [],
@@ -64,7 +64,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 200
+      "value": 300
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -74,7 +74,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 20
+      "value": 30
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -85,13 +85,37 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Pichascass] other[Pichascass]}"
+    "fr": "{0, plural, one[Pichascass] other[Pichascass]}",
+    "en": "{0, plural, one[Snappionfish] other[Snappionfish]}",
+    "es": "{0, plural, one[Pischacio] other[Pischacios]}",
+    "de": "{0, plural, one[Dichs-Drachenkopf] other[Dichs-Drachenköpfe]}",
+    "pt": "{0, plural, one[Peskeleão] other[Peskeleões]}"
+  },
+  "championName": {
+    "fr": "Pichascass",
+    "en": "Snappionfish",
+    "es": "Pischacio",
+    "de": "Dichs-Drachenkopf",
+    "pt": "Peskeleão"
   },
   "description": {
-    "fr": "{%death} {value:score,+} points."
+    "fr": "{%death} {value:score,+} points.",
+    "en": "{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "{%death} {value:score,+} puntos.",
+    "de": " {%death}{value:score,+}\\_Punkte.",
+    "pt": "{%death} {value:score,+} pontos."
   }
 }

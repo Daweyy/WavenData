@@ -10,9 +10,9 @@
   },
   "m_Name": "553",
   "m_id": 553,
-  "m_displayName": "SEASON - ECAILLEUX - NAUFFRAGE ",
+  "m_displayName": "SEASON - ECAILLEUX - Joe Fouilletou",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1132189765,
     "b": -1127664924,
@@ -66,10 +66,21 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "v",
+          "value": 5
+        }
+      ],
       "externalDynamicValueReferences": [],
-      "hasEffects": false,
-      "keywordReferences": []
+      "hasEffects": true,
+      "keywordReferences": [
+        {
+          "type": 22,
+          "id": 236
+        }
+      ]
     },
     "families": [
       0
@@ -83,7 +94,7 @@
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 3
+      "value": 20
     },
     "actionValue": {
       "type": "ConstIntegerValue",
@@ -91,11 +102,7 @@
       "value": 100
     },
     "riposte": null,
-    "actionCriticalChance": {
-      "type": "ConstIntegerValue",
-      "referenceId": "",
-      "value": 50
-    },
+    "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
@@ -126,9 +133,17 @@
     "presetSpellIds": []
   },
   "name": {
-    "fr": "Scaphandrier"
+    "fr": "Joe Fouilletou",
+    "en": "Joe Searchall",
+    "es": "Regi Estrador",
+    "de": "Joe Immersuch",
+    "pt": "Revis Tatudo"
   },
   "description": {
-    "fr": "{%noeffect}"
+    "fr": "{%FightTurnStarted} {value:v,+}\\_{aura:236,value:v}.",
+    "en": "{%FightTurnStarted} {value:v,+}\\_{aura:236,value:v}.",
+    "es": "{%FightTurnStarted} {value:v,+}\\_{aura:236,value:v}.",
+    "de": "{%FightTurnStarted} {value:v,+}\\_{aura:236,value:v}.",
+    "pt": "{%FightTurnStarted} {value:v,+}\\_{aura:236,value:v}."
   }
 }

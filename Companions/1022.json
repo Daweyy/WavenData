@@ -10,9 +10,9 @@
   },
   "m_Name": "1022",
   "m_id": 1022,
-  "m_displayName": "SEASON - NUISIBLE - Rose Obscure",
+  "m_displayName": "SEASON - FLORAL - Rose Obscure",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1199064833,
     "b": 831291460,
@@ -45,17 +45,14 @@
       "keywordReferences": [
         {
           "type": 20,
-          "id": 106
+          "id": 101
         }
       ]
     },
     "families": [
       62
     ],
-    "baseProperties": [
-      106,
-      225
-    ],
+    "baseProperties": [],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -66,12 +63,16 @@
       "referenceId": "",
       "value": 0
     },
-    "actionValue": null,
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 100
+    },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
-    "actionType": null,
+    "actionType": 1,
     "actionRange": null,
     "lifeScale": null,
     "attackScale": null,
@@ -111,14 +112,20 @@
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
-    "cost": [],
-    "gatheringIntervalInSecs": 3600,
-    "gatheringAbilities": []
+    "cost": []
   },
   "name": {
-    "fr": "{0, plural, one[Rose Obscure] other[Roses Obscures]}"
+    "fr": "{0, plural, one[Rose Obscure] other[Roses Obscures]}",
+    "en": "{0, plural, one[Dark Rose] other[Dark Roses]}",
+    "es": "{0, plural, one[Rosa Oscura] other[Rosas Oscuras]}",
+    "de": "{0, plural, one[Schattenrose] other[Schattenrosen]}",
+    "pt": "{0, plural, one[Rosa Obscura] other[Rosas Obscuras]}"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Déclenche l'effet des <b>Plantes</b> autres que {Companion:1022, plural:other} jusqu'à 2 cases.\n\\---\n<rem>{PropertyEffect:106}</rem>"
+    "fr": "{%FightTurnEnded} Inflige son {%AT} aux {%FAMILY_BWORK_NAME, plural:other} sur la ligne devant elle et leur applique {PropertyEffect:101} pour le tour.\n\\---\n<rem>Effet cumulable.</rem>",
+    "en": "{%FightTurnEnded} Inflicts {%AT} on {%FAMILY_BWORK_NAME, plural:other} in the line in front of it and applies {PropertyEffect:101} on them for the turn.\n\\---\n<rem>Stackable effect.</rem>",
+    "es": "{%FightTurnEnded} Inflige son {%AT} a los {%FAMILY_BWORK_NAME, plural:other} en la línea delante de ella y le aplica {PropertyEffect:101} durante el turno.\n\\---\n<rem>Efecto acumulable.</rem>",
+    "de": "{%FightTurnEnded} Fügt den {%FAMILY_BWORK_NAME, plural:other} in der Reihe vor ihr ihren {%AT} als Schaden zu und wendet bei ihnen für die Runde {PropertyEffect:101} an.\n\\---\n<rem>Effekt kumulierbar.</rem>",
+    "pt": "{%FightTurnEnded} Inflige seu {%AT} aos {%FAMILY_BWORK_NAME, plural:other} em linha à sua frente e aplica {PropertyEffect:101} a eles durante o turno.\n\\---\n<rem>Efeito cumulativo.</rem>"
   }
 }

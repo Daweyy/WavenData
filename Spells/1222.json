@@ -10,9 +10,9 @@
   },
   "m_Name": "1222",
   "m_id": 1222,
-  "m_displayName": "SEASON - NUISIBLE - Ronces",
+  "m_displayName": "SEASON - FLORAL - SUMMON - Ronces",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1534729481,
     "b": -1038784684,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "ebc8dd159857f63469d5c09faa3990f6"
+    "assetGuid": "957c9b04f5cec824bafddd585484f6d3"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -66,7 +66,7 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "value": 1
         }
       }
     ],
@@ -74,16 +74,12 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "SquareAreaOfEffectSelector",
-        "originSelector": {
-          "type": "AllCoordsSelector"
-        },
-        "size": {
-          "type": "ConstIntegerValue",
-          "referenceId": "",
-          "value": 1
-        },
-        "minRadius": null
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForMechanismFilter"
+          }
+        ]
       }
     },
     "spellEffectData": [],
@@ -95,15 +91,27 @@
       "keywordReferences": [
         {
           "type": 20,
-          "id": 4
+          "id": 5
+        },
+        {
+          "type": 6,
+          "id": 293
         }
       ]
     }
   },
   "name": {
-    "fr": "Ronces"
+    "fr": "Ronces",
+    "en": "Brambles",
+    "es": "Zarzas",
+    "de": "Ranken",
+    "pt": "Sarças"
   },
   "description": {
-    "fr": "{PropertyEffect:4} les adversaires sur 3 cases\\_<sprite name=\"cell_around\"> pour le tour.\n\\---\n<rem>Ce sort revient dans votre main.</rem>"
+    "fr": "Pose des {FloorMechanism:293,plural:other}.",
+    "en": "Places {FloorMechanism:293,plural:other}.",
+    "es": "Coloca {FloorMechanism:293,plural:other}.",
+    "de": "Platziert\\_{FloorMechanism:293,plural:other}.",
+    "pt": "Coloca {FloorMechanism:293,plural:other}."
   }
 }

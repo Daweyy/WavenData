@@ -12,7 +12,7 @@
   "m_id": 1608,
   "m_displayName": "SEASON - ECAILLEUX - PECHEQUIN",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1564921675,
     "b": 839445396,
@@ -21,11 +21,11 @@
     "e": -771215381
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 1564921675,
+    "b": 839445396,
+    "c": -913759142,
+    "d": -1395072259,
+    "e": 7746142
   },
   "m_i18nDescriptionId": {
     "a": 1564921675,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 800
+          "value": 1600
         }
       ],
       "externalDynamicValueReferences": [],
@@ -74,24 +74,60 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 80
+      "value": 100
     },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
-    "actionRange": null,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 2
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 3
+      }
+    },
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Pichequin] other[Pichequins]}"
+    "fr": "{0, plural, one[Pichequin] other[Pichequins]}",
+    "en": "{0, plural, one[Snapshark] other[Snapsharks]}",
+    "es": "{0, plural, one[Pischiburón] other[Pischiburones]}",
+    "de": "{0, plural, one[Dichs-Hai] other[Dichs-Haie]}",
+    "pt": "{0, plural, one[Peskbarão] other[Peskbarões]}"
+  },
+  "championName": {
+    "fr": "Pichequin",
+    "en": "Snapshark",
+    "es": "Pischiburón",
+    "de": "Dichs-Hai",
+    "pt": "Peskbarão"
   },
   "description": {
-    "fr": "{%death} {value:score,+} points."
+    "fr": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} points.",
+    "en": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} puntos.",
+    "de": "<rem>{range}</rem>\n\\---\n{%death}{value:score,+}\\_Punkte.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} pontos."
   }
 }

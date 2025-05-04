@@ -12,7 +12,7 @@
   "m_id": 1740,
   "m_displayName": "SEASON - ECAILLEUX - PASSIF 03",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 105961500,
     "b": -1677556236,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "3e474077a28f96641953c8772f08fcbe"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -89,7 +89,7 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": null,
-              "value": 50
+              "value": 10
             },
             {
               "type": "MultValue",
@@ -98,7 +98,7 @@
                 {
                   "type": "ConstIntegerValue",
                   "referenceId": "",
-                  "value": 50
+                  "value": 10
                 },
                 {
                   "type": "SumValue",
@@ -144,118 +144,25 @@
               "value": 1
             }
           ]
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "score",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 100
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 100
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": null,
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "invo",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 1
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": "",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 4,
-          "id": 1158
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "PASSIF\\_: 03"
+    "fr": "PASSIF\\_: Mort motivante",
+    "en": "PASSIVE: Motivating Death",
+    "es": "PASIVO: Muerte motivante",
+    "de": "PASSIVE FÄHIGKEIT: Motivierender Tod",
+    "pt": "PASSIVO: Morte Motivante"
   },
   "description": {
-    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b><color=#71ff33>BONUS</color></b>\n<b>COUP DE GRÂCE</b> {ARvalue:p,+} à votre héros.\n\\---\n<b>MORT D'UN ENNEMI\\_:</b> {value:score,+} points.\n\\---\n<b><color=#FF0000>MALUS</color></b>\n<b>DÉBUT DE VAGUE</b>\\_: \\v invoque {value:invo}\\_{Summoning:1158,value:invo}."
+    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b>MORT D'UN ADVERSAIRE</b>\\_: {ATvalue:p,+,percent} à votre héros.",
+    "en": "<rem>Level: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>While this spell is in your hand</color></b>\n\\---\n<b>DEATH OF AN OPPONENT</b>: {ATvalue:p,+,percent} to your hero.",
+    "es": "<rem>Nivel: <if evolution=4>MÁX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Mientras este hechizo esté en tu mano</color></b>\n\\---\n<b>MUERTE DE UN ADVERSARIO</b>: {ATvalue:p,+,percent} a tu héroe.",
+    "de": "<rem>Stufe: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Solange dieser Zauber auf deiner Hand ist</color></b>\n\\---\n<b>TOD EINES GEGNERS</b>: {ATvalue:p,+,percent}\\_für deinen Helden.",
+    "pt": "<rem>Nível: <if evolution=4>MÁX.</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Enquanto o feitiço estiver na sua mão</color></b>\n\\---\n<b>MORTE DE UM ADVERSÁRIO</b>: {ATvalue:p,+,percent} ao seu herói."
   }
 }

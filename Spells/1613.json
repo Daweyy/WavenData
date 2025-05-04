@@ -10,9 +10,9 @@
   },
   "m_Name": "1613",
   "m_id": 1613,
-  "m_displayName": "SEASON - ECAILLEUX - PASSIF 10",
+  "m_displayName": "SEASON - ECAILLEUX - PASSIF 07",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 54041420,
     "b": -960608348,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "6b8ac2ca1a6995642ba2596c41401b86"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -89,7 +89,7 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": null,
-              "value": 20
+              "value": 50
             },
             {
               "type": "MultValue",
@@ -98,7 +98,7 @@
                 {
                   "type": "ConstIntegerValue",
                   "referenceId": "",
-                  "value": 20
+                  "value": 50
                 },
                 {
                   "type": "SumValue",
@@ -144,76 +144,25 @@
               "value": 1
             }
           ]
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "score",
-          "value": 1
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "invo",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 1
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": "",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 4,
-          "id": 34
-        },
-        "CRITICAL"
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "PASSIF\\_: 10"
+    "fr": "PASSIF\\_: Bulle d'air explosive",
+    "en": "PASSIVE: Exploding Air Bubble",
+    "es": "PASIVO: Burbuja explosiva",
+    "de": "PASSIVE FÄHIGKEIT: Explosive Luftblase",
+    "pt": "PASSIVO: Bolha de Ar Explosiva"
   },
   "description": {
-    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b><color=#71ff33>BONUS</color></b>\n{#CRITICAL}\\_:  {ARvalue:p,+} à votre héros.\n\\---\n<b>SUBIR DES DÉGÂTS\\_:</b> {value:score,+} points.\n\\---\n<b><color=#FF0000>MALUS</color></b>\n<b>DÉBUT DE VAGUE</b>\\_: \\v invoque {value:invo}\\_{Summoning:34,value:invo}."
+    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b>FIN D'UN DÉPLACEMENT\\_: </b>Inflige {value:p,percent} de votre {%at} aux adversaires autour\\_<sprite name=\"cell_around\"> de votre héros.",
+    "en": "<rem>Level: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>While this spell is in your hand</color></b>\n\\---\n<b>END OF A MOVE: </b>Inflicts {value:p,percent} of your {%at} on opponents around\\_<sprite name=\"cell_around\"> your hero.",
+    "es": "<rem>Nivel: <if evolution=4>MÁX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Mientras que el hechizo está en tu mano</color></b>\n\\---\n<b>FIN DE UN DESPLAZAMIENTO: </b>Inflige {value:p,percent} de tu héroe {%at} a los adversarios de alrededor\\_<sprite name=\"cell_around\"> de tu héroe.",
+    "de": "<rem>Stufe: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Solange dieser Zauber auf deiner Hand ist</color></b>\n\\---\n<b>ENDE EINER BEWEGUNG: </b>Fügt Gegnern im Umkreis\\_<sprite name=\"cell_around\"> deines Helden {value:p,percent} deines {%at,plural:two} als Schaden zu.",
+    "pt": "<rem>Nível: <if evolution=4>MÁX.</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Enquanto o feitiço estiver na sua mão</color></b>\n\\---\n<b>FIM DE UM DESLOCAMENTO: </b>Inflige {value:p,percent} de seu {%at} aos adversários em\\_volta\\_<sprite name=\"cell_around\"> do seu herói."
   }
 }

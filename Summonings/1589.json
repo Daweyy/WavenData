@@ -12,7 +12,7 @@
   "m_id": 1589,
   "m_displayName": "SEASON - ECAILLEUX - PICHON",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -379972946,
     "b": 1287527956,
@@ -21,11 +21,11 @@
     "e": 55868666
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -379972946,
+    "b": 1287527956,
+    "c": -709697831,
+    "d": 776836560,
+    "e": -1027048654
   },
   "m_i18nDescriptionId": {
     "a": -379972946,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 100
+          "value": 200
         }
       ],
       "externalDynamicValueReferences": [],
@@ -74,7 +74,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 10
+      "value": 20
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -85,13 +85,37 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Pichon] other[Pichons]}"
+    "fr": "{0, plural, one[Pichon] other[Pichons]}",
+    "en": "{0, plural, one[Snapper] other[Snappers]}",
+    "es": "{0, plural, one[Pischis] other[Pischis]}",
+    "de": "{0, plural, one[Dichs-Fischlein] other[Dichs-Fischlein]}",
+    "pt": "{0, plural, one[Pesk] other[Pesks]}"
+  },
+  "championName": {
+    "fr": "Pichon",
+    "en": "Snapper",
+    "es": "Pischis",
+    "de": "Dichs-Fischlein",
+    "pt": "Pesk"
   },
   "description": {
-    "fr": "{%death} {value:score,+} points."
+    "fr": "{%death} {value:score,+} points.",
+    "en": "{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "{%death} {value:score,+} puntos.",
+    "de": " {%death}{value:score,+}\\_Punkte.",
+    "pt": "{%death} {value:score,+} pontos."
   }
 }

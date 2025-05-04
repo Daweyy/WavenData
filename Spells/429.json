@@ -85,7 +85,15 @@
       "type": "OneCastTargetDefinition",
       "selector": {
         "type": "FilteredCharacterSelector",
-        "filters": []
+        "filters": [
+          {
+            "type": "TeamFilter",
+            "isIdentical": true,
+            "reference": {
+              "type": "CasterSelector"
+            }
+          }
+        ]
       }
     },
     "spellEffectData": [

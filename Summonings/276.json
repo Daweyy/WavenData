@@ -10,9 +10,9 @@
   },
   "m_Name": "276",
   "m_id": 276,
-  "m_displayName": "SEASON - NUISIBLE - BOSS - Gargantuork",
+  "m_displayName": "SEASON - FLORAL - BOSS - Cybwork",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -792466505,
     "b": -2082571884,
@@ -46,15 +46,10 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "c",
-          "value": 2
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [
-        "CustomRule.553.score5"
+        "CustomRule.553.c",
+        "CustomRule.553.Score5"
       ],
       "hasEffects": false,
       "keywordReferences": []
@@ -79,7 +74,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 250
+      "value": 200
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -90,13 +85,30 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
-    "grade": 0,
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "grade": 2,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "Gargantwuork"
+    "fr": "{0, plural, one[Cybwork] other[Cybworks]}",
+    "en": "{0, plural, one[Cybwork] other[Cybworks]}",
+    "es": "{0, plural, one[Cybwork] other[Cybworks]}",
+    "de": "{0, plural, one[Cybwork] other[Cybworks]}",
+    "pt": "{0, plural, one[Cybwork] other[Cybworks]}"
   },
   "description": {
-    "fr": "Les dégâts reçus s'ajoutent au <b>SCORE</b>.\n\\---\n{%Attack} Touche les {cell:c} devant lui.\n\\---\n{%Death} {value:CustomRule.553.score5,+} points."
+    "fr": "Les dégâts reçus s'ajoutent au <b>SCORE</b>.\n\\---\n{%Attack} Touche les {cell:CustomRule.553.c} devant lui.\n\\---\n{%Death} {value:CustomRule.553.Score5,+} points.",
+    "en": "Damage taken adds to the <b>SCORE</b>.\n\\---\n{%Attack} Hits the {cell:CustomRule.553.c} in front of him.\n\\---\n{%Death} {value:CustomRule.553.Score5,+} points.",
+    "es": "Los daños recibidos se añaden a la <b>PUNTUACIÓN</b>.\n\\---\n{%Attack} Alcanza las {cell:CustomRule.553.c} delante de él.\n\\---\n{%Death} {value:CustomRule.553.Score5,+} puntos.",
+    "de": "Der erlittene Schaden wird den <b>PUNKTEN</b> hinzugefügt.\n\\---\n{%Attack} Trifft die {cell:CustomRule.553.c} vor ihm.\n\\---\n{%Death} {value:CustomRule.553.Score5,+} Punkte.",
+    "pt": "Os danos recebidos são adicionados à <b>PONTUAÇÃO</b>.\n\\---\n{%Attack} Atinge as {cell:CustomRule.553.c} à sua frente.\n\\---\n{%Death} {value:CustomRule.553.Score5,+} pontos."
   }
 }

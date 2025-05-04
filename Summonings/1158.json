@@ -12,7 +12,7 @@
   "m_id": 1158,
   "m_displayName": "SEASON - ECAILLEUX - PICHON SORCIER",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1872725492,
     "b": 1103183860,
@@ -21,11 +21,11 @@
     "e": 781112631
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -1872725492,
+    "b": 1103183860,
+    "c": 2084713033,
+    "d": 929669921,
+    "e": -1174447739
   },
   "m_i18nDescriptionId": {
     "a": -1872725492,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 500
+          "value": 1000
         }
       ],
       "externalDynamicValueReferences": [],
@@ -85,13 +85,37 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Pichorcier] other[Pichorciers]}"
+    "fr": "{0, plural, one[Pichorcier] other[Pichorciers]}",
+    "en": "{0, plural, one[Snaporcerer] other[Snaporcerers]}",
+    "es": "{0, plural, one[Pischicero] other[Pischiceros]}",
+    "de": "{0, plural, one[Dichs-Hexer] other[Dichs-Hexer]}",
+    "pt": "{0, plural, one[Peskemago] other[Peskemagos]}"
+  },
+  "championName": {
+    "fr": "Pichorcier",
+    "en": "Snaporcerer",
+    "es": "Pischicero",
+    "de": "Dichs-Hexer",
+    "pt": "Peskemago"
   },
   "description": {
-    "fr": "{%death} {value:score,+} points."
+    "fr": "{%death} {value:score,+} points.",
+    "en": "{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "{%death} {value:score,+} puntos.",
+    "de": " {%death}{value:score,+}\\_Punkte.",
+    "pt": "{%death} {value:score,+} pontos."
   }
 }

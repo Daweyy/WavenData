@@ -10,7 +10,7 @@
   },
   "m_Name": "743",
   "m_id": 743,
-  "m_displayName": "STORY MODE - ACTE II - Minutrof",
+  "m_displayName": "STORY MODE - LIVRE II - Minutrof",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -39,7 +39,18 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "pm",
+          "value": 1
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "c",
+          "value": 2
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
@@ -51,6 +62,10 @@
         {
           "type": 25,
           "id": 1076
+        },
+        {
+          "type": 20,
+          "id": 88
         }
       ]
     },
@@ -63,7 +78,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 1000
+      "value": 900
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -73,7 +88,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 150
+      "value": 120
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -119,9 +134,7 @@
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
-    "cost": [],
-    "gatheringIntervalInSecs": 3600,
-    "gatheringAbilities": []
+    "cost": []
   },
   "name": {
     "fr": "Minutrof",
@@ -131,6 +144,10 @@
     "pt": "Minutrof"
   },
   "description": {
-    "fr": "{%FightTurnStarted} Vole 1 PM aux personnages à 2 cases ou moins pour le tour.\n\\---\nAjoute les sorts {Spell:1076} et {Spell:1646} à votre main."
+    "fr": "{PropertyEffect:88}\n\\---\n{%FightTurnStarted} Vole {PMvalue:pm} aux personnages à {cell:c} ou moins pour le tour.\n\\---\nAjoute les sorts {Spell:1076} et {Spell:1646} à votre main.",
+    "en": "{PropertyEffect:88}\n\\---\n{%FightTurnStarted} Steals {PMvalue:pm} from characters {cell:c} or less away for the turn.\n\\---\nAdds the {Spell:1076} and {Spell:1646} spells to your hand.",
+    "es": "{PropertyEffect:88}\n\\---\n{%FightTurnStarted} Roba {PMvalue:pm} a los personajes a {cell:c} o menos durante el turno.\n\\---\nAñade los hechizos {Spell:1076} y {Spell:1646} a tu mano.",
+    "de": "{PropertyEffect:88}\n\\---\n{%FightTurnStarted} Stiehlt Charakteren, die {cell:c} oder weniger entfernt sind, {PMvalue:pm} für die Runde.\n\\---\nFügt deiner Hand die Zauber {Spell:1076} und {Spell:1646} hinzu.",
+    "pt": "{PropertyEffect:88}\n\\---\n{%FightTurnStarted} Rouba {PMvalue:pm} dos personagens a {cell:c} ou menos durante o turno.\n\\---\nAdiciona os feitiços {Spell:1076} e {Spell:1646} à sua mão."
   }
 }

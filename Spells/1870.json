@@ -10,7 +10,7 @@
   },
   "m_Name": "1870",
   "m_id": 1870,
-  "m_displayName": "STORY MODE - ACTE II - 15 - Cupidité",
+  "m_displayName": "STORY MODE - LIVRE II - Chapitre 15 - Cupidité",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -134,23 +134,7 @@
         },
         "areaOfEffects": [
           {
-            "type": "SquareAreaOfEffectSelector",
-            "originSelector": {
-              "type": "AllCoordsSelector"
-            },
-            "size": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 1
-            },
-            "minRadius": {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 0
-            }
-          },
-          {
-            "type": "CrossAreaOfEffectSelector",
+            "type": "CircleAreaOfEffectSelector",
             "originSelector": {
               "type": "AllCoordsSelector"
             },
@@ -158,7 +142,8 @@
               "type": "ConstIntegerValue",
               "referenceId": "",
               "value": 2
-            }
+            },
+            "minRadius": null
           }
         ]
       }
@@ -194,9 +179,17 @@
     }
   },
   "name": {
-    "fr": "Cupidité"
+    "fr": "Cupidité",
+    "en": "Greed",
+    "es": "Codicia",
+    "de": "Gier",
+    "pt": "Ganância"
   },
   "description": {
-    "fr": "Vole {value:p,percent} d'{%AT} à chaque adversaire à 2 cases ou moins pour le tour.\n\\---\n{PA_RESvalue:pa,+} par adversaire affecté."
+    "fr": "Vole {value:p,percent} d'{%AT} à chaque adversaire dans la zone\\_<sprite name=\"cell_circle2\"> pour le tour.\n\\---\n{PA_RESvalue:pa,+} par adversaire affecté.",
+    "en": "Steals {value:p,percent} {%AT} from each opponent in the <sprite name=\"cell_circle2\">\\_zone for the turn.\n\\---\n{PA_RESvalue:pa,+} per opponent affected.",
+    "es": "Roba un {value:p,percent} de {%AT} a cada adversario en la zona\\_<sprite name=\"cell_circle2\"> durante el turno.\n\\---\n{PA_RESvalue:pa,+} por adversario afectado.",
+    "de": "Stiehlt jedem Gegner im Wirkungsbereich\\_<sprite name=\"cell_circle2\"> {value:p,percent} des {%AT,plural:two} für die Runde.\n\\---\n{PA_RESvalue:pa,+} pro getroffenem Gegner.",
+    "pt": "Rouba {value:p,percent} de {%AT} a cada adversário na zona\\_<sprite name=\"cell_circle2\"> durante o turno.\n\\---\n{PA_RESvalue:pa,+} por adversário afetado."
   }
 }

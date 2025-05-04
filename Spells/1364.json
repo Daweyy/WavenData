@@ -10,7 +10,7 @@
   },
   "m_Name": "1364",
   "m_id": 1364,
-  "m_displayName": "STORY MODE - ACTE II - 04 - Tunnel",
+  "m_displayName": "STORY MODE - LIVRE II - Chapitre 04 - Tunnel",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -91,17 +91,50 @@
             "targetsToCompare": {
               "type": "CasterHeroSelector"
             },
+            "distance": null
+          },
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "AroundTargetFilter",
+            "targetsToCompare": {
+              "type": "FilteredEntitySelector",
+              "from": {
+                "type": "AllObjectMechanismsSelector"
+              },
+              "filters": [
+                {
+                  "type": "AroundTargetFilter",
+                  "targetsToCompare": {
+                    "type": "CasterHeroSelector"
+                  },
+                  "distance": {
+                    "type": "EqualsTo",
+                    "dynamicValue": {
+                      "type": "ConstIntegerValue",
+                      "referenceId": "",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "ObjectMechanismDefinitionFilter",
+                  "condition": 1,
+                  "objectMechanisms": [
+                    142
+                  ]
+                }
+              ]
+            },
             "distance": {
               "type": "EqualsTo",
               "dynamicValue": {
                 "type": "ConstIntegerValue",
-                "referenceId": "c",
-                "value": 2
+                "referenceId": "",
+                "value": 1
               }
             }
-          },
-          {
-            "type": "CellValidForCharacterFilter"
           }
         ]
       }
@@ -109,22 +142,33 @@
     "spellEffectData": [],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "c",
-          "value": 2
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 41
+        },
+        {
+          "type": 7,
+          "id": 142
+        }
+      ]
     }
   },
   "name": {
-    "fr": "Tunnel"
+    "fr": "Tunnel",
+    "en": "Tunnel",
+    "es": "Túnel",
+    "de": "Tunnel",
+    "pt": "Túnel"
   },
   "description": {
-    "fr": "Téléporte {Weapon:135!} à {cell:c}.\n\\---\n<rem>Ce sort revient dans votre main.</rem>"
+    "fr": "Téléporte {Weapon:135!} de l'autre coté d'un {ObjectMechanism:142} adjacent\\_<sprite name=\"cell_cross\">.\n\\---\n<rem>Ce sort revient dans votre main.</rem>",
+    "en": "Teleports {Weapon:135!} to the other side of an adjacent\\_<sprite name=\"cell_cross\"> {ObjectMechanism:142}.\n\\---\n<rem>This spell returns to your hand.</rem>",
+    "es": "Teletransporta a {Weapon:135!} al otro lado de una {ObjectMechanism:142} adyacente\\_<sprite name=\"cell_cross\">.\n\\---\n<rem>Este hechizo vuelve a tu mano.</rem>",
+    "de": "Teleportiert {Weapon:135!} von der anderen Seite von einem angrenzenden\\_<sprite name=\"cell_cross\"> {ObjectMechanism:142}.\n\\---\n<rem>Dieser Zauber geht zurück auf deine Hand.</rem>",
+    "pt": "Teletransporta {Weapon:135!} para o outro lado de uma {ObjectMechanism:142} adjacente\\_<sprite name=\"cell_cross\">.\n\\---\n<rem>Este feitiço volta para a sua mão.</rem>"
   }
 }

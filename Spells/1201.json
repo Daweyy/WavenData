@@ -10,9 +10,9 @@
   },
   "m_Name": "1201",
   "m_id": 1201,
-  "m_displayName": "STORY MODE - ACTE II - 14 - Event - Vent favorable",
+  "m_displayName": "STORY MODE - LIVRE II - Chapitre 14 - Event - Vent favorable",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1414058868,
     "b": -575435036,
@@ -92,16 +92,30 @@
     ],
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "p",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": []
     }
   },
   "name": {
-    "fr": "ÉVÈNEMENT\\_: Vent favorable"
+    "fr": "ÉVÈNEMENT\\_: Vent favorable",
+    "en": "EVENT: Fair Wind",
+    "es": "EVENTO: Viento favorable",
+    "de": "EREIGNIS: Günstiger Wind",
+    "pt": "EVENTO: Vento Favorável"
   },
   "description": {
-    "fr": "+ 1 {%pm,plural:other} jusqu'à la fin du tour.\n\\---\n<rem>Ce sort est détruit à la fin du tour.</rem>"
+    "fr": "{PMvalue:p,+} jusqu'à la fin du tour.\n\\---\n<rem>Ce sort est détruit à la fin du tour.</rem>",
+    "en": "{PMvalue:p,+} until the end of the turn.\n\\---\n<rem>This spell is destroyed at the end of the turn.</rem>",
+    "es": "{PMvalue:p,+} hasta el final del turno.\n\\---\n<rem>Este hechizo se destruye al final del turno.</rem>",
+    "de": "{PMvalue:p,+} bis zum Ende der Runde.\n\\---\n<rem>Dieser Zauber wird am Ende der Runde vernichtet.</rem>",
+    "pt": "{PMvalue:p,+} até o fim do turno.\n\\---\n<rem>Este feitiço é destruído no fim do turno.</rem>"
   }
 }

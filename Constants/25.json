@@ -18,7 +18,6 @@
     "id": 25,
     "firstWorldId": 10,
     "playerInitialBoat": 78,
-    "asyncArenaWorld": 186,
     "pvpWorld": 98,
     "playerInitializationConstant": {
       "type": "PlayerInitializationConstants",
@@ -46,6 +45,7 @@
       "storyModeOnBoardingIllu": "215717389ef8b6d439e46e6e8b950f13",
       "nudgeStoryModeButtonInstructionId": 91,
       "storyModeInstructionId": 497,
+      "chestInstructionId": 483,
       "levelUpInstructionId": 373,
       "shopOnBoardingIllu": "4e1534195562db04bb23f480207baf40",
       "nudgeShopButtonInstructionId": 322,
@@ -101,15 +101,14 @@
         }
       ]
     },
+    "popupAdviceConstants": {
+      "type": "PopupAdviceConstants",
+      "popupAdviceChest": 379,
+      "popupAdviceDefeat": 706
+    },
     "havenIsland": {
       "type": "HavenIslandConstants",
-      "defaultHavenIsland": 2,
-      "defaultMinions": [
-        71
-      ],
-      "defaultHavenIslandPowers": [
-        874
-      ]
+      "defaultHavenIsland": 2
     },
     "groupConstants": {
       "type": "GroupConstants",
@@ -133,10 +132,6 @@
         {
           "k": 2,
           "v": 915
-        },
-        {
-          "k": 4,
-          "v": 498
         }
       ],
       "costs": [
@@ -361,7 +356,7 @@
           }
         ]
       },
-      "boatCost": {
+      "navigationBoatCost": {
         "type": "MerchantCost",
         "costs": [
           {
@@ -485,6 +480,14 @@
           }
         ]
       },
+      "crewMemberCost": {
+        "type": "MerchantCost",
+        "costs": []
+      },
+      "crewCaptainCost": {
+        "type": "MerchantCost",
+        "costs": []
+      },
       "spellCost": {
         "type": "MerchantCostWithRarity",
         "costs": [
@@ -548,16 +551,6 @@
           {
             "type": "ResourceCost",
             "amount": 400,
-            "resourceId": 922
-          }
-        ]
-      },
-      "minionCost": {
-        "type": "MerchantCost",
-        "costs": [
-          {
-            "type": "ResourceCost",
-            "amount": 300,
             "resourceId": 922
           }
         ]
@@ -769,9 +762,7 @@
       "braceletsPerHero": 1,
       "pinsPerHero": 1,
       "relicsPerHero": 1,
-      "minBuildsPerHero": 1,
-      "havenIslandPowersPerHero": 2,
-      "minionsPerHero": 2
+      "minBuildsPerHero": 1
     },
     "heroBuildConstantsPVP": {
       "type": "HeroBuildConstants",
@@ -793,33 +784,7 @@
       "braceletsPerHero": 2,
       "pinsPerHero": 2,
       "relicsPerHero": 2,
-      "minBuildsPerHero": 0,
-      "havenIslandPowersPerHero": 2,
-      "minionsPerHero": 2
-    },
-    "heroBuildConstantsDefense": {
-      "type": "HeroBuildConstants",
-      "minMaxSpellsPerHero": {
-        "type": "MinMax",
-        "min": 9,
-        "max": 15
-      },
-      "minMaxCompanionsPerHero": {
-        "type": "MinMax",
-        "min": 0,
-        "max": 4
-      },
-      "minMaxRingsPerHero": {
-        "type": "MinMax",
-        "min": 0,
-        "max": 4
-      },
-      "braceletsPerHero": 1,
-      "pinsPerHero": 2,
-      "relicsPerHero": 2,
-      "minBuildsPerHero": 0,
-      "havenIslandPowersPerHero": 3,
-      "minionsPerHero": 3
+      "minBuildsPerHero": 0
     },
     "heroSkillConstants": {
       "type": "HeroSkillConstants",
@@ -974,26 +939,24 @@
         }
       ],
       "defaultDialogs": [
-        202,
-        227,
-        387,
-        361,
-        597,
-        134,
-        407,
+        629,
+        1280,
+        1482,
+        1481,
+        594,
+        627,
+        530,
+        1197,
+        1097,
+        498,
+        899,
+        424,
         334,
         939,
-        424,
-        715,
-        743,
-        205,
-        663,
-        679,
-        631,
-        948,
-        243,
-        674,
-        224
+        680,
+        623,
+        227,
+        1094
       ]
     },
     "guildsConstants": {
@@ -1116,7 +1079,6 @@
         }
       ],
       "minimalGradeToReceiveOwnerShip": 4,
-      "sakaPatataureFight": 1211,
       "maxGuildMissionId": 8,
       "guildMissions": [
         {
@@ -1478,10 +1440,9 @@
       "trainingOnePlayerFight": 598,
       "trainingTwoPlayersFight": 956,
       "challengeOnePlayerFight": 101,
-      "challengeTwoPlayerFight": 86,
       "pveFightRules": 923,
       "pvpFightRules": 1,
-      "defenseFightRules": 673,
+      "expeditionFight": 624,
       "debugFight": 1,
       "debugFightEmpty": 219,
       "aiDebugFight": 470,
@@ -1737,325 +1698,6 @@
             ]
           }
         }
-      ]
-    },
-    "asyncConstants": {
-      "type": "AsyncConstants",
-      "costPerFight": [],
-      "dailyFreeResource": null,
-      "actionAtEndOfSeason": {
-        "type": "LeaveTickets"
-      },
-      "losesUntilRunIsLost": 3,
-      "costToRerun": [
-        {
-          "type": "ResourceCost",
-          "amount": 100,
-          "resourceId": 65
-        }
-      ],
-      "dropsPerVictory": [
-        {
-          "k": 2,
-          "v": {
-            "type": "DropTable",
-            "entries": [
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 58,
-                    "value": 661
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    },
-                    "maxQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 58,
-                    "value": 972
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    },
-                    "maxQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "k": 4,
-          "v": {
-            "type": "DropTable",
-            "entries": [
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 58,
-                    "value": 998
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    },
-                    "maxQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 58,
-                    "value": 997
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    },
-                    "maxQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "k": 6,
-          "v": {
-            "type": "DropTable",
-            "entries": [
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 33,
-                    "value": 65
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "MinMaxLinearDoubleProvider",
-                      "minValue": 300.0,
-                      "maxValue": 12000.0
-                    },
-                    "maxQuantity": {
-                      "type": "MinMaxLinearDoubleProvider",
-                      "minValue": 300.0,
-                      "maxValue": 12000.0
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "k": 8,
-          "v": {
-            "type": "DropTable",
-            "entries": [
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 58,
-                    "value": 204
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    },
-                    "maxQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 58,
-                    "value": 638
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    },
-                    "maxQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "k": 10,
-          "v": {
-            "type": "DropTable",
-            "entries": [
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 58,
-                    "value": 869
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    },
-                    "maxQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 58,
-                    "value": 905
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    },
-                    "maxQuantity": {
-                      "type": "ConstDoubleProvider",
-                      "value": 1.0
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "k": 12,
-          "v": {
-            "type": "DropTable",
-            "entries": [
-              {
-                "type": "DropTableEntry",
-                "source": {
-                  "type": "FixedItemDropTableEntrySource",
-                  "itemId": {
-                    "typeEnum": 33,
-                    "value": 65
-                  }
-                },
-                "rollEntries": [
-                  {
-                    "type": "DropTableRollEntry",
-                    "minQuantity": {
-                      "type": "MinMaxLinearDoubleProvider",
-                      "minValue": 500.0,
-                      "maxValue": 25000.0
-                    },
-                    "maxQuantity": {
-                      "type": "MinMaxLinearDoubleProvider",
-                      "minValue": 500.0,
-                      "maxValue": 25000.0
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "ladderRewards": {
-        "type": "LadderRewards",
-        "maxRewardedIndex": 49
-      },
-      "fakeShushuNames": [
-        740,
-        310,
-        764,
-        573,
-        217,
-        387,
-        232,
-        257,
-        361,
-        978,
-        607,
-        371,
-        862
       ]
     },
     "pvp1v1Constants": {
@@ -2369,10 +2011,6 @@
         79,
         131,
         334,
-        411,
-        457,
-        605,
-        939,
         896,
         921,
         180,
@@ -2409,7 +2047,6 @@
         {
           "type": "AchievementSubCollection",
           "achievements": [
-            27,
             208,
             1769,
             1770,
@@ -2515,19 +2152,6 @@
                 "type": "LootsListContent",
                 "count": 1,
                 "source": 477
-              }
-            ]
-          }
-        },
-        {
-          "k": 56,
-          "v": {
-            "type": "WorldLootsListDefinition",
-            "content": [
-              {
-                "type": "LootsListContent",
-                "count": 0,
-                "source": 266
               }
             ]
           }
@@ -2777,19 +2401,73 @@
       "numberOfDaysInSeasonSubPeriod": 7,
       "numberOfLevelsInSeasonSubPeriod": 7
     },
+    "expeditions": {
+      "type": "ExpeditionConstants",
+      "captainsCount": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 1
+      },
+      "sailersCount": {
+        "type": "MinMax",
+        "min": 4,
+        "max": 4
+      },
+      "validCoordsBox": {
+        "type": "BoundingBox",
+        "from": {
+          "type": "Coordinates",
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "type": "Coordinates",
+          "x": 2,
+          "y": 6
+        }
+      }
+    },
     "shop": {
       "type": "ShopConstants",
-      "realCurrencyShopCategory": {
+      "weekliesCategory": {
         "type": "BackofficeShopCategory",
-        "key": "com.ankama.waven.realcurrencyarticles"
+        "main": {
+          "type": "BackofficeShopCategoryVariant",
+          "key": "WAVEN_WEEKLIES",
+          "mobileKey": "WAVEN_WEEKLIES_MOBILE",
+          "articleActiveDurationInDays": 14
+        },
+        "variant": null
       },
-      "hardCurrencyShopCategory": {
+      "newDealsCategory": {
         "type": "BackofficeShopCategory",
-        "key": "com.ankama.waven.hardcurrencyarticles"
+        "main": {
+          "type": "BackofficeShopCategoryVariant",
+          "key": "WAVEN_NEW_OFFERS",
+          "mobileKey": "WAVEN_NEW_OFFERS_MOBILE",
+          "articleActiveDurationInDays": null
+        },
+        "variant": null
       },
-      "hardCurrencyServerVariantShopCategory": {
+      "topDealsCategory": {
         "type": "BackofficeShopCategory",
-        "key": "com.ankama.waven.hardcurrencyarticles.seasonalserv"
+        "main": {
+          "type": "BackofficeShopCategoryVariant",
+          "key": "WAVEN_TOP_DEALS",
+          "mobileKey": "WAVEN_TOP_DEALS_MOBILE",
+          "articleActiveDurationInDays": null
+        },
+        "variant": null
+      },
+      "gemsCategory": {
+        "type": "BackofficeShopCategory",
+        "main": {
+          "type": "BackofficeShopCategoryVariant",
+          "key": "WAVEN_GEMS",
+          "mobileKey": "WAVEN_GEMS_MOBILE",
+          "articleActiveDurationInDays": null
+        },
+        "variant": null
       },
       "goldPassArticleKey": {
         "type": "BackofficeShopArticle",

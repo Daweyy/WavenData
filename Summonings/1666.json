@@ -12,7 +12,7 @@
   "m_id": 1666,
   "m_displayName": "SEASON - ECAILLEUX - BLOB",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1458184537,
     "b": -1199122108,
@@ -21,11 +21,11 @@
     "e": -1179998235
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 1458184537,
+    "b": -1199122108,
+    "c": -1931987717,
+    "d": -1910847930,
+    "e": 71656982
   },
   "m_i18nDescriptionId": {
     "a": 1458184537,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 200
+          "value": 400
         }
       ],
       "externalDynamicValueReferences": [],
@@ -64,7 +64,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 300
+      "value": 200
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -74,7 +74,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 30
+      "value": 20
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -97,13 +97,37 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Pichlob] other[Pichlobs]}"
+    "fr": "{0, plural, one[Pichlob] other[Pichlobs]}",
+    "en": "{0, plural, one[Snapblob] other[Snapblobs]}",
+    "es": "{0, plural, one[Pischiblub] other[Pischiblubs]}",
+    "de": "{0, plural, one[Dichs-Blob] other[Dichs-Blobs]}",
+    "pt": "{0, plural, one[Peskebolha] other[Peskebolhas]}"
+  },
+  "championName": {
+    "fr": "Pichlob",
+    "en": "Snapblob",
+    "es": "Pischiblub",
+    "de": "Dichs-Blob",
+    "pt": "Peskebolha"
   },
   "description": {
-    "fr": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} points."
+    "fr": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} points.",
+    "en": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "<rem>{range }</rem>\n\\---\n{%death} {value:score,+} puntos.",
+    "de": "<rem>{range}</rem>\n\\---\n{%death}{value:score,+}\\_Punkte.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%death} {value:score,+} pontos."
   }
 }

@@ -12,7 +12,7 @@
   "m_id": 248,
   "m_displayName": "SEASON - ECAILLEUX - PASSIF 05",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1606213829,
     "b": -677124780,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "7f3e7c7c39e23c94f93ccc9c9e61f6f1"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -144,118 +144,25 @@
               "value": 1
             }
           ]
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "score",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 100
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 100
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": null,
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "invo",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 1
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": "",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 4,
-          "id": 1666
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "PASSIF\\_: 05"
+    "fr": "PASSIF\\_: Attaque aiguisée",
+    "en": "PASSIVE: Sharp Attack",
+    "es": "PASIVO: Ataque afilado",
+    "de": "PASSIVE FÄHIGKEIT: Scharfer Angriff",
+    "pt": "PASSIVO: Ataque Afiado"
   },
   "description": {
-    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b><color=#71ff33>BONUS</color></b>\n{%attack} {ATvalue:p,+,percent} à votre héros.\n\\---\n{%attack} {value:score,+} points.\n\\---\n<b><color=#FF0000>MALUS</color></b>\n<b>DÉBUT DE VAGUE</b>\\_: \\v invoque {value:invo}\\_{Summoning:1666,value:invo}."
+    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n{%attack} {ATvalue:p,+,percent} à votre héros.",
+    "en": "<rem>Level: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>While this spell is in your hand</color></b>\n\\---\n{%attack} {ATvalue:p,+,percent} to your hero.",
+    "es": "<rem>Nivel: <if evolution=4>MÁX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Mientras este hechizo esté en tu mano</color></b>\n\\---\n{%attack}{ATvalue:p,+,percent} a tu héroe.",
+    "de": "<rem>Stufe: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Solange dieser Zauber auf deiner Hand ist</color></b>\n\\---\n{%attack}{ATvalue:p,+,percent} für deinen Helden.",
+    "pt": "<rem>Nível: <if evolution=4>MÁX.</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Enquanto o feitiço estiver na sua mão</color></b>\n\\---\n{%attack} {ATvalue:p,+,percent} ao seu herói."
   }
 }

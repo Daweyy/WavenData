@@ -10,9 +10,9 @@
   },
   "m_Name": "1499",
   "m_id": 1499,
-  "m_displayName": "SEASON - NUISIBLE - SUMMON - Pissenlit Diabolique",
+  "m_displayName": "SEASON - FLORAL - SUMMON - Pissenlit Diabolique",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 2067225874,
     "b": -919263276,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "4c0e3de773af32f4f9ace25fa5e032e5"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -66,7 +66,7 @@
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 4
+          "value": 3
         }
       }
     ],
@@ -74,37 +74,124 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "UnionOfCoordsSelector",
-        "first": {
-          "type": "FilteredCoordSelector",
-          "filters": [
-            {
-              "type": "CellValidForCharacterFilter"
-            }
-          ]
-        },
-        "second": {
-          "type": "EntityPositionSelector",
-          "entity": {
-            "type": "TeamOfSelector",
-            "targetWithTeam": {
-              "type": "CasterSelector"
-            }
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "InLineInOneDirectionTargetFilter",
+                "refDirectionTargetA": {
+                  "type": "SpecificCoordSelector",
+                  "x": 0,
+                  "y": 4
+                },
+                "refDirectionTargetB": {
+                  "type": "SpecificCoordSelector",
+                  "x": 0,
+                  "y": 3
+                },
+                "applyStartTargets": {
+                  "type": "SpecificCoordsSelector",
+                  "cells": [
+                    {
+                      "type": "Coordinates",
+                      "x": 0,
+                      "y": 4
+                    },
+                    {
+                      "type": "Coordinates",
+                      "x": 1,
+                      "y": 4
+                    },
+                    {
+                      "type": "Coordinates",
+                      "x": 2,
+                      "y": 4
+                    },
+                    {
+                      "type": "Coordinates",
+                      "x": 3,
+                      "y": 4
+                    },
+                    {
+                      "type": "Coordinates",
+                      "x": 4,
+                      "y": 4
+                    }
+                  ]
+                },
+                "distance": null
+              },
+              {
+                "type": "InLineInOneDirectionTargetFilter",
+                "refDirectionTargetA": {
+                  "type": "SpecificCoordSelector",
+                  "x": 0,
+                  "y": 3
+                },
+                "refDirectionTargetB": {
+                  "type": "SpecificCoordSelector",
+                  "x": 0,
+                  "y": 4
+                },
+                "applyStartTargets": {
+                  "type": "SpecificCoordsSelector",
+                  "cells": [
+                    {
+                      "type": "Coordinates",
+                      "x": 0,
+                      "y": 0
+                    },
+                    {
+                      "type": "Coordinates",
+                      "x": 1,
+                      "y": 0
+                    },
+                    {
+                      "type": "Coordinates",
+                      "x": 2,
+                      "y": 0
+                    },
+                    {
+                      "type": "Coordinates",
+                      "x": 3,
+                      "y": 0
+                    },
+                    {
+                      "type": "Coordinates",
+                      "x": 4,
+                      "y": 0
+                    }
+                  ]
+                },
+                "distance": null
+              }
+            ]
+          },
+          {
+            "type": "CellValidForCharacterFilter"
           }
-        }
+        ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "60fba05da3e9a514b829283bdabdcea8",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
-        {
-          "type": 20,
-          "id": 106
-        },
         {
           "type": 5,
           "id": 1086
@@ -113,9 +200,17 @@
     }
   },
   "name": {
-    "fr": "{Companion:1086}"
+    "fr": "{Companion:1086}",
+    "en": "{Companion:1086}",
+    "es": "{Companion:1086}",
+    "de": "{Companion:1086}",
+    "pt": "{Companion:1086}"
   },
   "description": {
-    "fr": "Invoque 1 {Companion:1086}\n\\---\n<rem>Ce sort revient dans votre main.</rem>"
+    "fr": "Invoque un {Companion:1086}.\n\\---\n<rem>Ce sort revient dans votre main.</rem>",
+    "en": "Summons one {Companion:1086}.\n\\---\n<rem>This spell returns to your hand.</rem>",
+    "es": "Invoca un {Companion:1086}.\n\\---\n<rem>Este hechizo vuelve a tu mano.</rem>",
+    "de": "Beschwört einen\\_{Companion:1086}.\n\\---\n<rem>Dieser Zauber geht zurück auf deine Hand.</rem>",
+    "pt": "Invoca um {Companion:1086}.\n\\---\n<rem>Este feitiço volta para a sua mão.</rem>"
   }
 }

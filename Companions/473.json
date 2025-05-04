@@ -46,9 +46,17 @@
           "value": 3
         }
       ],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "Const.collisionDmg"
+      ],
       "hasEffects": false,
-      "keywordReferences": []
+      "keywordReferences": [
+        "PUSH",
+        {
+          "type": 20,
+          "id": 88
+        }
+      ]
     },
     "families": [
       36
@@ -82,8 +90,27 @@
     "actionType": 1,
     "actionRange": null,
     "lifeScale": {
-      "type": "ReferenceScalingFactor",
-      "reference": 16
+      "type": "CustomScalingFactor",
+      "computer": {
+        "type": "MultipleLinearScalingFactorComputer",
+        "scales": [
+          {
+            "type": "SingleLinearScale",
+            "minLevel": 1,
+            "scale": 0.066
+          },
+          {
+            "type": "SingleLinearScale",
+            "minLevel": 33,
+            "scale": 0.13
+          },
+          {
+            "type": "SingleLinearScale",
+            "minLevel": 66,
+            "scale": 0.27
+          }
+        ]
+      }
     },
     "attackScale": {
       "type": "ReferenceScalingFactor",
@@ -125,9 +152,7 @@
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
-    "cost": [],
-    "gatheringIntervalInSecs": 3600,
-    "gatheringAbilities": []
+    "cost": []
   },
   "name": {
     "fr": "Bouftou Noir",

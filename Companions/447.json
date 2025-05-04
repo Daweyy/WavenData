@@ -10,9 +10,9 @@
   },
   "m_Name": "447",
   "m_id": 447,
-  "m_displayName": "SEASON - NUISIBLE - Belle Noire",
+  "m_displayName": "SEASON - FLORAL - Belle Noire",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 435181131,
     "b": -532130988,
@@ -42,24 +42,16 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 20,
-          "id": 106
-        }
-      ]
+      "keywordReferences": []
     },
     "families": [
       62
     ],
-    "baseProperties": [
-      106,
-      225
-    ],
+    "baseProperties": [],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "value": 300
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -115,14 +107,20 @@
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
-    "cost": [],
-    "gatheringIntervalInSecs": 3600,
-    "gatheringAbilities": []
+    "cost": []
   },
   "name": {
-    "fr": "{0,plural,one[Belle-Noire] other[Belles-Noires]}"
+    "fr": "{0,plural,one[Belle-Noire] other[Belles-Noires]}",
+    "en": "{0,plural,one[Belladark] other[Belladarks]}",
+    "es": "{0,plural,one[Bella Oscura] other[Bellas Oscuras]}",
+    "de": "{0,plural,one[Schwarze Schönheit] other[Schwarze Schönheiten]}",
+    "pt": "{0,plural,one[Bela Obscura] other[Belas Obscuras]}"
   },
   "description": {
-    "fr": "{%Appearance} gagne son {%AT} en {%AR}\n\\---\nLorsqu'elle subit une attaque\\_: Inflige son {%AT} aux {%FAMILY_BWORK_NAME, plural:other} autour\\_<sprite name=\"cell_around\">\n\\---\n<rem>{PropertyEffect:106}</rem>"
+    "fr": "Lorsqu'elle subit une attaque\\_: Inflige son {%AT} aux {%FAMILY_BWORK_NAME, plural:other} autour\\_<sprite name=\"cell_around\">.",
+    "en": "When attacked: Inflicts {%AT} on surrounding\\_<sprite name=\"cell_around\"> {%FAMILY_BWORK_NAME, plural:other}.",
+    "es": "Cuando sufre un ataque: Inflige su {%AT} a los {%FAMILY_BWORK_NAME, plural:other} de alrededor\\_<sprite name=\"cell_around\">.",
+    "de": "Wenn sie einen Angriff erleidet: Fügt den {%FAMILY_BWORK_NAME, plural:other} im Umkreis\\_<sprite name=\"cell_around\"> ihren {%AT} als Schaden zu.",
+    "pt": "Quando sofre um ataque: Inflige seu {%AT} aos {%FAMILY_BWORK_NAME, plural:other} em\\_volta\\_<sprite name=\"cell_around\">."
   }
 }

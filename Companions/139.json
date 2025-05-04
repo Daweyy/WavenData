@@ -1,0 +1,190 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4623072324241944215
+  },
+  "m_Name": "139",
+  "m_id": 139,
+  "m_displayName": "STORY MODE - LIVRE II - Chapitre 02 - Ruel",
+  "m_availability": 3,
+  "m_wip": 0,
+  "m_i18nNameId": {
+    "a": 1111249627,
+    "b": -1891825308,
+    "c": -280445061,
+    "d": -1600028159,
+    "e": 1153712513
+  },
+  "m_i18nDescriptionId": {
+    "a": 1111249627,
+    "b": -1891825308,
+    "c": -280445061,
+    "d": -1600028159,
+    "e": 162066817
+  },
+  "values": {
+    "type": "CompanionDefinition",
+    "id": 139,
+    "characterSpecificSkins": {
+      "type": "CharacterSpecificSkins",
+      "defaultSkinId": 7692,
+      "skinIds": [
+        7692
+      ]
+    },
+    "precomputedData": {
+      "type": "PrecomputedData",
+      "dynamicValueReferences": [],
+      "externalDynamicValueReferences": [],
+      "hasEffects": true,
+      "keywordReferences": []
+    },
+    "families": [
+      5,
+      81
+    ],
+    "baseProperties": [],
+    "life": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 850
+    },
+    "movementPoints": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 3
+    },
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 24
+    },
+    "riposte": null,
+    "actionCriticalChance": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 50
+    },
+    "actionCriticalBonus": null,
+    "customActionTarget": null,
+    "actionType": 1,
+    "actionRange": null,
+    "lifeScale": null,
+    "attackScale": {
+      "type": "ReferenceScalingFactor",
+      "reference": 0
+    },
+    "spells": [],
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Hidden"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 4,
+    "equipableByPlayers": false,
+    "pvpAvailability": {
+      "type": "Hidden"
+    },
+    "upgradeRuleId": null,
+    "castCondition": {
+      "type": "CanCastCompanionCondition",
+      "specificEntity": {
+        "type": "CompanionDefinitionFilter",
+        "condition": 1,
+        "companions": [
+          139
+        ]
+      }
+    },
+    "spawnSelector": {
+      "type": "GenericCompanionSpawnSelector",
+      "spawnLocation": {
+        "type": "FilteredCoordSelector",
+        "filters": [
+          {
+            "type": "CellValidForCharacterFilter"
+          },
+          {
+            "type": "OrCoordFilter",
+            "filters": [
+              {
+                "type": "CombinedCoordFilter",
+                "filters": [
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "GreaterEqualThan",
+                      "dynamicValue": {
+                        "type": "ConstIntegerValue",
+                        "referenceId": "",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "AroundTargetFilter",
+                    "targetsToCompare": {
+                      "type": "CasterHeroSelector"
+                    },
+                    "distance": {
+                      "type": "LowerEqualThan",
+                      "dynamicValue": {
+                        "type": "SumValue",
+                        "referenceId": "",
+                        "valuesToSum": [
+                          {
+                            "type": "EntityCaracValue",
+                            "referenceId": "",
+                            "entitySelector": {
+                              "type": "CasterSelector"
+                            },
+                            "carac": 64
+                          },
+                          {
+                            "type": "ConstIntegerValue",
+                            "referenceId": "",
+                            "value": 2
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "casterHeroRange": {
+        "type": "MinMax",
+        "min": 1,
+        "max": 2
+      },
+      "aroundAlliedCharacters": false,
+      "aroundEnemyCharacters": false
+    },
+    "cost": []
+  },
+  "name": {
+    "fr": "Ruel",
+    "en": "Ruel",
+    "es": "Ruel",
+    "de": "Ruel",
+    "pt": "Ruel"
+  },
+  "description": {
+    "fr": "{%attack} Touche les adversaires autour\\_<sprite name=\"cell_around\">.\n\\---\nRejoue son tour lorsqu'il détruit une {ObjectMechanism:1506[Bombe]!}.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "en": "{%attack} Hits surrounding\\_<sprite name=\"cell_around\"> opponents.\n\\---\nReplays turn on destroying a {ObjectMechanism:1506[Bomb]!}.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "es": "{%attack} Alcanza a los adversarios de alrededor\\_<sprite name=\"cell_around\">.\n\\---\nVuelve a jugar su turno cuando destruye una {ObjectMechanism:1506[Bomba]!}.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "de": "{%attack} Trifft die Gegner im Umkreis\\_<sprite name=\"cell_around\">.\n\\---\nSpielt seine Runde erneut, wenn er eine {ObjectMechanism:1506[Bombe]!} zerstört.\\v<family>{%Family_BrotherHood_Name}</family>",
+    "pt": "{%attack} Atinge os adversários em\\_volta\\_<sprite name=\"cell_around\">.\n\\---\nJoga um turno extra quando ele destrói uma {ObjectMechanism:1506[Bomba]!}.\\v<family>{%Family_BrotherHood_Name}</family>"
+  }
+}

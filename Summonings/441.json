@@ -10,7 +10,7 @@
   },
   "m_Name": "441",
   "m_id": 441,
-  "m_displayName": "GUILD - Saka Patataure",
+  "m_displayName": "SAKA PATATAURE - Saka Patataure",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -52,6 +52,10 @@
       "keywordReferences": [
         {
           "type": 20,
+          "id": 106
+        },
+        {
+          "type": 20,
           "id": 173
         }
       ]
@@ -60,7 +64,8 @@
       0
     ],
     "baseProperties": [
-      173
+      173,
+      106
     ],
     "life": {
       "type": "ConstIntegerValue",
@@ -72,34 +77,53 @@
       "referenceId": "",
       "value": 0
     },
-    "actionValue": null,
+    "actionValue": {
+      "type": "ConstIntegerValue",
+      "referenceId": "",
+      "value": 10
+    },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
-    "actionType": null,
+    "actionType": 1,
     "actionRange": null,
     "lifeScale": {
       "type": "ReferenceScalingFactor",
       "reference": 16
     },
-    "attackScale": null,
+    "attackScale": {
+      "type": "CustomScalingFactor",
+      "computer": {
+        "type": "LinearScalingFactorComputer",
+        "scale": 1.0
+      }
+    },
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 3,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "Saka Patataure",
-    "en": "Saka Patataur",
-    "es": "Sako Patatoro",
-    "de": "Sakkar Toffeltaurus",
-    "pt": "Saka Batatauro"
+    "fr": "{0, plural, one[Saka Patataure] other[Saka Patataures]}",
+    "en": "{0, plural, one[Saka Patataur] other[Saka Patataurs]}",
+    "es": "{0, plural, one[Sako Patatoro] other[Sakos Patatoros]}",
+    "de": "{0, plural, one[Sakkar Toffeltaurus] other[Sakkar Toffeltauren]}",
+    "pt": "{0, plural, one[Saka Batatauro] other[Saka Batatauros]}"
   },
   "description": {
-    "fr": "{PropertyEffect:173}",
-    "en": "{PropertyEffect:173}",
-    "es": "{PropertyEffect:173}",
-    "de": "{PropertyEffect:173}",
-    "pt": "{PropertyEffect:173}"
+    "fr": "{PropertyEffect:173}, {PropertyEffect:106}",
+    "en": "{PropertyEffect:173}, {PropertyEffect:106}",
+    "es": "{PropertyEffect:173}, {PropertyEffect:106}",
+    "de": "{PropertyEffect:173}, {PropertyEffect:106}",
+    "pt": "{PropertyEffect:173}, {PropertyEffect:106}"
   }
 }

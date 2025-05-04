@@ -12,7 +12,7 @@
   "m_id": 1574,
   "m_displayName": "SEASON - ECAILLEUX - PICHEDUSE",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 735987392,
     "b": 1448377972,
@@ -21,11 +21,11 @@
     "e": 43080011
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 735987392,
+    "b": 1448377972,
+    "c": -382216710,
+    "d": 1365240920,
+    "e": 1633726978
   },
   "m_i18nDescriptionId": {
     "a": 735987392,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 400
+          "value": 800
         }
       ],
       "externalDynamicValueReferences": [],
@@ -85,13 +85,37 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Pichéduse] other[Pichéduses]}"
+    "fr": "{0, plural, one[Pichéduse] other[Pichéduses]}",
+    "en": "{0, plural, one[Snapellyfish] other[Snapellyfish]}",
+    "es": "{0, plural, one[Pischidusa] other[Pischidusas]}",
+    "de": "{0, plural, one[Dichs-Qualle] other[Dichs-Quallen]}",
+    "pt": "{0, plural, one[Peskedusa] other[Peskedusas]}"
+  },
+  "championName": {
+    "fr": "Pichéduse",
+    "en": "Snapellyfish",
+    "es": "Pischidusa",
+    "de": "Dichs-Qualle",
+    "pt": "Peskedusa"
   },
   "description": {
-    "fr": "{%death} {value:score,+} points."
+    "fr": "{%death} {value:score,+} points.",
+    "en": "{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "{%death} {value:score,+} puntos.",
+    "de": " {%death}{value:score,+}\\_Punkte.",
+    "pt": "{%death} {value:score,+} pontos."
   }
 }

@@ -10,9 +10,9 @@
   },
   "m_Name": "437",
   "m_id": 437,
-  "m_displayName": "SEASON - NUISIBLE - Larbin Monté",
+  "m_displayName": "SEASON - FLORAL - Traqueur",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1019850724,
     "b": 2069982180,
@@ -39,16 +39,16 @@
     "id": 437,
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 2343,
+      "defaultSkinId": 2795,
       "skinIds": [
-        2343
+        2795
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [
-        "CustomRule.553.score2"
+        "CustomRule.553.Score2"
       ],
       "hasEffects": false,
       "keywordReferences": []
@@ -68,29 +68,58 @@
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 4
+      "value": 3
     },
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 25
+      "value": 50
     },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
-    "actionRange": null,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 3
+      }
+    },
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
-    "grade": 0,
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "grade": 1,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Larbin Monté] other[Larbins Montés]}"
+    "fr": "{0, plural, one[Traqueur] other[Traqueurs]}",
+    "en": "{0, plural, one[Tracker] other[Trackers]}",
+    "es": "{0, plural, one[Rastreador] other[Rastreadores]}",
+    "de": "{0, plural, one[Verfolger] other[Verfolger]}",
+    "pt": "{0, plural, one[Rastreador] other[Rastreadores]}"
   },
   "description": {
-    "fr": "{%Death} {value:CustomRule.553.score2,+} points."
+    "fr": "<rem>{range}</rem>\n\\---\n{%Death} {value:CustomRule.553.Score2,+} points.",
+    "en": "<rem>{range}</rem>\n\\---\n{%Death} {value:CustomRule.553.Score2,+} points.",
+    "es": "<rem>{range}</rem>\n\\---\n{%Death}{value:CustomRule.553.Score2,+} puntos.",
+    "de": "<rem>{range }</rem>\n\\---\n{%Death}{value:CustomRule.553.Score2,+} Punkte.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%Death} {value:CustomRule.553.Score2,+} pontos."
   }
 }

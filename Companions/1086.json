@@ -10,9 +10,9 @@
   },
   "m_Name": "1086",
   "m_id": 1086,
-  "m_displayName": "SEASON - NUISIBLE - Pissenlit Diabolique",
+  "m_displayName": "SEASON - FLORAL - Pissenlit Diabolique",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 712042602,
     "b": 493153892,
@@ -39,23 +39,26 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "t",
+          "value": 100
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 1
+        }
+      ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 20,
-          "id": 106
-        }
-      ]
+      "keywordReferences": []
     },
     "families": [
       62
     ],
-    "baseProperties": [
-      106,
-      225
-    ],
+    "baseProperties": [],
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
@@ -69,7 +72,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "value": 200
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -115,14 +118,20 @@
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
-    "cost": [],
-    "gatheringIntervalInSecs": 3600,
-    "gatheringAbilities": []
+    "cost": []
   },
   "name": {
-    "fr": "{0, plural, one[Pissenlit Diabolique] other[Pissenlits Diaboliques]}"
+    "fr": "{0, plural, one[Pissenlit Diabolique] other[Pissenlits Diaboliques]}",
+    "en": "{0, plural, one[Evil Dandelion] other[Evil Dandelions]}",
+    "es": "{0, plural, one[Diente de León Diabólico] other[Dientes de León Diabólicos]}",
+    "de": "{0, plural, one[Teuflischer Löwenzahn] other[Teuflische Löwenzähne]}",
+    "pt": "{0, plural, one[Dente-de-Leão Diabólico] other[Dentes-de-Leão Diabólicos]}"
   },
   "description": {
-    "fr": "{%FightTurnEnded} Inflige son {%AT} aux {%FAMILY_BWORK_NAME, plural:other} sur une ligne.\n\\---\n<rem>{PropertyEffect:106}</rem>"
+    "fr": "{%FightTurnEnded} Inflige {value:nb}\\_fois son {%AT} au premier {%FAMILY_BWORK_NAME, plural:one} devant lui.\n\\---\nInflige son {%AT} une fois supplémentaire pour chaque {value:t} points d'{%AT} au dessus de 200.",
+    "en": "{%FightTurnEnded} Inflicts {%AT} {value:nb}\\_{nb, plural, one[time] other[times]} on the first {%FAMILY_BWORK_NAME, plural:one} in front of it.\n\\---\nInflicts {%AT} an additional time for every {value:t} {%AT} points above 200.",
+    "es": "{%FightTurnEnded} Inflige {value:nb}\\_{nb, plural, one[vez] other[veces]} su {%AT} al primer {%FAMILY_BWORK_NAME, plural:one} delante de él.\n\\---\nInflige su {%AT} una vez adicional por cada {value:t} puntos de {%AT} por encima de 200.",
+    "de": "{%FightTurnEnded} Fügt dem ersten {%FAMILY_BWORK_NAME, plural:one} vor sich {value:nb}-mal seinen {%AT} als Schaden zu.\n\\---\nFügt seinen {%AT} ein zusätzliches Mal pro {value:t} {%AT}spunkt über 200 aus.",
+    "pt": "{%FightTurnEnded} Inflige {value:nb}\\_{nb, plural, one[vez] other[vezes]} seu {%AT} ao primeiro {%FAMILY_BWORK_NAME, plural:one} à sua frente.\n\\---\nInflige seu {%AT} uma vez adicional por cada {value:t} {t, plural, one[ponto] other[pontos]} de {%AT} acima de 200."
   }
 }

@@ -12,7 +12,7 @@
   "m_id": 642,
   "m_displayName": "SEASON - ECAILLEUX - PASSIF 02",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -181538677,
     "b": -2129596604,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "a4e15e3002c31fa4bb7ba04bd953c403"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -96,75 +96,25 @@
               "value": 1
             }
           ]
-        },
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "score",
-          "value": 1
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "invo",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 1
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": "",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 4,
-          "id": 1589
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "PASSIF\\_: 02"
+    "fr": "PASSIF\\_: Dégâts Valorisés",
+    "en": "PASSIVE: Damage Counted",
+    "es": "PASIVO: Daños valorizados",
+    "de": "PASSIVE FÄHIGKEIT: Gewürdigter Schaden",
+    "pt": "PASSIVO: Danos Valorizados"
   },
   "description": {
-    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b><color=#71ff33>BONUS</color></b>\n{%attack} Inflige {value:ev} fois votre {%AR} autour de votre héros.\n\\---\n<b>INFLIGER DES DÉGÂTS\\_:</b> {value:score,+} points.\n\\---\n<b><color=#FF0000>MALUS</color></b>\n<b>DÉBUT DE VAGUE</b>\\_: \\v invoque {value:invo}\\_{Summoning:1589,value:invo}."
+    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b>INFLIGER DES DÉGÂTS\\_:</b> {value:ev,+} points.",
+    "en": "<rem>Level: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>While this spell is in your hand</color></b>\n\\---\n<b>DO DAMAGE</b>: {value:ev,+} {ev, plural, one[point] other[points]}.",
+    "es": "<rem>Nivel: <if evolution=4>MÁX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Mientras este hechizo esté en tu mano</color></b>\n\\---\n<b>INFLIGIR DAÑOS:</b> {value:ev,+} puntos.",
+    "de": "<rem>Stufe: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Solange dieser Zauber auf deiner Hand ist</color></b>\n\\---\n<b>SCHADEN VERURSACHEN:</b> {value:ev,+}\\_Punkte.",
+    "pt": "<rem>Nível: <if evolution=4>MÁX.</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Enquanto o feitiço estiver na sua mão</color></b>\n\\---\n<b>INFLIGIR DANOS:</b> {value:ev,+} pontos."
   }
 }

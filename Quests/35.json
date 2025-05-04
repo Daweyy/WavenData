@@ -10,7 +10,7 @@
   },
   "m_Name": "35",
   "m_id": 35,
-  "m_displayName": "STORY MODE - ACTE II - Ruel",
+  "m_displayName": "STORY MODE - LIVRE II - Ruel",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -26,7 +26,7 @@
     "questType": 10,
     "onlyOneRunByDay": false,
     "hideLevel": false,
-    "chaptersVisualId": 930,
+    "chaptersVisualId": 810,
     "minPlayers": 1,
     "maxPlayers": 1,
     "accessCondition": {
@@ -48,8 +48,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 0,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 3,
+        "monsterLevel": 38,
         "rewards": null,
         "oneTimeRewards": {
           "type": "SerializedDropTableDefinitionProvider",
@@ -61,8 +61,31 @@
                 "source": {
                   "type": "FixedItemDropTableEntrySource",
                   "itemId": {
-                    "typeEnum": 58,
-                    "value": 972
+                    "typeEnum": 33,
+                    "value": 65
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 5000.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 5000.0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 5,
+                    "value": 98
                   }
                 },
                 "rollEntries": [
@@ -94,8 +117,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 1,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 3,
+        "monsterLevel": 40,
         "rewards": null,
         "oneTimeRewards": {
           "type": "SerializedDropTableDefinitionProvider",
@@ -107,8 +130,8 @@
                 "source": {
                   "type": "FixedItemDropTableEntrySource",
                   "itemId": {
-                    "typeEnum": 58,
-                    "value": 972
+                    "typeEnum": 33,
+                    "value": 388
                   }
                 },
                 "rollEntries": [
@@ -116,11 +139,57 @@
                     "type": "DropTableRollEntry",
                     "minQuantity": {
                       "type": "ConstDoubleProvider",
-                      "value": 1.0
+                      "value": 50.0
                     },
                     "maxQuantity": {
                       "type": "ConstDoubleProvider",
-                      "value": 1.0
+                      "value": 50.0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 915
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 849
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
                     }
                   }
                 ]
@@ -140,38 +209,40 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 2,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 4,
+        "monsterLevel": 45,
         "rewards": null,
         "oneTimeRewards": {
-          "type": "DropTable",
-          "entries": [
-            {
-              "type": "DropTableEntry",
-              "source": {
-                "type": "FixedItemDropTableEntrySource",
-                "itemId": {
-                  "typeEnum": 33,
-                  "value": 65
-                }
-              },
-              "rollEntries": [
-                {
-                  "type": "DropTableRollEntry",
-                  "minQuantity": {
-                    "type": "MinMaxLinearDoubleProvider",
-                    "minValue": 1.0,
-                    "maxValue": 1.0
-                  },
-                  "maxQuantity": {
-                    "type": "MinMaxLinearDoubleProvider",
-                    "minValue": 1.0,
-                    "maxValue": 1.0
+          "type": "SerializedDropTableDefinitionProvider",
+          "dropTable": {
+            "type": "DropTable",
+            "entries": [
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 392
                   }
-                }
-              ]
-            }
-          ]
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 20000.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 20000.0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "wip": false
         },
         "forcedDestinationOnExit": null,
         "dungeonZone": {
@@ -184,38 +255,40 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 3,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 6,
+        "monsterLevel": 65,
         "rewards": null,
         "oneTimeRewards": {
-          "type": "DropTable",
-          "entries": [
-            {
-              "type": "DropTableEntry",
-              "source": {
-                "type": "FixedItemDropTableEntrySource",
-                "itemId": {
-                  "typeEnum": 33,
-                  "value": 65
-                }
-              },
-              "rollEntries": [
-                {
-                  "type": "DropTableRollEntry",
-                  "minQuantity": {
-                    "type": "MinMaxLinearDoubleProvider",
-                    "minValue": 1.0,
-                    "maxValue": 1.0
-                  },
-                  "maxQuantity": {
-                    "type": "MinMaxLinearDoubleProvider",
-                    "minValue": 1.0,
-                    "maxValue": 1.0
+          "type": "SerializedDropTableDefinitionProvider",
+          "dropTable": {
+            "type": "DropTable",
+            "entries": [
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 65
                   }
-                }
-              ]
-            }
-          ]
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 5000.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 5000.0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "wip": false
         },
         "forcedDestinationOnExit": null,
         "dungeonZone": {
@@ -230,38 +303,40 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 4,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 8,
+        "monsterLevel": 90,
         "rewards": null,
         "oneTimeRewards": {
-          "type": "DropTable",
-          "entries": [
-            {
-              "type": "DropTableEntry",
-              "source": {
-                "type": "FixedItemDropTableEntrySource",
-                "itemId": {
-                  "typeEnum": 33,
-                  "value": 65
-                }
-              },
-              "rollEntries": [
-                {
-                  "type": "DropTableRollEntry",
-                  "minQuantity": {
-                    "type": "MinMaxLinearDoubleProvider",
-                    "minValue": 1.0,
-                    "maxValue": 1.0
-                  },
-                  "maxQuantity": {
-                    "type": "MinMaxLinearDoubleProvider",
-                    "minValue": 1.0,
-                    "maxValue": 1.0
+          "type": "SerializedDropTableDefinitionProvider",
+          "dropTable": {
+            "type": "DropTable",
+            "entries": [
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 392
                   }
-                }
-              ]
-            }
-          ]
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 20000.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 20000.0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "wip": false
         },
         "forcedDestinationOnExit": null,
         "dungeonZone": {

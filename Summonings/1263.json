@@ -10,9 +10,9 @@
   },
   "m_Name": "1263",
   "m_id": 1263,
-  "m_displayName": "SEASON - ECAILLEUX - PICHPADON",
+  "m_displayName": "SEASON - ECAILLEUX - PICHADON",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -898672990,
     "b": 233661668,
@@ -21,11 +21,11 @@
     "e": 1627548358
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": -898672990,
+    "b": 233661668,
+    "c": -1928696181,
+    "d": -1956554375,
+    "e": -597720396
   },
   "m_i18nDescriptionId": {
     "a": -898672990,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 700
+          "value": 5000
         }
       ],
       "externalDynamicValueReferences": [],
@@ -69,12 +69,12 @@
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 2
+      "value": 3
     },
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 70
+      "value": 200
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -85,13 +85,37 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Pichadon] other[Pichadons]}"
+    "fr": "{0, plural, one[Pichadon] other[Pichadons]}",
+    "en": "{0, plural, one[Snapswordfish] other[Snapswordfish]}",
+    "es": "{0, plural, one[Pischispada] other[Pischispadas]}",
+    "de": "{0, plural, one[Dichs-Schwertfisch] other[Dichs-Schwertfische]}",
+    "pt": "{0, plural, one[Peskespada] other[Peskespadas]}"
+  },
+  "championName": {
+    "fr": "Pichadon",
+    "en": "Snapswordfish",
+    "es": "Pischispada",
+    "de": "Dichs-Schwertfisch",
+    "pt": "Peskespada"
   },
   "description": {
-    "fr": "{%death} {value:score,+} points."
+    "fr": "{%death} {value:score,+} points.",
+    "en": "{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "{%death} {value:score,+} puntos.",
+    "de": " {%death}{value:score,+}\\_Punkte.",
+    "pt": "{%death} {value:score,+} pontos."
   }
 }

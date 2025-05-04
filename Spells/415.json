@@ -10,9 +10,9 @@
   },
   "m_Name": "415",
   "m_id": 415,
-  "m_displayName": "SEASON - NUISIBLE - Épines",
+  "m_displayName": "SEASON - FLORAL - Dépotage",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -2058627158,
     "b": 159593764,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "4c1329d1ca1f14f4784baa89689b7f20"
+    "assetGuid": "2091838a097f74e449fa8b505b31a59d"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -59,14 +59,24 @@
       "families": [],
       "heroSkillPointsCost": null
     },
-    "gaugeToModifyOnSpellPlay": [],
+    "gaugeToModifyOnSpellPlay": [
+      {
+        "type": "GaugeValue",
+        "element": 19,
+        "value": {
+          "type": "ConstIntegerValue",
+          "referenceId": "",
+          "value": 2
+        }
+      }
+    ],
     "costs": [
       {
         "type": "ActionPointsCost",
         "value": {
           "type": "ConstIntegerValue",
           "referenceId": "",
-          "value": 3
+          "value": 0
         }
       }
     ],
@@ -74,19 +84,32 @@
     "castTarget": {
       "type": "OneCastTargetDefinition",
       "selector": {
-        "type": "FilteredCharacterSelector",
+        "type": "FilteredEntitySelector",
+        "from": {
+          "type": "AllCharactersSelector"
+        },
         "filters": [
           {
-            "type": "TeamFilter",
-            "isIdentical": true,
-            "reference": {
-              "type": "CasterSelector"
-            }
+            "type": "FamilyFilter",
+            "condition": 1,
+            "families": [
+              62
+            ]
           }
         ]
       }
     },
-    "spellEffectData": [],
+    "spellEffectData": [
+      {
+        "type": "SpellEffectInstantiationData",
+        "spellEffect": "471eb34884cb56848a37dac29b229e56",
+        "originTarget": {
+          "type": "FirstCastTargetSelector"
+        },
+        "orientation": null,
+        "delay": null
+      }
+    ],
     "precomputedData": {
       "type": "PrecomputedData",
       "dynamicValueReferences": [],
@@ -96,9 +119,17 @@
     }
   },
   "name": {
-    "fr": "Épines"
+    "fr": "Dépotage",
+    "en": "Unpotting",
+    "es": "Transplante",
+    "de": "Umtopfen",
+    "pt": "Desenvase"
   },
   "description": {
-    "fr": "Confère son {%AT} en {%AR} à une <b>Plante</b>\n\\---\n<rem>Ce sort revient dans votre main.</rem>"
+    "fr": "Supprime une <b>Plante</b>.",
+    "en": "Removes one <b>Plant</b>.",
+    "es": "Suprime una <b>planta</b>.",
+    "de": "Entfernt eine <b>Pflanze</b>.",
+    "pt": "Retira uma <b>Planta</b>."
   }
 }

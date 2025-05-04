@@ -10,9 +10,9 @@
   },
   "m_Name": "1283",
   "m_id": 1283,
-  "m_displayName": "STORY MODE - ACTE II - 13 - Phorzerker",
+  "m_displayName": "STORY MODE - LIVRE II - Chapitre 13 - Phorzerker",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -534710581,
     "b": -465130060,
@@ -32,9 +32,9 @@
     "id": 1283,
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 1,
+      "defaultSkinId": 31,
       "skinIds": [
-        1
+        31
       ]
     },
     "precomputedData": {
@@ -46,9 +46,12 @@
           "value": 2
         }
       ],
-      "externalDynamicValueReferences": [],
+      "externalDynamicValueReferences": [
+        "Const.collisionDmg"
+      ],
       "hasEffects": false,
       "keywordReferences": [
+        "PUSH",
         {
           "type": 20,
           "id": 90
@@ -130,14 +133,20 @@
       "aroundAlliedCharacters": false,
       "aroundEnemyCharacters": false
     },
-    "cost": [],
-    "gatheringIntervalInSecs": 3600,
-    "gatheringAbilities": []
+    "cost": []
   },
   "name": {
-    "fr": "Phorzerker"
+    "fr": "Ruel Phorzerker",
+    "en": "Drhellzerker Ruel",
+    "es": "Ruel Perfórserker",
+    "de": "Ruel Griesgraberserk",
+    "pt": "Ruel Perforzerker"
   },
   "description": {
-    "fr": "<rem>{PropertyEffect:90}</rem>\n\\---\n{%attack} Touche et repousse de {cell:c} les adversaires adjacents\\_<sprite name=\"cell_cross\">.\n<rem> Peut repousser les {ObjectMechanism:195, plural:other!}.</rem>"
+    "fr": "<rem>{PropertyEffect:90}</rem>\n\\---\n{%attack} Touche et {#PUSH} de {cell:c} les adversaires adjacents\\_<sprite name=\"cell_cross\">.\n<rem> Peut repousser les {ObjectMechanism:195, plural:other!}.</rem>",
+    "en": "<rem>{PropertyEffect:90}</rem>\n\\---\n{%attack} Hits and {#PUSH} adjacent\\_<sprite name=\"cell_cross\"> opponents {cell:c}.\n<rem>Can push {ObjectMechanism:195, plural:other!}.</rem>",
+    "es": "<rem>{PropertyEffect:90}</rem>\n\\---\n{%attack} Alcanza y {#PUSH} {cell:c} a los adversarios adyacentes\\_<sprite name=\"cell_cross\">.\n<rem> Puede empujar las {ObjectMechanism:195, plural:other!}.</rem>",
+    "de": "<rem>{PropertyEffect:90}</rem>\n\\---\n{%attack} Trifft angrenzende\\_<sprite name=\"cell_cross\"> Gegner und {#PUSH,plural:few} sie um {cell:c} zurück.\n<rem> Kann {ObjectMechanism:195, plural:other!} zurückstoßen.</rem>",
+    "pt": "<rem>{PropertyEffect:90}</rem>\n\\---\n{%attack} Atinge e {#PUSH} por {cell:c} os adversários adjacentes\\_<sprite name=\"cell_cross\">.\n<rem> Pode empurrar as {ObjectMechanism:195, plural:other!}.</rem>"
   }
 }

@@ -12,7 +12,7 @@
   "m_id": 1597,
   "m_displayName": "SEASON - ECAILLEUX - PASSIF 09",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -579418476,
     "b": -444162460,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "7c695e3ae2c387740b7e603d6fff4497"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -84,75 +84,12 @@
       "dynamicValueReferences": [
         {
           "type": "SumValue",
-          "referenceId": "p",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 10
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 10
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": "ev",
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": "",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "ev",
-          "valuesToSum": [
-            {
-              "type": "ThisSpellEvolutionValue",
-              "referenceId": null
-            },
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": "",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "SumValue",
           "referenceId": "score",
           "valuesToSum": [
             {
               "type": "ConstIntegerValue",
               "referenceId": null,
-              "value": 100
+              "value": 700
             },
             {
               "type": "MultValue",
@@ -161,15 +98,15 @@
                 {
                   "type": "ConstIntegerValue",
                   "referenceId": "",
-                  "value": 100
+                  "value": 700
                 },
                 {
                   "type": "SumValue",
-                  "referenceId": "",
+                  "referenceId": null,
                   "valuesToSum": [
                     {
                       "type": "SumValue",
-                      "referenceId": null,
+                      "referenceId": "ev",
                       "valuesToSum": [
                         {
                           "type": "ThisSpellEvolutionValue",
@@ -195,67 +132,37 @@
         },
         {
           "type": "SumValue",
-          "referenceId": "invo",
+          "referenceId": "ev",
           "valuesToSum": [
+            {
+              "type": "ThisSpellEvolutionValue",
+              "referenceId": null
+            },
             {
               "type": "ConstIntegerValue",
               "referenceId": null,
               "value": 1
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": "",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
             }
           ]
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 4,
-          "id": 1301
-        }
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "PASSIF\\_: 09"
+    "fr": "PASSIF\\_: Mort bénéfique",
+    "en": "PASSIVE: Beneficial Death",
+    "es": "PASIVO: Muerte benéfica",
+    "de": "PASSIVE FÄHIGKEIT: Günstiger Tod",
+    "pt": "PASSIVO: Morte Benéfica"
   },
   "description": {
-    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b><color=#71ff33>BONUS</color></b>\n<b>COUP DE GRÂCE\\_:</b> {value:p,+,percent} de {%CRITICAL_HIT,plural:one} à votre héros.\n\\---\n<b>MORT D'UN ENNEMI\\_:</b> {value:score,+} points.\n\\---\n<b><color=#FF0000>MALUS</color></b>\n<b>DÉBUT DE VAGUE</b>\\_: \\v invoque {value:invo}\\_{Summoning:1301,value:invo}."
+    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b>MORT D'UN ADVERSAIRE\\_:</b> {value:score,+} points.",
+    "en": "<rem>Level: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>While this spell is in your hand</color></b>\n\\---\n<b>DEATH OF AN OPPONENT</b>: {value:score,+} points.",
+    "es": "<rem>Nivel: <if evolution=4>MÁX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Mientras este hechizo esté en tu mano</color></b>\n\\---\n<b>MUERTE DE UN ADVERSARIO:</b> {value:score,+} puntos.",
+    "de": "<rem>Stufe: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Solange dieser Zauber auf deiner Hand ist</color></b>\n\\---\n<b>TOD EINES GEGNERS:</b> {value:score,+}\\_Punkte.",
+    "pt": "<rem>Nível: <if evolution=4>MÁX.</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Enquanto o feitiço estiver na sua mão</color></b>\n\\---\n<b>MORTE DE UM ADVERSÁRIO:</b> {value:score,+} pontos."
   }
 }

@@ -49,7 +49,7 @@
         "type": "DungeonChapterDefinition",
         "chapterIndex": 0,
         "visualIndex": 0,
-        "monsterLevel": 6,
+        "monsterLevel": 4,
         "rewards": null,
         "oneTimeRewards": {
           "type": "SerializedDropTableDefinitionProvider",
@@ -169,8 +169,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 1,
-        "visualIndex": 1,
-        "monsterLevel": 12,
+        "visualIndex": 0,
+        "monsterLevel": 10,
         "rewards": null,
         "oneTimeRewards": null,
         "forcedDestinationOnExit": null,
@@ -186,8 +186,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 2,
-        "visualIndex": 5,
-        "monsterLevel": 60,
+        "visualIndex": 2,
+        "monsterLevel": 24,
         "rewards": null,
         "oneTimeRewards": null,
         "forcedDestinationOnExit": null,
@@ -203,8 +203,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 3,
-        "visualIndex": 7,
-        "monsterLevel": 80,
+        "visualIndex": 2,
+        "monsterLevel": 30,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -245,8 +245,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 4,
-        "visualIndex": 9,
-        "monsterLevel": 95,
+        "visualIndex": 3,
+        "monsterLevel": 32,
         "rewards": null,
         "oneTimeRewards": {
           "type": "DropTable",
@@ -335,8 +335,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 5,
-        "visualIndex": 9,
-        "monsterLevel": 95,
+        "visualIndex": 3,
+        "monsterLevel": 33,
         "rewards": null,
         "oneTimeRewards": null,
         "forcedDestinationOnExit": null,
@@ -352,8 +352,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 6,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 3,
+        "monsterLevel": 35,
         "rewards": null,
         "oneTimeRewards": {
           "type": "SerializedDropTableDefinitionProvider",
@@ -398,8 +398,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 7,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 3,
+        "monsterLevel": 36,
         "rewards": null,
         "oneTimeRewards": null,
         "forcedDestinationOnExit": {
@@ -415,8 +415,8 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 8,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 4,
+        "monsterLevel": 50,
         "rewards": null,
         "oneTimeRewards": {
           "type": "SerializedDropTableDefinitionProvider",
@@ -428,8 +428,8 @@
                 "source": {
                   "type": "FixedItemDropTableEntrySource",
                   "itemId": {
-                    "typeEnum": 58,
-                    "value": 997
+                    "typeEnum": 33,
+                    "value": 65
                   }
                 },
                 "rollEntries": [
@@ -437,11 +437,11 @@
                     "type": "DropTableRollEntry",
                     "minQuantity": {
                       "type": "ConstDoubleProvider",
-                      "value": 1.0
+                      "value": 5000.0
                     },
                     "maxQuantity": {
                       "type": "ConstDoubleProvider",
-                      "value": 1.0
+                      "value": 5000.0
                     }
                   }
                 ]
@@ -461,10 +461,87 @@
       {
         "type": "DungeonChapterDefinition",
         "chapterIndex": 9,
-        "visualIndex": 9,
-        "monsterLevel": 100,
+        "visualIndex": 8,
+        "monsterLevel": 85,
         "rewards": null,
-        "oneTimeRewards": null,
+        "oneTimeRewards": {
+          "type": "SerializedDropTableDefinitionProvider",
+          "dropTable": {
+            "type": "DropTable",
+            "entries": [
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 388
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 915
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 849
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 50.0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "wip": false
+        },
         "forcedDestinationOnExit": null,
         "dungeonZone": {
           "type": "SpawnDestinationInDungeonZone",
@@ -489,8 +566,8 @@
                 "source": {
                   "type": "FixedItemDropTableEntrySource",
                   "itemId": {
-                    "typeEnum": 58,
-                    "value": 997
+                    "typeEnum": 33,
+                    "value": 65
                   }
                 },
                 "rollEntries": [
@@ -498,11 +575,34 @@
                     "type": "DropTableRollEntry",
                     "minQuantity": {
                       "type": "ConstDoubleProvider",
-                      "value": 1.0
+                      "value": 20000.0
                     },
                     "maxQuantity": {
                       "type": "ConstDoubleProvider",
-                      "value": 1.0
+                      "value": 20000.0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "DropTableEntry",
+                "source": {
+                  "type": "FixedItemDropTableEntrySource",
+                  "itemId": {
+                    "typeEnum": 33,
+                    "value": 392
+                  }
+                },
+                "rollEntries": [
+                  {
+                    "type": "DropTableRollEntry",
+                    "minQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 20000.0
+                    },
+                    "maxQuantity": {
+                      "type": "ConstDoubleProvider",
+                      "value": 20000.0
                     }
                   }
                 ]

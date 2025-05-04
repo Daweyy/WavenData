@@ -12,7 +12,7 @@
   "m_id": 1945,
   "m_displayName": "SEASON - ECAILLEUX - PASSIF 08",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1160322611,
     "b": -1864361308,
@@ -29,7 +29,7 @@
   },
   "m_elementaryStates": 1,
   "m_illustrationReference": {
-    "assetGuid": "93308a255975cc34fa2fe0de239fa342"
+    "assetGuid": "29a5496b6c117ce43b5897c24376b894"
   },
   "m_spellEffectOverrideReferences": {
     "m_keys": [],
@@ -89,7 +89,7 @@
             {
               "type": "ConstIntegerValue",
               "referenceId": null,
-              "value": 100
+              "value": 1
             },
             {
               "type": "MultValue",
@@ -98,7 +98,7 @@
                 {
                   "type": "ConstIntegerValue",
                   "referenceId": "",
-                  "value": 100
+                  "value": 1
                 },
                 {
                   "type": "SumValue",
@@ -144,119 +144,25 @@
               "value": 1
             }
           ]
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "score",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 100
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 100
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": null,
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "SumValue",
-          "referenceId": "invo",
-          "valuesToSum": [
-            {
-              "type": "ConstIntegerValue",
-              "referenceId": null,
-              "value": 1
-            },
-            {
-              "type": "MultValue",
-              "referenceId": "",
-              "valuesToMult": [
-                {
-                  "type": "ConstIntegerValue",
-                  "referenceId": "",
-                  "value": 1
-                },
-                {
-                  "type": "SumValue",
-                  "referenceId": "",
-                  "valuesToSum": [
-                    {
-                      "type": "SumValue",
-                      "referenceId": null,
-                      "valuesToSum": [
-                        {
-                          "type": "ThisSpellEvolutionValue",
-                          "referenceId": null
-                        },
-                        {
-                          "type": "ConstIntegerValue",
-                          "referenceId": "",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "ConstIntegerValue",
-                      "referenceId": "",
-                      "value": -1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": [
-        {
-          "type": 4,
-          "id": 1263
-        },
-        "CRITICAL"
-      ]
+      "keywordReferences": []
     }
   },
   "name": {
-    "fr": "PASSIF\\_: 08"
+    "fr": "PASSIF\\_: Jeter l'ancre",
+    "en": "PASSIVE: Anchor Toss",
+    "es": "PASIVO: Tirar el ancla",
+    "de": "PASSIVE FÄHIGKEIT: Anker werfen",
+    "pt": "PASSIVO: Lançar Âncora"
   },
   "description": {
-    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n<b><color=#71ff33>BONUS</color></b>\n{%attack} {value:p,+,permil} de {%CRITICAL_HIT,plural:one} à votre héros.\n\\---\n{#CRITICAL}\\_: {value:score,+} points.\n\\---\n<b><color=#FF0000>MALUS</color></b>\n<b>DÉBUT DE VAGUE</b>\\_: \\v invoque {value:invo}\\_{Summoning:1263,value:invo}."
+    "fr": "<rem>Niveau\\_: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Tant que ce sort est dans votre main</color></b>\n\\---\n{%attack} Inflige {value:p} fois votre {%at} à un adversaire aléatoire.",
+    "en": "<rem>Level: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>While this spell is in your hand</color></b>\n\\---\n{%attack} Inflicts {%at} on a random opponent {value:p} {p, plural, one[time] other[times]}.",
+    "es": "<rem>Nivel: <if evolution=4>MÁX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Mientras este hechizo esté en tu mano</color></b>\n\\---\n{%attack} Inflige {value:p} {p, plural, one[vez] other[veces]} tu {%at} a un adversario aleatorio.",
+    "de": "<rem>Stufe: <if evolution=4>MAX</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Solange dieser Zauber auf deiner Hand ist.</color></b>\n\\---\n{%attack} Fügt einem zufälligen Gegner {value:p}-mal deinen {%at} als Schaden zu.",
+    "pt": "<rem>Nível: <if evolution=4>MÁX.</if><if not evolution=4>{value:ev}</if></rem>\n<b><color=#EEBB44>Enquanto o feitiço estiver na sua mão</color></b>\n\\---\n{%attack} Inflige {value:p} {p, plural, one[vez] other[vezes]} seu {%at} a um adversário aleatório."
   }
 }

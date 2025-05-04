@@ -10,9 +10,9 @@
   },
   "m_Name": "705",
   "m_id": 705,
-  "m_displayName": "SEASON - NUISIBLE - Gro Bwork",
+  "m_displayName": "SEASON - FLORAL - Gro Bwork",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1691705100,
     "b": -317387228,
@@ -46,15 +46,10 @@
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [
-        {
-          "type": "ConstIntegerValue",
-          "referenceId": "c",
-          "value": 2
-        }
-      ],
+      "dynamicValueReferences": [],
       "externalDynamicValueReferences": [
-        "CustomRule.553.score3"
+        "CustomRule.553.c",
+        "CustomRule.553.Score1"
       ],
       "hasEffects": false,
       "keywordReferences": []
@@ -74,12 +69,12 @@
     "movementPoints": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 2
+      "value": 3
     },
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 75
+      "value": 50
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -90,13 +85,30 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Grô Bwork] other[Grô Bworks]}"
+    "fr": "{0, plural, one[Grô Bwork] other[Grô Bworks]}",
+    "en": "{0, plural, one[Bwig Bwork] other[Bwig Bworks]}",
+    "es": "{0, plural, one[Gran Bwork] other[Grandes Bworks]}",
+    "de": "{0, plural, one[Bworkules] other[Bworkulusse]}",
+    "pt": "{0, plural, one[Bworkão] other[Bworkões]}"
   },
   "description": {
-    "fr": "{%Attack} Touche les {cell:c} devant lui.\n\\---\n{%Death} {value:CustomRule.553.score3,+} points."
+    "fr": "{%Attack} Touche les {cell:CustomRule.553.c} devant lui.\n\\---\n{%Death} {value:CustomRule.553.Score1,+} points.",
+    "en": "{%Attack} Hits the {cell:CustomRule.553.c} in front of him.\n\\---\n{%Death} {value:CustomRule.553.Score1,+} points.",
+    "es": "{%Attack} Alcanza las {cell:CustomRule.553.c} de delante de él.\n\\---\n{%Death} {value:CustomRule.553.Score1,+} puntos.",
+    "de": "{%Attack} Trifft die {cell:CustomRule.553.c} vor ihm.\n\\---\n{%Death} {value:CustomRule.553.Score1,+} Punkte.",
+    "pt": "{%Attack} Atinge as {cell:CustomRule.553.c} à sua frente.\n\\---\n{%Death} {value:CustomRule.553.Score1,+} pontos."
   }
 }

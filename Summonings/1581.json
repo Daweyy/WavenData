@@ -10,9 +10,9 @@
   },
   "m_Name": "1581",
   "m_id": 1581,
-  "m_displayName": "SEASON - NUISIBLE - Larbin",
+  "m_displayName": "SEASON - FLORAL - Parle-Lave",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1206883985,
     "b": -1360035324,
@@ -39,18 +39,29 @@
     "id": 1581,
     "characterSpecificSkins": {
       "type": "CharacterSpecificSkins",
-      "defaultSkinId": 2322,
+      "defaultSkinId": 2857,
       "skinIds": [
-        2322
+        2857
       ]
     },
     "precomputedData": {
       "type": "PrecomputedData",
-      "dynamicValueReferences": [],
-      "externalDynamicValueReferences": [
-        "CustomRule.553.score1"
+      "dynamicValueReferences": [
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "nb",
+          "value": 2
+        },
+        {
+          "type": "ConstIntegerValue",
+          "referenceId": "dmg",
+          "value": 25
+        }
       ],
-      "hasEffects": false,
+      "externalDynamicValueReferences": [
+        "CustomRule.553.Score3"
+      ],
+      "hasEffects": true,
       "keywordReferences": []
     },
     "families": [
@@ -63,7 +74,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 300
+      "value": 250
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -73,24 +84,53 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 25
+      "value": 50
     },
     "riposte": null,
     "actionCriticalChance": null,
     "actionCriticalBonus": null,
     "customActionTarget": null,
     "actionType": 1,
-    "actionRange": null,
+    "actionRange": {
+      "type": "ActionRange",
+      "min": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 1
+      },
+      "max": {
+        "type": "ConstIntegerValue",
+        "referenceId": "",
+        "value": 3
+      }
+    },
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
-    "grade": 0,
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
+    "grade": 4,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Larbin] other[Larbins]}"
+    "fr": "{0, plural, one[Bwork parle-lave] other[Bworks parle-lave]}",
+    "en": "{0, plural, one[Lava-Talker Bwork] other[Lava-Talker Bworks]}",
+    "es": "{0, plural, one[Bwork Hablalava] other[Bworks Hablalavas]}",
+    "de": "{0, plural, one[Palava-Bwork] other[Palava-Bworks]}",
+    "pt": "{0, plural, one[Bwork Fala-Lava] other[Bworks Fala-Lava]}"
   },
   "description": {
-    "fr": "{%Death} {value:CustomRule.553.score1,+} points."
+    "fr": "<rem>{range}</rem>\n\\---\n{%FightTurnStarted} {value:nb}\\_{#SCORIE, value:nb!} tombe sur des <b>Plantes</b> aléatoires.\n\\---\n{%Death} {value:CustomRule.553.Score3,+} points.",
+    "en": "<rem>{range}</rem>\n\\---\n{%FightTurnStarted} {value:nb}\\_{#SCORIE, value:nb!} fall on random <b>Plants</b>.\n\\---\n{%Death} {value:CustomRule.553.Score3,+} points.",
+    "es": "<rem>{range}</rem>\n\\---\n{%FightTurnStarted} {value:nb}\\_{#SCORIE, value:nb!} cae sobre <b>plantas</b> aleatorias.\n\\---\n{%Death} {value:CustomRule.553.Score3,+} puntos.",
+    "de": "<rem>{range}</rem>\n\\---\n{%FightTurnStarted} {value:nb}\\_{#SCORIE, value:nb!} fällt auf zufällige <b>Pflanzen</b>.\n\\---\n{%Death} {value:CustomRule.553.Score3,+} Punkte.",
+    "pt": "<rem>{range}</rem>\n\\---\n{%FightTurnStarted} {value:nb}\\_{#SCORIE, value:nb!} cai sobre <b>Plantas</b> aleatórias.\n\\---\n{%Death} {value:CustomRule.553.Score3,+} pontos."
   }
 }

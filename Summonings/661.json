@@ -12,7 +12,7 @@
   "m_id": 661,
   "m_displayName": "SEASON - ECAILLEUX - PICHURENE",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": 1756149899,
     "b": 1526298340,
@@ -21,11 +21,11 @@
     "e": -1240246796
   },
   "m_i18nChampionNameId": {
-    "a": 0,
-    "b": 0,
-    "c": 0,
-    "d": 0,
-    "e": 0
+    "a": 1756149899,
+    "b": 1526298340,
+    "c": 1462658792,
+    "d": 1721653216,
+    "e": -1644940590
   },
   "m_i18nDescriptionId": {
     "a": 1756149899,
@@ -50,7 +50,7 @@
         {
           "type": "ConstIntegerValue",
           "referenceId": "score",
-          "value": 600
+          "value": 1200
         }
       ],
       "externalDynamicValueReferences": [],
@@ -85,13 +85,37 @@
     "lifeScale": null,
     "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 0,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
-    "fr": "{0, plural, one[Pichurène] other[Pichurènes]}"
+    "fr": "{0, plural, one[Pichurène] other[Pichurènes]}",
+    "en": "{0, plural, one[Snaporay] other[Snaporays]}",
+    "es": "{0, plural, one[Murena] other[Murenas]}",
+    "de": "{0, plural, one[Dichs-Muräne] other[Dichs-Muränen]}",
+    "pt": "{0, plural, one[Peskoreia] other[Peskoreias]}"
+  },
+  "championName": {
+    "fr": "Pichurène",
+    "en": "Snaporay",
+    "es": "Murena",
+    "de": "Dichs-Muräne",
+    "pt": "Peskoreia"
   },
   "description": {
-    "fr": "{%death} {value:score,+} points."
+    "fr": "{%death} {value:score,+} points.",
+    "en": "{%death} {value:score,+} {score, plural, one[point] other[points]}.",
+    "es": "{%death} {value:score,+} puntos.",
+    "de": " {%death}{value:score,+}\\_Punkte.",
+    "pt": "{%death} {value:score,+} pontos."
   }
 }

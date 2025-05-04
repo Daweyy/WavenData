@@ -10,7 +10,7 @@
   },
   "m_Name": "1009",
   "m_id": 1009,
-  "m_displayName": "STORY MODE - ACTE I - 39 - Diobla",
+  "m_displayName": "STORY MODE - LIVRE I - Chapitre 39 - Diobla",
   "m_availability": 3,
   "m_wip": 0,
   "m_i18nNameId": {
@@ -49,7 +49,12 @@
       "dynamicValueReferences": [],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
-      "keywordReferences": []
+      "keywordReferences": [
+        {
+          "type": 20,
+          "id": 8
+        }
+      ]
     },
     "families": [
       73
@@ -60,7 +65,7 @@
     "life": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 100
+      "value": 1600
     },
     "movementPoints": {
       "type": "ConstIntegerValue",
@@ -70,7 +75,7 @@
     "actionValue": {
       "type": "ConstIntegerValue",
       "referenceId": "",
-      "value": 20
+      "value": 200
     },
     "riposte": null,
     "actionCriticalChance": null,
@@ -78,16 +83,19 @@
     "customActionTarget": null,
     "actionType": 1,
     "actionRange": null,
-    "lifeScale": {
-      "type": "ReferenceScalingFactor",
-      "reference": 16
-    },
-    "attackScale": {
-      "type": "ReferenceScalingFactor",
-      "reference": 7
-    },
+    "lifeScale": null,
+    "attackScale": null,
     "spells": [],
+    "upgradeRuleId": null,
+    "merchantCosts": [],
+    "purchaseConditionalAvailability": {
+      "type": "Available"
+    },
+    "unlockableSkillIds": [],
+    "rarity": 0,
     "grade": 5,
+    "crewMemberType": null,
+    "nationId": null,
     "growInto": null
   },
   "name": {
@@ -105,10 +113,10 @@
     "pt": "Diobla"
   },
   "description": {
-    "fr": "<b>FIN DE SON PREMIER TOUR</b>\\_:\\v Rappelle tous les <b>SHUSHUS MAJEURS</b>.",
-    "en": "<b>END OF HER FIRST TURN</b>:\\vRecalls all the <b>MAJOR SHUSHUS</b>.",
-    "es": "<b>FIN DE SU PRIMER TURNO</b>:\\v Llama a todos los <b>FAB'HURITUS MAYORES</b>.",
-    "de": "<b>ENDE IHRER ERSTEN RUNDE</b>:\\v Beschwört erneut die anderen <b>GRÖSSEREN SHUSHUS</b>.",
-    "pt": "<b>FIM DO SEU PRIMEIRO TURNO</b>:\\v Chama de volta todos os <b>SHUSHUS MAIORES</b>."
+    "fr": "{%APPEARANCE} Gagne {PropertyEffect:8}.\n\\---\n<b>FIN DE SON PREMIER TOUR</b>\\_:\\v Rappelle tous les <b>SHUSHUS MAJEURS</b>.",
+    "en": "{%APPEARANCE} Gains {PropertyEffect:8}.\n\\---\n<b>END OF HER FIRST TURN</b>:\\vRecalls all the <b>MAJOR SHUSHUS</b>.",
+    "es": "{%APPEARANCE} Gana {PropertyEffect:8}.\n\\---\n<b>FIN DE SU PRIMER TURNO</b>:\\v Llama a todos los <b>FAB'HURITUS MAYORES</b>.",
+    "de": "{%APPEARANCE} Verleiht {PropertyEffect:8}.\n\\---\n<b>RUNDE</b>:\\v Ruft alle <b>GRÖSSEREN SHUSHUS</b> zurück.",
+    "pt": "{%APPEARANCE} Ganha {PropertyEffect:8}.\n\\---\n<b>FIM DO SEU PRIMEIRO TURNO</b>:\\v Chama de volta todos os <b>SHUSHUS MAIORES</b>."
   }
 }

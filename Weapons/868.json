@@ -10,9 +10,9 @@
   },
   "m_Name": "868",
   "m_id": 868,
-  "m_displayName": "SEASON - NUISIBLE - Tournesol sauvage",
+  "m_displayName": "SEASON - FLORAL - Tournesol sauvage",
   "m_availability": 3,
-  "m_wip": 1,
+  "m_wip": 0,
   "m_i18nNameId": {
     "a": -1369824590,
     "b": -134115100,
@@ -69,29 +69,21 @@
       "dynamicValueReferences": [
         {
           "type": "ConstIntegerValue",
-          "referenceId": "nb",
-          "value": 2
+          "referenceId": "pa",
+          "value": 1
         },
         {
           "type": "ConstIntegerValue",
-          "referenceId": "c",
-          "value": 2
+          "referenceId": "r",
+          "value": 1
         }
       ],
       "externalDynamicValueReferences": [],
       "hasEffects": true,
       "keywordReferences": [
         {
-          "type": 19,
-          "id": 89
-        },
-        {
           "type": 20,
-          "id": 106
-        },
-        {
-          "type": 6,
-          "id": 293
+          "id": 88
         }
       ]
     },
@@ -99,8 +91,7 @@
       62
     ],
     "baseProperties": [
-      106,
-      225
+      88
     ],
     "life": {
       "type": "ConstIntegerValue",
@@ -145,9 +136,17 @@
     "presetSpellIds": []
   },
   "name": {
-    "fr": "Tournesol sauvage"
+    "fr": "{0, plural, one[Tournesol Sauvage] other[Tournesols Sauvages]}",
+    "en": "{0, plural, one[Wild Sunflower] other[Wild Sunflowers]}",
+    "es": "{0, plural, one[Girasol Salvaje] other[Girasoles Salvajes]}",
+    "de": "{0, plural, one[Wilde Sonnenblume] other[Wilde Sonnenblumen]}",
+    "pt": "{0, plural, one[Girassol Selvagem] other[Girassóis Selvagens]}"
   },
   "description": {
-    "fr": "{%FightTurnStarted} Invoque {value:nb}\\_{FloorMechanism:293,value:nb} jusqu'à {cell:c}.\n\\---\n<rem>{PropertyEffect:106}</rem>"
+    "fr": "Tant qu'elle est en jeu\\_: {PAvalue:pa,+}.\n\\---\n{%FightTurnEnded} {PA_RESvalue:r,+} s'il n'y a aucun {%FAMILY_BWORK_NAME, plural:one} sur le terrain.\n\\---\n{PropertyEffect:88}",
+    "en": "While in play: {PAvalue:pa,+}.\n\\---\n{%FightTurnEnded} {PA_RESvalue:r,+} if there are no {%FAMILY_BWORK_NAME,plural:other} on the field.\n\\---\n{PropertyEffect:88}",
+    "es": "Mientras esté en juego: {PAvalue:pa,+}.\n\\---\n{%FightTurnEnded} {PA_RESvalue:r,+} si no hay ningún {%FAMILY_BWORK_NAME, plural:one} en el terreno.\n\\---\n{PropertyEffect:88}",
+    "de": "Solange sie im Spiel ist: {PAvalue:pa,+}.\n\\---\n{%FightTurnEnded} {PA_RESvalue:r,+}, wenn sich kein {%FAMILY_BWORK_NAME, plural:one} auf dem Spielfeld befindet.\n\\---\n{PropertyEffect:88}",
+    "pt": "Enquanto estiver em jogo: {PAvalue:pa,+}.\n\\---\n{%FightTurnEnded} {PA_RESvalue:r,+} se não houver nenhum {%FAMILY_BWORK_NAME, plural:one} no campo de batalha.\n\\---\n{PropertyEffect:88}"
   }
 }
